@@ -134,7 +134,19 @@ def main():
     ap.add_argument("--pass", dest="pass_name", choices=["a", "b"], default="a")
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--verify", action="store_true", help="run verification + reconciliation")
+    ap.add_argument("--llm-check", action="store_true", help="one tiny real call per configured provider")
     args = ap.parse_args()
+    if args.llm_check:
+        async def check():
+            print(f"provider chain: {llm.chain()}")
+            data, meta = await llm.complete_json(
+                "Reply in JSON.", 'Return {"ok": true}.',
+                {"type": "object", "properties": {"ok": {"type": "boolean"}}, "required": ["ok"]}, "haiku")
+            print(f"answered by {meta['provider']} ({meta['model']}): {data}")
+            for e in meta.get("fallback_errors", []):
+                print(f"  fell back after: {e[:160]}")
+        asyncio.run(check())
+        return
     if args.verify:
         from . import verify
         verify.main()

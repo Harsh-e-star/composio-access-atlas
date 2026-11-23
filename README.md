@@ -44,7 +44,7 @@ uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requi
 | `python -m agent.build_site` | rebuild `docs/index.html`, `case_study.html`, `exports/`, README results |
 | `python -m pytest tests` | software + browser tests |
 
-Env vars: `ATLAS_LLM` (`claude-cli` or `anthropic`), `CLAUDE_BIN`, `ANTHROPIC_API_KEY`, `GITHUB_TOKEN` (optional; falls back to `gh auth token`).
+**AI providers.** Copy `.env.example` to `.env` (git-ignored) and set any of `GEMINI_API_KEY`, `GROQ_API_KEY`, `ANTHROPIC_API_KEY`, or use a logged-in Claude Code CLI. With `AI_PROVIDER=auto` the agent tries Gemini → Groq → Anthropic → Claude CLI and falls back on quota or rate-limit errors. Every saved record names the provider that answered. Check your setup with `python -m agent.main --llm-check`. The independent pass B needs web search, which only the Claude CLI provider has. The 100-app run in `data/` used Claude (Sonnet for pass A, Haiku for pass B). Gemini and Groq support was added afterwards and is covered by mocked tests only until it is run with a key.
 
 ## Outputs
 

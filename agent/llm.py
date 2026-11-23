@@ -1,9 +1,16 @@
-"""LLM backends. Both make real model calls; neither fabricates output.
+"""LLM providers. Every provider makes a real model call; none fabricates output.
 
-- claude-cli : the Claude Code CLI in headless mode (`claude -p`). Uses the
-               logged-in Claude account; reports real cost per call.
-- anthropic  : the Anthropic Messages API (needs ANTHROPIC_API_KEY).
-Set ATLAS_LLM=claude-cli|anthropic and CLAUDE_BIN to override the CLI path.
+- gemini     : Google Gemini API (GEMINI_API_KEY, model GEMINI_MODEL).
+- groq       : GroqCloud OpenAI-compatible API (GROQ_API_KEY, model GROQ_MODEL).
+- anthropic  : Anthropic Messages API (ANTHROPIC_API_KEY).
+- claude-cli : Claude Code CLI in headless mode (`claude -p`), logged-in account.
+
+ATLAS_LLM (or AI_PROVIDER) = auto | gemini | groq | anthropic | claude-cli.
+`auto` tries, in order, every provider whose credentials exist and falls back to
+the next one on quota/rate-limit/server errors. Web-search tools (used by the
+independent pass B) are only available on claude-cli; Gemini/Groq are used for
+grounded extraction over pages our own fetcher retrieved.
+Keys are read from the environment or a git-ignored .env file; never logged.
 """
 from __future__ import annotations
 
@@ -16,13 +23,107 @@ class LLMError(RuntimeError):
     pass
 
 
-def backend() -> str:
-    b = os.environ.get("ATLAS_LLM")
-    if b:
-        return b
+def _load_dotenv():
+    """Minimal .env loader (KEY=VALUE lines); existing env vars win."""
+    from pathlib import Path
+    p = Path(__file__).resolve().parent.parent / ".env"
+    if not p.exists():
+        return
+    for line in p.read_text().splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            k, v = line.split("=", 1)
+            os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
+_load_dotenv()
+
+
+def available() -> list[str]:
+    """Providers with credentials, in fallback priority order."""
+    out = []
+    if os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY"):
+        out.append("gemini")
+    if os.environ.get("GROQ_API_KEY"):
+        out.append("groq")
     if os.environ.get("ANTHROPIC_API_KEY"):
-        return "anthropic"
-    return "claude-cli"
+        out.append("anthropic")
+    if shutil.which(claude_bin()) or os.path.exists(claude_bin()):
+        out.append("claude-cli")
+    return out
+
+
+def chain(tools: list[str] | None = None) -> list[str]:
+    b = (os.environ.get("ATLAS_LLM") or os.environ.get("AI_PROVIDER") or "auto").lower()
+    provs = available() if b == "auto" else [b]
+    if tools:  # web-search tools only exist on claude-cli
+        provs = [p for p in provs if p == "claude-cli"] or ["claude-cli"]
+    return provs or ["claude-cli"]
+
+
+def backend() -> str:
+    return chain()[0]
+
+
+class RetryableLLMError(LLMError):
+    """Quota / rate limit / server error: the next provider may succeed."""
+
+
+# Default model names are overridable; verify availability for your account.
+GEMINI_DEFAULT = "gemini-2.5-flash"
+GROQ_DEFAULT = "llama-3.3-70b-versatile"
+
+
+def _schema_hint(schema: dict) -> str:
+    return ("Return ONLY a JSON object that validates against this JSON Schema "
+            "(no prose, no code fences):\n" + json.dumps(schema)[:12000])
+
+
+async def _post(url, body, headers, retries=3):
+    async with httpx.AsyncClient(timeout=300) as c:
+        for attempt in range(retries + 1):
+            r = await c.post(url, json=body, headers=headers)
+            if r.status_code in (429, 500, 502, 503, 504) and attempt < retries:
+                await asyncio.sleep(min(60, 5 * 2 ** attempt))
+                continue
+            break
+    if r.status_code in (429, 500, 502, 503, 504):
+        raise RetryableLLMError(f"http {r.status_code}: {r.text[:200]}")
+    if r.status_code != 200:
+        raise LLMError(f"http {r.status_code}: {r.text[:300]}")
+    return r.json()
+
+
+async def _gemini(system, prompt, schema, model):
+    key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    mid = os.environ.get("GEMINI_MODEL") or GEMINI_DEFAULT
+    j = await _post(
+        f"https://generativelanguage.googleapis.com/v1beta/models/{mid}:generateContent",
+        {"systemInstruction": {"parts": [{"text": system}]},
+         "contents": [{"role": "user", "parts": [{"text": prompt + "\n\n" + _schema_hint(schema)}]}],
+         "generationConfig": {"responseMimeType": "application/json", "temperature": 0}},
+        {"x-goog-api-key": key})
+    try:
+        text = "".join(p.get("text", "") for p in j["candidates"][0]["content"]["parts"])
+    except (KeyError, IndexError):
+        raise LLMError(f"gemini returned no content: {str(j)[:200]}")
+    u = j.get("usageMetadata", {})
+    return _parse_json(text), {"cost_usd": None, "model": f"gemini/{mid}", "turns": 1,
+                               "tokens_in": u.get("promptTokenCount"), "tokens_out": u.get("candidatesTokenCount")}
+
+
+async def _groq(system, prompt, schema, model):
+    mid = os.environ.get("GROQ_MODEL") or GROQ_DEFAULT
+    j = await _post(
+        "https://api.groq.com/openai/v1/chat/completions",
+        {"model": mid, "temperature": 0, "response_format": {"type": "json_object"},
+         "messages": [{"role": "system", "content": system},
+                      {"role": "user", "content": prompt + "\n\n" + _schema_hint(schema)}]},
+        {"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}"})
+    u = j.get("usage", {})
+    return _parse_json(j["choices"][0]["message"]["content"]), {
+        "cost_usd": None, "model": f"groq/{mid}", "turns": 1,
+        "tokens_in": u.get("prompt_tokens"), "tokens_out": u.get("completion_tokens")}
 
 
 def claude_bin() -> str:
@@ -42,11 +143,34 @@ def _parse_json(text: str) -> dict:
 async def complete_json(system: str, prompt: str, schema: dict, model: str,
                         tools: list[str] | None = None, timeout: int = 600,
                         max_turns: int = 30) -> tuple[dict, dict]:
-    """Return (parsed_json, meta{cost_usd, model, turns})."""
-    if backend() == "anthropic":
-        if tools:
-            raise LLMError("web tools are only wired for the claude-cli backend")
-        return await _anthropic(system, prompt, schema, model)
+    """Return (parsed_json, meta). Tries each provider in chain(); falls back on
+    retryable errors (quota, rate limit, 5xx) and records which provider answered."""
+    errors = []
+    for prov in chain(tools):
+        try:
+            if prov == "gemini":
+                data, meta = await _gemini(system, prompt, schema, model)
+            elif prov == "groq":
+                data, meta = await _groq(system, prompt, schema, model)
+            elif prov == "anthropic":
+                data, meta = await _anthropic(system, prompt, schema, model)
+            else:
+                data, meta = await _claude_cli(system, prompt, schema, model, tools, timeout, max_turns)
+            meta["provider"] = prov
+            meta["fallback_errors"] = errors
+            return data, meta
+        except RetryableLLMError as e:
+            errors.append(f"{prov}: {e}")
+            continue
+        except LLMError as e:
+            errors.append(f"{prov}: {e}")
+            if prov == chain(tools)[-1]:
+                break
+            continue
+    raise LLMError("all providers failed: " + " | ".join(errors))
+
+
+async def _claude_cli(system, prompt, schema, model, tools, timeout, max_turns):
     cmd = [claude_bin(), "-p", "--output-format", "json", "--model", model,
            "--system-prompt", system, "--json-schema", json.dumps(schema),
            "--setting-sources", "", "--strict-mcp-config",
