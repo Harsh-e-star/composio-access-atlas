@@ -2,7 +2,7 @@
 
 An evidence-grounded research agent that maps **100 apps** for Composio: auth methods, how a developer gets credentials (self-serve vs gated), API surface, MCP availability and a buildability verdict. Every claim cites a source URL and a verbatim quote, and the quote is re-checked against the live page.
 
-- **Case study (single HTML page):** `docs/index.html` (also `case_study.html`) · live link: _see repo About / below once deployed_
+- **Case study (single HTML page):** `docs/index.html` (also `case_study.html`) · live: https://harsh-e-star.github.io/composio-access-atlas/ · repo: https://github.com/Harsh-e-star/composio-access-atlas
 - **Run the agent:** `python -m agent.main --app GitHub`
 
 > `archive/legacy_prototype/` holds an **earlier prototype**. It used hand-written records, a simulated agent (timed `asyncio.sleep` steps) and accuracy figures that no real audit supported. It is **not** the submission and none of its numbers are used here. The real system is `agent/` + `data/` + `docs/`.
