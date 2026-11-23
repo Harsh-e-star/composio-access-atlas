@@ -1,0 +1,295 @@
+{
+ "id": 26,
+ "name": "Discord",
+ "category": "Communications and Messaging",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:18:00Z",
+ "duration_s": 44.0,
+ "cost_usd": 0.0713,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://discord.com",
+   "title": "Discord - Group Chat That’s All Fun & Games",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.discord.com/developers/intro",
+   "title": "Discord Developer Platform - Documentation - Discord",
+   "rendered": true
+  },
+  {
+   "id": "S3",
+   "url": "https://discord.com/developers",
+   "title": "Discord for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.discord.com/developers/platform/oauth2-and-permissions",
+   "title": "OAuth2 and Permissions - Documentation - Discord",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.discord.com/developers/quick-start/getting-started",
+   "title": "Building your first Discord Bot - Documentation - Discord",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.discord.com/developers/quick-start/overview-of-apps",
+   "title": "Overview of Discord Apps - Documentation - Discord",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.discord.com/developers/reference",
+   "title": "API Reference - Documentation - Discord",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.discord.com/developers/platform/webhooks",
+   "title": "Webhooks - Documentation - Discord",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.discord.com/developers/bots/overview",
+   "title": "Discord Bots & Companion Apps - Documentation - Discord",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.discord.com/developers/discord-social-sdk/overview",
+   "title": "Integrating the Discord Social SDK - Documentation - Discord",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://docs.discord.com/developers/activities/overview",
+   "title": "Activities Overview - Documentation - Discord",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sandbox-quantum/switch",
+   "title": "sandbox-quantum/switch",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/moltis-org/moltis",
+   "title": "moltis-org/moltis",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/heshengtao/comfyui_LLM_party",
+   "title": "heshengtao/comfyui_LLM_party",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/zzet/gortex",
+   "title": "zzet/gortex",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/KroMiose/nekro-agent",
+   "title": "KroMiose/nekro-agent",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/SaseQ/discord-mcp",
+   "title": "SaseQ/discord-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/zhimaAi/ChatClaw",
+   "title": "zhimaAi/ChatClaw",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/v-3/discordmcp",
+   "title": "v-3/discordmcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://discord.com",
+   "developer_portal": "https://docs.discord.com/developers/intro",
+   "description": "Discord is a group chat platform with a developer platform for building bots, Activities, and Social SDK game integrations, backed by a REST HTTP API and Gateway.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Discord's chat product and its Developer Platform."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Other",
+    "Basic"
+   ],
+   "primary": "Other",
+   "oauth_flows": "OAuth2 authorization flow to obtain user access tokens; bot tokens for bot users; Basic auth only for OAuth2 token endpoints.",
+   "token_refresh": "OAuth2 user tokens are short-lived and must be refreshed.",
+   "scopes_notes": "Scopes (bot, identify, guilds, guilds.join, email, connections, applications.commands) must be declared in the Developer Portal and requested during authorization. Bot permissions are granted by server admin when adding the bot."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Bots are added to servers via OAuth2 by users granting permissions; App Directory listing is optional discovery. Social SDK communication features are capped with rate limits."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "WebSocket"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "channels",
+    "guilds",
+    "users",
+    "messages",
+    "webhooks",
+    "applications",
+    "interactions"
+   ],
+   "read_ops": [
+    "channels",
+    "guilds",
+    "users",
+    "messages",
+    "guild members"
+   ],
+   "write_ops": [
+    "send messages",
+    "register slash commands",
+    "create webhook messages",
+    "modify core resources"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "HTTP API implements rate limiting per RFC 6585; users who regularly hit and ignore limits can have keys revoked.",
+   "limitations": "Social SDK communication features are capped with rate limits. Some API versions are discontinued."
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/SaseQ/discord-mcp",
+    "https://github.com/v-3/discordmcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2, bot token (Other), Basic for token endpoints",
+    "url": "https://docs.discord.com/developers/reference",
+    "quote": "Using a bot token found on the Bot page within your app’s settings.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2 bearer token",
+    "url": "https://docs.discord.com/developers/reference",
+    "quote": "Using an OAuth2 bearer token gained through the OAuth2 API .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Basic",
+    "url": "https://docs.discord.com/developers/reference",
+    "quote": "Only applicable for OAuth2 API token endpoints.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.discord.com/developers/bots/overview",
+    "quote": "Create an application in the Discord Developer Portal. This is where your bot token, OAuth2 credentials, and configuration live.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.discord.com/developers/reference",
+    "quote": "The Discord API is a REST API that allows you to interact with Discord data from your own applications.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "WebSocket (Gateway)",
+    "url": "https://docs.discord.com/developers/bots/overview",
+    "quote": "Connect to the API using the Gateway for real-time events, the HTTP API for REST operations, or both.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.discord.com/developers/quick-start/overview-of-apps",
+    "quote": "The HTTP API is a REST API that lets you interact and modify core Discord resources like channels",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "no",
+    "url": "https://github.com/SaseQ/discord-mcp",
+    "quote": "A MCP server for the Discord integration. Enable your AI assistants to seamlessly interact with Discord.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://docs.discord.com/developers/platform/webhooks",
+    "quote": "Discord POSTs to a public URL on your server when specific events occur in your app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is there an official Discord-published MCP server? None found in sources.",
+   "Specific rate limit numbers not in the provided sources.",
+   "Whether privileged gateway intents or app verification are needed at scale is not covered."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over REST/WebSocket",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST/WebSocket interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,305 @@
+{
+ "id": 11,
+ "name": "Zendesk",
+ "category": "Support and Helpdesk",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:16:45Z",
+ "duration_s": 91.7,
+ "cost_usd": 0.0745,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.zendesk.com/",
+   "title": "AI-Powered Customer Service Platform | Zendesk",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://www.zendesk.com/help-center-closed/?utm_source=helpcenter-closed&utm_medium=poweredbyzendesk&utm_campaign=text&utm_content=developers.zendesk.com",
+   "title": "Help Center Closed",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developer.zendesk.com/documentation/",
+   "title": "Documentation Home | Zendesk Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developer.zendesk.com/api-reference/",
+   "title": "API Reference Home | Zendesk Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developer.zendesk.com/documentation/authentication/",
+   "title": "Authentication | Zendesk Developer Docs",
+   "rendered": true
+  },
+  {
+   "id": "S6",
+   "url": "https://developer.zendesk.com/api-reference/widget-messaging/web/core/",
+   "title": "Core messaging Web Widget API | Zendesk Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.zendesk.com/api-reference/webhooks/introduction/",
+   "title": "Webhooks | Zendesk Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developer.zendesk.com/api-reference/voice/talk-partner-edition-api/introduction/",
+   "title": "Introduction | Zendesk Developer Docs",
+   "rendered": true
+  },
+  {
+   "id": "S9",
+   "url": "https://developer.zendesk.com/api-reference/introduction/introduction/",
+   "title": "Introduction | Zendesk Developer Docs",
+   "rendered": true
+  },
+  {
+   "id": "S10",
+   "url": "https://developer.zendesk.com/api-reference/betas/introduction/",
+   "title": "Betas and EAPs | Zendesk Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://developer.zendesk.com/api-reference/ticketing/introduction/",
+   "title": "Ticketing | Zendesk Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/introduction/",
+   "title": "Help Center | Zendesk Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/chattermate/chattermate.chat",
+   "title": "chattermate/chattermate.chat",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/reminia/zendesk-mcp-server",
+   "title": "reminia/zendesk-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mattcoatsworth/zendesk-mcp-server",
+   "title": "mattcoatsworth/zendesk-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/PersonaliAI/chatty",
+   "title": "PersonaliAI/chatty",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/koundinya/zd-mcp-server",
+   "title": "koundinya/zd-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/fruggr/zendesk-mcp-server",
+   "title": "fruggr/zendesk-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/cookfood/zendesk-mcp",
+   "title": "cookfood/zendesk-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/michaelrice/zendesk-mcp",
+   "title": "michaelrice/zendesk-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.zendesk.com/",
+   "developer_portal": "https://developer.zendesk.com/",
+   "description": "Zendesk is an AI-powered customer service platform with ticketing, Help Center, voice, chat, messaging and Sell CRM APIs.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are official zendesk.com and developer.zendesk.com pages."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "API key",
+    "Basic"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization code flow, with PKCE supported.",
+   "token_refresh": "OAuth refresh tokens are supported.",
+   "scopes_notes": "Token metadata includes scopes and associated resources."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Trial accounts limited to 10 webhooks and 60 webhook invocations per minute. Sources don't establish a free permanent tier."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "tickets",
+    "users",
+    "organizations",
+    "custom objects",
+    "Help Center articles",
+    "voice",
+    "chat",
+    "Sell CRM",
+    "webhooks",
+    "messaging"
+   ],
+   "read_ops": [
+    "retrieve webhooks",
+    "list OAuth tokens",
+    "list tickets and help center articles"
+   ],
+   "write_ops": [
+    "create tickets",
+    "create/update/delete webhooks",
+    "create OAuth tokens",
+    "revoke OAuth tokens"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Support API has requests-per-minute limits; the Help Center API follows them. Trial webhooks: 60 invocations per minute.",
+   "limitations": "Help Center API responses are filtered by user permissions. Offset pagination is capped at 100 pages."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/reminia/zendesk-mcp-server",
+    "https://github.com/mattcoatsworth/zendesk-mcp-server",
+    "https://github.com/koundinya/zd-mcp-server",
+    "https://github.com/fruggr/zendesk-mcp-server",
+    "https://github.com/cookfood/zendesk-mcp",
+    "https://github.com/michaelrice/zendesk-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://developer.zendesk.com/documentation/authentication/",
+    "quote": "Using OAuth to authenticate API requests Learn how OAuth authentication works and choose the right flow for your integration.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "API key (API tokens)",
+    "url": "https://developer.zendesk.com/documentation/authentication/",
+    "quote": "Understanding the differences between API tokens and OAuth access tokens Compare API tokens and OAuth access tokens.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Basic",
+    "url": "https://developer.zendesk.com/api-reference/ticketing/introduction/",
+    "quote": "- v - u user : password - X POST",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "trial_self_serve",
+    "url": "https://developer.zendesk.com/documentation/",
+    "quote": "Try out the Sunshine Platform with a free, 14-day trial account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developer.zendesk.com/documentation/",
+    "quote": "Zendesk's APIs are organized around REST principles.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developer.zendesk.com/api-reference/",
+    "quote": "You'll find APIs for ticketing, help center, live chat, voice, sales CRM as well as some features that span capabilities, such as omnichannel routing and custom data.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "unknown",
+    "url": "https://developer.zendesk.com/api-reference/",
+    "quote": "Welcome to the Zendesk API reference docs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://developer.zendesk.com/api-reference/webhooks/introduction/",
+    "quote": "A webhook sends an HTTP request to a specified URL in response to an activity in Zendesk Support.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Trial webhook limits",
+    "url": "https://developer.zendesk.com/api-reference/webhooks/introduction/",
+    "quote": "Trial accounts are limited to a maximum of 10 webhooks and a rate limit of 60 invocations per minute.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Does Zendesk publish an official MCP server? None of the sources or GitHub results show one owned by Zendesk.",
+   "Is a permanent free developer account or sandbox available beyond the 14-day trial?",
+   "Are API tokens enabled by default, and does an admin have to enable them?"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,240 @@
+{
+ "id": 5,
+ "name": "Twenty",
+ "category": "CRM and Sales",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:12:52Z",
+ "duration_s": 60.7,
+ "cost_usd": 0.0527,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://twenty.com",
+   "developer_portal": "https://docs.twenty.com/developers/api-and-webhooks/api",
+   "description": "Twenty (twentyhq/twenty) is an open-source CRM, positioned as 'the open alternative to Salesforce, designed for AI', offered as self-hosted (Docker Compose) or Twenty Cloud.",
+   "identity_confirmed": "yes",
+   "identity_notes": "GitHub repo owner is twentyhq and the repo describes the open alternative to Salesforce. Docs at docs.twenty.com and twenty.com match the product name and CRM category."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Authorization code + PKCE for user-facing apps (/oauth/authorize, /oauth/token); client credentials for server-to-server integrations. Clients are registered dynamically via RFC 7591.",
+   "token_refresh": "Refresh via POST to /oauth/token with grant_type=refresh_token, refresh_token, client_id and client_secret (per OAuth docs example).",
+   "scopes_notes": "OAuth scope 'api' gives full read/write access to Core and Metadata APIs; scope 'profile' reads authenticated user's profile. Scopes are space-separated. API keys can be scoped to a role (Settings > Members > Roles)."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Self-hosted open-source core is free. Twenty Cloud offers a 30-day free trial without credit card. Pricing page lists API access under Pro ($9/user/month); the quoted feature-table claim was summarized, not quoted verbatim, so verify. No app review documented for API keys; OAuth app review/approval not established."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "GraphQL"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "People",
+    "Companies",
+    "Opportunities",
+    "Custom objects",
+    "Metadata objects/fields/relations"
+   ],
+   "read_ops": [
+    "Query records",
+    "Filter records",
+    "Traverse relations in one GraphQL query"
+   ],
+   "write_ops": [
+    "Create records",
+    "Update records",
+    "Delete records",
+    "Batch create/update/delete up to 60 records per request",
+    "GraphQL batch upsert",
+    "Create/modify/delete metadata objects, fields, relations"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "100 requests per minute on Organization plan; 50 calls per minute on Pro (per pricing page summary, verify).",
+   "limitations": "Batch size capped at 60 records per request. Webhooks currently send all event types; event filtering may be added later. Core and metadata APIs are generated from each workspace's data model, so docs are workspace-specific."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.twenty.com/user-guide/ai/capabilities/mcp.md",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/mhenry3164/twenty-crm-mcp-server",
+    "https://github.com/SaschaRoelofs/twenty-crm-mcp-server",
+    "https://github.com/IgorWarzocha/twenty-mcp-server",
+    "https://github.com/jezweb/twenty-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Open alternative to Salesforce, designed for AI",
+    "url": "https://github.com/twentyhq/twenty",
+    "quote": "The open alternative to Salesforce, designed for AI.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_credentials / self-hosting",
+    "value": "Self-hosted open source core is free",
+    "url": "https://twenty.com/pricing",
+    "quote": "Self-host the open source core for free, or upgrade to Organization for SSO and row-level permissions.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.trial_available",
+    "value": "30-day Cloud trial, no credit card",
+    "url": "https://twenty.com/pricing",
+    "quote": "Start your free trial today without credit card.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary / credential creation",
+    "value": "API key created in Settings > Developers > API",
+    "url": "https://docs.twenty.com/developers/api-and-webhooks/api",
+    "quote": "Create an API key in Settings → Developers → API → + Create key.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods (bearer usage)",
+    "value": "API key sent as Bearer token in Authorization header",
+    "url": "https://docs.twenty.com/developers/api-and-webhooks/api",
+    "quote": "Authorization: Bearer YOUR_API_KEY",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST and GraphQL",
+    "url": "https://docs.twenty.com/developers/api-and-webhooks/api",
+    "quote": "Both are available as REST and GraphQL. GraphQL adds batch upserts and the ability to traverse relations in a single query.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.limitations (batch)",
+    "value": "Batch up to 60 records per request",
+    "url": "https://docs.twenty.com/developers/api-and-webhooks/api",
+    "quote": "Both REST and GraphQL support batching up to 60 records per request.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_flows",
+    "value": "OAuth 2.0 authorization code + PKCE and client credentials",
+    "url": "https://docs.twenty.com/developers/extend/oauth",
+    "quote": "Twenty implements OAuth 2.0 with authorization code + PKCE for user-facing apps",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.client registration",
+    "value": "Dynamic client registration via RFC 7591",
+    "url": "https://docs.twenty.com/developers/extend/oauth",
+    "quote": "Clients are registered dynamically via RFC 7591 — no manual setup in a dashboard.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.client credentials token",
+    "value": "Client credentials token has workspace-level access",
+    "url": "https://docs.twenty.com/developers/extend/oauth",
+    "quote": "The returned token has workspace-level access, not tied to any specific user.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.scopes_notes",
+    "value": "Scope 'api' gives full read/write to Core and Metadata APIs",
+    "url": "https://docs.twenty.com/developers/extend/oauth",
+    "quote": "Full read/write access to the Core and Metadata APIs",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.delivery",
+    "value": "HTTP POST on record create/update/delete",
+    "url": "https://docs.twenty.com/developers/api-and-webhooks/webhooks",
+    "quote": "Twenty sends an HTTP POST to your URL whenever a record is created, updated, or deleted.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.signature",
+    "value": "Requests signed; X-Twenty-Webhook-Signature HMAC SHA256 plus X-Twenty-Webhook-Timestamp",
+    "url": "https://docs.twenty.com/developers/api-and-webhooks/webhooks",
+    "quote": "Twenty signs each webhook request for security. Validate signatures to ensure requests are authentic.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.event_scope",
+    "value": "All event types sent; filtering may come later",
+    "url": "https://docs.twenty.com/developers/api-and-webhooks/webhooks",
+    "quote": "All event types are sent to your webhook URL. Event filtering may be added in future releases.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Twenty exposes its own MCP server at /mcp on workspace URL; OAuth or API key auth",
+    "url": "https://docs.twenty.com/user-guide/ai/capabilities/mcp.md",
+    "quote": "Twenty exposes an MCP server so that AI assistants",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community MCP servers exist (e.g., mhenry3164/twenty-crm-mcp-server, MIT, needs TWENTY_API_KEY)",
+    "url": "https://github.com/mhenry3164/twenty-crm-mcp-server",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Exact rate limit per plan (summary says 100/min on Organization, 50/min on Pro); verify on the official rate-limit table.",
+   "Whether API access requires a paid Pro plan on Twenty Cloud or is included in the 30-day trial and self-hosted installs (pricing page feature-table claim not quoted verbatim).",
+   "Whether creating API keys requires workspace admin role (not established).",
+   "Official SDKs for Twenty (none confirmed; PyPI twentycrm-api-client is a third-party lead).",
+   "Software license of the open-source core (not established from fetched content).",
+   "Whether the official MCP server is in a twentyhq GitHub org repo or only in the hosted app; not confirmed.",
+   "Webhook signature header details and secret handling were from summary; confirm verbatim."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented GraphQL/REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.812,
+ "flags": [],
+ "error": null
+}

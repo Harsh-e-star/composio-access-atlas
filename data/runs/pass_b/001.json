@@ -1,0 +1,151 @@
+{
+ "id": 1,
+ "name": "Salesforce",
+ "category": "CRM and Sales",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:12:43Z",
+ "duration_s": 51.7,
+ "cost_usd": 0.068,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.salesforce.com",
+   "developer_portal": "https://developer.salesforce.com",
+   "description": "Salesforce, the CRM and cloud platform (Sales Cloud, Service Cloud, etc.), with REST, Pub/Sub and hosted MCP offerings for developers. Salesforce's own docs (developer.salesforce.com) were blocked to my fetch tool (HTTP 403), so most fields rest on search-result snippets and are marked unverified.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Product identity is clear from vendor-owned domains and the forcedotcom GitHub org. Salesforce's own docs pages returned 403 to fetch, so their content was seen only through search snippets."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Search snippets of Salesforce's Connect REST API guide say to create an external client app, enable OAuth and configure an OAuth flow; older guides list web server and username-password flows. Access and refresh tokens are issued on success. Not verified from a fetched page.",
+   "token_refresh": "Refresh tokens are issued on successful authorization (per search snippet of Salesforce docs); details unverified.",
+   "scopes_notes": "Developer quickstart snippet says to assign the 'Access and manage your data' OAuth scope to the connected app. Not verified from a fetched page."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Per search snippet, the free Developer Edition is for development and testing, and production use needs an edition with API access. Hosted MCP servers are reported as limited to Enterprise Edition and above with Flex Credits, which is a paid gate for MCP specifically."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "SOAP",
+    "gRPC",
+    "WebSocket",
+    "none"
+   ],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "Event delivery: Pub/Sub API (gRPC/HTTP/2, Avro) is recommended over Streaming API (Bayeux/CometD) per search snippet; Change Data Capture and Platform Events are the event sources. Webhooks/outbound messaging were not found. Breadth of REST resources and SDK availability were not verified because the official docs were blocked. Protocol list is partly unverified; 'none' is not a valid claim here and should be ignored."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/tsmztech/mcp-server-salesforce",
+    "https://github.com/JustParent/simple-salesforce-mcp",
+    "https://github.com/advancedcommunities/salesforce-mcp-server",
+    "https://github.com/Radico/mcp-server-salesforce"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Salesforce hosted MCP servers are a Salesforce-maintained MCP offering, and forcedotcom is Salesforce's open-source GitHub org.",
+    "url": "https://github.com/forcedotcom/mcp-hosted/wiki/Available-Tools-and-Servers",
+    "quote": "Think of this wiki as the “director’s commentary” for Salesforce's hosted MCP servers.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_repo_scope",
+    "value": "forcedotcom/mcp-hosted is a documentation and community repo, not a server.",
+    "url": "https://github.com/forcedotcom/mcp-hosted",
+    "quote": "The wiki and issues list are a mechanic's forum where people share what works in the real world.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_url",
+    "value": "Salesforce hosted MCP servers documentation exists at developer.salesforce.com/docs/platform/hosted-mcp-servers/",
+    "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "access.paid_plan_required",
+    "value": "Hosted MCP servers are intended for customers with Flex Credits, and server usage may be billed.",
+    "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "access.free_credentials",
+    "value": "A free Developer Edition org can be signed up for at developer.salesforce.com/signup, with a 5 MB data storage cap.",
+    "url": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/quickstart_dev_org",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "auth.methods",
+    "value": "External client app with OAuth flows; access and refresh tokens issued on authorization.",
+    "url": "https://developer.salesforce.com/docs/atlas.en-us.240.0.bi_dev_guide_rest_sdd.meta/bi_dev_guide_rest_sdd/bi_rest_authentication.htm",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community MCP servers for Salesforce exist, e.g. tsmztech/mcp-server-salesforce, JustParent/simple-salesforce-mcp.",
+    "url": "https://github.com/tsmztech/mcp-server-salesforce",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Salesforce developer docs (developer.salesforce.com) returned HTTP 403 to fetch, so REST resource breadth, rate limits, SDKs, and exact scopes are unverified.",
+   "Confirm whether hosted MCP servers are available on the free Developer Edition or require Enterprise edition plus Flex Credits.",
+   "Confirm whether Salesforce offers any generic webhooks or outbound messaging for external subscribers, or only Pub/Sub API / CDC / Platform Events.",
+   "Confirm the current OAuth flows (JWT bearer, client credentials, refresh) and whether username-password flow is still supported for the latest API version.",
+   "Check maintenance status and security of community MCP servers before recommending any."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST/SOAP/WebSocket/gRPC/none interface."
+  ]
+ },
+ "evidence_support_rate": 0.286,
+ "flags": [],
+ "error": null
+}

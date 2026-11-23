@@ -1,0 +1,316 @@
+{
+ "id": 4,
+ "name": "Attio",
+ "category": "CRM and Sales",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:14:32Z",
+ "duration_s": 42.7,
+ "cost_usd": 0.079,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://attio.com",
+   "title": "Attio: The CRM for agentic revenue",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.attio.com/docs/overview",
+   "title": "Overview - Attio Docs",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://attio.com/platform/developers",
+   "title": "Developer Platform | Attio",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.attio.com/rest-api/overview",
+   "title": "Overview - Attio Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.attio.com/rest-api/guides/authentication",
+   "title": "Authenticating requests - Attio Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.attio.com/rest-api/tutorials/connect-an-app-through-oauth",
+   "title": "Connect an app to Attio through OAuth - Attio Docs",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.attio.com/mcp/overview",
+   "title": "Attio MCP - Attio Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.attio.com/rest-api/guides/rate-limiting",
+   "title": "Handling rate limits - Attio Docs",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://attio.com/platform/mcp",
+   "title": "MCP | Attio",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://attio.com/pricing",
+   "title": "Plans & Pricing | Attio",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://docs.attio.com/rest-api/guides/linking-referenced-records",
+   "title": "Linking referenced records - Attio Docs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/kesslerio/attio-mcp-server",
+   "title": "kesslerio/attio-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/hmk/attio-mcp-server",
+   "title": "hmk/attio-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/redriverwest/attio-mcp",
+   "title": "redriverwest/attio-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/itsbrex/attio-mcp-server",
+   "title": "itsbrex/attio-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Arkel-ai/attio-mcp-server",
+   "title": "Arkel-ai/attio-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/TrialAndErrorAI/attio-mcp",
+   "title": "TrialAndErrorAI/attio-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ArcadeAI/attio-mcp-benchmark",
+   "title": "ArcadeAI/attio-mcp-benchmark",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/kesslerio/attio-mcp",
+   "title": "kesslerio/attio-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://attio.com",
+   "developer_portal": "https://docs.attio.com",
+   "description": "Attio is a customizable, data-driven CRM platform with a developer platform (REST API, App SDK, MCP, SQL) for building integrations, automations and agents.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources from attio.com and docs.attio.com clearly describe Attio CRM."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "API key",
+    "Bearer/PAT",
+    "Basic"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization Code Grant Flow (RFC 6749 section 4.1); token_level param selects workspace or user level",
+   "token_refresh": "",
+   "scopes_notes": "Scopes apply to both OAuth and single-workspace tokens; configured in developer console or when generating the token. Tokens are workspace-level or user-level (user-level only for OAuth). Only workspace admins can grant a workspace-level OAuth token."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Workspace-level OAuth tokens can only be granted by workspace admins; admin approves app user scopes on install. SQL access through API/MCP requires higher plans."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "records",
+    "people",
+    "companies",
+    "deals",
+    "tasks",
+    "notes",
+    "lists",
+    "entries",
+    "webhooks"
+   ],
+   "read_ops": [
+    "list/query records",
+    "list entries",
+    "tasks"
+   ],
+   "write_ops": [
+    "create record",
+    "upsert record",
+    "update record",
+    "create tasks and notes"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "100 read requests/sec and 25 write requests/sec across the API; score-based limits on List records and List entries (10 second sliding window); 429 with Retry-After.",
+   "limitations": "Some endpoints (e.g. webhooks) are workspace-level token only. Creating referenced records counts as extra writes."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.attio.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/kesslerio/attio-mcp-server",
+    "https://github.com/hmk/attio-mcp-server",
+    "https://github.com/redriverwest/attio-mcp",
+    "https://github.com/itsbrex/attio-mcp-server",
+    "https://github.com/Arkel-ai/attio-mcp-server",
+    "https://github.com/TrialAndErrorAI/attio-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2, API key",
+    "url": "https://docs.attio.com/rest-api/guides/authentication",
+    "quote": "There are two ways to generate an access token: By implementing an OAuth 2.0 flow By generating an API key for your workspace",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Basic",
+    "url": "https://docs.attio.com/rest-api/guides/authentication",
+    "quote": "We also support HTTP Basic Authentication , where the username is the token and the password is left blank.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Bearer",
+    "url": "https://docs.attio.com/rest-api/guides/authentication",
+    "quote": "Authorization: Bearer <access_token>",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://attio.com/pricing",
+    "quote": "Free For individuals to get started with Attio. $ 0 0 Up to 3 users. Start for free",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "API available on Free plan",
+    "url": "https://attio.com/pricing",
+    "quote": "Platform and developer API and webhooks Free Plus Pro Ultra MCP server Free Plus Pro Ultra App SDK Free Plus Pro Ultra",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.attio.com/rest-api/overview",
+    "quote": "Attio provides a public REST API which exchanges JSON over HTTPS.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://attio.com/platform/developers",
+    "quote": "Create custom integrations with full read and write access.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://docs.attio.com/docs/overview",
+    "quote": "You can also subscribe to events in realtime using webhooks.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "100 read/s, 25 write/s",
+    "url": "https://docs.attio.com/rest-api/guides/rate-limiting",
+    "quote": "Our rate limit across the whole API is 100 requests per second for read requests, 25 requests per second for write requests.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.attio.com/mcp/overview",
+    "quote": "Attio MCP is Attio's hosted MCP server that gives AI tools secure access to your Attio workspace.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial_available",
+    "value": "yes",
+    "url": "https://attio.com/pricing",
+    "quote": "day free trial of the Pro plan, with access to all Pro features.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is there a sandbox environment?",
+   "Is app review required to publish apps publicly?",
+   "OAuth access token expiry/refresh behavior not established.",
+   "Exact trial length truncated in source."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

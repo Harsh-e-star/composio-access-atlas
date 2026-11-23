@@ -1,0 +1,240 @@
+{
+ "id": 25,
+ "name": "Pumble",
+ "category": "Communications and Messaging",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:17:33Z",
+ "duration_s": 29.6,
+ "cost_usd": 0.0642,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://pumble.com",
+   "title": "Pumble™ - FREE Business Communication Tool",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+   "title": "Pumble API Overview - Pumble Help",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://pumble.com/mcp",
+   "title": "Connect AI agents with the Pumble MCP",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://pumble.com/pricing",
+   "title": "Pricing - Pumble™",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://pumble.com/help/workspace-administration/workspace-settings/single-sign-on-sso/",
+   "title": "Single Sign-On (SSO) - Pumble Help",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://pumble.com/help/getting-started/",
+   "title": "Getting started Archives - Pumble Help",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+   "title": "How to use the Pumble MCP server - Pumble Help",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/infralayers/pumble-mcp",
+   "title": "infralayers/pumble-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/nitindermohan/pumble-mcp",
+   "title": "nitindermohan/pumble-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/apet97/pumble-python-sdk",
+   "title": "apet97/pumble-python-sdk",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/shoutkol/pumble-mcp-server",
+   "title": "shoutkol/pumble-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://pumble.com",
+   "developer_portal": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+   "description": "Pumble is a free team communication app (channels, threads, messages, calls) by CAKE.com, with an API addon and an MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Pumble team chat product."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Bearer/PAT"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "Custom apps have user and bot scopes (e.g. messages:read, messages:write, channels:list); MCP tools depend on selected scopes."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "API addon must be installed on the workspace; rate limit up to 1000 requests per minute per user."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "messages",
+    "channels",
+    "reactions",
+    "threads",
+    "files",
+    "users",
+    "scheduled messages",
+    "calls"
+   ],
+   "read_ops": [
+    "list messages in channel",
+    "list channels and DMs",
+    "get channel details",
+    "get users",
+    "search messages",
+    "get thread replies",
+    "get workspace info"
+   ],
+   "write_ops": [
+    "send message",
+    "reply to message",
+    "delete message",
+    "edit message",
+    "add reaction",
+    "create channel",
+    "add user to channel",
+    "schedule message",
+    "create call link"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "Up to 1000 requests per minute per user",
+   "limitations": "API key addon covers a subset of actions (messages, replies, deletion, reactions, channel creation, listing). Private channel listing requires the addon bot to be a member."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.pumble.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/infralayers/pumble-mcp",
+    "https://github.com/nitindermohan/pumble-mcp",
+    "https://github.com/apet97/pumble-python-sdk",
+    "https://github.com/shoutkol/pumble-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+    "quote": "This addon lets you generate an API key that allows you to send messages, reactions, and more via simple HTTP requests.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT",
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+    "quote": "When the app is installed, make sure to copy the App key, user token, and bot token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+    "quote": "Who can use this feature? Owner, Admin, Member Available on all plans",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+    "quote": "This addon lets you generate an API key that allows you to send messages, reactions, and more via simple HTTP requests.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Medium",
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+    "quote": "Listing the channels and DMs that belong to the user who created the key",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+    "quote": "With the Pumble Model Context Protocol (MCP) server, you can connect third-party AI agents (e.g., Claude, Gemini, Codex) to Pumble",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "1000 requests per minute per user",
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+    "quote": "The rate limit is up to 1000 requests per minute per user.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Webhooks/event subscriptions for custom apps not confirmed in sources.",
+   "Official SDK availability not confirmed.",
+   "OAuth2 flow for custom apps not confirmed.",
+   "Admin apps page could not be loaded (robots.txt)."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

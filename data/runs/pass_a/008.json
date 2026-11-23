@@ -1,0 +1,296 @@
+{
+ "id": 8,
+ "name": "Close",
+ "category": "CRM and Sales",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:16:05Z",
+ "duration_s": 51.9,
+ "cost_usd": 0.07,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://close.com",
+   "title": "Close CRM | The CRM That Does the Work",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developer.close.com",
+   "title": "Close Developer Platform | Close | Developer API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://close.com/api",
+   "title": "CRM API | How to Integrate With Close CRM",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developer.close.com/api/overview/api-key-authentication",
+   "title": "Authentication with API keys | Close | Developer API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developer.close.com/mcp",
+   "title": "Close MCP Server | Close | Developer API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developer.close.com/api/overview",
+   "title": "API Overview | Close | Developer API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.close.com/integrations",
+   "title": "Build an Integration | Close | Developer API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developer.close.com/integrations/create-an-oauth-app",
+   "title": "Creating an OAuth App | Close | Developer API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developer.close.com/api/resources/webhooks",
+   "title": "Webhooks | Close | Developer API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developer.close.com/api/overview/api-clients",
+   "title": "API Clients | Close | Developer API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://developer.close.com/api/resources/events",
+   "title": "Event Log | Close | Developer API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/runekaagaard/mcp-redmine",
+   "title": "runekaagaard/mcp-redmine",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/HazAT/pi-solo",
+   "title": "HazAT/pi-solo",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jordigilh/kubernaut",
+   "title": "jordigilh/kubernaut",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/puran-water/mathcad-mcp",
+   "title": "puran-water/mathcad-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/gzchenhao/openhire",
+   "title": "gzchenhao/openhire",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/tykisgod/quick-question",
+   "title": "tykisgod/quick-question",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/wgaostudio/closetscan",
+   "title": "wgaostudio/closetscan",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/nirholas/ai-tutor-mcp",
+   "title": "nirholas/ai-tutor-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://close.com",
+   "developer_portal": "https://developer.close.com",
+   "description": "Close is a CRM with built-in calling, email, SMS, automation and AI, with a public REST API, webhooks and a remote MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Close CRM (close.com) matches the assignment."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Basic",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "OAuth 2.0 authorization flow for user-facing integrations; MCP supports OAuth 2.0 Dynamic Client Registration.",
+   "token_refresh": "offline_access scope granted to OAuth apps.",
+   "scopes_notes": "OAuth apps are granted all.full_access and offline_access scopes. MCP uses Close-Scope header: mcp.read, mcp.write_safe, mcp.write_destructive."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "OAuth apps are Private by default; to let other Close customers authorize it you must request to make it public and optionally get listed."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "WebSocket"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Leads",
+    "Contacts",
+    "Opportunities",
+    "Activities",
+    "Custom Fields",
+    "Webhooks",
+    "Event Log"
+   ],
+   "read_ops": [
+    "List and read leads, contacts, opportunities, activities",
+    "Event log (30 days)"
+   ],
+   "write_ops": [
+    "Create/update leads, contacts, activities, custom data",
+    "Send email/SMS programmatically",
+    "Manage sequences and bulk actions"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Rate limits apply to all endpoints; handle 429 with exponential backoff.",
+   "limitations": "OpenAPI spec is experimental; event log covers only the last 30 days; max 40 webhook subscriptions per org."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developer.close.com/mcp",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key (HTTP Basic) and OAuth2",
+    "url": "https://developer.close.com/api/overview",
+    "quote": "API Keys — Best for scripts, internal tools, and server-side integrations. Use HTTP Basic Auth with your API key as the username and an empty password.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://developer.close.com/api/overview",
+    "quote": "OAuth 2.0 — Best for user-facing integrations.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developer.close.com/api/overview/api-key-authentication",
+    "quote": "API keys can be created and managed in your Close account under Settings → Developer → API Keys .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free dev org available",
+    "url": "https://developer.close.com/integrations",
+    "quote": "Dev organizations work identically to standard Close organizations but have no subscription fees.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developer.close.com/api/overview",
+    "quote": "Close uses industry-standard REST conventions with predictable URL structures, standard HTTP methods, and JSON request/response bodies.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developer.close.com/api/overview",
+    "quote": "Activities Calls, emails, notes, SMS, meetings, and other interactions logged on leads.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developer.close.com/mcp",
+    "quote": "The MCP server URL is https://mcp.close.com/mcp and has “HTTP Streamable” and “OAuth 2.0 Dynamic Client Registration (DCR)” support.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://developer.close.com/api/resources/webhooks",
+    "quote": "Webhooks allow a subscription URL to be configured that we will POST event data to as it is added to the Event Log .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "yes",
+    "url": "https://developer.close.com/api/overview/api-clients",
+    "quote": "Close’s Python Wrapper (Officially maintained by Close)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "OAuth apps private by default",
+    "url": "https://developer.close.com/integrations/create-an-oauth-app",
+    "quote": "OAuth apps are Private by default, meaning only members of your own Close organization can authorize them.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Whether API access requires a paid plan after the free trial ends is not stated.",
+   "Specific numeric rate limits are not stated in the provided sources."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "review_required",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST/WebSocket interface.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

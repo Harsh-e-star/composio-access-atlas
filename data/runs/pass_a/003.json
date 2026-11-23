@@ -1,0 +1,260 @@
+{
+ "id": 3,
+ "name": "Pipedrive",
+ "category": "CRM and Sales",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:14:17Z",
+ "duration_s": 27.7,
+ "cost_usd": 0.0878,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.pipedrive.com/",
+   "title": "Sales CRM & Pipeline Management Software | Pipedrive",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.pipedrive.com",
+   "title": "Pipedrive Developers Corner | Pipedrive API sandbox",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.pipedrive.com/",
+   "title": "Pipedrive Developers Corner | Pipedrive API sandbox",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://www.pipedrive.com/en/features/mcp-server",
+   "title": "Pipedrive MCP Server | Connect Claude & ChatGPT to Your CRM | Pipedrive",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://www.pipedrive.com/en/pricing",
+   "title": "CRM Pricing Plans | Affordable CRM Software Costs | Pipedrive",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://www.pipedrive.com/de/features/mcp-server",
+   "title": "Pipedrive MCP-Server | Claude und ChatGPT mit Ihrem CRM verbinden | Pipedrive",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://www.pipedrive.com/es/features/mcp-server",
+   "title": "Servidor del MCP de Pipedrive | Conecta Claude y ChatGPT con tu CRM | Pipedrive",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://www.pipedrive.com/fr/features/mcp-server",
+   "title": "Serveur MCP de Pipedrive | Connectez Claude et ChatGPT à votre CRM | Pipedrive",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://www.pipedrive.com/pt/features/mcp-server",
+   "title": "Servidor MCP do Pipedrive | Conecte o Claude e o ChatGPT ao seu CRM | Pipedrive",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://www.pipedrive.com/en/features/mcp-skills",
+   "title": "Pipedrive Skills for Claude & ChatGPT | MCP Skills | Pipedrive",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/WillDent/pipedrive-mcp-server",
+   "title": "WillDent/pipedrive-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Wirasm/pipedrive-mcp",
+   "title": "Wirasm/pipedrive-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/nubiia-dev/mcp-pipedrive",
+   "title": "nubiia-dev/mcp-pipedrive",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ckalima/pipedrive-mcp-server",
+   "title": "ckalima/pipedrive-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/comma-compliance/pipedrive-mcp",
+   "title": "comma-compliance/pipedrive-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/GarethWright/PipeDrive-MCP-Server",
+   "title": "GarethWright/PipeDrive-MCP-Server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Teapot-Agency/mcp_pipedrive",
+   "title": "Teapot-Agency/mcp_pipedrive",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/rahulsinghnegiii/Founder-OS",
+   "title": "rahulsinghnegiii/Founder-OS",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.pipedrive.com/",
+   "developer_portal": "https://developers.pipedrive.com",
+   "description": "Pipedrive is a sales CRM and pipeline management software with a developer platform, API, marketplace and an official MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are from pipedrive.com and developers.pipedrive.com."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Pipedrive MCP connects via secure OAuth login.",
+   "token_refresh": "",
+   "scopes_notes": "AI assistant can only access data the Pipedrive user has permission to view and edit."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Marketplace listing implied for reaching customers; details not in sources. Sandbox testing account is listed as a feature on the top pricing plan, but developer sandbox signup is available on the developers site."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Unknown",
+   "resources": [
+    "deals",
+    "persons",
+    "leads",
+    "activities",
+    "organizations"
+   ],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "API reference not in sources; protocol and breadth not directly established."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://www.pipedrive.com/en/features/mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/WillDent/pipedrive-mcp-server",
+    "https://github.com/nubiia-dev/mcp-pipedrive",
+    "https://github.com/ckalima/pipedrive-mcp-server",
+    "https://github.com/comma-compliance/pipedrive-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://www.pipedrive.com/en/features/mcp-server",
+    "quote": "Connect your AI assistant to Pipedrive in minutes via a secure OAuth login.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developers.pipedrive.com",
+    "quote": "Sign up for a Sandbox Account today to begin experimenting and developing in a risk free environment",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.pipedrive.com",
+    "quote": "Their developer API, well-documented API reference page and easy use of webhooks allow developers to easily build solutions in the Pipedrive Developer Platform.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Unknown",
+    "url": "https://developers.pipedrive.com",
+    "quote": "Easily build integrations with our API and developer platform to reach over 100,000 companies through the Pipedrive Marketplace",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://www.pipedrive.com/en/features/mcp-server",
+    "quote": "Pipedrive MCP is built and maintained by Pipedrive and follows our security standards.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial_available",
+    "value": "yes",
+    "url": "https://www.pipedrive.com/",
+    "quote": "14-day free trial, no credit card required",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "yes",
+    "url": "https://developers.pipedrive.com",
+    "quote": "OFFICIAL client-nodejs Javascript 233 88 OFFICIAL client-php PHP 63 64",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Developer API auth methods (API token, OAuth scopes) not in sources.",
+   "API breadth, rate limits and REST protocol not directly documented in sources.",
+   "Whether sandbox requires a paid plan: pricing page lists sandbox on top plan, while the developers page offers sandbox signup.",
+   "Marketplace app review requirements unknown."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

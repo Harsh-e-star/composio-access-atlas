@@ -1,0 +1,266 @@
+{
+ "id": 18,
+ "name": "Help Scout",
+ "category": "Support and Helpdesk",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:17:04Z",
+ "duration_s": 42.1,
+ "cost_usd": 0.068,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.helpscout.com/",
+   "title": "Help Scout: The AI-driven support platform for customer-first brands",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developer.helpscout.com",
+   "title": "Help Scout Developers - API Documentation\n      \n      | Help Scout Developers",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.helpscout.com",
+   "title": "Help Scout Support",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developer.helpscout.com/apps/getting-started/",
+   "title": "Getting Started with the Developer Platform\n      \n      | Help Scout Developers",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.helpscout.com/collection/1543-getting-started",
+   "title": "Getting Started - Help Scout Support",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://www.helpscout.com/pricing/",
+   "title": "Help Scout Pricing: Affordable Customer Support Software",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.helpscout.com/",
+   "title": "Help Scout Developers - API Documentation\n      \n      | Help Scout Developers",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developer.helpscout.com/webhooks/",
+   "title": "Webhooks\n      \n      | Help Scout Developers",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/drewburchfield/help-scout-mcp-server",
+   "title": "drewburchfield/help-scout-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/WayLit/help-scout-mcp-server",
+   "title": "WayLit/help-scout-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/BryanMcKinney/HelpScoutMCP",
+   "title": "BryanMcKinney/HelpScoutMCP",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/pipeworx-io/mcp-help-scout",
+   "title": "pipeworx-io/mcp-help-scout",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jannikco/help-scout-mcp",
+   "title": "jannikco/help-scout-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Simulation-Theory/help-scout-mcp-server",
+   "title": "Simulation-Theory/help-scout-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/BusyBee3333/help-scout-mcp-2026-complete",
+   "title": "BusyBee3333/help-scout-mcp-2026-complete",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/samiabid/helpscout-mcp-server",
+   "title": "samiabid/helpscout-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.helpscout.com/",
+   "developer_portal": "https://developer.helpscout.com",
+   "description": "Help Scout is an AI-driven customer support platform (Inbox, Envoy, Copilot, Signal) with shared inbox, Beacon live chat, and Docs knowledge base.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Help Scout support platform and its developer docs."
+  },
+  "auth": {
+   "methods": [
+    "Other"
+   ],
+   "primary": "Other",
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "paid_plan",
+   "free_credentials": "no",
+   "trial_available": "yes",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "yes",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Public integrations: developers should let Help Scout know when finished so they can promote it; brand guidelines apply. Webhooks & OAuth apps listed in pricing table."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "WebSocket"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "conversations",
+    "customers",
+    "organizations",
+    "Docs sites",
+    "chats",
+    "surveys/ratings",
+    "users"
+   ],
+   "read_ops": [
+    "read data from Help Scout inboxes",
+    "read live Beacon chats",
+    "read Docs sites"
+   ],
+   "write_ops": [
+    "write data to Help Scout inboxes",
+    "answer live Beacon chats",
+    "write data to Docs sites"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "API access limits per plan: 200, 400, 800 calls/minute (Standard/Plus/Pro per pricing table order).",
+   "limitations": "Pricing table lists API access only for paid plans; the Free plan does not appear to include it."
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/drewburchfield/help-scout-mcp-server",
+    "https://github.com/WayLit/help-scout-mcp-server",
+    "https://github.com/samiabid/helpscout-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developer.helpscout.com/",
+    "quote": "Inbox API - read and write data to Help Scout inboxes Chat API - read and answer live Beacon chats while they are still open Docs API - read and write data to your Docs sites",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developer.helpscout.com/webhooks/",
+    "quote": "Webhooks enable Help Scout to call a script on your server when one or more events have happened.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Other",
+    "url": "https://developer.helpscout.com/webhooks/",
+    "quote": "Each webhook request contains an X-HelpScout-Signature header, which is generated using the given secret key, along with the json encoded payload data",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "paid_plan",
+    "url": "https://www.helpscout.com/pricing/",
+    "quote": "API access Read/write data and connect more key systems with Help Scout.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial_available",
+    "value": "yes",
+    "url": "https://www.helpscout.com/pricing/",
+    "quote": "When you sign up for a free trial of the Standard or Plus plan, you’ll get 15 days to take all of the plan’s features for a test drive",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "no",
+    "url": "https://github.com/drewburchfield/help-scout-mcp-server",
+    "quote": "MCP server for Help Scout - search conversations, customers, organizations, reports, and Docs with AI agents, plus opt-in writes for drafting replies and triage",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://developer.helpscout.com/webhooks/",
+    "quote": "Webhooks enable Help Scout to call a script on your server when one or more events have happened.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.admin_approval_required",
+    "value": "yes",
+    "url": "https://developer.helpscout.com/apps/getting-started/",
+    "quote": "Log into your Help Scout account as an administrator or account owner.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "How API authentication works (OAuth2 client credentials/auth code vs. API key) is not described in the provided sources.",
+   "Whether the Free plan includes API access is not confirmed.",
+   "API rate limits per plan are inferred from the pricing table ordering.",
+   "No official vendor MCP server was found in the sources."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "high",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "yes",
+  "approach": "Custom toolkit over REST/WebSocket",
+  "main_blocker": "Paid plan required",
+  "rationale": [
+   "API needs a paid plan."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,290 @@
+{
+ "id": 15,
+ "name": "Pylon",
+ "category": "Support and Helpdesk",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:16:34Z",
+ "duration_s": 29.0,
+ "cost_usd": 0.0747,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.usepylon.com/",
+   "title": "Pylon: Agentic B2B Support",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.usepylon.com/pylon-docs",
+   "title": "Introduction | Pylon",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://www.usepylon.com/integrations/mcp",
+   "title": "Pylon MCP server: connect ChatGPT, Claude, and Cursor",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.usepylon.com/pylon-docs/knowledge-base/custom-authentication",
+   "title": "Custom Authentication | Pylon",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.usepylon.com/pylon-docs/customer-portal/custom-authentication",
+   "title": "Custom Authentication | Pylon",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.usepylon.com/pylon-docs/developer/api/api-reference",
+   "title": "API reference | Pylon",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+   "title": "Pylon MCP | Pylon",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+   "title": "API | Pylon",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.usepylon.com/pylon-docs/developer/webhooks",
+   "title": "Webhooks | Pylon",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.usepylon.com/pylon-docs/getting-started/publish-your-docs",
+   "title": "Quick Start | Pylon",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/JustinBeckwith/pylon-mcp",
+   "title": "JustinBeckwith/pylon-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/toalba/Pylon",
+   "title": "toalba/Pylon",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/OpenAgentsInc/pylon-previous",
+   "title": "OpenAgentsInc/pylon-previous",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/pylonapi/pylon-mcp",
+   "title": "pylonapi/pylon-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/lwsinclair/pylon-mcp",
+   "title": "lwsinclair/pylon-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Carter-S/pylon-mcp",
+   "title": "Carter-S/pylon-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/inheinsight/pylon-kb-mcp",
+   "title": "inheinsight/pylon-kb-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/bgrgndzz/pylon-replies-mcp",
+   "title": "bgrgndzz/pylon-replies-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.usepylon.com/",
+   "developer_portal": "https://docs.usepylon.com/pylon-docs/developer/api",
+   "description": "Pylon is an agentic support platform built for B2B, tracking customer issues across channels and orchestrating agents and automations.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources clearly describe Pylon (usepylon.com) support platform."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "OAuth 2.0 is documented for the MCP server (interactive sign-in); the REST API uses API tokens.",
+   "token_refresh": "",
+   "scopes_notes": "Tokens run with the role/permissions of their identity; MCP Access permission required for MCP."
+  },
+  "access": {
+   "tier": "admin_approval",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "yes",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Only Admin users can create API tokens."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "WebSocket"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Accounts",
+    "Attachments",
+    "Audit Logs",
+    "Call Recordings",
+    "Contacts",
+    "Custom Fields",
+    "Custom Objects",
+    "Email",
+    "Feature Requests",
+    "Issues",
+    "Knowledge Base",
+    "Macros",
+    "Messages",
+    "Surveys",
+    "Tags",
+    "Tasks & Projects",
+    "Teams",
+    "Ticket Forms",
+    "Training Data",
+    "User roles",
+    "Users"
+   ],
+   "read_ops": [
+    "fetch customer information",
+    "fetch issue information"
+   ],
+   "write_ops": [
+    "create issues programmatically"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Documented on a Rate limits page (429 responses); details not in sources.",
+   "limitations": "Only Admin users can create API tokens. SDKs for TypeScript, Python, Go; experimental CLI."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/JustinBeckwith/pylon-mcp",
+    "https://github.com/Carter-S/pylon-mcp",
+    "https://github.com/lwsinclair/pylon-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2, Bearer/PAT",
+    "url": "https://www.usepylon.com/integrations/mcp",
+    "quote": "Auth is OAuth 2.0 or an API token. Transport is Streamable HTTP (stateless).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Bearer token",
+    "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+    "quote": "Use an existing API token for headless workers, scripts, or MCP clients that support custom authorization headers.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "admin_approval",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+    "quote": "Only Admin users can create API tokens.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+    "quote": "Pylon’s API can be used to programmatically access and take action on data within Pylon.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/api-reference",
+    "quote": "Accounts Activities Attachments Audit Logs Call Recordings Contacts Custom Fields Custom Objects Email Feature Requests Issues Knowledge Base Macros Me Messages Surveys Tags Tasks & Projects Teams Ticket Forms Training Data User roles Users",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "yes",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+    "quote": "To call the API from TypeScript, Python, or Go, use our SDKs",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/webhooks",
+    "quote": "Webhooks are user-defined HTTP callbacks that are triggered by specific events within Pylon.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+    "quote": "The Pylon MCP Server exposes Pylon data to AI tools that support the Model Context Protocol (e.g. Claude, ChatGPT, Cursor).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is there a free trial or sandbox for developers?",
+   "Is API access limited to certain paid plans?",
+   "Specific API rate limit values",
+   "Does the REST API support OAuth2?"
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "high",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Workspace admin approval",
+  "rationale": [
+   "A workspace admin must approve/install or issue credentials."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

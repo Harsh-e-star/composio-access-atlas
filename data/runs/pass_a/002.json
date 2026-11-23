@@ -1,0 +1,264 @@
+{
+ "id": 2,
+ "name": "HubSpot",
+ "category": "CRM and Sales",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:15:01Z",
+ "duration_s": 71.6,
+ "cost_usd": 0.0728,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.hubspot.com/",
+   "title": "HubSpot | Software & Tools for your Business - Homepage",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.hubspot.com",
+   "title": "HubSpot Developers | Create tomorrow's solutions today on HubSpot's Developer Platform.",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.hubspot.com/",
+   "title": "HubSpot Developers | Create tomorrow's solutions today on HubSpot's Developer Platform.",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developers.hubspot.com/docs/developer-tooling/overview",
+   "title": "Developer Tooling Overview - HubSpot docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developers.hubspot.com/docs/apps/developer-platform/overview",
+   "title": "Developer platform - HubSpot docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developers.hubspot.com/docs/cms/start-building/introduction/overview",
+   "title": "HubSpot CMS overview - HubSpot docs",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developers.hubspot.com/blog",
+   "title": "Developer Blog",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developers.hubspot.com/developer-content-sign-up",
+   "title": "HubSpot Developer Content Sign Up",
+   "rendered": true
+  },
+  {
+   "id": "S9",
+   "url": "https://developers.hubspot.com/changelog",
+   "title": "HubSpot Developer Changelog",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developers.hubspot.com/community",
+   "title": "Build Your Developer Network | HubSpot Developer Community",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/baryhuang/mcp-hubspot",
+   "title": "baryhuang/mcp-hubspot",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/shinzo-labs/hubspot-mcp",
+   "title": "shinzo-labs/hubspot-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/lkm1developer/hubspot-mcp-server",
+   "title": "lkm1developer/hubspot-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/scopiousdigital/hubspot-mcp",
+   "title": "scopiousdigital/hubspot-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/bcharleson/hubspot-cli",
+   "title": "bcharleson/hubspot-cli",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/pejmanjohn/chickpea",
+   "title": "pejmanjohn/chickpea",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/CelestoAI/SuperAuth",
+   "title": "CelestoAI/SuperAuth",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/HubSpot/mcp-server",
+   "title": "HubSpot/mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.hubspot.com/",
+   "developer_portal": "https://developers.hubspot.com",
+   "description": "HubSpot is a customer platform (Smart CRM plus Marketing, Sales, Service, Content, Data and Commerce hubs) with a developer platform offering APIs, apps, CMS and tooling.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Homepage and developer portal on hubspot.com describe HubSpot CRM and its developer platform."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Public apps use OAuth tokens (details not given in sources).",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "yes",
+   "production_restrictions": "Legacy private/public app creation is disabled; new apps use the developer platform (projects, CLI). Service keys replace legacy private apps. Legacy v1-v3 APIs and legacy apps are unsupported from Sept 2027."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "CRM objects",
+    "CRM object properties",
+    "pipelines",
+    "CMS",
+    "workflows"
+   ],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "Pipelines API V1 sunsets Dec 4, 2026; v1-v3 APIs end of support Sept 2027. CRM API write validation enforced from the 2026-09 version."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/HubSpot/mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/baryhuang/mcp-hubspot",
+    "https://github.com/shinzo-labs/hubspot-mcp",
+    "https://github.com/lkm1developer/hubspot-mcp-server",
+    "https://github.com/scopiousdigital/hubspot-mcp",
+    "https://github.com/bcharleson/hubspot-cli"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2, Bearer/PAT",
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/overview",
+    "quote": "All REST APIs are available to query via a private app access token or public app OAuth token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developers.hubspot.com/docs/cms/start-building/introduction/overview",
+    "quote": "Create a free developer account , then create a test account within it. This will give you a testing environment",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST, CLI/library",
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/overview",
+    "quote": "All REST APIs are available to query via a private app access token or public app OAuth token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developers.hubspot.com/",
+    "quote": "Use workflows, webhooks, and custom actions to execute the next step the moment data updates—keeping users in flow and out of tool-hopping.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developers.hubspot.com/docs/developer-tooling/overview",
+    "quote": "Install HubSpot’s local development MCP server for AI-assisted coding, debugging, and project management in your IDE.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes (HubSpot/mcp-server repo owned by HubSpot org)",
+    "url": "https://developers.hubspot.com/blog",
+    "quote": "Connect HubSpot's MCP Server With Any AI Tool Securely",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Legacy private app creation disabled; use service keys",
+    "url": "https://developers.hubspot.com/changelog",
+    "quote": "HubSpot is permanently removing the ability to create new legacy, non-Project based, private apps through the account UI.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Specific OAuth flows, scopes, token expiry and refresh details not in sources",
+   "Rate limits not in sources",
+   "Official SDKs not confirmed in sources",
+   "Service key auth details (new apps) not described",
+   "Whether the HubSpot/mcp-server repo is current vs the remote MCP server not confirmed"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

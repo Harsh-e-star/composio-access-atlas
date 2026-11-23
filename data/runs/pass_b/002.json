@@ -1,0 +1,280 @@
+{
+ "id": 2,
+ "name": "HubSpot",
+ "category": "CRM and Sales",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:13:29Z",
+ "duration_s": 97.2,
+ "cost_usd": 0.0826,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.hubspot.com",
+   "developer_portal": "https://developers.hubspot.com",
+   "description": "HubSpot is a CRM and sales platform (HubSpot CRM, 'Smart CRM') that offers developer APIs, apps, and an MCP server. Developer docs live at developers.hubspot.com.",
+   "identity_confirmed": "yes",
+   "identity_notes": "developers.hubspot.com documents the HubSpot CRM APIs and account types. The assignment hint hubspot.com matches the product. The official website was not fetched; the sandbox page at www.hubspot.com appeared in search results."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "OAuth 2.0-based app auth for multi-customer apps and Marketplace listings; the hosted MCP server requires OAuth 2.1 with PKCE.",
+   "token_refresh": "Private app tokens can be rotated; rotating issues a new token and expires the old one (from search excerpt of the auth docs, not verbatim-verified).",
+   "scopes_notes": "Not verified. Scope configuration is noted on the webhooks guide (apps must be configured with scopes for each CRM object type) but was not fetched."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "yes",
+   "production_restrictions": "Integrations for multi-customer use or Marketplace listing must be built as an app using OAuth. Legacy private apps can no longer be created as of October 26, 2026, and the new developer platform is the pointer for current apps."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Unknown",
+   "resources": [
+    "CRM objects (contacts used as the documented example)"
+   ],
+   "read_ops": [
+    "GET /crm/objects/2026-09/contacts (example in API overview; from summary, not verbatim)"
+   ],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Subscriptions API: 50 requests per second per app. Daily and burst limits vary by account subscription and are not verified here.",
+   "limitations": "Write coverage and full CRM breadth not verified from fetched pages. Legacy private app creation closed on October 26, 2026. Node SDK confirmed; other language SDKs not confirmed."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.hubspot.com",
+   "community": "yes",
+   "community_urls": [
+    "https://context7.com/shinzo-labs/hubspot-mcp",
+    "https://socket.dev/npm/package/@mindstone/mcp-server-hubspot"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "HubSpot developer APIs document HubSpot's CRM product and account types",
+    "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+    "quote": "Developer test accounts are free HubSpot accounts with access to a 90-day trial of many enterprise features",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Two authentication methods: OAuth and private app access tokens",
+    "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth",
+    "quote": "There are two ways to authenticate calls to HubSpot's APIs: OAuth, and private app access tokens.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_required_for_marketplace",
+    "value": "Multi-customer and Marketplace integrations must use OAuth",
+    "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth",
+    "quote": "Integrations designed for multi-customer use or listing on the HubSpot Marketplace must be built as an app",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.legacy_scope",
+    "value": "The auth guide covers legacy public apps and points to the new developer platform for current auth",
+    "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth",
+    "quote": "For an overview of authentication for apps built on the new developer platform, check out this article instead.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.private_app_bearer",
+    "value": "Private app token is sent as a Bearer value in the Authorization header",
+    "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth",
+    "quote": "set the value of the Authorization field to Bearer [YOUR_TOKEN]",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.private_app_admin",
+    "value": "Only super admins can access private apps",
+    "url": "https://developers.hubspot.com/docs/apps/legacy-apps/private-apps/overview",
+    "quote": "You must be a super admin to access private apps in your HubSpot account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.private_app_sunset",
+    "value": "Legacy private apps can no longer be created after October 26, 2026",
+    "url": "https://developers.hubspot.com/docs/apps/legacy-apps/private-apps/overview",
+    "quote": "As of October 26, 2026, legacy private apps can no longer be created.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.private_app_limit",
+    "value": "Up to 20 private apps per account",
+    "url": "https://developers.hubspot.com/docs/apps/legacy-apps/private-apps/overview",
+    "quote": "You can create up to 20 private apps in your HubSpot account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.test_accounts_free",
+    "value": "Developer test accounts are free",
+    "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+    "quote": "Developer test accounts are free HubSpot accounts with access to a 90-day trial of many enterprise features",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.test_account_limit",
+    "value": "Up to 10 test accounts per standard account",
+    "url": "https://developers.hubspot.com/docs/api/creating-test-accounts",
+    "quote": "You can create up to 10 test accounts per standard HubSpot account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.test_account_expiry",
+    "value": "Developer test accounts expire after 90 days without API calls",
+    "url": "https://developers.hubspot.com/docs/api/creating-test-accounts",
+    "quote": "Developer test accounts will expire after 90 days if no API calls are made to the account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.test_account_isolation",
+    "value": "Test accounts cannot sync data with other accounts",
+    "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+    "quote": "Test accounts cannot sync data with other accounts.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocol",
+    "value": "REST API with a versioned root path",
+    "url": "https://developers.hubspot.com/docs/api/overview",
+    "quote": "All APIs, whether legacy, new, or beta, use the same root path as before.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.subscriptions",
+    "value": "App-level webhook subscriptions can be managed via API",
+    "url": "https://developers.hubspot.com/docs/api/webhooks",
+    "quote": "The subscriptions API allows you to manage event subscriptions for your app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.journal",
+    "value": "Journal API queries changes for subscriptions over the past 3 days",
+    "url": "https://developers.hubspot.com/docs/api/webhooks",
+    "quote": "This API allows you to query for changes that occurred for your subscriptions for the past 3 days.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limit_subscriptions",
+    "value": "Subscriptions API limit is 50 requests per second per app",
+    "url": "https://developers.hubspot.com/docs/api/webhooks",
+    "quote": "Subscriptions API: 50 requests per second per app",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks.node",
+    "value": "Official Node.js client library for the V3 API",
+    "url": "https://github.com/HubSpot/hubspot-api-nodejs",
+    "quote": "HubSpot API NodeJS Client Libraries for V3 version of the API",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_remote",
+    "value": "HubSpot's remote MCP server at mcp.hubspot.com is generally available",
+    "url": "https://developers.hubspot.com/changelog/remote-hubspot-mcp-server-is-now-generally-available",
+    "quote": "The remote HubSpot MCP server is graduating from beta and is now generally available to all HubSpot accounts.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.url_and_auth",
+    "value": "Connect to https://mcp.hubspot.com with OAuth and PKCE using app client ID and secret",
+    "url": "https://developers.hubspot.com/changelog/remote-hubspot-mcp-server-is-now-generally-available",
+    "quote": "Connect any MCP client that supports OAuth with PKCE to https://mcp.hubspot.com using your app's client ID and secret.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.oauth_requirement",
+    "value": "OAuth 2.1 with PKCE is required for all MCP connections",
+    "url": "https://developers.hubspot.com/changelog/remote-hubspot-mcp-server-is-now-generally-available",
+    "quote": "OAuth 2.1 with PKCE is required for all connections.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.developer_server_separate",
+    "value": "A separate developer MCP server exists for building apps and CMS content locally",
+    "url": "https://developers.hubspot.com/changelog/remote-hubspot-mcp-server-is-now-generally-available",
+    "quote": "Note that this server is separate from the developer MCP server, which is used for building apps and CMS content locally.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.npm_beta",
+    "value": "@hubspot/mcp-server npm package is a beta client-side package using a private app token",
+    "url": "https://npmjs.com/package/@hubspot/mcp-server",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.community_shinzo",
+    "value": "Community server shinzo-labs/hubspot-mcp listed with 100+ tools",
+    "url": "https://context7.com/shinzo-labs/hubspot-mcp",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "The new developer platform's auth and credential flow (since legacy private app creation closed October 26, 2026) was not fetched. Confirm how a developer gets test credentials on that platform.",
+   "CRM breadth (read and write coverage across contacts, companies, deals, and others) is not verified from fetched pages, so api.breadth is Unknown.",
+   "Daily and burst rate limits conflict across secondary sources (for example, Professional daily limit 500,000 vs 650,000 in a changelog). Check developers.hubspot.com/docs/api/usage-details.",
+   "Whether a paid plan is required for private apps or the API add-on is unclear; the private apps page lists tiers including Free and Starter.",
+   "Only a Node.js SDK is confirmed. Python and other official SDKs were not checked.",
+   "Whether app review or partner approval applies to Marketplace listing was not checked.",
+   "Token rotation schedule and the exact OAuth scopes were not verified on fetched pages.",
+   "Community MCP server details (peakmojo/mcp-hubspot, @mindstone/mcp-server-hubspot, shinzo-labs/hubspot-mcp) were only seen in search results; their tool counts and maintenance were not verified."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.87,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,260 @@
+{
+ "id": 29,
+ "name": "Aircall",
+ "category": "Communications and Messaging",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:18:05Z",
+ "duration_s": 31.1,
+ "cost_usd": 0.0773,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://aircall.io",
+   "title": "AI-Powered Customer Communications Platform for SMBs & Enterprise | Aircall",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developer.aircall.io",
+   "title": "Aircall for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.aircall.io/api-references",
+   "title": "API References | Aircall",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developers.aircall.io/api-references/",
+   "title": "API References | Aircall",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://aircall.io/pricing/",
+   "title": "Aircall Pricing & Plans: AI-Powered Calling, Voice Agents & 250+ Integrations | Aircall",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developer.aircall.io/docs/introduction",
+   "title": "Introduction",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.aircall.io/docs/basic-authentication",
+   "title": "Authenticate with API Keys",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developer.aircall.io/docs/authentication",
+   "title": "Overview",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developer.aircall.io/docs/oauth",
+   "title": "OAuth implementation guide",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developer.aircall.io/docs/how-to-register",
+   "title": "Register a Public MCP",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/themobilefirstco/aircall-mcp-server",
+   "title": "themobilefirstco/aircall-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/TheAiShark/aircall-mcp-oauth",
+   "title": "TheAiShark/aircall-mcp-oauth",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/MaximeDeconinck/aircall-mcp",
+   "title": "MaximeDeconinck/aircall-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/CassiaResearch/aircall-mcp-server",
+   "title": "CassiaResearch/aircall-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/growth-box/aircall-mcp",
+   "title": "growth-box/aircall-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/RosenAdvertising/aircall-mcp",
+   "title": "RosenAdvertising/aircall-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/vitormiguel99/aircall-mcp-server",
+   "title": "vitormiguel99/aircall-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/nastya-nealova/aircall-crm-bridge",
+   "title": "nastya-nealova/aircall-crm-bridge",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://aircall.io",
+   "developer_portal": "https://developer.aircall.io",
+   "description": "Aircall is an AI-powered customer communications platform (cloud phone system, SMS/messaging, AI agents) with a public REST API, webhooks, and Embed SDK.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Aircall's platform and developer portal."
+  },
+  "auth": {
+   "methods": [
+    "Basic",
+    "OAuth2"
+   ],
+   "primary": "Basic",
+   "oauth_flows": "Authorization code flow; Admin approves app install from Aircall Dashboard; code valid 10 minutes, exchanged at /v1/oauth/token for a permanent access token used as Bearer.",
+   "token_refresh": "OAuth access_token is permanent and does not expire; no refresh needed. New token issued on reinstall.",
+   "scopes_notes": "OAuth scope=public_api. OAuth required for Marketplace-listed apps (tech partners); Basic Auth (api_id:api_token) for own account."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "OAuth credentials and public Marketplace listing require applying to the Tech Partner program; private integrations for own workspace need no marketplace approval."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Users",
+    "Teams",
+    "Calls",
+    "Numbers",
+    "Contacts",
+    "Messages",
+    "Webhooks",
+    "AI agents",
+    "Conversations",
+    "Analytics"
+   ],
+   "read_ops": [
+    "List/retrieve users",
+    "List/retrieve teams",
+    "List/retrieve/search calls"
+   ],
+   "write_ops": [
+    "Create/update/delete users",
+    "Create/delete teams",
+    "Add/remove user to team",
+    "Transfer/comment/tag/archive calls",
+    "Start outbound call",
+    "Send WhatsApp messages"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Rate limiting documented but specifics not in sources.",
+   "limitations": "Pricing page lists Full API access under higher plans; plan gating for API unclear."
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/themobilefirstco/aircall-mcp-server",
+    "https://github.com/CassiaResearch/aircall-mcp-server",
+    "https://github.com/growth-box/aircall-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Basic, OAuth2",
+    "url": "https://developer.aircall.io/docs/authentication",
+    "quote": "Aircall supports two ways to authenticate with the REST API: Basic Authentication and OAuth.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developer.aircall.io/docs/basic-authentication",
+    "quote": "Open your Aircall Dashboard > Integrations > API keys . In the top right corner, click Generate API key .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developer.aircall.io/docs/introduction",
+    "quote": "The foundation for every Aircall integration. Manage calls, messages, AI agents, users, numbers, and more",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developer.aircall.io/docs/introduction",
+    "quote": "Manage calls, messages, AI agents, users, numbers, and more — fully documented with detailed schemas, and request and response examples in the API reference",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "no",
+    "url": "https://developer.aircall.io/docs/how-to-register",
+    "quote": "Registering an MCP with Aircall makes your tools and resources available to every Aircall AI customer",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Whether API keys are available on all plans or need a paid plan (pricing page says all plans include API access, but feature table mentions Full API access on Professional).",
+   "Whether Aircall publishes an official MCP server for external clients; only an MCP-for-AI-agents integration path ('coming soon') was found.",
+   "Sandbox availability: partners get developer sandboxes, but self-serve availability is unclear."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "review_required",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

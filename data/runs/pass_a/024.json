@@ -1,0 +1,221 @@
+{
+ "id": 24,
+ "name": "Lark (Larksuite)",
+ "category": "Communications and Messaging",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:17:36Z",
+ "duration_s": 35.4,
+ "cost_usd": 0.0468,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://open.larksuite.com",
+   "title": "Lark Developer",
+   "rendered": true
+  },
+  {
+   "id": "S2",
+   "url": "https://open.larksuite.com/document/mcp_open_tools/feishu-cli-let-ai-actually-do-your-work-in-feishu",
+   "title": "Lark CLI: Put your AI to work in Lark - Lark CLI - Documentation - Lark Developer",
+   "rendered": true
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/larksuite/lark-openapi-mcp",
+   "title": "larksuite/lark-openapi-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/cso1z/Feishu-MCP",
+   "title": "cso1z/Feishu-MCP",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/TGYD-helige/pi",
+   "title": "TGYD-helige/pi",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/VienLi/lark-tools-mcp",
+   "title": "VienLi/lark-tools-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/AlexAnys/feishu-mcp",
+   "title": "AlexAnys/feishu-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/aahl/mcp-notify",
+   "title": "aahl/mcp-notify",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/pluginmd/lark-mcp-cli",
+   "title": "pluginmd/lark-mcp-cli",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/luotwo/amazon-product-search",
+   "title": "luotwo/amazon-product-search",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://open.larksuite.com",
+   "developer_portal": "https://open.larksuite.com",
+   "description": "Lark (Larksuite) is a workplace collaboration suite; the Lark Developer open platform offers 2500+ APIs (Contacts, Messenger, Docs, Base, Sheet, Wiki, Approval, Calendar, etc.), bots, web apps, blocks and an open-source Lark CLI.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are from the official Lark Developer site open.larksuite.com."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "CLI uses OAuth authorization code via 'lark-cli auth login' (user identity); tenant access token also referenced for app identity.",
+   "token_refresh": "",
+   "scopes_notes": "Missing permissions are granted via auth login --scope; for tenant access token calls, permissions must be enabled in the Developer Console."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Enterprise admin security and access controls still apply to app management."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Contacts",
+    "Messenger",
+    "Docs",
+    "Base",
+    "Sheets",
+    "Wiki",
+    "Approval",
+    "Calendar",
+    "Drive",
+    "Mail",
+    "Tasks",
+    "Minutes",
+    "Meetings",
+    "Slides",
+    "Whiteboard",
+    "OKR",
+    "Attendance"
+   ],
+   "read_ops": [
+    "Search messages and chats",
+    "Read docs",
+    "Query approval instances",
+    "Query attendance records",
+    "Check calendar availability"
+   ],
+   "write_ops": [
+    "Send messages",
+    "Create docs",
+    "Create tasks",
+    "Manage Base records",
+    "Send/draft emails",
+    "Book meetings"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/larksuite/lark-openapi-mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/cso1z/Feishu-MCP",
+    "https://github.com/VienLi/lark-tools-mcp",
+    "https://github.com/AlexAnys/feishu-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://open.larksuite.com/document/mcp_open_tools/feishu-cli-let-ai-actually-do-your-work-in-feishu",
+    "quote": "The OAuth authorization code is only valid for a few minutes. If it times out, simply re-run auth login .",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://open.larksuite.com",
+    "quote": "Build your customized Lark An open, swift, and accessible way to reshape workplace experiences CREATE APP",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST, CLI/library",
+    "url": "https://open.larksuite.com/document/mcp_open_tools/feishu-cli-let-ai-actually-do-your-work-in-feishu",
+    "quote": "Run the following command in your terminal to complete the installation: npx @larksuite/cli@latest install",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://open.larksuite.com",
+    "quote": "Unlock Lark's full potential with 2500+ APIs Contacts Messenger Doc Base Sheet Wiki Approval Calendar Video Conferencing More APIs",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://github.com/larksuite/lark-openapi-mcp",
+    "quote": "飞书/Lark官方 OpenAPI MCP",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Exact rate limits not in sources",
+   "Whether a free dev tenant is needed and admin approval for app publishing is unclear",
+   "Webhooks/event subscriptions and official SDKs not confirmed in sources",
+   "MCP claim quote comes from GitHub search listing, not fetched docs"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.2,
+ "flags": [],
+ "error": null
+}

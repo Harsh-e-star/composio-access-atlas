@@ -1,0 +1,220 @@
+{
+ "id": 16,
+ "name": "LiveAgent",
+ "category": "Support and Helpdesk",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:16:41Z",
+ "duration_s": 29.4,
+ "cost_usd": 0.0944,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.liveagent.com/",
+   "title": "LiveAgent: Help Desk Software with AI Agents and Live Chat",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://support.liveagent.com/840770-Complete-API-reference",
+   "title": "Complete API reference",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://www.liveagent.com/pricing/",
+   "title": "LiveAgent Pricing & Plans: AI on Every Plan, 30-Day Free Trial",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://www.liveagent.com/features/mcp-server/",
+   "title": "Connect AI tools to LiveAgent with MCP",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/QualityUnit/liveagent-mcp-server",
+   "title": "QualityUnit/liveagent-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/shinnjr/liveagentdata-mcp",
+   "title": "shinnjr/liveagentdata-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/wiselingsnet-ops/liveagent-mcp",
+   "title": "wiselingsnet-ops/liveagent-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.liveagent.com/",
+   "developer_portal": "https://support.liveagent.com/840770-Complete-API-reference",
+   "description": "LiveAgent is cloud help desk software by Quality Unit with email, live chat, phone, social media, knowledge base and AI agents in one shared inbox.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe LiveAgent, made by Quality Unit."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "MCP server supports OAuth 2.1 sign-in with consent screen for clients such as claude.ai.",
+   "token_refresh": "",
+   "scopes_notes": "MCP access tokens are scoped to approved actions and checked against the account's department and role permissions."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No free plan; after the 30-day trial a paid plan is needed. The MCP server is only on Business and Enterprise plans (and the trial)."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "agents",
+    "companies",
+    "conversations",
+    "messages",
+    "tags",
+    "customers",
+    "customer groups",
+    "knowledge base articles",
+    "application"
+   ],
+   "read_ops": [
+    "list conversations",
+    "get conversation",
+    "list conversation messages",
+    "list companies",
+    "list agents",
+    "retrieve tags",
+    "retrieve customer groups"
+   ],
+   "write_ops": [
+    "create message in conversation",
+    "change conversation status",
+    "delete conversation",
+    "assign/unassign tag",
+    "add/delete customer custom field value",
+    "delete customers group"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "API v1 docs are dated; newer v3 endpoints exist (e.g. api/v3/ticket/{ticket_id}/messages)."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://www.liveagent.com/features/mcp-server/",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/shinnjr/liveagentdata-mcp",
+    "https://github.com/wiselingsnet-ops/liveagent-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://support.liveagent.com/840770-Complete-API-reference",
+    "quote": "You can get this in case your athentification with API key failed because of problem with API key in application.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT, OAuth2",
+    "url": "https://www.liveagent.com/features/mcp-server/",
+    "quote": "It uses an access token you generate in your own profile, or an OAuth 2.1 sign-in with a consent screen, so it always acts as one account you approved.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "trial_self_serve",
+    "url": "https://www.liveagent.com/pricing/",
+    "quote": "Yes. Every plan starts with a 30-day free trial, and no credit card is required.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "no free plan",
+    "url": "https://www.liveagent.com/",
+    "quote": "There is no free plan.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://support.liveagent.com/840770-Complete-API-reference",
+    "quote": "Home > Technical Support > LiveAgent API > REST API > API v1 > Documentation > Complete API reference",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://support.liveagent.com/840770-Complete-API-reference",
+    "quote": "Conversations Delete conversation Retrieves all conversations Retrieves conversation info Retrieves all conversation messages Create new message in conversation Change status of the conversation",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://www.liveagent.com/features/mcp-server/",
+    "quote": "LiveAgent's MCP server lets you connect an MCP-compatible AI client, like ChatGPT or Claude, directly to your LiveAgent account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.plans",
+    "value": "Business and Enterprise plus trial",
+    "url": "https://www.liveagent.com/features/mcp-server/",
+    "quote": "The Business and Enterprise plans, and the free 30-day trial.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is QualityUnit/liveagent-mcp-server the same as the hosted MCP server? It is owned by the vendor org, but the sources don't confirm it.",
+   "How are API keys generated, and what are the rate limits?",
+   "Are webhooks and SDKs available?"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

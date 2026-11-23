@@ -1,0 +1,202 @@
+{
+ "id": 1,
+ "name": "Salesforce",
+ "category": "CRM and Sales",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:14:35Z",
+ "duration_s": 45.6,
+ "cost_usd": 0.0613,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.salesforce.com/in/?ir=1&bc=DB",
+   "title": "Salesforce: The #1 AI CRM | Salesforce IN",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.salesforce.com",
+   "title": "Salesforce Docs Portal",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://www.salesforce.com/in/agentforce/pricing/?bc=DB",
+   "title": "Salesforce Agentforce Pricing | Salesforce IN",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://www.salesforce.com/in/sales/pricing/?bc=DB",
+   "title": "Salesforce Sales Pricing | Salesforce IN",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.salesforce.com/developer/index.html",
+   "title": "Developer",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.salesforce.com/legacydeveloper/index.html",
+   "title": "Legacy Developer",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://www.salesforce.com/in/sales/partner-relationship-management/pricing/?bc=DB",
+   "title": "Partner Cloud Pricing | Salesforce IN",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/salesforcecli/mcp",
+   "title": "salesforcecli/mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/smn2gnt/MCP-Salesforce",
+   "title": "smn2gnt/MCP-Salesforce",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/tsmztech/mcp-server-salesforce",
+   "title": "tsmztech/mcp-server-salesforce",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/forcedotcom/mcp-hosted",
+   "title": "forcedotcom/mcp-hosted",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/SalesforceCommerceCloud/b2c-developer-tooling",
+   "title": "SalesforceCommerceCloud/b2c-developer-tooling",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/kablewy/salesforce-mcp-server",
+   "title": "kablewy/salesforce-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jaworjar95/salesforce-mcp-server",
+   "title": "jaworjar95/salesforce-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/advancedcommunities/salesforce-mcp-server",
+   "title": "advancedcommunities/salesforce-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.salesforce.com",
+   "developer_portal": "https://docs.salesforce.com/developer/index.html",
+   "description": "Salesforce is a CRM platform (Sales Cloud, Service, Marketing, Commerce, Agentforce, Data 360, Platform) with developer APIs and SDKs documented on the Salesforce Docs Portal.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Salesforce, the #1 AI CRM, and its official docs portal."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "yes",
+   "production_restrictions": "Sources do not describe API credential issuance. A 30-day free trial is available for Sales Cloud editions, and sandboxes are listed (Developer Pro as a purchase, Partial and Full in higher editions)."
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "The loaded sources do not detail the API protocols, endpoints or limits. The developer docs only say they cover APIs, programming guides, SDKs and references."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/forcedotcom/mcp-hosted",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/smn2gnt/MCP-Salesforce",
+    "https://github.com/tsmztech/mcp-server-salesforce",
+    "https://github.com/kablewy/salesforce-mcp-server",
+    "https://github.com/jaworjar95/salesforce-mcp-server",
+    "https://github.com/advancedcommunities/salesforce-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "access.tier",
+    "value": "trial_self_serve",
+    "url": "https://www.salesforce.com/in/sales/pricing/?bc=DB",
+    "quote": "Salesforce offers a free 30-day trial for all Sales Cloud editions, with simple setup so you can get started quickly and explore key sales capabilities.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Unknown",
+    "url": "https://docs.salesforce.com/developer/index.html",
+    "quote": "Salesforce APIs, programming guides, SDKs, and reference documentation.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://github.com/forcedotcom/mcp-hosted",
+    "quote": "Salesforce Hosted MCP Servers",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Which auth methods does Salesforce support (OAuth2 flows, JWT, and so on)? The sources do not say.",
+   "Which API protocols are available (REST, SOAP, GraphQL, Bulk, Streaming)? The sources do not say.",
+   "Is a free Developer Edition org available for API testing? The sources do not say.",
+   "The official MCP page (mcp.docs.salesforce.com) failed to load with a 401.",
+   "salesforcecli/mcp may also be an official vendor MCP server, but the sources do not confirm it."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,181 @@
+{
+ "id": 14,
+ "name": "Front",
+ "category": "Support and Helpdesk",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:16:22Z",
+ "duration_s": 20.1,
+ "cost_usd": 0.0585,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://front.com",
+   "title": "Front | Customer service platform, powered by AI",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://front.com/product/integrate-with-customer-service-apps-front",
+   "title": "Customer Service Software Integrations and API | Front",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://front.com/pricing",
+   "title": "Front Pricing and Plans | Front",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/IBM/mcp-context-forge",
+   "title": "IBM/mcp-context-forge",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit",
+   "title": "wilwaldon/Claude-Code-Frontend-Design-Toolkit",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mrwyndham/pocketbase-mcp",
+   "title": "mrwyndham/pocketbase-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/agentfront/frontmcp",
+   "title": "agentfront/frontmcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ceilf6/FrontAgent",
+   "title": "ceilf6/FrontAgent",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Kamra-PMS/kamra-pms",
+   "title": "Kamra-PMS/kamra-pms",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/HarryMtv/create-frontstack",
+   "title": "HarryMtv/create-frontstack",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/donggua-zen/guada",
+   "title": "donggua-zen/guada",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://front.com",
+   "developer_portal": null,
+   "description": "Front is a customer service platform where support teams and AI agents work together across email, chat, SMS and WhatsApp, with shared inboxes, ticketing, and a REST API.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Front (front.com) customer service platform. Developer Portal is linked in the nav but its URL is not given in the sources."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "API rate limit increases are a paid add-on ($200 per 100 API requests/min per month)."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "Core API rate limit can be increased via add-on: $200 per 100 API requests/min per month.",
+   "limitations": "Sources do not list API resources or endpoints."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://front.com/pricing",
+   "community": "no",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://front.com/product/integrate-with-customer-service-apps-front",
+    "quote": "Through our flexible, robust REST API and 160+ integrations, Front connects your CRM (including Salesforce), core apps, and external systems directly to customer conversations.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "trial_self_serve",
+    "url": "https://front.com/pricing",
+    "quote": "Our free 14-day trial offers all the features available in our Professional plan. You can get started without a credit card and can upgrade at any time during your trial.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://front.com/pricing",
+    "quote": "MCP server Connect AI tools to Front so they can securely access your conversations and data",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Rate limit increase add-on",
+    "url": "https://front.com/pricing",
+    "quote": "API Rate Limit Increase Increase your Core API rate limit to support the most complex workflows $200 per 100 API requests/min per month",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Which auth methods does Front's API support (OAuth2, API token)? Not in sources.",
+   "API breadth and resources not documented in provided sources; check dev.frontapp.com.",
+   "Official MCP server docs URL and setup not given.",
+   "Whether API/test credentials are available on the trial or need a paid plan."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

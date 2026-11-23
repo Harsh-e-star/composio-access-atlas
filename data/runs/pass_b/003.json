@@ -1,0 +1,201 @@
+{
+ "id": 3,
+ "name": "Pipedrive",
+ "category": "CRM and Sales",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:12:52Z",
+ "duration_s": 60.0,
+ "cost_usd": 0.0462,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.pipedrive.com",
+   "developer_portal": "https://developers.pipedrive.com",
+   "description": "Pipedrive is a CRM and sales-pipeline SaaS product (deals, persons, organizations, leads, activities, products, pipelines). Its developer docs are at developers.pipedrive.com and the product site is pipedrive.com.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Pipedrive as the CRM with deals, persons, organizations, leads and activities, matching the assignment. Developer docs domain is developers.pipedrive.com; several subpages I guessed returned 404, so only the v1 landing page was read directly."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Authorization-code style OAuth 2.0 is used by the official hosted MCP server (sign-in and authorize in the browser). Third-party review says OAuth 2.0 with authorize/token endpoints at oauth.pipedrive.com is required for Marketplace apps; not confirmed on an official page.",
+   "token_refresh": "unknown",
+   "scopes_notes": "Not established from fetched official pages."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Marketplace listing requires OAuth authorization-code flow per third-party review; no official source fetched on app review."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Activities",
+    "Deals",
+    "Leads",
+    "Organizations",
+    "Persons",
+    "Pipelines",
+    "Products",
+    "Projects",
+    "Users",
+    "Webhooks"
+   ],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Conflicting third-party figures (token-budget model; burst limits per 2 seconds, e.g. 20/40 for API token and 80/160 for OAuth apps per a search summary). Not confirmed on an official page; treat as unknown.",
+   "limitations": "Official v1 docs page did not state base URL or rate limits; v2 docs page and several subpages returned 404 during research. API v2 is the newer version; v1 still used for some entities (notes, mail, users, leads CRUD per a community post)."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.pipedrive.ai/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/ckalima/pipedrive-mcp-server",
+    "https://github.com/vaibhavpandeyvpz/pipedriver",
+    "https://pypi.org/project/pipedrive-mcp/",
+    "https://socket.dev/npm/package/@ckalima/pipedrive-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Pipedrive is an official connector in Claude and ChatGPT; product is a CRM/sales platform",
+    "url": "https://www.pipedrive.com/en/features/mcp-server",
+    "quote": "Pipedrive is an official connector in Claude and ChatGPT.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary_method",
+    "value": "API token obtainable manually from the Pipedrive app",
+    "url": "https://developers.pipedrive.com/docs/api/v1",
+    "quote": "The API token can be obtained manually from the Pipedrive app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.stateless",
+    "value": "API requests are validated against an API token",
+    "url": "https://developers.pipedrive.com/docs/api/v1",
+    "quote": "The API is stateless – all requests are validated against an API token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.resources_coverage",
+    "value": "API covers the majority of core product functionality",
+    "url": "https://developers.pipedrive.com/docs/api/v1",
+    "quote": "Pipedrive's API and extension points cover the majority of our core product's functionality.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks are listed as an API section",
+    "url": "https://developers.pipedrive.com/docs/api/v1",
+    "quote": "Webhooks",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_mcp",
+    "value": "Official MCP connects via OAuth",
+    "url": "https://www.pipedrive.com/en/features/mcp-server",
+    "quote": "Connect your AI assistant to Pipedrive in minutes through secure OAuth, no coding or developer required.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.mcp_plans",
+    "value": "Pipedrive MCP is available on all plans",
+    "url": "https://www.pipedrive.com/en/features/mcp-server",
+    "quote": "Pipedrive MCP is available on all Pipedrive plans.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_maintained",
+    "value": "Official connector built and maintained by Pipedrive",
+    "url": "https://www.pipedrive.com/en/features/mcp-server",
+    "quote": "An official, reliable and fully supported connection built and maintained by Pipedrive.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.setup_permissions",
+    "value": "Claude access limited to what the Pipedrive user account can access; user must sign in and authorize",
+    "url": "https://support.pipedrive.com/en/article/mcp-claude",
+    "quote": "Claude can only access data and perform actions that your Pipedrive user account is authorized to access.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_url",
+    "value": "https://mcp.pipedrive.ai/mcp",
+    "url": "https://support.pipedrive.com/en/article/mcp-claude",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.community_ckalima",
+    "value": "Community MCP server with 155 tools, built by an individual developer, not stated to be official",
+    "url": "https://devcommunity.pipedrive.com/t/open-source-pipedrive-mcp-server-155-tools-v2-first-mit/20392",
+    "quote": "I originally built this MCP server for Pipedrive for a client",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.version",
+    "value": "Community MCP uses v2 REST where it exists; v1 for notes, mail, users, leads CRUD",
+    "url": "https://devcommunity.pipedrive.com/t/open-source-pipedrive-mcp-server-155-tools-v2-first-mit/20392",
+    "quote": "every entity uses Pipedrive's v2 REST API where it exists.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Official OAuth 2.0 docs (scopes, token expiry, refresh, app registration) were not retrieved; developers.pipedrive.com oauth, Authorization and v2 subpages returned 404.",
+   "Exact API token location and whether the API is available on the free/trial plan tier is not verified; tier left unknown.",
+   "Rate limits conflict across third-party sources; need official developer docs (readme.io rate-limiting page) to confirm.",
+   "Official SDKs: a third-party review mentions Node.js and PHP SDKs; not confirmed on an official page.",
+   "Webhook payloads, versions and registration method not verified on official docs.",
+   "Whether mcp.pipedrive.ai/mcp is the vendor's canonical server URL should be checked on a Pipedrive page.",
+   "Official GitHub org/MCP repo not located; no vendor-owned MCP source code confirmed (the official MCP may be hosted only).",
+   "Sandbox/test account availability unknown."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "high",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 0.917,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,270 @@
+{
+ "id": 12,
+ "name": "Intercom",
+ "category": "Support and Helpdesk",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:16:19Z",
+ "duration_s": 32.5,
+ "cost_usd": 0.0691,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.intercom.com/",
+   "title": "Intercom | A complete system for human and AI customer service",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.intercom.com",
+   "title": "Intercom Developers | Intercom and Fin Developer Platform",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://www.intercom.com/help/en/",
+   "title": "Home | Intercom Help",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developers.intercom.com/",
+   "title": "Intercom Developers | Intercom and Fin Developer Platform",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developers.intercom.com/docs/references/introduction",
+   "title": "Introduction | Intercom and Fin Developer Platform",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://www.intercom.com/help/en/collections/1865264-getting-started",
+   "title": "Getting Started | Intercom Help",
+   "rendered": true
+  },
+  {
+   "id": "S7",
+   "url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+   "title": "Set up a Workspace | Intercom and Fin Developer Platform",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developers.intercom.com/docs/build-an-integration/getting-started/build-an-app-for-your-messenger",
+   "title": "Build a Messenger App | Intercom and Fin Developer Platform",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developers.intercom.com/docs/build-an-integration/getting-started/build-an-app-for-your-inbox",
+   "title": "Build an Inbox App | Intercom and Fin Developer Platform",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://www.intercom.com/pricing",
+   "title": "Intercom Pricing | Plans for every team size",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://developers.intercom.com/docs",
+   "title": "Overview | Intercom and Fin Developer Platform",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/melgarafael/DeskcommCRM",
+   "title": "melgarafael/DeskcommCRM",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/chattermate/chattermate.chat",
+   "title": "chattermate/chattermate.chat",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/PersonaliAI/chatty",
+   "title": "PersonaliAI/chatty",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/intercom/intercom-mcp-server",
+   "title": "intercom/intercom-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/fabian1710/mcp-intercom",
+   "title": "fabian1710/mcp-intercom",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/kaosensei/intercom-mcp",
+   "title": "kaosensei/intercom-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/raoulbia-ai/mcp-server-for-intercom",
+   "title": "raoulbia-ai/mcp-server-for-intercom",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sanztheo/claude-intercom",
+   "title": "sanztheo/claude-intercom",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.intercom.com/",
+   "developer_portal": "https://developers.intercom.com",
+   "description": "Intercom is an AI-powered customer service platform combining a helpdesk with the Fin AI Agent, with a developer platform of REST APIs, SDKs and Canvas Kit for building apps.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are official intercom.com and developers.intercom.com pages."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "OAuth must be configured for public apps; flow details not given in sources.",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Public apps require OAuth and submission to Intercom for review before use by customers. Development workspaces are US-only, max 20 users/leads, no outbound email/push, cannot convert to production."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Admins",
+    "Articles",
+    "Companies",
+    "Contacts",
+    "Conversations",
+    "Tickets",
+    "Help Center",
+    "Messages",
+    "News",
+    "Notes",
+    "Tags",
+    "Teams",
+    "Segments",
+    "Data Events",
+    "Data Attributes",
+    "Visitors",
+    "Fin Agent"
+   ],
+   "read_ops": [
+    "Retrieve contacts, conversations, tickets, companies, articles, reporting data"
+   ],
+   "write_ops": [
+    "Create contacts",
+    "Create tickets",
+    "Create/update articles",
+    "Send messages",
+    "Manage tags and notes"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Development workspaces have limited functionality."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/intercom/intercom-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/fabian1710/mcp-intercom",
+    "https://github.com/kaosensei/intercom-mcp",
+    "https://github.com/raoulbia-ai/mcp-server-for-intercom"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT, OAuth2",
+    "url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+    "quote": "For private apps, use the Access Token. For public apps, you will need to configure OAuth.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developers.intercom.com/",
+    "quote": "Get started by setting up a free development workspace to test and publish your app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.intercom.com/docs/references/introduction",
+    "quote": "This is documentation for version 2.18 of the REST API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developers.intercom.com/docs/references/introduction",
+    "quote": "Admins AI Content Articles Audiences Auth Tokens Away Status Reasons Banners Brands Calls Companies Contacts Content Content Snippets Conversations",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://github.com/intercom/intercom-mcp-server",
+    "quote": "intercom/intercom-mcp-server (owner intercom, Organization, 8★): Intercom MCP Server documentation",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Exact rate limits not in sources.",
+   "MCP server details/hosted URL not verified beyond GitHub listing.",
+   "OAuth flow specifics and scopes not given."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "review_required",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 0.8,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,143 @@
+{
+ "id": 20,
+ "name": "Gladly",
+ "category": "Support and Helpdesk",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:17:01Z",
+ "duration_s": 24.5,
+ "cost_usd": 0.0343,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.gladly.ai/",
+   "title": "Agentic commerce platform built for top brands | Gladly",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developer.gladly.com",
+   "title": "Main Home - Gladly Developer",
+   "rendered": true
+  },
+  {
+   "id": "S3",
+   "url": "https://www.gladly.ai/integrations/",
+   "title": "Customer service integrations | Gladly",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developer.gladly.com/",
+   "title": "Main Home - Gladly Developer",
+   "rendered": true
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/estebanruiz-beep/gladly-mcp-demo",
+   "title": "estebanruiz-beep/gladly-mcp-demo",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/gladly-hyphenated-21/flight-mcp",
+   "title": "gladly-hyphenated-21/flight-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.gladly.ai/",
+   "developer_portal": "https://developer.gladly.com",
+   "description": "Gladly is an agentic commerce / customer service platform with a developer portal offering REST API, webhooks, App Platform, and Chat SDKs.",
+   "identity_confirmed": "yes",
+   "identity_notes": "gladly.ai and developer.gladly.com describe the Gladly customer service/commerce platform."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Sources do not list specific REST resources or operations."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developer.gladly.com",
+    "quote": "Integrate seamlessly with Gladly by enabling a connector, calling Gladly's REST APIs, or implementing the Lookup API to provide data from your own services.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://developer.gladly.com",
+    "quote": "Looking to extend Gladly, use Gladly’s REST APIs, receive notifications with webhooks, build an App Platform integration, or export data?",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "yes",
+    "url": "https://developer.gladly.com",
+    "quote": "Embed Chat SDK in your website or app to let customers search for answers or contact your customer service team.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Auth methods are not stated in the provided sources.",
+   "Access tier (free, paid, or sales-gated) is not established. The sources only show 'Get a demo' calls to action.",
+   "Whether Gladly has an official MCP server is not established. The GitHub search results are unrelated community or personal repos.",
+   "API breadth is unknown because the REST resources are not listed."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,152 @@
+pass a: 95 apps to research with 6 workers
+[14:15:13] #6   A 1-discovery    seeds=['https://podio.com']
+[14:15:13] #7   A 1-discovery    seeds=['https://zoho.com/crm', 'https://zoho.com']
+[14:15:13] #8   A 1-discovery    seeds=['https://close.com']
+[14:15:13] #9   A 1-discovery    seeds=['https://copper.com']
+[14:15:13] #10  A 1-discovery    seeds=['https://api.docs.dealcloud.com']
+[14:15:13] #11  A 1-discovery    seeds=['https://zendesk.com']
+[14:15:41] #10  A 1-discovery    10 pages fetched, 0 failed, 1 GitHub MCP candidates
+[14:15:41] #10  A 2-4-extract    LLM extraction over 10 sources
+[14:15:46] #7   A 1-discovery    0 pages fetched, 2 failed, 8 GitHub MCP candidates
+[14:15:46] #7   A error          RuntimeError: no documentation pages could be fetched
+[14:15:46] #12  A 1-discovery    seeds=['https://intercom.com']
+[14:15:50] #6   A 1-discovery    14 pages fetched, 0 failed, 5 GitHub MCP candidates
+[14:15:50] #6   A 2-4-extract    LLM extraction over 14 sources
+[14:15:53] #10  A 6-evidence     checking 7 claims against source text
+[14:15:53] #10  A 5-verdict      CONDITIONAL | tier=admin_approval | auth=['OAuth2'] | evidence 1.0 | $0.0894 | 39.7s
+[14:15:53] #13  A 1-discovery    seeds=['https://freshdesk.com']
+[14:15:53] #8   A 1-discovery    11 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:15:53] #8   A 2-4-extract    LLM extraction over 11 sources
+[14:15:57] #9   A 1-discovery    11 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:15:57] #9   A 2-4-extract    LLM extraction over 11 sources
+[14:16:01] #6   A 6-evidence     checking 7 claims against source text
+[14:16:02] #6   A 5-verdict      READY | tier=free_self_serve | auth=['OAuth2'] | evidence 0.857 | $0.0772 | 48.6s
+[14:16:02] #14  A 1-discovery    seeds=['https://front.com']
+[14:16:05] #8   A 6-evidence     checking 10 claims against source text
+[14:16:05] #8   A 5-verdict      READY | tier=free_self_serve | auth=['API key', 'Basic', 'OAuth2'] | evidence 1.0 | $0.07 | 51.9s
+[14:16:05] #15  A 1-discovery    seeds=['https://usepylon.com']
+[14:16:07] #12  A 1-discovery    11 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:16:07] #12  A 2-4-extract    LLM extraction over 11 sources
+[14:16:11] #9   A 6-evidence     checking 9 claims against source text
+[14:16:11] #9   A 5-verdict      READY | tier=trial_self_serve | auth=['API key', 'OAuth2'] | evidence 1.0 | $0.0638 | 58.2s
+[14:16:11] #16  A 1-discovery    seeds=['https://liveagent.com']
+[14:16:13] #14  A 1-discovery    3 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:16:13] #14  A 2-4-extract    LLM extraction over 3 sources
+[14:16:17] #12  A 6-evidence     checking 5 claims against source text
+[14:16:19] #12  A 5-verdict      READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2'] | evidence 0.8 | $0.0691 | 32.5s
+[14:16:19] #17  A 1-discovery    seeds=['https://plain.com']
+[14:16:21] #14  A 6-evidence     checking 4 claims against source text
+[14:16:22] #14  A 5-verdict      READY | tier=trial_self_serve | auth=[] | evidence 1.0 | $0.0585 | 20.1s
+[14:16:22] #18  A 1-discovery    seeds=['https://helpscout.com']
+[14:16:22] #15  A 1-discovery    10 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:16:22] #15  A 2-4-extract    LLM extraction over 10 sources
+[14:16:25] #13  A 1-discovery    9 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:16:25] #13  A 2-4-extract    LLM extraction over 9 sources
+[14:16:28] #16  A 1-discovery    4 pages fetched, 0 failed, 3 GitHub MCP candidates
+[14:16:28] #16  A 2-4-extract    LLM extraction over 4 sources
+[14:16:32] #11  A 1-discovery    12 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:16:32] #11  A 2-4-extract    LLM extraction over 12 sources
+[14:16:34] #15  A 6-evidence     checking 8 claims against source text
+[14:16:34] #15  A 5-verdict      CONDITIONAL | tier=admin_approval | auth=['OAuth2', 'Bearer/PAT'] | evidence 1.0 | $0.0747 | 29.0s
+[14:16:34] #19  A 1-discovery    seeds=['https://gorgias.com']
+[14:16:36] #17  A 1-discovery    11 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:16:36] #17  A 2-4-extract    LLM extraction over 11 sources
+[14:16:37] #13  A 6-evidence     checking 7 claims against source text
+[14:16:37] #13  A 5-verdict      READY | tier=free_self_serve | auth=['API key'] | evidence 1.0 | $0.0671 | 43.6s
+[14:16:37] #20  A 1-discovery    seeds=['https://gladly.com']
+[14:16:40] #16  A 6-evidence     checking 8 claims against source text
+[14:16:41] #16  A 5-verdict      READY | tier=trial_self_serve | auth=['API key', 'Bearer/PAT', 'OAuth2'] | evidence 1.0 | $0.0944 | 29.4s
+[14:16:41] #21  A 1-discovery    seeds=['https://slack.com']
+[14:16:43] #11  A 6-evidence     checking 9 claims against source text
+[14:16:45] #11  A 5-verdict      READY | tier=trial_self_serve | auth=['OAuth2', 'API key', 'Basic'] | evidence 1.0 | $0.0745 | 91.7s
+[14:16:45] #22  A 1-discovery    seeds=['https://twilio.com']
+[14:16:46] #18  A 1-discovery    8 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:16:46] #18  A 2-4-extract    LLM extraction over 8 sources
+[14:16:47] #17  A 6-evidence     checking 6 claims against source text
+[14:16:49] #17  A 5-verdict      READY | tier=trial_self_serve | auth=['API key', 'OAuth2'] | evidence 1.0 | $0.0754 | 30.4s
+[14:16:49] #23  A 1-discovery    seeds=['https://zoho.com/cliq', 'https://zoho.com']
+[14:16:53] #20  A 1-discovery    4 pages fetched, 0 failed, 2 GitHub MCP candidates
+[14:16:53] #20  A 2-4-extract    LLM extraction over 4 sources
+[14:16:58] #21  A 1-discovery    11 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:16:58] #21  A 2-4-extract    LLM extraction over 11 sources
+[14:17:01] #20  A 6-evidence     checking 3 claims against source text
+[14:17:01] #20  A 5-verdict      UNKNOWN | tier=unknown | auth=[] | evidence 1.0 | $0.0343 | 24.5s
+[14:17:01] #24  A 1-discovery    seeds=['https://open.larksuite.com']
+[14:17:02] #18  A 6-evidence     checking 8 claims against source text
+[14:17:04] #18  A 5-verdict      CONDITIONAL | tier=paid_plan | auth=['Other'] | evidence 1.0 | $0.068 | 42.1s
+[14:17:04] #25  A 1-discovery    seeds=['https://pumble.com']
+[14:17:10] #21  A 6-evidence     checking 9 claims against source text
+[14:17:16] #23  A 1-discovery    0 pages fetched, 2 failed, 1 GitHub MCP candidates
+[14:17:16] #23  A error          RuntimeError: no documentation pages could be fetched
+[14:17:16] #26  A 1-discovery    seeds=['https://discord.com']
+[14:17:19] #21  A 5-verdict      READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT', 'Other'] | evidence 1.0 | $0.082 | 38.0s
+[14:17:19] #27  A 1-discovery    seeds=['https://core.telegram.org']
+[14:17:19] #22  A 1-discovery    11 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:17:19] #22  A 2-4-extract    LLM extraction over 11 sources
+[14:17:22] #25  A 1-discovery    7 pages fetched, 1 failed, 4 GitHub MCP candidates
+[14:17:22] #25  A 2-4-extract    LLM extraction over 7 sources
+[14:17:25] #24  A 1-discovery    2 pages fetched, 2 failed, 8 GitHub MCP candidates
+[14:17:25] #24  A 2-4-extract    LLM extraction over 2 sources
+[14:17:31] #22  A 6-evidence     checking 6 claims against source text
+[14:17:33] #22  A 5-verdict      READY | tier=free_self_serve | auth=['Basic', 'API key'] | evidence 1.0 | $0.088 | 48.0s
+[14:17:33] #28  A 1-discovery    seeds=['https://developers.facebook.com/docs/whatsapp', 'https://developers.facebook.com']
+[14:17:33] #25  A 6-evidence     checking 7 claims against source text
+[14:17:33] #25  A 5-verdict      READY | tier=free_self_serve | auth=['API key', 'Bearer/PAT'] | evidence 1.0 | $0.0642 | 29.6s
+[14:17:33] #29  A 1-discovery    seeds=['https://aircall.io']
+[14:17:36] #24  A 6-evidence     checking 5 claims against source text
+[14:17:36] #24  A 5-verdict      READY | tier=free_self_serve | auth=['OAuth2'] | evidence 0.2 | $0.0468 | 35.4s
+[14:17:36] #30  A 1-discovery    seeds=['https://developer.vonage.com']
+[14:17:42] #27  A 1-discovery    8 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:17:42] #27  A 2-4-extract    LLM extraction over 8 sources
+[14:17:46] #26  A 1-discovery    11 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:17:46] #26  A 2-4-extract    LLM extraction over 11 sources
+[14:17:52] #27  A 6-evidence     checking 5 claims against source text
+[14:17:53] #29  A 1-discovery    10 pages fetched, 1 failed, 8 GitHub MCP candidates
+[14:17:53] #29  A 2-4-extract    LLM extraction over 10 sources
+[14:17:53] #27  A 5-verdict      READY | tier=free_self_serve | auth=['Other'] | evidence 1.0 | $0.0711 | 34.1s
+[14:17:53] #31  A 1-discovery    seeds=['https://developers.google.com/google-ads', 'https://developers.google.com']
+[14:17:57] #19  A 1-discovery    8 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:17:57] #19  A 2-4-extract    LLM extraction over 8 sources
+[14:17:58] #26  A 6-evidence     checking 9 claims against source text
+[14:18:00] #26  A 5-verdict      READY | tier=free_self_serve | auth=['OAuth2', 'Other', 'Basic'] | evidence 1.0 | $0.0713 | 44.0s
+[14:18:00] #32  A 1-discovery    seeds=['https://developers.facebook.com/docs/marketing-apis', 'https://developers.facebook.com']
+[14:18:00] #30  A 1-discovery    14 pages fetched, 1 failed, 8 GitHub MCP candidates
+[14:18:00] #30  A 2-4-extract    LLM extraction over 14 sources
+[14:18:05] #29  A 6-evidence     checking 5 claims against source text
+[14:18:05] #29  A 5-verdict      READY | tier=free_self_serve | auth=['Basic', 'OAuth2'] | evidence 1.0 | $0.0773 | 31.1s
+[14:18:05] #33  A 1-discovery    seeds=['https://learn.microsoft.com/linkedin/marketing', 'https://learn.microsoft.com']
+[14:18:07] #19  A 6-evidence     checking 6 claims against source text
+[14:18:08] #28  A 1-discovery    10 pages fetched, 3 failed, 8 GitHub MCP candidates
+[14:18:08] #28  A 2-4-extract    LLM extraction over 10 sources
+[14:18:09] #19  A 5-verdict      UNKNOWN | tier=unknown | auth=['OAuth2', 'Bearer/PAT'] | evidence 1.0 | $0.0386 | 95.4s
+[14:18:09] #34  A 1-discovery    seeds=['https://highlevel.stoplight.io']
+[14:18:12] #30  A 6-evidence     checking 5 claims against source text
+[14:18:15] #31  A 1-discovery    13 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:18:15] #31  A 2-4-extract    LLM extraction over 13 sources
+[14:18:16] #30  A 5-verdict      READY | tier=free_self_serve | auth=['Service account/JWT', 'Basic'] | evidence 1.0 | $0.0809 | 39.7s
+[14:18:16] #35  A 1-discovery    seeds=['https://mailchimp.com/developer', 'https://mailchimp.com']
+[14:18:18] #28  A 6-evidence     checking 5 claims against source text
+[14:18:18] #28  A 5-verdict      UNKNOWN | tier=unknown | auth=['Bearer/PAT'] | evidence 1.0 | $0.0738 | 45.3s
+[14:18:18] #36  A 1-discovery    seeds=['https://developers.klaviyo.com']
+[14:18:19] #33  A 1-discovery    8 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:18:19] #33  A 2-4-extract    LLM extraction over 8 sources
+[14:18:22] #32  A 1-discovery    7 pages fetched, 3 failed, 8 GitHub MCP candidates
+[14:18:22] #32  A 2-4-extract    LLM extraction over 7 sources
+[14:18:28] #31  A 6-evidence     checking 7 claims against source text
+[14:18:29] #31  A 5-verdict      READY | tier=free_self_serve | auth=['OAuth2', 'Service account/JWT', 'Other'] | evidence 1.0 | $0.0815 | 36.6s
+[14:18:29] #37  A 1-discovery    seeds=['https://systeme.io']
+[14:18:31] #33  A 6-evidence     checking 6 claims against source text
+[14:18:32] #33  A 5-verdict      UNKNOWN | tier=unknown | auth=['OAuth2'] | evidence 1.0 | $0.0753 | 27.9s
+[14:18:32] #38  A 1-discovery    seeds=['https://developers.pinterest.com']
+[14:18:33] #32  A 6-evidence     checking 5 claims against source text
+[14:18:37] #36  A 1-discovery    10 pages fetched, 0 failed, 8 GitHub MCP candidates
+[14:18:37] #36  A 2-4-extract    LLM extraction over 10 sources
+[14:18:40] #32  A 5-verdict      READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT'] | evidence 1.0 | $0.0675 | 39.7s
+[14:18:40] #39  A 1-discovery    seeds=['https://developers.facebook.com/docs/threads', 'https://developers.facebook.com']
+[14:18:40] #37  A 1-discovery    4 pages fetched, 1 failed, 4 GitHub MCP candidates
+[14:18:40] #37  A 2-4-extract    LLM extraction over 4 sources
+[14:18:49] #39  A 1-discovery    3 pages fetched, 3 failed, 8 GitHub MCP candidates
+[14:18:49] #39  A 2-4-extract    LLM extraction over 3 sources
+[14:18:51] #36  A 6-evidence     checking 5 claims against source text
+[14:18:52] #36  A 5-verdict      READY | tier=free_self_serve | auth=['API key', 'OAuth2'] | evidence 1.0 | $0.0713 | 33.9s
+[14:18:52] #40  A 1-discovery    seeds=['https://sendgrid.com']

@@ -1,0 +1,239 @@
+{
+ "id": 10,
+ "name": "DealCloud",
+ "category": "CRM and Sales",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:15:53Z",
+ "duration_s": 39.7,
+ "cost_usd": 0.0894,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://api.docs.dealcloud.com",
+   "title": "Dealcloud Developer Documentation - DealCloud API Docs",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://api.docs.dealcloud.com/mcp/authentication",
+   "title": "Authentication - DealCloud API Docs",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://api.docs.dealcloud.com/mcp/getting-started",
+   "title": "Getting Started with DealCloud MCP - DealCloud API Docs",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://api.docs.dealcloud.com/docs/token",
+   "title": "Requesting an OAuth2 Bearer Token - DealCloud API Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://api.docs.dealcloud.com/sdk/python-1.X/configuration/authentication",
+   "title": "Authentication - DealCloud API Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://api.docs.dealcloud.com/sdk/intapp-rest-client/configuration/authentication",
+   "title": "Authentication - DealCloud API Docs",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://api.docs.dealcloud.com/sdk/python/authentication",
+   "title": "Authentication - DealCloud API Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://api.docs.dealcloud.com/sdk/csharp/authentication",
+   "title": "Authentication - DealCloud API Docs",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://api.docs.dealcloud.com/sdk/python-1.X/reference/api-reference",
+   "title": "API Reference - DealCloud API Docs",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://api.docs.dealcloud.com/sdk/intapp-rest-client/reference/api-reference",
+   "title": "API Reference - DealCloud API Docs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jstewartrr/infra-20251230-mcp-dealcloud",
+   "title": "jstewartrr/infra-20251230-mcp-dealcloud",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": null,
+   "developer_portal": "https://api.docs.dealcloud.com",
+   "description": "DealCloud (Intapp) is a CRM platform with REST APIs, SDKs, and an MCP server for deal and relationship data.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs at api.docs.dealcloud.com describe the DealCloud API, SDKs and MCP."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Client Credentials for REST API (client_id + apiKey, scopes); OAuth 2.0 user sign-in for MCP",
+   "token_refresh": "Bearer tokens expire after 900 seconds (15 minutes); repeat the flow to refresh.",
+   "scopes_notes": "Scopes: user_management, data, publish, ri_import, backup. 403 usually means missing scope or user group permissions."
+  },
+  "access": {
+   "tier": "admin_approval",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "yes",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "MCP requires DealCloud with Celeste license and admin-enabled MCP access. REST API credentials (API keys) are issued within a DealCloud site; no free signup is documented."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Entry Types",
+    "Fields",
+    "Data rows/cells",
+    "Views",
+    "History",
+    "Files",
+    "Reports",
+    "Users",
+    "User Groups",
+    "Publications",
+    "Backups",
+    "Relationship Intelligence",
+    "Merge"
+   ],
+   "read_ops": [
+    "Get entry types and fields",
+    "List entries",
+    "Query data",
+    "Get views",
+    "History",
+    "Download files",
+    "Get reports",
+    "Get users"
+   ],
+   "write_ops": [
+    "Create/update/upsert rows",
+    "Delete",
+    "Merge",
+    "Upload files",
+    "Create/update/delete users",
+    "Request backup"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "Rate limits page exists; details not in sources. SDK retries HTTP 429.",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://api.docs.dealcloud.com/mcp/getting-started",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/jstewartrr/infra-20251230-mcp-dealcloud"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://api.docs.dealcloud.com/docs/token",
+    "quote": "DealCloud uses the OAuth2 Client Credentials flow to generate a bearer token, which is then used in the HTTP Authentication header for API requests.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "900 seconds",
+    "url": "https://api.docs.dealcloud.com/docs/token",
+    "quote": "Tokens expire after 900 seconds (15 minutes) and must be refreshed by repeating the flow.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "admin_approval",
+    "url": "https://api.docs.dealcloud.com/mcp/getting-started",
+    "quote": "Manage MCP Servers capability for admins to configure.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://api.docs.dealcloud.com/docs/token",
+    "quote": "Required when accessing the Data or Schema API endpoints (api/rest/v4/data or api/rest/v4/schema).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://api.docs.dealcloud.com",
+    "quote": "Create, Update or Upsert Rows Query Get Update Create List Views Get Data using View History History or All History Historical Data Files Delete Merge Template Reports",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://api.docs.dealcloud.com/mcp/getting-started",
+    "quote": "DealCloud provides a default MCP Server out-of-the-box without any configuration required. It exposes your site's full schema and is the fastest way to get connected.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "yes",
+    "url": "https://api.docs.dealcloud.com/mcp/getting-started",
+    "quote": "DealCloud with Celeste license.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is there a free developer account or sandbox?",
+   "Are API keys admin-only to create?",
+   "Specific rate limit values",
+   "Webhook support (Publications may serve as event feed)"
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "high",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Workspace admin approval",
+  "rationale": [
+   "A workspace admin must approve/install or issue credentials."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

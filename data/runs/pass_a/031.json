@@ -1,0 +1,289 @@
+{
+ "id": 31,
+ "name": "Google Ads",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:18:29Z",
+ "duration_s": 36.6,
+ "cost_usd": 0.0815,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developers.google.com/google-ads",
+   "title": "Google Ads  |  Google for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.google.com",
+   "title": "Google for Developers | Build with Gemini",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction",
+   "title": "Introduction to the Google Ads API  |  Google for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developers.google.com/google-ads/webhook/docs/overview",
+   "title": "Overview  |  Lead Form Webhook  |  Google for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developers.google.com/program",
+   "title": "Google Developer Program  |  Google for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developers.google.com/community",
+   "title": "Community and Events | Google for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developers.google.com/community/experts",
+   "title": "Google Developer Experts - Google for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developers.google.com/",
+   "title": "Google for Developers | Build with Gemini",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+   "title": "Use OAuth 2.0 to access Google Ads API  |  Google for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developers.google.com/google-ads/api/docs/oauth/user-authentication",
+   "title": "User authentication workflow  |  Google Ads API  |  Google for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://developers.google.com/google-ads/api/docs/oauth/single-user-authentication",
+   "title": "Single-user authentication workflow  |  Google Ads API  |  Google for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://developers.google.com/google-ads/api/docs/oauth/multi-user-authentication",
+   "title": "Multi-user authentication workflow  |  Google Ads API  |  Google for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S13",
+   "url": "https://developers.google.com/google-ads/api/docs/oauth/cloud-project",
+   "title": "Set up a Google API Console project  |  Google Ads API  |  Google for Developers",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/irinabuht12-oss/marketing-skills",
+   "title": "irinabuht12-oss/marketing-skills",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp",
+   "title": "irinabuht12-oss/google-ads-meta-ads-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/googleads/google-ads-mcp",
+   "title": "googleads/google-ads-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/cohnen/mcp-google-ads",
+   "title": "cohnen/mcp-google-ads",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/kLOsk/adloop",
+   "title": "kLOsk/adloop",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/TheMattBerman/google-ads-copilot",
+   "title": "TheMattBerman/google-ads-copilot",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/gomarble-ai/google-ads-mcp-server",
+   "title": "gomarble-ai/google-ads-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/amekala/ads-mcp",
+   "title": "amekala/ads-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://developers.google.com/google-ads",
+   "developer_portal": "https://developers.google.com/google-ads",
+   "description": "Google Ads API is a programmatic interface for managing Google Ads accounts and campaigns, with GAQL reporting, campaign/asset management, conversion uploads, and a lead form webhook.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Google Ads developer docs and Google Ads API."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Service account/JWT",
+    "Other"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Single-user and multi-user user authentication (authorization code with offline refresh token); service account workflow.",
+   "token_refresh": "Access tokens expire after one hour; request offline access to get a refresh token.",
+   "scopes_notes": "Scope https://www.googleapis.com/auth/adwords; a developer token is also required in addition to OAuth credentials."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "yes",
+   "production_restrictions": "Developer token and API access level required (Test, then Explorer via application, automatically reviewed in most cases); OAuth app verification recommended for multi-user apps."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "gRPC",
+    "WebSocket"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "accounts",
+    "campaigns",
+    "budgets",
+    "assets",
+    "conversions",
+    "reports"
+   ],
+   "read_ops": [
+    "GAQL reporting queries"
+   ],
+   "write_ops": [
+    "create/update campaigns",
+    "budgets",
+    "assets",
+    "upload conversions",
+    "manage bidding strategies"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Developer token and API access level required."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/googleads/google-ads-mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/cohnen/mcp-google-ads",
+    "https://github.com/gomarble-ai/google-ads-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+    "quote": "Just like other Google APIs, Google Ads API uses the OAuth 2.0 protocol for authentication and authorization.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Service account/JWT",
+    "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+    "quote": "Use the service account workflow .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developers.google.com/google-ads/api/docs/oauth/cloud-project",
+    "quote": "Once you complete your application, Google automatically reviews your application and upgrades it to Explorer access in most cases.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST, gRPC",
+    "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction",
+    "quote": "Install a client library or call REST Client libraries Java , .NET , PHP , Python , Ruby , Perl , Code samples , REST interface",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction",
+    "quote": "Create and update Performance Max , Search , Demand Gen , Shopping , Video , and App campaigns, budgets , and assets .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction",
+    "quote": "Use AI tools and interactive explorers Google Ads MCP server Google Ads API AI agent skills",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://developers.google.com/google-ads/webhook/docs/overview",
+    "quote": "After the user clicks on an ad and submits the lead form, an HTTP POST request gets sent to the configured URL.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "The protocols list includes WebSocket and gRPC, but the sources only show REST and client libraries, so those two are unconfirmed.",
+   "Does the developer token require approval? S9 says one is required, but the sources don't describe how to get it.",
+   "Which API rate limits apply?",
+   "Test accounts are mentioned, but the sources don't describe how they work."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST/WebSocket/gRPC interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

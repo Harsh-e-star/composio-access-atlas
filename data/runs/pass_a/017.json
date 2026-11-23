@@ -1,0 +1,262 @@
+{
+ "id": 17,
+ "name": "Plain",
+ "category": "Support and Helpdesk",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:16:49Z",
+ "duration_s": 30.4,
+ "cost_usd": 0.0754,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.plain.com/",
+   "title": "Plain — Support infrastructure for humans & agents",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://www.plain.com/docs/product/what-is-plain",
+   "title": "What is Plain? - Plain Docs",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://www.plain.com/docs/graphql-reference/queries/account",
+   "title": "account - Plain Docs",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://www.plain.com/docs/graphql/introduction",
+   "title": "Introduction - Plain Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://www.plain.com/docs/product/billing/pricing",
+   "title": "Plans and pricing - Plain Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://www.plain.com/pricing",
+   "title": "Plain Pricing — Plans from $45/user/month | 7-Day Free Trial",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://www.plain.com/docs/graphql-reference/queries/serviceAuthorization",
+   "title": "serviceAuthorization - Plain Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://www.plain.com/docs/graphql-reference/queries/serviceAuthorizations",
+   "title": "serviceAuthorizations - Plain Docs",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://www.plain.com/docs/graphql-reference/mutations/deleteServiceAuthorization",
+   "title": "deleteServiceAuthorization - Plain Docs",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://www.plain.com/docs/graphql/authentication",
+   "title": "Authentication - Plain Docs",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://www.plain.com/docs/graphql/oauth",
+   "title": "OAuth - Plain Docs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/aicodeking/leanrea",
+   "title": "aicodeking/leanrea",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Mibayy/token-savior",
+   "title": "Mibayy/token-savior",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/alpacahq/alpaca-mcp-server",
+   "title": "alpacahq/alpaca-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ooples/token-optimizer-mcp",
+   "title": "ooples/token-optimizer-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/racdeufindurch198812/Blender-AI-MCP-Studio",
+   "title": "racdeufindurch198812/Blender-AI-MCP-Studio",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/credoksopho1984/blender-ai-copilot-studio",
+   "title": "credoksopho1984/blender-ai-copilot-studio",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/findavoulot1973/Blender-AI-MCP-Suite",
+   "title": "findavoulot1973/Blender-AI-MCP-Suite",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/realopslabs/kubeledger",
+   "title": "realopslabs/kubeledger",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.plain.com/",
+   "developer_portal": "https://www.plain.com/docs/graphql/introduction",
+   "description": "Plain is an API-first support platform for B2B teams that brings email, Slack, Teams, chat and Discord into one queue worked by humans and AI agents.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Plain (Not Just Tickets Ltd), plain.com support platform."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "OAuth 2.0 authorization code flow with PKCE; authorization server https://signin.auth.plain.com; server-side apps use client secret",
+   "token_refresh": "Refresh token (requested via offline_access) sent to token endpoint with grant_type=refresh_token; store the new refresh token from each response.",
+   "scopes_notes": "API keys belong to machine users and carry fine-grained permissions (e.g. customer:read, tenant:read). OAuth app calls run as the signed-in user with their role's permissions. GraphQL subscriptions don't accept OAuth app tokens."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Every plan starts with a free 7-day trial with no credit card. Connected agents and API access are listed on Foundation (the entry paid plan). Frontier requires contacting sales, but that is not needed for testing."
+  },
+  "api": {
+   "protocols": [
+    "GraphQL"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "accounts",
+    "customers",
+    "threads",
+    "tiers",
+    "service authorizations",
+    "workspace"
+   ],
+   "read_ops": [
+    "account",
+    "serviceAuthorizations",
+    "serviceAuthorization",
+    "customerByEmail"
+   ],
+   "write_ops": [
+    "deleteServiceAuthorization"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Docs cover the most used operations; the rest is in the schema. GraphQL subscriptions don't accept OAuth app tokens."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://www.plain.com/docs/graphql/introduction",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key (Bearer)",
+    "url": "https://www.plain.com/docs/graphql/authentication",
+    "quote": "Now that you have an API key, pass it on any API call as a header: Authorization: Bearer plainApiKey_xxx",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://www.plain.com/docs/graphql/oauth",
+    "quote": "Your app gets an access token with the OAuth 2.0 authorization code flow",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "trial_self_serve",
+    "url": "https://www.plain.com/docs/product/billing/pricing",
+    "quote": "Every plan starts with a free 7-day trial, and the trial doesn’t need a credit card.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "GraphQL",
+    "url": "https://www.plain.com/docs/product/what-is-plain",
+    "quote": "Everything the app can do, the GraphQL API can do",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://www.plain.com/docs/graphql/introduction",
+    "quote": "Plain itself is built on this same GraphQL API. This means that there are no limitations in what can be done via the API vs the UI.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://www.plain.com/docs/graphql/introduction",
+    "quote": "If you’re looking to access our GraphQL API from an Agent, try our MCP Server instead.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Rate limits are not stated in the sources.",
+   "The MCP server URL or repo is not given in the sources.",
+   "Webhooks are listed on the pricing page; setup details are not in the sources.",
+   "Whether the free trial is the only way to get test credentials is unclear."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented GraphQL interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

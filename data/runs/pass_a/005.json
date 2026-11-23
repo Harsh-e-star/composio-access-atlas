@@ -1,0 +1,291 @@
+{
+ "id": 5,
+ "name": "Twenty",
+ "category": "CRM and Sales",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:14:21Z",
+ "duration_s": 31.4,
+ "cost_usd": 0.0732,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://twenty.com",
+   "title": "Twenty | #1 Open Source CRM",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.twenty.com/getting-started/introduction",
+   "title": "Meet Twenty - Twenty Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.twenty.com/developers/introduction",
+   "title": "Build on Twenty - Twenty Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.twenty.com/developers/extend/oauth",
+   "title": "OAuth - Twenty Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.twenty.com/getting-started/quickstart",
+   "title": "Quickstart - Twenty Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.twenty.com/developers/extend/api",
+   "title": "APIs - Twenty Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.twenty.com/developers/extend/webhooks",
+   "title": "Webhooks - Twenty Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.twenty.com/getting-started/key-features",
+   "title": "Key Features - Twenty Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.twenty.com/getting-started/core-concepts/data-model",
+   "title": "Data Model - Twenty Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.twenty.com/getting-started/core-concepts/layout",
+   "title": "Layout - Twenty Documentation",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mhenry3164/twenty-crm-mcp-server",
+   "title": "mhenry3164/twenty-crm-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jezweb/twenty-mcp",
+   "title": "jezweb/twenty-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Jdu278/twenty-mcp-server",
+   "title": "Jdu278/twenty-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/KonstiDoll/twenty-crm-mcp-server",
+   "title": "KonstiDoll/twenty-crm-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/smartsheet/cli-agent-power-tools",
+   "title": "smartsheet/cli-agent-power-tools",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/devchaudhary24k/skill-twenty-crm",
+   "title": "devchaudhary24k/skill-twenty-crm",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/bcharleson/twenty-agent-cli",
+   "title": "bcharleson/twenty-agent-cli",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/levelcfo/open-finance-skills",
+   "title": "levelcfo/open-finance-skills",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://twenty.com",
+   "developer_portal": "https://docs.twenty.com/developers/introduction",
+   "description": "Twenty is an open-source, self-hostable CRM platform with a customizable data model, REST and GraphQL APIs, workflows, and AI agents.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Twenty, the open source CRM at twenty.com."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Authorization code + PKCE and client credentials; dynamic client registration via RFC 7591 (POST /oauth/register).",
+   "token_refresh": "Access tokens expire (expires_in 3600); refresh via refresh_token grant.",
+   "scopes_notes": "Scopes: api (full read/write to Core and Metadata APIs) and profile. API keys can be scoped to a role."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Cloud requires a 7-day (no card) or 30-day (card) trial, then paid plans (Pro $9/user/mo, Organization $39/user/mo). Self-hosting the open source core is free."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "GraphQL"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Companies",
+    "People",
+    "Opportunities",
+    "Tasks",
+    "Notes",
+    "Custom objects",
+    "Workflows",
+    "Dashboards"
+   ],
+   "read_ops": [
+    "Query/filter records",
+    "Traverse relations",
+    "Select fields"
+   ],
+   "write_ops": [
+    "Create",
+    "Update",
+    "Delete",
+    "Batch operations (up to 60)",
+    "GraphQL batch upsert",
+    "Metadata API: create/modify/delete objects, fields, relations"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "100 requests per minute; batch size 60 records per call.",
+   "limitations": "No static API reference; schema is per-workspace and docs are generated under Settings → Developers → API after creating an API key."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://twenty.com",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/mhenry3164/twenty-crm-mcp-server",
+    "https://github.com/jezweb/twenty-mcp",
+    "https://github.com/Jdu278/twenty-mcp-server",
+    "https://github.com/KonstiDoll/twenty-crm-mcp-server",
+    "https://github.com/bcharleson/twenty-agent-cli"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key, OAuth2",
+    "url": "https://docs.twenty.com/developers/extend/oauth",
+    "quote": "Twenty implements OAuth 2.0 with authorization code + PKCE for user-facing apps and client credentials for server-to-server access.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://docs.twenty.com/developers/extend/api",
+    "quote": "Create an API key in Settings → Developers → API → + Create key . Copy it immediately — it’s shown once.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "trial_self_serve",
+    "url": "https://docs.twenty.com/getting-started/quickstart",
+    "quote": "Pick 30 days (with card) or 7 days (without card). Both include full access — unlimited contacts, email integration, custom objects, API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST, GraphQL",
+    "url": "https://docs.twenty.com/developers/extend/api",
+    "quote": "Both are available as REST and GraphQL. GraphQL adds batch upserts and the ability to traverse relations in a single query.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.twenty.com/developers/extend/api",
+    "quote": "Schema management: create/modify/delete objects, fields, and relations. This is how you programmatically change your data model.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://twenty.com",
+    "quote": "Every Cloud workspace ships with a native MCP server. Connect your AI assistant via OAuth and it can read and write your CRM data in natural language.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://docs.twenty.com/developers/extend/webhooks",
+    "quote": "Twenty sends an HTTP POST to your URL whenever a record is created, updated, or deleted. All object types are covered, including custom objects.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "100 requests per minute",
+    "url": "https://docs.twenty.com/developers/extend/api",
+    "quote": "Requests 100 per minute Batch size 60 records per call",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "yes",
+    "url": "https://docs.twenty.com/developers/introduction",
+    "quote": "Declare objects, server-side functions, React components and AI agents in plain TypeScript with the twenty-sdk",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "MCP server URL/endpoint not given in the sources.",
+   "Whether a free sandbox exists beyond self-hosting is not stated."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented GraphQL/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

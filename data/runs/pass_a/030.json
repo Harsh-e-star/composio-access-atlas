@@ -1,0 +1,288 @@
+{
+ "id": 30,
+ "name": "Vonage",
+ "category": "Communications and Messaging",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:18:16Z",
+ "duration_s": 39.7,
+ "cost_usd": 0.0809,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developer.vonage.com/en/home",
+   "title": "Vonage API Developer",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developer.vonage.com/en/tutorials/silent-authentication/introduction",
+   "title": "Vonage API Developer",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developer.vonage.com/en/voice/voice-api/getting-started?source=voice",
+   "title": "Getting Started with Voice API | Vonage API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developer.vonage.com/en/api/video",
+   "title": "Vonage Video API for Developers | Vonage API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developer.vonage.com/en/video/react-reference-app/overview",
+   "title": "Vonage Video API Reference Apps Overview | Vonage API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developer.vonage.com/en/api/voice",
+   "title": "Vonage Voice API Reference | Vonage API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.vonage.com/en/api/messages",
+   "title": "Vonage Messages API Reference | Vonage API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developer.vonage.com/en/api/10dlc",
+   "title": "Vonage 10DLC API Reference | Vonage API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developer.vonage.com/en/getting-started-network/concepts/network-features",
+   "title": "What are Vonage Network Features | Vonage API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developer.vonage.com/en/tutorials/silent-authentication/backend-setting-up-vonage-credentials/node",
+   "title": "Vonage API Developer",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://developer.vonage.com/en/tutorials/silent-authentication/introduction/node",
+   "title": "Vonage API Developer",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://developer.vonage.com/en/tutorials/silent-authentication/backend-prerequisites/node",
+   "title": "Vonage API Developer",
+   "rendered": false
+  },
+  {
+   "id": "S13",
+   "url": "https://developer.vonage.com/en/tutorials/silent-authentication/backend-set-up-environment/node",
+   "title": "Vonage API Developer",
+   "rendered": false
+  },
+  {
+   "id": "S14",
+   "url": "https://developer.vonage.com/en/tutorials/silent-authentication/backend-add-vonage-verify/node",
+   "title": "Vonage API Developer",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/khan2a/telephony-mcp-server",
+   "title": "khan2a/telephony-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+   "title": "Vonage-Community/vonage-mcp-server-api-bindings",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mobilebiz/vonage-cloudflare-mcp",
+   "title": "mobilebiz/vonage-cloudflare-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Vonage-Community/telephony-mcp-server",
+   "title": "Vonage-Community/telephony-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/zavora-ai/skill-voice-communications",
+   "title": "zavora-ai/skill-voice-communications",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ag2-mcp-servers/vonage-integration-suite",
+   "title": "ag2-mcp-servers/vonage-integration-suite",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Feli87/vonage-mcp",
+   "title": "Feli87/vonage-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mobilebiz/vonage-mcp-server",
+   "title": "mobilebiz/vonage-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.vonage.com",
+   "developer_portal": "https://developer.vonage.com",
+   "description": "Vonage provides communication APIs (Voice, Messaging, Video, Verify, Network Features) for developers.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are from developer.vonage.com describing Vonage APIs."
+  },
+  "auth": {
+   "methods": [
+    "Service account/JWT",
+    "Basic"
+   ],
+   "primary": "Service account/JWT",
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "Messages API supports JWT and Basic (API key and secret); Basic does not support advanced features such as ACLs. JWT is signed with an application private key."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Voice demo/trial accounts have limited features until credit is added; Network Features production requires operator approval, while Network Registry testing does not."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "calls",
+    "messages",
+    "video archives",
+    "video sessions",
+    "10DLC brands and campaigns",
+    "Verify",
+    "Identity Insights",
+    "Device Location",
+    "Quality on Demand",
+    "applications"
+   ],
+   "read_ops": [
+    "list calls",
+    "get call details",
+    "list archives",
+    "get archive",
+    "get 10DLC brand feedback"
+   ],
+   "write_ops": [
+    "create outbound call",
+    "modify in-progress call",
+    "send message",
+    "create archive",
+    "delete archive",
+    "create video session",
+    "start text to speech",
+    "delete 10DLC brand"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/khan2a/telephony-mcp-server",
+    "https://github.com/mobilebiz/vonage-cloudflare-mcp",
+    "https://github.com/Feli87/vonage-mcp",
+    "https://github.com/mobilebiz/vonage-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "JWT and Basic",
+    "url": "https://developer.vonage.com/en/api/messages",
+    "quote": "This API supports both JWT and Basic authentication. Basic authentication is easier to get started with, but does not support advanced features such as ACLs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developer.vonage.com/en/voice/voice-api/getting-started?source=voice",
+    "quote": "To work with our APIs, you will need to sign up for an account . This will give you an API key and secret that you can use to access our APIs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developer.vonage.com/en/api/voice",
+    "quote": "The Voice API lets you create outbound calls, control in-progress calls and get information about historical calls.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developer.vonage.com/en/api/messages",
+    "quote": "The Messages API consolidates and normalises exchanges across all messaging channels. It allows you to use a single API to interact with our various channels such as SMS, MMS, RCS, WhatsApp, Viber and Facebook Messenger.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+    "quote": "Vonage MCP server with tools to interact with APIs",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Vonage-Community is a community org, so whether the MCP server is vendor-maintained is uncertain; I marked it official with low confidence.",
+   "Rate limits are not stated in the sources.",
+   "The Messages API v1 page failed to load."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

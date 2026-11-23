@@ -1,0 +1,254 @@
+{
+ "id": 28,
+ "name": "WhatsApp Business",
+ "category": "Communications and Messaging",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:18:18Z",
+ "duration_s": 45.3,
+ "cost_usd": 0.0738,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+   "title": "WhatsApp Business Platform | Meta for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.facebook.com",
+   "title": "Social technologies | Meta for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/authentication-international-rates",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/authentication-templates/authentication-templates",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/direct-send/send-utility-and-authentication-messages",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developers.facebook.com/support/",
+   "title": "Developer Support - Meta for Developers",
+   "rendered": true
+  },
+  {
+   "id": "S8",
+   "url": "https://developers.facebook.com/devpolicy/",
+   "title": "Developer Policies - Meta for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developers.facebook.com/tools/",
+   "title": "Developer Tools - Meta for Developers",
+   "rendered": true
+  },
+  {
+   "id": "S10",
+   "url": "https://developers.facebook.com/documentation/business-messaging/messenger-platform/overview",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Eyalm321/zernio-mcp",
+   "title": "Eyalm321/zernio-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/wassengerhq/whatsapp-mcp",
+   "title": "wassengerhq/whatsapp-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/victorgalletti/zappion",
+   "title": "victorgalletti/zappion",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/tkhattar14/whatsapp-business-mcp",
+   "title": "tkhattar14/whatsapp-business-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/spirit122/whatsapp-mcp-server",
+   "title": "spirit122/whatsapp-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/W3JDev/whatsapp-bridge-mcp",
+   "title": "W3JDev/whatsapp-bridge-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/universal-mcp/whatsapp-business",
+   "title": "universal-mcp/whatsapp-business",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/NicolaiSchmid/pons",
+   "title": "NicolaiSchmid/pons",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+   "developer_portal": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+   "description": "WhatsApp Business Platform: Meta's enterprise-grade APIs (Cloud API, Marketing Messages API, Business Management API) for messaging and calling.",
+   "identity_confirmed": "yes",
+   "identity_notes": "S1 describes the WhatsApp Business Platform directly."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "Sources mention system user access tokens and business tokens; details of OAuth flows not established in the provided sources."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Some features, e.g. Direct Send authentication category, are access-restricted (contact partner or client manager). Messages billed per delivered message."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "messages",
+    "templates",
+    "business accounts",
+    "phone numbers",
+    "webhooks",
+    "calling",
+    "groups",
+    "analytics"
+   ],
+   "read_ops": [
+    "template previews",
+    "analytics",
+    "eligibility info"
+   ],
+   "write_ops": [
+    "send messages",
+    "manage templates",
+    "calling"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "Per-message pricing for delivered business-initiated messages; some features restricted."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developers.facebook.com",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/wassengerhq/whatsapp-mcp",
+    "https://github.com/tkhattar14/whatsapp-business-mcp",
+    "https://github.com/spirit122/whatsapp-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT",
+    "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+    "quote": "\"Authorization\": \"Bearer <ACCESS_TOKEN>\",",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "unknown",
+    "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/direct-send/send-utility-and-authentication-messages",
+    "quote": "**Access restricted** — contact your partner or client manager to get access.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+    "quote": "url = \"https://graph.facebook.com/<API_VERSION>/<WHATSAPP_BUSINESS_PHONE_NUMBER_ID>/messages\"",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+    "quote": "Send and receive WhatsApp messages, make WhatsApp calls, and more from your business phone number.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developers.facebook.com",
+    "quote": "Announcing WhatsApp Business Tools MCP: Set up and manage WhatsApp business from your AI agent",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "What free test credentials/sandbox are available (test phone number, test WABA)?",
+   "Is app review or business verification required for production use?",
+   "Official URL for the WhatsApp Business Tools MCP server.",
+   "Rate limits for the Cloud API."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "high",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

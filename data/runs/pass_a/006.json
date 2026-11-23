@@ -1,0 +1,284 @@
+{
+ "id": 6,
+ "name": "Podio",
+ "category": "CRM and Sales",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:16:02Z",
+ "duration_s": 48.6,
+ "cost_usd": 0.0772,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://podio.com",
+   "title": "Work Management Platform | Streamline Collaboration & Workflows | Podio",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.podio.com",
+   "title": "Developers - Podio API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://podio.com/login?provider=podio&return_to=https%3A%2F%2Fpodio.com%2Fdeveloper",
+   "title": "Login | Podio",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://podio.com/login?provider=podio&return_to=https%3A%2F%2Fpodio.com%2Fdocs",
+   "title": "Login | Podio",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://podio.com/login?provider=podio&return_to=https%3A%2F%2Fpodio.com%2Fdevelopers",
+   "title": "Login | Podio",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://podio.com/login?provider=podio&return_to=https%3A%2F%2Fpodio.com%2Fdocs%2Fapi",
+   "title": "Login | Podio",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://podio.com/login?provider=podio&return_to=https%3A%2F%2Fpodio.com%2Fapi",
+   "title": "Login | Podio",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developers.podio.com/api-key",
+   "title": "Get API key - Podio API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developers.podio.com/authentication",
+   "title": "Authentication - Podio API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developers.podio.com/doc",
+   "title": "Podio API Documentation - Podio API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://developers.podio.com/index/limits",
+   "title": "Concepts and conventions: Rate limits - Podio API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://developers.podio.com/",
+   "title": "Developers - Podio API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S13",
+   "url": "https://developers.podio.com/index/api",
+   "title": "Concepts and conventions: Conventions and structure of the API - Podio API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S14",
+   "url": "https://developers.podio.com/examples/webhooks",
+   "title": "Tutorials: Working with webhooks - Podio API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Podiom/Podiom",
+   "title": "Podiom/Podiom",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/stoskov/podio-mcp",
+   "title": "stoskov/podio-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jscord30/MCPServer-Podio",
+   "title": "jscord30/MCPServer-Podio",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/phases/mcp-server-for-podio",
+   "title": "phases/mcp-server-for-podio",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Vuxified/podio-mcp-server",
+   "title": "Vuxified/podio-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://podio.com",
+   "developer_portal": "https://developers.podio.com",
+   "description": "Podio (Progress Podio) is a no-code work management platform for building custom workspaces/apps (CRM, project tracking, approvals) with a REST API.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Progress Podio and its API docs at developers.podio.com."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Server-side flow, client-side flow, username & password flow, app authentication flow",
+   "token_refresh": "Access token valid 8 hours; refresh token 28 days; refresh via POST https://api.podio.com/oauth/token/v2 with grant_type=refresh_token.",
+   "scopes_notes": "Scopes & Permissions documented; register application to get Client ID and Client Secret."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Default rate limits apply; higher limits via paid API Add-on or contacting Podio."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Items",
+    "Applications",
+    "Tasks",
+    "Comments",
+    "Contacts",
+    "Files",
+    "Hooks",
+    "Spaces",
+    "Organizations",
+    "Status",
+    "Search",
+    "Conversations",
+    "Calendar",
+    "Flows",
+    "Forms"
+   ],
+   "read_ops": [
+    "Retrieve items",
+    "Search",
+    "Get calendar",
+    "List widgets"
+   ],
+   "write_ops": [
+    "Create/update/delete items",
+    "Create tasks",
+    "Register webhooks",
+    "Upload files"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "1,000 calls/hour general (Limit B); 250 calls/hour for resource-intensive operations (Limit A); per user per API key; 420 returned when exceeded.",
+   "limitations": "Webhooks: up to 10 per type; only ports 80/443; must verify URL."
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/stoskov/podio-mcp",
+    "https://github.com/jscord30/MCPServer-Podio",
+    "https://github.com/phases/mcp-server-for-podio",
+    "https://github.com/Vuxified/podio-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://developers.podio.com/authentication",
+    "quote": "The Podio API uses the OAuth2 protocol for authentication.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developers.podio.com/api-key",
+    "quote": "You just have to sign in or sign up with Podio, and go to the API key tab in your settings.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.podio.com/index/api",
+    "quote": "The API is available at https://api.podio.com . It is RESTful and uses json as the exchange format.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developers.podio.com/",
+    "quote": "The Podio API is a complete programmable interface to all Podio functionality.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "no",
+    "url": "https://github.com/stoskov/podio-mcp",
+    "quote": "stoskov/podio-mcp (owner stoskov, User, 1★)",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "1,000/hr general, 250/hr intensive",
+    "url": "https://developers.podio.com/index/limits",
+    "quote": "The general limit is 1,000 API calls per hour, but if the API call is deemed resource-intensive, a lower rate of 250 calls per hour is enforced.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://developers.podio.com/examples/webhooks",
+    "quote": "Webhooks allow a URL to be called when an item is created, updated or deleted in an app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Whether API access requires a paid Podio plan is not stated in the sources.",
+   "No official vendor MCP server was found; GitHub results are community/individual repos."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.857,
+ "flags": [],
+ "error": null
+}

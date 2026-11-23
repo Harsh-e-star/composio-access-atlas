@@ -1,0 +1,286 @@
+{
+ "id": 9,
+ "name": "Copper",
+ "category": "CRM and Sales",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:16:11Z",
+ "duration_s": 58.2,
+ "cost_usd": 0.0638,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.copper.com/",
+   "title": "CRM software company for service businesses | Copper CRM",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developer.copper.com",
+   "title": "Getting started - Copper Developer API",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developer.copper.com/introduction/oauth/quickstart.html",
+   "title": "Quickstart Guide - Copper Developer API",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developer.copper.com/introduction/authentication.html",
+   "title": "Overview - Copper Developer API",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developer.copper.com/introduction/oauth/index.html",
+   "title": "Overview - Copper Developer API",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developer.copper.com/introduction/oauth/flow.html",
+   "title": "Documentation - Copper Developer API",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.copper.com/index.html",
+   "title": "Getting started - Copper Developer API",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developer.copper.com/webhooks/overview.html",
+   "title": "Overview - Copper Developer API",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://www.copper.com/pricing",
+   "title": "Pricing | Copper CRM",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developer.copper.com/",
+   "title": "Getting started - Copper Developer API",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://developer.copper.com/introduction/requests.html",
+   "title": "Requests - Copper Developer API",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/claynicholson/copper-kicad-mcp",
+   "title": "claynicholson/copper-kicad-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Copperpour/Copperpour",
+   "title": "Copperpour/Copperpour",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/seunghyukchoe/copper-mcp",
+   "title": "seunghyukchoe/copper-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/noelschwarz/copper",
+   "title": "noelschwarz/copper",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Lotulune/Copperbench",
+   "title": "Lotulune/Copperbench",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/charlesmmorais/coppermind",
+   "title": "charlesmmorais/coppermind",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mutual-solutions/zap-mcp",
+   "title": "mutual-solutions/zap-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/dazanza/copper-mcp",
+   "title": "dazanza/copper-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.copper.com/",
+   "developer_portal": "https://developer.copper.com",
+   "description": "Copper is a CRM for relationship-focused service businesses, recommended for Google Workspace, with a REST Developer API.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Copper CRM (formerly ProsperWorks) at copper.com; developer docs at developer.copper.com."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Authorization Code Grant; app registration required (contact Copper) to get client_id/client_secret.",
+   "token_refresh": "Access tokens do not expire and do not need to be refreshed.",
+   "scopes_notes": "Only developer/v1/all scope supported (read and modify user records)."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "no",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "OAuth2 requires registering your application by contacting Copper; API keys are generated in System settings > API Keys and work without registration."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Lead",
+    "Person",
+    "Company",
+    "Opportunity",
+    "Project",
+    "Task",
+    "Activity",
+    "Account"
+   ],
+   "read_ops": [
+    "account details"
+   ],
+   "write_ops": [
+    "create/update/search via JSON body"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "180 requests per minute (rolling window); bulk APIs additionally 3 requests per second; webhooks: 100 subscriptions per account, 600 notifications/min.",
+   "limitations": "Webhook notifications are not retried. Only one OAuth scope."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/dazanza/copper-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key and OAuth2",
+    "url": "https://developer.copper.com/introduction/authentication.html",
+    "quote": "There are two ways to access the Copper Developer API: API keys and OAuth2.0 . API Keys are suitable for individual users, while OAuth2.0 is the preferred approach for partner integrations.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "trial_self_serve",
+    "url": "https://www.copper.com/",
+    "quote": "Every plan starts with a 14-day free trial, and no credit card is required.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developer.copper.com/",
+    "quote": "The Copper Developer API (\"Dev API\") provides a RESTful interface with JSON-formatted responses to access most Copper resources.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developer.copper.com/webhooks/overview.html",
+    "quote": "Lead yes yes yes \"lead\" Person yes yes yes \"person\" Company yes yes yes \"company\" Opportunity yes yes yes \"opportunity\" Project yes yes yes \"project\" Task yes yes yes \"task\"",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "unknown",
+    "url": "https://developer.copper.com/",
+    "quote": "The Copper Web API allows you to access and build your own applications that interact with Copper in more complex ways than the integrations we provide out of the box.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "180 requests/min",
+    "url": "https://developer.copper.com/introduction/requests.html",
+    "quote": "All API calls are limited to 180 requests per minute.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth",
+    "value": "registration required",
+    "url": "https://developer.copper.com/introduction/oauth/index.html",
+    "quote": "To register your application, contact us .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "no expiry",
+    "url": "https://developer.copper.com/introduction/oauth/flow.html",
+    "quote": "Currently, access tokens do not expire and do not need to be refreshed.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://developer.copper.com/webhooks/overview.html",
+    "quote": "Webhooks allow systems integrated with Copper to receive near real-time notification of certain events so that data updates and workflows can be triggered.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is an API key available during the free trial or only on paid plans?",
+   "Is there an official Copper MCP server? Only a community repo (dazanza/copper-mcp) was found.",
+   "Are official SDKs available?"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

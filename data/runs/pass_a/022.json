@@ -1,0 +1,263 @@
+{
+ "id": 22,
+ "name": "Twilio",
+ "category": "Communications and Messaging",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:17:33Z",
+ "duration_s": 48.0,
+ "cost_usd": 0.088,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.twilio.com/en-us",
+   "title": "Conversational AI and APIs for SMS, Email, Voice | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.twilio.com/series/twilio-developers-hub/landing_page",
+   "title": "Twilio Hub",
+   "rendered": true
+  },
+  {
+   "id": "S3",
+   "url": "https://www.twilio.com/docs",
+   "title": "Docs: API Reference, Tutorials, and Integration | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://www.twilio.com/en-us/developers",
+   "title": "Developer Hub | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://www.twilio.com/en-us/products#all-products",
+   "title": "Product, services, features | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://www.twilio.com/en-us/user-authentication-identity/pricing/lookup",
+   "title": "Lookup API Pricing | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://www.twilio.com/en-us/user-authentication-identity",
+   "title": "User Authentication & Identity | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://www.twilio.com/en-us/user-authentication-identity/verify",
+   "title": "Verify API | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://www.twilio.com/en-us/user-authentication-identity/lookup",
+   "title": "Lookup API | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developers.twilio.com/Twilio-Developers/twilio-forge-access-granted-apj",
+   "title": "Twilio Developers",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/getting-started-smtp",
+   "title": "How to send an Email with SMTP | SendGrid Docs | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sosoj92/jarvis-assistant-vocal",
+   "title": "sosoj92/jarvis-assistant-vocal",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/XiyaoWang0519/agent-call",
+   "title": "XiyaoWang0519/agent-call",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/lgesuellip/langgraph-whatsapp-agent",
+   "title": "lgesuellip/langgraph-whatsapp-agent",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mr-tbot/mesh-api",
+   "title": "mr-tbot/mesh-api",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/twilio-labs/mcp",
+   "title": "twilio-labs/mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/AgentLineHQ/AgentLine",
+   "title": "AgentLineHQ/AgentLine",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Garoth/sendgrid-mcp",
+   "title": "Garoth/sendgrid-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/YiyangLi/sms-mcp-server",
+   "title": "YiyangLi/sms-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.twilio.com",
+   "developer_portal": "https://www.twilio.com/docs",
+   "description": "Twilio is a customer engagement platform offering APIs for SMS, voice, email (SendGrid), WhatsApp, verification, lookup, and customer data.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources S1, S3, S5 describe Twilio platform."
+  },
+  "auth": {
+   "methods": [
+    "Basic",
+    "API key"
+   ],
+   "primary": "Basic",
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "SendGrid uses API keys with permissions such as Mail Send."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Messages",
+    "Voice",
+    "Verify",
+    "Lookup",
+    "Phone Numbers",
+    "SendGrid Email"
+   ],
+   "read_ops": [
+    "fetch phone number lookup"
+   ],
+   "write_ops": [
+    "create message",
+    "create verification"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/twilio-labs/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/YiyangLi/sms-mcp-server",
+    "https://github.com/XiyaoWang0519/agent-call"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Basic",
+    "url": "https://www.twilio.com/en-us/user-authentication-identity/lookup",
+    "quote": "curl -X GET \"https://lookups.twilio.com/v2/PhoneNumbers/%2B14159929960?Fields=line_type_intelligence\" \\ -u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "API key (SendGrid)",
+    "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/getting-started-smtp",
+    "quote": "Twilio SendGrid authenticates using an API key",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://www.twilio.com/en-us/user-authentication-identity/pricing/lookup",
+    "quote": "Sign up for a free Twilio account to build with all features and no commitments.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST, CLI/library",
+    "url": "https://www.twilio.com/en-us/",
+    "quote": "Sign up for a free Twilio account and grab one of our official server-side SDKs",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://www.twilio.com/en-us/products#all-products",
+    "quote": "Send and receive text messages at scale with multichannel APIs for SMS, RCS, WhatsApp, MMS, and more.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://github.com/twilio-labs/mcp",
+    "quote": "Monorepo providing 1) OpenAPI to MCP Tool generator 2) Exposing all of Twilio's API as MCP Tools",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "twilio-labs is a Twilio org but labs projects may be unsupported/experimental.",
+   "OAuth2 and API key (Twilio API keys) not confirmed in sources for core API.",
+   "Rate limits and webhooks not in sources."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

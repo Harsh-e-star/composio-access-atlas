@@ -1,0 +1,232 @@
+{
+ "id": 19,
+ "name": "Gorgias",
+ "category": "Support and Helpdesk",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:18:09Z",
+ "duration_s": 95.4,
+ "cost_usd": 0.0386,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.gorgias.com/",
+   "title": "The Conversational AI platform for Ecommerce | Gorgias",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.gorgias.com",
+   "title": "gorgias-developers",
+   "rendered": true
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.gorgias.com/en-US",
+   "title": "Gorgias Help Center",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developers.gorgias.com/reference/introduction",
+   "title": "Introduction",
+   "rendered": true
+  },
+  {
+   "id": "S5",
+   "url": "https://developers.gorgias.com/reference/introduction?utm_source=help_center&utm_medium=menu&utm_campaign=footer",
+   "title": "Introduction",
+   "rendered": true
+  },
+  {
+   "id": "S6",
+   "url": "https://developers.gorgias.com/docs/private-vs-public-app",
+   "title": "Private vs. Public App",
+   "rendered": true
+  },
+  {
+   "id": "S7",
+   "url": "https://www.gorgias.com/pricing",
+   "title": "Gorgias Pricing - AI-Powered Ecommerce CX Platform Plans",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://www.gorgias.com/pricing?ref=home&ref-position=other",
+   "title": "Gorgias Pricing - AI-Powered Ecommerce CX Platform Plans",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mattcoatsworth/Gorgias-MCP-Server",
+   "title": "mattcoatsworth/Gorgias-MCP-Server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/benpalmer1/Gorgias-MCP-Server",
+   "title": "benpalmer1/Gorgias-MCP-Server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/gorgias/mcp-cookbook",
+   "title": "gorgias/mcp-cookbook",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Elie-Elia/gorgias-mcp",
+   "title": "Elie-Elia/gorgias-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/NoBanks/gorgias-mcp",
+   "title": "NoBanks/gorgias-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jannikco/gorgias-mcp",
+   "title": "jannikco/gorgias-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ariadng/gorgias-mcp",
+   "title": "ariadng/gorgias-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/primrose-mcp/primrose-mcp-gorgias",
+   "title": "primrose-mcp/primrose-mcp-gorgias",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.gorgias.com/",
+   "developer_portal": "https://developers.gorgias.com",
+   "description": "Gorgias is a conversational AI and helpdesk platform for ecommerce brands, with a unified inbox and native Shopify integration.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Gorgias helpdesk and developer docs."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Public apps use OAuth2; registration on Developer portal required.",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Public apps require Developer Portal signup and review by the Gorgias team before App Store publication. Private apps need no approval."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "Undocumented resources/operations should not be used; reserved for internal use."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/mattcoatsworth/Gorgias-MCP-Server",
+    "https://github.com/benpalmer1/Gorgias-MCP-Server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Private apps use Access Tokens; public apps use OAuth2",
+    "url": "https://developers.gorgias.com/docs/private-vs-public-app",
+    "quote": "Public app authentication can be done only via OAuth2 for which you will need to register on our Developer portal .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Private apps use access tokens",
+    "url": "https://developers.gorgias.com/docs/private-vs-public-app",
+    "quote": "For the authentication method, you can use Access Tokens .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "unknown; private apps need no special process but account plan requirements not established",
+    "url": "https://developers.gorgias.com/docs/private-vs-public-app",
+    "quote": "You don't need to follow any special process to create a private app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.gorgias.com/reference/introduction",
+    "quote": "The Gorgias API is structured with REST in mind.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Unknown; the sources don't list resources",
+    "url": "https://developers.gorgias.com/reference/introduction",
+    "quote": "On this page, you'll find the complete REST API reference, examples, definitions of objects, and guides.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "unknown; gorgias/mcp-cookbook is a lead for a Gorgias MCP but the sources don't establish an official server",
+    "url": "https://github.com/gorgias/mcp-cookbook",
+    "quote": "Ready-to-fork recipes for the Gorgias MCP — automate your helpdesk and AI Agent from Claude, ChatGPT, or Cursor.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is there an official Gorgias MCP server? The gorgias/mcp-cookbook repo references 'the Gorgias MCP', but the server itself wasn't confirmed.",
+   "Do API/access tokens require a paid plan or is there a free trial?",
+   "Which resources, rate limits, and webhooks does the API support?"
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "unknown",
+  "production_readiness": "review_required",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

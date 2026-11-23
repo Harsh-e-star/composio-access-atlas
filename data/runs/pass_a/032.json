@@ -1,0 +1,236 @@
+{
+ "id": 32,
+ "name": "Meta Ads",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:18:40Z",
+ "duration_s": 39.7,
+ "cost_usd": 0.0675,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api",
+   "title": "Marketing API | Meta | Meta for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.facebook.com",
+   "title": "Social technologies | Meta for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/collaborative-ads/managed-partner-ads/api-guide/prerequisites/generate-access-token-system-user",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authentication",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/hotel-ads/dynamic-pricing",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developers.facebook.com/tools/",
+   "title": "Developer Tools - Meta for Developers",
+   "rendered": true
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/irinabuht12-oss/marketing-skills",
+   "title": "irinabuht12-oss/marketing-skills",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp",
+   "title": "irinabuht12-oss/google-ads-meta-ads-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/pipeboard-co/meta-ads-mcp",
+   "title": "pipeboard-co/meta-ads-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mathiaschu/meta-ads-analyzer",
+   "title": "mathiaschu/meta-ads-analyzer",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/amekala/ads-mcp",
+   "title": "amekala/ads-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mikusnuz/meta-ads-mcp",
+   "title": "mikusnuz/meta-ads-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jiangylin5-hue/meta-ads-agent",
+   "title": "jiangylin5-hue/meta-ads-agent",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/EfrainTorres/armavita-meta-ads-mcp",
+   "title": "EfrainTorres/armavita-meta-ads-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://developers.facebook.com",
+   "developer_portal": "https://developers.facebook.com/documentation/ads-commerce/marketing-api",
+   "description": "Meta Marketing API: a collection of Graph API endpoints for creating and managing ads across Facebook, Instagram, Messenger and WhatsApp.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Meta Ads is accessed via the Meta Marketing API."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Server-side and client-side OAuth flows via facebook.com dialog/oauth; user tokens via Graph API Explorer; system user tokens for server-to-server.",
+   "token_refresh": "Short-lived user tokens (1-2 hours) can be extended to long-lived tokens (about 60 days) via the Access Token Debugger or the token extension endpoint; system user tokens can be long-lived.",
+   "scopes_notes": "ads_read, ads_management, business_management, catalog_management permissions."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Limited access tier is the default and is heavily rate-limited, for development only. Full access requires App Review and 500 successful API calls in 15 days with an error rate under 15%. Calls on any access level hit production data."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "campaigns",
+    "ad sets",
+    "ads",
+    "ad creatives",
+    "audiences",
+    "insights",
+    "catalogs",
+    "system users"
+   ],
+   "read_ops": [
+    "ad insights",
+    "read campaigns/ad sets/ads"
+   ],
+   "write_ops": [
+    "create campaigns, ad sets, creatives",
+    "modify, pause and delete campaigns",
+    "batch upload catalog data"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "Limited access tier is heavily rate-limited per ad account; the access tier controls rate limits.",
+   "limitations": "Pages cannot be created through the API. Some calls are unavailable at standard access."
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/pipeboard-co/meta-ads-mcp",
+    "https://github.com/mikusnuz/meta-ads-mcp",
+    "https://github.com/EfrainTorres/armavita-meta-ads-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2, Bearer/PAT",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authentication",
+    "quote": "Every Marketing API call requires an access token as a parameter.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+    "quote": "Automatically granted when you add the Marketing API product to your app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api",
+    "quote": "The Marketing API is a collection of Graph API endpoints and other features that can be used to help you advertise across Meta technologies.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api",
+    "quote": "Learn key operations you can perform using the Marketing API, including how to modify, pause and delete campaigns.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "no",
+    "url": "https://developers.facebook.com/",
+    "quote": "Announcing WhatsApp Business Tools MCP: Set up and manage WhatsApp business from your AI agent",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "No official Meta Ads MCP server found in the sources; the only Meta MCP mentioned is for WhatsApp Business.",
+   "Webhook support for the Marketing API is not established in the sources.",
+   "Specific rate-limit numbers are not given in the sources."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "review_required",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

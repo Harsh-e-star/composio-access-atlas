@@ -1,0 +1,274 @@
+{
+ "id": 13,
+ "name": "Freshdesk",
+ "category": "Support and Helpdesk",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:16:37Z",
+ "duration_s": 43.6,
+ "cost_usd": 0.0671,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.freshworks.com/freshdesk/",
+   "title": "AI-Powered Customer Service Software | Freshdesk | Freshworks",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.freshdesk.com",
+   "title": "Freshdesk Developers",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developer.freshdesk.com",
+   "title": "Freshdesk Developers",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://www.freshworks.com/freshdesk/omni/mcp/",
+   "title": "Integrate AI & Automate Support with Freshdesk MCP",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developers.freshdesk.com/api/",
+   "title": "Freshdesk",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developers.freshworks.com/docs/app-sdk/v2.3/freshdesk/freshworks-app-ecosystem/",
+   "title": "Freshworks Developer Docs | Freshworks app ecosystem",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.freshdesk.com/api/",
+   "title": "Freshdesk",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://www.freshworks.com/freshdesk/pricing/",
+   "title": "Freshdesk Customer Support Software Pricing & Plans | Freshdesk",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developers.freshworks.com/developer/",
+   "title": "Freshworks Developer Platform | Login",
+   "rendered": true
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/effytech/freshdesk_mcp",
+   "title": "effytech/freshdesk_mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Enreign/freshdeck-mcp",
+   "title": "Enreign/freshdeck-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/hashcott/freshdesk-mcp",
+   "title": "hashcott/freshdesk-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/BrightSec/freshdesk_mcp",
+   "title": "BrightSec/freshdesk_mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/petrolivka/freshdesk-mcp",
+   "title": "petrolivka/freshdesk-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/nikhilchintawar/freshdesk-mcp",
+   "title": "nikhilchintawar/freshdesk-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/macwilling/mcp-freshdesk",
+   "title": "macwilling/mcp-freshdesk",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/KushKK29/FreshDesk_MCP",
+   "title": "KushKK29/FreshDesk_MCP",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.freshworks.com/freshdesk/",
+   "developer_portal": "https://developers.freshdesk.com",
+   "description": "Freshdesk is Freshworks' AI-powered customer service/helpdesk software with ticketing, shared inbox, knowledge base and a REST API v2.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Freshdesk by Freshworks."
+  },
+  "auth": {
+   "methods": [
+    "API key"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "API key is the user's personal key; agents can also have API keys via service accounts."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "API rate limits depend on plan (Blossom/Garden 3000/hr, Estate/Forest 5000/hr). 14-day trial of Enterprise plan; the account is suspended if not continued with a paid plan."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "tickets",
+    "ticket fields",
+    "agents",
+    "service accounts",
+    "API keys",
+    "skills",
+    "roles",
+    "groups"
+   ],
+   "read_ops": [
+    "List all tickets",
+    "View a ticket",
+    "Filter tickets",
+    "List agents",
+    "List groups",
+    "List roles"
+   ],
+   "write_ops": [
+    "Create a ticket",
+    "Update a ticket",
+    "Bulk update tickets",
+    "Merge tickets",
+    "Forward a ticket",
+    "Delete a ticket",
+    "Create ticket field",
+    "Create group",
+    "Create skill"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "Plan-based: Blossom 3000/hr, Garden 3000/hr, Estate 5000/hr, Forest 5000/hr; per-minute limits and per-endpoint sublimits also apply.",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://www.freshworks.com/freshdesk/omni/mcp/",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/effytech/freshdesk_mcp",
+    "https://github.com/Enreign/freshdeck-mcp",
+    "https://github.com/hashcott/freshdesk-mcp",
+    "https://github.com/BrightSec/freshdesk_mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://developers.freshdesk.com/api/",
+    "quote": "You can use your personal API key to authenticate the request. If you use the API key, there is no need for a password.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developers.freshdesk.com",
+    "quote": "Don't have a Freshdesk account? Signup for free",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial_available",
+    "value": "yes",
+    "url": "https://www.freshworks.com/freshdesk/pricing/",
+    "quote": "When you sign up, you instantly get access to our Enterprise plan for 14 days.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.freshdesk.com/api/",
+    "quote": "Create a Ticket /api/v2/tickets Create an Outbound Email /api/v2/tickets/outbound_email View a Ticket /api/v2/tickets/[id]",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developers.freshdesk.com/api/",
+    "quote": "Update Multiple Tickets /api/v2/tickets/bulk_update Forward a ticket /api/v2/tickets/[id]/forward Ticket Merge API /api/v2/tickets/merge",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Plan-based hourly limits",
+    "url": "https://developers.freshdesk.com/api/",
+    "quote": "Plan Rate Limit/hr Blossom 3000 Garden 3000 Estate 5000 Forest 5000",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://www.freshworks.com/freshdesk/omni/mcp/",
+    "quote": "Freshdesk MCP lets teams work with Freshdesk from the AI tools they already use and reach the business systems a resolution depends on",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is the API available on all plans including the trial? Sources don't state it explicitly.",
+   "Are OAuth2 or other auth methods supported? Not shown in the sources.",
+   "Are webhooks and official SDKs available for the REST API?",
+   "Is there a free plan, or only a 14-day trial?"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

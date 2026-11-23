@@ -1,0 +1,232 @@
+{
+ "id": 27,
+ "name": "Telegram",
+ "category": "Communications and Messaging",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:17:53Z",
+ "duration_s": 34.1,
+ "cost_usd": 0.0711,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://core.telegram.org",
+   "title": "Telegram APIs",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://core.telegram.org/developers",
+   "title": "Page not found",
+   "rendered": true
+  },
+  {
+   "id": "S3",
+   "url": "https://core.telegram.org/docs/api",
+   "title": "Page not found",
+   "rendered": true
+  },
+  {
+   "id": "S4",
+   "url": "https://core.telegram.org/api",
+   "title": "Telegram APIs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://core.telegram.org/api/srp",
+   "title": "Two-factor authentication",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://core.telegram.org/api/auth",
+   "title": "User Authorization",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://core.telegram.org/api/url-authorization",
+   "title": "Seamless Telegram Login",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://core.telegram.org/api/file-references",
+   "title": "File references",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sansan0/TrendRadar",
+   "title": "sansan0/TrendRadar",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sandbox-quantum/switch",
+   "title": "sandbox-quantum/switch",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/moltis-org/moltis",
+   "title": "moltis-org/moltis",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/chigwell/telegram-mcp",
+   "title": "chigwell/telegram-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/KroMiose/nekro-agent",
+   "title": "KroMiose/nekro-agent",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/KevRojo/Dulus",
+   "title": "KevRojo/Dulus",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Bayselonarrend/OpenIntegrations",
+   "title": "Bayselonarrend/OpenIntegrations",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/chaindead/telegram-mcp",
+   "title": "chaindead/telegram-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://core.telegram.org",
+   "developer_portal": "https://core.telegram.org",
+   "description": "Telegram offers Bot API, Telegram API/TDLib for custom clients, and Gateway API for sending verification codes.",
+   "identity_confirmed": "yes",
+   "identity_notes": "core.telegram.org describes Telegram's developer APIs."
+  },
+  "auth": {
+   "methods": [
+    "Other"
+   ],
+   "primary": "Other",
+   "oauth_flows": "Telegram Login supports OpenID Connect for websites to log in with Telegram.",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Telegram API requires registering your application to get an app identifier."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "messages",
+    "channels",
+    "supergroups",
+    "forums",
+    "bots",
+    "stickers",
+    "payments/Stars"
+   ],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Sources do not detail Bot API HTTP endpoints; the Telegram API is MTProto-based, used for building clients."
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/chigwell/telegram-mcp",
+    "https://github.com/chaindead/telegram-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://core.telegram.org/api",
+    "quote": "You are welcome to use both APIs free of charge.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Other",
+    "url": "https://core.telegram.org/api/auth",
+    "quote": "To log in as a bot , follow these instructions » .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST, CLI/library",
+    "url": "https://core.telegram.org/api",
+    "quote": "The library is open source and compatible with virtually any programming language .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://core.telegram.org/api",
+    "quote": "The Bot API allows you to easily create programs that use Telegram messages for an interface.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "no",
+    "url": "https://github.com/chigwell/telegram-mcp",
+    "quote": "Telegram MCP server powered by Telethon to let MCP clients read chats, manage groups, and send/modify messages, media, contacts, and settings.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Bot API token auth (BotFather) details not in sources.",
+   "Bot API HTTP endpoints and rate limits not in sources.",
+   "Whether an official Telegram MCP server exists is not established."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

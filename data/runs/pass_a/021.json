@@ -1,0 +1,294 @@
+{
+ "id": 21,
+ "name": "Slack",
+ "category": "Communications and Messaging",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:17:19Z",
+ "duration_s": 38.0,
+ "cost_usd": 0.082,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://slack.com/intl/en-in/",
+   "title": "Slack | AI work platform and productivity tools",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.slack.dev/",
+   "title": "Build an app with a coding agent | Slack Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.slack.dev/authentication/",
+   "title": "Authentication overview | Slack Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.slack.dev/authentication/installing-with-oauth/",
+   "title": "Installing via OAuth authorization code flow | Slack Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.slack.dev/authentication/tokens/",
+   "title": "Tokens | Slack Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.slack.dev/apis/web-api/rate-limits/",
+   "title": "Rate limits | Slack Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.slack.dev/ai/slack-mcp-server/",
+   "title": "Overview | Slack Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.slack.dev/ai/mcp-overview/",
+   "title": "MCP overview | Slack Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.slack.dev/ai/slack-mcp-server/connect-to-claude/",
+   "title": "Connect to Claude | Slack Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.slack.dev/ai/slack-mcp-server/connect-to-harnesses/",
+   "title": "Connect the Slack MCP server to agent harnesses | Slack Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://docs.slack.dev/ai/slackbot-mcp-client/",
+   "title": "Connecting an MCP server to the Slackbot MCP Client | Slack Developer Docs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sansan0/TrendRadar",
+   "title": "sansan0/TrendRadar",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/PostHog/posthog",
+   "title": "PostHog/posthog",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sandbox-quantum/switch",
+   "title": "sandbox-quantum/switch",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/pipeshub-ai/pipeshub-ai",
+   "title": "pipeshub-ai/pipeshub-ai",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/OpenCoworkAI/open-cowork",
+   "title": "OpenCoworkAI/open-cowork",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/agentes-chat/agentes-chat",
+   "title": "agentes-chat/agentes-chat",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/korotovsky/slack-mcp-server",
+   "title": "korotovsky/slack-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Anil-matcha/open-agent-connector",
+   "title": "Anil-matcha/open-agent-connector",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://slack.com/",
+   "developer_portal": "https://docs.slack.dev/",
+   "description": "Slack is an AI work platform for team messaging, with a developer platform (Web API, Events, Bolt SDKs) and an official hosted MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are official slack.com and docs.slack.dev pages."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT",
+    "Other"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "OAuth 2.0 v2 authorization code flow (oauth.v2.access); oauth.v2.user.access for user-token/MCP flows",
+   "token_refresh": "Optional token rotation (cannot be turned off once enabled); rotating app-level tokens expire after 12 hours with single-use refresh tokens.",
+   "scopes_notes": "Bot scopes and user scopes requested at install; scopes are additive and cannot be downgraded."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "yes",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "MCP use is limited to apps published in the Slack Marketplace and internal apps; unlisted apps are prohibited. Workspace admins may need to approve MCP integrations."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "WebSocket",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "messages",
+    "channels/conversations",
+    "users",
+    "canvases",
+    "files",
+    "lists",
+    "reactions"
+   ],
+   "read_ops": [
+    "search",
+    "retrieve messages",
+    "read canvases",
+    "read lists",
+    "list user channels"
+   ],
+   "write_ops": [
+    "send messages",
+    "manage canvases",
+    "upload files",
+    "create/update/delete lists and records"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Web API tiers per method per workspace per app: Tier 1 1+/min, Tier 2 20+/min, Tier 3 50+/min; HTTP 429 with Retry-After. Events API max 30,000 deliveries per workspace per app per 60 min.",
+   "limitations": "MCP server does not support SSE or Dynamic Client Registration."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.slack.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/korotovsky/slack-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://docs.slack.dev/authentication/installing-with-oauth/",
+    "quote": "Slack apps are installed with a v2 OAuth 2.0 flow.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT (bot/user tokens)",
+    "url": "https://docs.slack.dev/authentication/tokens/",
+    "quote": "Bot tokens ascribe to a granular permission model to request only the scopes you need.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.slack.dev/",
+    "quote": "No approval yet? Try it in a free Developer Program sandbox .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST, WebSocket, CLI/library",
+    "url": "https://docs.slack.dev/apis/web-api/rate-limits/",
+    "quote": "If you exceed a rate limit when using any of our HTTP-based APIs (including incoming webhooks), Slack will return a HTTP 429 Too Many Requests error",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.slack.dev/ai/slack-mcp-server/",
+    "quote": "The Slack MCP server provides tools for searching through Slack, retrieving and sending messages, managing canvases, managing users, uploading files, and working with lists.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.slack.dev/ai/slack-mcp-server/",
+    "quote": "All requests should be sent to: https://mcp.slack.com/mcp",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.slack.dev/ai/mcp-overview/",
+    "quote": "The Slack MCP Server lets AI apps search channels, send messages, manage canvases, and perform other Slack actions through any MCP-compatible client.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.admin_approval_required",
+    "value": "yes",
+    "url": "https://docs.slack.dev/",
+    "quote": "Remote MCP over HTTP with OAuth. Your workspace admin may need to approve it.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Marketplace/internal apps only for MCP",
+    "url": "https://docs.slack.dev/ai/slack-mcp-server/",
+    "quote": "Only apps published in the Slack Marketplace and internal apps can use MCP at this time; unlisted apps are prohibited from using MCP.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Whether a paid Slack plan is needed for full API features beyond the free Developer Program sandbox.",
+   "Marketplace app review requirements for public distribution are not detailed in sources."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST/WebSocket interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}
