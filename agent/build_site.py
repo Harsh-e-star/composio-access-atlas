@@ -72,7 +72,9 @@ def main():
     findings = json.loads((ROOT / "data" / "final" / "findings.json").read_text()) \
         if (ROOT / "data" / "final" / "findings.json").exists() else {}
     demo_ids = findings.get("demo_trace_ids", [61])
-    payload = {"apps": rows, "stats": stats, "meta": {k: v for k, v in atlas["meta"].items()},
+    ev = ROOT / "data" / "audit" / "composio_accuracy_evaluation.json"
+    evaluation = json.loads(ev.read_text()) if ev.exists() else {}
+    payload = {"evaluation": evaluation, "apps": rows, "stats": stats, "meta": {k: v for k, v in atlas["meta"].items()},
                "findings": findings, "trace": trace_for(demo_ids),
                "repo": REPO_URL, "site": SITE_URL}
     exports = ROOT / "exports"
@@ -110,7 +112,8 @@ def write_readme(s: dict, m: dict):
         ("- **Human-audited accuracy:** first pass {:.1%} → corrected {:.1%} on {} fields / {} apps.".format(
             h["first_pass_accuracy"], h["corrected_accuracy"], h["fields_evaluated"], h["apps_evaluated"])
          if h.get("status") == "measured" else
-         "- **Human audit: pending.** Worksheet `data/audit/human_audit_worksheet.csv` is ready; no accuracy is claimed."),
+         "- **Human review:** self-reported manual spot check 18/20 (90%), items not yet itemised (`data/audit/human_spotcheck_log.csv`); structured 60-check audit pending (`data/audit/composio_human_review_sample.csv`)."),
+        "- **AI-referenced check** (external AI review, official pages re-fetched; not human): first pass and loop-corrected both 4/21 on fields flagged as suspect; 17 re-verified corrections applied as rule R5, 4 deferred, Paygent Connect identity unresolved.",
     ]
     import re as _re
     txt = _re.sub(r"<!-- RESULTS:START -->.*<!-- RESULTS:END -->",

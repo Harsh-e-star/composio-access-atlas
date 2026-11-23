@@ -52,7 +52,7 @@ def test_kpis_match_dataset(page):
     assert kpis[3] == str(s["tiers"]["free_self_serve"] + s["tiers"]["trial_self_serve"])
     assert kpis[5] == str(len(s["mcp"]["official"]))
     if d["meta"]["human_accuracy"].get("status") != "measured":
-        assert kpis[6] == "Pending"
+        assert kpis[6] == "18/20"  # self-reported, labelled as such on the page
 
 
 def test_charts_render(page):

@@ -1,0 +1,238 @@
+{
+ "ai_referenced": {
+  "label": "AI-referenced (external AI review; official sources re-fetched by pipeline). NOT human ground truth.",
+  "sample": "Non-random: fields the reviewer flagged as suspect, plus 4 confirmations. Biased toward errors.",
+  "n_fields": 21,
+  "first_pass_correct": 4,
+  "corrected_correct": 4,
+  "first_pass_accuracy": 0.19,
+  "corrected_accuracy": 0.19,
+  "note": "Corrected = verification-loop output before applying these reference corrections (no leakage).",
+  "rows": [
+   {
+    "app": "Zoho CRM",
+    "field": "protocols",
+    "kind": "correction",
+    "ai_reference": "REST",
+    "first_pass": "",
+    "loop_corrected_pre_R5": "",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Zoho CRM",
+    "field": "api_breadth",
+    "kind": "correction",
+    "ai_reference": "Broad",
+    "first_pass": "Unknown",
+    "loop_corrected_pre_R5": "Unknown",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Zoho CRM",
+    "field": "official_mcp",
+    "kind": "correction",
+    "ai_reference": "yes",
+    "first_pass": "unknown",
+    "loop_corrected_pre_R5": "unknown",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Freshdesk",
+    "field": "auth_methods",
+    "kind": "correction",
+    "ai_reference": "API key; Basic",
+    "first_pass": "API key",
+    "loop_corrected_pre_R5": "API key",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Help Scout",
+    "field": "auth_methods",
+    "kind": "correction",
+    "ai_reference": "OAuth2",
+    "first_pass": "Other",
+    "loop_corrected_pre_R5": "Other",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Help Scout",
+    "field": "protocols",
+    "kind": "correction",
+    "ai_reference": "REST",
+    "first_pass": "REST; WebSocket",
+    "loop_corrected_pre_R5": "REST; WebSocket",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Gladly",
+    "field": "auth_methods",
+    "kind": "correction",
+    "ai_reference": "Basic",
+    "first_pass": "",
+    "loop_corrected_pre_R5": "",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Zoho Cliq",
+    "field": "auth_methods",
+    "kind": "correction",
+    "ai_reference": "OAuth2",
+    "first_pass": "",
+    "loop_corrected_pre_R5": "",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Zoho Cliq",
+    "field": "protocols",
+    "kind": "correction",
+    "ai_reference": "REST",
+    "first_pass": "",
+    "loop_corrected_pre_R5": "",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Zoho Cliq",
+    "field": "official_mcp",
+    "kind": "correction",
+    "ai_reference": "yes",
+    "first_pass": "unknown",
+    "loop_corrected_pre_R5": "unknown",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Google Ads",
+    "field": "protocols",
+    "kind": "correction",
+    "ai_reference": "REST; gRPC",
+    "first_pass": "REST; WebSocket; gRPC",
+    "loop_corrected_pre_R5": "REST; gRPC; WebSocket",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Mailchimp",
+    "field": "official_mcp",
+    "kind": "correction",
+    "ai_reference": "yes",
+    "first_pass": "no",
+    "loop_corrected_pre_R5": "no",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Airtable",
+    "field": "protocols",
+    "kind": "correction",
+    "ai_reference": "CLI/library; REST",
+    "first_pass": "REST; WebSocket",
+    "loop_corrected_pre_R5": "CLI/library; REST; WebSocket",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Jira",
+    "field": "auth_methods",
+    "kind": "correction",
+    "ai_reference": "Basic; Bearer/PAT; OAuth2",
+    "first_pass": "Bearer/PAT",
+    "loop_corrected_pre_R5": "Bearer/PAT",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Jira",
+    "field": "protocols",
+    "kind": "correction",
+    "ai_reference": "CLI/library; REST",
+    "first_pass": "CLI/library",
+    "loop_corrected_pre_R5": "CLI/library",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Jira",
+    "field": "api_breadth",
+    "kind": "correction",
+    "ai_reference": "Broad",
+    "first_pass": "Unknown",
+    "loop_corrected_pre_R5": "Unknown",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Monday.com",
+    "field": "protocols",
+    "kind": "correction",
+    "ai_reference": "GraphQL",
+    "first_pass": "GraphQL; REST",
+    "loop_corrected_pre_R5": "GraphQL; REST",
+    "first_pass_match": false,
+    "corrected_match": false
+   },
+   {
+    "app": "Attio",
+    "field": "auth_methods",
+    "kind": "confirmation",
+    "ai_reference": "API key; Basic; Bearer/PAT; OAuth2",
+    "first_pass": "API key; Basic; Bearer/PAT; OAuth2",
+    "loop_corrected_pre_R5": "API key; Basic; Bearer/PAT; OAuth2",
+    "first_pass_match": true,
+    "corrected_match": true
+   },
+   {
+    "app": "Gladly",
+    "field": "protocols",
+    "kind": "confirmation",
+    "ai_reference": "REST",
+    "first_pass": "REST",
+    "loop_corrected_pre_R5": "REST",
+    "first_pass_match": true,
+    "corrected_match": true
+   },
+   {
+    "app": "Mailchimp",
+    "field": "access_tier",
+    "kind": "confirmation",
+    "ai_reference": "free_self_serve",
+    "first_pass": "free_self_serve",
+    "loop_corrected_pre_R5": "free_self_serve",
+    "first_pass_match": true,
+    "corrected_match": true
+   },
+   {
+    "app": "WooCommerce",
+    "field": "official_mcp",
+    "kind": "confirmation",
+    "ai_reference": "yes",
+    "first_pass": "yes",
+    "loop_corrected_pre_R5": "yes",
+    "first_pass_match": true,
+    "corrected_match": true
+   }
+  ]
+ },
+ "human": {
+  "status": "Informal manual spot check reported by the project author; structured audit pending",
+  "reviewer": "Project author (self-reported)",
+  "items_checked": 20,
+  "correct": 18,
+  "incorrect": 2,
+  "label": "Self-reported manual spot-check accuracy: 90% (18/20)",
+  "caveat": "The 20 checked items and the 2 incorrect ones are not yet documented, so this result is not reproducible yet and is not attributed to specific apps or fields. Not a first-pass vs corrected comparison.",
+  "reported_at": "2026-11-23",
+  "documented_rows": {
+   "rows_documented": 0,
+   "correct": 0
+  }
+ }
+}

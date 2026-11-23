@@ -1266,8 +1266,10 @@
    "sandbox_available": "yes",
    "production_restrictions": "Free edition API limited to 5000 API calls/day; developer sandbox listed under Enterprise edition."
   },
-  "protocols": [],
-  "breadth": "Unknown",
+  "protocols": [
+   "REST"
+  ],
+  "breadth": "Broad",
   "resources": [],
   "read_ops": [],
   "write_ops": [],
@@ -1275,8 +1277,8 @@
   "sdks": "unknown",
   "rate_limits": "Free edition: 5000 API calls/day",
   "limitations": "Sources do not describe API protocols or endpoints; only that APIs exist in the free edition.",
-  "mcp": "unknown",
-  "mcp_url": null,
+  "mcp": "yes",
+  "mcp_url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
   "community_mcp": "yes",
   "community_urls": [
    "https://github.com/Officehub-Tech-LLC/MCP-Server",
@@ -1284,12 +1286,12 @@
    "https://github.com/LokiMCPUniverse/zoho-crm-mcp-server",
    "https://github.com/JunnServices/Zoho-CRM-MCP"
   ],
-  "verdict": "UNKNOWN",
-  "group": "RESEARCH FURTHER",
-  "blocker": "API protocol not established.",
-  "approach": "None until interface confirmed",
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "blocker": "None for testing",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
   "rationale": [
-   "API protocol not established."
+   "Self-serve test credentials (free self serve) and a documented REST interface."
   ],
   "risk": "standard",
   "prod": "open",
@@ -1372,11 +1374,33 @@
     "to": [
      "OAuth2"
     ]
+   },
+   {
+    "field": "protocols",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": [],
+    "to": "REST",
+    "source": "https://www.zoho.com/crm/developer/docs/api/v8/request-methods.html",
+    "note": ""
+   },
+   {
+    "field": "api_breadth",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": "Unknown",
+    "to": "Broad",
+    "source": "https://www.zoho.com/crm/developer/docs/api/v8/",
+    "note": "Breadth is a rubric judgment (many resources, read+write)"
+   },
+   {
+    "field": "official_mcp",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": "unknown",
+    "to": "yes",
+    "source": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+    "note": ""
    }
   ],
-  "flags": [
-   "unresolved"
-  ],
+  "flags": [],
   "researched_at": "2026-11-23T14:49:38Z",
   "cost": 0.1279,
   "open_q": [
@@ -2373,7 +2397,8 @@
   "identity": "yes",
   "identity_notes": "Sources describe Freshdesk by Freshworks.",
   "auth": [
-   "API key"
+   "API key",
+   "Basic"
   ],
   "primary": "API key",
   "oauth_flows": "",
@@ -2536,7 +2561,18 @@
    "official_mcp": "yes",
    "verdict": "READY"
   },
-  "corrections": [],
+  "corrections": [
+   {
+    "field": "auth_methods",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": [
+     "API key"
+    ],
+    "to": "API key; Basic",
+    "source": "https://developers.freshdesk.com/api/",
+    "note": ""
+   }
+  ],
   "flags": [
    "contradiction"
   ],
@@ -3311,7 +3347,7 @@
   "identity": "yes",
   "identity_notes": "Sources describe Help Scout support platform and its developer docs.",
   "auth": [
-   "Other"
+   "OAuth2"
   ],
   "primary": "Other",
   "oauth_flows": "",
@@ -3329,8 +3365,7 @@
    "production_restrictions": "Public integrations: developers should let Help Scout know when finished so they can promote it; brand guidelines apply. Webhooks & OAuth apps listed in pricing table."
   },
   "protocols": [
-   "REST",
-   "WebSocket"
+   "REST"
   ],
   "breadth": "Broad",
   "resources": [
@@ -3367,7 +3402,7 @@
   "verdict": "CONDITIONAL",
   "group": "BUILD WITH PREREQUISITES",
   "blocker": "Paid plan required",
-  "approach": "Custom toolkit over REST/WebSocket",
+  "approach": "Custom toolkit over REST",
   "rationale": [
    "API needs a paid plan."
   ],
@@ -3474,7 +3509,29 @@
    "official_mcp": "yes",
    "verdict": "CONDITIONAL"
   },
-  "corrections": [],
+  "corrections": [
+   {
+    "field": "auth_methods",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": [
+     "Other"
+    ],
+    "to": "OAuth2",
+    "source": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+    "note": ""
+   },
+   {
+    "field": "protocols",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": [
+     "REST",
+     "WebSocket"
+    ],
+    "to": "REST",
+    "source": "https://developer.helpscout.com/mailbox-api/",
+    "note": ""
+   }
+  ],
   "flags": [
    "contradiction"
   ],
@@ -3728,7 +3785,9 @@
   "portal": "https://developer.gladly.com",
   "identity": "yes",
   "identity_notes": "gladly.ai and developer.gladly.com describe the Gladly customer service/commerce platform.",
-  "auth": [],
+  "auth": [
+   "Basic"
+  ],
   "primary": null,
   "oauth_flows": "",
   "token_refresh": "",
@@ -3864,6 +3923,14 @@
     "rule": "R1 gap-fill: A unknown, B has verified evidence",
     "from": "unknown",
     "to": "partner_or_sales"
+   },
+   {
+    "field": "auth_methods",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": [],
+    "to": "Basic",
+    "source": "https://developer.gladly.com/rest/",
+    "note": ""
    }
   ],
   "flags": [],
@@ -4297,7 +4364,9 @@
   "portal": null,
   "identity": "yes",
   "identity_notes": "Sources describe Zoho Cliq product; no API docs in sources.",
-  "auth": [],
+  "auth": [
+   "OAuth2"
+  ],
   "primary": null,
   "oauth_flows": "",
   "token_refresh": "",
@@ -4313,7 +4382,9 @@
    "sandbox_available": "unknown",
    "production_restrictions": ""
   },
-  "protocols": [],
+  "protocols": [
+   "REST"
+  ],
   "breadth": "Unknown",
   "resources": [],
   "read_ops": [],
@@ -4322,18 +4393,18 @@
   "sdks": "unknown",
   "rate_limits": "",
   "limitations": "Provided sources do not document the API.",
-  "mcp": "unknown",
-  "mcp_url": null,
+  "mcp": "yes",
+  "mcp_url": "https://www.zoho.com/cliq/help/platform/configure-zoho-cliq-mcp.html",
   "community_mcp": "yes",
   "community_urls": [
    "https://github.com/The-Luminous-Group/cliq-api-integration"
   ],
   "verdict": "UNKNOWN",
   "group": "RESEARCH FURTHER",
-  "blocker": "API protocol not established.",
-  "approach": "None until interface confirmed",
+  "blocker": "Credential access path not established.",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
   "rationale": [
-   "API protocol not established."
+   "Credential access path not established."
   ],
   "risk": "standard",
   "prod": "unknown",
@@ -4384,7 +4455,32 @@
    "official_mcp": "yes",
    "verdict": "UNKNOWN"
   },
-  "corrections": [],
+  "corrections": [
+   {
+    "field": "auth_methods",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": [],
+    "to": "OAuth2",
+    "source": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+    "note": ""
+   },
+   {
+    "field": "protocols",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": [],
+    "to": "REST",
+    "source": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+    "note": ""
+   },
+   {
+    "field": "official_mcp",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": "unknown",
+    "to": "yes",
+    "source": "https://www.zoho.com/cliq/help/platform/configure-zoho-cliq-mcp.html",
+    "note": ""
+   }
+  ],
   "flags": [
    "unresolved"
   ],
@@ -5755,7 +5851,6 @@
   },
   "protocols": [
    "REST",
-   "WebSocket",
    "gRPC"
   ],
   "breadth": "Broad",
@@ -5793,7 +5888,7 @@
   "blocker": "None for testing",
   "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
   "rationale": [
-   "Self-serve test credentials (free self serve) and a documented REST/WebSocket/gRPC interface."
+   "Self-serve test credentials (free self serve) and a documented REST/gRPC interface."
   ],
   "risk": "elevated",
   "prod": "open",
@@ -5891,7 +5986,20 @@
    "official_mcp": "yes",
    "verdict": "UNKNOWN"
   },
-  "corrections": [],
+  "corrections": [
+   {
+    "field": "protocols",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": [
+     "REST",
+     "gRPC",
+     "WebSocket"
+    ],
+    "to": "REST; gRPC",
+    "source": "https://developers.google.com/google-ads/api/docs/concepts/call-structure",
+    "note": ""
+   }
+  ],
   "flags": [],
   "researched_at": "2026-11-23T14:18:29Z",
   "cost": 0.1393,
@@ -6620,8 +6728,8 @@
   "sdks": "yes",
   "rate_limits": "",
   "limitations": "Two separate APIs: Marketing API (api.mailchimp.com/3.0) and Transactional API (mandrillapp.com/api/1.x).",
-  "mcp": "no",
-  "mcp_url": null,
+  "mcp": "yes",
+  "mcp_url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server",
   "community_mcp": "yes",
   "community_urls": [
    "https://github.com/damientilman/mailchimp-mcp-server",
@@ -6632,7 +6740,7 @@
   "verdict": "READY",
   "group": "BUILD NOW",
   "blocker": "None for testing",
-  "approach": "Custom toolkit over REST",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
   "rationale": [
    "Self-serve test credentials (free self serve) and a documented REST interface."
   ],
@@ -6723,7 +6831,16 @@
    "official_mcp": "yes",
    "verdict": "READY"
   },
-  "corrections": [],
+  "corrections": [
+   {
+    "field": "official_mcp",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": "no",
+    "to": "yes",
+    "source": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server",
+    "note": "Official MCP is documentation-search only, not account-action tools"
+   }
+  ],
   "flags": [
    "contradiction"
   ],
@@ -14020,8 +14137,7 @@
   },
   "protocols": [
    "CLI/library",
-   "REST",
-   "WebSocket"
+   "REST"
   ],
   "breadth": "Unknown",
   "resources": [
@@ -14062,7 +14178,7 @@
   "blocker": "None for testing",
   "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
   "rationale": [
-   "Self-serve test credentials (free self serve) and a documented CLI/library/REST/WebSocket interface."
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
   ],
   "risk": "standard",
   "prod": "open",
@@ -14197,6 +14313,18 @@
     "rule": "R4 abstain: conflicting and neither verified",
     "from": "Broad",
     "to": "unknown"
+   },
+   {
+    "field": "protocols",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": [
+     "CLI/library",
+     "REST",
+     "WebSocket"
+    ],
+    "to": "CLI/library; REST",
+    "source": "https://airtable.com/developers/web/api/introduction",
+    "note": ""
    }
   ],
   "flags": [
@@ -14470,7 +14598,9 @@
   "identity": "yes",
   "identity_notes": "Sources are the Atlassian developer portal; Jira is mentioned only via Forge hello-world apps. Jira REST API docs were not in the sources.",
   "auth": [
-   "Bearer/PAT"
+   "Basic",
+   "Bearer/PAT",
+   "OAuth2"
   ],
   "primary": "Bearer/PAT",
   "oauth_flows": "",
@@ -14488,9 +14618,10 @@
    "production_restrictions": "Marketplace listing requires review; Forge apps have usage-based pricing above a free allowance."
   },
   "protocols": [
-   "CLI/library"
+   "CLI/library",
+   "REST"
   ],
-  "breadth": "Unknown",
+  "breadth": "Broad",
   "resources": [],
   "read_ops": [],
   "write_ops": [],
@@ -14510,7 +14641,7 @@
   "blocker": "None for testing",
   "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
   "rationale": [
-   "Self-serve test credentials (free self serve) and a documented CLI/library interface."
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
   ],
   "risk": "standard",
   "prod": "open",
@@ -14592,7 +14723,36 @@
    "official_mcp": "yes",
    "verdict": "READY"
   },
-  "corrections": [],
+  "corrections": [
+   {
+    "field": "auth_methods",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": [
+     "Bearer/PAT"
+    ],
+    "to": "Basic; Bearer/PAT; OAuth2",
+    "source": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+    "note": ""
+   },
+   {
+    "field": "protocols",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": [
+     "CLI/library"
+    ],
+    "to": "CLI/library; REST",
+    "source": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/",
+    "note": ""
+   },
+   {
+    "field": "api_breadth",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": "Unknown",
+    "to": "Broad",
+    "source": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/",
+    "note": ""
+   }
+  ],
   "flags": [
    "contradiction"
   ],
@@ -14837,8 +14997,7 @@
    "production_restrictions": "Enterprise-managed auth for MCP requires Enterprise plan; viewers, guests, deactivated users and student accounts have limited or no API access."
   },
   "protocols": [
-   "GraphQL",
-   "REST"
+   "GraphQL"
   ],
   "breadth": "Broad",
   "resources": [
@@ -14875,7 +15034,7 @@
   "blocker": "None for testing",
   "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
   "rationale": [
-   "Self-serve test credentials (free self serve) and a documented GraphQL/REST interface."
+   "Self-serve test credentials (free self serve) and a documented GraphQL interface."
   ],
   "risk": "standard",
   "prod": "open",
@@ -14974,7 +15133,19 @@
    "official_mcp": "yes",
    "verdict": "READY"
   },
-  "corrections": [],
+  "corrections": [
+   {
+    "field": "protocols",
+    "rule": "R5 external AI review, official source re-fetched",
+    "from": [
+     "GraphQL",
+     "REST"
+    ],
+    "to": "GraphQL",
+    "source": "https://developer.monday.com/api-reference/docs/introduction-to-graphql",
+    "note": ""
+   }
+  ],
   "flags": [],
   "researched_at": "2026-11-23T14:23:41Z",
   "cost": 0.1232,
@@ -16450,8 +16621,8 @@
   "desc": "Sources describe NMI's white-label payment gateway and developer APIs (the hint says Paygent is NMI-powered). Sources do not mention 'Paygent Connect' by name.",
   "site": "https://www.nmi.com",
   "portal": "https://docs.nmi.com",
-  "identity": "unknown",
-  "identity_notes": "Sources cover NMI (Network Merchants) docs only; none mention Paygent or Paygent Connect, so the link is based only on the assignment hint.",
+  "identity": "no",
+  "identity_notes": "PRODUCT_IDENTITY_UNRESOLVED: cited sources document NMI, not established as the assigned Paygent Connect product; verdict set to UNKNOWN",
   "auth": [
    "API key",
    "OAuth2"
@@ -16507,12 +16678,12 @@
   "mcp_url": "https://docs.nmi.com/mcp",
   "community_mcp": "unknown",
   "community_urls": [],
-  "verdict": "READY",
-  "group": "BUILD NOW",
-  "blocker": "None for testing",
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "blocker": "Product identity could not be confirmed.",
   "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
   "rationale": [
-   "Self-serve test credentials (free self serve) and a documented REST interface."
+   "Product identity could not be confirmed."
   ],
   "risk": "elevated",
   "prod": "open",
@@ -16612,8 +16783,16 @@
    "official_mcp": "unknown",
    "verdict": "UNKNOWN"
   },
-  "corrections": [],
+  "corrections": [
+   {
+    "field": "identity",
+    "rule": "R5 external AI review (identity)",
+    "from": "yes",
+    "to": "no"
+   }
+  ],
   "flags": [
+   "unresolved",
    "identity_unconfirmed"
   ],
   "researched_at": "2026-11-23T14:25:35Z",

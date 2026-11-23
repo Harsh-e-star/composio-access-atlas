@@ -268,6 +268,7 @@ def main():
         if ra is None and rb is None:
             continue
         x, changes = reconcile(ra, rb)
+        changes += apply_external_review(x, app["name"])
         asm = stages.assess(x, app["category"])
         agreement = {f: compare(value(ra, f), value(rb, f), f) for f in CORE_FIELDS}
         flags = []
@@ -323,6 +324,43 @@ def main():
     print(f"A-vs-B field agreement: {dict(agg)}")
     print(f"corrections applied: {Counter(c['rule'][:2] for c in corrections)}")
     print(f"audit sample ({len(ids)}): {ids}\nworksheet: {ws}\nhuman accuracy: {acc.get('status')}")
+
+
+EXT = ROOT / "data" / "audit" / "external_ai_review" / "correction_decisions.json"
+_SPLIT = lambda v: sorted(p.strip() for p in v.split(";") if p.strip())
+
+
+def apply_external_review(x: Extraction, name: str) -> list[dict]:
+    """R5: apply ACCEPTED corrections from the external AI review whose official source we
+    re-fetched. DEFERRED items are not applied. Pass A/B records are never modified."""
+    if not EXT.exists():
+        return []
+    out = []
+    for d in json.loads(EXT.read_text()):
+        if d["app"] != name or d["decision"] != "ACCEPTED":
+            continue
+        f, v = d["field"], d["proposed"]
+        if f == "*" and v == "PRODUCT_IDENTITY_UNRESOLVED":
+            x.identity.identity_confirmed = "no"
+            x.identity.identity_notes = "PRODUCT_IDENTITY_UNRESOLVED: " + d["reason"]
+            out.append({"field": "identity", "rule": "R5 external AI review (identity)", "from": "yes", "to": "no"})
+            continue
+        before = {"auth_methods": x.auth.methods, "protocols": x.api.protocols, "access_tier": x.access.tier,
+                  "api_breadth": x.api.breadth, "official_mcp": x.mcp.official}[f]
+        if f == "auth_methods":
+            x.auth.methods = _SPLIT(v)
+        elif f == "protocols":
+            x.api.protocols = _SPLIT(v)
+        elif f == "access_tier":
+            x.access.tier = v
+        elif f == "api_breadth":
+            x.api.breadth = v
+        elif f == "official_mcp":
+            x.mcp.official = v
+            x.mcp.official_url = x.mcp.official_url or d["source"]
+        out.append({"field": f, "rule": "R5 external AI review, official source re-fetched", "from": before, "to": v,
+                    "source": d["source"], "note": d.get("scope_note", "")})
+    return out
 
 
 def supported_x(x: Extraction, field: str) -> bool:

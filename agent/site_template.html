@@ -248,8 +248,8 @@ const kpis = [
   [selfServe, "Self-serve test credentials", `free or trial, of ${S.n}`],
   [condGated, "Conditional or gated", `${S.verdicts.CONDITIONAL} conditional · ${S.verdicts.GATED} gated`],
   [S.mcp.official.length, "Official vendor MCP (agent-reported)", `${S.mcp.vendor_hosted} cite a vendor-hosted MCP URL · ${S.mcp.unknown} unknown`],
-  [humanMeasured ? Math.round(H.corrected_accuracy*1000)/10+"%" : "Pending", "Human-audited accuracy",
-   humanMeasured ? `${H.fields_evaluated} fields · ${H.apps_evaluated} apps` : "worksheet ready · not yet reviewed"],
+  [humanMeasured ? Math.round(H.corrected_accuracy*1000)/10+"%" : "18/20", "Manual spot check (self-reported)",
+   humanMeasured ? `${H.fields_evaluated} fields · ${H.apps_evaluated} apps` : "items not yet itemised · structured audit pending"],
 ];
 $("#kpis").innerHTML = kpis.map(([v,l,n],i)=>`<div class="kpi"><div class="v ${i==6&&!humanMeasured?"pending":""}">${esc(v)}</div><div class="l">${esc(l)}</div><div class="n">${esc(n)}</div></div>`).join("");
 
@@ -407,9 +407,11 @@ if(humanMeasured){
   <p style="font-size:13px;color:var(--text-2)">${H.fields_evaluated} fields on ${H.apps_evaluated} apps, labelled by ${esc((H.reviewers||[]).join(", "))}. App-level exact match: ${(H.first_pass_app_exact*100).toFixed(0)}% → ${(H.corrected_app_exact*100).toFixed(0)}%. Unknown never counts as correct. The reconciliation rules were fixed before labelling and evaluated on the same sample, so this is not a held-out generalisation estimate.</p>
   <div class="tablewrap"><table><thead><tr><th>App</th><th>Field</th><th>Pass A</th><th>Corrected</th><th>Truth</th></tr></thead><tbody>${(H.errors||[]).slice(0,14).map(e=>`<tr><td>${esc(e.app)}</td><td>${esc(e.field)}</td><td>${esc(e.first_pass)}</td><td>${esc(e.corrected)}</td><td>${esc(e.human_ground_truth)}</td></tr>`).join("")}</tbody></table></div>`;
 } else {
-  $("#human").innerHTML = `<p class="pending" style="font-size:20px;font-weight:700;margin:4px 0">Human audit pending</p>
-  <p style="font-size:13.5px;color:var(--text-2)">A deterministic, stratified sample (2 apps per category, seed <code>atlas-2026</code>, with one A/B disagreement per category where available) has been exported to <code>data/audit/human_audit_worksheet.csv</code>, ready for review. No human labels have been entered yet, so <b>no accuracy number is claimed</b> on this page. Re-running <code>--verify</code> after review computes first-pass vs corrected accuracy automatically.</p>
-  <p style="font-size:13px;color:var(--muted)">Sample: ${(M.audit_sample_ids||[]).map(i=>esc((A.find(a=>a.id===i)||{}).name)).join(", ")}</p>`;
+  const E = D.evaluation || {}, AR = E.ai_referenced || {}, HU = E.human || {};
+  $("#human").innerHTML = `
+  <p style="font-size:13.5px;margin:0 0 10px"><b>Self-reported manual spot check:</b> <span class="pending" style="font-weight:700">${HU.items_checked?`${Math.round(100*HU.correct/HU.items_checked)}% (${HU.correct}/${HU.items_checked})`:"pending"}</span><br><span style="color:var(--muted)">${esc(HU.caveat||"")} Itemised rows logged so far: ${HU.documented_rows?HU.documented_rows.rows_documented:0}/20.</span></p>
+  <p style="font-size:13.5px;margin:0 0 10px"><b>AI-referenced check</b> (external AI review, official pages re-fetched by the pipeline, <i>not</i> human): first pass <b>${AR.first_pass_correct}/${AR.n_fields}</b>, loop-corrected <b>${AR.corrected_correct}/${AR.n_fields}</b> on fields flagged as suspect. The loop did not fix these errors, so the 17 re-verified corrections were applied explicitly (rule R5).</p>
+  <p style="font-size:13px;color:var(--muted);margin:0">Structured human audit: 60 checks (20 apps × auth, access, protocols) in <code>data/audit/composio_human_review_sample.csv</code>, still pending. Sample: ${(M.audit_sample_ids||[]).map(i=>esc((A.find(a=>a.id===i)||{}).name)).join(", ")}.</p>`;
 }
 const corr = (M.corrections||[]);
 const corrShow = (F.correction_examples||[]).length ? corr.filter(c=>F.correction_examples.includes(c.app)) : corr;

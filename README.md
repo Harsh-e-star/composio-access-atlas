@@ -56,6 +56,11 @@ uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requi
 | `data/audit/human_audit_worksheet.csv` | human audit sheet (fill `human_ground_truth`, `reviewer`, `review_date`, then `--verify`) |
 | `data/logs/trace.jsonl`, `data/logs/requests.jsonl` | per-stage trace and every HTTP request |
 | `exports/composio_100_apps.{csv,json}` | flat export |
+| `composio_100_apps_full_export.csv` | 600 field-level rows (first pass, second pass, final, evidence status) |
+| `data/audit/external_ai_review/` | external AI review inputs + our source re-check + correction decisions |
+| `data/audit/composio_verified_corrections.csv` | accepted / deferred corrections with sources |
+| `data/audit/composio_accuracy_evaluation.json` | AI-referenced and human results, labelled separately |
+| `data/audit/composio_human_review_sample.csv`, `human_spotcheck_log.csv` | 60-check human worksheet; log for the 20 self-reported checks |
 
 ## Verification and evaluation integrity
 
@@ -67,19 +72,20 @@ uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requi
 Unit tests passing ≠ research being correct.
 
 <!-- RESULTS:START -->
-## Results (generated 2026-11-23T14:57:00Z)
+## Results (generated 2026-11-23T16:54:32Z)
 
 - Apps researched by pass A: **96/100** succeeded; independent pass B: **100/100**.
 - Verdicts: READY 71, CONDITIONAL 11, GATED 5, NO_SUPPORTED_INTERFACE 0, UNKNOWN 13 (of 100).
 - Groups: RESEARCH FURTHER 13, BUILD NOW 71, BUILD WITH PREREQUISITES 11, OUTREACH REQUIRED 5.
 - Access tier: free_self_serve 65, trial_self_serve 10, paid_plan 6, admin_approval 6, partner_or_sales 6, unknown 7.
-- Auth methods (multi-label, of 100): OAuth2 75, API key 48, Bearer/PAT 51, Basic 16, Service account/JWT 7, Other 16; 75 apps support more than one method; 6 unknown.
-- Official vendor MCP: **79** apps; unknown 9; community MCP found for 85.
+- Auth methods (multi-label, of 100): OAuth2 78, API key 48, Bearer/PAT 51, Basic 19, Service account/JWT 7, Other 15; 77 apps support more than one method; 4 unknown.
+- Official vendor MCP: **82** apps; unknown 7; community MCP found for 85.
 - Evidence: 782/847 quotes re-verified on the live page; 434/500 core fields backed by a verified quote (86.8%).
 - A↔B field comparison: insufficient 210, partial 67, agree 278, contradiction 45.
-- Corrections applied by reconciliation: 69 field changes.
+- Corrections applied by reconciliation: 87 field changes.
 - Cost: $12.38 total LLM spend, $0.124 per app (both passes); 124.0 s per app (both passes, wall time).
-- **Human audit: pending.** Worksheet `data/audit/human_audit_worksheet.csv` is ready; no accuracy is claimed.
+- **Human review:** self-reported manual spot check 18/20 (90%), items not yet itemised (`data/audit/human_spotcheck_log.csv`); structured 60-check audit pending (`data/audit/composio_human_review_sample.csv`).
+- **AI-referenced check** (external AI review, official pages re-fetched; not human): first pass and loop-corrected both 4/21 on fields flagged as suspect; 17 re-verified corrections applied as rule R5, 4 deferred, Paygent Connect identity unresolved.
 <!-- RESULTS:END -->
 
 ## Known limitations

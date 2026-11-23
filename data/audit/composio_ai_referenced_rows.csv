@@ -1,0 +1,22 @@
+app,field,kind,ai_reference,first_pass,loop_corrected_pre_R5,first_pass_match,corrected_match
+Zoho CRM,protocols,correction,REST,,,False,False
+Zoho CRM,api_breadth,correction,Broad,Unknown,Unknown,False,False
+Zoho CRM,official_mcp,correction,yes,unknown,unknown,False,False
+Freshdesk,auth_methods,correction,API key; Basic,API key,API key,False,False
+Help Scout,auth_methods,correction,OAuth2,Other,Other,False,False
+Help Scout,protocols,correction,REST,REST; WebSocket,REST; WebSocket,False,False
+Gladly,auth_methods,correction,Basic,,,False,False
+Zoho Cliq,auth_methods,correction,OAuth2,,,False,False
+Zoho Cliq,protocols,correction,REST,,,False,False
+Zoho Cliq,official_mcp,correction,yes,unknown,unknown,False,False
+Google Ads,protocols,correction,REST; gRPC,REST; WebSocket; gRPC,REST; gRPC; WebSocket,False,False
+Mailchimp,official_mcp,correction,yes,no,no,False,False
+Airtable,protocols,correction,CLI/library; REST,REST; WebSocket,CLI/library; REST; WebSocket,False,False
+Jira,auth_methods,correction,Basic; Bearer/PAT; OAuth2,Bearer/PAT,Bearer/PAT,False,False
+Jira,protocols,correction,CLI/library; REST,CLI/library,CLI/library,False,False
+Jira,api_breadth,correction,Broad,Unknown,Unknown,False,False
+Monday.com,protocols,correction,GraphQL,GraphQL; REST,GraphQL; REST,False,False
+Attio,auth_methods,confirmation,API key; Basic; Bearer/PAT; OAuth2,API key; Basic; Bearer/PAT; OAuth2,API key; Basic; Bearer/PAT; OAuth2,True,True
+Gladly,protocols,confirmation,REST,REST,REST,True,True
+Mailchimp,access_tier,confirmation,free_self_serve,free_self_serve,free_self_serve,True,True
+WooCommerce,official_mcp,confirmation,yes,yes,yes,True,True

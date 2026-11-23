@@ -1,0 +1,10 @@
+{
+ "status": "Informal manual spot check reported by the project author; structured audit pending",
+ "reviewer": "Project author (self-reported)",
+ "items_checked": 20,
+ "correct": 18,
+ "incorrect": 2,
+ "label": "Self-reported manual spot-check accuracy: 90% (18/20)",
+ "caveat": "The 20 checked items and the 2 incorrect ones are not yet documented, so this result is not reproducible yet and is not attributed to specific apps or fields. Not a first-pass vs corrected comparison.",
+ "reported_at": "2026-11-23"
+}
