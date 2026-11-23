@@ -27,10 +27,11 @@ export const VerificationReport: React.FC<VerificationReportProps> = ({ data }) 
 
   const errorTaxonomyList = Object.entries(metrics.error_taxonomy || {});
 
-  const filteredEntries = audit_ledger.filter(entry => {
+  const filteredEntries = (audit_ledger || []).filter(entry => {
+    const hasDiscrepancy = Boolean(entry.error_type) || (entry.first_pass_misses && entry.first_pass_misses.length > 0) || (entry.discrepancies && entry.discrepancies.length > 0);
     if (selectedErrorFilter === 'All') return true;
-    if (selectedErrorFilter === 'Correct') return entry.discrepancies.length === 0;
-    if (selectedErrorFilter === 'Corrected') return entry.discrepancies.length > 0;
+    if (selectedErrorFilter === 'Correct') return !hasDiscrepancy;
+    if (selectedErrorFilter === 'Corrected') return hasDiscrepancy;
     return entry.error_type === selectedErrorFilter;
   });
 
@@ -211,7 +212,7 @@ export const VerificationReport: React.FC<VerificationReportProps> = ({ data }) 
               </thead>
               <tbody className="divide-y divide-slate-800/80">
                 {filteredEntries.map(entry => {
-                  const hasDiscrepancy = entry.discrepancies.length > 0;
+                  const hasDiscrepancy = Boolean(entry.error_type) || (entry.first_pass_misses && entry.first_pass_misses.length > 0) || (entry.discrepancies && entry.discrepancies.length > 0);
                   return (
                     <tr key={entry.app_id} className="hover:bg-slate-800/30 transition-colors">
                       <td className="py-3 px-4 font-mono text-slate-500 text-xs">

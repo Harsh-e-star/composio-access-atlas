@@ -89,8 +89,12 @@ export interface VerificationAuditEntry {
     access: string;
     surface: string;
   };
-  agreed_fields: string[];
-  discrepancies: string[];
+  first_pass_hits?: string[];
+  first_pass_misses?: string[];
+  second_pass_hits?: string[];
+  second_pass_misses?: string[];
+  discrepancies?: string[];
+  agreed_fields?: string[];
   error_type?: string | null;
   correction_applied?: string | null;
   evidence_urls: string[];

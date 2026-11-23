@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AnalyticsSummary, AccuracyMetrics } from '../types';
-import { Sparkles, Layers, ShieldCheck, CheckCircle2, AlertCircle, ArrowUpRight, Zap, Lock, Unlock } from 'lucide-react';
+import {
+  Sparkles,
+  Layers,
+  ShieldCheck,
+  CheckCircle2,
+  AlertCircle,
+  ArrowUpRight,
+  Zap,
+  Lock,
+  Unlock,
+  Clock,
+  ChevronDown,
+  ChevronUp,
+  Cpu,
+  Target
+} from 'lucide-react';
 
 interface HeroProps {
   analytics: AnalyticsSummary | null;
@@ -8,6 +23,8 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ analytics, metrics }) => {
+  const [showBrief, setShowBrief] = useState(true);
+
   return (
     <section id="overview" className="relative pt-12 pb-16 overflow-hidden">
       {/* Background ambient glows */}
@@ -15,13 +32,87 @@ export const Hero: React.FC<HeroProps> = ({ analytics, metrics }) => {
       <div className="absolute -top-12 -left-12 w-96 h-96 bg-indigo-500/10 blur-3xl pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Badge */}
-        <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-indigo-500/30 text-xs text-indigo-300 font-medium mb-6 shadow-sm shadow-indigo-500/10 backdrop-blur-md">
-          <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-          <span>Composio AI Product Ops Assignment Submission</span>
-          <span className="w-1 h-1 rounded-full bg-indigo-400" />
-          <span className="text-slate-400">100/100 Apps Researched & Verified</span>
+        {/* Badge & Quick Briefing Toggle */}
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
+          <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-indigo-500/30 text-xs text-indigo-300 font-medium shadow-sm shadow-indigo-500/10 backdrop-blur-md">
+            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+            <span>Composio AI Product Ops Submission</span>
+            <span className="w-1 h-1 rounded-full bg-indigo-400" />
+            <span className="text-slate-400">100/100 Apps Researched & Verified</span>
+          </div>
+
+          <button
+            onClick={() => setShowBrief(!showBrief)}
+            className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-indigo-600/15 hover:bg-indigo-600/25 border border-indigo-500/40 text-xs font-semibold text-indigo-300 transition-all cursor-pointer"
+          >
+            <Clock className="w-3.5 h-3.5 text-cyan-400" />
+            <span>2-Minute Executive Briefing</span>
+            {showBrief ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+          </button>
         </div>
+
+        {/* 2-Minute Executive Briefing Card (Collapsible) */}
+        {showBrief && (
+          <div className="mb-10 p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-indigo-950/40 via-slate-900/90 to-cyan-950/30 border border-indigo-500/30 shadow-2xl backdrop-blur-xl animate-fade-in relative overflow-hidden">
+            <div className="flex items-center justify-between pb-3 border-b border-indigo-500/20 mb-4">
+              <div className="flex items-center space-x-2">
+                <Target className="w-4 h-4 text-cyan-400" />
+                <h3 className="text-sm font-extrabold uppercase tracking-wider text-white">
+                  Executive Briefing for Reviewers (Read in 60-120 Seconds)
+                </h3>
+              </div>
+              <span className="text-[11px] font-mono text-cyan-300 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-500/30">
+                TL;DR Synthesis
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+              {/* Point 1: What was built */}
+              <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1.5">
+                <div className="flex items-center space-x-1.5 font-bold text-white">
+                  <Cpu className="w-3.5 h-3.5 text-indigo-400" />
+                  <span>1. The Multi-Agent Pipeline</span>
+                </div>
+                <p className="text-slate-300 leading-relaxed">
+                  Autonomous 6-agent system coordinating Discovery, Doc Parsing, Auth Analysis, Access Gating, Buildability Scoring, and Invariant Verification across all 100 applications.
+                </p>
+              </div>
+
+              {/* Point 2: Core Empirical Findings */}
+              <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1.5">
+                <div className="flex items-center space-x-1.5 font-bold text-white">
+                  <Layers className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>2. Findings & Gating</span>
+                </div>
+                <p className="text-slate-300 leading-relaxed">
+                  <strong className="text-emerald-400">77% Build Now:</strong> Free/trial self-serve greenfield. <strong className="text-amber-400">17% Prerequisites:</strong> Workspace admin approvals. <strong className="text-rose-400">6% Outreach:</strong> Hard-gated enterprise partner programs.
+                </p>
+              </div>
+
+              {/* Point 3: Verification & Accuracy */}
+              <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1.5">
+                <div className="flex items-center space-x-1.5 font-bold text-white">
+                  <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
+                  <span>3. Audited Accuracy</span>
+                </div>
+                <p className="text-slate-300 leading-relaxed">
+                  Measured on a 20-app stratified holdout (60 fields). First-pass heuristic baseline: <strong className="text-amber-400">43.3%</strong>. Doc-grounded multi-agent verified: <strong className="text-emerald-400">98.3%</strong>. 100% evidence citation coverage.
+                </p>
+              </div>
+
+              {/* Point 4: Composio Next Steps */}
+              <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1.5">
+                <div className="flex items-center space-x-1.5 font-bold text-white">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-indigo-300" />
+                  <span>4. Composio Roadmap</span>
+                </div>
+                <p className="text-slate-300 leading-relaxed">
+                  1. Batch-generate Developer Tools (10) & Scraping (9) toolkits. 2. Build in-app IT Admin OAuth consent flows for 17 apps. 3. Harden the 76 community MCP servers.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Headline */}
         <div className="max-w-4xl">

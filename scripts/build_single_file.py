@@ -25,7 +25,7 @@ def inline_bundle():
             css_content = css_path.read_text(encoding="utf-8")
             html_content = html_content.replace(css_match.group(0), f"<style>\n{css_content}\n</style>")
 
-    # Inline JS
+    # Inline JS and place at the end of body
     js_match = re.search(r'<script type="module"[^>]*src="(/assets/[^"]+)"[^>]*></script>', html_content)
     if js_match:
         js_path = DIST / js_match.group(1).lstrip("/")
@@ -33,7 +33,10 @@ def inline_bundle():
             js_content = js_path.read_text(encoding="utf-8")
             # Escape </script> if present inside js strings
             safe_js = js_content.replace("</script>", "<\\/script>")
-            html_content = html_content.replace(js_match.group(0), f'<script>\n{safe_js}\n</script>')
+            # Remove original script from head
+            html_content = html_content.replace(js_match.group(0), "")
+            # Append before </body>
+            html_content = html_content.replace("</body>", f"<script>\n{safe_js}\n</script>\n</body>")
 
     STANDALONE_DIR.mkdir(parents=True, exist_ok=True)
     STANDALONE_FILE.write_text(html_content, encoding="utf-8")

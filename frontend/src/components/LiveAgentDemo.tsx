@@ -119,6 +119,34 @@ export const LiveAgentDemo: React.FC<LiveAgentDemoProps> = ({ apps, initialSelec
           </p>
         </div>
 
+        {/* Quick Pick App Pills */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 mb-4 text-xs font-semibold scrollbar-none">
+          <span className="text-slate-500 text-[11px] uppercase tracking-wider shrink-0 mr-1">Quick Picks:</span>
+          {[
+            { id: 6, label: '#6 Firecrawl (Official MCP)' },
+            { id: 1, label: '#1 Salesforce (OAuth2)' },
+            { id: 21, label: '#21 Slack (Admin Appr)' },
+            { id: 41, label: '#41 Shopify (API Key)' },
+            { id: 73, label: '#73 Linear (GraphQL)' },
+            { id: 91, label: '#91 NotebookLM (Gated)' },
+            { id: 98, label: '#98 Mermaid CLI (Local Tool)' },
+            { id: 100, label: '#100 Grain (AI Video)' },
+          ].map(p => (
+            <button
+              key={p.id}
+              onClick={() => { setSelectedAppId(p.id); }}
+              disabled={isRunning}
+              className={`px-3 py-1.5 rounded-lg border whitespace-nowrap transition-all ${
+                selectedAppId === p.id
+                  ? 'bg-cyan-600 text-white border-cyan-400 shadow-sm shadow-cyan-600/30'
+                  : 'bg-slate-900 text-slate-300 hover:text-white border-slate-800'
+              }`}
+            >
+              {p.label}
+            </button>
+          ))}
+        </div>
+
         {/* Execution Trigger Bar */}
         <div className="glass-panel rounded-2xl p-4 sm:p-5 border border-slate-800 mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">

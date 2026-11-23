@@ -215,6 +215,101 @@ export const AppMatrix: React.FC<AppMatrixProps> = ({ apps, onSelectAppForDemo }
           </div>
         </div>
 
+        {/* Quick Preset Filter Chips */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 mb-4 text-xs font-semibold scrollbar-none">
+          <span className="text-slate-500 text-[11px] uppercase tracking-wider shrink-0 mr-1">Presets:</span>
+          <button
+            onClick={handleResetFilters}
+            className={`px-3 py-1.5 rounded-lg border whitespace-nowrap transition-all ${
+              !hasActiveFilters
+                ? 'bg-indigo-600 text-white border-indigo-500 shadow-sm shadow-indigo-600/30'
+                : 'bg-slate-900 text-slate-400 hover:text-white border-slate-800'
+            }`}
+          >
+            All 100 Apps
+          </button>
+          <button
+            onClick={() => { handleResetFilters(); setSelectedBuildability('Build Now'); }}
+            className={`px-3 py-1.5 rounded-lg border whitespace-nowrap transition-all ${
+              selectedBuildability === 'Build Now' && !searchQuery
+                ? 'bg-emerald-600 text-white border-emerald-500 shadow-sm shadow-emerald-600/30'
+                : 'bg-emerald-950/30 text-emerald-300 hover:text-white border-emerald-500/30'
+            }`}
+          >
+            ⚡ Quick Wins (77)
+          </button>
+          <button
+            onClick={() => { handleResetFilters(); setSelectedBuildability('Build With Prerequisites'); }}
+            className={`px-3 py-1.5 rounded-lg border whitespace-nowrap transition-all ${
+              selectedBuildability === 'Build With Prerequisites'
+                ? 'bg-amber-600 text-white border-amber-500 shadow-sm shadow-amber-600/30'
+                : 'bg-amber-950/30 text-amber-300 hover:text-white border-amber-500/30'
+            }`}
+          >
+            🏢 Admin Gated (17)
+          </button>
+          <button
+            onClick={() => { handleResetFilters(); setSelectedBuildability('Outreach Required'); }}
+            className={`px-3 py-1.5 rounded-lg border whitespace-nowrap transition-all ${
+              selectedBuildability === 'Outreach Required'
+                ? 'bg-rose-600 text-white border-rose-500 shadow-sm shadow-rose-600/30'
+                : 'bg-rose-950/30 text-rose-300 hover:text-white border-rose-500/30'
+            }`}
+          >
+            🤝 Partner Gated (6)
+          </button>
+          <button
+            onClick={() => { handleResetFilters(); setSelectedMcp('Official MCP (14)'); }}
+            className={`px-3 py-1.5 rounded-lg border whitespace-nowrap transition-all ${
+              selectedMcp.includes('Official')
+                ? 'bg-cyan-600 text-white border-cyan-500 shadow-sm shadow-cyan-600/30'
+                : 'bg-cyan-950/30 text-cyan-300 hover:text-white border-cyan-500/30'
+            }`}
+          >
+            🧩 Official MCP (14)
+          </button>
+          <button
+            onClick={() => { handleResetFilters(); setSelectedMcp('Community MCP (76)'); }}
+            className={`px-3 py-1.5 rounded-lg border whitespace-nowrap transition-all ${
+              selectedMcp.includes('Community')
+                ? 'bg-purple-600 text-white border-purple-500 shadow-sm shadow-purple-600/30'
+                : 'bg-purple-950/30 text-purple-300 hover:text-white border-purple-500/30'
+            }`}
+          >
+            🌐 Community MCP (76)
+          </button>
+          <button
+            onClick={() => { handleResetFilters(); setSelectedAuth('OAuth2'); }}
+            className={`px-3 py-1.5 rounded-lg border whitespace-nowrap transition-all ${
+              selectedAuth === 'OAuth2'
+                ? 'bg-indigo-600 text-white border-indigo-500 shadow-sm shadow-indigo-600/30'
+                : 'bg-slate-900 text-slate-300 hover:text-white border-slate-800'
+            }`}
+          >
+            🔑 OAuth2 (61)
+          </button>
+          <button
+            onClick={() => { handleResetFilters(); setSearchQuery('GraphQL'); }}
+            className={`px-3 py-1.5 rounded-lg border whitespace-nowrap transition-all ${
+              searchQuery === 'GraphQL'
+                ? 'bg-pink-600 text-white border-pink-500 shadow-sm shadow-pink-600/30'
+                : 'bg-slate-900 text-slate-300 hover:text-white border-slate-800'
+            }`}
+          >
+            💎 GraphQL Only (2)
+          </button>
+          <button
+            onClick={() => { handleResetFilters(); setSelectedAuth('Local CLI'); }}
+            className={`px-3 py-1.5 rounded-lg border whitespace-nowrap transition-all ${
+              selectedAuth === 'Local CLI'
+                ? 'bg-teal-600 text-white border-teal-500 shadow-sm shadow-teal-600/30'
+                : 'bg-slate-900 text-slate-300 hover:text-white border-slate-800'
+            }`}
+          >
+            💻 Local CLI (2)
+          </button>
+        </div>
+
         {/* Filter Controls Box */}
         <div className="glass-panel rounded-2xl p-4 sm:p-5 border border-slate-800 mb-6 space-y-4">
           {/* Top Bar: Search + Category Quick Filter */}
