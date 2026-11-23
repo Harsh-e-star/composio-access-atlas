@@ -69,9 +69,9 @@ class RetryableLLMError(LLMError):
     """Quota / rate limit / server error: the next provider may succeed."""
 
 
-# Default model names are overridable; verify availability for your account.
-GEMINI_DEFAULT = "gemini-2.5-flash"
-GROQ_DEFAULT = "llama-3.3-70b-versatile"
+# Defaults verified available on 2026-11-23 via each API's model list; overridable.
+GEMINI_DEFAULT = "gemini-3.5-flash"
+GROQ_DEFAULT = "openai/gpt-oss-120b"
 
 
 def _schema_hint(schema: dict) -> str:
@@ -80,9 +80,14 @@ def _schema_hint(schema: dict) -> str:
 
 
 async def _post(url, body, headers, retries=3):
-    async with httpx.AsyncClient(timeout=300) as c:
+    async with httpx.AsyncClient(timeout=180) as c:
         for attempt in range(retries + 1):
-            r = await c.post(url, json=body, headers=headers)
+            try:
+                r = await c.post(url, json=body, headers=headers)
+            except httpx.HTTPError as e:  # timeouts, connection resets
+                if attempt < retries:
+                    await asyncio.sleep(5); continue
+                raise RetryableLLMError(f"{type(e).__name__}: {e}")
             if r.status_code in (429, 500, 502, 503, 504) and attempt < retries:
                 await asyncio.sleep(min(60, 5 * 2 ** attempt))
                 continue

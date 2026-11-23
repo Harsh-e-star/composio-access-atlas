@@ -16,7 +16,8 @@ from .fetch import Fetcher
 from .schema import AppRecord, Extraction
 
 ROOT = Path(__file__).resolve().parent.parent
-RUNS = ROOT / "data" / "runs"
+import os as _os
+RUNS = Path(_os.environ.get("ATLAS_RUNS_DIR") or ROOT / "data" / "runs")
 TRACE = ROOT / "data" / "logs" / "trace.jsonl"
 MODELS = {"a": "sonnet", "b": "haiku"}
 

@@ -888,3 +888,21 @@
 {"ts": "2026-11-23T14:49:50Z", "app": 64, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 6 failed, 8 GitHub MCP candidates"}
 {"ts": "2026-11-23T14:49:50Z", "app": 64, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
 {"ts": "2026-11-23T14:55:12Z", "app": 66, "pass": "A", "stage": "error", "msg": "TimeoutError: "}
+{"ts": "2026-11-23T16:13:14Z", "app": 33, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://learn.microsoft.com/linkedin/marketing', 'https://learn.microsoft.com']"}
+{"ts": "2026-11-23T16:13:14Z", "app": 61, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://docs.github.com/rest', 'https://docs.github.com']"}
+{"ts": "2026-11-23T16:13:17Z", "app": 33, "pass": "A", "stage": "1-discovery", "msg": "8 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T16:13:17Z", "app": 33, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 8 sources"}
+{"ts": "2026-11-23T16:13:21Z", "app": 61, "pass": "A", "stage": "1-discovery", "msg": "11 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T16:13:21Z", "app": 61, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 11 sources"}
+{"ts": "2026-11-23T16:17:48Z", "app": 61, "pass": "A", "stage": "error", "msg": "LLMError: all providers failed: gemini: http 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"}
+{"ts": "2026-11-23T16:19:57Z", "app": 33, "pass": "A", "stage": "error", "msg": "ReadTimeout: "}
+{"ts": "2026-11-23T16:20:07Z", "app": 33, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://learn.microsoft.com/linkedin/marketing', 'https://learn.microsoft.com']"}
+{"ts": "2026-11-23T16:20:07Z", "app": 61, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://docs.github.com/rest', 'https://docs.github.com']"}
+{"ts": "2026-11-23T16:20:11Z", "app": 33, "pass": "A", "stage": "1-discovery", "msg": "8 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T16:20:11Z", "app": 33, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 8 sources"}
+{"ts": "2026-11-23T16:20:15Z", "app": 61, "pass": "A", "stage": "1-discovery", "msg": "11 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T16:20:15Z", "app": 61, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 11 sources"}
+{"ts": "2026-11-23T16:23:37Z", "app": 61, "pass": "A", "stage": "6-evidence", "msg": "checking 5 claims against source text"}
+{"ts": "2026-11-23T16:23:37Z", "app": 61, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2'] | evidence 0.8 | $None | 209.8s"}
+{"ts": "2026-11-23T16:23:41Z", "app": 33, "pass": "A", "stage": "6-evidence", "msg": "checking 5 claims against source text"}
+{"ts": "2026-11-23T16:23:42Z", "app": 33, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['OAuth2'] | evidence 1.0 | $None | 214.8s"}

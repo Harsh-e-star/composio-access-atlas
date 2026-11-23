@@ -1,0 +1,241 @@
+{
+ "id": 33,
+ "name": "LinkedIn Ads",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "a",
+ "model": "gemini/gemini-3.5-flash",
+ "researched_at": "2026-11-23T16:23:42Z",
+ "duration_s": 214.8,
+ "cost_usd": null,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11",
+   "title": "LinkedIn Marketing API Program - LinkedIn | Microsoft Learn",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://learn.microsoft.com/en-us/",
+   "title": "Microsoft Learn: Build with answers in reach",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developer.microsoft.com/en-us/",
+   "title": "Microsoft Developer",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow?view=li-lms-2026-11&toc=/linkedin/marketing/toc.json&bc=/linkedin/breadcrumb/toc.json",
+   "title": "LinkedIn 3-Legged OAuth Flow - LinkedIn | Microsoft Learn",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://learn.microsoft.com/en-us/training/support/mcp",
+   "title": "Microsoft Learn MCP Server overview | Microsoft Learn",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://learn.microsoft.com/en-us/credentials/",
+   "title": "Professional and Technical Credentials and Certifications | Microsoft Learn",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.microsoft.com/en-us/azure",
+   "title": "Azure Developer | Microsoft Developer",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developer.microsoft.com/en-us/microsoft-365/dev-program",
+   "title": "Developer Program | Microsoft 365 Dev Center",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/amekala/ads-mcp",
+   "title": "amekala/ads-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/markifact/markifact-mcp",
+   "title": "markifact/markifact-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/danielpopamd/linkedin-ads-mcp",
+   "title": "danielpopamd/linkedin-ads-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Dataslayer-AI/Marketing-skills",
+   "title": "Dataslayer-AI/Marketing-skills",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/adwarp-dev/adwarp",
+   "title": "adwarp-dev/adwarp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jepto/mcp",
+   "title": "jepto/mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/amekala/adspirer-mcp-plugin",
+   "title": "amekala/adspirer-mcp-plugin",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/meshpilot-hq/linkedin-ads-mcp",
+   "title": "meshpilot-hq/linkedin-ads-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://learn.microsoft.com/en-us/linkedin/marketing/",
+   "developer_portal": "https://learn.microsoft.com/en-us/linkedin/marketing/",
+   "description": "LinkedIn Marketing Platform provides APIs to create marketing campaigns, report performance, manage leads, target matched audiences, and grow company pages.",
+   "identity_confirmed": "yes",
+   "identity_notes": ""
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization Code Flow (3-legged OAuth)",
+   "token_refresh": "Access tokens are issued with a 60-day lifespan. Programmatic refresh tokens are available for a limited set of partners.",
+   "scopes_notes": "Permissions requested via space-delimited scope parameter in authorization code flow."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "campaigns",
+    "analytics",
+    "leads",
+    "conversions",
+    "matched_audiences",
+    "events"
+   ],
+   "read_ops": [
+    "Reporting and Analytics",
+    "Audience Insights",
+    "Page and Content Analysis"
+   ],
+   "write_ops": [
+    "create campaigns",
+    "manage leads",
+    "send conversion event data",
+    "manage media plans"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/amekala/ads-mcp",
+    "https://github.com/markifact/markifact-mcp",
+    "https://github.com/danielpopamd/linkedin-ads-mcp",
+    "https://github.com/Dataslayer-AI/Marketing-skills",
+    "https://github.com/adwarp-dev/adwarp",
+    "https://github.com/jepto/mcp",
+    "https://github.com/amekala/adspirer-mcp-plugin",
+    "https://github.com/meshpilot-hq/linkedin-ads-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "[\"OAuth2\"]",
+    "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow?view=li-lms-2026-11&toc=/linkedin/marketing/toc.json&bc=/linkedin/breadcrumb/toc.json",
+    "quote": "Your application directs the browser to LinkedIn's OAuth 2.0 authorization page where the member authenticates.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "unknown",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11",
+    "quote": "Refer to LinkedIn API Partner Support for how to reach Developer Support.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "[\"REST\"]",
+    "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow?view=li-lms-2026-11&toc=/linkedin/marketing/toc.json&bc=/linkedin/breadcrumb/toc.json",
+    "quote": "Once you've obtained an access token, you can start making authenticated API requests on behalf of the member by including an Authorization header in the HTTP call to LinkedIn's API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11",
+    "quote": "The platform offers APIs to create LinkedIn marketing campaigns, to report campaign performance, to manage leads, and to grow a company Page.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "no",
+    "url": "https://learn.microsoft.com/en-us/training/support/mcp",
+    "quote": "The Microsoft Learn Model Context Protocol (MCP) Server enables clients like GitHub Copilot and other AI agents to bring trusted and up-to-date information directly from Microsoft's official documentation.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": []
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "high",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}
