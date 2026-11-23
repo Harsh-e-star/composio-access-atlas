@@ -33,6 +33,10 @@ frontend/dist/
 **/.pytest_cache/
 *.db
 
+# Markdown files (keep README.md)
+*.md
+!README.md
+
 # console run logs (stage trace + request log are kept as evidence)
 data/logs/run_*.log
 # legacy prototype artefacts (code kept for transparency, binaries/builds not)
