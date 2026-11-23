@@ -32,3 +32,15 @@ frontend/dist/
 **/dist/
 **/.pytest_cache/
 *.db
+
+# console run logs (stage trace + request log are kept as evidence)
+data/logs/run_*.log
+# legacy prototype artefacts (code kept for transparency, binaries/builds not)
+archive/legacy_prototype/**/*.db
+archive/legacy_prototype/outputs/
+archive/legacy_prototype/standalone/
+# local / editor / OS
+.vscode/
+.idea/
+*.swp
+*.xlsx~
