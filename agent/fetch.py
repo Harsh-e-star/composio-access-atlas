@@ -7,6 +7,12 @@ from urllib.parse import urljoin, urlparse
 from urllib import robotparser
 
 import httpx
+
+try:  # use the OS trust store (handles servers with incomplete chains, e.g. zoho.com)
+    import ssl, truststore
+    _SSL = truststore.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+except Exception:  # pragma: no cover
+    _SSL = True
 from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -26,7 +32,7 @@ class Fetcher:
         self._robots: dict[str, robotparser.RobotFileParser | None] = {}
         self.client = httpx.AsyncClient(
             headers={"User-Agent": UA, "Accept-Language": "en"},
-            follow_redirects=True, timeout=httpx.Timeout(20.0),
+            follow_redirects=True, timeout=httpx.Timeout(20.0), verify=_SSL,
         )
         CACHE.mkdir(parents=True, exist_ok=True)
         LOG.parent.mkdir(parents=True, exist_ok=True)

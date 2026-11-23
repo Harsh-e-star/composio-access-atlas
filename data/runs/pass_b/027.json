@@ -1,0 +1,202 @@
+{
+ "id": 27,
+ "name": "Telegram",
+ "category": "Communications and Messaging",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:24:43Z",
+ "duration_s": 77.1,
+ "cost_usd": 0.0428,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": null,
+   "developer_portal": "https://core.telegram.org",
+   "description": "Telegram Messenger's developer platform: the Bot API (HTTP, bot tokens issued via BotFather) and the MTProto-based Telegram API (api_id/api_hash, with TDLib as the official client library). Docs live at core.telegram.org.",
+   "identity_confirmed": "yes",
+   "identity_notes": "core.telegram.org is Telegram's official developer documentation for the Bot API and the Telegram API (MTProto), which matches the product named in the task. telegram.org itself was not fetched, so official_website is null."
+  },
+  "auth": {
+   "methods": [
+    "Other"
+   ],
+   "primary": "Other",
+   "oauth_flows": "",
+   "token_refresh": "Bot tokens can be regenerated through BotFather, per the Bot API page. No OAuth refresh flow was found.",
+   "scopes_notes": "Bot API: a bot token is placed in the request URL path (https://api.telegram.org/bot<token>/METHOD_NAME). There are no OAuth scopes. The MTProto client API uses api_id and api_hash to identify the app, then the user logs in with a phone-number account; that login flow was not verified in detail."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Third-party client apps must comply with the API Terms of Service. The api_id page describes no approval or review step. Each phone number can hold only one api_id. The sample api_id in open-source code is for testing only and must not be used for publishing."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "Messages",
+    "Media (photos and other files)",
+    "Chats and chat administration (per third-party listings)",
+    "Updates and webhooks",
+    "Bot settings",
+    "Callback and inline queries"
+   ],
+   "read_ops": [
+    "getUpdates",
+    "getWebhookInfo",
+    "getMe",
+    "getMyDescription/settings reads (not verified)"
+   ],
+   "write_ops": [
+    "sendMessage",
+    "sendPhoto and other send methods",
+    "edit and delete message methods",
+    "setWebhook",
+    "deleteWebhook",
+    "setMySettings",
+    "answerCallbackQuery"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Per the Bot FAQ: about 30 messages per second broadcast; one message per second per single chat; 20 messages per minute in a group.",
+   "limitations": "Bot API bots only see private chats with users, and in groups they see only commands unless privacy mode is disabled or they are admins. Bots cannot read arbitrary user DMs. Rate limits apply (about 1 message per second per chat, 20 per minute per group). Breadth is Medium because the verified Bot API surface covers messaging, updates and settings; the full method count (reported by third parties as 150+) was not verified from Telegram's own pages. The MTProto client API is a separate, lower-level protocol."
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/sparfenyuk/mcp-telegram",
+    "https://github.com/siavashdelkhosh81/telegram-bot-mcp-server",
+    "https://github.com/guangxiangdebizi/telegram-mcp",
+    "https://github.com/l1v0n1/telegram-mcp-server",
+    "https://mcpservers.org/en/servers/sparfenyuk/mcp-telegram"
+   ]
+  },
+  "claims": [
+   {
+    "field": "product_identity",
+    "value": "The Bot API is an HTTP-based interface for building bots for Telegram",
+    "url": "https://core.telegram.org/bots/api",
+    "quote": "The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "bot_token",
+    "value": "Each bot receives a unique token at creation; token is used in the request URL",
+    "url": "https://core.telegram.org/bots/api",
+    "quote": "Each bot is given a unique authentication token when it is created.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks",
+    "value": "Webhooks are supported via setWebhook and are mutually exclusive with getUpdates",
+    "url": "https://core.telegram.org/bots/api",
+    "quote": "Use this method to specify a URL and receive incoming updates via an outgoing webhook.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "bot_setup",
+    "value": "Bots are set up through BotFather and connected to a backend via the API",
+    "url": "https://core.telegram.org/bots/faq",
+    "quote": "In order for a bot to work, set up a bot account with @BotFather, then connect it to your backend server via our API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "rate_limit",
+    "value": "About one message per second per chat",
+    "url": "https://core.telegram.org/bots/faq",
+    "quote": "In a single chat, avoid sending more than one message per second.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "rate_limit",
+    "value": "Groups limited to about 20 messages per minute",
+    "url": "https://core.telegram.org/bots/faq",
+    "quote": "In a group, bots are not be able to send more than 20 messages per minute.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "free_access",
+    "value": "Bot API and Telegram API/TDLib are free of charge",
+    "url": "https://core.telegram.org/api",
+    "quote": "You are welcome to use both APIs free of charge.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api_credentials",
+    "value": "api_id and api_hash are obtained at my.telegram.org after logging in with a Telegram account",
+    "url": "https://core.telegram.org/api/obtaining_api_id",
+    "quote": "You will get basic addresses as well as the api_id and api_hash parameters required for user authorization.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api_credentials_limit",
+    "value": "Each phone number can have only one api_id",
+    "url": "https://core.telegram.org/api/obtaining_api_id",
+    "quote": "For the moment each number can only have one api_id connected to it.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "openness",
+    "value": "The Telegram API is open to all developers",
+    "url": "https://core.telegram.org/api",
+    "quote": "It is 100% open for all developers who wish to create Telegram applications on our platform.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "community_mcp",
+    "value": "Third-party MCP servers wrap the Bot API and MTProto; none are published by Telegram",
+    "url": "https://github.com/sparfenyuk/mcp-telegram",
+    "quote": "a server for interacting with Telegram via the MTProto API, requiring API credentials.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "No official Telegram MCP server was found. Searches and the TelegramMessenger GitHub org page (10 of 27 repos shown) listed none. The official status is based on absence of evidence.",
+   "Full Bot API method count and per-method details were not verified from Telegram's own pages. The Bot API page was truncated after about 100k characters.",
+   "Whether bot tokens are issued only through BotFather with no sandbox or test environment was not confirmed. Telegram's test DC availability was not checked.",
+   "Official SDK list was not confirmed. TDLib is named by Telegram as the official client library, but no official Bot API SDK list was checked.",
+   "The MTProto user login flow (phone, code, 2FA) and any JWT/service-account option were not verified.",
+   "Several claims rely on summarized WebFetch output rather than verbatim page text. Quotes should be re-checked against the live pages before production use.",
+   "Third-party MCP version claims conflict (Bot API v9.6 vs v10.2) and are unverified."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.909,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,272 @@
+{
+ "id": 82,
+ "name": "Plaid",
+ "category": "Finance and Fintech",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:24:41Z",
+ "duration_s": 27.0,
+ "cost_usd": 0.0788,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://plaid.com/docs/",
+   "title": "Home | Plaid Docs",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://plaid.com",
+   "title": "Plaid: Enabling all companies to build fintech solutions",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://plaid.com/docs/api/",
+   "title": "API - Overview | Plaid Docs",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://plaid.com/docs/api/oauth/",
+   "title": "API - OAuth | Plaid Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://github.com/plaid/ai-coding-toolkit/tree/main/sandbox",
+   "title": "ai-coding-toolkit/sandbox at main · plaid/ai-coding-toolkit · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://plaid.com/docs/api/products/auth/",
+   "title": "API - Auth | Plaid Docs",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://plaid.com/docs/auth/",
+   "title": "Auth - Introduction to Auth | Plaid Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://plaid.com/pricing/",
+   "title": "Pricing: API costs, free tier & pay-as-you-go plans | Plaid",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://plaid.com/products/auth/",
+   "title": "Auth: Instant bank verification API | Plaid",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://plaid.com/products/database-auth/",
+   "title": "Database Auth - Verify account & routing number | Plaid",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/tomfunk/fungible",
+   "title": "tomfunk/fungible",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/elcukro/bank-mcp",
+   "title": "elcukro/bank-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/plaid/ai-coding-toolkit",
+   "title": "plaid/ai-coding-toolkit",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/meetpandya27/plaidify",
+   "title": "meetpandya27/plaidify",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/304techmaven/plaid-mcp-server",
+   "title": "304techmaven/plaid-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/JosueM1109/personal-finance-mcp",
+   "title": "JosueM1109/personal-finance-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jeffjjohnston/counterpoise-ledger",
+   "title": "jeffjjohnston/counterpoise-ledger",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Harshaan-Chugh/FinAgent-MCP",
+   "title": "Harshaan-Chugh/FinAgent-MCP",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://plaid.com",
+   "developer_portal": "https://plaid.com/docs/",
+   "description": "Plaid provides a financial data network and API for connecting user bank accounts, payments, identity, transactions, and underwriting products.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Plaid's API and docs."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Plaid OAuth service (/oauth/token) supports refresh_token, client_credentials and token-exchange grants, for consumer reports/Dashboard/MCP dashboard access; not the core API auth.",
+   "token_refresh": "OAuth access tokens expire in 900 seconds and are refreshed via refresh_token at /oauth/token.",
+   "scopes_notes": "Scope mcp:dashboard allows access to the MCP dashboard server."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Production API access must be requested via the Dashboard; Sandbox supports only test Items. Some products (Layer, Signal, Transfer) require Custom plan."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Auth",
+    "Balance",
+    "Identity",
+    "Transactions",
+    "Investments",
+    "Liabilities",
+    "Assets",
+    "Income",
+    "Transfer",
+    "Signal",
+    "Identity Verification",
+    "Monitor",
+    "Enrich",
+    "Statements"
+   ],
+   "read_ops": [
+    "/auth/get"
+   ],
+   "write_ops": [
+    "/link/token/create",
+    "/item/public_token/exchange",
+    "/processor/token/create"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Sandbox Items have 30-day lifetime; Items cannot be moved between environments."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/plaid/ai-coding-toolkit",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/304techmaven/plaid-mcp-server",
+    "https://github.com/elcukro/bank-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key (client_id and secret)",
+    "url": "https://plaid.com/docs/api/",
+    "quote": "Almost all Plaid API endpoints require a client_id and secret . These may be sent either in the request body or in",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://plaid.com/docs/api/oauth/",
+    "quote": "Create or refresh an OAuth access token",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://plaid.com/pricing/",
+    "quote": "Sandbox is always free.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://plaid.com/docs/api/",
+    "quote": "You can request Production API access via the Dashboard.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://plaid.com/docs/api/",
+    "quote": "OpenAPI is a standard format for describing RESTful APIs",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://plaid.com/docs/",
+    "quote": "Transactions Retrieve transaction data for budgeting tools, expense management, and more.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://github.com/plaid/ai-coding-toolkit/tree/main/sandbox",
+    "quote": "A Model Context Protocol server for facilitating integration with Plaid.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Rate limits not stated in sources.",
+   "Whether production access requires application review is not detailed."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

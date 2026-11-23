@@ -1,0 +1,254 @@
+{
+ "id": 7,
+ "name": "Zoho CRM",
+ "category": "CRM and Sales",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:21:11Z",
+ "duration_s": 188.1,
+ "cost_usd": 0.0719,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.zoho.com/crm/",
+   "developer_portal": "https://www.zoho.com/crm/developer/docs/",
+   "description": "Zoho CRM is the customer relationship management product from Zoho Corporation, with developer docs under zoho.com/crm/developer.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Official Zoho CRM developer docs at zoho.com/crm/developer match the assigned hint (zoho.com/crm). Regional data centers (e.g., zoho.eu) exist; accounts domain varies by data center."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Self Client grant (community post: create Self Client in Zoho Developer Console, generate grant code, exchange at accounts-domain /oauth/v2/token, refresh with grant_type=refresh_token). Unverified against official OAuth page content.",
+   "token_refresh": "Access token valid for one hour; refresh token has unlimited lifetime until revoked by end-user (official OAuth overview).",
+   "scopes_notes": "Scopes not established from fetched pages."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No app review was found in fetched sources; not verified. API credit limits apply by edition (Free: 5000 credits/24h)."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "CRM module records (standard and custom modules)",
+    "Metadata: modules, fields, layouts, custom views, related lists",
+    "Query via SELECT (SQL-like) syntax",
+    "Bulk async read/write",
+    "Notifications (webhook channels)"
+   ],
+   "read_ops": [
+    "Fetch records from modules",
+    "Fetch metadata of modules, fields, layouts, custom views, related lists",
+    "Run SELECT query over CRM data",
+    "Retrieve data in bulk via asynchronous APIs"
+   ],
+   "write_ops": [
+    "Create, update, delete CRM module entities (CRUD)",
+    "Push data to Zoho CRM in bulk via asynchronous APIs",
+    "Manage notification channels"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Free edition: 5000 API credits per rolling 24h window, 1 credit per call; concurrency limit 5 (Free), 10 (Standard), 15 (Professional), 20 (Enterprise), 25 (Ultimate). No time-based per-minute limits stated.",
+   "limitations": "Daily credit limits by edition; MCP calls consume API credits; concurrency limits per org per app. Breadth judged Broad from core CRUD, metadata, query, bulk, notifications; per-module coverage not exhaustively verified."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Zoho CRM is Zoho's CRM product with developer docs at zoho.com/crm/developer",
+    "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+    "quote": "Zoho CRM provides these as pre-built MCP servers, so you don't need to build, host, or maintain any infrastructure.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "auth.primary",
+    "value": "OAuth 2.0 is the API authentication protocol",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+    "quote": "The Zoho CRM API uses the OAuth 2.0 protocol for authentication.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "auth.token_lifetime",
+    "value": "Access token valid one hour",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+    "quote": "Each access token will be valid only for an hour",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "auth.refresh",
+    "value": "Refresh token unlimited lifetime until revoked by end-user",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+    "quote": "This token has an unlimited lifetime until it is revoked by the end-user.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "auth.self_client",
+    "value": "Self Client client type from Zoho Developer Console for UI-less apps",
+    "url": "https://help.zoho.com/portal/community/topic/kaizen-2-oauth2-0-and-self-client-api",
+    "quote": "Choose Self Client from the list of client types.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "Free edition includes API access with 5000 credits per 24h",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+    "quote": "Free | \"5000 credits\" | \"5000 credits\"",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Rolling 24-hour credit window, 1 credit per call",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+    "quote": "The API call limit has a rolling 24-hour window, from the start of the call.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.rate_limits.minute",
+    "value": "No time-based restrictions; concurrency limits apply",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+    "quote": "there are no time-based API call restrictions in Zoho CRM.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST endpoints for CRUD and other APIs",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+    "quote": "integrate with any third party application through flexible RESTful endpoints.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.read_write",
+    "value": "CRUD operations on module entities; Query API uses SQL-style SELECT; Bulk APIs push and retrieve data asynchronously",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+    "quote": "Perform CRUD operations on CRM module entities.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.resources",
+    "value": "Metadata APIs fetch modules, fields, layouts, custom views, related lists",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+    "quote": "Fetch the metadata of modules, fields, layouts, custom views, and related lists.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Notification APIs deliver record event notifications to a URL",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/notifications/overview.html",
+    "quote": "Notification APIs allow you to get instant notifications whenever an action is performed on the records of a module.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.webhooks.delivery",
+    "value": "System notifies on the URL provided",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/notifications/overview.html",
+    "quote": "The system notifies you of the event on the URL provided.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Official server-side SDKs for v8 (PHP, Node.js, Java, C#; Python and others listed)",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/zoho-crm-sdks.html",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Zoho provides four pre-built MCP servers",
+    "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+    "quote": "Zoho CRM groups its MCP capabilities into four pre-built servers.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "mcp.servers",
+    "value": "Data Insights (read-only), Data Operations (CRUD), Modules (customization), Workflow & Automation",
+    "url": "https://www.zoho.com/crm/developer/mcp.html",
+    "quote": "A read-only server that lets your agent dig through your CRM data without touching a single record.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "OAuth login on first tool call; actions scoped to user permissions",
+    "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+    "quote": "All actions are scoped to your Zoho CRM user permissions.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "mcp.clients",
+    "value": "Works with Cursor, Claude Desktop, VS Code, Windsurf",
+    "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+    "quote": "Zoho CRM MCP servers work with any AI tool that supports MCP, including Cursor, Claude Desktop, VS Code, and Windsurf.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "mcp.credits",
+    "value": "MCP calls consume API credits",
+    "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+    "quote": "API calls executed through MCP consume API credits in the same way as standard API calls.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   }
+  ],
+  "open_questions": [
+   "Exact count of official MCP servers: Zoho dev docs say four; a Zoho help-center post says five. Unresolved.",
+   "Whether MCP servers require a specific Zoho CRM edition: MCP page names no plan requirement, though sign-up links include plan=enterprise. Unresolved.",
+   "Whether a free-edition account can get OAuth Self Client credentials without admin approval: community post suggests yes; not confirmed on official OAuth page.",
+   "Official SDK page (zoho.com/crm/developer/docs/api/v8/zoho-crm-sdks.html) content and GitHub repo ownership not verified by fetch; GitHub repo names came from a third-party directory (apideck-style listing), not Zoho.",
+   "Community MCP servers: no community GitHub repo for Zoho CRM was confirmed. Third-party commercial connectors exist (Workato prebuilt MCP, CData Zoho CRM MCP, Claude marketplace connector) but are not community repos and were not fetched.",
+   "Trial availability and sandbox: not established.",
+   "Fetch budget reached before verifying the free edition API-access claim on the official release notes page and the SDK page."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.053,
+ "flags": [],
+ "error": null
+}

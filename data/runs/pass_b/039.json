@@ -1,0 +1,252 @@
+{
+ "id": 39,
+ "name": "Threads (Meta)",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:31:40Z",
+ "duration_s": 65.1,
+ "cost_usd": 0.0498,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://developers.facebook.com/docs/threads/",
+   "developer_portal": "https://developers.facebook.com/docs/threads",
+   "description": "Threads, Meta's text-based social network (threads.com / threads.net). The Threads API is Meta's developer API for publishing and reading Threads content, replies, mentions, insights and profiles. Matches the requested product.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Meta's developer docs describe the Threads API as a way to 'create and publish posts, retrieve media and profiles, moderate replies, and access insights.' Hostnames graph.threads.com / threads.com confirm it is the Threads social product."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization-code flow: user approves in an Authorization Window at https://threads.com/oauth/authorize, Threads redirects with a code, and the app exchanges it via POST https://graph.threads.com/oauth/access_token. Short-lived token valid 1 hour, exchangeable for a long-lived token valid 60 days. App access tokens (client credentials from app ID and secret) are used for some endpoints such as oEmbed.",
+   "token_refresh": "Short-lived tokens can be exchanged for long-lived tokens (60 days). Refresh of long-lived tokens is not documented in the fetched pages.",
+   "scopes_notes": "scope values listed: threads_basic (required), threads_content_publish, threads_read_replies, threads_manage_replies, threads_manage_insights. Page does not explain what each scope permits. Permission grants by app users with public profiles are valid for 90 days."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Each permission must pass App Review and the app must be published before app users without a role on the app can use it. Test users must be invited and accept the invitation to the Threads profile. Webhooks Live notifications require Live mode (non-tech providers) or advanced access (tech providers) and a verified business. Public server required for media URLs. Business verification is linked but its exact requirement is not stated."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "Threads posts / media",
+    "Publishing (create, publish status, repost, delete)",
+    "Media retrieval by ID or keyword",
+    "Replies and conversations",
+    "Reply moderation (hide/unhide, approve/ignore)",
+    "User profile, posts, replies, mentions, ghost posts, publishing limit",
+    "Public profile and post lookup",
+    "Locations and location search",
+    "Insights (media and user level)",
+    "oEmbed",
+    "Access token debug"
+   ],
+   "read_ops": [
+    "Retrieve media by ID or keyword",
+    "Retrieve replies and conversations",
+    "Retrieve user profile, posts, replies, mentions, ghost posts, publishing limit",
+    "Look up public profiles and posts",
+    "Retrieve location objects and search locations",
+    "Retrieve insights for media and users (views, likes, replies, reposts, quotes, followers, follower demographics)",
+    "oEmbed embed content",
+    "Inspect access token"
+   ],
+   "write_ops": [
+    "Upload and publish media (single and carousel posts)",
+    "Repost",
+    "Delete posts",
+    "Hide/unhide replies",
+    "Approve/ignore replies",
+    "Set reply and quote controls"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Not documented in the fetched pages.",
+   "limitations": "Write surface centers on publishing and reply moderation; no DM, no follower management documented. Endpoint HTTP methods and paths were not shown on the reference index page. Rate limits not found."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/pegasusheavy/threads-mcp",
+    "https://pypi.org/project/mcp-threads/",
+    "https://pypi.org/project/meta-threads-mcp/",
+    "https://glama.ai/mcp/servers/JoshuaRamirez/threads-mcp/schema",
+    "https://github.com/baguskto/threads-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Threads API lets developers create and publish posts, retrieve media and profiles, moderate replies, and access insights",
+    "url": "https://developers.facebook.com/docs/threads",
+    "quote": "Use the Threads API to create and publish posts, retrieve media and profiles, moderate replies, and access insights.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "Available to all developers (free_self_serve)",
+    "url": "https://developers.facebook.com/blog/post/2024/06/18/the-threads-api-is-finally-here/",
+    "quote": "the Threads API is now available to all developers",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.app_setup",
+    "value": "Create an app and pick the Threads use case; use Threads app ID and secret",
+    "url": "https://developers.facebook.com/documentation/threads/get-started",
+    "quote": "To access the Threads API, create an app and pick the Threads use case.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Each permission must pass App Review and app must be published for users without a role",
+    "url": "https://developers.facebook.com/documentation/threads/get-started",
+    "quote": "each permission must first be approved through the App Review process, and your app must be published.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.test_users",
+    "value": "Test users must be invited and accept the invitation",
+    "url": "https://developers.facebook.com/documentation/threads/get-started",
+    "quote": "you must first send an invitation to the Threads user's profile and accept the invitation.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.primary",
+    "value": "OAuth2 (Threads user access tokens conforming to OAuth 2.0)",
+    "url": "https://developers.facebook.com/documentation/threads/get-started",
+    "quote": "API authentication is handled by Threads user access tokens that conform to the OAuth 2.0 protocol.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.authorize_endpoint",
+    "value": "https://threads.com/oauth/authorize; token POST https://graph.threads.com/oauth/access_token",
+    "url": "https://developers.facebook.com/documentation/threads/get-started/get-access-tokens-and-permissions",
+    "quote": "Threads will redirect the user to your app and include an authorization code.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_lifetime",
+    "value": "Short-lived 1 hour; long-lived 60 days",
+    "url": "https://developers.facebook.com/documentation/threads/get-started",
+    "quote": "Short-lived access tokens are valid for 1 hour, but can be exchanged for long-lived tokens.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.scopes",
+    "value": "threads_basic (required), threads_content_publish, threads_read_replies, threads_manage_replies, threads_manage_insights",
+    "url": "https://developers.facebook.com/documentation/threads/get-started/get-access-tokens-and-permissions",
+    "quote": "The threads_basic scope is required.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST over graph.threads.com / graph.threads.net",
+    "url": "https://developers.facebook.com/documentation/threads/reference",
+    "quote": "The Threads API can be accessed by either graph.threads.com or graph.threads.net.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.write_ops",
+    "value": "Publishing, repost, delete, reply hide/approve",
+    "url": "https://developers.facebook.com/documentation/threads/reference",
+    "quote": "Upload and publish media, check publishing status, repost, delete posts",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.insights",
+    "value": "Insights for media and users (views, likes, replies, reposts, quotes, followers)",
+    "url": "https://developers.facebook.com/blog/post/2024/06/18/the-threads-api-is-finally-here/",
+    "quote": "the number of views, likes, replies, reposts, and quotes at media and account level",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Yes: replies, delete, mentions, publish topics",
+    "url": "https://developers.facebook.com/documentation/threads/webhooks",
+    "quote": "Set the callback URL and a token. Meta uses the token to verify that calls originate from its servers.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.sdks",
+    "value": "None mentioned; only a sample app github.com/fbsamples/graph-api-webhooks-samples",
+    "url": "https://developers.facebook.com/documentation/threads/webhooks",
+    "quote": "Download the webhooks sample app to test your integration.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.community",
+    "value": "pegasusheavy/threads-mcp (MIT, TypeScript); mcp-threads and meta-threads-mcp on PyPI",
+    "url": "https://github.com/pegasusheavy/threads-mcp",
+    "quote": "production-ready Model Context Protocol server for the Threads.com API",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official",
+    "value": "No official Meta MCP server found in searches",
+    "url": "https://developers.facebook.com/docs/threads",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Rate limits for the Threads API are not found in the fetched pages; need the rate-limit/ Graph API docs.",
+   "Whether long-lived tokens can be refreshed, and the refresh endpoint, were not confirmed.",
+   "Whether Development-mode apps with Threads Testers role can call all endpoints without App Review was not explicitly stated.",
+   "Business verification requirement for standard vs advanced access is unclear; the page only links it.",
+   "Endpoint HTTP methods and exact paths (e.g., /{threads-user-id}/threads, /threads_publish) were not visible in fetched pages.",
+   "No official Meta-published MCP server was found; a check of github.com/facebook or github.com/facebookarchive for threads MCP was not done.",
+   "A developer forum post reported an 'insufficient access tier' error on a Threads oEmbed permission test during App Review; unresolved and anecdotal.",
+   "Official Postman workspace for the Threads API was referenced by a community listing but not verified on Meta's site.",
+   "Composio hosts a Threads toolkit (composio.dev/toolkits/threads); that is a commercial hosted connector, not a vendor MCP server."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "review_required",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 0.562,
+ "flags": [],
+ "error": null
+}

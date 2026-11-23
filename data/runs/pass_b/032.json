@@ -1,0 +1,248 @@
+{
+ "id": 32,
+ "name": "Meta Ads",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:32:36Z",
+ "duration_s": 121.1,
+ "cost_usd": 0.0686,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": null,
+   "developer_portal": "https://developers.facebook.com/docs/marketing-api",
+   "description": "Meta Marketing API, Meta's ads management and reporting API (Facebook/Instagram ads).",
+   "identity_confirmed": "yes",
+   "identity_notes": "Official Meta developer docs describe the Marketing API for Meta advertising, and the official Ads MCP server is part of the same docs set."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Facebook OAuth dialog with scope parameter (ads_read, ads_management); Facebook Login for Business dialog used by the MCP server for automatic token handling.",
+   "token_refresh": "unknown",
+   "scopes_notes": "ads_read and ads_management are the permissions for reading and writing ad data. Standard/Limited access covers only the developer's own ad account; managing other businesses' accounts requires Full/Advanced access. The MCP server supports only Employee-role system user access tokens."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Full Access (formerly Advanced Access) requires App Review per permission/feature; needed for managing other businesses' ad accounts or data. Limited Access is granted automatically once the Marketing API product is added to an app."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Campaigns",
+    "Ad sets",
+    "Ads",
+    "Ad creatives",
+    "Audiences",
+    "Insights",
+    "Catalogs",
+    "Ad account subscriptions (webhooks)",
+    "Lead ads"
+   ],
+   "read_ops": [
+    "Insights and performance analytics",
+    "List/get ad account webhook subscriptions",
+    "Retrieve lead data by leadgen_id (Lead Ads)"
+   ],
+   "write_ops": [
+    "Create campaigns, ad sets, and ads",
+    "Update, pause, or delete ads",
+    "Create, patch, and delete ad account subscriptions"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "unknown",
+   "limitations": "Full endpoint inventory not fetched. Sources describe ad creation, management, and performance analysis; creatives cannot be changed after creation. Ad account webhooks are separate from Lead Ads Page webhooks. Rate limits not found."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.facebook.com/ads",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/pipeboard-co/meta-ads-mcp",
+    "https://github.com/byadsco/meta-ads-mcp/"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Meta Marketing API (Ads/Commerce) for automating Meta advertising, documented on developers.facebook.com",
+    "url": "https://developers.facebook.com/docs/marketing-apis",
+    "quote": "Use the Marketing API to automate advertising across Meta technologies.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.breadth",
+    "value": "API provides functions for ad creation, management, and performance analysis",
+    "url": "https://developers.facebook.com/docs/marketing-apis",
+    "quote": "The API provides functions for ad creation, management, and performance analysis.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.tier",
+    "value": "Limited Access granted automatically when Marketing API product is added",
+    "url": "https://developers.facebook.com/docs/marketing-api/get-started/authorization",
+    "quote": "Automatically granted when you add the Marketing API product to your app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.provider_app_review",
+    "value": "Full Access requires App Review",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+    "quote": "Advanced access must be approved through the App Review process on an individual permission and feature basis.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.partnership_or_sales_required",
+    "value": "no; business apps auto-approved for standard access",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+    "quote": "Business apps are automatically approved for standard access for all permissions and features",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Full access needed for other businesses' data; ~500 calls in 15 days threshold",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+    "quote": "Have successfully made at least 500 Marketing API calls in the last 15 days.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2 via Facebook OAuth dialog with scope; access tokens passed as Bearer",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+    "quote": "Your app gets access when they click Allow.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.bearer",
+    "value": "Access token passed in Authorization: Bearer header (MCP)",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-get-started",
+    "quote": "Pass the token in an Authorization: Bearer header.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Meta-hosted Ads MCP server at mcp.facebook.com/ads",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+    "quote": "The ads MCP server is a Meta-hosted Model Context Protocol server that lets you manage Meta ads directly from an AI agent.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.endpoint",
+    "value": "https://mcp.facebook.com/ads",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+    "quote": "The server is remote-hosted at https://mcp.facebook.com/ads and works with any MCP-compatible AI agent.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "OAuth via Facebook Login for Business, or pre-obtained access token",
+    "url": "https://developers.facebook.com/blog/post/2026/07/16/meta-ads-mcp-server/",
+    "quote": "for automatic token handling via Facebook Login for Business",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.access",
+    "value": "Owning a Meta app is not a prerequisite (conflicts with blog's 'own Meta app' wording)",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-get-started",
+    "quote": "Owning a Meta app is not a prerequisite on using the ads MCP server.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.restriction",
+    "value": "Only Employee-role system user access tokens are supported",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-get-started",
+    "quote": "Only Employee-role system user access tokens are supported.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.app_review",
+    "value": "Other businesses' data requires app review",
+    "url": "https://developers.facebook.com/blog/post/2026/07/16/meta-ads-mcp-server/",
+    "quote": "you need to submit your app for review.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.ads",
+    "value": "Ad account webhooks on ad_account object",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/ads-webhooks/ads-webhooks-overview",
+    "quote": "Ads webhooks push updates to your app the moment something changes in an ad account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.setup",
+    "value": "Subscribe app to ad_account fields, then connect specific ad accounts",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/ads-webhooks/ads-webhooks-overview",
+    "quote": "You subscribe your app to one or more ad_account fields, then connect the specific ad accounts you manage.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks.official",
+    "value": "Official Meta Business SDKs for Python, PHP, Node.js, Java, and Ruby",
+    "url": "https://developers.facebook.com/docs/business-sdk/getting-started",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Full endpoint inventory and read/write coverage for each object were not fetched.",
+   "Rate limits for the Marketing API were not found.",
+   "Qualification threshold conflicts: 500 calls in 15 days in current docs vs 1,500 in older pages.",
+   "MCP prerequisites conflict: 'Owning a Meta app is not a prerequisite' vs blog's 'any developer with their own Meta app'.",
+   "Whether MCP tool access requires Full Access for ad accounts not owned by the developer is unclear.",
+   "Sandbox or test ad account availability was not documented in fetched pages.",
+   "Trial availability and paid-plan requirements were not found.",
+   "Community MCP repos (pipeboard-co, byadsco) were identified from search results only and not fetched; ownership judged from names."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "review_required",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 0.765,
+ "flags": [],
+ "error": null
+}

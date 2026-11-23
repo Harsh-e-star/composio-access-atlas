@@ -38,6 +38,17 @@ def compute(apps: list[dict]) -> dict:
     blockers = Counter(a["assessment"]["main_blocker"] for a in apps
                        if a["assessment"]["verdict"] in ("CONDITIONAL", "GATED", "NO_SUPPORTED_INTERFACE"))
     mcp_off = [a["name"] for a in apps if F(a, "official_mcp") == "yes"]
+    # heuristic evidence strength: official MCP URL is on the vendor's own domain / repo and mentions mcp
+    def _vendor_hosted(a):
+        import re as _re
+        from urllib.parse import urlparse
+        u = (a["extraction"]["mcp"]["official_url"] or "").lower()
+        site = (a["extraction"]["identity"]["official_website"] or "").lower()
+        host = urlparse(u).netloc
+        sd = ".".join(urlparse(site).netloc.split(".")[-2:])
+        tok = _re.sub(r"[^a-z]", "", a["name"].lower().split()[0])[:5]
+        return "mcp" in u and bool((sd and sd in host) or tok in host or ("github.com" in host and tok in u))
+    mcp_strong = sum(1 for a in apps if F(a, "official_mcp") == "yes" and _vendor_hosted(a))
     mcp_unknown = sum(1 for a in apps if F(a, "official_mcp") == "unknown")
     comm = [a for a in apps if a["extraction"]["mcp"]["community"] == "yes"]
     comm_by_cat = Counter(a["category"] for a in comm)
@@ -69,7 +80,7 @@ def compute(apps: list[dict]) -> dict:
         "tiers": {k: tiers.get(k, 0) for k in TIERS},
         "verdicts": {k: verdicts.get(k, 0) for k in VERDICTS},
         "groups": dict(groups), "categories": cat, "blockers": blockers.most_common(),
-        "mcp": {"official": mcp_off, "unknown": mcp_unknown, "community_n": len(comm),
+        "mcp": {"official": mcp_off, "vendor_hosted": mcp_strong, "unknown": mcp_unknown, "community_n": len(comm),
                 "community_by_cat": dict(comm_by_cat)},
         "agreement": dict(agree),
         "coverage": {"supported_fields": supported, "total_fields": fields_total,

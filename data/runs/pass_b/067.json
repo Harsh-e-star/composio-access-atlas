@@ -1,0 +1,238 @@
+{
+ "id": 67,
+ "name": "Snowflake",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:35:33Z",
+ "duration_s": 77.3,
+ "cost_usd": 0.0689,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.snowflake.com",
+   "developer_portal": "https://docs.snowflake.com",
+   "description": "Snowflake: cloud data platform (data warehouse, data lake, Cortex AI, and developer APIs), operated by Snowflake Inc. The assignment hint (docs.snowflake.com) matches the product.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs describe the Snowflake REST APIs, SQL API, and Snowflake-managed MCP server for the Snowflake data platform. Matches the product named in the task."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Service account/JWT",
+    "Bearer/PAT",
+    "Other"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Snowflake OAuth, with custom clients (confidential or public) configured via a security integration. Exact grant types not verified.",
+   "token_refresh": "unknown",
+   "scopes_notes": "Snowflake-managed MCP server recommends OAuth for clients people sign in to; programmatic access tokens are the fallback. Per-tool permissions must be granted separately."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Some features are restricted without a payment method (external network access, hybrid tables, Openflow capped at 10 credits/day; Cortex AI functions capped ~10 credits/day). Trial credits expire when the trial ends."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Accounts, users, roles, database roles, grants",
+    "Warehouses, databases, schemas",
+    "Tables (incl. dynamic, event, Iceberg), views, sequences",
+    "Stages, external volumes, pipes",
+    "Notebooks and Streamlit apps",
+    "Snowpark Container Services: compute pools, image repositories, services",
+    "Functions, procedures, artifact repositories",
+    "Cortex Embed, Cortex Inference, Cortex Search Service",
+    "Security, alerts, streams, tasks, integrations, tags"
+   ],
+   "read_ops": [
+    "Submit SQL statements for execution and check execution status (SQL API)",
+    "Execute standard queries (SQL API)"
+   ],
+   "write_ops": [
+    "CREATE OR ALTER for applicable resources (REST API)",
+    "Most DDL and DML statements via SQL API",
+    "Cancel statement execution (SQL API)"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "unknown",
+   "limitations": "Snowflake REST API coverage is not complete: 'not all resources in the API currently provide 100% coverage of their equivalent SQL commands.' Some resources unavailable in government regions. SQL API limitations apply to some statement types (page not fully read)."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+   "community": "unknown",
+   "community_urls": [
+    "https://github.com/Snowflake-Labs/mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods: key-pair JWT (Service account/JWT)",
+    "value": "Key-pair authentication with JWT; JWT valid at most one hour",
+    "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+    "quote": "The JWT is valid for at most one hour after the token is issued, even if you specify a longer expiration time.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods: OAuth2",
+    "value": "OAuth is supported for the REST API",
+    "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+    "quote": "See Introduction to OAuth for details on how to set up OAuth and get an OAuth token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods: Bearer/PAT",
+    "value": "Programmatic access tokens sent as bearer tokens",
+    "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+    "quote": "To authenticate with a programmatic access token, set the following HTTP headers in the request:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods: Other (workload identity federation)",
+    "value": "Workload identity federation for AWS/Azure/GCP/OIDC workloads",
+    "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication",
+    "quote": "As a workload administrator, configure your cloud provider or OpenID Connect (OIDC) provider to issue an attestation:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth custom client admin gate",
+    "value": "Custom OAuth integration creation requires ACCOUNTADMIN or global CREATE INTEGRATION privilege",
+    "url": "https://docs.snowflake.com/en/sql-reference/sql/create-security-integration-oauth-snowflake.html",
+    "quote": "Only account administrators (users with the ACCOUNTADMIN role) or a role with the global CREATE INTEGRATION privilege can execute this SQL command.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.tier / trial",
+    "value": "Free trial: 30 days or $400 in credits, no credit card needed to start",
+    "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+    "quote": "30 days or $400 in credits, whichever runs out first, and you don't need a credit card to start.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.protocols / overview",
+    "value": "Snowflake REST APIs follow OpenAPI and are usable from any HTTP client",
+    "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/snowflake-rest-api",
+    "quote": "The endpoints follow the OpenAPI specification, so they can be used from any language with an HTTP client.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.resources",
+    "value": "REST API covers accounts, warehouses, tables, stages, Snowpark Container Services, Cortex, and more",
+    "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/snowflake-rest-api",
+    "quote": "The APIs support CREATE OR ALTER operations for applicable resources.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.limitations",
+    "value": "Not all REST resources have 100% SQL-command coverage",
+    "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/snowflake-rest-api",
+    "quote": "not all resources in the API currently provide 100% coverage of their equivalent SQL commands",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols / SQL API",
+    "value": "SQL API is a REST API for accessing and updating data",
+    "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+    "quote": "The Snowflake SQL API is a REST API that you can use to access and update data in a Snowflake database.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.write_ops / SQL API",
+    "value": "Executes standard queries and most DDL and DML statements",
+    "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+    "quote": "You can use this API to execute standard queries and most DDL and DML statements.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Snowflake-managed MCP server is a vendor-hosted MCP endpoint",
+    "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+    "quote": "The Snowflake-managed MCP server lets AI agents securely retrieve data from Snowflake accounts",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.auth recommendation",
+    "value": "Snowflake recommends OAuth for MCP clients",
+    "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+    "quote": "We recommend using OAuth as the authentication method.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.tools",
+    "value": "Managed MCP server can serve Cortex Analyst, Cortex Search, and Cortex Agents as tools",
+    "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+    "quote": "You can configure the MCP server to serve Cortex Analyst, Cortex Search, and Cortex Agents as tools",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.GA status",
+    "value": "Snowflake-managed MCP server reached general availability Nov 04, 2025 (preview Oct 2, 2025)",
+    "url": "https://docs.snowflake.com/release-notes/2025/other/2025-11-04-cortex-agents-mcp",
+    "quote": "Nov 04, 2025: Snowflake-managed MCP server (General availability)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community/legacy repo status",
+    "value": "Snowflake-Labs/mcp (owned by Snowflake-Labs GitHub org) is deprecated and no longer maintained; directs users to official server",
+    "url": "https://github.com/Snowflake-Labs/mcp",
+    "quote": "This project is deprecated and no longer maintained.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "SDKs: official client drivers (Python connector, Node.js, Go, JDBC, ODBC, .NET, Snowpark, Snowflake CLI) were not confirmed; the drivers docs URL returned 404 and no verbatim quote was obtained. Set to unknown.",
+   "Webhooks: no documented inbound/outbound webhook feature was found; set to unknown.",
+   "Rate limits for REST and SQL APIs were not established.",
+   "Whether the Snowflake-managed MCP server is still preview or fully GA was not confirmed on the fetched page (release note says GA Nov 04, 2025).",
+   "Snowflake-Labs/mcp is owned by Snowflake's own GitHub org, so it counts as official by ownership, but its README says it is deprecated and was reportedly archived; the managed server is the supported path. Other community MCP servers for Snowflake were not evaluated; community set to unknown.",
+   "OAuth grant types (authorization code vs. client credentials) and token refresh behavior were not verified from docs.",
+   "Sandbox availability beyond the trial account was not established.",
+   "Verbatim quote checks: most quotes were extracted by a summarizing fetch model and are marked unverified; search-snippet claims (trial terms, admin gate) need direct page fetches before production use."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.812,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,208 @@
+{
+ "id": 89,
+ "name": "Ramp",
+ "category": "Finance and Fintech",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:37:29Z",
+ "duration_s": 65.9,
+ "cost_usd": 0.0501,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://ramp.com",
+   "developer_portal": "https://app.ramp.com/settings/ramp-developer",
+   "description": "Ramp is a finance automation platform (corporate cards, spend management, bill pay, reimbursements) for businesses. Its developer API lives at docs.ramp.com and developer-docs.ramp.com (redirects to docs.ramp.com).",
+   "identity_confirmed": "yes",
+   "identity_notes": "The Ramp Help Center and Ramp docs describe the Ramp finance product and its Developer API and MCP server. Not confused with Ramp Network (docs.rampnetwork.com), a separate crypto on-ramp company."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Client Credentials (server-to-server, for your own Ramp business); Authorization Code (third-party apps granted by other Ramp businesses) with Refresh Token. Token endpoint: {environment-url}/developer/v1/token. Client credentials are sent as HTTP Basic auth (client_id:client_secret) or in the form body.",
+   "token_refresh": "Client Credentials tokens last 10 days (864,000 seconds) and return no refresh token; request a new one on expiry. Authorization Code and Refresh Token access tokens default to 1 hour; refresh with grant_type=refresh_token (no new refresh token returned).",
+   "scopes_notes": "Scopes follow resource:permission, e.g. transactions:read. Omitting scope yields a token with no scopes. Each endpoint's API reference lists required scopes; some endpoints also need a Ramp plan feature and return 403 without it."
+  },
+  "access": {
+   "tier": "admin_approval",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "yes",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Publishing an app for other Ramp businesses requires two approvals including a partner application and production access application via the Developer console. Using the API within your own business does not appear to require this. Sandbox access is requested via a form at docs.ramp.com/developer-api/v1/sandbox-access; whether that form is approval-gated is unknown. Sandbox and production need separate apps; sandbox base is demo.ramp.com and production app.ramp.com for authorize."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Transactions",
+    "Cards and Virtual Cards",
+    "Users",
+    "Bill Pay / Bills and Bill Payments",
+    "Reimbursements",
+    "Spend Programs and Spend Controls",
+    "Custom Records",
+    "Banking",
+    "Applications",
+    "Procurement",
+    "Ramp Rate",
+    "AI Index"
+   ],
+   "read_ops": [
+    "Search/retrieve transactions (per Quickstart and CLI guide)"
+   ],
+   "write_ops": [
+    "Issue cards and attach controls",
+    "Create approved bills, attach documents, choose payment method, pay vendors",
+    "Provision, update, deactivate users",
+    "Upload receipts (per CLI guide)"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "unknown: rate-limiting guide exists (docs.ramp.com/llms-guides/rate-limiting.txt) but its numbers were not retrieved. Requests over 60 seconds return 504.",
+   "limitations": "Endpoint-level list and read/write split were not fully verified; full OpenAPI at /openapi/developer-api.json and /llms-api.txt were not fetched. Some endpoints need a specific Ramp plan feature. No official SDK was found in sources. Vendors not confirmed as standalone resource."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.ramp.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://mcpservers.org/servers/ramp-public/ramp-mcp",
+    "https://www.typingmind.com/mcp/ramp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Ramp is a finance platform with corporate cards, bill pay, reimbursements and a Developer API",
+    "url": "https://support.ramp.com/hc/en-us/articles/45516494479891-Ramp-MCP",
+    "quote": "Ramp MCP connects Ramp to AI tools such as Claude, ChatGPT, and Cursor.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary",
+    "value": "OAuth2 (Client Credentials and Authorization Code with Refresh Token)",
+    "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+    "quote": "Ramp uses OAuth 2.0. Your app gets an access token from /developer/v1/token",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.client_credentials_use",
+    "value": "Client Credentials is for server-to-server integrations with your own Ramp business",
+    "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+    "quote": "Use this flow for server-to-server integrations with your own Ramp business.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_lifetime",
+    "value": "Client Credentials tokens last 10 days; Authorization Code tokens 1 hour",
+    "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+    "quote": "Client Credentials access tokens last 10 days (864,000 seconds).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "admin_approval: creating the developer app requires Ramp admin access",
+    "url": "https://support.ramp.com/accessing-the-developer-api",
+    "quote": "Admin access is required.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sandbox",
+    "value": "Sandbox environment is provided for building and testing before production",
+    "url": "https://support.ramp.com/accessing-the-developer-api",
+    "quote": "Ramp provides a sandbox environment where you can build and test your API integration before connecting to production.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Publishing for other Ramp businesses requires two approvals including a partner application",
+    "url": "https://support.ramp.com/accessing-the-developer-api",
+    "quote": "Publishing an app for other Ramp businesses takes two approvals: a partner application",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks deliver real-time event notifications for the Ramp account",
+    "url": "https://docs.ramp.com/llms-guides/webhooks.txt",
+    "quote": "Webhooks allow your application to receive real-time notifications about events that occur in your Ramp account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.write_ops.cards",
+    "value": "Issue cards and attach controls",
+    "url": "https://docs.ramp.com/llms-guides/cards-and-funds.txt",
+    "quote": "Issue cards, attach controls, and watch spend in real time",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.write_ops.bills",
+    "value": "Create approved bills, attach documents, and pay vendors via the API",
+    "url": "https://docs.ramp.com/llms-guides/bill-payments.txt",
+    "quote": "Create approved bills via the API, attach documents, choose a payment method, and pay vendors end-to-end",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Ramp hosts an official remote MCP server at mcp.ramp.com/mcp",
+    "url": "https://support.ramp.com/hc/en-us/articles/45516494479891-Ramp-MCP",
+    "quote": "Any tool that supports remote MCP servers with OAuth can connect to https://mcp.ramp.com/mcp.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.repo_archived",
+    "value": "The ramp-public/ramp_mcp local server repo is archived (owned by the ramp-public org)",
+    "url": "https://github.com/ramp-public/ramp_mcp",
+    "quote": "was archived by the owner on Jul 17, 2026.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Exact rate limits: rate-limiting guide (docs.ramp.com/llms-guides/rate-limiting.txt) was not fetched.",
+   "Whether the sandbox access request form (docs.ramp.com/developer-api/v1/sandbox-access) is approval-gated or instant.",
+   "Plan requirement for the Developer API and MCP server: one search snippet said 'Ramp Plus', but the support articles fetched name no plan. Unresolved.",
+   "Conflicting MCP endpoint: a directory lists https://ramp-mcp-remote.ramp.com/mcp with OAuth; not verified against Ramp docs. mcp.ramp.com/mcp is the one in Ramp's Help Center.",
+   "Whether an official SDK exists; none found in sources.",
+   "Full endpoint list and read/write split: /openapi/developer-api.json and /llms-api.txt not fetched.",
+   "Whether the community/third-party MCP directory entries are unofficial wrappers; not individually checked.",
+   "Whether the ramp-public GitHub org is Ramp's own; owner name only inferred from the repo page.",
+   "Prod base URL: search snippets cite api.ramp.com and demo-api.ramp.com; not verified on an official page. One third-party source gave a conflicting sandbox host."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "high",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Workspace admin approval",
+  "rationale": [
+   "A workspace admin must approve/install or issue credentials."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

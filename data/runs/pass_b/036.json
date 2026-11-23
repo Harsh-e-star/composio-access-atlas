@@ -1,0 +1,261 @@
+{
+ "id": 36,
+ "name": "Klaviyo",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:31:45Z",
+ "duration_s": 70.0,
+ "cost_usd": 0.0716,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.klaviyo.com",
+   "developer_portal": "https://developers.klaviyo.com",
+   "description": "Klaviyo: marketing automation / email & SMS platform. developers.klaviyo.com is its official developer portal, and the docs describe the Klaviyo product (profiles, lists, campaigns, flows, Klaviyo App Marketplace).",
+   "identity_confirmed": "yes",
+   "identity_notes": "Official developer portal and product pages match the named app. Only the portal and Klaviyo-hosted MCP/SDK pages were checked directly; the product description is from the docs and search results, not a full fetch of the marketing site."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2",
+    "Other"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Authorization code flow with PKCE (per the OAuth setup page). Authorization endpoint https://www.klaviyo.com/oauth/authorize; token endpoint https://a.klaviyo.com/oauth/token.",
+   "token_refresh": "Access tokens are valid for 1 hour (subject to change; use expires_in from /token). Refresh tokens remain valid until the app is uninstalled. Refresh calls are limited to 10 per minute.",
+   "scopes_notes": "Scopes are per resource, for example lists:read and lists:write. Webhooks need webhooks:read/webhooks:write; event subscriptions need events:read (from search snippet, not fetched). Private keys are created with Custom, Read-Only, or Full Access scopes. Public keys (6-character company ID) are for client-side /client endpoints only and cannot access protected data."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Marketplace listing requires OAuth (per OAuth docs). Webhook API access is reportedly limited to Advanced KDP customers and Klaviyo app partners (search snippet of v2026-07-15 docs, not fetched). Creating/managing private keys and OAuth apps requires an Owner, Admin, or Manager role, so a developer needs one of those roles on the account they test against."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Two windows: burst (short) and steady (long). Numeric limits not established.",
+   "limitations": "Resource list and read/write coverage were not verified from a fetched page, so breadth stays Unknown. Webhook API access appears restricted (see access). Webhook limit of 10 per account comes from a 2024 page and may be outdated. JSON:API format used. /api endpoints need a private API key; /client endpoints use public keys. Webhooks support is confirmed by the docs overview but details come from search snippets."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+   "community": "yes",
+   "community_urls": [
+    "https://pypi.org/project/klaviyo-mcp-server-extended",
+    "https://pypi.org/project/mcparmory-klaviyo/1.0.0/"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Klaviyo developer portal describes the Klaviyo platform and its API",
+    "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+    "quote": "Klaviyo provides 3 methods of authentication including private key authentication and OAuth",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.api_key",
+    "value": "Private API keys are created in account settings, with a pk_ prefix and selectable scopes",
+    "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+    "quote": "Give the key a name and choose its scopes (Custom, Read-Only, or Full Access).",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.public_key",
+    "value": "Public keys are for client-side endpoints and cannot access secure data",
+    "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+    "quote": "Public keys cannot be used to access secure data in your account and are safe to share.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth2",
+    "value": "OAuth is recommended for tech partners",
+    "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+    "quote": "OAuth provides \"secure delegated access to users via access tokens\" and is recommended for tech partners.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.oauth_flow",
+    "value": "Authorization code flow with PKCE; token endpoint https://a.klaviyo.com/oauth/token",
+    "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+    "quote": "Klaviyo requires PKCE for safely storing credentials",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.token_expiry",
+    "value": "Access tokens valid 1 hour; refresh token valid until app uninstalled",
+    "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+    "quote": "Access tokens are valid for 1 hour (this is subject to change). Rely on the expires_in returned by /token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.oauth_app_creators",
+    "value": "Only owner, admin, and manager roles can create OAuth apps",
+    "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+    "quote": "Note that only owner, admin, and manager roles can create OAuth apps in Klaviyo.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.marketplace",
+    "value": "Marketplace consideration requires OAuth; minimal scopes required",
+    "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+    "quote": "Your app must use OAuth in order to be considered for Klaviyo's App Marketplace.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.test_account",
+    "value": "Free test account for API work; billing may still apply",
+    "url": "https://developers.klaviyo.com/en/docs/create-a-test-account",
+    "quote": "The Klaviyo Academy says creating a test account is free.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.key_roles",
+    "value": "Managing private keys requires Owner, Admin, or Manager role",
+    "url": "https://developers.klaviyo.com/en/docs/create-a-test-account",
+    "quote": "Managing keys requires an Owner, Admin, or Manager user role.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.protocol_rest_jsonapi",
+    "value": "REST API using JSON:API conventions; /api endpoints use private API keys",
+    "url": "https://developers.klaviyo.com/en/reference/api-overview",
+    "quote": "All `/api` endpoints use private API keys with API key scopes to authenticate requests.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.jsonapi",
+    "value": "JSON:API filtering used across new APIs",
+    "url": "https://developers.klaviyo.com/en/reference/api-overview",
+    "quote": "JSON:API's general filtering syntax and its supported operations can be used across all new APIs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Burst and steady rate-limit windows",
+    "url": "https://developers.klaviyo.com/en/reference/api-overview",
+    "quote": "two distinct windows: burst (short) and steady (long)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks API exists; signed with HMAC-SHA256 and Klaviyo-Signature header",
+    "url": "https://developers.klaviyo.com/en/v2026-07-15/docs/webhooks_api_overview",
+    "quote": "Klaviyo signs requests with HMAC-SHA256 using your secret key",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.webhook_restriction",
+    "value": "Webhook API access limited to Advanced KDP customers and Klaviyo app partners",
+    "url": "https://developers.klaviyo.com/en/v2026-07-15/docs/webhooks_api_overview",
+    "quote": "only Advanced KDP customers and Klaviyo app partners can access and manage webhooks with our Webhooks API",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Official SDKs in Python, PHP, Ruby, Node",
+    "url": "https://developers.klaviyo.com/en/docs/sdk-overview",
+    "quote": "Klaviyo's SDK overview says it offers SDKs in Python, PHP, Ruby, and Node.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.sdk_github",
+    "value": "Node SDK repo klaviyo/klaviyo-api-node; older klaviyo-node-sdk archived",
+    "url": "https://www.github.com/klaviyo/klaviyo-api-node",
+    "quote": "klaviyo/klaviyo-api-node",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.remote",
+    "value": "Klaviyo's docs recommend a remote-hosted MCP server, with a local server as alternative",
+    "url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+    "quote": "configure your MCP client for the remote-hosted server (recommended) or the local server.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.remote_host",
+    "value": "Remote endpoint at mcp.klaviyo.com/mcp with OAuth sign-in",
+    "url": "https://developers.klaviyo.com/en/docs/connect_to_the_klaviyo_mcp_server",
+    "quote": "https://mcp.klaviyo.com/mcp",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.local_pypi",
+    "value": "Official local server published on PyPI as klaviyo-mcp-server, run via uvx with private API key env var",
+    "url": "https://pypi.org/project/klaviyo-mcp-server/",
+    "quote": "klaviyo-mcp-server",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community fork klaviyo-mcp-server-extended (MissionSquad org) adds six tools; not Klaviyo-supported",
+    "url": "https://pypi.org/project/klaviyo-mcp-server-extended",
+    "quote": "klaviyo-mcp-server-extended",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Full resource list and read/write coverage for breadth (not fetched; left Unknown).",
+   "Whether the Webhooks API is restricted to Advanced KDP customers and app partners, or open to developers; confirm on the v2026 webhooks page.",
+   "Numeric rate limits (burst and steady) and the current webhook-per-account cap.",
+   "Whether free test accounts have any API limits or paid-plan requirements.",
+   "Whether the local klaviyo-mcp-server PyPI package is published from a Klaviyo-owned GitHub org; no repo link was verified.",
+   "Whether mcp.klaviyo.com requires an owner/admin/manager role (from search summary only).",
+   "Official SDK source repos and current versions; the Python SDK repo was not confirmed.",
+   "Whether the OAuth app review or approval step exists before publishing to the marketplace."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.619,
+ "flags": [],
+ "error": null
+}

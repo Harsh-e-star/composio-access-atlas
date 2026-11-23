@@ -1,0 +1,174 @@
+{
+ "id": 88,
+ "name": "Brex",
+ "category": "Finance and Fintech",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:25:35Z",
+ "duration_s": 12.9,
+ "cost_usd": 0.0179,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developer.brex.com",
+   "title": "Overview",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/crazyrabbitLTC/mcp-brex-server",
+   "title": "crazyrabbitLTC/mcp-brex-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/dennisonbertram/mcp-brex",
+   "title": "dennisonbertram/mcp-brex",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/agenticledger/brex-mcp-http",
+   "title": "agenticledger/brex-mcp-http",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/shuji-bonji/s1000d-brex-mcp",
+   "title": "shuji-bonji/s1000d-brex-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/shuji-bonji/s1000d-writer-mcp",
+   "title": "shuji-bonji/s1000d-writer-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/shuji-bonji/s1000d-verify-mcp",
+   "title": "shuji-bonji/s1000d-verify-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://developer.brex.com",
+   "developer_portal": "https://developer.brex.com",
+   "description": "Brex is a unified spend platform with global corporate cards, expense management, reimbursements, travel, and bill pay.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Developer portal developer.brex.com describes the Brex API."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Accounting",
+    "Budgets",
+    "Expenses",
+    "Fields",
+    "Onboarding",
+    "Payments",
+    "Team",
+    "Transactions",
+    "Travel",
+    "Webhooks"
+   ],
+   "read_ops": [
+    "View accounting data",
+    "View card expenses",
+    "View transactions, accounts, statements",
+    "View trips"
+   ],
+   "write_ops": [
+    "Manage budgets",
+    "Receipt uploads",
+    "Manage fields",
+    "Manage vendors and send ACH, wires, checks",
+    "Manage users, locations, departments, cards"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/crazyrabbitLTC/mcp-brex-server",
+    "https://github.com/dennisonbertram/mcp-brex",
+    "https://github.com/agenticledger/brex-mcp-http"
+   ]
+  },
+  "claims": [
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developer.brex.com",
+    "quote": "Brex APIs use the REST architecture, are defined using the OpenAPI specification and use standard HTTP response codes and verbs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developer.brex.com",
+    "quote": "Payments API : Manage vendors and send ACH, domestic wires, and checks Team API : Manage users, locations, departments, and cards",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://developer.brex.com",
+    "quote": "Webhooks API : Send real-time notifications based on events",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Auth methods not established in sources",
+   "Access tier not established",
+   "Whether the 'Brex MCP' page on developer.brex.com is an official MCP server (nav entry exists but content not provided)"
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "high",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

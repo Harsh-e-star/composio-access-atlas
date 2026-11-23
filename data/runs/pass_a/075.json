@@ -1,0 +1,289 @@
+{
+ "id": 75,
+ "name": "Asana",
+ "category": "Productivity and Project Management",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:23:38Z",
+ "duration_s": 26.9,
+ "cost_usd": 0.0747,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developers.asana.com",
+   "title": "Asana Docs",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.asana.com/reference/rest-api-reference",
+   "title": "Overview",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.asana.com/docs/quick-start",
+   "title": "Quick start guide",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://forum.asana.com/c/forum-en/api/24",
+   "title": "Latest API & Developers topics - Asana Community",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developers.asana.com/docs/getting-started-with-asana-oauth",
+   "title": "OAuth Code Samples / Libraries",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developers.asana.com/docs/authentication",
+   "title": "Authentication",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developers.asana.com/docs/oauth",
+   "title": "OAuth",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developers.asana.com/docs/oauth-scopes",
+   "title": "OAuth scopes",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developers.asana.com/docs/mcp-tools-reference",
+   "title": "MCP Tools Reference",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/itsdecodingai/enterprise-mcp-course",
+   "title": "itsdecodingai/enterprise-mcp-course",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/roychri/mcp-server-asana",
+   "title": "roychri/mcp-server-asana",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/bobmatnyc/mcp-ticketer",
+   "title": "bobmatnyc/mcp-ticketer",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/kevinblanco/pmo-intelligence-engine",
+   "title": "kevinblanco/pmo-intelligence-engine",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jak-myers/agents-os",
+   "title": "jak-myers/agents-os",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Asana/command-mcp",
+   "title": "Asana/command-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/n0zer0d4y/asana-project-ops",
+   "title": "n0zer0d4y/asana-project-ops",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/joelborch/flow",
+   "title": "joelborch/flow",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://asana.com",
+   "developer_portal": "https://developers.asana.com",
+   "description": "Asana is a work management platform; its developer platform offers a REST API, webhooks, app components, OAuth, and an MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are from developers.asana.com and Asana forum."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT",
+    "Service account/JWT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization code grant with refresh tokens; token exchange at https://app.asana.com/-/oauth_token. OIDC also supported. Browser token requests not supported.",
+   "token_refresh": "Access tokens last about one hour (expires_in typically 3600); refresh using grant_type refresh_token.",
+   "scopes_notes": "OAuth scopes follow <resource>:<action> format (e.g. tasks:read). Service Account scopes are separate. MCP apps do not use permission scopes."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Service Accounts are an Enterprise tier feature and can only be created by super admins; needed for audit log, SCIM, org exports. PATs and OAuth do not require these. App distribution can be limited to specific workspaces."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "tasks",
+    "projects",
+    "portfolios",
+    "goals",
+    "users",
+    "workspaces",
+    "attachments",
+    "custom_fields",
+    "webhooks",
+    "notifications",
+    "time_tracking_entries",
+    "ooo_entries",
+    "typeahead"
+   ],
+   "read_ops": [
+    "get tasks",
+    "get projects",
+    "goals",
+    "users",
+    "workspaces",
+    "attachments",
+    "custom fields",
+    "time tracking entries",
+    "notifications"
+   ],
+   "write_ops": [
+    "create/update/delete tasks",
+    "attachments",
+    "custom fields",
+    "webhooks",
+    "portfolios",
+    "ooo entries",
+    "time tracking categories",
+    "timesheet approval statuses"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "MCP tokens do not work with the REST API. View-only license users have limited API access."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developers.asana.com/docs/mcp-tools-reference",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/roychri/mcp-server-asana",
+    "https://github.com/bobmatnyc/mcp-ticketer",
+    "https://github.com/n0zer0d4y/asana-project-ops"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2, Bearer/PAT, Service account",
+    "url": "https://developers.asana.com/docs/authentication",
+    "quote": "PATs are long-lived tokens allowing programmatic authentication to the API and should be stored securely.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://developers.asana.com/docs/oauth-scopes",
+    "quote": "Asana uses OAuth 2.0 for secure user authorization.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developers.asana.com/docs/quick-start",
+    "quote": "The quickest method to do so is by using a personal access token (PAT), which you can think of as your unique password for accessing the API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.asana.com/reference/rest-api-reference",
+    "quote": "The Asana API is a REST ful interface with predictable resource-oriented URLs, accepts JSON or form-encoded requests, returns JSON",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developers.asana.com/reference/rest-api-reference",
+    "quote": "This reference is generated from our OpenAPI Specification , and contains a comprehensive reference for objects, schemas, and endpoints available in the API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developers.asana.com/docs/mcp-tools-reference",
+    "quote": "The Asana V2 MCP server exposes a set of tools that allow AI assistants to read from and write to your Asana workspace.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "1 hour access tokens",
+    "url": "https://developers.asana.com/docs/oauth",
+    "quote": "Using this access token , the application can now make requests against the Asana API for the next hour",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "production_restrictions",
+    "value": "Service accounts Enterprise only",
+    "url": "https://developers.asana.com/docs/authentication",
+    "quote": "Service Accounts are an Enterprise tier feature and can only be created by Asana super admins",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Rate limits not stated in provided sources.",
+   "Whether a free Asana plan has full API access is not explicitly stated.",
+   "Webhooks support inferred from webhooks scopes/endpoints."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

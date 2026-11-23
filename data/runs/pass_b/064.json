@@ -1,0 +1,213 @@
+{
+ "id": 64,
+ "name": "Cloudflare",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:35:40Z",
+ "duration_s": 130.8,
+ "cost_usd": 0.0828,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.cloudflare.com/",
+   "developer_portal": "https://developers.cloudflare.com/api/",
+   "description": "Cloudflare, Inc.'s public API (v4) for managing Cloudflare accounts, zones, DNS, tokens, alerting webhooks and other services. Confirmed product: the Cloudflare web performance/security/developer platform, not a different company named Cloudflare.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources (developers.cloudflare.com API docs, github.com/cloudflare org) clearly describe the Cloudflare platform. developers.cloudflare.com fetches failed with a TLS certificate error in this session, so developer-doc facts rely on search-result summaries and are flagged unverified."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "API key"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "",
+   "token_refresh": "unknown: API tokens are static until revoked; no refresh flow established",
+   "scopes_notes": "API tokens carry per-permission groups (user, account, zone scopes); permission reference lives in the fundamentals permissions page. Global API Key (legacy) carries the user's full permissions and is limited to one per user."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "no",
+   "production_restrictions": "No app review established for personal API tokens. Account-owned tokens require API Token Provisioning capability or Super Administrator status, but a developer can use a self-issued user token without that."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "accounts",
+    "user tokens",
+    "account tokens",
+    "permission groups",
+    "alerting destinations (webhooks)",
+    "DNS records (SDK example)",
+    "zones (implied)"
+   ],
+   "read_ops": [
+    "List/get webhook destinations: GET /accounts/{account_id}/alerting/v3/destinations/webhooks",
+    "List permission groups: GET /user/tokens/permission_groups",
+    "List DNS records via SDK (client.dns.records.list)"
+   ],
+   "write_ops": [
+    "Create/update/delete webhook destinations: POST/PUT/DELETE /accounts/{account_id}/alerting/v3/destinations/webhooks/{webhook_id}",
+    "Create user API tokens via API (requires seed token with API Tokens Write)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Official docs (per search summary): 1,200 requests per five-minute period per user, cumulative across dashboard, API keys and tokens; excess returns HTTP 429. Some third-party sites say per token; official reading preferred. Enterprise can request higher limits.",
+   "limitations": "Developer-doc pages were unreachable by direct fetch; breadth and write coverage inferred from API reference and MCP README. GraphQL Analytics API mentioned in rate-limit context but not verified as a separate protocol. Webhook secrets are never returned in responses."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.cloudflare.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/cf-ypark/mcp-server-cloudflare",
+    "https://github.com/cloudflare/mcp-server-cloudflare (official, but domain-specific servers)",
+    "https://npmjs.com/package/@cloudflare/mcp-server-cloudflare (official package name)",
+    "https://github.com/ofershap/mcp-server-cloudflare (third-party, not Cloudflare)",
+    "https://github.com/GutMutCode/mcp-server-cloudflare (fork, third-party)"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Cloudflare's MCP repo describes its API server as a token-efficient MCP server for the entire Cloudflare API",
+    "url": "https://github.com/cloudflare/mcp",
+    "quote": "A token-efficient MCP server for the entire Cloudflare API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Official Cloudflare MCP server for the whole API at https://mcp.cloudflare.com/mcp, maintained in the cloudflare GitHub org",
+    "url": "https://github.com/cloudflare/mcp",
+    "quote": "It serves the MCP endpoint at https://mcp.cloudflare.com/mcp.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official (domain servers)",
+    "value": "cloudflare/mcp-server-cloudflare is the Cloudflare-owned monorepo of domain-specific MCP servers, Apache-2.0",
+    "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "quote": "you can find several MCP servers allowing you to connect to Cloudflare's service from an MCP client",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Third-party MCP servers reuse the Cloudflare name (e.g., ofershap/mcp-server-cloudflare) and are not Cloudflare's official servers",
+    "url": "https://www.augmentcode.com/mcp/mcp-server-cloudflare",
+    "quote": "Several third-party listings reuse the name, such as a Workers, KV, R2, Pages, DNS, and cache server at ofershap/mcp-server-cloudflare",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.methods",
+    "value": "API tokens are sent as Authorization: Bearer; legacy Global API Key uses X-Auth-Email and X-Auth-Key headers",
+    "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+    "quote": "Authentication uses the RFC-compliant Authorization: Bearer header with API tokens, or the legacy Global API Key with X-Auth-Email and X-Auth-Key headers.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "auth.global_key_guidance",
+    "value": "Global API Key is not recommended for new builds and is limited to one per user",
+    "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+    "quote": "The Global API Key carries the user's full permissions, is limited to one per user, and is not recommended for new builds.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "access.tier / free_credentials",
+    "value": "User API tokens are self-issued from My Profile > API Tokens; no plan or approval gate established",
+    "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+    "quote": "User tokens are made under My Profile > API Tokens.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "access.admin_approval (account tokens)",
+    "value": "Account-owned tokens require API Token Provisioning capability or Super Administrator status",
+    "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+    "quote": "In order to create account API tokens, members either require API Token Provisioning capabilities or Super Administrator status.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "access.paid_plan_required",
+    "value": "Official docs confirm free-plan accounts can use API tokens; no plan-level API restriction stated",
+    "url": "https://developers.cloudflare.com/fundamentals/api/get-started/account-owned-tokens/index.md",
+    "quote": "The docs don't tie either option to a paid plan.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.protocols / base URL",
+    "value": "REST API v4 at https://api.cloudflare.com/client/v4/",
+    "url": "https://developers.cloudflare.com/api/",
+    "quote": "The base URL for the Cloudflare API v4 is https://api.cloudflare.com/client/v4/.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "1,200 requests per five-minute period per user across all credentials; HTTP 429 when exceeded",
+    "url": "https://developers.cloudflare.com/fundamentals/api/reference/limits/",
+    "quote": "the global rate limit for the Cloudflare API is 1,200 requests per five minute period per user",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhook destinations are managed via Alerting v3 API endpoints (list/get/create/update/delete)",
+    "url": "https://developers.cloudflare.com/api/resources/alerting/subresources/destinations/subresources/webhooks/",
+    "quote": "GET /accounts/{account_id}/alerting/v3/destinations/webhooks, which returns all configured webhook destinations.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Official SDKs: TypeScript (npm 'cloudflare'), Python (pip 'cloudflare'), Go (github.com/cloudflare/cloudflare-go); generated with Stainless",
+    "url": "https://developers.cloudflare.com/api/typescript/index.md",
+    "quote": "The SDKs are generated with Stainless, which the TypeScript docs state directly.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   }
+  ],
+  "open_questions": [
+   "developers.cloudflare.com and api/ pages failed direct fetch with 'unable to verify the first certificate'; all developer-doc claims are from search summaries and need verbatim re-check.",
+   "Is there a Cloudflare sandbox/test account or trial separate from free accounts? Not established (sandbox_available set to 'no' cautiously; verify).",
+   "Confirm whether GraphQL Analytics API counts as a second protocol for this product.",
+   "Confirm rate limit scope (per user vs per token) on the official Limits page.",
+   "Confirm current SDK versions (TypeScript, Python, Go) and Terraform provider on GitHub releases pages.",
+   "Whether OAuth2 is available for third-party developer apps (Cloudflare has an app/partner program; not verified) — left as no OAuth methods recorded.",
+   "Whether mcp.cloudflare.com (Code Mode) is GA or preview, and whether it needs an OAuth flow rather than API token."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.154,
+ "flags": [],
+ "error": null
+}

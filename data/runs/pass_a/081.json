@@ -1,0 +1,299 @@
+{
+ "id": 81,
+ "name": "Stripe",
+ "category": "Finance and Fintech",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:24:27Z",
+ "duration_s": 31.3,
+ "cost_usd": 0.0903,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.stripe.com/api",
+   "title": "Stripe API Reference",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://stripe.com/in",
+   "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.stripe.com",
+   "title": "Stripe Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.stripe.com/api/authentication",
+   "title": "Authentication | Stripe API Reference",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.stripe.com/api/three-d-secure/authentication",
+   "title": "3DS Authentications | Stripe API Reference",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.stripe.com/api/v2/core/account-tokens",
+   "title": "Account Tokens | Stripe API Reference",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.stripe.com/api/v2/core/person-tokens",
+   "title": "Person Tokens | Stripe API Reference",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.stripe.com/api/confirmation_tokens",
+   "title": "Confirmation Tokens | Stripe API Reference",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.stripe.com/api/tokens",
+   "title": "Tokens | Stripe API Reference",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.stripe.com/api/shared-payment/issued-token",
+   "title": "Shared Payment Issued Tokens | Stripe API Reference",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://docs.stripe.com/api/shared-payment/granted-token",
+   "title": "Shared Payment Granted Tokens | Stripe API Reference",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/iannuttall/mcp-boilerplate",
+   "title": "iannuttall/mcp-boilerplate",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Kronova-Intelligent-Systems/asset-intel-orchestration-engine",
+   "title": "Kronova-Intelligent-Systems/asset-intel-orchestration-engine",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Justin0504/Sovereign-OS",
+   "title": "Justin0504/Sovereign-OS",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Humblytics/humblytics-marketing-skills",
+   "title": "Humblytics/humblytics-marketing-skills",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/guillermoscript/lms-front",
+   "title": "guillermoscript/lms-front",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/atharvagupta2003/mcp-stripe",
+   "title": "atharvagupta2003/mcp-stripe",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Snyder-Technology-LLC/authflow-guides-resources-docs",
+   "title": "Snyder-Technology-LLC/authflow-guides-resources-docs",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/giancarloerra/JanuScope",
+   "title": "giancarloerra/JanuScope",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://stripe.com",
+   "developer_portal": "https://docs.stripe.com/api",
+   "description": "Stripe provides financial infrastructure: payments, billing, Connect, Issuing, Treasury, Tax and more, exposed through a REST API with official client libraries.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are official Stripe docs and website."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Basic",
+    "Bearer/PAT",
+    "Service account/JWT"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "Workload Identity Federation exchanges a short-lived identity token for a Stripe access token that expires after 1 hour.",
+   "scopes_notes": "Restricted API keys (rk_live_) with specific API permissions; test mode secret keys (sk_test_) have unrestricted access to sandboxes; live secret keys grant access to all resources."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "yes",
+   "production_restrictions": "Live mode requires restricted or secret live keys; sources do not detail activation requirements."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Accounts",
+    "Balances",
+    "Charges",
+    "Customers",
+    "Disputes",
+    "Events",
+    "Files",
+    "Payment Intents",
+    "Setup Intents",
+    "Payouts",
+    "Refunds",
+    "Payment Methods",
+    "Products",
+    "Prices",
+    "Coupons",
+    "Checkout Sessions",
+    "Payment Links",
+    "Invoices",
+    "Billing Meters",
+    "Issuing",
+    "Terminal",
+    "Treasury",
+    "Tax",
+    "Identity",
+    "Webhooks",
+    "Transfers",
+    "Tokens"
+   ],
+   "read_ops": [
+    "Retrieve and list objects (e.g. GET /v1/confirmation_tokens/:id, GET /v1/tokens/:id)"
+   ],
+   "write_ops": [
+    "Create payment intents, tokens, 3DS authentications, shared payment tokens, accounts (POST endpoints)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "The Stripe API doesn't support bulk updates; one object per request."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/atharvagupta2003/mcp-stripe"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key, Basic, Bearer",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "The Stripe API uses API keys to authenticate requests. You can view and manage your API keys in the Stripe Dashboard.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Basic",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "The Stripe API authenticates requests using HTTP Basic Auth . Provide your API key as the basic auth username value.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Bearer",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "If you need to authenticate using bearer auth (for example, for a cross-origin request)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "Workload Identity Federation access token expires after 1 hour",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "Your service exchanges a short-lived identity token from its cloud provider for a Stripe access token that expires after 1 hour.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.stripe.com",
+    "quote": "Sign in or create an account to load your test API keys.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "curl https://api.stripe.com/v1/charges",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.stripe.com/api",
+    "quote": "You can use the Stripe API in sandboxes without affecting your live data or interacting with banking networks.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "unknown",
+    "url": "https://docs.stripe.com",
+    "quote": "Build on Stripe with AI",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is there an official Stripe MCP server (e.g. github.com/stripe/ai or docs.stripe.com/mcp)? Not established in the sources.",
+   "Rate limits are not stated in the sources.",
+   "Account activation requirements for live mode are not covered."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "high",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

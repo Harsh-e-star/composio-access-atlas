@@ -1,0 +1,179 @@
+{
+ "id": 25,
+ "name": "Pumble",
+ "category": "Communications and Messaging",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:24:10Z",
+ "duration_s": 58.2,
+ "cost_usd": 0.0359,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://pumble.com",
+   "developer_portal": "https://pumble-api-keys.addons.marketplace.cake.com/api-docs/",
+   "description": "Pumble is a team messaging/chat app (pumble.com), published by CAKE.com. Its help center and developer materials describe a Pumble API add-on, an API reference, an SDK, and a native MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "The Pumble help center, the CAKE.com update page and the CAKE-com GitHub SDK all describe the same product. The API docs page rendered only as a 'Scalar API Reference' title, so its endpoint list was not verified."
+  },
+  "auth": {
+   "methods": [
+    "API key"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "unknown",
+   "scopes_notes": "Per the Pumble SDK page, each request must be sent with an x-app-token header (the App key) and a token header (user or bot token); the SDK says method calls can run on behalf of either a user or a bot. The Swagger doc's scope requirements were not verified."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No production restrictions were found in the sources reviewed. Whether a workspace admin must install the API addon before a developer can get a key is not established."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "messages",
+    "channels",
+    "users",
+    "workspace",
+    "calls",
+    "app",
+    "files"
+   ],
+   "read_ops": [
+    "list channel messages",
+    "list the user's channels and DMs"
+   ],
+   "write_ops": [
+    "send message",
+    "reply to message",
+    "delete message",
+    "add reaction",
+    "create channel"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "unknown",
+   "limitations": "The full endpoint list is in a Swagger/Scalar reference that did not render, so breadth is inferred from help-article examples and SDK resource groups. Webhook support was not found."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+   "community": "yes",
+   "community_urls": [
+    "https://lobehub.com/mcp/shoutkol-pumble-mcp-server",
+    "https://github.com/nitindermohan/pumble-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "api_addon_required",
+    "value": "An API add-on must be installed on the workspace before API keys can be created.",
+    "url": "https://pumble.com/help/integrations/api-keys-integration",
+    "quote": "Before you can create an API key, you need to install the API addon on your Pumble workspace.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api_key_generation",
+    "value": "Once the add-on is installed, API keys are generated in the Pumble app under the API section.",
+    "url": "https://pumble.com/help/integrations/api-keys-integration",
+    "quote": "Once your API addon is installed, you can generate API keys directly in Pumble.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "plan_availability",
+    "value": "The API key feature is available on all plans.",
+    "url": "https://pumble.com/help/integrations/api-keys-integration",
+    "quote": "Available on all plans",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api_swagger_docs",
+    "value": "The full list of API actions is in the Swagger documentation.",
+    "url": "https://pumble.com/help/?p=7104",
+    "quote": "The full list of available actions is available in the Swagger documentation.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdk_auth_headers",
+    "value": "Every request needs x-app-token and token headers; the SDK adds them automatically.",
+    "url": "https://cake-com.github.io/pumble-node-sdk/api-client.html",
+    "quote": "Every Request to Pumble API must be sent with two headers:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdk_repo",
+    "value": "Official SDK repo: github.com/CAKE-com/pumble-node-sdk (pumble-sdk package).",
+    "url": "https://cake-com.github.io/pumble-node-sdk/api-client.html",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp_official_server",
+    "value": "Pumble offers a native MCP server, endpoint https://mcp.pumble.com/mcp.",
+    "url": "https://cake.com/updates/mcp-server",
+    "quote": "The MCP server is available to all new and existing Pumble users.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp_credentials",
+    "value": "MCP setup needs a Pumble app; copy its App key, user token and bot token after install.",
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+    "quote": "When the app is installed, make sure to copy the App key, user token, and bot token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "community_mcp",
+    "value": "Community MCP servers exist (e.g., shoutkol/pumble-mcp-server, nitindermohan/pumble-mcp); not verified by fetching.",
+    "url": "https://lobehub.com/mcp/shoutkol-pumble-mcp-server",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Does the Pumble add-on install require a workspace admin or owner? The API key article lists Owner, Admin, Member as roles that can use the feature, but not who can install the add-on.",
+   "Is there a sandbox or free dev workspace for testing, and is a trial available?",
+   "Full endpoint list, scopes, rate limits, and whether webhooks or event subscriptions exist: the Scalar/Swagger reference at pumble-api-keys.addons.marketplace.cake.com did not render.",
+   "Is the SDK's license stated (the SDK page did not show one)?",
+   "Who maintains mcp.pumble.com, and is the MCP server's source published on GitHub? Not established.",
+   "Are the community MCP repos (shoutkol/pumble-mcp-server, nitindermohan/pumble-mcp) active and safe? Not inspected.",
+   "Is OAuth2 supported for third-party apps? Not found; the sources describe only app/user/bot tokens."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 0.778,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,224 @@
+{
+ "id": 16,
+ "name": "LiveAgent",
+ "category": "Support and Helpdesk",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:21:59Z",
+ "duration_s": 85.7,
+ "cost_usd": 0.0563,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.liveagent.com/pricing",
+   "developer_portal": "https://support.liveagent.com/567924-Documentation",
+   "description": "LiveAgent is a helpdesk and customer support software product from QualityUnit, with ticketing, knowledge base and AI features. Its public API v3 is at YOURDOMAIN.ladesk.com/docs/api/v3/.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe the product as LiveAgent helpdesk software and tie it to QualityUnit: the official LiveAgent support site, the LiveAgent pricing page, and the QualityUnit-owned GitHub repos. Search results also show third-party listings (Capterra, Software Advice) for the same product."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "For the built-in MCP server, the LiveAgent docs describe OAuth 2.1 with automatic authorization-server discovery and a consent screen. No OAuth flows are documented for the REST API v3 in the sources I read.",
+   "token_refresh": "unknown. API keys are static and regenerated manually. MCP bearer tokens expire two years after generation, and OAuth 2.1 refresh behavior is not documented in what I read.",
+   "scopes_notes": "API v3 keys can have permissions defined per key when added. The docs also state that 'Generating a new key immediately disables the old one' (search snippet only). Per-tool MCP access depends on the role or the AI agent's tool selection."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "yes",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "no",
+   "production_restrictions": "No sandbox was found. A 30-day free trial with no credit card is the documented route to a live test account. API keys are included on all four published plans, with key counts of 1 (Starter), 5 (Team), 10 (Business), and unlimited (Enterprise). Whether API keys are included during the trial, and whether a free developer account exists, is not established."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Unknown",
+   "resources": [
+    "agents",
+    "tickets",
+    "departments",
+    "tags",
+    "knowledge base",
+    "custom ticket fields"
+   ],
+   "read_ops": [
+    "Read operations on agents and tickets are referenced in the docs; the full v3 resource list was not extracted",
+    "MCP read tools include search_tickets, get_ticket_metadata, get_ticket_messages, list_agents, list_departments, search_kb_articles, get_kb_article"
+   ],
+   "write_ops": [
+    "Docs name methods get, post, and delete for v3 (v3 docs page)",
+    "MCP write tools include add_note, assign_ticket, transfer_ticket, resolve_ticket, reopen_ticket, create_kb_article, update_kb_article (these are MCP tools, not confirmed v3 REST endpoints)"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "Rate limits exist per the docs ('There are limits related to API and API keys.'). Specific numbers were not extracted; the detail page is https://support.liveagent.com/931802-API-rate-limit-API-requests-limit (not fetched).",
+   "limitations": "The full v3 endpoint list is only in the in-account docs at YOURDOMAIN.ladesk.com/docs/api/v3, which I could not access. Webhooks are not established. The v1 REST reference page returned 404 when fetched."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://support.liveagent.com/647358-MCP-Integration-for-Agents",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/qualityunit/liveagent-mcp-server",
+    "https://mcp.pipedream.com/app/liveagent",
+    "https://zapier.com/mcp/liveagent",
+    "https://viasocket.com/mcp/liveagent",
+    "https://www.klavis.ai/docs/mcp-server/liveagent",
+    "https://www.flowhunt.io/mcp-servers/liveagent/"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "LiveAgent is helpdesk software; the official site and pricing page are on liveagent.com",
+    "url": "https://www.liveagent.com/pricing",
+    "quote": "Every plan starts with a 30-day free trial, and no credit card is required.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary",
+    "value": "API key sent in an 'apikey' request header",
+    "url": "https://support.liveagent.com/741982-API-key",
+    "quote": "Your API key has to be set in header of your requests:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.admin_approval_required",
+    "value": "yes (keys are generated from the admin area)",
+    "url": "https://support.liveagent.com/741982-API-key",
+    "quote": "While logged in as an admin navigate to Configuration> System> API",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.regenerate",
+    "value": "Regenerating a key invalidates the old key",
+    "url": "https://support.liveagent.com/741982-API-key",
+    "quote": "ALL clients using the old key will stop working immediately!",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial_available",
+    "value": "30-day free trial, no credit card required",
+    "url": "https://www.liveagent.com/pricing",
+    "quote": "Every plan starts with a 30-day free trial, and no credit card is required.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.api_key_included_in_plans",
+    "value": "API keys included on all four plans; Starter 1, Team 5, Business 10, Enterprise unlimited",
+    "url": "https://www.liveagent.com/pricing",
+    "quote": "letting third-party apps retrieve and push data and manage tickets from outside LiveAgent",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST (v1 REST documented; v3 under /api/v3)",
+    "url": "https://github.com/QualityUnit/LiveAgent-api-python",
+    "quote": "Python client for LiveAgent API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Python client generated by Swagger Codegen, owned by QualityUnit",
+    "url": "https://github.com/QualityUnit/LiveAgent-api-python",
+    "quote": "automatically generated by the Swagger Codegen project",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.docs",
+    "value": "In-account API v3 docs with test ability",
+    "url": "https://support.liveagent.com/567924-Documentation",
+    "quote": "Within the documentation, you can find examples and use the possibility to test the API commands with your account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Limits exist for API and API keys; specifics not extracted",
+    "url": "https://support.liveagent.com/567924-Documentation",
+    "quote": "There are limits related to API and API keys.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "LiveAgent provides a built-in MCP server at /api/mcp (Streamable HTTP; OAuth 2.1 or bearer token)",
+    "url": "https://support.liveagent.com/647358-MCP-Integration-for-Agents",
+    "quote": "MCP access tokens you generate in your profile and paste directly into your MCP client.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.tools",
+    "value": "MCP tool list includes read tools (search_tickets, list_agents, etc.) and write tools (add_note, assign_ticket, etc.)",
+    "url": "https://support.liveagent.com/578762-MCP-Tools-Reference",
+    "quote": "This tool is available through personal MCP connections only — AI agents cannot use it.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community_repo",
+    "value": "qualityunit/liveagent-mcp-server, owner QualityUnit, described as an MCP server for LiveAgent",
+    "url": "https://github.com/qualityunit/liveagent-mcp-server",
+    "quote": "An MCP (Model Context Protocol) server that provides access to LiveAgent API functionality",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.repo_auth",
+    "value": "Repo authenticates with LIVEAGENT_V3_API_KEY environment variable",
+    "url": "https://github.com/qualityunit/liveagent-mcp-server",
+    "quote": "LIVEAGENT_V3_API_KEY=your_api_key_here",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Webhooks: no source found that confirms webhook support in LiveAgent API v3 or on any plan.",
+   "Full v3 endpoint list and read/write breadth could not be confirmed. The v3 docs are only available inside a LiveAgent account (YOURDOMAIN.ladesk.com/docs/api/v3).",
+   "Whether API keys and the API are available during the 30-day trial, and whether a free developer or sandbox account exists, is not confirmed.",
+   "Whether non-admin users can generate API keys (the docs imply admin access but do not say it is restricted).",
+   "Rate limit numbers were not extracted (detail page 931802 not fetched).",
+   "OAuth 2.1 details for the MCP server (scopes, refresh) are not fully documented in the pages I read.",
+   "The qualityunit/liveagent-mcp-server repo's license is conflicting (Apache-2.0 vs MIT). The page for the Python client states no license.",
+   "The v1 REST complete API reference (840770 / 528264) returned 404 or was not fetched; v1 is legacy, so v3 is the relevant API.",
+   "All quotes came from WebFetch summaries. Verbatim matching against page bytes was not performed, so verified is null for every claim."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

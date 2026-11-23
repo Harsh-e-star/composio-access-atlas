@@ -1,0 +1,228 @@
+{
+ "id": 74,
+ "name": "Jira",
+ "category": "Productivity and Project Management",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:23:47Z",
+ "duration_s": 48.0,
+ "cost_usd": 0.0657,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developer.atlassian.com",
+   "title": "",
+   "rendered": true
+  },
+  {
+   "id": "S2",
+   "url": "https://developer.atlassian.com/",
+   "title": "",
+   "rendered": true
+  },
+  {
+   "id": "S3",
+   "url": "https://developer.atlassian.com/platform/forge/cli-reference/",
+   "title": "Forge CLI",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developer.atlassian.com/platform/marketplace/atlassian-developer-terms/",
+   "title": "Atlassian Developer Terms",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developer.atlassian.com/platform/forge/getting-started/",
+   "title": "Getting started with Forge",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developer.atlassian.com/platform/marketplace/knowledge-base/access-tokens-overview/",
+   "title": "Access tokens overview",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.atlassian.com/platform/marketplace/onboarding-hub/grow/access-partner-central-and-program-benefits/",
+   "title": "Access Partner Central and program benefits",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developer.atlassian.com/platform/marketplace/knowledge-base/creating-access-token-leads-to-a-404-page-not-found/",
+   "title": "Creating access token leads to a 404 Page Not Found",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developer.atlassian.com/platform/forge/cli-reference/developer-spaces/",
+   "title": "Command: developer-spaces",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sooperset/mcp-atlassian",
+   "title": "sooperset/mcp-atlassian",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sandbox-quantum/switch",
+   "title": "sandbox-quantum/switch",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/pipeshub-ai/pipeshub-ai",
+   "title": "pipeshub-ai/pipeshub-ai",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/atlassian/atlassian-mcp-server",
+   "title": "atlassian/atlassian-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/secfoo-com/secfoo",
+   "title": "secfoo-com/secfoo",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/khoj-ai/pipali",
+   "title": "khoj-ai/pipali",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/b1ff/atlassian-dc-mcp",
+   "title": "b1ff/atlassian-dc-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/nguyenvanduocit/all-in-one-model-context-protocol",
+   "title": "nguyenvanduocit/all-in-one-model-context-protocol",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://developer.atlassian.com",
+   "developer_portal": "https://developer.atlassian.com",
+   "description": "Jira is Atlassian's work/project management product; developer platform (Forge) at developer.atlassian.com supports building apps for Jira, Confluence, Bitbucket and JSM.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are the Atlassian developer portal; Jira is mentioned only via Forge hello-world apps. Jira REST API docs were not in the sources."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "Forge CLI login uses an Atlassian API token with scopes (scoped token). Jira REST API auth (OAuth 2.0 3LO, basic with API token) not covered in sources."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Marketplace listing requires review; Forge apps have usage-based pricing above a free allowance."
+  },
+  "api": {
+   "protocols": [
+    "CLI/library"
+   ],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "Sources cover the Forge platform/CLI only, not the Jira Cloud REST API."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/atlassian/atlassian-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/sooperset/mcp-atlassian",
+    "https://github.com/b1ff/atlassian-dc-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT (Atlassian API scoped token)",
+    "url": "https://developer.atlassian.com/platform/forge/getting-started/",
+    "quote": "you'll install the CLI, log in with an Atlassian API scoped token, and prepare an Atlassian site where you can install and test your app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developer.atlassian.com/platform/forge/getting-started/",
+    "quote": "Create or use an existing Atlassian API scoped token to log in to the CLI. The CLI uses your token when running commands.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "CLI/library",
+    "url": "https://developer.atlassian.com/platform/forge/cli-reference/",
+    "quote": "The Forge CLI is the command line interface for building and deploying Forge apps.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Unknown",
+    "url": "https://developer.atlassian.com/platform/forge/getting-started/",
+    "quote": "create a simple hello world app for Bitbucket, Confluence, Jira, or Jira Service Management.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://github.com/atlassian/atlassian-mcp-server",
+    "quote": "Official remote MCP server for Atlassian. Securely connect Jira, Confluence, Jira Service Management, Bitbucket, and Compass to Claude, ChatGPT, Cursor, VS Code",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Jira Cloud REST API docs (auth methods, OAuth 2.0 3LO, rate limits, webhooks, resources) not in sources.",
+   "Whether a free Jira site/developer instance is available for testing is not established."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

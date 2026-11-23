@@ -1,0 +1,271 @@
+{
+ "id": 54,
+ "name": "MrScraper",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:21:07Z",
+ "duration_s": 33.3,
+ "cost_usd": 0.0876,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.mrscraper.com/docs/getting-started/overview",
+   "title": "Overview | MrScraper Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.mrscraper.com/docs/api/overview",
+   "title": "API Overview | MrScraper Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.mrscraper.com/docs/getting-started/api-token",
+   "title": "Token Plan | MrScraper Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+   "title": "MCP Server | MrScraper Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.mrscraper.com/docs/residential-proxy/configuration/authentication",
+   "title": "Authentication | MrScraper Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+   "title": "Billing | MrScraper Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.mrscraper.com/docs/residential-proxy/getting-started/overview",
+   "title": "Overview | MrScraper Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.mrscraper.com/docs/guides/ecommerce",
+   "title": "E-commerce | MrScraper Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://github.com/mrscraper-com/mrscraper-mcp",
+   "title": "GitHub - mrscraper-com/mrscraper-mcp: Official MrScraper MCP server: Scraper API for HTML, Markdown, and screenshots, web search, and account usage for AI agents. · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.mrscraper.com/docs/guides/optimizing-cost",
+   "title": "Optimizing Cost | MrScraper Documentation",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mrscraper-com/mrscraper-mcp",
+   "title": "mrscraper-com/mrscraper-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ai-mrscraper/zed-mrscraper",
+   "title": "ai-mrscraper/zed-mrscraper",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mrscraper-com/mrscraper-jetbrains-plugin",
+   "title": "mrscraper-com/mrscraper-jetbrains-plugin",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/pray-mrscraper/mrscraper-claude-plugin",
+   "title": "pray-mrscraper/mrscraper-claude-plugin",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mrscraper-com/mrscraper-claude-plugin",
+   "title": "mrscraper-com/mrscraper-claude-plugin",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mrscraper-com/mrscraper-opencode-plugin",
+   "title": "mrscraper-com/mrscraper-opencode-plugin",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/pray-mrscraper/mrscraper-chatgpt-plugin",
+   "title": "pray-mrscraper/mrscraper-chatgpt-plugin",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mrscraper-com/mrscraper-chatgpt-plugin",
+   "title": "mrscraper-com/mrscraper-chatgpt-plugin",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://mrscraper.com",
+   "developer_portal": "https://docs.mrscraper.com",
+   "description": "MrScraper is an AI-powered web scraping platform offering a Scraper API (HTML, Markdown, screenshots, brand, JSON), web search, workflows, and residential proxies.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs at docs.mrscraper.com describe the MrScraper platform and API."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2",
+    "Basic"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Hosted MCP server uses OAuth 2.1 browser sign-in; API key can be sent as bearer token fallback.",
+   "token_refresh": "offline_access offered for refresh tokens on MCP OAuth.",
+   "scopes_notes": "MCP scopes: scrape:read (scrape/search tools) and account:read (status); offline_access for refresh tokens."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Free plan limited to a small monthly token allotment; upgrade needed once exhausted. Residential proxies require paid plans."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "Web Search",
+    "Scraper API (HTML, Markdown, Screenshot, Brand, JSON)",
+    "Platform (workflows)",
+    "Bulk Scraping",
+    "Result",
+    "Analytics"
+   ],
+   "read_ops": [
+    "Web search",
+    "Scrape HTML",
+    "Scrape Markdown",
+    "Get screenshot",
+    "Scrape brand",
+    "Scrape JSON",
+    "Analytics",
+    "Results"
+   ],
+   "write_ops": [
+    "Rerun/manage workflows",
+    "Cancel",
+    "Bulk scraping"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Free plan: 10 concurrent requests; Pro: 100.",
+   "limitations": "Token-based usage; free plan token cap."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/mrscraper-com/mrscraper-mcp",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://docs.mrscraper.com/docs/api/overview",
+    "quote": "All API endpoints require authentication using an API token passed in the x-api-token header.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+    "quote": "Authentication OAuth 2.1; do not configure a static header",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Basic",
+    "url": "https://docs.mrscraper.com/docs/residential-proxy/configuration/authentication",
+    "quote": "Residential Proxy connections use the following format: username:password@proxy.mrscraper.com:10000",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+    "quote": "The Free plan includes 100 tokens per month with no credit card required.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.mrscraper.com/docs/api/overview",
+    "quote": "Built on REST principles, our API offers predictable resource-oriented URLs, accepts JSON-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Medium",
+    "url": "https://docs.mrscraper.com/docs/api/overview",
+    "quote": "Scrape HTML, Markdown, screenshots, brand data, and JSON from a single Scraper API endpoint.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+    "quote": "MrScraper MCP is the official Model Context Protocol server for MrScraper.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Exact rate limits not documented in sources.",
+   "Free trial for paid plans not confirmed.",
+   "Webhook support is an integration for scraper results; API webhook details unverified.",
+   "Free plan token amount inconsistent (1,000 table vs 100 text)."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

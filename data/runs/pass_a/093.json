@@ -1,0 +1,310 @@
+{
+ "id": 93,
+ "name": "Fathom",
+ "category": "AI, Research and Media-native",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:27:19Z",
+ "duration_s": 33.7,
+ "cost_usd": 0.0767,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.fathom.ai/",
+   "title": "Fathom AI Notetaker - Never Take Notes Again",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.fathom.ai/",
+   "title": "Introduction - Fathom API",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://www.fathom.ai/features/mcp-server",
+   "title": "AI Meeting Notetaker MCP Server for Claude & ChatGPT | Fathom",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://www.fathom.ai/launchpad",
+   "title": "AI Launchpad: Workflows Built on Your Meetings | Fathom",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://www.fathom.ai/features/api",
+   "title": "Notetaker API for Meeting Data & Webhooks | Fathom",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://www.fathom.ai/pricing",
+   "title": "Fathom Pricing 2026: Free Plan or Plans from $15/mo",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://www.fathom.ai/pricing?plan=teams",
+   "title": "Fathom Pricing 2026: Free Plan or Plans from $15/mo",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developers.fathom.ai/oauth",
+   "title": "Building with OAuth - Fathom API",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developers.fathom.ai/mcp-docs",
+   "title": "Overview - Fathom API",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developers.fathom.ai/api-overview",
+   "title": "Api overview - Fathom API",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://help.fathom.video/en/articles/11497793",
+   "title": "Fathom MCP: Connect Claude & ChatGPT",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/agencyenterprise/fathom-mcp-server",
+   "title": "agencyenterprise/fathom-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Dot-Fun/fathom-mcp",
+   "title": "Dot-Fun/fathom-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sourcegate/mcp-fathom-server",
+   "title": "sourcegate/mcp-fathom-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/matthewbergvinson/fathom-mcp",
+   "title": "matthewbergvinson/fathom-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mackenly/mcp-fathom-analytics",
+   "title": "mackenly/mcp-fathom-analytics",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/JuanCG13/fathom-mcp-codex",
+   "title": "JuanCG13/fathom-mcp-codex",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/druellan/Fathom-Simple-MCP",
+   "title": "druellan/Fathom-Simple-MCP",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/prathambhatia/custom-connectors",
+   "title": "prathambhatia/custom-connectors",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.fathom.ai/",
+   "developer_portal": "https://developers.fathom.ai/",
+   "description": "Fathom is an AI meeting notetaker that records, transcribes and summarizes meetings, with a REST API, webhooks, SDKs, OAuth apps and an official MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "fathom.ai (formerly fathom.video) AI notetaker; not Fathom Analytics."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "OAuth apps can be registered for public integrations; token endpoint at https://api.fathom.ai/external/v1/oauth2/token. Specific grant types not stated in sources.",
+   "token_refresh": "",
+   "scopes_notes": "API keys are per user and return meetings that user can access; organization-level keys are not available."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Public OAuth apps are subject to review by Fathom; featured in the marketplace after 20+ users."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "meetings",
+    "recordings",
+    "transcripts",
+    "summaries",
+    "action items",
+    "highlights",
+    "teams",
+    "team members",
+    "webhooks"
+   ],
+   "read_ops": [
+    "list meetings",
+    "get summaries",
+    "get transcripts",
+    "download recordings"
+   ],
+   "write_ops": [
+    "create webhooks"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "60 calls per 60 seconds globally; heavy requests 30 per 60 seconds (may drop to 5); recording downloads 30 per 60 seconds.",
+   "limitations": "API keys are per-user, with no organization-level keys. Write operations are not clearly established in the sources."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://api.fathom.ai/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/agencyenterprise/fathom-mcp-server",
+    "https://github.com/Dot-Fun/fathom-mcp",
+    "https://github.com/druellan/Fathom-Simple-MCP"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://developers.fathom.ai/api-overview",
+    "quote": "All REST API resources are authenticated with API keys generated via the Fathom website’s settings area.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://developers.fathom.ai/oauth",
+    "quote": "If you’re developing a public app that you wish to integrate with Fathom, you should build it using OAuth.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://www.fathom.ai/features/api",
+    "quote": "Generate an API key yourself, no admin approval needed, and use the TypeScript or Python SDK to handle auth, pagination, and retries.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free on every plan",
+    "url": "https://www.fathom.ai/features/api",
+    "quote": "Yes. API keys, webhooks, and SDKs are included on every Fathom plan, including Free.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.fathom.ai/api-overview",
+    "quote": "This documentation describes Fathom’s REST API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "CLI/library",
+    "url": "https://developers.fathom.ai/",
+    "quote": "Use our Typescript or Python SDK.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Medium",
+    "url": "https://www.fathom.ai/features/api",
+    "quote": "structured meeting data, from summaries and action items to transcripts and Highlights, as soon as a call is processed, on every plan.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://www.fathom.ai/features/api",
+    "quote": "Webhooks fire when a meeting’s content is ready, so you don’t need to poll the API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "60/min",
+    "url": "https://developers.fathom.ai/api-overview",
+    "quote": "Currently, you are able to make a maximum of 60 calls to the API in a 60 second window.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developers.fathom.ai/mcp-docs",
+    "quote": "Fathom now offers an official MCP (Model Context Protocol) server, allowing you to connect your Fathom meeting data to AI assistants like ChatGPT, Claude, and more.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "OAuth app review",
+    "url": "https://developers.fathom.ai/oauth",
+    "quote": "They are subject to review to ensure the best experience for all users.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Which write operations does the REST API support beyond webhook management?",
+   "Which OAuth grant types and scopes are supported, and do tokens expire?",
+   "Is there a sandbox environment?"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "review_required",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

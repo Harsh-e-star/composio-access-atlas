@@ -1,0 +1,242 @@
+{
+ "id": 51,
+ "name": "DataForSEO",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:33:56Z",
+ "duration_s": 84.0,
+ "cost_usd": 0.0691,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://dataforseo.com/",
+   "developer_portal": "https://docs.dataforseo.com/",
+   "description": "DataForSEO is a SaaS provider of SEO and SERP data via REST APIs, used to build SEO software, data pipelines, and no-code automations.",
+   "identity_confirmed": "yes",
+   "identity_notes": "docs.dataforseo.com and dataforseo.com describe the same product (SERP, keywords, backlinks, on-page, etc.), matching the assignment hint."
+  },
+  "auth": {
+   "methods": [
+    "Basic"
+   ],
+   "primary": "Basic",
+   "oauth_flows": "",
+   "token_refresh": "None. Credentials are static; docs say no separate authentication call is needed to obtain credentials.",
+   "scopes_notes": "No scopes. Credentials are an API login and an auto-generated API password sent via HTTP Basic auth (Base64). No OAuth flow found in the auth docs."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Live calls are billed pay-as-you-go from account balance. The $1 signup credit covers only a limited number of calls; the MCP pricing page lists a $50 minimum top-up. Sandbox is free but returns dummy data. No provider app review found."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "SERP (Google, Bing, YouTube, Yahoo, Baidu, Naver, Seznam)",
+    "AI Optimization (LLM Mentions, ChatGPT, Claude, Gemini, Perplexity)",
+    "Keywords Data (Google Ads, Bing Ads, Google Trends, Clickstream)",
+    "Domain Analytics (Technologies, Whois)",
+    "DataForSEO Labs (Google, Amazon, Google Play, App Store)",
+    "Backlinks",
+    "OnPage (incl. Lighthouse)",
+    "Content Analysis",
+    "Merchant (Google Shopping, Amazon)",
+    "App Data (Google, Apple)",
+    "Business Data (Business Listings, Google, Trustpilot, Tripadvisor)"
+   ],
+   "read_ops": [
+    "Task results retrieval (task-based model)"
+   ],
+   "write_ops": [
+    "Task POST (submit tasks/requests)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "unknown",
+   "limitations": "Task-based asynchronous model for many endpoints; live calls cost money. Rate limits not established."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/dataforseo/mcp-server-typescript",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/skobyn/mcp-dataforseo",
+    "https://www.npmjs.com/package/@cdilorenzo/mcp-dataforseo",
+    "https://apify.com/santhej/dataforseo-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.primary",
+    "value": "Basic (HTTP Basic auth with API login and password)",
+    "url": "https://docs.dataforseo.com/v3/auth/",
+    "quote": "DataForSEO is using the Basic Authentication",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.only_method",
+    "value": "Basic auth is the only access method",
+    "url": "https://docs.dataforseo.com/v3/auth/",
+    "quote": "Basic authentication is the only way to access DataForSEO API",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.credentials",
+    "value": "API password is auto-generated and differs from account password, found in API Access tab",
+    "url": "https://docs.dataforseo.com/v3/auth/",
+    "quote": "Note that the API password is generated automatically by DataForSEO and is different from your account password.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_trial",
+    "value": "Free $1 credit added on registration for API testing",
+    "url": "https://dataforseo.com/help-center/how-does-your-free-unlimited-trial-work",
+    "quote": "upon registration free $1 credit for API testing will be added to your account balance.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.signup",
+    "value": "Free trial requires only account creation",
+    "url": "https://dataforseo.com/help-center/how-does-your-free-unlimited-trial-work",
+    "quote": "To get a free trial, you should simply create an account with DataForSEO.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sandbox",
+    "value": "Sandbox is free for any registered user; not charged; returns dummy data",
+    "url": "https://docs.dataforseo.com/v3/appendix/sandbox/",
+    "quote": "Sandbox is completely free for any registered user at DataForSEO.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sandbox_host",
+    "value": "https://sandbox.dataforseo.com/v3/$path",
+    "url": "https://docs.dataforseo.com/v3/appendix/sandbox/",
+    "quote": "POST https://sandbox.dataforseo.com/v3/$path",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.paid_top_up",
+    "value": "$50 minimum top-up listed on MCP pricing",
+    "url": "https://dataforseo.com/seo-mcp-server",
+    "quote": "The page also lists a $1 free trial credit and a $50 minimum top-up.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.protocol",
+    "value": "REST, JSON responses by default, XML/HTML via extensions",
+    "url": "https://docs.dataforseo.com/",
+    "quote": "DataForSEO API is using the REST technology for interchanging data between your application and our service.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.resources",
+    "value": "Seven SEO APIs: SERP, Keywords Data, Labs, Backlinks, On-Page, Business Data, Domain Analytics",
+    "url": "https://dataforseo.com/seo-mcp-server",
+    "quote": "exposes seven SEO APIs — SERP, Keywords Data, Labs, Backlinks, On-Page, Business Data, and Domain Analytics",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Official client libraries for PHP, C#, Java, Python, TypeScript",
+    "url": "https://docs.dataforseo.com/",
+    "quote": "Official client libraries for PHP, C#, Java, Python, and TypeScript",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Pingback/postback callbacks via postback_url; webhook resend endpoint",
+    "url": "https://docs.dataforseo.com/v3/appendix/webhook_resend/",
+    "quote": "Webhook Resend",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Official MCP server, open source, Apache-2.0, owned by dataforseo GitHub org",
+    "url": "https://github.com/dataforseo/mcp-server-typescript",
+    "quote": "MCP server and CLI for LLM agents to browse DataForSEO API documentation and make authenticated API requests.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_pricing",
+    "value": "MCP server is free and open source",
+    "url": "https://dataforseo.com/seo-mcp-server",
+    "quote": "The MCP server is free and open source.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_npm",
+    "value": "npx dataforseo-mcp-server",
+    "url": "https://dataforseo.com/seo-mcp-server",
+    "quote": "1 command to run it: npx dataforseo-mcp-server",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_docker",
+    "value": "Official Docker image dataforseo/mcp on Docker Hub",
+    "url": "https://hub.docker.com/r/dataforseo/mcp",
+    "quote": "Pull and run the official DataForSEO MCP image:",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Third-party forks: skobyn/mcp-dataforseo, @cdilorenzo/mcp-dataforseo, Apify santhej actor, glama listings",
+    "url": "https://github.com/skobyn/mcp-dataforseo",
+    "quote": "third-party Model Context Protocol server for the DataForSEO API",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Rate limits not established.",
+   "Whether a paid plan/top-up is needed beyond the $1 trial for ongoing test work was not confirmed; the MCP page cites a $50 minimum top-up.",
+   "Remote MCP endpoint is inconsistent across sources: https://mcp.dataforseo.com/v3/mcp (setup) vs https://mcp.dataforseo.com/mcp (FAQ).",
+   "Canonical official repo name is inconsistent: github.com/dataforseo/mcp-server-typescript (guides, verified as DataForSEO-owned) vs npm package dataforseo-mcp-server.",
+   "OAuth, token, and SSO support were not found; auth looks Basic-only.",
+   "Full list of write operations and exact endpoint breadth not verified beyond the docs homepage."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.765,
+ "flags": [],
+ "error": null
+}

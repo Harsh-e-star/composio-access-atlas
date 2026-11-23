@@ -1,0 +1,287 @@
+{
+ "id": 77,
+ "name": "ClickUp",
+ "category": "Productivity and Project Management",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:24:14Z",
+ "duration_s": 42.5,
+ "cost_usd": 0.0777,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developer.clickup.com",
+   "title": "ClickUp",
+   "rendered": true
+  },
+  {
+   "id": "S2",
+   "url": "https://clickup.com",
+   "title": "ClickUp™ | Maximize productivity • Software, AI, and humans converge",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://help.clickup.com/hc/en-us",
+   "title": "ClickUp Help",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developer.clickup.com/docs/authentication",
+   "title": "Authentication",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+   "title": "ClickUp's MCP Server",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server-1",
+   "title": "MCP Server Setup Instructions",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.clickup.com/docs/mcp-tools",
+   "title": "Supported Tools",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://help.clickup.com/hc/en-us/categories/5735460831255-Integrations-API-and-MCP",
+   "title": "Integrations, API, and MCP – ClickUp Help",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developer.clickup.com/reference/getaccesstoken",
+   "title": "Get Access Token",
+   "rendered": true
+  },
+  {
+   "id": "S10",
+   "url": "https://developer.clickup.com/docs/webhooks",
+   "title": "Webhooks",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://clickup.com/pricing",
+   "title": "ClickUp Pricing and Plans",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/taazkareem/clickup-mcp-server",
+   "title": "taazkareem/clickup-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/hauptsacheNet/clickup-mcp",
+   "title": "hauptsacheNet/clickup-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/nsxdavid/clickup-mcp-server",
+   "title": "nsxdavid/clickup-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/aliansoftwareteam/AlianHub-Project-Management-System",
+   "title": "aliansoftwareteam/AlianHub-Project-Management-System",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Nazruden/clickup-mcp-server",
+   "title": "Nazruden/clickup-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/arslan8122/clickup-mcp",
+   "title": "arslan8122/clickup-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Chykalophia/ClickUp-MCP-Server---Enhanced",
+   "title": "Chykalophia/ClickUp-MCP-Server---Enhanced",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Leanware-io/clickup-mcp-server",
+   "title": "Leanware-io/clickup-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://clickup.com",
+   "developer_portal": "https://developer.clickup.com",
+   "description": "ClickUp is a work management platform (tasks, docs, chat, time tracking, AI) with a public REST API, OAuth, webhooks and an official hosted MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are official ClickUp developer docs and site."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "API key"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization Code grant; authorization URL https://app.clickup.com/api, token URL https://api.clickup.com/api/v2/oauth/token",
+   "token_refresh": "Access token currently does not expire (subject to change); personal tokens never expire.",
+   "scopes_notes": "Only Workspace owners or admins can create OAuth apps. Users authorize one or more Workspaces. Personal tokens begin with pk_. The official MCP server supports only OAuth."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Creating OAuth apps requires a Workspace owner or admin. Public API rate limits vary by plan."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "WebSocket"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "tasks",
+    "lists",
+    "folders",
+    "docs",
+    "comments",
+    "time entries",
+    "webhooks",
+    "workspaces"
+   ],
+   "read_ops": [
+    "search tasks",
+    "search workspace",
+    "get tasks and docs"
+   ],
+   "write_ops": [
+    "create/update tasks",
+    "attach files",
+    "manage task links and dependencies",
+    "log time",
+    "post comments"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Public API limits vary by plan. MCP: 100/24h (Free) up to 25,000/24h (Enterprise Plus) without the Everything AI add-on; 1,000 requests/min per connection.",
+   "limitations": "The MCP server has no deletion tools and per-plan daily call limits."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.clickup.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/taazkareem/clickup-mcp-server",
+    "https://github.com/hauptsacheNet/clickup-mcp",
+    "https://github.com/nsxdavid/clickup-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2 and personal API token",
+    "url": "https://developer.clickup.com/docs/authentication",
+    "quote": "Authenticate to the ClickUp API using a personal token or OAuth.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_flows",
+    "value": "Authorization Code",
+    "url": "https://developer.clickup.com/docs/authentication",
+    "quote": "ClickUp uses the authorization code grant type",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developer.clickup.com/docs/authentication",
+    "quote": "Use a personal API token for individual or testing purposes.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free plan available",
+    "url": "https://clickup.com",
+    "quote": "Free forever. No credit card.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developer.clickup.com/reference/getaccesstoken",
+    "quote": "post https://api.clickup.com/api /v2/oauth/token",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developer.clickup.com/docs/mcp-tools",
+    "quote": "The ClickUp MCP exposes many of the capabilities available in our API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+    "quote": "Our MCP server URL is https://mcp.clickup.com/mcp .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://developer.clickup.com/docs/webhooks",
+    "quote": "Webhooks allow you to subscribe to events in your Workspace .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Public API rate limits per plan are not stated in the provided sources.",
+   "Official SDKs are not confirmed.",
+   "The WebSocket protocol is not clearly established by the sources and may need removal."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST/WebSocket interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

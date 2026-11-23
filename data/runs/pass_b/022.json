@@ -1,0 +1,206 @@
+{
+ "id": 22,
+ "name": "Twilio",
+ "category": "Communications and Messaging",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:23:26Z",
+ "duration_s": 72.3,
+ "cost_usd": 0.0518,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.twilio.com",
+   "developer_portal": "https://www.twilio.com/docs",
+   "description": "Twilio is a cloud communications platform offering programmable messaging (SMS), voice, verification, and related APIs for developers, exposed through a REST API with SDKs and webhooks.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Fetched twilio.com docs pages (secure auth, trials, API keys, libraries, webhooks, MCP) describe the Twilio product that matches the requested app."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Basic",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "unknown",
+   "token_refresh": "unknown",
+   "scopes_notes": "API keys come in Main, Standard, and Restricted types; Restricted keys give fine-grained access to specific resources. Docs recommend OAuth 2.0 for new integrations where supported."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Trial accounts can only message or call verified numbers (up to five) and expire after 30 days; upgrading removes the verified-recipient restriction. Test credentials were not confirmed from a fetched page."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Messaging (SMS)",
+    "Voice calls",
+    "Phone numbers",
+    "Conversations"
+   ],
+   "read_ops": [],
+   "write_ops": [
+    "send messages",
+    "make calls",
+    "purchase phone numbers"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "unknown",
+   "limitations": "Trial accounts are restricted to verified recipients and expire after 30 days. The rate limits page returned 404, so rate limits are unknown. Specific read/write endpoint lists were not fetched."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://www.twilio.com/docs/mcp",
+   "community": "unknown",
+   "community_urls": [
+    "https://mcpservers.org/servers/twilio-labs/mcp",
+    "https://lobehub.com/mcp/twilio-labs-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Twilio official docs describe the product: secure auth, trials, API keys, SDKs, webhooks",
+    "url": "https://www.twilio.com/docs/usage/api-security-reference-guide/secure-auth",
+    "quote": "OAuth 2.0 provides the strongest security posture for API authentication.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.account_sid_auth_token",
+    "value": "Account SID + Auth Token is a legacy option, not recommended as default",
+    "url": "https://www.twilio.com/docs/usage/api-security-reference-guide/secure-auth",
+    "quote": "The Auth Token provides broad account access and should be protected like a high-privilege password.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth2",
+    "value": "OAuth 2.0 is supported and recommended for new integrations",
+    "url": "https://www.twilio.com/docs/usage/api-security-reference-guide/secure-auth",
+    "quote": "OAuth 2.0 provides the strongest security posture for API authentication.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.api_key_types",
+    "value": "Main key = full access equivalent to Account SID + Auth Token; Standard excludes Accounts and Keys resources; Restricted = fine-grained",
+    "url": "https://www.twilio.com/docs/iam/api-keys",
+    "quote": "Full access to all Twilio API resources. Equivalent to using your Account SID and Auth Token for API requests.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_signup",
+    "value": "Free trial signup without credit card",
+    "url": "https://www.twilio.com/docs/usage/trials",
+    "quote": "You can sign up for a Twilio free trial account without a credit card.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial_expiry",
+    "value": "Trial accounts expire 30 days after sign-up",
+    "url": "https://www.twilio.com/docs/usage/trials",
+    "quote": "Trial accounts expire 30 days after sign-up. When your trial expires, you can no longer use trial resources.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial_restriction",
+    "value": "Trial can only send messages/calls to verified numbers; up to five recipients",
+    "url": "https://www.twilio.com/docs/usage/trials",
+    "quote": "You can send messages and make calls only to verified phone numbers.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.upgrade",
+    "value": "Upgrade removes verified-recipient restriction; charges begin at Voice/SMS rates after free units",
+    "url": "https://www.twilio.com/docs/usage/trials",
+    "quote": "Upgrade your account before your trial expires to keep building.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rest_sdks",
+    "value": "Official helper SDKs for Node.js, Python, Go, PHP, Java, C#, Ruby, plus browser/mobile SDKs",
+    "url": "https://www.twilio.com/docs/libraries",
+    "quote": "Download and install helpers for Node.js, Python, Go, PHP, iOS, Android, C#, and more.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Twilio sends HTTP webhook requests to developer-provided URLs after events",
+    "url": "https://www.twilio.com/docs/usage/webhooks",
+    "quote": "After certain events occur in Twilio, Twilio sends an HTTP request to a webhook URL you provided to Twilio for your web app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Hosted MCP docs server indexes over 1,800 endpoints of Twilio's full API surface",
+    "url": "https://www.twilio.com/docs/mcp",
+    "quote": "direct, structured access to Twilio's full API surface",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_hosted",
+    "value": "Twilio-hosted docs MCP server at mcp.twilio.com/docs, public beta, no credentials",
+    "url": "https://www.twilio.com/docs/mcp",
+    "quote": "No Account SID, API key, or other credential is required or accepted.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_repo",
+    "value": "twilio-labs/mcp monorepo exposes all Twilio APIs as an MCP server",
+    "url": "https://github.com/twilio-labs/mcp",
+    "quote": "This is a monorepo for the Model Context Protocol server that exposes all of Twilio APIs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Rate limits: the rate-limits page URL returned 404; the actual limits are unknown.",
+   "Test credentials: a search snippet said trial accounts have test credentials, but no fetched page confirmed this, so it is unverified.",
+   "Whether the trial account uses the same Account SID and Auth Token after upgrading was not confirmed by a fetched page.",
+   "Who can create API keys (admin/role requirements, subaccounts) was not stated on the API keys page, so admin_approval is unknown.",
+   "Twilio ownership of the twilio-labs GitHub org was inferred from the org name; a Twilio-owned page linking the repo was not fetched. A Twilio blog about the 'Twilio Alpha MCP Server' appeared in search but was not fetched.",
+   "Community MCP servers: the mcpservers.org and lobehub listings appear to index the same twilio-labs repo rather than independent community servers, so no separate community server was confirmed.",
+   "Read and write endpoint lists were not fetched; the resource list is drawn from the trials and libraries pages.",
+   "The MCP docs page labels Twilio MCP as Public Beta, which may affect production use."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.923,
+ "flags": [],
+ "error": null
+}

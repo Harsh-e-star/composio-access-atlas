@@ -1,0 +1,190 @@
+{
+ "id": 55,
+ "name": "Apify",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:34:17Z",
+ "duration_s": 81.0,
+ "cost_usd": 0.0304,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://apify.com",
+   "developer_portal": "https://docs.apify.com",
+   "description": "Apify is a web scraping and browser automation platform. Developers build and run cloud programs called Actors and use the Apify REST API to run them and access datasets, key-value stores and request queues.",
+   "identity_confirmed": "yes",
+   "identity_notes": "docs.apify.com documents the Apify platform; apify.com hosts the Apify Store and the Apify MCP server docs. This matches the named app (Apify, Data/SEO/Scraping category)."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "OAuth is documented for the hosted MCP server connection (browser sign-in on first connection). No third-party OAuth app registration for the REST API was found; the OAuth docs page returned 404.",
+   "token_refresh": "unknown",
+   "scopes_notes": "Scoped tokens are mentioned for scheduling Actors and Tasks. Full scope list not established."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Free plan has usage limits: free users are blocked until the next billing cycle when usage runs out; paid users can continue with overage. Free-plan Apify Proxy cannot be used by external clients."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Actors",
+    "Actor versions",
+    "builds",
+    "runs",
+    "tasks",
+    "webhooks",
+    "webhook dispatches",
+    "schedules",
+    "datasets",
+    "key-value stores",
+    "request queues",
+    "requests",
+    "store",
+    "users"
+   ],
+   "read_ops": [
+    "Get/list Actors, runs, builds, tasks, schedules, webhooks",
+    "Read datasets, key-value stores and request queues",
+    "Usage and limits for users"
+   ],
+   "write_ops": [
+    "Run an Actor (POST to the Run Actor endpoint)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Global limit 250,000 requests per minute; default 60 requests per second per resource, higher for certain endpoints; 429 responses call for exponential backoff.",
+   "limitations": "Webhook action is limited to a POST HTTP request to a URL. Python client existence not verified. Exact write verbs for tasks/schedules/storage not verified on fetched pages."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.apify.com/platform/integrations/mcp",
+   "community": "unknown",
+   "community_urls": [
+    "https://apify.com/securitybyobscurity/apify-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.apify.com/integrations/api.md",
+    "quote": "All aspects of the Apify platform can be controlled via a REST API",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary",
+    "value": "Bearer/PAT: token in Authorization header",
+    "url": "https://docs.apify.com/api/v2",
+    "quote": "Add the token to your request's Authorization header as Bearer <token>.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.how_to_get_token",
+    "value": "Create a personal API token in Apify Console",
+    "url": "https://docs.apify.com/integrations/api.md",
+    "quote": "In the Personal API tokens section, select Create a new token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_plan",
+    "value": "Free plan exists with no card required",
+    "url": "https://apify.com/pricing",
+    "quote": "We offer a free plan that lets you use most of the features of the Apify platform, but with certain limits.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Global 250,000 requests/min; 60 req/s per resource default",
+    "url": "https://docs.apify.com/api/v2",
+    "quote": "The global rate limit is set to 250 000 requests per minute.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks fire on system events and POST to a URL",
+    "url": "https://docs.apify.com/integrations/webhooks.md",
+    "quote": "Currently, the only available action is to send a POST HTTP request to a URL specified in the webhook.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks",
+    "value": "Official JavaScript/TypeScript client apify-client",
+    "url": "https://docs.apify.com/api/client/js",
+    "quote": "The Apify API client is the official library to access the Apify REST API from your JavaScript/TypeScript applications.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Apify MCP server maintained by Apify; hosted at mcp.apify.com; repo apify/apify-mcp-server",
+    "url": "https://docs.apify.com/platform/integrations/mcp",
+    "quote": "The Apify MCP server is an open-source project.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "OAuth on first connection, or Bearer API token",
+    "url": "https://docs.apify.com/platform/integrations/mcp",
+    "quote": "On first connection, your browser opens so you can sign in to Apify and approve access.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "identity",
+    "value": "Apify (apify.com / docs.apify.com)",
+    "url": "https://docs.apify.com/platform/integrations/api",
+    "quote": "All aspects of the Apify platform can be controlled via a REST API",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Whether a Python client exists (not verified on fetched pages; the JS client page does not mention one).",
+   "Whether third-party OAuth app registration for the REST API exists (OAuth docs page at docs.apify.com/platform/integrations/oauth returned 404).",
+   "Trial availability and sandbox: not stated on fetched pages.",
+   "Exact HTTP write verbs for tasks, schedules, webhooks and storage not verified.",
+   "Community MCP servers: the only community listing found is a copy of the official server description (apify.com/securitybyobscurity/apify-mcp-server). No independent implementation found; the Tester MCP Client is a UI, not a server, and its maintainer status is unclear. The apify.com pricing page also returned 404 for one fetch; free-plan facts came from the search-retrieved pricing page."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

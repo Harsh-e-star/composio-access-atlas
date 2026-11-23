@@ -1,0 +1,213 @@
+{
+ "id": 47,
+ "name": "Ecwid",
+ "category": "Ecommerce",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:32:56Z",
+ "duration_s": 71.5,
+ "cost_usd": 0.04,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.ecwid.com/",
+   "developer_portal": "https://docs.ecwid.com/",
+   "description": "Ecwid by Lightspeed: hosted ecommerce platform (online store builder). Its public REST API is documented on docs.ecwid.com (api-docs.ecwid.com now redirects there).",
+   "identity_confirmed": "yes",
+   "identity_notes": "Search results and the docs site identify the product as Ecwid by Lightspeed. api-docs.ecwid.com/reference/access-ecwid-api and /reference/access-tokens both 302-redirect to docs.ecwid.com. Verification is partial: the Lightspeed branding comes from search titles, not a fetched page."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "OAuth 2.0 for public apps. The changelog says the OAuth GET request type changed to POST for public apps (title only, not fetched).",
+   "token_refresh": "Unknown",
+   "scopes_notes": "Not established. Scope list not retrieved."
+  },
+  "access": {
+   "tier": "paid_plan",
+   "free_credentials": "unknown",
+   "trial_available": "no",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "yes",
+   "production_restrictions": "Public apps must pass app validation before publishing to the App Market. Start with a Request form to Ecwid, then app validation, then listing. Private (custom) apps cannot be installed in other stores or become paid and published. Test credentials need a paid-plan store, or a free test store on a Premium plan obtained through an approved Request form."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "orders",
+    "customers",
+    "products",
+    "store settings",
+    "discounts",
+    "payment and shipping methods",
+    "storefront settings",
+    "application storage",
+    "app subscription",
+    "custom charges"
+   ],
+   "read_ops": [
+    "Read store orders, customers, products, settings, discounts"
+   ],
+   "write_ops": [
+    "Create, update, and delete items in the store"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Unknown",
+   "limitations": "Only stores on paid plans can access the API. Webhooks and the Payment API need an external endpoint hosted by the app developer. Not verified: rate limits, SDK list, and the exact webhook event list. Some third-party descriptions of the API may be out of date, so check docs.ecwid.com directly."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://glama.ai/mcp/connectors/io.usefulapi/ecwid",
+    "https://github.com/m190/usefulapi-mcp",
+    "https://github.com/HelpCode-ai/anythingmcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "protocols",
+    "value": "REST-style HTTP API using OAuth 2.0 tokens",
+    "url": "https://docs.ecwid.com/ecwid-api-features",
+    "quote": "It is based on the REST style, HTTP calls, and oAuth 2.0 tokens (simplified for single-store customizations).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "read, create, update, delete across core store resources",
+    "url": "https://docs.ecwid.com/ecwid-api-features",
+    "quote": "API allows you to read, create, update, and delete any items from your store.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.paid_plan_required",
+    "value": "Only stores on paid plans can access the API",
+    "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+    "quote": "Only stores on paid plans can access API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_test_store",
+    "value": "A free test store on a Premium plan is available through an approved Request form",
+    "url": "https://docs.ecwid.com/launch-apps/steps-to-go-live-with-a-public-app.md",
+    "quote": "With an approved Request form, you get a free test store on a Premium plan and a dev app.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.test_store_upgrade",
+    "value": "Developers can email Ecwid to get a free plan upgrade for a test store",
+    "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+    "quote": "Email us to get a free plan upgrade for your test store.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.custom_app_tokens",
+    "value": "A custom app's access tokens are used to make REST API calls; Ecwid auto-creates the first custom app",
+    "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+    "quote": "When you open the app dashboard for the first time, Ecwid automatically generates the first custom app for you.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.private_app_tokens",
+    "value": "Private apps let you get access tokens for REST API calls",
+    "url": "https://docs.ecwid.com/develop-apps/private-and-public-ecwid-apps.md",
+    "quote": "Because of that, you can easily get access tokens and manage store data with REST API calls.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.private_app_scope",
+    "value": "Private apps are limited to the owning store and cannot be published",
+    "url": "https://docs.ecwid.com/develop-apps/private-and-public-ecwid-apps.md",
+    "quote": "Such an app is only available in your store, it cannot be installed in other stores or become paid and published.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.public_app_publishing",
+    "value": "Public apps are published to the App Market after Ecwid validation, starting from a Request form",
+    "url": "https://docs.ecwid.com/launch-apps/steps-to-go-live-with-a-public-app.md",
+    "quote": "When your app is ready to be published, start the app validation process to ensure it meets all requirements.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks",
+    "value": "Ecwid has documented webhooks with a list of webhook events",
+    "url": "https://docs.ecwid.com/webhook-automations/learn-ecwid-webhooks/list-of-webhook-events.md",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Third-party MCP server for Ecwid exists (m190/usefulapi-mcp, hosted via Glama listing)",
+    "url": "https://glama.ai/mcp/connectors/io.usefulapi/ecwid",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.official",
+    "value": "No vendor-owned MCP server found in search",
+    "url": "https://docs.ecwid.com/llms.txt",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "sdk.community_libraries",
+    "value": "Docs have a community libraries page; its content was not retrieved",
+    "url": "https://docs.ecwid.com/develop-apps/community-libraries.md",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Exact OAuth scopes, token refresh, and token lifetime are not established. The docs say OAuth 2.0 is used for public apps but I did not read the authorization pages.",
+   "Rate limits are not established. I did not read a rate-limit page.",
+   "Official SDKs: the community libraries page exists, but its contents, and whether Ecwid publishes official SDKs, are unknown.",
+   "Webhook event list and delivery details are not verified beyond page titles.",
+   "Changelog says tokens in query params were discontinued (March 2025). Confirm the current token transport, likely a header, on the authentication page.",
+   "Whether a customer workspace admin must approve an app install for private or public apps is unknown.",
+   "Whether the docs' GitHub org (github.com/Ecwid/ecwid-api-docs) publishes an official MCP server is not verified. The repo appeared in search but was not fetched.",
+   "Whether the usefulapi-mcp repo is maintained or safe to use is unknown. I did not inspect its code or license."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "high",
+  "credential_accessibility": "conditional",
+  "production_readiness": "review_required",
+  "security_risk": "elevated",
+  "commercial_dependency": "yes",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "Paid plan required",
+  "rationale": [
+   "API needs a paid plan.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 0.615,
+ "flags": [],
+ "error": null
+}

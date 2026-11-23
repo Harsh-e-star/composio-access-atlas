@@ -1,0 +1,225 @@
+{
+ "id": 41,
+ "name": "Shopify",
+ "category": "Ecommerce",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:32:32Z",
+ "duration_s": 68.1,
+ "cost_usd": 0.0366,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.shopify.com",
+   "developer_portal": "https://shopify.dev",
+   "description": "Shopify: commerce platform for online stores and point-of-sale. Developer docs at shopify.dev cover the Admin GraphQL API, app auth, webhooks, and the Dev MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "shopify.dev is Shopify's developer documentation site, and the pages fetched describe Shopify stores, the Admin API, and the Dev Dashboard. The product is clearly identified."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization code grant (merchant redirected to Shopify to approve access), token exchange (ID token exchanged for access token, for apps running inside the Shopify admin), and client credentials grant (client secret, for stores in the app's organization). Access tokens are offline (default, persist across sessions) or online (tied to a staff member's session).",
+   "token_refresh": "unknown (token lifetimes and refresh procedure not stated in fetched docs)",
+   "scopes_notes": "Scopes are approved by the merchant. Approving new scopes requires the 'Manage and install apps and channels' permission and the 'Develop apps' permission, plus store permissions for each requested scope."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Development stores are for development and testing only and cannot process real transactions. Per a search summary, dev stores can only install free and partner-friendly apps (not fetched verbatim). Public app distribution review was not checked."
+  },
+  "api": {
+   "protocols": [
+    "GraphQL"
+   ],
+   "breadth": "Unknown",
+   "resources": [
+    "Admin GraphQL API (QueryRoot entry point, e.g. products query)"
+   ],
+   "read_ops": [
+    "queries (e.g. products), per docs example"
+   ],
+   "write_ops": [
+    "mutations (existence stated; specific mutations not enumerated in fetched page)"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Admin GraphQL is cost-based: 'rate-limited using calculated query costs, measured in cost points.'",
+   "limitations": "The fetched Admin GraphQL page does not enumerate resources, so breadth is unestablished. Admin-created custom apps can no longer be created; new apps go through the Dev Dashboard or Shopify CLI. A REST Admin API status and SDK list were not confirmed."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://shopify.dev/docs/apps/build/devmcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/geli2001/shopify-mcp",
+    "https://mcpservers.org/servers/tanush-yadav/shopify-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Shopify is a commerce platform; shopify.dev is its developer documentation site",
+    "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "auth.oauth2_authorization_code",
+    "value": "Authorization code grant: merchant is redirected to Shopify to approve access",
+    "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+    "quote": "The merchant is redirected to Shopify to approve access.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth2_client_credentials",
+    "value": "Client credentials grant using client secret for stores in the app's organization",
+    "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+    "quote": "Apps can authenticate with a client secret for stores in their organization.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_types",
+    "value": "Offline tokens are the default; online tokens last as long as a staff member's session",
+    "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+    "quote": "online tokens last as long as a staff member's session",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.custom_apps_deprecated",
+    "value": "Admin-created custom apps can no longer be created; use Dev Dashboard or Shopify CLI",
+    "url": "https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens/generate-app-access-tokens-admin",
+    "quote": "You can no longer create new admin-created custom apps.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.dev_store_cost_and_creators",
+    "value": "Dev stores can be created by a Shopify Partner account or a merchant store with developer permissions",
+    "url": "https://shopify.dev/docs/apps/build/dev-dashboard/development-stores",
+    "quote": "A Shopify Partner account or a merchant store with developer permissions.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.dev_store_free",
+    "value": "Partner accounts and dev stores are free; a dev store is a free account with limitations",
+    "url": "https://help.shopify.com/docs/marketplaces/developer-tools",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "access.dev_store_testing_only",
+    "value": "Dev stores are testing environments for development and testing only, cannot process real transactions",
+    "url": "https://shopify.dev/docs/apps/build/dev-dashboard/development-stores",
+    "quote": "They can't be used in production or process real transactions.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.dev_store_limit",
+    "value": "Organizations are limited to 250 dev stores",
+    "url": "https://shopify.dev/docs/apps/build/dev-dashboard/development-stores",
+    "quote": "Organizations are limited to 250 dev stores.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.graphql_rate_limit",
+    "value": "Admin GraphQL API is rate-limited using calculated query costs",
+    "url": "https://shopify.dev/docs/api/admin-graphql",
+    "quote": "The GraphQL Admin API is rate-limited using calculated query costs, measured in cost points.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.mutations",
+    "value": "Admin GraphQL supports mutations (writes), but specific mutations were not enumerated",
+    "url": "https://shopify.dev/docs/api/admin-graphql",
+    "quote": "The response for mutations contains additional detail to help debug your query.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.subscription",
+    "value": "Webhook subscriptions are declared in shopify.app.toml or using the GraphQL Admin API",
+    "url": "https://shopify.dev/docs/apps/build/webhooks",
+    "quote": "You declare a subscription in shopify.app.toml or using the GraphQL Admin API",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.destinations",
+    "value": "Webhook destinations include a URL, Google Pub/Sub URI, or Amazon EventBridge ARN",
+    "url": "https://shopify.dev/docs/apps/build/webhooks",
+    "quote": "a URL, Google Pub/Sub URI, or Amazon EventBridge ARN.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_dev_mcp",
+    "value": "Shopify publishes the Dev MCP server, runs locally via npx @shopify/dev-mcp@latest",
+    "url": "https://shopify.dev/docs/apps/build/devmcp",
+    "quote": "The server runs locally and doesn't require authentication.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_intro",
+    "value": "Developers can connect to Shopify's developer resources through the Dev MCP server",
+    "url": "https://shopify.dev/docs/apps/build/devmcp",
+    "quote": "If you prefer MCP, you can connect to Shopify's developer resources through the Dev MCP server.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community_geli2001",
+    "value": "Third-party community Shopify MCP server (geli2001/shopify-mcp)",
+    "url": "https://github.com/geli2001/shopify-mcp",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Shopify/dev-mcp GitHub repo ownership and license could not be verified (fetch returned 404). The official status rests on the shopify.dev docs.",
+   "Official Shopify Storefront MCP, Global Catalog MCP, and UCP MCP endpoints (e.g., /api/ucp/mcp) were mentioned only in third-party guides and were not verified on shopify.dev. Their official status and auth are unknown.",
+   "Admin GraphQL resource list and breadth (products, orders, customers, etc.) not confirmed from a primary page.",
+   "REST Admin API status (legacy or current) not confirmed.",
+   "Official SDK list (e.g., @shopify/shopify-api, Shopify CLI) not confirmed; the webhook page did not mention SDKs.",
+   "Access token lifetimes and refresh behavior not confirmed.",
+   "Whether a trial is offered, whether public app distribution requires app review, and whether admin or store-owner approval is needed to install in a customer store were not confirmed.",
+   "Partner account and free dev store claims rely on a search snippet from help.shopify.com that was not fetched verbatim."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented GraphQL interface."
+  ]
+ },
+ "evidence_support_rate": 0.812,
+ "flags": [],
+ "error": null
+}

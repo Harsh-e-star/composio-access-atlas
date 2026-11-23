@@ -1,0 +1,297 @@
+{
+ "id": 53,
+ "name": "Ahrefs",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:21:01Z",
+ "duration_s": 31.6,
+ "cost_usd": 0.0774,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.ahrefs.com",
+   "title": "Ahrefs for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://ahrefs.com",
+   "title": "Ahrefs—AI Marketing Platform Powered by Big Data",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.ahrefs.com/en/api/docs/api-keys-creation-and-management",
+   "title": "API keys creation and management | Ahrefs for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.ahrefs.com/en/ahrefs-connect/docs/oauth-guide",
+   "title": "OAuth guide | Ahrefs for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.ahrefs.com/en/mcp/docs/introduction",
+   "title": "What is Ahrefs MCP | Ahrefs for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.ahrefs.com/en/mcp/docs/claude-desktop-web",
+   "title": "Claude Desktop/Web | Ahrefs for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.ahrefs.com/en/mcp/docs/chatgpt-web",
+   "title": "ChatGPT Web | Ahrefs for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.ahrefs.com/en/api/docs/introduction",
+   "title": "Introduction | Ahrefs for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.ahrefs.com/en/api/reference/site-explorer",
+   "title": "Site Explorer | Ahrefs for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://ahrefs.com/seo-mcp",
+   "title": "Ahrefs SEO MCP | SEO & AEO Data in ChatGPT and Claude",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/cnych/seo-mcp",
+   "title": "cnych/seo-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/egebese/dataseo-mcp",
+   "title": "egebese/dataseo-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ahrefs/ahrefs-mcp-server",
+   "title": "ahrefs/ahrefs-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/universal-mcp/ahrefs",
+   "title": "universal-mcp/ahrefs",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/matthewgkay/ahrefs-mcp-proxy",
+   "title": "matthewgkay/ahrefs-mcp-proxy",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/foverse/seoverse",
+   "title": "foverse/seoverse",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Stackwise-digital/seo-mcp",
+   "title": "Stackwise-digital/seo-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ventra-rocket/EchoSEO",
+   "title": "ventra-rocket/EchoSEO",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://ahrefs.com",
+   "developer_portal": "https://docs.ahrefs.com",
+   "description": "Ahrefs is an SEO and AI marketing platform; its API v3 exposes Site Explorer, Keywords Explorer, Site Audit, Rank Tracker, Brand Radar and more.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are official Ahrefs docs and site."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Ahrefs Connect uses OAuth 2.0 Authorization Code Flow with PKCE (scope apiv3-integration-apps); MCP also uses OAuth.",
+   "token_refresh": "No refresh tokens are issued for Ahrefs Connect. Access tokens are valid for 1 year, then the user must re-authorize.",
+   "scopes_notes": "Ahrefs Connect scope: apiv3-integration-apps. API keys are created by workspace owners/admins; up to 1,000 keys, expiry up to 10 years."
+  },
+  "access": {
+   "tier": "paid_plan",
+   "free_credentials": "no",
+   "trial_available": "unknown",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "yes",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Third-party apps via Ahrefs Connect require applying to the integration program and an approval process. Free test queries are available on non-eligible plans. The MCP endpoint cannot be used via custom scripts or standalone clients."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Site Explorer",
+    "Keywords Explorer",
+    "Site Audit",
+    "Rank Tracker",
+    "SERP Overview",
+    "Batch Analysis",
+    "Brand Radar",
+    "Content Helper",
+    "Web Analytics",
+    "GSC Insights",
+    "Social Media",
+    "Management",
+    "Subscription Information"
+   ],
+   "read_ops": [
+    "Site Explorer reports (backlinks, organic keywords, top pages)",
+    "Keywords Explorer metrics and ideas",
+    "SERP Overview",
+    "Site Audit",
+    "Rank Tracker",
+    "Batch Analysis",
+    "Brand Radar",
+    "Content Helper",
+    "Social Media"
+   ],
+   "write_ops": [
+    "Manage Rank Tracker projects",
+    "Manage Keywords Explorer lists"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "60 requests per minute by default; HTTP 429 when exceeded; dynamic throttling possible.",
+   "limitations": "Full API requires eligible paid plans (free test queries otherwise). Traffic Analytics needs an Enterprise add-on. Minimum request cost is 50 API units. Throttling may cause 429s."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://api.ahrefs.com/mcp/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/cnych/seo-mcp",
+    "https://github.com/egebese/dataseo-mcp",
+    "https://github.com/universal-mcp/ahrefs",
+    "https://github.com/matthewgkay/ahrefs-mcp-proxy"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer API key",
+    "url": "https://docs.ahrefs.com/en/api/docs/api-keys-creation-and-management",
+    "quote": "You'll need an API key to send requests via Ahrefs API v3. Provide it in the Authorization header when making requests: Authorization: Bearer YOUR_API_KEY .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://docs.ahrefs.com/en/ahrefs-connect/docs/oauth-guide",
+    "quote": "Ahrefs Connect uses OAuth 2.0 Authorization Code Flow with Proof Key for Code Exchange (PKCE)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "No refresh tokens; 1 year",
+    "url": "https://docs.ahrefs.com/en/ahrefs-connect/docs/oauth-guide",
+    "quote": "No refresh tokens are issued. Access tokens are valid for 1 year .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "paid_plan",
+    "url": "https://docs.ahrefs.com/en/api/docs/introduction",
+    "quote": "Ahrefs API is available on eligible paid plans . On all other plans, you'll still have access to a limited set of free test queries .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.admin",
+    "value": "admin-only keys",
+    "url": "https://docs.ahrefs.com/en/api/docs/introduction",
+    "quote": "Only workspace owners and admins can create and manage API keys.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.ahrefs.com/en/api/reference/site-explorer",
+    "quote": "Base URL https://api.ahrefs.com/v3/site-explorer Version 3.0.0 Endpoints 46",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.ahrefs.com/en/api/docs/introduction",
+    "quote": "Management : Endpoints to manage your Rank Tracker projects and Keywords Explorer lists",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "60 req/min",
+    "url": "https://docs.ahrefs.com/en/api/docs/introduction",
+    "quote": "Ahrefs API is limited to 60 requests per minute by default.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.ahrefs.com/en/mcp/docs/introduction",
+    "quote": "Ahrefs provides a hosted MCP server that allows users with a Lite plan or higher to connect their Ahrefs account to supported AI tools.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Official SDKs and webhooks are not established in the sources.",
+   "Whether a free trial is available is not established."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "high",
+  "credential_accessibility": "conditional",
+  "production_readiness": "review_required",
+  "security_risk": "standard",
+  "commercial_dependency": "yes",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Paid plan required",
+  "rationale": [
+   "API needs a paid plan.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

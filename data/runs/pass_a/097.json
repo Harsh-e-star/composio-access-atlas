@@ -1,0 +1,288 @@
+{
+ "id": 97,
+ "name": "higgsfield",
+ "category": "AI, Research and Media-native",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:28:30Z",
+ "duration_s": 62.6,
+ "cost_usd": 0.0766,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://higgsfield.ai/cli",
+   "title": "Higgsfield CLI | AI Image & Video Generation for Any Agent",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://higgsfield.ai",
+   "title": "Higgsfield AI — AI-native creative suite",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.higgsfield.ai/docs",
+   "title": "Higgsfield API - Higgsfield API Docs",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://open.higgsfield.ai/explore",
+   "title": "Open Higgsfield AI | Official Higgsfield API Platform",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.higgsfield.ai/docs/api-reference/overview",
+   "title": "API reference - Higgsfield API Docs",
+   "rendered": true
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.higgsfield.ai/docs/authentication",
+   "title": "Authentication - Higgsfield API Docs",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.higgsfield.ai/docs/concepts/rate-limits",
+   "title": "Rate limits - Higgsfield API Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://higgsfield.ai/mcp",
+   "title": "Higgsfield MCP | AI Image & Video Generation for Any Agent",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://higgsfield.ai/mcp?tab=claude",
+   "title": "Higgsfield MCP | AI Image & Video Generation for Any Agent",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.higgsfield.ai/docs/quickstart",
+   "title": "Quickstart - Higgsfield API Docs",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://docs.higgsfield.ai/docs/how-to/introduction",
+   "title": "How the API works - Higgsfield API Docs",
+   "rendered": true
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/BeatAPI/BeatDesign",
+   "title": "BeatAPI/BeatDesign",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/midudev/mcp-higgsfield-landing",
+   "title": "midudev/mcp-higgsfield-landing",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Barty-Bart/gpt-6-astra-10k-websites",
+   "title": "Barty-Bart/gpt-6-astra-10k-websites",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Hikhakk/higgsfield-mcp-unified",
+   "title": "Hikhakk/higgsfield-mcp-unified",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/zubair-trabzada/scroll-cinematic-claude",
+   "title": "zubair-trabzada/scroll-cinematic-claude",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/robonuggets/higgsfield-skill",
+   "title": "robonuggets/higgsfield-skill",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/geopopos/higgsfield_ai_mcp",
+   "title": "geopopos/higgsfield_ai_mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jutsuhq/jutsu-studio",
+   "title": "jutsuhq/jutsu-studio",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://higgsfield.ai",
+   "developer_portal": "https://docs.higgsfield.ai/docs",
+   "description": "Higgsfield is an AI-native creative suite for generating images and videos, offering a REST API, CLI, and MCP server for agents.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Higgsfield API docs, CLI and MCP."
+  },
+  "auth": {
+   "methods": [
+    "API key"
+   ],
+   "primary": "API key",
+   "oauth_flows": "MCP/CLI sign in via browser with Higgsfield account (flow type unspecified).",
+   "token_refresh": "",
+   "scopes_notes": "Credential = key ID + secret, sent as 'Authorization: Key ID:SECRET'. Models may have separate access restrictions."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Generations consume credits/balance; account/model concurrency limits apply; enterprise capacity via contact sales. Pricing page failed to load."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "generation requests",
+    "models",
+    "request status",
+    "Soul ID custom references",
+    "media upload"
+   ],
+   "read_ops": [
+    "Get request status"
+   ],
+   "write_ops": [
+    "Submit image/video generation",
+    "Cancel queued request",
+    "Upload media",
+    "Train Soul ID references"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Concurrency limits per account and model; excess requests queue; queue full returns 429 with Retry-After; Soul ID training endpoint limited to 2 concurrent.",
+   "limitations": "Asynchronous generation only; outputs retained at least seven days; credentials must be server-side."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://higgsfield.ai/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/Hikhakk/higgsfield-mcp-unified",
+    "https://github.com/robonuggets/higgsfield-skill",
+    "https://github.com/geopopos/higgsfield_ai_mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key (key ID + secret)",
+    "url": "https://docs.higgsfield.ai/docs/authentication",
+    "quote": "Each credential consists of a key ID and a secret.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Authorization Key header",
+    "url": "https://docs.higgsfield.ai/docs/authentication",
+    "quote": "Authorization : Key YOUR_KEY_ID:YOUR_KEY_SECRET",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.higgsfield.ai/docs/quickstart",
+    "quote": "A Higgsfield Console account An API key ID and secret",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.higgsfield.ai/docs/quickstart",
+    "quote": "This guide uses the REST API so you can see the complete request lifecycle.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "CLI/library",
+    "url": "https://higgsfield.ai/cli",
+    "quote": "Install the CLI: run `npm i -g @higgsfield/cli` .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Medium",
+    "url": "https://docs.higgsfield.ai/docs",
+    "quote": "Generate images and videos through one authenticated, asynchronous API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://higgsfield.ai/cli",
+    "quote": "Higgsfield uses MCP (Model Context Protocol), an open standard that gives AI agents access to external tools.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://docs.higgsfield.ai/docs",
+    "quote": "Submit a request to a model endpoint, then poll for the result or receive a webhook when processing finishes.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "concurrency",
+    "url": "https://docs.higgsfield.ai/docs/concepts/rate-limits",
+    "quote": "The primary generation limit is concurrency: the number of requests that may be processing at the same time.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Pricing page failed to load; free credits/paid plan requirement for API unknown.",
+   "Whether API credits require a paid balance in Console is unestablished.",
+   "MCP server URL not shown in sources."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

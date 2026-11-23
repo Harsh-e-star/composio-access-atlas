@@ -1,0 +1,283 @@
+{
+ "id": 42,
+ "name": "WooCommerce",
+ "category": "Ecommerce",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:20:05Z",
+ "duration_s": 62.6,
+ "cost_usd": 0.089,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+   "title": "WooCommerce REST API Documentation - WooCommerce",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://woocommerce.com",
+   "title": "WooCommerce",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developer.woocommerce.com",
+   "title": "The WooCommerce Developer Blog",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://woocommerce.com/documentation/woocommerce/",
+   "title": "WooCommerce Documentation - WooCommerce",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://woocommerce.com/wordpress-ecommerce/",
+   "title": "WordPress Ecommerce Plugin - WooCommerce",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developer.woocommerce.com/2025/11/03/call-for-testing-woocommerce-mcp-beta/",
+   "title": "Call for Testing: WooCommerce MCP Beta Roadmap – The WooCommerce Developer Blog",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.woocommerce.com/2026/10/21/woocommerce-11-3-mcp/",
+   "title": "WooCommerce 11.3 MCP Adaptor updates Advisories – The WooCommerce Developer Blog",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://woocommerce.com/documentation/woocommerce/getting-started/",
+   "title": "Getting started Documentation - WooCommerce",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+   "title": "WooCommerce REST API | WooCommerce developer docs",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developer.woocommerce.com/docs/",
+   "title": "WooCommerce Developer Docs | WooCommerce developer docs",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://developer.woocommerce.com/docs/apis/store-api/",
+   "title": "WooCommerce Store API | WooCommerce developer docs",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://developer.woocommerce.com/docs/extensions/getting-started-extensions/",
+   "title": "Get started building extensions | WooCommerce developer docs",
+   "rendered": false
+  },
+  {
+   "id": "S13",
+   "url": "https://developer.woocommerce.com/",
+   "title": "The WooCommerce Developer Blog",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/techspawn/woocommerce-mcp-server",
+   "title": "techspawn/woocommerce-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/gobuildwp/wordpress-mcp-ai-gobuildwp",
+   "title": "gobuildwp/wordpress-mcp-ai-gobuildwp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/tropk-ai/mcp-for-wordpress",
+   "title": "tropk-ai/mcp-for-wordpress",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/cosmincraciun97/stonewright-wp-mcp",
+   "title": "cosmincraciun97/stonewright-wp-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/davidofug/Manual-Currency-Pricing-for-WooCommerce-Products-mcpwp",
+   "title": "davidofug/Manual-Currency-Pricing-for-WooCommerce-Products-mcpwp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/iOSDevSK/mcp-for-woocommerce",
+   "title": "iOSDevSK/mcp-for-woocommerce",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/easymcpai/Easy-MCP-AI-Wordpress-MCP-Server",
+   "title": "easymcpai/Easy-MCP-AI-Wordpress-MCP-Server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/respira-press/respira-wordpress-mcp",
+   "title": "respira-press/respira-wordpress-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://woocommerce.com",
+   "developer_portal": "https://developer.woocommerce.com",
+   "description": "WooCommerce is an open-source ecommerce platform for WordPress with a REST API (wc/v3) and a Store API for managing and shopping store data.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe WooCommerce REST API, Store API, and MCP."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Basic",
+    "Other"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "Not applicable; consumer key/secret are static until revoked.",
+   "scopes_notes": "Keys have Read, Write, or Read/Write permissions and are linked to a WordPress user. MCP uses WordPress application passwords."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "yes",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Keys are generated by a store admin in WooCommerce > Settings > Advanced > REST API on a self-hosted store; HTTPS and non-Plain permalinks are required."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "products",
+    "orders",
+    "customers",
+    "coupons",
+    "payments (WooPayments)",
+    "cart",
+    "checkout"
+   ],
+   "read_ops": [
+    "retrieve store data"
+   ],
+   "write_ops": [
+    "create, update and delete store data"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Store API is unauthenticated, cannot write store data like settings, and only exposes the current customer's data. The legacy REST API was removed from core."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developer.woocommerce.com/docs/",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/techspawn/woocommerce-mcp-server",
+    "https://github.com/iOSDevSK/mcp-for-woocommerce"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key (consumer key/secret)",
+    "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+    "quote": "The WooCommerce REST API uses a key system to control access. Each set of keys is linked to a WordPress user on your site.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Basic",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+    "quote": "The username when authenticating is your consumer key The password when authenticating is your consumer secret",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+    "quote": "Go to WooCommerce > Settings > Advanced > REST API . Select Create an API key or Add Key .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+    "quote": "This allows WC data to be created, read, updated, and deleted using requests in JSON format and using WordPress REST API Authentication methods and standard HTTP verbs",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "CLI/library",
+    "url": "https://developer.woocommerce.com/docs/",
+    "quote": "Manage products, orders, and store settings from the command line with wp wc .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+    "quote": "This allows WC data to be created, read, updated, and deleted using requests in JSON format",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developer.woocommerce.com/docs/",
+    "quote": "Connect a compatible AI client to a running store through the WordPress MCP Adapter and WooCommerce abilities. This integration is a developer preview.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Rate limits are not documented in the sources.",
+   "The sources do not describe a hosted sandbox. Developers use their own store."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "high",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,338 @@
+{
+ "id": 42,
+ "name": "WooCommerce",
+ "category": "Ecommerce",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:32:13Z",
+ "duration_s": 98.7,
+ "cost_usd": 0.0736,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://woocommerce.com/",
+   "developer_portal": "https://developer.woocommerce.com/docs/apis/rest-api/",
+   "description": "WooCommerce: open-source ecommerce plugin for WordPress, maintained by Automattic/WooCommerce.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe WooCommerce as the open-source ecommerce platform for WordPress; the REST API docs are on woocommerce.com and developer.woocommerce.com. Note the product is a WordPress plugin, not a standalone hosted SaaS, so you need a WordPress site to call its API."
+  },
+  "auth": {
+   "methods": [
+    "Basic",
+    "Other"
+   ],
+   "primary": "Basic",
+   "oauth_flows": "No OAuth 2.0 flow documented. Over HTTP the docs require OAuth 1.0a 'one-legged' authentication. A separate /wc-auth/v1/authorize endpoint lets an external app request keys with scope read, write, or read_write, returning keys via callback POST.",
+   "token_refresh": "No refresh tokens; consumer key/secret are long-lived and can be revoked and regenerated in the admin.",
+   "scopes_notes": "Key permissions are read, write, or read_write, set per key; each key is tied to a WordPress user. MCP remote access uses a WordPress username plus Application Password, with the default server requiring the read capability."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No vendor sandbox was found. Testing needs a WordPress site with WooCommerce installed (free plugin); you create keys yourself as the site admin (manage_woocommerce). Keys for a store you do not administer require that store's admin to issue them. Hosting cost for a WordPress site is not covered by the sources."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Coupons",
+    "Customers",
+    "Orders",
+    "Order actions",
+    "Order notes",
+    "Order refunds",
+    "Products",
+    "Product variations",
+    "Product attributes",
+    "Product categories",
+    "Product tags",
+    "Product reviews",
+    "Reports",
+    "Refunds",
+    "Tax rates",
+    "Tax classes",
+    "Webhooks",
+    "Settings",
+    "Payment gateways",
+    "Shipping zones",
+    "System status",
+    "Data"
+   ],
+   "read_ops": [
+    "List/retrieve coupons",
+    "List/retrieve customers",
+    "List/retrieve orders",
+    "List/retrieve products",
+    "Reports",
+    "Refunds",
+    "Tax rates",
+    "Settings and setting options",
+    "Shipping zones and methods",
+    "System status",
+    "Payment gateways",
+    "Order notes"
+   ],
+   "write_ops": [
+    "Create/update/delete coupons",
+    "Create/update/delete customers",
+    "Create/update/delete orders",
+    "Create/update/delete products",
+    "Create/update/delete order notes and refunds",
+    "Create/update/delete webhooks",
+    "Batch create/update/delete on coupons and customers"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "unknown",
+   "limitations": "Docs are version-specific (v3 is current); the developer docs name only a few resources in prose, and the full set is in the v3 reference. Rate limits not documented. Webhooks fire on core topics and disable after 5 consecutive failed deliveries. MCP feature is described as a developer preview that may change. Legacy REST API requires a separate plugin for old webhook setups."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developer.woocommerce.com/docs/features/mcp/",
+   "community": "yes",
+   "community_urls": [
+    "https://socket.dev/npm/package/@wppoland/woocommerce-mcp",
+    "https://mcpservers.org/servers/storeagent-ai-woocommerce-mcp",
+    "https://mcp.so/servers/woocommerce-mcp-server",
+    "https://ai.g2.com/marketplace/tools/woocommerce-mcp-server",
+    "https://woocommerce.com/document/w7s-mcp/"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "WooCommerce is the open-source ecommerce platform for WordPress.",
+    "url": "https://wordpress.org/plugins/woocommerce/",
+    "quote": "WooCommerce is the open-source ecommerce platform for WordPress.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.purpose",
+    "value": "REST API connects store to external systems",
+    "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+    "quote": "The WooCommerce REST API connects your store to external systems and services.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.basic",
+    "value": "Basic auth over HTTPS uses consumer key as username and consumer secret as password",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication/",
+    "quote": "providing the REST API Consumer Key as the username and the REST API Consumer Secret as the password.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.query_string",
+    "value": "Consumer key/secret may be passed as query string params if Authorization header is not parsed",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication/",
+    "quote": "you may provide the consumer key/secret as query string parameters instead.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth1a",
+    "value": "OAuth 1.0a one-legged required over HTTP",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication/",
+    "quote": "You must use OAuth 1.0a \"one-legged\" authentication",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.wc_auth_flow",
+    "value": "/wc-auth/v1/authorize generates keys for users only, not customers",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication/",
+    "quote": "This endpoint works exclusively for users to generate API keys.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.key_generation",
+    "value": "Keys are tied to a WordPress user with Read, Write, or Read/Write permission; set in WooCommerce > Settings > Advanced > REST API",
+    "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+    "quote": "Each set of keys is linked to a WordPress user on your site.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free",
+    "value": "WooCommerce core is free open-source plugin",
+    "url": "https://wordpress.org/plugins/woocommerce/",
+    "quote": "This plugin is free but offers additional paid commercial upgrades or support.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.wp_requirement",
+    "value": "Requires WordPress 7.0 or greater",
+    "url": "https://wordpress.org/plugins/woocommerce/",
+    "quote": "WordPress 7.0 or greater.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.resources",
+    "value": "Resource groups include coupons, customers, orders, products, refunds, reports, webhooks, settings",
+    "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+    "quote": "Coupons, Customers, Orders, Order actions, Order notes, Order refunds",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.methods",
+    "value": "Coupons and Customers support GET, POST, PUT, PATCH, DELETE on single items",
+    "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+    "quote": "Coupons: GET, POST (collection); GET, POST, PUT, PATCH, DELETE (single item)",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.read_write",
+    "value": "API keys can be given read/write permissions",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+    "quote": "give the key **read/write** permissions.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks.official",
+    "value": "Official libraries: JavaScript, PHP, Python, Ruby",
+    "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+    "quote": "Use the tabs in the top-right corner of this page to see how to install and use each library.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks.third_party_unsupported",
+    "value": "WooCommerce does not support third-party libraries",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+    "quote": "We don't offer support for third party libraries.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.topics",
+    "value": "Core webhook topics for coupons, customers, orders, products (created/updated/deleted)",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/v3/webhooks/",
+    "quote": "`order.created`, `order.updated` and `order.deleted`.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.delivery",
+    "value": "Webhooks delivered by HTTP POST via wp-cron background processing; payload matches REST response",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/v3/webhooks/",
+    "quote": "Delivery is performed using `wp_remote_post()` (HTTP POST) and processed in the background by default using wp-cron.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.disable",
+    "value": "Webhook disabled after 5 consecutive non-2xx deliveries",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/v3/webhooks/",
+    "quote": "After 5 consecutive failed deliveries (as defined by a non HTTP 2xx response code),",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_feature",
+    "value": "WooCommerce documents an MCP feature via the MCP Adapter plugin",
+    "url": "https://developer.woocommerce.com/docs/features/mcp/",
+    "quote": "With the MCP Adapter plugin, AI clients can discover and run these store operations through the Model Context Protocol (MCP).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.adapter_not_bundled",
+    "value": "WooCommerce does not bundle the MCP adapter; MCP runs on WordPress MCP Adapter",
+    "url": "https://developer.woocommerce.com/docs/features/mcp/",
+    "quote": "The MCP Adapter plugin must be installed and active.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "Remote MCP uses WordPress username + Application Password; not account password or WooCommerce REST key",
+    "url": "https://developer.woocommerce.com/docs/features/mcp/",
+    "quote": "Remote HTTP connections authenticate using a WordPress username and an Application Password.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.beta_status",
+    "value": "Developer preview that may change",
+    "url": "https://developer.woocommerce.com/docs/features/mcp/",
+    "quote": "The page describes this as a developer preview that may change.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.adapter_repo",
+    "value": "WordPress MCP Adapter is maintained at github.com/WordPress/mcp-adapter (WordPress org, not WooCommerce)",
+    "url": "https://github.com/WordPress/mcp-adapter",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.woocommerce_demo_repo",
+    "value": "github.com/woocommerce/wc-mcp-ability is a demo plugin, not production",
+    "url": "https://github.com/woocommerce/wc-mcp-ability",
+    "quote": "This plugin is for educational and testing purposes only and should not be used in production environments.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community_npm",
+    "value": "Community npm package @wppoland/woocommerce-mcp",
+    "url": "https://socket.dev/npm/package/@wppoland/woocommerce-mcp",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.third_party_plugin",
+    "value": "MCP for WooCommerce by W7S is a third-party commercial plugin on woocommerce.com",
+    "url": "https://woocommerce.com/document/w7s-mcp/",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Rate limits for the REST API are not documented in the sources reviewed.",
+   "Whether a vendor sandbox or free hosted test store exists is unknown; testing requires a self-hosted or hosted WordPress site.",
+   "Whether the WordPress MCP Adapter-based server counts as 'official' is a judgment call: WooCommerce documents it, but the runtime and the only WooCommerce-org repo (wc-mcp-ability) is a demo.",
+   "Full per-resource method lists in the v3 reference were truncated; only coupons, customers, order notes, and order refunds were confirmed.",
+   "Trial availability and hosting costs for a test store were not established.",
+   "Customers and coupons read/write confirmed; reports and settings write support not confirmed.",
+   "Quote verification: many quotes come from fetch-tool extractions, not raw page text; treat as needing re-check against live pages."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "high",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.72,
+ "flags": [],
+ "error": null
+}

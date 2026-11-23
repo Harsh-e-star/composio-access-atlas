@@ -1,0 +1,243 @@
+{
+ "id": 76,
+ "name": "Monday.com",
+ "category": "Productivity and Project Management",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:35:46Z",
+ "duration_s": 74.9,
+ "cost_usd": 0.0509,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://monday.com",
+   "developer_portal": "https://developer.monday.com",
+   "description": "monday.com is a work-management / project-management SaaS platform (boards, items, columns, automations) with a public GraphQL API at api.monday.com/v2 and a developer center at developer.monday.com.",
+   "identity_confirmed": "yes",
+   "identity_notes": "developer.monday.com and the monday.com docs describe the work OS / boards product named in the task. Confirmed from the API intro and developer center pages."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Authorization code flow. Legacy flow: authorize at https://auth.monday.com/oauth2/authorize, token exchange via POST to https://auth.monday.com/oauth2/token. Legacy flow issues no refresh tokens. A newer OAuth 2.1 flow with expiring access tokens, refresh tokens and revocation is also documented.",
+   "token_refresh": "Legacy OAuth: no refresh tokens; access tokens do not expire until uninstall. Newer OAuth 2.1: refresh tokens supported. Personal API tokens can be regenerated at any time, which immediately invalidates the old token.",
+   "scopes_notes": "OAuth scopes are set in the app's OAuth tab in the Developer Center. Personal API tokens carry all permissions that mirror the user's UI permissions; app tokens have a separate scope set."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Developer accounts are for development and testing only. Item, automation, integration and API complexity limits apply. Capacity increase requests go through a marketplace partner extensions form and are reviewed within five business days. Marketplace app review requirements were not established."
+  },
+  "api": {
+   "protocols": [
+    "GraphQL",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "boards",
+    "items",
+    "columns",
+    "updates",
+    "users",
+    "workspaces",
+    "automations"
+   ],
+   "read_ops": [
+    "Querying boards and items (per MCP tool description)",
+    "Schema introspection via https://api.monday.com/v2/get_schema"
+   ],
+   "write_ops": [
+    "Creating items",
+    "Editing columns",
+    "Other mutations via GraphQL (not enumerated)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Conflicting third-party figures (1,000/day on lower tiers vs 200 calls/day on Free). Official rate-limit figure not confirmed. Official sandbox page lists API complexity limit of 10M and 25,000 actions/month for automations and integrations.",
+   "limitations": "Official docs did not confirm rate limits or the webhook event catalog. Only the GraphQL protocol is documented on the pages fetched; the REST/other-protocol question is unresolved. The 60+ MCP tools count is from the vendor MCP page."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developer.monday.com/api-reference/docs/mondaycom-mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://mcp.so/server/mondaydotcom/mondaycom",
+    "https://npmjs.com/package/@mondaydotcomorg/monday-api-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "monday.com is a work OS whose API is built with GraphQL at https://api.monday.com/v2",
+    "url": "https://developer.monday.com/api-reference/docs/introduction-to-graphql",
+    "quote": "The monday.com API is built with GraphQL. Our API uses the following endpoint: https://api.monday.com/v2",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary",
+    "value": "Personal API token is the documented auth method, passed in the Authorization header",
+    "url": "https://developer.monday.com/api-reference/docs/authentication",
+    "quote": "Pass the token in the Authorization header of requests to https://api.monday.com/v2.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "Personal API tokens can be regenerated at any time, which invalidates the current token",
+    "url": "https://developer.monday.com/api-reference/docs/authentication",
+    "quote": "API tokens can be regenerated at any time. Regenerating will immediately invalidate your current token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth",
+    "value": "OAuth2 authorization code flow with auth.monday.com endpoints; legacy flow has no refresh tokens",
+    "url": "https://developer.monday.com/apps/docs/oauth",
+    "quote": "The OAuth request URL is: https://auth.monday.com/oauth2/authorize. Our OAuth flow does not support refresh tokens.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.oauth_refresh_new",
+    "value": "Newer OAuth 2.1 flow supports expiring access tokens and refresh tokens",
+    "url": "https://developer.monday.com/apps/docs/oauth",
+    "quote": "monday.com now supports an improved OAuth 2.1 flow with expiring access tokens, refresh tokens, and token revocation.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "Free developer account can be created directly for building and testing",
+    "url": "https://developer.monday.com/api-reference/docs/developer-sandbox-account",
+    "quote": "Create a free developer account and start building right away",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Developer accounts are for development and testing only; complexity limits apply",
+    "url": "https://developer.monday.com/api-reference/docs/developer-sandbox-account",
+    "quote": "Developer accounts are for development and testing only. Item, automation, integration, and API complexity limits apply.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.capacity",
+    "value": "Capacity increase requests reviewed within five business days via marketplace partner extensions form",
+    "url": "https://developer.monday.com/api-reference/docs/developer-sandbox-account",
+    "quote": "The monday.com team reviews requests within five business days.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.token_source",
+    "value": "API token is available in the Developer Center for all users with API access",
+    "url": "https://developer.monday.com/api-reference/docs/authentication",
+    "quote": "The Developer Center route is for all users with API access.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Official MCP exposes 60+ tools for reading and writing board data",
+    "url": "https://developer.monday.com/api-reference/docs/mondaycom-mcp",
+    "quote": "The tools reference covers all 60+ tools, organized by category, with equivalent GraphQL APIs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Hosted MCP server at https://mcp.monday.com/mcp maintained by the monday.com AI team",
+    "url": "https://developer.monday.com/api-reference/docs/mondaycom-mcp",
+    "quote": "maintained by the monday.com AI team",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.repo_owner",
+    "value": "Official MCP repo is github.com/mondaycom/mcp (org mondaycom), MIT license, maintained by the monday.com AI team",
+    "url": "https://github.com/mondaycom/mcp",
+    "quote": "maintained by the monday.com AI team",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "MCP server accepts a monday API token via MONDAY_TOKEN or -t flag, and OAuth via the hosted server",
+    "url": "https://github.com/mondaycom/mcp",
+    "quote": "The server requires a monday.com API token to authenticate with the monday.com API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Third-party directory listings and an npm package @mondaydotcomorg/monday-api-mcp exist; these are not vendor-owned",
+    "url": "https://npmjs.com/package/@mondaydotcomorg/monday-api-mcp",
+    "quote": "monday api mcp",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks",
+    "value": "monday.com sends real-time webhook requests to apps when events occur",
+    "url": "https://developer.monday.com/apps/docs/webhooks",
+    "quote": "Real-time requests sent from monday.com to your app when an event occurs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks",
+    "value": "Official JavaScript API client @mondaydotcomorg/api exists on npm",
+    "url": "https://www.npmjs.com/package/@mondaydotcomorg/api",
+    "quote": "typed, ergonomic way to interact with the monday.com GraphQL API",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "sdks",
+    "value": "Apps SDK @mondaycom/apps-sdk in GitHub org mondaycom for monday code apps",
+    "url": "https://github.com/mondaycom/apps-sdk",
+    "quote": "This sdk is used to leverage some of the capabilities exposed via <monday-code />",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Official rate limits: sources conflict (1,000/day vs 200/day on Free tier). Check the official rate limit page.",
+   "Webhook creation method (API mutation vs app feature) and the full event catalog were not confirmed.",
+   "Whether installing an app into a workspace requires account admin approval was not established.",
+   "Whether Marketplace app review is needed before public listing was not established.",
+   "MCP transport: a search snippet says Streamable HTTP with SSE deprecated; not confirmed on the fetched page.",
+   "Whether a trial-only tier exists separately from the free developer account was not established.",
+   "Only GraphQL is documented on the fetched pages; no REST or other protocols were found."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/GraphQL interface."
+  ]
+ },
+ "evidence_support_rate": 0.765,
+ "flags": [],
+ "error": null
+}

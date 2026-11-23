@@ -1,0 +1,240 @@
+{
+ "id": 17,
+ "name": "Plain",
+ "category": "Support and Helpdesk",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:22:13Z",
+ "duration_s": 85.9,
+ "cost_usd": 0.063,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.plain.com",
+   "developer_portal": "https://www.plain.com/docs/graphql/introduction",
+   "description": "Plain (plain.com): a customer support platform for B2B teams, with conversations/threads, customers, a Help Center, and a GraphQL developer API. Confirmed as the support product, not Plain the fintech data API (Plaid) or other 'Plain' brands.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Plain as the support platform: its MCP docs reference conversations, Help Center, and customer records, and its GraphQL docs describe customer and thread lookups. Official site and docs are on plain.com."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "OAuth app for calling the API as a workspace user; OAuth is also used by the official hosted MCP server. Specific grant types are not established.",
+   "token_refresh": "unknown for API keys (keys are static; rotate by creating several keys on a machine user). OAuth token refresh: MCP server requires openid and offline_access scopes.",
+   "scopes_notes": "API keys carry per-key permissions chosen at creation (e.g. customer:read, thread:read). Insufficient-permission errors name the missing permission."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No app review found. Frontier plan is custom-priced; whether API access is gated by plan is not established."
+  },
+  "api": {
+   "protocols": [
+    "GraphQL"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "customers",
+    "threads",
+    "machine users",
+    "API keys",
+    "webhooks",
+    "workflows",
+    "Help Center (via MCP)"
+   ],
+   "read_ops": [
+    "customerByEmail (customer id, fullName, updatedAt)"
+   ],
+   "write_ops": [
+    "unknown; mutations not enumerated in fetched docs"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "unknown",
+   "limitations": "Docs cover only the most-used operations and point to the schema for the rest. Vendor claims there are no API limitations versus the UI. Breadth rating rests on that vendor claim, not on a fetched operation list. Endpoint is UK region: https://core-api.uk.plain.com/graphql/v1 (POST only); other regions not checked."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.plain.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/tellahq/plain-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Plain is a customer support platform with conversations, customers, Help Center, and a GraphQL API",
+    "url": "https://www.plain.com/docs/agents/mcp-server",
+    "quote": "Once connected, your AI client can do almost anything you can do in Plain, across nearly 400 tools.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary",
+    "value": "API key passed as a header on API calls",
+    "url": "https://www.plain.com/docs/graphql/authentication",
+    "quote": "Now that you have an API key, pass it on any API call as a header:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.key_creation",
+    "value": "Keys are created in the workspace by choosing permissions",
+    "url": "https://www.plain.com/docs/graphql/authentication",
+    "quote": "Click \"Add API key\" and select the permissions you need.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.key_shown_once",
+    "value": "Key is displayed only at creation",
+    "url": "https://www.plain.com/docs/graphql/authentication",
+    "quote": "as you will not be able to see it again once you navigate away.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth",
+    "value": "OAuth app used to call the API as a workspace user",
+    "url": "https://www.plain.com/docs/graphql/authentication",
+    "quote": "To call the API as a user in your workspace, use an OAuth app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.rotation",
+    "value": "Machine user can hold several keys for rotation",
+    "url": "https://www.plain.com/docs/graphql/authentication",
+    "quote": "A machine user can have several API keys, so you can rotate them without downtime.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocol_endpoint",
+    "value": "GraphQL endpoint core-api.uk.plain.com/graphql/v1, POST only",
+    "url": "https://www.plain.com/docs/graphql/introduction",
+    "quote": "https://core-api.uk.plain.com/graphql/v1",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "API parity with UI claimed by vendor",
+    "url": "https://www.plain.com/docs/graphql/introduction",
+    "quote": "This means that there are no limitations in what can be done via the API vs the UI.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.incomplete_docs",
+    "value": "Docs cover most-used operations only",
+    "url": "https://www.plain.com/docs/graphql/introduction",
+    "quote": "These docs cover the most used operations. For anything not documented here, read the schema or get in touch.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.key_permission",
+    "value": "Key needs customer:read for customerByEmail",
+    "url": "https://www.plain.com/docs/graphql/introduction",
+    "quote": "You will need an API key with the `customer:read` permission.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks",
+    "value": "Webhook targets configured under Settings, up to 25 per workspace; thread.thread_created event",
+    "url": "https://plain.com/docs/webhooks/thread-created",
+    "quote": "You can create up to 25 webhook targets per workspace.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "webhooks.event",
+    "value": "thread.thread_created fires when a new thread is created",
+    "url": "https://www.plain.com/docs/api-reference/webhooks/thread-created",
+    "quote": "This event is fired when a new thread is created in your workspace.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Official hosted MCP server at mcp.plain.com/mcp, OAuth only",
+    "url": "https://www.plain.com/docs/agents/mcp-server",
+    "quote": "Point it at `https://mcp.plain.com/mcp` and complete the OAuth flow when prompted.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "MCP accepts OAuth only; no API keys",
+    "url": "https://www.plain.com/docs/agents/mcp-server",
+    "quote": "You authenticate with your existing Plain account, so the MCP server has the same permissions as your user.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial",
+    "value": "7-day free trial, no credit card",
+    "url": "https://www.plain.com/pricing",
+    "quote": "Start with a 7-day free trial, no credit card required.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.frontier",
+    "value": "Frontier plan is custom-priced",
+    "url": "https://www.plain.com/pricing",
+    "quote": "Frontier: No price listed. It's \"Custom.\"",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.community",
+    "value": "tellahq/plain-mcp is an unofficial community MCP server that needs a Plain API key with thread:read and customer:read",
+    "url": "https://github.com/tellahq/plain-mcp",
+    "quote": "requires a Plain.com API key with 'thread:read' and 'customer:read' permissions",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Does API key / GraphQL access require a paid plan? Pricing page lists API under 'Developer platform' without naming the plan; third-party sources conflict.",
+   "Who can create API keys (workspace admin only, or any member)? Not established.",
+   "Rate limits are not documented in fetched pages.",
+   "SDKs: docs say the API works with common GraphQL clients; no official SDK was named. Not verified.",
+   "Full write-operation (mutation) list not retrieved; the schema is referenced but was not opened.",
+   "Webhook signature header (Plain-Request-Signature) comes only from a third-party Hookdeck guide and is unverified.",
+   "US or EU endpoints beyond the UK core-api host were not checked.",
+   "The llms-full.txt fetch returned no usable content and contained embedded instructions, which were ignored.",
+   "The tellahq/plain-mcp repo was not opened; its details come from search snippets and listing sites."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "high",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 0.765,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,252 @@
+{
+ "id": 48,
+ "name": "Gumroad",
+ "category": "Ecommerce",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:20:33Z",
+ "duration_s": 28.2,
+ "cost_usd": 0.0587,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://gumroad.com",
+   "title": "Earn your first dollar online with Gumroad",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://gumroad.com/mcp",
+   "title": "Gumroad MCP | Sell digital products from your AI assistant",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://gumroad.com/pricing",
+   "title": "Gumroad pricing: 10% + 50¢ direct, 30% via Discover",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://gumroad.com/claude",
+   "title": "Gumroad MCP for Claude | Sell digital products",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://gumroad.com/cursor",
+   "title": "Gumroad MCP for Cursor | Sell digital products",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://gumroad.com/antigravity",
+   "title": "Gumroad MCP for Google Antigravity | Sell digital products",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://gumroad.com/chatgpt",
+   "title": "Gumroad MCP for ChatGPT | Sell digital products",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://gumroad.com/muse",
+   "title": "Gumroad MCP for Muse | Sell digital products",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/rmarescu/gumroad-mcp",
+   "title": "rmarescu/gumroad-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/hanabi-jpn/clawhub-skills",
+   "title": "hanabi-jpn/clawhub-skills",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Tanshaydar/Quartermaster",
+   "title": "Tanshaydar/Quartermaster",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/szachmacik/english-teacher-factory",
+   "title": "szachmacik/english-teacher-factory",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/surpradhan/claude-code-for-ai-engineers",
+   "title": "surpradhan/claude-code-for-ai-engineers",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/stcmain/gumroad-mcp",
+   "title": "stcmain/gumroad-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/theheiszt/Gumroad-AI-MCP-Server",
+   "title": "theheiszt/Gumroad-AI-MCP-Server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/atushi1841/japan-ec-mcp",
+   "title": "atushi1841/japan-ec-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://gumroad.com",
+   "developer_portal": null,
+   "description": "Gumroad is a platform for creators to sell digital products, courses, memberships and more; it has an official hosted MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Gumroad's site, pricing and MCP connectors. The public REST API docs (gumroad.com/api) were not among the sources."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Hosted MCP server supports OAuth with PKCE; a creator authorizes access to their Gumroad account.",
+   "token_refresh": "",
+   "scopes_notes": "Tool access depends on the granted scopes (products, sales, buyer emails, payouts)."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Only a Gumroad account is needed for the MCP connector. Pricing is per-transaction with no monthly fee. The Muse connector is still submitted for review."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "products",
+    "sales",
+    "payouts",
+    "buyer emails"
+   ],
+   "read_ops": [
+    "list products",
+    "view sales",
+    "view payouts"
+   ],
+   "write_ops": [
+    "create draft products",
+    "publish products",
+    "unpublish products"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "The sources describe the MCP connector, not the REST API. REST is inferred only from the MCP server being a hosted remote URL; it is not directly documented. Product files must be added in Gumroad before publishing."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://gumroad.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/rmarescu/gumroad-mcp",
+    "https://github.com/stcmain/gumroad-mcp",
+    "https://github.com/theheiszt/Gumroad-AI-MCP-Server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://gumroad.com/muse",
+    "quote": "The hosted MCP server supports OAuth with PKCE.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://gumroad.com/mcp",
+    "quote": "You’ll need a Gumroad account and an assistant that supports MCP.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://gumroad.com/claude",
+    "quote": "Or open Settings > Connectors in Claude, choose Add custom connector, and enter the URL below.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Medium",
+    "url": "https://gumroad.com/mcp",
+    "quote": "Check sales, draft products, publish them, and track payouts from your chat.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://gumroad.com/mcp",
+    "quote": "Connect your Gumroad store to the AI assistant you already use.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.write_ops",
+    "value": "publish/unpublish",
+    "url": "https://gumroad.com/claude",
+    "quote": "With product access, the connector can publish or unpublish them.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Muse connector pending review",
+    "url": "https://gumroad.com/muse",
+    "quote": "Submitted for review. The Gumroad connector is not yet available in Muse.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Public REST API docs (gumroad.com/api) were not in the sources: auth, endpoints, webhooks, rate limits and SDKs are unverified.",
+   "Whether non-MCP API access uses OAuth apps or personal access tokens is unknown."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

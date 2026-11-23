@@ -1,0 +1,174 @@
+{
+ "id": 98,
+ "name": "Mermaid CLI",
+ "category": "AI, Research and Media-native",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:37:57Z",
+ "duration_s": 59.9,
+ "cost_usd": 0.0495,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://mermaid.js.org",
+   "developer_portal": null,
+   "description": "Mermaid CLI (mmdc), the command-line tool from the mermaid-js project that renders Mermaid diagram files to SVG/PNG/PDF. Installed as npm package @mermaid-js/mermaid-cli. It is a local tool, not a hosted SaaS API.",
+   "identity_confirmed": "yes",
+   "identity_notes": "The mermaid-js/mermaid-cli GitHub README describes it as a CLI for mermaid and gives npm install -g @mermaid-js/mermaid-cli. Note: Mermaid Chart (mermaid.ai / mermaidchart.com) is a separate commercial product that also has a hosted Mermaid MCP server; it is not the same as mermaid-cli."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "No authentication or credentials are mentioned for mermaid-cli in its README. The only 'auth' hits were in the Mermaid Chart hosted MCP server (OAuth login or a manual token), which is a different product."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [
+    "CLI/library"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "Mermaid diagram definition files (input)",
+    "SVG/PNG/PDF output files"
+   ],
+   "read_ops": [],
+   "write_ops": [
+    "Render diagram file to SVG/PNG/PDF (mmdc)"
+   ],
+   "webhooks": "no",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Core function is one-way conversion of a Mermaid definition file to SVG/PNG/PDF. The README warns the Node.js API is not covered by semver. No webhooks or hosted endpoints were found."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": "https://mermaid.ai/docs/ai/mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/hustcc/mcp-mermaid",
+    "https://github.com/peng-shawn/mermaid-mcp-server",
+    "https://github.com/gittyburstein/mermaid-mcp-server",
+    "https://github.com/Narasimhaponnada/mermaid-mcp",
+    "https://github.com/myxvisual/mermaid-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Mermaid CLI is a command-line interface for mermaid that takes a mermaid definition file and generates SVG/PNG/PDF.",
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "quote": "This is a command-line interface (CLI) for mermaid. It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "identity.install",
+    "value": "Installed via npm as @mermaid-js/mermaid-cli",
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "quote": "npm install -g @mermaid-js/mermaid-cli",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Node.js API exists for calling mermaid-cli programmatically",
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "quote": "It's possible to call mermaid-cli via a Node.JS API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.limitations",
+    "value": "NodeJS API not covered by semver",
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "quote": "Please be aware that the NodeJS API is not covered by semver, as mermaid-cli follows mermaid's versioning.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth",
+    "value": "No authentication mentioned for mermaid-cli README",
+    "url": "https://github.com/mermaid-js/mermaid-cli/blob/master/README.md",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.official_candidate",
+    "value": "Mermaid Chart runs a hosted Mermaid MCP server (separate product from mermaid-cli)",
+    "url": "https://mermaid.ai/docs/ai/mcp-server",
+    "quote": "The Mermaid MCP Server enables AI assistants to create, validate, and render Mermaid diagrams seamlessly",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "Mermaid Chart MCP requires OAuth login or manual token",
+    "url": "https://mermaid.ai/docs/ai/mcp-server",
+    "quote": "All tools listed below require Mermaid authentication (OAuth login or a manual token).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.access",
+    "value": "Authentication is free via a free Mermaid account (Basic tier)",
+    "url": "https://mermaid.ai/docs/ai/mcp-server",
+    "quote": "Authentication is free — you can sign up for a free Mermaid account (the Basic tier) to get started.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "hustcc/mcp-mermaid is a community MCP server owned by a user account, not an org",
+    "url": "https://github.com/hustcc/mcp-mermaid",
+    "quote": "Generate mermaid diagram and chart with AI MCP dynamically.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_absence",
+    "value": "No MCP repo found in mermaid-js GitHub org repo list",
+    "url": "https://github.com/mermaid-js",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Whether mermaid-cli has any credentials at all: no auth is documented, so the tier is effectively no-credential, but this was not stated explicitly by the README.",
+   "Whether the Mermaid Chart hosted MCP server (mermaid.ai) counts as official for the mermaid-js/mermaid-cli project. It is run by Mermaid Chart; the link between that company and the mermaid-js GitHub org was not established.",
+   "Full list of mermaid-js org repos (only 10 of 14 seen) and whether any MCP repo exists there.",
+   "Ownership of the community MCP servers besides hustcc/mcp-mermaid (peng-shawn, gittyburstein, Narasimhaponnada, myxvisual) was not verified; they were seen only in search results.",
+   "Mermaid CLI license, release cadence, and rate limits were not checked."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "low",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Local CLI/library skill (sandboxed execution)",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 0.8,
+ "flags": [],
+ "error": null
+}

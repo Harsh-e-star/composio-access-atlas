@@ -1,0 +1,163 @@
+{
+ "id": 58,
+ "name": "Sherlock",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:33:35Z",
+ "duration_s": 49.8,
+ "cost_usd": 0.0476,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://github.com/sherlock-project/sherlock",
+   "developer_portal": null,
+   "description": "Sherlock (sherlock-project/sherlock) is an open-source Python command-line OSINT tool that hunts down social media accounts by username across 400+ social networks. It is not a hosted SaaS app and has no official vendor API.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Confirmed as the Sherlock Project's GitHub CLI tool (MIT, pipx/pip/Docker/dnf install). Many unrelated 'Sherlock' products exist (Sherlock Domains MCP by Fewsats, dotnet-sherlock-mcp, Sherlock data room, etc.), and many third-party Apify actors wrap Sherlock. None of those are the vendor product."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "No API exists, so there are no auth scopes. Sherlock does not require API keys or login for the sites it checks."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "no",
+   "trial_available": "no",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "no",
+   "production_restrictions": "No vendor credentials are issued. Install the open-source CLI locally (pipx, pip, uv, Docker, or dnf) and run it; no account or API key is needed."
+  },
+  "api": {
+   "protocols": [
+    "CLI/library"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "social media usernames / accounts"
+   ],
+   "read_ops": [
+    "search for a username across 400+ social networks"
+   ],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "No official hosted API; the project is primarily a CLI. Bellingcat's toolkit page says there is no official Sherlock API. Only a PyPI package (sherlock-project) and a Python notifier hook were seen in search snippets, not verified on official pages."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/Burnsedia/sherlock-mcp",
+    "https://glama.ai/mcp/servers/Burnsedia/sherlock-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "product_identity",
+    "value": "Sherlock is an open-source hunt for social media accounts by username across 400+ social networks (GitHub project by Sherlock Project)",
+    "url": "https://raw.githubusercontent.com/sherlock-project/sherlock/master/docs/README.md",
+    "quote": "Hunt down social media accounts by username across 400+ social networks",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "license",
+    "value": "MIT, copyright Sherlock Project",
+    "url": "https://raw.githubusercontent.com/sherlock-project/sherlock/master/docs/README.md",
+    "quote": "MIT © Sherlock Project",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "install_methods",
+    "value": "Installed locally via pipx, docker, dnf; no hosted endpoint",
+    "url": "https://raw.githubusercontent.com/sherlock-project/sherlock/master/docs/README.md",
+    "quote": "pipx install sherlock-project",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "tool_type",
+    "value": "Primarily a command-line tool",
+    "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/sherlock.md",
+    "quote": "Sherlock is primarily a CLI tool, so some familiarity with the command line is required to install and run it.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "no_official_api",
+    "value": "No official Sherlock API; third-party Apify actors wrap it",
+    "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/sherlock.md",
+    "quote": "There is no official Sherlock API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "credentials",
+    "value": "No API key or account needed to use Sherlock",
+    "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/sherlock.md",
+    "quote": "Sherlock uses direct web requests and does not require creating any account or API key to use.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "official_docker_image",
+    "value": "An official Docker image exists (sherlock/sherlock on Docker Hub)",
+    "url": "https://bellingcat.gitbook.io/toolkit/more/all-tools/sherlock.md",
+    "quote": "There is also an official Docker image available",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "community_mcp",
+    "value": "Burnsedia/sherlock-mcp is a community FastMCP server wrapping the Sherlock CLI, exposing a search_username tool over stdio; not published by sherlock-project",
+    "url": "https://glama.ai/mcp/servers/Burnsedia/sherlock-mcp",
+    "quote": "FastMCP server integration for the Sherlock OSINT tool",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp_owner",
+    "value": "Burnsedia (individual GitHub owner), no affiliation with sherlock-project stated",
+    "url": "https://github.com/Burnsedia/sherlock-mcp",
+    "quote": "MIT License",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Check github.com/sherlock-project directly for any official MCP server or API; searches found none published by that org, so mcp.official is left unknown.",
+   "Confirm whether the PyPI package sherlock-project exposes a documented Python API (QueryNotify notifier class was seen only in a search snippet, not on an official page).",
+   "Rate limits and webhooks do not apply because no hosted API was found; confirm there is no hosted endpoint on the official docs.",
+   "Apify-hosted wrappers (e.g. ntriqpro/sherlock-username-osint, blackfalcondata/sherlock-username-osint-scraper) are third-party and require an Apify token; they were not verified beyond search snippets.",
+   "Breadth is rated Limited on the basis that Sherlock is a single-purpose read-only username search; it is not a SaaS app with a resource model."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "low",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Local CLI/library skill (sandboxed execution)",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library interface.",
+   "API surface is limited; toolkit would cover few actions."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

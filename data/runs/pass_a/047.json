@@ -1,0 +1,225 @@
+{
+ "id": 47,
+ "name": "Ecwid",
+ "category": "Ecommerce",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:20:29Z",
+ "duration_s": 25.5,
+ "cost_usd": 0.0575,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.ecwid.com",
+   "title": "Build with Ecwid apps | Ecwid Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.ecwid.com",
+   "title": "Ecwid Developers | Build an e-commerce app for Ecwid merchants",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.ecwid.com/api-reference",
+   "title": "REST API overview | REST API Reference | Ecwid Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.ecwid.com/",
+   "title": "Build with Ecwid apps | Ecwid Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.ecwid.com/api-reference/advanced/js-api-calls",
+   "title": "JS API calls | REST API Reference | Ecwid Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.ecwid.com/api-reference/rest-api/checkout-extra-fields",
+   "title": "Checkout extra fields | REST API Reference | Ecwid Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.ecwid.com/get-started/api-glossary",
+   "title": "API glossary | Ecwid Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.ecwid.com/webhook-automations",
+   "title": "Webhook automations overview | Webhook automations | Ecwid Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+   "title": "Set up your dev environment in Ecwid | Ecwid Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.ecwid.com/webhook-automations/webhook-flow-examples/export-new-orders",
+   "title": "Export new orders | Webhook automations | Ecwid Documentation",
+   "rendered": false
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.ecwid.com",
+   "developer_portal": "https://developers.ecwid.com",
+   "description": "Ecwid (Ecwid by Lightspeed) is an ecommerce platform with a REST API, JS storefront API, and webhooks for building apps and templates for merchants.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are official Ecwid developer docs."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "OAuth 2.0 simplified for single-store customizations; custom apps use access tokens directly without authentication flow.",
+   "token_refresh": "",
+   "scopes_notes": "Access scopes like read_orders and add_payment_method grant app permissions."
+  },
+  "access": {
+   "tier": "paid_plan",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Public apps must go through steps to go live for the App Market; free plan upgrade available by email for developers."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Store Profile",
+    "Orders",
+    "Products",
+    "Categories",
+    "Customers",
+    "Discounts",
+    "Domains",
+    "Staff accounts",
+    "Shipping options",
+    "Payment options",
+    "Checkout extra fields"
+   ],
+   "read_ops": [
+    "Search orders",
+    "Search products",
+    "Search customers",
+    "Get store profile",
+    "Search categories"
+   ],
+   "write_ops": [
+    "Update store profile",
+    "Create promotion",
+    "Update customer",
+    "Assign products to category",
+    "Upload category image"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "600 requests per minute per token; 429 with Retry-After header when exceeded.",
+   "limitations": "Only stores on paid plans can access API."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://docs.ecwid.com/api-reference",
+    "quote": "We use OAuth 2.0 authorization simplified for single-store customizations, JSON-formatted data, and a clear structure.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT",
+    "url": "https://docs.ecwid.com/webhook-automations/webhook-flow-examples/export-new-orders",
+    "quote": "'Authorization: Bearer $sToken'",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "paid_plan",
+    "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+    "quote": "Only stores on paid plans can access API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.ecwid.com/api-reference",
+    "quote": "Ecwid REST API allows you to access and manage any store data, payment and shipping methods, and storefront settings.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.ecwid.com/api-reference",
+    "quote": "Ecwid REST API allows you to access and manage any store data, payment and shipping methods, and storefront settings.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "600 requests/min per token",
+    "url": "https://docs.ecwid.com/api-reference",
+    "quote": "We accept up to 600 requests per minute per token .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://docs.ecwid.com/webhook-automations",
+    "quote": "Ecwid webhooks are automatic real-time notifications for apps about different events in the store.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is there an official Ecwid MCP server? Sources do not mention one.",
+   "Are official SDKs provided? Only community libraries are mentioned in navigation.",
+   "Do free-plan stores have API access? Sources say only paid plans, with free upgrades by email."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "high",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "yes",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "Paid plan required",
+  "rationale": [
+   "API needs a paid plan."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

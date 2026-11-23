@@ -1,0 +1,231 @@
+{
+ "id": 79,
+ "name": "Smartsheet",
+ "category": "Productivity and Project Management",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:36:48Z",
+ "duration_s": 84.2,
+ "cost_usd": 0.0528,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.smartsheet.com",
+   "developer_portal": "https://developers.smartsheet.com",
+   "description": "Smartsheet, the collaborative work management platform (spreadsheet-style work management, sheets, workspaces, automation). Confirmed via the vendor's own GitHub org description and developer docs.",
+   "identity_confirmed": "yes",
+   "identity_notes": "The vendor GitHub org describes its SDKs as 'for the Smartsheet collaborative work management platform', matching the requested product. Developer docs live on developers.smartsheet.com; the marketing site is smartsheet.com."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "3-legged authorization code flow. Apps register in Developer Tools to get a client ID and secret, exchange an authorization code at the token endpoint, and refresh via POST /token with a refresh token.",
+   "token_refresh": "Access tokens expire after 604799 seconds (about 7 days). Refresh by calling POST /token with the refresh token, which returns a new access and refresh token pair.",
+   "scopes_notes": "Apps must request at least one access scope and should request only what they need. Personal access tokens generated in the UI carry the owning user's permissions."
+  },
+  "access": {
+   "tier": "paid_plan",
+   "free_credentials": "no",
+   "trial_available": "unknown",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "OAuth app registration needs Smartsheet to accept a developer request and activate Developer Tools for the account; a denied request is referred to a Customer Success Manager. No public app review requirement was found in the pages checked."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Unknown",
+   "resources": [
+    "Tokens (access token get/refresh)",
+    "Webhooks",
+    "Workspaces",
+    "Sheets (guide exists; not fetched)"
+   ],
+   "read_ops": [
+    "List workspaces (documented operation)"
+   ],
+   "write_ops": [
+    "Create webhook (documented operation)",
+    "Update webhook, including enable/disable"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "unknown",
+   "limitations": "The getting-started guide makes no rate-limit statement. Breadth across the core product was not established because the full resource index was not fetched. Webhook details come from search summaries, not from a fetched page. A separate Resource Management API uses its own auth (auth query parameter or header)."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://pypi.org/project/smartsheet-mcp/",
+    "https://mcpservers.org/id/servers/terilios/smartsheet-server",
+    "https://app.unpkg.com/@smartsheet/smar-mcp@1.6.0/files/README.md"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Smartsheet SDKs are for the Smartsheet collaborative work management platform",
+    "url": "https://github.com/smartsheet",
+    "quote": "Opensource SDKs for the Smartsheet collaborative work management platform",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth 2.0 used for authentication and authorization",
+    "url": "https://developers.smartsheet.com/api/smartsheet/openapi/tokens",
+    "quote": "The Smartsheet API utilizes OAuth 2.0 for authentication and authorization.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Access token in Authorization header on all requests",
+    "url": "https://developers.smartsheet.com/api/smartsheet/openapi/tokens",
+    "quote": "An Authorization HTTP header containing an access token is required to authenticate all API requests",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.primary / access.credentials",
+    "value": "Access tokens generated in the Smartsheet UI",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+    "quote": "Generate an API access token in the Smartsheet UI.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "Access tokens expire after about 7 days",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/oauth",
+    "quote": "Access tokens expire after 604799 seconds, which is approximately 7 days.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.paid_plan_required",
+    "value": "API requires Business, Enterprise, or Advanced Work Management plan",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+    "quote": "Required plan: Business, Enterprise, or Advanced Work Management",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "OAuth app registration requires Smartsheet to activate Developer Tools",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/oauth",
+    "quote": "Upon accepting your request, Smartsheet activates the Developer Tools user interface for the user account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST API",
+    "url": "https://developers.smartsheet.com/api/smartsheet/openapi/tokens",
+    "quote": "An Authorization HTTP header containing an access token is required to authenticate all API requests",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Official SDKs in Python, Java, C#, JavaScript",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+    "quote": "Use the API natively in a language supported by the Smartsheet SDKs:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Open-source SDK repos under the vendor org",
+    "url": "https://github.com/smartsheet",
+    "quote": "smartsheet-python-sdk: Library that uses Python to connect to Smartsheet services (using API 2.0).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks API: create (starts disabled), update to enable/disable",
+    "url": "https://developers.smartsheet.com/api/smartsheet/openapi/webhooks",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Smartsheet MCP Server is Smartsheet's own hosted MCP server, generally available March 2026",
+    "url": "https://www.smartsheet.com/content-center/smartsheet-mcp-server-now-generally-available",
+    "quote": "You can now connect Smartsheet to any MCP-compliant AI tool through the new Smartsheet MCP Server",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.endpoints_auth",
+    "value": "Regional MCP endpoints; auth with Smartsheet API token or OAuth",
+    "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server",
+    "quote": "Valid Smartsheet API token, unless you're connecting an AI tool that supports Smartsheet's OAuth",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.required_plan",
+    "value": "MCP server requires Business, Enterprise, or Advanced Work Management plan",
+    "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server",
+    "quote": "Business, Enterprise, or Advanced Work Management",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community MCP servers exist on PyPI and npm",
+    "url": "https://pypi.org/project/smartsheet-mcp/",
+    "quote": "A Model Context Protocol (MCP) server exposing Smartsheet read APIs as tools",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.community_repo",
+    "value": "smartsheet-mcp-community repo (vendor org) and cli-agent-power-tools",
+    "url": "https://github.com/smartsheet",
+    "quote": "smartsheet-mcp-community: Smartsheet MCP community resources and integration utilities",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Confirm whether a free trial or free developer/sandbox account exists. The Business plan is required for API tokens; no trial or sandbox was found on the pages checked.",
+   "Confirm whether workspace admins can block or restrict API token use (System Admin tokens get extra capabilities per search summary, not verified by fetch).",
+   "Establish API breadth: fetch the full REST operations index to confirm read and write coverage for sheets, rows, attachments, and other core resources.",
+   "Find published rate limits (not stated on the getting-started page).",
+   "Verify webhook behavior (enable/disable, verification challenge) on the webhooks reference page; current evidence is search summaries only.",
+   "Confirm the official MCP server's hosting/ownership with a Smartsheet statement; the GA article implies it but does not explicitly say Smartsheet hosts it.",
+   "Verify community MCP server maintainers: smartsheet-mcp on PyPI, terilios/smartsheet-server, and @smartsheet/smar-mcp on npm (npm scope suggests vendor but unverified). Only search summaries were checked.",
+   "Clarify whether OAuth app registration approval (Developer Tools activation) is a gate for test credentials or only for OAuth apps."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "yes",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Paid plan required",
+  "rationale": [
+   "API needs a paid plan."
+  ]
+ },
+ "evidence_support_rate": 0.625,
+ "flags": [],
+ "error": null
+}

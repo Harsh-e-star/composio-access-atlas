@@ -1,0 +1,267 @@
+{
+ "id": 71,
+ "name": "Notion",
+ "category": "Productivity and Project Management",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:23:11Z",
+ "duration_s": 24.0,
+ "cost_usd": 0.0695,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developers.notion.com/guides/notion-api/quick-start",
+   "title": "Notion API quickstart",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.notion.com/guides/mcp/enterprise-managed-authorization",
+   "title": "Enterprise-managed authorization for Notion MCP",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.notion.com/guides/mcp/overview",
+   "title": "Connect AI assistants to Notion with MCP",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developers.notion.com/reference/intro",
+   "title": "Introduction - Notion Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developers.notion.com/guides/mcp/notion-skills",
+   "title": "Create and share Notion Skills across AI assistants",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens",
+   "title": "Create and manage Notion personal access tokens",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developers.notion.com/guides/connections-and-tokens/overview",
+   "title": "Notion connections and personal access tokens",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developers.notion.com/cli/get-started/overview",
+   "title": "Notion CLI - Notion Docs",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developers.notion.com/reference/admin/intro",
+   "title": "Introduction - Notion Docs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/makenotion/notion-mcp-server",
+   "title": "makenotion/notion-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sandbox-quantum/switch",
+   "title": "sandbox-quantum/switch",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/julien040/anyquery",
+   "title": "julien040/anyquery",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/suekou/mcp-notion-server",
+   "title": "suekou/mcp-notion-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/danhilse/notion_mcp",
+   "title": "danhilse/notion_mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/makenotion/lore",
+   "title": "makenotion/lore",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/rotbit/xedit",
+   "title": "rotbit/xedit",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/awkoy/notion-mcp-server",
+   "title": "awkoy/notion-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.notion.com",
+   "developer_portal": "https://developers.notion.com",
+   "description": "Notion is a workspace app for pages, databases, and projects, with a REST API, JavaScript SDK, CLI, Workers, and a hosted MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are from developers.notion.com and describe the Notion API, MCP, CLI and Admin API."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT",
+    "API key"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Public and OAuth integrations use the OAuth authorization flow; Notion MCP supports interactive OAuth and ID-JAG (JWT bearer grant) token exchange for enterprise-managed authorization.",
+   "token_refresh": "Enterprise-managed MCP tokens have no refresh token (default 8 hours expiry). PATs expire after 7 days to 1 year.",
+   "scopes_notes": "Capabilities determine which operations a connection or token can perform; content access is granted separately for connections and during OAuth page picking."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Public integrations may optionally apply for Marketplace listing, subject to review. On Business and Enterprise plans PAT creation is restricted by default to workspace owners. The Admin API requires an Enterprise plan."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "pages",
+    "databases",
+    "data sources",
+    "blocks",
+    "comments",
+    "users",
+    "files",
+    "search"
+   ],
+   "read_ops": [
+    "search pages and data sources by title",
+    "read users",
+    "retrieve pages and data sources"
+   ],
+   "write_ops": [
+    "create pages",
+    "update pages",
+    "upload files",
+    "add comments",
+    "manage data sources"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "The Admin API is only available on the Enterprise plan. List all users is not available to PATs."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/makenotion/notion-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/suekou/mcp-notion-server",
+    "https://github.com/danhilse/notion_mcp",
+    "https://github.com/awkoy/notion-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT",
+    "url": "https://developers.notion.com/guides/notion-api/quick-start",
+    "quote": "A personal access token (PAT) lets you authenticate API requests as yourself wit",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://developers.notion.com/guides/connections-and-tokens/overview",
+    "quote": "Use a public integration so users in any workspace can authorize your app through OAuth.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens",
+    "quote": "Workspace owners can always create PATs with Notion API access.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.notion.com/reference/intro",
+    "quote": "Send requests over HTTPS to https://api.notion.com .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "CLI/library",
+    "url": "https://developers.notion.com/cli/get-started/overview",
+    "quote": "ntn is the Notion CLI. Use it to authenticate with Notion, deploy and manage Notion Workers",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens",
+    "quote": "It can access pages, data sources, databases, comments, files, and other resources that the creator can acces",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developers.notion.com/guides/mcp/overview",
+    "quote": "Notion MCP lets your AI assistant search your workspace, create and edit pages, and manage databases.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Rate limits are not stated in the provided sources.",
+   "Sandbox or trial availability is not established."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

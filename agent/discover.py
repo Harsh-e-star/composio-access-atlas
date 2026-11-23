@@ -53,7 +53,8 @@ async def render(url: str) -> dict | None:
         async with _RENDER_SEM, async_playwright() as pw:
             b = await pw.chromium.launch()
             pg = await b.new_page()
-            await pg.goto(url, wait_until="networkidle", timeout=30000)
+            await pg.goto(url, wait_until="domcontentloaded", timeout=25000)
+            await pg.wait_for_timeout(2500)
             html = await pg.content()
             await b.close()
         d = parse_html(html, url)

@@ -1,0 +1,225 @@
+{
+ "id": 78,
+ "name": "Coda",
+ "category": "Productivity and Project Management",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:36:15Z",
+ "duration_s": 72.7,
+ "cost_usd": 0.0591,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://blog.superhuman.com/introducing-superhuman-docs/",
+   "developer_portal": "https://docs.superhuman.com/developers",
+   "description": "Coda, a document/workspace platform combining docs, tables and rows. It was renamed Superhuman Docs on July 8, 2026; coda.io/developers now redirects to Superhuman's developer docs at docs.superhuman.com.",
+   "identity_confirmed": "yes",
+   "identity_notes": "The assignment URL coda.io/developers 307-redirects to docs.superhuman.com/developers, which describes the product as formerly Coda. Superhuman's launch post says 'Coda is now Superhuman Docs'. Same product, same API (coda.io/apis/v1 base path)."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "unknown. No OAuth grant was found in the API docs. A third-party aggregator says the Docs MCP server uses OAuth or API key, which was not verified on a Superhuman page.",
+   "token_refresh": "unknown. Static API token; no refresh flow documented in fetched pages.",
+   "scopes_notes": "Token can reportedly be restricted to read, write, or both, and to a single doc or table (third-party Make guide only, unverified). API usage follows the role of the token owner in the workspace."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No app review found for the personal API token path. The token owner must be a Doc Maker or Admin in the workspace to create docs. Not confirmed for OAuth integrations."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "docs",
+    "pages",
+    "tables",
+    "rows",
+    "columns",
+    "formulas",
+    "controls",
+    "permissions/sharing",
+    "publishing"
+   ],
+   "read_ops": [
+    "List and search documents",
+    "Discover pages, tables, formulas, and controls",
+    "Read rows",
+    "Read mutation status"
+   ],
+   "write_ops": [
+    "Create new docs and copy existing ones",
+    "Insert, upsert, update, and delete rows",
+    "Write doc content",
+    "Sharing and publishing endpoints"
+   ],
+   "webhooks": "unknown",
+   "sdks": "no",
+   "rate_limits": "Reading: 100 requests per 6 seconds. Writing (POST/PUT/PATCH): 10 requests per 6 seconds. Writing doc content: 5 per 10 seconds. Listing docs: 4 per 6 seconds. Exceeding returns HTTP 429.",
+   "limitations": "Writes are asynchronous: they return HTTP 202 with a requestId, checked via a mutation-status endpoint. Webhooks not mentioned in fetched docs. Only official client library is Google Apps Script; other libraries are unsupported. Write coverage appears centered on docs and rows."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.superhuman.com/apis/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://pypi.org/project/coda-mcp-server",
+    "https://github.com/orellazri/coda-mcp",
+    "https://pypi.org/project/mcp-coda/",
+    "https://www.npmjs.com/package/coda-mcp",
+    "https://lib.rs/crates/coda-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Coda is now Superhuman Docs (renamed July 8, 2026)",
+    "url": "https://blog.superhuman.com/introducing-superhuman-docs/",
+    "quote": "Coda is now Superhuman Docs, the best place for teams and AI to work together.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "identity",
+    "value": "Developer docs describe product as formerly Coda",
+    "url": "https://docs.superhuman.com/developers",
+    "quote": "It describes Superhuman Docs as \"formerly Coda\"",
+    "verified": false,
+    "verify_note": "source unreachable (blocked_by_robots_txt)"
+   },
+   {
+    "field": "auth.primary",
+    "value": "Bearer token API auth",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "API usage is subject to the role of the user associated with the API token in the workspace applicable to each API request.",
+    "verified": false,
+    "verify_note": "source unreachable (blocked_by_robots_txt)"
+   },
+   {
+    "field": "access.free_credentials",
+    "value": "API free for all users in free and paid workspaces",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces.",
+    "verified": false,
+    "verify_note": "source unreachable (blocked_by_robots_txt)"
+   },
+   {
+    "field": "access.admin_approval_required",
+    "value": "Token owner must be Doc Maker or Admin to create docs (role restriction, not admin approval)",
+    "url": "https://docs.superhuman.com/developers",
+    "quote": "the owner of the API token must be a Doc Maker (or Admin) in the workspace.",
+    "verified": false,
+    "verify_note": "source unreachable (blocked_by_robots_txt)"
+   },
+   {
+    "field": "access.tier",
+    "value": "Token generated self-serve in API settings",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces.",
+    "verified": false,
+    "verify_note": "source unreachable (blocked_by_robots_txt)"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "429 on limit; reads 100/6s, writes 10/6s",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "Once this limit is reached, calls to the API will start returning errors with an HTTP status code of 429.",
+    "verified": false,
+    "verify_note": "source unreachable (blocked_by_robots_txt)"
+   },
+   {
+    "field": "api.sdks",
+    "value": "No official client libraries except Google Apps Script",
+    "url": "https://docs.superhuman.com/developers",
+    "quote": "We do not currently support client libraries apart from Google Apps Script.",
+    "verified": false,
+    "verify_note": "source unreachable (blocked_by_robots_txt)"
+   },
+   {
+    "field": "api.write_ops",
+    "value": "Writes return HTTP 202 and a requestId",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "return an HTTP 202 status code, instead of a standard 200",
+    "verified": false,
+    "verify_note": "source unreachable (blocked_by_robots_txt)"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Official Docs MCP launched by Superhuman",
+    "url": "https://blog.superhuman.com/introducing-superhuman-docs/",
+    "quote": "Today, we’re launching the Docs MCP for everyone.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_url",
+    "value": "Old Coda MCP renamed Superhuman Docs MCP",
+    "url": "https://connect.superhuman.com/t/changelog-july-2026/61169",
+    "quote": "Coda MCP is now Superhuman Docs MCP, moved to docs.superhuman.com/apis/mcp",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.community",
+    "value": "TJC-LP coda-mcp-server is unofficial",
+    "url": "https://pypi.org/project/coda-mcp-server",
+    "quote": "unofficial MCP server developed by TJC L.P. and is not affiliated with, endorsed by, or supported by Coda",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.community",
+    "value": "orellazri/coda-mcp is not maintained by Coda",
+    "url": "https://cdn.jsdelivr.net/gh/orellazri/coda-mcp@main/README.md",
+    "quote": "not developed or maintained by Coda; it's a community-built project",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Forum: no official Coda MCP existed at that time",
+    "url": "https://connect.superhuman.com/t/coda-mcp-server/55651",
+    "quote": "not that I am aware of, but indeed it would be great to have.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Does Superhuman's API docs mention webhooks? Not found in fetched pages.",
+   "Does the Docs MCP server (docs.superhuman.com/apis/mcp) use OAuth, API key, or both? The page returned 401 to WebFetch; claims rest on a third-party aggregator.",
+   "Is there a trial, sandbox, or test workspace separate from a free workspace? Not found.",
+   "Does coda.io/apis/v1 still work after the rename? Help-center snippet says yes, but the article returned 403 and was not read.",
+   "Are there official GitHub repos under a Superhuman or Coda org for the MCP or API? None found in search.",
+   "Exact OAuth scopes or integration app-review requirements for the API are unknown.",
+   "Developer portal and API docs were 307-redirected from coda.io; the docs.superhuman.com API page was read via summarization, so some quotes are paraphrases and are marked unverified."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.286,
+ "flags": [],
+ "error": null
+}

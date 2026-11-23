@@ -1,0 +1,251 @@
+{
+ "id": 43,
+ "name": "BigCommerce",
+ "category": "Ecommerce",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:20:19Z",
+ "duration_s": 66.2,
+ "cost_usd": 0.073,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.bigcommerce.com/developer/docs/overview/quick-start",
+   "title": "BigCommerce Developers | BigCommerce Docs",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.bigcommerce.com/developer/docs/b2b-edition/getting-started/authentication",
+   "title": "Authentication for hosted storefronts | BigCommerce Docs",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.bigcommerce.com/developer/docs/storefront/guides/graphql-storefront-api/authentication",
+   "title": "Authenticating requests to the GraphQL Storefront API | BigCommerce Docs",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.bigcommerce.com/developer/api-reference/about-our-apis",
+   "title": "About Our APIs | BigCommerce Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/rate-limits",
+   "title": "API rate limits | BigCommerce Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.bigcommerce.com/developer/api-reference/rest/admin/catalog/products/get-product",
+   "title": "Get Product | BigCommerce Docs",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.bigcommerce.com/developer/docs/admin/catalog-and-inventory/pricing/price-lists",
+   "title": "Price List API | BigCommerce Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.bigcommerce.com/developer/docs/admin/catalog-and-inventory/pricing/cascading-price-lists",
+   "title": "Cascading price lists | BigCommerce Docs",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.bigcommerce.com/developer/learn/overview",
+   "title": "Learn BigCommerce Development | BigCommerce Docs",
+   "rendered": true
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.bigcommerce.com/developer/community/connect",
+   "title": "Developer Community | BigCommerce Docs",
+   "rendered": true
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/isaacgounton/bigcommerce-api-mcp",
+   "title": "isaacgounton/bigcommerce-api-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ackm04/bigcommerce-mcp",
+   "title": "ackm04/bigcommerce-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Jimbootgit/bigcommerce-agent-toolkit",
+   "title": "Jimbootgit/bigcommerce-agent-toolkit",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Codinative/bigC-mcp",
+   "title": "Codinative/bigC-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jorgejaramillo/mcp-bigcommerce",
+   "title": "jorgejaramillo/mcp-bigcommerce",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/primrose-mcp/primrose-mcp-bigcommerce",
+   "title": "primrose-mcp/primrose-mcp-bigcommerce",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/BusyBee3333/bigcommerce-mcp-2026-complete",
+   "title": "BusyBee3333/bigcommerce-mcp-2026-complete",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/DJB31st/bigcommerce-api-mcp-writable",
+   "title": "DJB31st/bigcommerce-api-mcp-writable",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.bigcommerce.com",
+   "developer_portal": "https://developer.bigcommerce.com",
+   "description": "BigCommerce is an ecommerce platform with REST and GraphQL APIs for storefronts, apps, and store data management.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs at docs.bigcommerce.com/developer describe BigCommerce developer platform."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "Other",
+   "oauth_flows": "API accounts generate access tokens used in X-Auth-Token header; OAuth scopes apply.",
+   "token_refresh": "Storefront tokens have an expiry set at creation; B2B storefront authTokens expire after 1 day.",
+   "scopes_notes": "OAuth scopes such as store_v2_products and store_v2_products_read_only; storefront tokens use store_storefront_api."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "yes",
+   "production_restrictions": "Rate limits vary by store plan."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "GraphQL"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "products",
+    "orders",
+    "customers",
+    "price lists",
+    "carts",
+    "checkouts",
+    "customer groups"
+   ],
+   "read_ops": [
+    "Get Product",
+    "Get all price lists"
+   ],
+   "write_ops": [
+    "Create price list",
+    "Create price list assignment",
+    "Create storefront token"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "OAuth apps quota refreshed every 30 seconds: Growth & Core 20k/hour (150/30sec), Scale 60k/hour (450/30sec); Unlimited plan has no limits.",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/isaacgounton/bigcommerce-api-mcp",
+    "https://github.com/ackm04/bigcommerce-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT, OAuth2",
+    "url": "https://docs.bigcommerce.com/developer/api-reference/rest/admin/catalog/products/get-product",
+    "quote": "X-Auth-Token access_token For more about API accounts that generate access_token s, see our Guide to API Accounts .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.bigcommerce.com/developer/docs/overview/quick-start",
+    "quote": "Create a sandbox store Sign up for a free BigCom",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST, GraphQL",
+    "url": "https://docs.bigcommerce.com/developer/docs/overview/quick-start",
+    "quote": "Use REST and GraphQL APIs to manage products, orders, customers, and store settings programmatically.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.bigcommerce.com/developer/api-reference/about-our-apis",
+    "quote": "Add and update products in a store Update a customer’s order and change the order status Create a coupon Manage a customer’s store account details",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "no",
+    "url": "https://docs.bigcommerce.com/developer/docs/overview/quick-start",
+    "quote": "Docs MCP Server Connect Cursor, Claude, or Codex to the BigCommerce developer docs via MCP.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "BigCommerce has a docs MCP server (documentation only); it is unclear whether a store-operations official MCP exists.",
+   "Exact sandbox store signup terms were truncated in the sources."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over GraphQL/REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented GraphQL/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

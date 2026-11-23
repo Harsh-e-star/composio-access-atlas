@@ -1,0 +1,233 @@
+{
+ "id": 56,
+ "name": "Firecrawl",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:33:20Z",
+ "duration_s": 42.7,
+ "cost_usd": 0.0378,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://firecrawl.dev",
+   "developer_portal": "https://docs.firecrawl.dev",
+   "description": "Firecrawl is the context API for AI agents: web scrape, crawl, map, search, and extract, returning clean Markdown or structured data. Official GitHub org is firecrawl.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs, GitHub repo, and pricing page all describe the same product (firecrawl.dev). Confirmed as the web data API, not an unrelated 'Firecrawl'."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Bearer/PAT"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "unknown",
+   "scopes_notes": "No scopes described in fetched sources. Keys are sent as a Bearer token in the Authorization header (fc- prefix). Keyless access exists only for /v1/scrape and /v1/search on the free tier, with limits."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Not established. Enterprise tier is 'Custom' and requires contacting sales for SLA, SSO, and bulk discounts, but the base free and paid tiers do not."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "scrape",
+    "crawl",
+    "batch scrape",
+    "map",
+    "search",
+    "extract",
+    "agent",
+    "monitor"
+   ],
+   "read_ops": [
+    "scrape a URL to markdown/HTML/JSON",
+    "map URLs on a site",
+    "search the web and fetch page content",
+    "extract structured data with natural language"
+   ],
+   "write_ops": [
+    "start crawl jobs",
+    "start batch scrape jobs",
+    "start extract/agent jobs",
+    "configure webhooks on jobs"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Returns HTTP 429 when plan rate or concurrency limits are exceeded. Per-plan numbers are on a separate page that was not fetched.",
+   "limitations": "Mostly web-read oriented; no account-data write resources established. Specific per-plan limits unknown. Base URL https://api.firecrawl.dev; v2 endpoints observed in examples (e.g. /v2/crawl)."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/firecrawl/firecrawl-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/punkpeye/mcp-server-firecrawl",
+    "https://github.com/mcp-research/mendableai__firecrawl-mcp-server",
+    "https://github.com/cawstudios/mcp-server-firecrawl"
+   ]
+  },
+  "claims": [
+   {
+    "field": "product_description",
+    "value": "Firecrawl is the context API for AI agents.",
+    "url": "https://docs.firecrawl.dev/introduction",
+    "quote": "Firecrawl is the context API for AI agents.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth_method",
+    "value": "API key sent as Bearer token",
+    "url": "https://docs.firecrawl.dev/api-reference/introduction",
+    "quote": "The header should contain `Bearer fc-123456789`, where `fc-123456789` represents your API Key.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "base_url",
+    "value": "https://api.firecrawl.dev",
+    "url": "https://docs.firecrawl.dev/api-reference/introduction",
+    "quote": "https://api.firecrawl.dev",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "keyless_access",
+    "value": "scrape and search work without key on limited basis",
+    "url": "https://docs.firecrawl.dev/api-reference/introduction",
+    "quote": "`/v1/scrape` and `/v1/search` also work without a key, with limits.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "rate_limit_behavior",
+    "value": "HTTP 429 when plan limits exceeded",
+    "url": "https://docs.firecrawl.dev/api-reference/introduction",
+    "quote": "When you exceed your plan's rate or concurrency limits, the API returns a 429 response code.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "free_tier",
+    "value": "1,000 credits per month, no credit card",
+    "url": "https://www.firecrawl.dev/pricing",
+    "quote": "Credits: 1,000 per month",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "paid_tier",
+    "value": "Hobby plan from $19/month",
+    "url": "https://www.firecrawl.dev/pricing",
+    "quote": "$19/month or $16/month billed annually",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "enterprise_tier",
+    "value": "Custom pricing, contact sales",
+    "url": "https://www.firecrawl.dev/pricing",
+    "quote": "Dedicated support and SLA, bulk discounts, zero-data retention, SSO and advanced security.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "resources",
+    "value": "scrape, crawl, map, search, extract",
+    "url": "https://docs.firecrawl.dev/api-reference/introduction",
+    "quote": "Extract: extract structured data from webpages using natural language",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "webhooks",
+    "value": "Webhooks for crawl, batch scrape, extract, agent, monitor events",
+    "url": "https://docs.firecrawl.dev/webhooks/overview",
+    "quote": "Get notified the moment a crawl, batch scrape, extract, agent job, or monitor check starts, progresses, or finishes.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks",
+    "value": "Python, Node.js, CLI SDKs",
+    "url": "https://docs.firecrawl.dev/introduction",
+    "quote": "The page lists \"Python, Node.js, CLI, and community SDKs\"",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp_official_repo",
+    "value": "firecrawl/firecrawl-mcp-server, MIT, official",
+    "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+    "quote": "Official Firecrawl MCP server, the context API for AI agents: search, scrape, and interact with the web,",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp_install",
+    "value": "npx -y firecrawl-mcp with FIRECRAWL_API_KEY",
+    "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+    "quote": "env FIRECRAWL_API_KEY=fc-YOUR_API_KEY npx -y firecrawl-mcp",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp_hosted",
+    "value": "Hosted endpoint https://mcp.firecrawl.dev/v2/mcp",
+    "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+    "quote": "On the keyless free tier, `scrape`, `search`, and `parse` work without an API key (rate-limited).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "community_mcp",
+    "value": "Third-party MCP servers exist (punkpeye, cawstudios, mcp-research)",
+    "url": "https://github.com/punkpeye/mcp-server-firecrawl",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Whether the free plan issues an API key without a credit card or sales step is implied (no card required) but not explicitly stated for key issuance.",
+   "Whether there is a sandbox or trial separate from the free credit tier is unknown.",
+   "Whether the MCP hosted endpoint /v2/mcp-oauth implies OAuth2 for MCP clients is unverified; the docs page with the MCP setup returned 404 on fetch.",
+   "Webhook signature header and verification method not confirmed from official docs (third-party sources mention X-Firecrawl-Signature; unverified).",
+   "Per-plan rate limits are on a separate page not fetched.",
+   "Current Node SDK package name (@mendable/firecrawl-js in old results) not confirmed against official docs.",
+   "Community MCP repo owners and maintenance status not verified by fetch.",
+   "Latest npm/PyPI versions conflict across sources (firecrawl-mcp 1.11.0 vs 3.23.8; firecrawl-py 4.33.0)."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.6,
+ "flags": [],
+ "error": null
+}

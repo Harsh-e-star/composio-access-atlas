@@ -1,0 +1,337 @@
+{
+ "id": 81,
+ "name": "Stripe",
+ "category": "Finance and Fintech",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:36:49Z",
+ "duration_s": 75.5,
+ "cost_usd": 0.0666,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://stripe.com",
+   "developer_portal": "https://docs.stripe.com/api",
+   "description": "Stripe is a payments and financial infrastructure platform whose public REST API (api.stripe.com) covers payments, billing, Connect, Issuing, Treasury, tax and Radar.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs at docs.stripe.com describe the Stripe API and Stripe MCP server directly. Confirmed as the Stripe payments platform named in the task."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Bearer/PAT",
+    "Basic",
+    "OAuth2",
+    "Other"
+   ],
+   "primary": "API key",
+   "oauth_flows": "OAuth2 authorization code flow for Stripe Connect (GET https://connect.stripe.com/oauth/authorize, POST https://connect.stripe.com/oauth/token) and for the Stripe MCP server's OAuth consent flow. Standard API keys are not OAuth.",
+   "token_refresh": "Connect OAuth: refresh_token grant returns new access token. MCP OAuth refresh tokens expire after 14 days. Workload Identity Federation yields a Stripe access token that expires after 1 hour. Static secret keys do not expire.",
+   "scopes_notes": "Secret keys: sk_test_ (unrestricted in sandbox) and sk_live_ (full access to all resources). Restricted keys (rk_live_) carry per-resource permissions. Connect OAuth scope is read_write or read_only; read_only only for registered extensions. Agent API keys exist for MCP."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Live mode is the gated part: live keys carry real-money access, Connect platforms need platform setup, and from 2027-01-11 Stripe MCP stops accepting full-access secret keys and non-agent restricted keys. Live-account verification and fees were not verified from official pages."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Customers",
+    "Charges",
+    "PaymentIntents",
+    "SetupIntents",
+    "PaymentMethods",
+    "Checkout Sessions",
+    "Invoices",
+    "Invoice items",
+    "Subscriptions",
+    "Subscription schedules",
+    "Products",
+    "Prices",
+    "Coupons",
+    "Promotion codes",
+    "Payment links",
+    "Refunds",
+    "Disputes",
+    "Payouts",
+    "Balance transactions",
+    "Events",
+    "Webhook endpoints",
+    "Event destinations (v2)",
+    "Accounts (Connect v1 and v2)",
+    "Transfers",
+    "Application fees",
+    "Customer portal",
+    "Tax calculations and registrations",
+    "Radar reviews and value lists",
+    "Issuing cards, cardholders, authorizations, transactions",
+    "Treasury/money-management (v2, preview)"
+   ],
+   "read_ops": [
+    "List/retrieve customers, charges, payment intents, setup intents, payment methods, checkout sessions, invoices, subscriptions, products, prices, refunds, disputes, payouts, balance transactions, events, webhook endpoints"
+   ],
+   "write_ops": [
+    "Create/update customers, invoices, invoice items, subscriptions, products, prices, coupons, payment links, payment method domains, tax registrations; create refunds; cancel and void; update disputes; create webhook endpoints and event destinations"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Live mode global 100 requests per second; sandbox global 25 requests per second; individual endpoints 25 requests per second unless noted. Exceeding returns 429 Too Many Requests. Concurrency limit default 50 in-progress requests in live mode.",
+   "limitations": "API does not support bulk updates (one object per request). Limits vary by endpoint (PaymentIntents 1000 updates per object per hour, Subscriptions invoice caps). Read requests have a rolling allocation of 500 per transaction, minimum 10,000 per month. Sandbox limits are lower than live. Some v2 APIs are preview-only."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.stripe.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://www.remoteopenclaw.com/mcp/friendlygeorge/stripe-mcp-server",
+    "https://mcpservers.org/servers/atharvagupta2003/mcp-stripe"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Stripe API is organized around REST with resource-oriented URLs, form-encoded requests and JSON responses",
+    "url": "https://docs.stripe.com/api",
+    "quote": "The Stripe API is organized around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.base_url",
+    "value": "https://api.stripe.com",
+    "url": "https://docs.stripe.com/api",
+    "quote": "You can use the Stripe API in sandboxes without affecting your live data or interacting with banking networks.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sandbox_available",
+    "value": "yes",
+    "url": "https://docs.stripe.com/api",
+    "quote": "You can use the Stripe API in sandboxes without affecting your live data or interacting with banking networks.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary_basic",
+    "value": "API key is sent as HTTP Basic username",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "The Stripe API authenticates requests using HTTP Basic Auth. Provide your API key as the basic auth username value.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.bearer",
+    "value": "Bearer auth with the secret key is supported as an alternative",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "If you need to authenticate using bearer auth (for example, for a cross-origin request), use",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.test_keys",
+    "value": "Test secret keys start with sk_test_ and have unrestricted sandbox access",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "Test mode secret keys start with sk_test_ and have unrestricted access to their sandboxes.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.restricted_keys",
+    "value": "Live mode uses restricted API keys (rk_live_) with specific permissions",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "In live mode, you configure a restricted API key (starts with rk_live_) with specific API permissions.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.workload_identity",
+    "value": "Workload Identity Federation exchanges a cloud identity token for a 1-hour Stripe access token",
+    "url": "https://docs.stripe.com/api/authentication",
+    "quote": "Workload Identity Federation lets your service authenticate without storing a long-lived API key.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.connect_oauth",
+    "value": "Connect OAuth authorize endpoint sends the user to Stripe to connect to the platform",
+    "url": "https://docs.stripe.com/connect/oauth-reference",
+    "quote": "Sends the user to Stripe to connect to your platform.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.connect_token",
+    "value": "Token endpoint exchanges an authorization code or refresh token",
+    "url": "https://docs.stripe.com/connect/oauth-reference",
+    "quote": "Used both for turning an authorization_code into an account connection, and for getting a new access token using a refresh_token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Official client libraries: Ruby, Python, PHP, Java, Node.js, Go, .NET (GitHub stripe org)",
+    "url": "https://docs.stripe.com/api",
+    "quote": "Client libraries - Ruby - Python - PHP - Java - Node.js - Go - .NET",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks push events to a registered HTTPS endpoint",
+    "url": "https://docs.stripe.com/webhooks",
+    "quote": "After you register a webhook endpoint, Stripe pushes real-time data to it when events happen in your Stripe account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhook_signing",
+    "value": "Webhook events are signed with a Stripe-Signature header (HMAC)",
+    "url": "https://docs.stripe.com/webhooks",
+    "quote": "Stripe signs every webhook event by including a signature in the Stripe-Signature header.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhook_retries",
+    "value": "Live mode retries failed webhook deliveries for up to three days",
+    "url": "https://docs.stripe.com/webhooks",
+    "quote": "Stripe attempts to deliver events to your destination for up to three days with an exponential backoff in live mode.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Live 100 req/s global; sandbox 25 req/s; endpoints 25 req/s unless noted",
+    "url": "https://docs.stripe.com/rate-limits",
+    "quote": "Individual API endpoints (unless otherwise noted) | 25 requests per second",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limit_429",
+    "value": "Exceeded limits return 429 Too Many Requests",
+    "url": "https://docs.stripe.com/rate-limits",
+    "quote": "If you exceed the limits, you get 429 Too Many Requests HTTP status responses.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Stripe publishes a hosted MCP server at mcp.stripe.com",
+    "url": "https://docs.stripe.com/mcp",
+    "quote": "The Stripe Model Context Protocol (MCP) server provides tools that AI agents can use to interact with the Stripe API and search the Stripe knowledge base",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.server_url",
+    "value": "https://mcp.stripe.com",
+    "url": "https://docs.stripe.com/mcp",
+    "quote": "MCP is an open protocol supported by many clients. Follow your client’s MCP setup instructions and use https://mcp.stripe.com as the server URL.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "MCP supports OAuth for interactive clients and agent API keys as bearer tokens for autonomous clients",
+    "url": "https://docs.stripe.com/mcp",
+    "quote": "OAuth: Use OAuth when a client accesses Stripe on behalf of your Stripe user account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.tools",
+    "value": "Exposes generic stripe_api_read and stripe_api_write tools plus named tools",
+    "url": "https://docs.stripe.com/mcp",
+    "quote": "The Stripe MCP server exposes multiple APIs that you can call with the stripe_api_read and stripe_api_write tools.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.key_deprecation",
+    "value": "From 2027-01-11 MCP stops accepting full-access secret keys and non-agent restricted keys",
+    "url": "https://docs.stripe.com/mcp",
+    "quote": "Starting January 11, 2027, Stripe MCP will no longer accept full-access secret keys or non-agent restricted API keys.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.oauth_expiry",
+    "value": "MCP OAuth refresh tokens expire after 14 days",
+    "url": "https://docs.stripe.com/mcp",
+    "quote": "OAuth refresh tokens expire after 14 days, and refreshing tokens doesn’t extend the session beyond 14 days from your initial authorisation.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.admin_gate_mcp",
+    "value": "A Stripe admin can enable or disable MCP access for the whole team",
+    "url": "https://docs.stripe.com/mcp",
+    "quote": "If you’re an administrator, you can enable or disable MCP access for your entire team in the Dashboard.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.test_key_login",
+    "value": "Docs show test-key examples when logged in to the Dashboard",
+    "url": "https://docs.stripe.com/api",
+    "quote": "Log in to see docs with your test key and data.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community_servers",
+    "value": "Community MCP servers exist (e.g., friendlygeorge/stripe-mcp-server, atharvagupta2003/mcp-stripe)",
+    "url": "https://www.remoteopenclaw.com/mcp/friendlygeorge/stripe-mcp-server",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.official_repo",
+    "value": "Official MCP package @stripe/mcp is maintained in the stripe/ai GitHub repo",
+    "url": "https://www.npmjs.com/package/@stripe/mcp",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Exact signup flow and whether any live-account fees or verification apply (official pricing page not fetched).",
+   "Whether a trial applies: no official trial statement was found.",
+   "Official npm and GitHub verification: the @stripe/mcp package and stripe/ai repo were identified from search snippets only and not fetched.",
+   "Community MCP servers (friendlygeorge/stripe-mcp-server, atharvagupta2003/mcp-stripe) are unverified; maintenance status conflicts across listings.",
+   "Connect OAuth for connected accounts requires a registered platform; the platform application approval steps were not researched.",
+   "Exact live-mode review or identity verification requirements for activating a live account were not established.",
+   "MCP access may be disabled by a team admin; per-user vs workspace setting was only partially checked."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.885,
+ "flags": [],
+ "error": null
+}

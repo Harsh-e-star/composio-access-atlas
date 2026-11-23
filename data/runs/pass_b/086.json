@@ -1,0 +1,158 @@
+{
+ "id": 86,
+ "name": "QuickBooks",
+ "category": "Finance and Fintech",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:36:45Z",
+ "duration_s": 58.6,
+ "cost_usd": 0.0571,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://quickbooks.intuit.com",
+   "developer_portal": "https://developer.intuit.com",
+   "description": "QuickBooks Online (QBO) accounting API from Intuit, developed through the Intuit Developer portal at developer.intuit.com. The portal also covers QuickBooks Payments and QuickBooks Desktop, which are separate products.",
+   "identity_confirmed": "yes",
+   "identity_notes": "The task's assignment hint is developer.intuit.com. Search results and the Intuit developer docs describe QuickBooks Online OAuth, sandbox, and accounting scopes. Developer portal pages were truncated on fetch, so some details rely on search snippets."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Browser-based one-time authorization that issues a refresh token (authorization code style flow), per the official MCP server README summary. Scopes include the accounting scope and the payments scope, per the Intuit docs snippet.",
+   "token_refresh": "Server uses a stored refresh token. A third-party source says the access token is valid for one hour (unverified against Intuit docs).",
+   "scopes_notes": "Select the accounting scope for accounting data; add the payments scope for payment data (search snippet from Intuit OAuth 2.0 docs)."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Production keys require a successfully submitted app assessment questionnaire, and keys are unavailable until email is verified and the account profile is completed. App Store listing additionally requires technical, security, and marketing reviews. Sandbox development keys cannot be used with production companies."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Accounting entities (29 entity types per third-party counts)",
+    "Financial reports (11 per third-party counts)"
+   ],
+   "read_ops": [
+    "get",
+    "query/search"
+   ],
+   "write_ops": [
+    "create",
+    "update",
+    "delete (per MCP server tool set)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "unknown",
+   "limitations": "Intuit developer portal pages were not fully fetchable; entity coverage and webhook entity list are from third-party sources. Sandbox base URL is https://sandbox-quickbooks.api.intuit.com/v3 per a search snippet."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/intuit/quickbooks-online-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://glama.ai/mcp/servers/Intuit-CA/quickbooks-mcp-server",
+    "https://socket.dev/pypi/package/mcp-quickbooks",
+    "https://mcpservers.org/servers/quickbooks-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "QuickBooks Online accounting API via Intuit developer portal",
+    "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth 2.0 with refresh token",
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "quote": "This server uses OAuth 2.0 to authenticate to a QuickBooks Online company.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sandbox_available",
+    "value": "Sandbox testing uses development keys",
+    "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0",
+    "quote": "Development keys—use only in the sandbox environment.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "App assessment questionnaire required before production keys",
+    "url": "https://developer.intuit.com/app/developer/qbo/docs/go-live/publish-app",
+    "quote": "This app assessment questionnaire must be submitted successfully before you will be granted access to production keys.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official_url",
+    "value": "Official Intuit MCP server repo",
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "quote": "The QuickBooks MCP Server lets AI assistants access QuickBooks data via a standard interface.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks notify on data changes for OAuth-connected QBO companies",
+    "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/webhooks",
+    "quote": "They only send change notifications for QuickBooks Online companies that are connected and authorized via OAuth 2.0.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Intuit open-sourced Java, PHP, and .NET SDKs for QuickBooks Online",
+    "url": "https://blogs.intuit.com/category/developer-tools/sdks",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Intuit developer portal pages (oauth-2.0, webhooks, sandboxes, publish-app) returned truncated content, so verbatim quotes could not be confirmed. Claims should be re-verified.",
+   "Sandbox limits (10 companies, valid 2 years) appear only in third-party search summaries. Intuit's sandbox page was not readable.",
+   "Access token lifetime (one hour) and rate limits are not confirmed from Intuit docs.",
+   "Whether the intuit/quickbooks-online-mcp-server repo is Intuit's own maintained release or a derivative is unclear. The Acknowledgments say it is based on Intuit's MCP server, and the license is listed as both Apache-2.0 and MIT.",
+   "A hosted Intuit QuickBooks MCP endpoint (ai-inc.quickbooks.intuit.com/v1/mcp) was mentioned only in a search summary and was not verified. It is not included as an official claim.",
+   "Current SDK versions and the full webhook entity list are not established.",
+   "Whether a paid QuickBooks Online subscription is needed for production testing is not established."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "review_required",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 0.286,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,262 @@
+{
+ "id": 36,
+ "name": "Klaviyo",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:18:52Z",
+ "duration_s": 33.9,
+ "cost_usd": 0.0713,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developers.klaviyo.com/en",
+   "title": "API Reference & Technical Guides | Klaviyo Developers",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.klaviyo.com/en/docs/get_started",
+   "title": "Get started with Klaviyo",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.klaviyo.com/en/reference/api_overview",
+   "title": "API overview",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developers.klaviyo.com/en/docs/changelog_",
+   "title": "Changelog",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developers.klaviyo.com/en/reference/get_events",
+   "title": "Get Events",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developers.klaviyo.com/en/docs/migrate_to_oauth_from_private_key_authentication",
+   "title": "Migrate to OAuth from private key authentication",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developers.klaviyo.com/en/reference/get_api_keys_beta",
+   "title": "Get API Keys",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developers.klaviyo.com/en/reference/get_api_key_beta",
+   "title": "Get API Key",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developers.klaviyo.com/en/reference/update_api_key_beta",
+   "title": "Update API Key",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developers.klaviyo.com/en/docs/create_public_api_key_allow_list",
+   "title": "Create an allowlist for your public API key",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/CosmoBlk/email-design",
+   "title": "CosmoBlk/email-design",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mattcoatsworth/Klaviyo-MCP-Server",
+   "title": "mattcoatsworth/Klaviyo-MCP-Server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mattcoatsworth/Klaviyo-MCP-Server-4-15",
+   "title": "mattcoatsworth/Klaviyo-MCP-Server-4-15",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ivan-rivera-projects/Klaviyo-MCP-Server-Enhanced",
+   "title": "ivan-rivera-projects/Klaviyo-MCP-Server-Enhanced",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/universal-mcp/klaviyo",
+   "title": "universal-mcp/klaviyo",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/doinglean/klaviyo-mcp",
+   "title": "doinglean/klaviyo-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/rakib78/Klaviyo-MCP-Server",
+   "title": "rakib78/Klaviyo-MCP-Server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/olivalcf/klaviyo-audit-agent-skill",
+   "title": "olivalcf/klaviyo-audit-agent-skill",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.klaviyo.com",
+   "developer_portal": "https://developers.klaviyo.com/en",
+   "description": "Klaviyo is an email and SMS marketing platform with a public REST API for profiles, events, flows, reviews, etc.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are the official Klaviyo developer docs."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "OAuth recommended for tech partners; access token plus refresh token flow (authorization consent, refresh tokens).",
+   "token_refresh": "OAuth access tokens expire; use the refresh token to get a new access token upon 401.",
+   "scopes_notes": "Private API keys support scopes: Read-only, Full, Custom. Scopes cannot be added to an existing key. Endpoints require scopes like events:read."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Published marketplace apps must use OAuth and be submitted for Klaviyo approval review; the app requires at least 5 active users to meet listing requirements."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "events",
+    "profiles",
+    "flows",
+    "reviews",
+    "push tokens",
+    "API keys",
+    "universal content",
+    "metrics",
+    "text messaging configuration"
+   ],
+   "read_ops": [
+    "Get Events",
+    "Get Reviews",
+    "Get Flow",
+    "Get API Keys",
+    "Get Push Token"
+   ],
+   "write_ops": [
+    "Create Client Review",
+    "Update Review",
+    "Delete Push Token",
+    "Update API Key",
+    "Create Universal Content",
+    "Update Universal Content"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "Per-account fixed-window with burst and steady windows; e.g. Get Events: burst 350/s, steady 3500/m.",
+   "limitations": "Beta endpoints require a .pre revision header and are not intended for production. Revisions are supported for 2 years."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/mattcoatsworth/Klaviyo-MCP-Server",
+    "https://github.com/ivan-rivera-projects/Klaviyo-MCP-Server-Enhanced",
+    "https://github.com/universal-mcp/klaviyo",
+    "https://github.com/rakib78/Klaviyo-MCP-Server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key and OAuth2",
+    "url": "https://developers.klaviyo.com/en/reference/api_overview",
+    "quote": "Klaviyo provides 3 methods of authentication including private key authentication and OAuth (used to call server-side APIs) and public key authentication (used to call client-side APIs).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developers.klaviyo.com/en",
+    "quote": "Create apps and integrations using Klaviyo's API that help your business grow. Get started for free.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.klaviyo.com/en/reference/get_events",
+    "quote": "Get all events in an account",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developers.klaviyo.com/en/docs/changelog_",
+    "quote": "Manage your reviews programmatically with the Update Review endpoint, which allows you to change the status of a review, such as to reject or approve it.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "unknown",
+    "url": "https://developers.klaviyo.com/en",
+    "quote": "Install a Klaviyo maintained SDK to accelerate development– offered in Python, PHP, Ruby, and Node.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is there an official Klaviyo MCP server? Sources list only community repos.",
+   "Does Klaviyo support webhooks?",
+   "Is a paid plan required for API access beyond test accounts?"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "review_required",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

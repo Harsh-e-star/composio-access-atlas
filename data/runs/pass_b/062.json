@@ -1,0 +1,242 @@
+{
+ "id": 62,
+ "name": "Vercel",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:34:31Z",
+ "duration_s": 70.6,
+ "cost_usd": 0.0675,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://vercel.com",
+   "developer_portal": "https://vercel.com/docs/rest-api",
+   "description": "Vercel: frontend cloud platform for hosting and deploying web apps (Next.js and others) with a public REST API, official TypeScript SDK, and official remote MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Vercel docs describe the REST API as the account interface and the product is the Vercel platform (vercel.com). Confirmed by vercel.com docs pages; the 'vercel' GitHub owner hosts the SDK and MCP repos."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Vercel MCP uses OAuth for client authorization (remote MCP at mcp.vercel.com). REST API OAuth2 app flow not verified from fetched pages; an example response shows token type 'oauth2-token' and an SSO token exchange endpoint exists.",
+   "token_refresh": "unknown",
+   "scopes_notes": "Created tokens carry a 'scopes' array; a token can be scoped to a single project via projectId at creation. Team context is passed via teamId or slug query parameters."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Vercel MCP: clients must use Client ID Metadata Documents (CIMD) or be reviewed and approved by Vercel to be supported. This applies to MCP client builders, not REST token creation. No partner/sales gate found for REST tokens in fetched pages, but plan gating for token creation was not established."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Access groups",
+    "Authentication/auth tokens",
+    "Projects",
+    "Deployments",
+    "Domains",
+    "Webhooks",
+    "Environment variables (referenced in CLI/docs search only)"
+   ],
+   "read_ops": [
+    "GET /v1/access-groups/{idOrName}",
+    "GET /v1/access-groups",
+    "GET /v1/access-groups/{idOrName}/members",
+    "GET /v6/user/tokens",
+    "GET /v5/user/tokens/{tokenId}"
+   ],
+   "write_ops": [
+    "POST /v1/access-groups",
+    "POST /v1/access-groups/{idOrName}",
+    "DELETE /v1/access-groups/{idOrName}",
+    "POST /v3/user/tokens",
+    "DELETE /v3/user/tokens/{tokenId}",
+    "POST /v1/integrations/sso/token"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "unknown",
+   "limitations": "Only partially verified: fetched REST overview was truncated, so the full endpoint list is not confirmed. Webhook management endpoints (GET /v1/webhooks) appear in search snippets only. Rate limits not found."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.vercel.com",
+   "community": "yes",
+   "community_urls": [
+    "https://awesome.ecosyste.ms/projects/github.com%2Fssdavidai%2Fvercel-api-mcp-fork",
+    "https://awesome.ecosyste.ms/projects/github.com%2FQuegenx%2Fvercel-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Vercel platform; REST API is the programmatic interface to the Vercel account",
+    "url": "https://vercel.com/docs/rest-api",
+    "quote": "Vercel combines the best developer experience with an obsessive focus on end-user performance.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.description",
+    "value": "REST API can be used via SDK or direct HTTP requests",
+    "url": "https://vercel.com/docs/rest-api",
+    "quote": "Interact programmatically with your Vercel account using the SDK or direct HTTP requests.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary",
+    "value": "Bearer token; token returned once at creation",
+    "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+    "quote": "The `bearerToken` property is only provided once, in the response body, so be sure to save it on the client for use with API requests.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_creation",
+    "value": "Tokens are created via POST /v3/user/tokens for the authenticated user",
+    "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+    "quote": "Creates and returns a new authentication token for the currently authenticated User.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.project_scoping",
+    "value": "Tokens can be scoped to a project",
+    "url": "https://vercel.com/docs/rest-api/authentication/create-an-auth-token",
+    "quote": "The ID of the project to scope this token to",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth",
+    "value": "Vercel MCP authenticates clients via OAuth",
+    "url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+    "quote": "It's a remote MCP with OAuth that gives AI tools secure access to your Vercel projects",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.resources_and_write",
+    "value": "Access-group endpoints support GET, POST and DELETE",
+    "url": "https://vercel.com/docs/rest-api",
+    "quote": "| **DELETE** | [`/v1/access-groups/{idOrName}`] | Deletes an access group |",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.endpoints",
+    "value": "Authentication group includes token create, list, metadata, delete and SSO token exchange endpoints",
+    "url": "https://vercel.com/docs/rest-api/authentication",
+    "quote": "Endpoints in the Authentication group of the Vercel REST API Reference.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.supported",
+    "value": "Webhooks deliver trigger-based event notifications",
+    "url": "https://vercel.com/docs/webhooks/webhooks-api",
+    "quote": "Vercel Integrations allow you to subscribe to certain trigger-based events through webhooks.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdk.official",
+    "value": "Official TypeScript SDK @vercel/sdk wraps the REST API",
+    "url": "https://github.com/vercel/sdk",
+    "quote": "Vercel SDK is a type-safe Typescript SDK that gives you access to the Vercel REST API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdk.install",
+    "value": "npm add @vercel/sdk",
+    "url": "https://github.com/vercel/sdk",
+    "quote": "The npm command is \"npm add @vercel/sdk\"",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Vercel MCP at https://mcp.vercel.com is Vercel's official MCP server",
+    "url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+    "quote": "Vercel MCP is Vercel's official MCP server. It's a remote MCP with OAuth that gives AI tools secure access to your Vercel projects",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.plan_access",
+    "value": "Vercel MCP available on all plans",
+    "url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+    "quote": "Vercel MCP is available on all plans and your use is subject to Vercel's AI Product Terms.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_repo",
+    "value": "github.com/vercel/vercel-mcp-overview is a public overview of Vercel's MCP server (owner: vercel)",
+    "url": "https://github.com/vercel/vercel-mcp-overview",
+    "quote": "Vercel's official MCP server gives AI tools secure access to your Vercel projects.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.client_restrictions",
+    "value": "Only CIMD clients or Vercel-reviewed clients are supported",
+    "url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+    "quote": "To ensure secure access, Vercel MCP supports clients that use CIMD or that have been reviewed and approved by Vercel.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community Vercel API MCP forks exist (ssdavidai fork of zueai/vercel-api-mcp; Quegenx/vercel-mcp-server)",
+    "url": "https://awesome.ecosyste.ms/projects/github.com%2Fssdavidai%2Fvercel-api-mcp-fork",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Exact tier/plan gating for creating REST API access tokens (free Hobby vs Pro/Team) is not stated in fetched pages.",
+   "Whether REST API supports a full OAuth2 app/integration flow for third parties (Vercel Marketplace/integrations) was not confirmed in detail.",
+   "Rate limits for the REST API not established.",
+   "Full REST endpoint list not confirmed; the overview page was truncated. OpenAPI spec referenced at https://vercel.com/openapi.json but not fetched.",
+   "Webhook management via REST (GET /v1/webhooks, create/delete) appears only in search snippets; not verified on fetched pages. Webhook plan requirements (Pro/Enterprise) unconfirmed.",
+   "@vercel/sdk license conflict: repo About says Apache-2.0, README badge says MIT.",
+   "Community MCP servers (ssdavidai/vercel-api-mcp-fork, Quegenx/vercel-mcp-server) found in search only; activity and tool lists not verified.",
+   "Vercel CLI 'vercel webhooks' command and 'npx vercel docs search' exist but are CLI features, not verified via fetch beyond search snippet."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "high",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 0.812,
+ "flags": [],
+ "error": null
+}

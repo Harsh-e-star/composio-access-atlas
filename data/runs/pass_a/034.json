@@ -1,0 +1,186 @@
+{
+ "id": 34,
+ "name": "GoHighLevel",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:19:57Z",
+ "duration_s": 107.9,
+ "cost_usd": 0.0394,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://highlevel.stoplight.io",
+   "title": "Stoplight",
+   "rendered": true
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.stoplight.io",
+   "title": "developers | Stoplight",
+   "rendered": true
+  },
+  {
+   "id": "S3",
+   "url": "https://developer.stoplight.io",
+   "title": "developer | Stoplight",
+   "rendered": true
+  },
+  {
+   "id": "S4",
+   "url": "https://developers.stoplight.io/",
+   "title": "developers | Stoplight",
+   "rendered": true
+  },
+  {
+   "id": "S5",
+   "url": "https://developer.stoplight.io/",
+   "title": "developer | Stoplight",
+   "rendered": true
+  },
+  {
+   "id": "S6",
+   "url": "https://developers.stoplight.io/auth",
+   "title": "developers | Stoplight",
+   "rendered": true
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.stoplight.io/auth",
+   "title": "developer | Stoplight",
+   "rendered": true
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mastanley13/GoHighLevel-MCP",
+   "title": "mastanley13/GoHighLevel-MCP",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/BusyBee3333/Go-High-Level-MCP-2026-Complete",
+   "title": "BusyBee3333/Go-High-Level-MCP-2026-Complete",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/basicmachines-co/open-ghl-mcp",
+   "title": "basicmachines-co/open-ghl-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/tenfoldmarc/ghl-mcp",
+   "title": "tenfoldmarc/ghl-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/drausal/gohighlevel-mcp",
+   "title": "drausal/gohighlevel-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/hridayshah7/gohighlevel-mcp",
+   "title": "hridayshah7/gohighlevel-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/robbyDAninja/7fa-ghl-mcp",
+   "title": "robbyDAninja/7fa-ghl-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/uxieee/uxie-ghl-mcp-server",
+   "title": "uxieee/uxie-ghl-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": null,
+   "developer_portal": null,
+   "description": "GoHighLevel (HighLevel) marketing/CRM platform. The provided sources do not describe it; they are only Stoplight template pages.",
+   "identity_confirmed": "no",
+   "identity_notes": "highlevel.stoplight.io returned 'Stoplight Workspace does not exist'. The developers.stoplight.io and developer.stoplight.io pages are unrelated Stoplight template workspaces. No source describes GoHighLevel's API."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/mastanley13/GoHighLevel-MCP",
+    "https://github.com/BusyBee3333/Go-High-Level-MCP-2026-Complete",
+    "https://github.com/basicmachines-co/open-ghl-mcp",
+    "https://github.com/tenfoldmarc/ghl-mcp",
+    "https://github.com/drausal/gohighlevel-mcp",
+    "https://github.com/uxieee/uxie-ghl-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity_confirmed",
+    "value": "The assigned Stoplight workspace does not exist, so the product is not confirmed.",
+    "url": "https://highlevel.stoplight.io",
+    "quote": "Stoplight Workspace does not exist There is no workspace at this URL.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "The assigned highlevel.stoplight.io workspace does not exist. The current official developer docs (likely marketplace.gohighlevel.com or highlevel.stoplight.io's successor) need to be found.",
+   "Auth methods, access tier, API protocols and breadth cannot be determined from these sources.",
+   "The GitHub results are all from users or third-party orgs. None is clearly owned by HighLevel, so official MCP status is unknown.",
+   "HighLevel may offer an official MCP server, but the sources do not establish it."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "None until interface confirmed",
+  "main_blocker": "Product identity could not be confirmed.",
+  "rationale": [
+   "Product identity could not be confirmed."
+  ]
+ },
+ "evidence_support_rate": 0.0,
+ "flags": [],
+ "error": null
+}

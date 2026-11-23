@@ -1,0 +1,45 @@
+{
+  "lede": "Before Composio builds a toolkit, someone has to work out how an app authenticates, whether a developer can get credentials without paying or asking, and what the API covers. I built a pipeline that does this research for all 100 apps from the vendors' own documentation. Every claim carries a verbatim quote that is re-checked against the live page, and a second, independent pass re-researches each app to catch mistakes. The point is the patterns, not the 100 rows.",
+  "headlines": [
+    {"title": "Most apps are self-serve. Gating is the exception, and it clusters.",
+     "body": "75 of 100 apps let a developer get test credentials on their own (65 free, 10 trial-only). Only 6 need a partnership or sales contact, 6 a paid plan and 6 a workspace admin, and 7 are still unknown. The partner gates sit in ads/social (LinkedIn Ads, Pinterest), enterprise commerce (Salesforce Commerce Cloud) and closed data or support platforms (Waterfall.io, Gladly). Admin-approval gates are concentrated in support and fintech (Help Scout, Gorgias, Pylon, Brex, Ramp)."},
+    {"title": "OAuth2 dominates, but almost every app also offers a token path.",
+     "body": "75 of 100 apps support OAuth2, and 75 support more than one method; only 7 are OAuth-only. 61 of the 71 READY apps also issue an API key or personal token. Practically, engineering can prototype an action set with a token in hours, while the production toolkit still needs Composio's managed OAuth (refresh, per-user consent, scopes) for 3 in 4 apps."},
+    {"title": "Vendor MCP servers are now common, so they no longer differentiate an app.",
+     "body": "The agent reports an official, vendor-maintained MCP server for 79 of 100 apps (63 cite an MCP URL on the vendor's own domain or GitHub org; the rest rest on weaker evidence, and a few are clear over-claims, see Verification). Community servers were found for 85. For Composio, the opportunity is less about whether MCP exists and more about managed multi-tenant auth, governance and reliability on top of these servers. A custom toolkit still fits where no official server was found but the API is broad (13 apps, e.g. Zendesk, Mailchimp, Discord, Telegram, SendGrid, BigCommerce)."},
+    {"title": "The hard cases are the big enterprise apps, and they need a human.",
+     "body": "13 apps remain RESEARCH FURTHER, including Salesforce, QuickBooks, Datadog, Amazon Selling Partner, PitchBook, Magento and NotebookLM. The usual causes were docs that block automated access (Salesforce's developer site returns HTTP 403 to bots), JavaScript-only pages, or access rules that the two passes read differently. These are often the most-requested apps, so they're where an hour of human research pays off most."},
+    {"title": "The independent pass mattered: 69 field corrections, 45 open contradictions.",
+     "body": "Comparing the two passes field by field: 278 agreed, 67 partly agreed, 45 contradicted and 210 could not be compared because one side was unknown. Reconciliation changed 69 fields, only where the other pass had a verified quote, for example LinkedIn Ads (unknown to partner-gated) and Ramp (free to admin-approval). The 45 contradictions across 35 apps are flagged for human review instead of being silently resolved."}
+  ],
+  "human_needed": "Where a human was needed: (1) ground truth. The 20-app audit sheet is generated but must be checked by a person, and no accuracy number is claimed until it is. (2) Blocked documentation: Salesforce developer docs (HTTP 403), Binance (bot challenge) and one TLS failure. The agent logs these and does not evade them. (3) 45 field-level contradictions between the two passes. (4) Judging whether an MCP repo is really vendor-owned, which the model sometimes got wrong.",
+  "correction_examples": ["LinkedIn Ads", "Gladly", "Ramp", "Threads (Meta)", "Pinterest", "Clay", "Brex", "Podio", "Airtable", "Coda", "QuickBooks", "Zoho CRM"],
+  "misses": [
+    {"title": "Salesforce, app #1, ended up UNKNOWN",
+     "body": "developer.salesforce.com returns HTTP 403 to automated requests. Pass A only saw marketing and pricing pages. Pass B found OAuth2 through web search, but its quotes couldn't be re-verified behind the same 403, so reconciliation refused them. That's the correct behaviour, and a 2-minute human check resolves it."},
+    {"title": "First discovery version crawled the wrong pages",
+     "body": "In the 5-app trial, homepage seeds led the crawler into 9 Salesforce pricing pages and an empty JavaScript shell for HubSpot's developer portal, so pass A returned no auth facts. Fix: probe developer subdomains, cap pricing pages, render thin pages with Playwright. HubSpot then came back with OAuth2 and private-app tokens, both verified."},
+    {"title": "Over-claimed official MCP servers",
+     "body": "For some apps the model marked an official MCP using a page that doesn't establish one: Front (pricing page), Plain (GraphQL intro), WhatsApp (developers.facebook.com root), WooCommerce (docs root), Twenty (homepage), Plaid (a coding toolkit), and fanbasis (a different company's site, so an identity error). Treat MCP counts as an upper bound until audited."},
+    {"title": "The verification loop can also lose information",
+     "body": "Rule R4 (conflicting and neither side verified, so set to unknown) changed Airtable's and Coda's API breadth from Broad to unknown, though both APIs are broad. Abstaining protects precision at the cost of recall. The human audit will show whether that trade-off is worth it."},
+    {"title": "Stale hints and TLS",
+     "body": "The brief's Binance hint (binance-docs.github.io) now returns 404 because the docs moved to developers.binance.com. zoho.com serves an incomplete certificate chain, which the fetcher handles by using the OS trust store. developers.cloudflare.com's certificate was rejected in this environment, and verification was not disabled to get around it."},
+    {"title": "What Stage 6 can't see",
+     "body": "782 of 847 quotes were found on the live page, but a quote existing isn't the same as it supporting the claim. One GitHub claim cites 'GitHub recommends that you use a GitHub App instead' as evidence of OAuth. Only the human audit checks support."}
+  ],
+  "recommendations": [
+    {"title": "Engineering: start where demand meets READY",
+     "body": "Take the 71 BUILD NOW apps, intersect with customer requests, and start there. Prefer apps with a token path for fast prototyping, and reuse one OAuth implementation across them. Where a vendor MCP exists, benchmark it before building, and differentiate on auth and reliability."},
+    {"title": "Partnerships: open the 5 outreach conversations now",
+     "body": "LinkedIn Ads, Pinterest, Salesforce Commerce Cloud, Waterfall.io and Gladly require vendor approval or a sales contact. Approval lead times are long, so start before engineering needs them. Each app's drawer links the evidence for the gate."},
+    {"title": "Prerequisites: budget accounts and admin setups",
+     "body": "11 apps are buildable once Composio has a paid seat or a workspace admin installs the app (e.g. Help Scout, Gorgias, Clay, Ahrefs, Smartsheet, Brex, Ramp, Devin). These need a test tenant and a procurement decision, not research."},
+    {"title": "Research: one human hour on the 13 unresolved",
+     "body": "Salesforce, QuickBooks, Datadog, Amazon SP-API, PitchBook and others are probably high-demand. A person with a browser can settle each in minutes. Then add the 45 A/B contradictions to the same queue."},
+    {"title": "What this page cannot tell you",
+     "body": "Customer demand. Every group here is about feasibility. Without request volume and workflow value, a READY app may not be worth building, and a GATED one may be worth a partnership. Plug demand into a RICE score using these access and effort fields."}
+  ],
+  "method": "Each app goes through: seed URLs from the brief → deterministic discovery (developer-subdomain probes, keyword-scored links, Playwright for JS docs, GitHub search) → one structured Claude Sonnet extraction over the fetched pages, where every field needs a verbatim quote or stays unknown → each quote re-fetched and string-matched → fixed rules for the verdict. A separate Claude Haiku agent with web search re-researches every app from its name alone. Fields are compared, and changed only when the other pass has a verified quote. A deterministic stratified sample of 20 apps (2 per category) goes to a human audit sheet. Accuracy is reported only from those human labels, never from model agreement.",
+  "demo_trace_ids": [61]
+}

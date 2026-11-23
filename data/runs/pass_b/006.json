@@ -1,0 +1,246 @@
+{
+ "id": 6,
+ "name": "Podio",
+ "category": "CRM and Sales",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:19:19Z",
+ "duration_s": 76.3,
+ "cost_usd": 0.0622,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://podio.com",
+   "developer_portal": "https://developers.podio.com",
+   "description": "Podio: a web-based no-code work platform for workspaces, apps, items, tasks and contacts (product matches the task).",
+   "identity_confirmed": "yes",
+   "identity_notes": "developers.podio.com documents the Podio API. Wikipedia describes Podio as a web-based no-code platform; its history section says Citrix acquired it in 2012. The Wikipedia page says Progress Software completed the purchase of ShareFile and Podio on Oct 31, 2024, which was seen in one source only. Progress's own MCP docs cover Podio as well."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Other"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Two-step authorization code flow for most clients (user is sent to Podio, then code is exchanged at the token endpoint). One-step flow with user email and password is only for trusted clients. App authentication uses an app ID and app token from the app's Developer link.",
+   "token_refresh": "Access tokens last 8 hours by default according to a secondary summary; the primary doc did not state lifetime or refresh behavior. Unknown from primary source.",
+   "scopes_notes": "Scope list not verified. The app auth page says an app-authenticated client can only access that specific app."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Some destructive operations (such as deleting workspaces or apps) need an increased trust level; rate-limit exceptions also need a request to Podio support with the API key client_id. Podio asks developers to review its Terms of API use."
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [
+    "Applications",
+    "Items",
+    "Tasks",
+    "Spaces",
+    "Files",
+    "Hooks",
+    "Contacts",
+    "Comments",
+    "Organizations",
+    "Subscriptions",
+    "Users",
+    "Conversations",
+    "Calendar",
+    "Forms",
+    "Views",
+    "Widgets",
+    "Search",
+    "Notifications"
+   ],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Two limits: Limit A for resource-intensive operations and Limit B for all other operations. Exceeding them returns errors. Paid accounts can buy an API Add-on for higher limits. Exact numbers not stated in the sources read.",
+   "limitations": "The docs page lists resource groups but does not describe CRUD operations or response format. Sources did not explicitly say REST or JSON. Some resource descriptions on the docs page are garbled, such as Flows."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://www.progress.com/podio/documentation/using-podio/podio-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://www.activepieces.com/mcp/podio",
+    "https://zapier.com/mcp/podio",
+    "https://mcp.pipedream.com/app/podio",
+    "https://anythingmcp.com/guides/podio-to-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Podio supplies a web-based platform for creating no code solutions and automated workflows.",
+    "url": "https://en.wikipedia.org/wiki/Podio",
+    "quote": "Podio supplies a web-based platform for creating no code solutions and automated workflows.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "The Podio API is available to use for both paid and free Podio accounts.",
+    "url": "https://developers.podio.com/index/faq",
+    "quote": "The Podio API is available to use for both paid and free Podio accounts.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_credentials",
+    "value": "Keys are issued from the user's account settings page, with the API keys tab under account settings.",
+    "url": "https://developers.podio.com/index/faq",
+    "quote": "Then you find your API keys as a tab under your account settings.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Some operations are limited to clients with an increased trust level, such as deleting workspaces or apps.",
+    "url": "https://developers.podio.com/index/faq",
+    "quote": "Certain API operations are limited to API clients with an increased trust level.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Limit A applies to resource-intensive operations; Limit B applies to all other operations.",
+    "url": "https://developers.podio.com/index/faq",
+    "quote": "Limit A applies to resource-intensive API operations, while Limit B applies to all other API operations.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "No extra charge for API use within base rate limits; paid accounts can buy an API Add-on.",
+    "url": "https://developers.podio.com/index/faq",
+    "quote": "There is no extra charge for using the API as long as the usage is within these base rate limits.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Podio API uses OAuth 2.0; server-side flow recommended for most uses.",
+    "url": "https://developers.podio.com/authentication",
+    "quote": "Podio recommends OAuth server-side flow for most uses.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.methods",
+    "value": "App authentication uses the app ID and app token from the app's Developer link.",
+    "url": "https://developers.podio.com/authentication/app_auth",
+    "quote": "You can find the Podio App ID and Podio App Token by going to your app in Podio and clicking the Developer link",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.scopes_notes",
+    "value": "App-authenticated clients can only access that specific app.",
+    "url": "https://developers.podio.com/authentication/app_auth",
+    "quote": "When you authenticate as an app you can only access that specific app",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_flows",
+    "value": "Two-step flow is for all other clients; one-step flow is only valid for trusted clients.",
+    "url": "https://developers.podio.com/doc/oauth-authorization",
+    "quote": "Secondly the client uses the token endpoint with the code from step one to get an access token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks",
+    "value": "Hooks are webhooks that can call external sites when certain actions occur in Podio.",
+    "url": "https://developers.podio.com/doc",
+    "quote": "Hooks are webhooks that can call external sites when certain actions occur in Podio.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks",
+    "value": "Subscriptions notify users when an object is created, updated, deleted, commented on, or rated.",
+    "url": "https://developers.podio.com/doc",
+    "quote": "Subscriptions allows the user to be notified when an object is created, updated, delete, comments added to it or rated.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks",
+    "value": "Podio lists client libraries (PHP, .NET, Ruby, Java, Python, Android, Objective-C) and an official JS client, podio-js.",
+    "url": "https://developers.podio.com",
+    "quote": "recommends checking the client libraries for your language or platform",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Podio MCP Server is in beta and is intended for evaluation and testing.",
+    "url": "https://www.progress.com/podio/documentation/using-podio/podio-mcp-server",
+    "quote": "The Podio MCP Server is currently in beta and is intended for evaluation and testing.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Official MCP server exposes 22 tools for reading and writing Podio data.",
+    "url": "https://www.progress.com/podio/documentation/using-podio/podio-mcp-server",
+    "quote": "The Podio MCP Server gives your AI assistant 22 tools covering both reading and writing your Podio data.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_url",
+    "value": "Official MCP endpoint is https://mcp.podio.com/mcp; OAuth 2.0 sign-in with Podio account.",
+    "url": "https://www.progress.com/podio/documentation/using-podio/podio-mcp-server",
+    "quote": "For production use, we recommend connecting with your API key.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "identity.identity_notes",
+    "value": "Progress Software completed the purchase of ShareFile and Podio on Oct 31, 2024.",
+    "url": "https://en.wikipedia.org/wiki/Podio",
+    "quote": "On October 31, 2024, Progress Software Corporation announced that it had completed the purchase of ShareFile and Podio.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Protocols (REST/JSON) are not explicitly stated in the fetched docs; verify on the API reference.",
+   "Full CRUD operations per resource (read_ops/write_ops) were not listed in the docs; the API reference needs a direct check.",
+   "Exact rate-limit numbers for Limit A and Limit B were not found.",
+   "Whether a free developer account can create an API key without admin approval or a paid plan was not explicitly confirmed; the FAQ says the API is available on free accounts.",
+   "Access token lifetime (8 hours per a search summary) and refresh-token behavior are not confirmed from the primary OAuth doc.",
+   "Whether community MCP servers are GitHub-hosted was not confirmed; the listed community options are third-party hosted services.",
+   "Current owner of Podio: Progress Software acquisition (Oct 2024) rests on a single Wikipedia source."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": 0.882,
+ "flags": [],
+ "error": null
+}

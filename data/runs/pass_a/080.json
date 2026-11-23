@@ -1,0 +1,271 @@
+{
+ "id": 80,
+ "name": "Harvest",
+ "category": "Productivity and Project Management",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:24:25Z",
+ "duration_s": 38.3,
+ "cost_usd": 0.0665,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://help.getharvest.com/api-v2/",
+   "title": "Harvest API V2 Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://help.getharvest.com/api-v2/authentication-api/",
+   "title": "Authentication – Harvest API V2 Documentation",
+   "rendered": true
+  },
+  {
+   "id": "S3",
+   "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+   "title": "Authentication – Harvest API V2 Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+   "title": "Overview – Harvest API V2 Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://help.getharvest.com/api-v2/introduction/overview/postman-collection/",
+   "title": "Postman Collection – Harvest API V2 Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://help.getharvest.com/api-v2/introduction/overview/code-samples/",
+   "title": "Code Samples – Harvest API V2 Documentation",
+   "rendered": true
+  },
+  {
+   "id": "S7",
+   "url": "https://help.getharvest.com/api-v2/notifications-api/notifications/notification-preferences/",
+   "title": "Notification Preferences – Harvest API V2 Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://help.getharvest.com/api-v2/forecast-api/forecast/forecast-overview/",
+   "title": "Forecast API Overview – Harvest API V2 Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://help.getharvest.com/api-v2/authentication-api/index",
+   "title": "Authentication – Harvest API V2 Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://github.com/harvesthq/harvest_api_samples/tree/main/v2/oauth",
+   "title": "harvest_api_samples/v2/oauth at main · harvesthq/harvest_api_samples · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/taiste/harvest-mcp-server",
+   "title": "taiste/harvest-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Dominic-DK/mac-shortcuts-mcp",
+   "title": "Dominic-DK/mac-shortcuts-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/nospicyplease/amazon-ppc-advanced-skills",
+   "title": "nospicyplease/amazon-ppc-advanced-skills",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/abcubed3/okf",
+   "title": "abcubed3/okf",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/HurriKane/skyfactory-2.4-faults",
+   "title": "HurriKane/skyfactory-2.4-faults",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ianaleck/harvest-mcp-server",
+   "title": "ianaleck/harvest-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/dazeb/mcp-react-component-harvester",
+   "title": "dazeb/mcp-react-component-harvester",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/rrrishi123/http-mcp",
+   "title": "rrrishi123/http-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.getharvest.com",
+   "developer_portal": "https://help.getharvest.com/api-v2/",
+   "description": "Harvest is a time tracking, expense, invoicing and project management product with a REST API v2 (plus Forecast resource planning API).",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are the official Harvest API V2 documentation at help.getharvest.com; harvestapp.com itself was blocked by robots.txt."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization Code flow for server-side apps; Implicit Grant flow for client-side apps.",
+   "token_refresh": "Authorization code flow returns access and refresh tokens (expires_in 1209600 seconds); refresh via grant_type=refresh_token at https://id.getharvest.com/api/v2/oauth2/token.",
+   "scopes_notes": "Personal Access Tokens have the all scope by default; OAuth2 apps get scopes like harvest:{ACCOUNT_ID} depending on app options and user authorization. Requests also need Harvest-Account-Id header."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Clients",
+    "Client Contacts",
+    "Company",
+    "Invoices",
+    "Estimates",
+    "Expenses",
+    "Tasks",
+    "Time Entries",
+    "Projects",
+    "Roles",
+    "Users",
+    "Reports",
+    "Time Off",
+    "Approvals",
+    "Notifications",
+    "Reimbursements",
+    "Imports",
+    "Integrations",
+    "Forecast"
+   ],
+   "read_ops": [
+    "GET"
+   ],
+   "write_ops": [
+    "POST",
+    "PATCH",
+    "DELETE"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "General API: 100 requests per 15 seconds; Reports API: 100 requests per 15 minutes; HTTP 429 with Retry-After header.",
+   "limitations": "Forecast and notification preference endpoints are beta. Forecast endpoints require Forecast module, seat and claims."
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/taiste/harvest-mcp-server",
+    "https://github.com/ianaleck/harvest-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2 and Personal Access Token (Bearer)",
+    "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+    "quote": "Harvest requires applications to authenticate all requests with OAuth2 or Personal Access Tokens .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+    "quote": "The API can be accessed by creating a Personal Access Token from the Developers section of Harvest ID.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+    "quote": "The Harvest V2 API is a REST API that allows you to interact with your Harvest account programmatically.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+    "quote": "You can track time, log expenses, create projects, and more.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "no",
+    "url": "https://github.com/taiste/harvest-mcp-server",
+    "quote": "MCP Server for Harvest",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "100 req/15s general",
+    "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+    "quote": "The rate limit for general API requests is 100 requests per 15 seconds . The rate limit for Reports API requests is 100 requests per 15 minutes .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is there an official Harvest MCP server?",
+   "Does Harvest offer webhooks?",
+   "Official SDKs besides code samples?",
+   "Is a Harvest account (trial/paid) required to create a Personal Access Token?"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

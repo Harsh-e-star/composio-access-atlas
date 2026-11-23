@@ -75,6 +75,10 @@ def level1(recs: dict[int, AppRecord]) -> list[dict]:
             issues.append({"id": i, "check": "primary_auth_not_in_methods", "detail": x.auth.primary})
         if x.mcp.official == "yes" and not x.mcp.official_url:
             issues.append({"id": i, "check": "official_mcp_without_url", "detail": ""})
+        elif x.mcp.official == "yes" and "mcp" not in (x.mcp.official_url or "").lower() and not any(
+                c.verified and c.field.lower().startswith("mcp") and "mcp" in (c.quote + c.url).lower()
+                for c in x.claims):
+            issues.append({"id": i, "check": "official_mcp_weak_evidence", "detail": x.mcp.official_url})
         if x.access.tier == "free_self_serve" and x.access.paid_plan_required == "yes":
             issues.append({"id": i, "check": "tier_contradicts_paid_flag", "detail": ""})
         if x.access.tier == "free_self_serve" and x.access.partnership_or_sales_required == "yes":
@@ -101,9 +105,12 @@ def supported(r: AppRecord | None, field: str) -> bool:
 
 def reconcile(a: AppRecord | None, b: AppRecord | None) -> tuple[Extraction, list[dict]]:
     """Start from pass A; change a field only when the evidence rules say so."""
-    base = (a if a and not a.error else b)
-    x = base.extraction.model_copy(deep=True)
+    base = a if a and not a.error else (b if b and not b.error else None)
     changes = []
+    if base is None:
+        changes.append({"field": "*", "rule": "R0 both passes failed; all fields unknown", "from": None, "to": None})
+        return Extraction(), changes
+    x = base.extraction.model_copy(deep=True)
     if base is b:
         changes.append({"field": "*", "rule": "R0 pass A failed; pass B used", "from": None, "to": "pass B"})
         return x, changes
@@ -117,7 +124,12 @@ def reconcile(a: AppRecord | None, b: AppRecord | None) -> tuple[Extraction, lis
         if is_unknown(va) and not is_unknown(vb) and sb:
             new, rule = vb, "R1 gap-fill: A unknown, B has verified evidence"
         elif rel == "partial" and isinstance(va, list) and sb and set(vb) - set(va):
-            new, rule = sorted(set(va) | set(vb)), "R2 union: B adds methods backed by verified evidence"
+            u = set(va) | set(vb)
+            if len(u) > 1:
+                u.discard("none")  # 'no public API' cannot coexist with real protocols
+            new, rule = sorted(u), "R2 union: B adds methods backed by verified evidence"
+            if new == sorted(va):
+                new, rule = None, None
         elif rel in ("contradiction", "partial") and not isinstance(va, list) and sb and not sa:
             new, rule = vb, "R3 override: only B's value has verified evidence"
         elif rel == "contradiction" and not sa and not sb:
@@ -267,6 +279,10 @@ def main():
             flags.append("identity_unconfirmed")
         if any("R4" in c["rule"] for c in changes):
             flags.append("needs_human_review")
+        if x.mcp.official == "yes" and "mcp" not in (x.mcp.official_url or "").lower() and not any(
+                c.verified and c.field.lower().startswith("mcp") and "mcp" in (c.quote + c.url).lower()
+                for c in x.claims):
+            flags.append("official_mcp_weak_evidence")
         claims = x.claims
         sup = round(sum(1 for c in claims if c.verified) / len(claims), 3) if claims else None
         rec = {

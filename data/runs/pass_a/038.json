@@ -1,0 +1,216 @@
+{
+ "id": 38,
+ "name": "Pinterest",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:19:12Z",
+ "duration_s": 39.9,
+ "cost_usd": 0.0291,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developers.pinterest.com",
+   "title": "Pinterest Developers",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+   "title": "Pinterest Developers",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.pinterest.com/",
+   "title": "Pinterest Developers",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://help.pinterest.com/en/mcp-interest",
+   "title": "MCP Interest | Pinterest Help",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/itallstartedwithaidea/advertising-hub",
+   "title": "itallstartedwithaidea/advertising-hub",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/terryso/mcp-pinterest",
+   "title": "terryso/mcp-pinterest",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/collactivelabs/pinterest-mcp-server",
+   "title": "collactivelabs/pinterest-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/xyonium/reach-mcp",
+   "title": "xyonium/reach-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/clugtu/pinterest-mcp",
+   "title": "clugtu/pinterest-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/posteverywhere/mcp",
+   "title": "posteverywhere/mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sunkimk/pinterest-mcp",
+   "title": "sunkimk/pinterest-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/what-name/pinterest-mcp",
+   "title": "what-name/pinterest-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://developers.pinterest.com",
+   "developer_portal": "https://developers.pinterest.com",
+   "description": "Pinterest Developer Platform: API for managing organic content (Pins, Boards), ads, shopping catalogs, conversions and analytics.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Official Pinterest Developers site."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "MCP uses OAuth 2.0 authorization and granular permissions."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Pinterest MCP is not yet generally available; early access via interest form."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Pins",
+    "Boards",
+    "Ad campaigns",
+    "Product catalogs",
+    "Conversions",
+    "Analytics"
+   ],
+   "read_ops": [
+    "analytics",
+    "campaign reporting"
+   ],
+   "write_ops": [
+    "create and manage Pins and Boards",
+    "manage ad campaigns",
+    "manage catalogs"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developers.pinterest.com/about-pinterest-mcp/",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/terryso/mcp-pinterest",
+    "https://github.com/collactivelabs/pinterest-mcp-server",
+    "https://github.com/clugtu/pinterest-mcp",
+    "https://github.com/what-name/pinterest-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+    "quote": "OAuth 2.0 authorization and granular permissions keep credentials protected and access appropriately controlled.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "unknown",
+    "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+    "quote": "Do I need a Pinterest developer account to use the MCP server?",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+    "quote": "Query, analyze, and act through a consistent interface powered by the existing Pinterest API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developers.pinterest.com/",
+    "quote": "Use Pinterest API to manage ad campaigns, set up targeting, and report on campaign performance.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+    "quote": "The Pinterest MCP Server brings Pinterest data into the AI tools you already use, giving agents native access to rich inspiration and creative signals",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Access tier for test credentials (developer app approval) not in sources",
+   "Public availability date of Pinterest MCP; currently early access/interest form",
+   "REST protocol is inferred from MCP page wording; API docs not provided",
+   "Rate limits, SDKs, webhooks unknown"
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "high",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

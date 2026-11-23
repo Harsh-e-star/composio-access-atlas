@@ -1,0 +1,215 @@
+{
+ "id": 97,
+ "name": "higgsfield",
+ "category": "AI, Research and Media-native",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:38:44Z",
+ "duration_s": 75.3,
+ "cost_usd": 0.0549,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://higgsfield.ai",
+   "developer_portal": "https://open.higgsfield.ai",
+   "description": "Higgsfield is an AI image and video generation platform with a web app, a REST API for developers (api.higgsfield.ai), an open-source CLI installed as higgsfield, and an MCP server page for AI agents.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs, creator hub, and the higgsfield-ai/cli GitHub repo describe the same generation product. The CLI repo is owned by the higgsfield-ai org. The assignment hint higgsfield.ai/cli is the CLI landing page for this product. Several third-party 'Higgsfield' MCP servers exist, but none are vendor-published."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Other"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "CLI tokens are short-lived; on 'Session expired' the user runs login again. API keys are static and should be rotated if exposed.",
+   "scopes_notes": "REST API: a key ID plus secret pair sent as 'Authorization: Key KEY_ID:KEY_SECRET'; docs say Bearer tokens are not used. CLI uses 'higgsfield auth login', a browser sign-in with short-lived tokens. No OAuth2 flow found in the sources read."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No subscription is needed, but each API request is paid from a prepaid USD balance (minimum top-up $5) and a payment method must be registered. Invoice billing exists for committed-use contracts. Rate limits depend on account and model. Sources conflict on whether the CLI needs a paid higgsfield.ai subscription (one third-party guide says so; unverified)."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "Image and video generation requests (model-specific schemas)",
+    "Requests / jobs"
+   ],
+   "read_ops": [
+    "Get request status (status_url)"
+   ],
+   "write_ops": [
+    "Submit generation request (optional Idempotency-Key header)",
+    "Cancel a queued request"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Depend on account and selected model (no numbers published in sources read).",
+   "limitations": "Public API surface appears to be generation-focused: submit generation requests, read request status, cancel queued requests. No broad CRUD over account resources was found. Exact rate limits not published in pages read."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://higgsfield.ai/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/jfikrat/higgsfield-mcp",
+    "https://github.com/geopopos/higgsfield_ai_mcp",
+    "https://github.com/Hikhakk/higgsfield-mcp-unified",
+    "https://github.com/creativecgl/higgsfield-unlimited-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Higgsfield CLI generates images, videos, 3D assets, audio from the terminal",
+    "url": "https://github.com/higgsfield-ai/cli",
+    "quote": "Generate images, videos, 3D assets, audio, and finished-video analysis from the terminal using 40+",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.base_url",
+    "value": "https://api.higgsfield.ai",
+    "url": "https://docs.higgsfield.ai/docs/api-reference/overview",
+    "quote": "The API reference is generated from the public OpenAPI specification.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary",
+    "value": "Authorization: Key KEY_ID:KEY_SECRET",
+    "url": "https://docs.higgsfield.ai/docs/authentication",
+    "quote": "Send both values in the Authorization header: Authorization: Key YOUR_KEY_ID:YOUR_KEY_SECRET",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.no_bearer",
+    "value": "Bearer tokens are not used",
+    "url": "https://docs.higgsfield.ai/docs/help/faq",
+    "quote": "Do not use a Bearer token or expose the secret in browser or mobile code.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.credentials",
+    "value": "Keys created in Higgsfield Console as key ID plus secret",
+    "url": "https://docs.higgsfield.ai/docs/authentication",
+    "quote": "Create and manage API credentials in Higgsfield Console. Each credential consists of a key ID and a secret.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.signup",
+    "value": "Free API account signup; no plan needed",
+    "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+    "quote": "No plan or subscription is involved",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.billing",
+    "value": "Prepaid USD balance, minimum top-up $5",
+    "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+    "quote": "each request is paid in US dollars from a prepaid balance",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.key_generation",
+    "value": "Generate API key at open.higgsfield.ai console",
+    "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+    "quote": "Generate an API key in the console at open.higgsfield.ai",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks supported alongside status polling",
+    "url": "https://docs.higgsfield.ai/docs/help/faq",
+    "quote": "Poll status_url or configure a webhook, then read the output URL after the status becomes completed.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Official Python (higgsfield-client) and Node/TypeScript (@higgsfield/client) SDKs",
+    "url": "https://docs.higgsfield.ai/docs/how-to/sdk",
+    "quote": "Official SDKs handle authentication, submission, polling, cancellation, and file uploads.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.cli",
+    "value": "Official CLI installed via npm, brew, or curl",
+    "url": "https://github.com/higgsfield-ai/cli",
+    "quote": "npm install -g @higgsfield/cli",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.cli_login",
+    "value": "higgsfield auth login opens browser sign-in",
+    "url": "https://higgsfield.ai/mcp?tab=cli",
+    "quote": "Authenticate: run `higgsfield auth login` and complete the sign-in in the browser it opens.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Vendor MCP server offered on higgsfield.ai/mcp (hosted; no API key)",
+    "url": "https://higgsfield.ai/mcp?tab=cli",
+    "quote": "Add the Higgsfield MCP server to Claude, OpenClaw, Hermes Agent, NemoClaw, or any MCP-compatible client.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Several community MCP servers exist on GitHub",
+    "url": "https://github.com/jfikrat/higgsfield-mcp",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Exact rate limits per model/account are not published in the pages read.",
+   "Whether a sandbox or free trial credit exists for API testing is unknown.",
+   "Whether the CLI and MCP require a paid higgsfield.ai subscription conflicts between sources (one third-party guide says yes).",
+   "The hosted MCP endpoint (mcp.higgsfield.ai) was not directly verified; a community README says it uses OAuth, which is unconfirmed.",
+   "No official MCP server repository was found on the higgsfield-ai GitHub org; the official MCP appears to be hosted, not open source.",
+   "A third-party Apidog post claims Bearer auth, which conflicts with the official docs; treated as unreliable.",
+   "Full endpoint list and the OpenAPI spec were not retrieved; the overview page gave no paths."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "low",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface.",
+   "API surface is limited; toolkit would cover few actions."
+  ]
+ },
+ "evidence_support_rate": 0.857,
+ "flags": [],
+ "error": null
+}

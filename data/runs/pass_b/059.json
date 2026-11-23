@@ -1,0 +1,234 @@
+{
+ "id": 59,
+ "name": "Waterfall.io",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:34:23Z",
+ "duration_s": 69.4,
+ "cost_usd": 0.0587,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://waterfall.io",
+   "developer_portal": "https://docs.waterfall.io/v1/introduction",
+   "description": "Waterfall.io (waterfall.io) is a B2B contact and company data enrichment company whose GTM API runs a waterfall across 30+ data vendors. It is not the Waterfall Lead Enrichment MCP (Workato), Waterfall Bridge (finance), or getwaterfall.org (LLM API).",
+   "identity_confirmed": "yes",
+   "identity_notes": "Confirmed by the vendor homepage, the official docs site, and the vendor GitHub org (Waterfall-io). A Cargo integration doc also names Waterfall.io. Third-party aggregator sites were used only as leads. Several unrelated 'waterfall' products share the name."
+  },
+  "auth": {
+   "methods": [
+    "API key"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "Not applicable (static API key). Docs say 'Rotate keys periodically' with no schedule.",
+   "scopes_notes": "No OAuth or scopes documented. Master API keys manage sub-keys; sub-keys are for separating access and usage per team or workflow."
+  },
+  "access": {
+   "tier": "partner_or_sales",
+   "free_credentials": "no",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "yes",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No self-serve signup found. Homepage directs visitors to 'Book a Call' and a request form. Pricing is described as usage-based, prepaid credits. Whether a trial or test key exists is not established."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "Prospector",
+    "Search Contact",
+    "Search Company",
+    "Contact Enrichment",
+    "Phone Enrichment",
+    "Company Enrichment",
+    "Company Reveal",
+    "Company Titles",
+    "Job Change",
+    "Email Verification",
+    "Webhook JWKS",
+    "Account Reporting",
+    "API Key Management"
+   ],
+   "read_ops": [
+    "Search Contact",
+    "Search Company (Preview)",
+    "Company Titles (Preview)",
+    "Company Reveal",
+    "Job Change",
+    "Email Verification",
+    "Account Reporting"
+   ],
+   "write_ops": [
+    "Prospector (async)",
+    "Contact Enrichment (async)",
+    "Phone Enrichment (async)",
+    "Company Enrichment (async)",
+    "API Key Management (create/manage sub-keys)"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "unknown",
+   "limitations": "Breadth is mostly data lookups and enrichment, with no CRM-style write resources. Writes are limited to key management and async enrichment jobs. Method per endpoint not stated in docs beyond POST for sync results. Homepage examples all show /v1/prospector, so labels may not match endpoints."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "product_identity",
+    "value": "Waterfall.io is a B2B data provider whose product is a GTM API pulling from multiple data vendors",
+    "url": "https://waterfall.io",
+    "quote": "Waterfall® aggregates 30+ different data vendors",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api_description",
+    "value": "Waterfall Enrichment API powered by 30+ data vendors",
+    "url": "https://waterfall.io",
+    "quote": "Waterfall Enrichment api, powered by 30+ data vendors",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "signup_path",
+    "value": "No self-serve signup; visitors directed to Book a Call and a request form",
+    "url": "https://waterfall.io",
+    "quote": "Book a Call",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "pricing_model",
+    "value": "Usage-based pricing, prepaid credits, no monthly commitments",
+    "url": "https://waterfall.io",
+    "quote": "Pay only for what you actually use. No monthly commitments.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api_base_url",
+    "value": "https://api.waterfall.io",
+    "url": "https://docs.waterfall.io/v1/introduction",
+    "quote": "The Waterfall API is available at `https://api.waterfall.io`.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth_header",
+    "value": "API key sent in x-api-key header",
+    "url": "https://docs.waterfall.io/v1/introduction",
+    "quote": "Send your API key in the `x-api-key` header.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "endpoint_list",
+    "value": "13 APIs incl. Prospector, Contact/Company Enrichment, Phone Enrichment, Job Change, Email Verification, Webhook JWKS, API Key Management",
+    "url": "https://docs.waterfall.io/v1/introduction",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "webhooks",
+    "value": "Async APIs deliver results via webhook_url; signed deliveries verified with Ed25519 keys from a JWKS endpoint",
+    "url": "https://docs.waterfall.io/v1/introduction",
+    "quote": "Fetch public Ed25519 keys for verifying signed webhook deliveries.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "credential_acquisition",
+    "value": "API access and pricing are obtained by contacting the team, not self-serve",
+    "url": "https://docs.waterfall.io/v1/authentication.md",
+    "quote": "Contact the team",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sub_keys",
+    "value": "Creating and managing sub-keys requires a master API key",
+    "url": "https://docs.waterfall.io/v1/authentication.md",
+    "quote": "Creating and managing sub-keys requires a master API key.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "homepage_key_header",
+    "value": "Homepage examples show x-waterfall-api-key header",
+    "url": "https://waterfall.io",
+    "quote": "Connect to Waterfall.io using your API key.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "integration_connect",
+    "value": "Third-party integration connects with a single field: Waterfall.io API key",
+    "url": "https://docs.getcargo.ai/integration/waterfall",
+    "quote": "Connect to Waterfall.io using your API key.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "agent_skills",
+    "value": "Official skills repo for coding agents (not MCP)",
+    "url": "https://docs.waterfall.io/v1/skills-overview.md",
+    "quote": "The skills install independently.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "github_org",
+    "value": "Org 'Waterfall-io' has 3 public repos: .github, api-skills (agent skills), webhook-verification-kit; none is an MCP server",
+    "url": "https://github.com/Waterfall-io/api-skills",
+    "quote": "Waterfall API skills for coding agents.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "org_description",
+    "value": "Waterfall-io org: 30+ contact and company data vendors in one API",
+    "url": "https://github.com/Waterfall-io",
+    "quote": "30+ contact and company data vendors in one API",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Confirm whether a trial, sandbox, or test key exists; the auth and pricing pages were not fully retrieved (only summaries).",
+   "Obtain the rate limits and SDK availability, which were not found.",
+   "Verify the endpoint HTTP methods and paths, since the docs summary gave only names.",
+   "Check for an official MCP server; none found in docs or the 3 public org repos, but absence is not fully established.",
+   "Clarify the header name conflict: x-api-key on official docs vs x-waterfall-api-key in homepage examples.",
+   "Excluded community results: Workato Waterfall Lead Enrichment MCP (ZoomInfo/Apollo/LeadIQ), Mamba Labs Email Waterfall Orchestrator, Databar run_waterfall, LeadEnrich, FullEnrich, SyncGTM. These are different products. Unofficial mirrors docs.waterfall.io/withone.ai and waterfall-cj1.pages.dev were not used as authority."
+  ]
+ },
+ "assessment": {
+  "verdict": "GATED",
+  "group": "OUTREACH REQUIRED",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "gated",
+  "production_readiness": "restricted",
+  "security_risk": "standard",
+  "commercial_dependency": "yes",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "Partnership / vendor approval / sales contact",
+  "rationale": [
+   "Credentials require partnership, vendor approval or sales."
+  ]
+ },
+ "evidence_support_rate": 0.867,
+ "flags": [],
+ "error": null
+}

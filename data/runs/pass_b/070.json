@@ -1,0 +1,198 @@
+{
+ "id": 70,
+ "name": "Sentry",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:35:47Z",
+ "duration_s": 105.7,
+ "cost_usd": 0.0439,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://sentry.io",
+   "developer_portal": "https://docs.sentry.io/api/",
+   "description": "Sentry, the application-monitoring and error-tracking platform. Public web API documented at docs.sentry.io/api. Sentry's getsentry/toolkit repo contains the Sentry CLI and Sentry MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "The assignment hint docs.sentry.io/api is Sentry's public API documentation. The getsentry/toolkit README describes the repo as containing the Sentry CLI and Sentry MCP server."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT",
+    "API key",
+    "Other"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Authorization code grant; device authorization flow for devices without a browser or with limited input. Access tokens expire after 30 days and are refreshed with grant_type=refresh_token.",
+   "token_refresh": "OAuth access tokens expire after 30 days and are refreshed via the refresh token. Internal integration tokens do not expire automatically and can be revoked manually. A 401 means expired or revoked token.",
+   "scopes_notes": "Scopes are space-separated permissions. User auth tokens are assigned specific scopes at creation. OAuth access tokens are limited to the single organization the user selected during the flow."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Not established. The pages reviewed did not state plan, role, or approval requirements for creating internal integrations or user tokens."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "organizations",
+    "projects",
+    "project service hooks",
+    "internal integrations",
+    "account-level resources"
+   ],
+   "read_ops": [
+    "Manage account-level resources",
+    "Export data"
+   ],
+   "write_ops": [
+    "Create and manage internal integration tokens",
+    "Manage project service hooks"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Rate limits documented on a separate page; values not retrieved",
+   "limitations": "Beta endpoints may change; public endpoints are generally stable. Integration webhooks must respond within 1 second. Official API client SDKs not established."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.sentry.dev/mcp",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Sentry web API is used to access the Sentry platform programmatically",
+    "url": "https://docs.sentry.io/api/",
+    "quote": "The Sentry web API is used to access the Sentry platform programmatically.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2 authorization code grant supported",
+    "url": "https://docs.sentry.io/api/auth/",
+    "quote": "Sentry supports OAuth2 with the authorization code grant type.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "API keys are legacy and disabled for new accounts",
+    "url": "https://docs.sentry.io/api/auth/",
+    "quote": "API keys are a legacy means of authenticating. They will still be supported but are disabled for new accounts.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "OAuth access tokens expire after 30 days",
+    "url": "https://docs.sentry.io/api/auth/",
+    "quote": "Access tokens expire after 30 days. Use the refresh token to obtain new tokens",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.scopes",
+    "value": "OAuth token limited to one organization",
+    "url": "https://docs.sentry.io/api/auth/",
+    "quote": "The access token only provides access to the specific organization the user selected during the OAuth flow.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.internal_integration_tokens",
+    "value": "Org-wide token issued on creation; tokens do not expire automatically",
+    "url": "https://docs.sentry.io/organization/integrations/integration-platform/internal-integration/",
+    "quote": "These tokens do not expire automatically, but you can manually revoke them as needed",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.internal_integration_tokens",
+    "value": "Up to 20 tokens per internal integration",
+    "url": "https://docs.sentry.io/organization/integrations/integration-platform/internal-integration/",
+    "quote": "You can have up to 20 tokens at a time for each internal integration",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Integration webhooks must respond within 1 second",
+    "url": "https://docs.sentry.io/api/webhooks/",
+    "quote": "Sentry's webhooks should respond within 1 second",
+    "verified": false,
+    "verify_note": "source unreachable (http_404)"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Sentry hosts remote MCP server at mcp.sentry.dev/mcp",
+    "url": "https://mcp.sentry.dev/",
+    "quote": "Any MCP-compatible client can connect using the HTTP transport at the endpoint URL above.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "MCP connections use OAuth",
+    "url": "https://mcp.sentry.dev/",
+    "quote": "All connections use OAuth. The first connection will trigger an authentication flow to connect to your Sentry account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_repo",
+    "value": "getsentry/toolkit contains Sentry CLI and Sentry MCP server",
+    "url": "https://github.com/getsentry/sentry-mcp",
+    "quote": "This repository contains the Sentry CLI, the Sentry MCP server, and shared packages.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.tools",
+    "value": "MCP server connects AI assistants to Sentry for searching errors, analyzing performance, triaging issues",
+    "url": "https://mcp.sentry.dev/",
+    "quote": "Connects AI assistants to Sentry for searching errors, analyzing performance, triaging issues",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Who can create user auth tokens and internal integrations: any user, or org admins only? Plan requirements?",
+   "Free/trial/sandbox availability and whether a free developer account suffices for test credentials (not established).",
+   "Official API client SDKs (e.g., a sentry-api package) were not found; Sentry's @sentry/* packages are error-reporting SDKs, not API clients.",
+   "Whether the full REST endpoint list (issues, events, releases, alerts) supports write operations at Broad scope; breadth rated Medium on limited evidence.",
+   "Rate limit numbers were not retrieved from the Rate Limits page.",
+   "Whether the MCP server is maintained by Sentry is strongly suggested (getsentry org, Sentry domain) but the MCP page itself does not name its maintainer.",
+   "Community MCP servers: search surfaced directory listings (mcpservers.org) and third-party posts, but no community repository was verified."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 0.917,
+ "flags": [],
+ "error": null
+}

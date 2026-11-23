@@ -1,0 +1,255 @@
+{
+ "id": 73,
+ "name": "Linear",
+ "category": "Productivity and Project Management",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:36:04Z",
+ "duration_s": 69.5,
+ "cost_usd": 0.0497,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://linear.app",
+   "developer_portal": "https://linear.app/developers",
+   "description": "Linear: project management / issue tracking SaaS (linear.app). Developer docs at developers.linear.app, which now redirects to linear.app/developers. GraphQL API at api.linear.app/graphql.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Developer docs describe the Linear issue/project tracker API (issues, projects, comments, documents). The assignment hint domain developers.linear.app redirects to linear.app/developers."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "API key",
+    "Bearer/PAT"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Authorization code (access token valid 24 hours, refresh token expires 30 days after issuance) and client credentials (app actor, 30-day token, no refresh token; must be toggled on per OAuth2 app).",
+   "token_refresh": "Authorization-code refresh tokens: a successful refresh returns a new access token and refresh token with a new 30-day lifetime. Client-credentials tokens: request a new token after a 401.",
+   "scopes_notes": "Scopes: read (default), write, admin (user actor only, admin-level endpoints), plus app-actor-only scopes such as customer:read/write, initiative:read/write. Actor types: user (default) or app (for agents and service accounts)."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Pricing page lists 'Third-party app management' as Not included on the Free tier (included on Basic and higher), so creating/managing third-party OAuth apps may require a paid plan; not confirmed. Personal API keys and API/webhook access are listed as included on Free."
+  },
+  "api": {
+   "protocols": [
+    "GraphQL"
+   ],
+   "breadth": "Unknown",
+   "resources": [
+    "issues",
+    "projects",
+    "comments",
+    "documents",
+    "teams"
+   ],
+   "read_ops": [
+    "finding/searching issues, projects, comments, documents (per official MCP docs)"
+   ],
+   "write_ops": [
+    "creating and updating issues, projects, comments, documents (per official MCP docs)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Pricing page: 'Standard limits' on Free/Basic, 2x standard on Business, 5x standard on Enterprise. Numeric per-hour limits not verified.",
+   "limitations": "Breadth of the full GraphQL schema not directly verified; resource list comes from MCP and webhook docs. Rate limit numbers not established."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://linear.app/docs/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/nimblebraininc/mcp-linear",
+    "https://pypi.org/project/mcp-linear/",
+    "https://www.npmjs.com/package/linear-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Linear developer docs describe the issue/project tracker GraphQL API",
+    "url": "https://linear.app/developers",
+    "quote": "Linear's GraphQL endpoint is: https://api.linear.app/graphql",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "graphql_endpoint",
+    "value": "https://api.linear.app/graphql",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "Linear's GraphQL endpoint is: https://api.linear.app/graphql",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth_personal_api_key",
+    "value": "Personal API keys passed as raw Authorization header",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "you need to pass the API key with header: Authorization: <API_KEY>",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth_oauth_bearer",
+    "value": "OAuth access token passed as Bearer",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "pass it with the header Authorization: Bearer <ACCESS_TOKEN>",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "oauth_access_token_lifetime",
+    "value": "Authorization-code access token valid 24 hours; refresh token expires 30 days after issuance",
+    "url": "https://linear.app/developers/oauth-2-0-authentication",
+    "quote": "The access token is valid for 24 hours and will need to be refreshed when it expires.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "oauth_client_credentials",
+    "value": "Client credentials tokens use app actor, 30 days, no refresh token",
+    "url": "https://linear.app/developers/oauth-2-0-authentication",
+    "quote": "Client-credentials tokens use the app actor, are valid for 30 days, and do not include a refresh token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "oauth_actor",
+    "value": "app actor for agents and service accounts",
+    "url": "https://linear.app/developers/oauth-2-0-authentication",
+    "quote": "Resources are created as the application. Use this for agents and service accounts.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "oauth_admin_scope",
+    "value": "admin scope is user-actor only",
+    "url": "https://linear.app/developers/oauth-2-0-authentication",
+    "quote": "admin: User actor only. Grants access to admin-level endpoints. Request it only when needed.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "oauth_app_creation",
+    "value": "Developers create their own OAuth2 application; no admin approval stated on that page",
+    "url": "https://linear.app/developers/oauth-2-0-authentication",
+    "quote": "Create a new OAuth2 Application and configure the redirect callback URLs to your application.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp_official_endpoint",
+    "value": "Official remote MCP at https://mcp.linear.app/mcp, Streamable HTTP, OAuth 2.1 with DCR",
+    "url": "https://linear.app/docs/mcp",
+    "quote": "Read-write access is provided through https://mcp.linear.app/mcp by default.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp_transport_auth",
+    "value": "Streamable HTTP primary transport; OAuth 2.1 interactive flow; bearer token or API key also accepted",
+    "url": "https://linear.app/docs/mcp",
+    "quote": "The interactive setup flow uses OAuth 2.1 with dynamic client registration.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp_capabilities",
+    "value": "Find, create, update issues, projects, comments, documents",
+    "url": "https://linear.app/docs/mcp",
+    "quote": "The Linear MCP server has tools available for finding, creating, and updating objects in Linear",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks",
+    "value": "Webhooks supported; webhooks can be registered programmatically and automatically for OAuth apps",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "You can also automatically register webhooks for OAuth applications.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdk_webhook_helper",
+    "value": "@linear/sdk/webhooks LinearWebhookClient with signature verification helper",
+    "url": "https://linear.app/developers/sdk-webhooks",
+    "quote": "The SDK provides a helper class to help you start listening to Linear webhook events quickly.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdk_typescript",
+    "value": "Official TypeScript SDK, recommended for GraphQL",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "We recommend using it to interact with the GraphQL API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "free_tier_api",
+    "value": "API and webhook access included on Free tier",
+    "url": "https://linear.app/pricing",
+    "quote": "API and webhook access | Included | Included | Included | Included",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "free_tier_third_party_apps",
+    "value": "Third-party app management not included on Free; included on Basic and higher",
+    "url": "https://linear.app/pricing",
+    "quote": "Third-party app management | Not included | Included | Included | Included",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "rate_limits",
+    "value": "Standard limits on Free/Basic; 2x on Business; 5x on Enterprise",
+    "url": "https://linear.app/pricing",
+    "quote": "API rate limits | Standard limits | Standard limits | 2× standard | 5× standard",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp_free_tier",
+    "value": "MCP access included on all tiers",
+    "url": "https://linear.app/pricing",
+    "quote": "MCP access row marked Included on all four tiers",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Whether creating/managing a third-party OAuth app requires a paid plan given Free lists 'Third-party app management' as not included.",
+   "Whether workspace admin approval is required to install an OAuth app or create client-credentials tokens (not stated in fetched docs).",
+   "Numeric API rate limits (per hour/minute) for personal keys vs OAuth apps; only multiplier tiers were verified.",
+   "Full GraphQL schema breadth (REST availability, mutations coverage) was not directly verified.",
+   "Sandbox or trial environment availability is unknown; no sandbox documented in fetched pages.",
+   "Community MCP servers (nimblebraininc/mcp-linear, PyPI mcp-linear, npm linear-mcp-server) were found only via search; ownership and maintenance not fetched. One search summary said the npm linear-mcp-server (API-key based) is deprecated in favor of the official remote server; not verified on the source page.",
+   "Several quotes were returned by a summarizing fetch tool rather than verified against raw page text; verified fields are left null."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented GraphQL interface."
+  ]
+ },
+ "evidence_support_rate": 0.895,
+ "flags": [],
+ "error": null
+}

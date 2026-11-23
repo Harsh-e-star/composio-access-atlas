@@ -1,0 +1,279 @@
+{
+ "id": 73,
+ "name": "Linear",
+ "category": "Productivity and Project Management",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:23:31Z",
+ "duration_s": 35.7,
+ "cost_usd": 0.0779,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://linear.app/developers",
+   "title": "Linear Developers",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://linear.app/developers/oauth-2-0-authentication",
+   "title": "OAuth 2.0 authentication – Linear Developers",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://linear.app/developers/oauth-actor-authorization",
+   "title": "OAuth actor authorization – Linear Developers",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://linear.app/developers/oauth-app-manifests",
+   "title": "OAuth application manifests – Linear Developers",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://linear.app/developers/file-storage-authentication",
+   "title": "File storage authentication – Linear Developers",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://linear.app/developers/rate-limiting",
+   "title": "Rate limiting – Linear Developers",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://linear.app/developers/graphql",
+   "title": "Getting started – Linear Developers",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://linear.app/developers/agents",
+   "title": "Getting Started – Linear Developers",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://linear.app/developers/sdk",
+   "title": "Getting started – Linear Developers",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://linear.app/developers/webhooks",
+   "title": "Webhooks – Linear Developers",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sandbox-quantum/switch",
+   "title": "sandbox-quantum/switch",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jerhadf/linear-mcp-server",
+   "title": "jerhadf/linear-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/khoj-ai/pipali",
+   "title": "khoj-ai/pipali",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/tacticlaunch/mcp-linear",
+   "title": "tacticlaunch/mcp-linear",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/wrsmith108/linear-claude-skill",
+   "title": "wrsmith108/linear-claude-skill",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/cline/linear-mcp",
+   "title": "cline/linear-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/prime-radiant-inc/streamlinear",
+   "title": "prime-radiant-inc/streamlinear",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/iceener/linear-streamable-mcp-server",
+   "title": "iceener/linear-streamable-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://linear.app",
+   "developer_portal": "https://linear.app/developers",
+   "description": "Linear is a project management tool with a public GraphQL API, TypeScript SDK, webhooks and agent integration support.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are Linear's official developer docs."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "API key"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization code (user or actor=app) with refresh tokens; client credentials grant also supported.",
+   "token_refresh": "Access tokens last 24 hours by default; refresh tokens expire 30 days after issuance and rotate on refresh. Client-credentials grants issue no refresh token.",
+   "scopes_notes": "Scopes like read, write, customer:read/write, initiative:read/write, app:assignable; actor=app cannot request admin scope."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Installing agents (actor=app) in a workspace requires admin permissions; submit to the integration directory to distribute to other workspaces."
+  },
+  "api": {
+   "protocols": [
+    "GraphQL"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Issues",
+    "Comments",
+    "Projects",
+    "Project updates",
+    "Documents",
+    "Initiatives",
+    "Cycles",
+    "Customers",
+    "Customer requests",
+    "Users",
+    "Issue labels",
+    "Attachments",
+    "Webhooks"
+   ],
+   "read_ops": [
+    "GraphQL queries across the schema, with introspection"
+   ],
+   "write_ops": [
+    "GraphQL mutations such as issueCreate, commentCreate, webhookCreate and webhookDelete"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "API key: 2,500 requests/hour and 3,000,000 complexity points/hour; OAuth app: 5,000 requests/hour and 2,000,000 points/hour; unauthenticated: 600 requests/hour. Business plans get 2x and Enterprise 5x. Max single query complexity is 10,000 points.",
+   "limitations": "Admin scope is required to create or read webhooks. Files in Linear storage require authentication."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/jerhadf/linear-mcp-server",
+    "https://github.com/tacticlaunch/mcp-linear",
+    "https://github.com/iceener/linear-streamable-mcp-server",
+    "https://github.com/prime-radiant-inc/streamlinear"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2, API key",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "The Linear API supports personal API keys and OAuth2 authentication.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://linear.app/developers/agents",
+    "quote": "It does not cost anything to develop agents in Linear.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "GraphQL",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "Linear’s public API is built using GraphQL. It’s the same API we use internally for developing our applications.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://linear.app/developers/webhooks",
+    "quote": "“data change webhooks” are currently supported for the following models: Issues Issue attachments - Documentation Issue comments Issue labels Comment reactions Projects Project updates Documents",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "unknown",
+    "url": "https://linear.app/developers",
+    "quote": "Learn about building apps and integrations for Linear using the GraphQL API and TypeScript SDK.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "API key 2,500 req/hour",
+    "url": "https://linear.app/developers/rate-limiting",
+    "quote": "When authenticated using an API key you can make up to 2,500 requests per hour .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "yes",
+    "url": "https://linear.app/developers/sdk",
+    "quote": "The Linear Typescript SDK exposes the Linear GraphQL schema through strongly typed models and operations .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.admin",
+    "value": "Agent installation requires admin",
+    "url": "https://linear.app/developers/agents",
+    "quote": "Because this will be installed with a workspace scope admin permissions are required to complete the installation.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Does Linear publish an official MCP server? None of the sources establish one. The GitHub results are community repos, and cline/linear-mcp is described as private.",
+   "Is there a sandbox environment?"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over GraphQL",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented GraphQL interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

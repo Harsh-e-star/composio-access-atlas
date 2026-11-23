@@ -1,0 +1,267 @@
+{
+ "id": 68,
+ "name": "MongoDB Atlas",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:22:59Z",
+ "duration_s": 63.9,
+ "cost_usd": 0.0692,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.mongodb.com/docs/atlas/api/",
+   "title": "Atlas Programmatic Access - Atlas - MongoDB Docs",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://www.mongodb.com/",
+   "title": "MongoDB | The Intelligent Data Platform for the AI Era | MongoDB",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://www.mongodb.com/docs/",
+   "title": "Welcome to the MongoDB Docs - MongoDB Documentation - MongoDB Docs",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://www.mongodb.com/docs/api",
+   "title": "MongoDB REST APIs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://www.mongodb.com/docs/voyageai/api-reference/overview/",
+   "title": "Embedding and Reranking API Overview - Voyage AI by MongoDB - MongoDB Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://www.mongodb.com/docs/atlas/reference/api-resources-spec/v2/",
+   "title": "Introduction | Atlas Admin API v2 documentation",
+   "rendered": true
+  },
+  {
+   "id": "S7",
+   "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2",
+   "title": "Atlas Admin API v2 documentation",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://www.mongodb.com/pricing",
+   "title": "Pricing | MongoDB",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://www.mongodb.com/docs/voyageai/management/api-keys/",
+   "title": "Manage Voyage AI Model API Keys - Voyage AI by MongoDB - MongoDB Docs",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/authentication",
+   "title": "Authentication | Atlas Admin API v2 documentation",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/group/endpoint-ai-model-api-keys",
+   "title": "AI Model API Keys | Atlas Admin API v2 documentation",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/group/endpoint-federated-authentication",
+   "title": "Federated Authentication | Atlas Admin API v2 documentation",
+   "rendered": false
+  },
+  {
+   "id": "S13",
+   "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/group/endpoint-programmatic-api-keys",
+   "title": "Programmatic API Keys | Atlas Admin API v2 documentation",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+   "title": "mongodb-js/mongodb-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mongodb-developer/mcp-mongodb-atlas",
+   "title": "mongodb-developer/mcp-mongodb-atlas",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/montumodi/mongodb-atlas-mcp-server",
+   "title": "montumodi/mongodb-atlas-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Mancasvel/Mongodb-cursor-analysis",
+   "title": "Mancasvel/Mongodb-cursor-analysis",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Abhijit85/claim-intelligence-aws-quick",
+   "title": "Abhijit85/claim-intelligence-aws-quick",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/patw/avs-docs-mcp",
+   "title": "patw/avs-docs-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mongodb-industry-solutions/leafy-bank-capitalmarkets-mcp",
+   "title": "mongodb-industry-solutions/leafy-bank-capitalmarkets-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/vaibhav4046/PitchCraft-Agent",
+   "title": "vaibhav4046/PitchCraft-Agent",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.mongodb.com/",
+   "developer_portal": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2",
+   "description": "MongoDB Atlas is MongoDB's fully managed multi-cloud data platform; the Atlas Administration API lets developers manage Atlas components such as projects, users and clusters.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe MongoDB Atlas and its Administration API."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Other"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "OAuth 2.0 Client Credentials flow with Service Accounts; token endpoint POST https://cloud.mongodb.com/api/oauth/token",
+   "token_refresh": "Access token is reusable and valid for 1 hour (3600 seconds); request a new one via client credentials.",
+   "scopes_notes": "Legacy HTTP Digest-based programmatic API keys also supported; service accounts recommended. Optional IP access list applies to API calls."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Organizations may require an IP access list for Admin API calls."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "organizations",
+    "projects",
+    "users",
+    "clusters",
+    "programmatic API keys",
+    "federated authentication",
+    "AI model API keys"
+   ],
+   "read_ops": [
+    "list organizations"
+   ],
+   "write_ops": [
+    "add, edit, delete administrative objects"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Admin API manages Atlas administrative objects, not database data. The Data API reached end-of-life on Sept 30, 2025."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/mongodb-js/mongodb-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/montumodi/mongodb-atlas-mcp-server",
+    "https://github.com/mongodb-developer/mcp-mongodb-atlas"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2 service accounts and HTTP Digest API keys",
+    "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2",
+    "quote": "The Atlas Administration API supports OAuth2 Service Accounts and HTTP Digest-based API keys.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://www.mongodb.com/pricing",
+    "quote": "Free $0/hour Explore Atlas Free forever For learning and exploring MongoDB in a cloud environment.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://www.mongodb.com/docs/api",
+    "quote": "The MongoDB Atlas Administration API allows developers to manage all components in MongoDB Atlas.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://www.mongodb.com/docs/atlas/api/",
+    "quote": "Atlas Administration API resources add, edit, or delete administrative objects within Atlas",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "quote": "A Model Context Protocol server to connect to MongoDB databases and MongoDB Atlas Clusters.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Whether mongodb-js is the vendor's official GitHub org is judged from the owner name only; the sources don't confirm it.",
+   "Rate limits for the Admin API are not in the sources.",
+   "Webhooks are not covered in the sources."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

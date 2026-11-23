@@ -1,0 +1,291 @@
+{
+ "id": 72,
+ "name": "Airtable",
+ "category": "Productivity and Project Management",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:23:55Z",
+ "duration_s": 61.0,
+ "cost_usd": 0.0679,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://airtable.com/developers/agents",
+   "title": "Overview - Airtable Developers",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://www.airtable.com/",
+   "title": "Airtable: Build Enterprise-ready AI Workflows, Apps & Agents | Airtable",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://airtable.com/developers/web",
+   "title": "Airtable Web API",
+   "rendered": true
+  },
+  {
+   "id": "S4",
+   "url": "https://airtable.com/developers/web/api/oauth-reference",
+   "title": "OAuth reference - Airtable Web API",
+   "rendered": true
+  },
+  {
+   "id": "S5",
+   "url": "https://airtable.com/developers/web/api/authentication",
+   "title": "Authentication - Airtable Web API",
+   "rendered": true
+  },
+  {
+   "id": "S6",
+   "url": "https://airtable.com/developers/agents/mcp/getting-started",
+   "title": "MCP server overview - Airtable Developers",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://airtable.com/developers/web/api/rate-limits",
+   "title": "Rate limits - Airtable Web API",
+   "rendered": true
+  },
+  {
+   "id": "S8",
+   "url": "https://airtable.com/developers/agents/mcp/tools",
+   "title": "Tools reference - Airtable Developers",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://airtable.com/developers/agents/mcp/claude",
+   "title": "Claude - Airtable Developers",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://airtable.com/developers/web/api/billing-plans",
+   "title": "Billing plans - Airtable Web API",
+   "rendered": true
+  },
+  {
+   "id": "S11",
+   "url": "https://www.airtable.com/platform/mcp",
+   "title": "AI agent software: Don’t just ask AI. Deploy it. | Airtable",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://airtable.com/pricing",
+   "title": "Airtable Pricing | Compare Plans, Features & Costs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/julien040/anyquery",
+   "title": "julien040/anyquery",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/domdomegg/airtable-mcp-server",
+   "title": "domdomegg/airtable-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/rashidazarang/airtable-mcp",
+   "title": "rashidazarang/airtable-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/felores/airtable-mcp",
+   "title": "felores/airtable-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Airtable/airtable-mcp-cli",
+   "title": "Airtable/airtable-mcp-cli",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Automations-Project/VSCode-Airtable-Formula",
+   "title": "Automations-Project/VSCode-Airtable-Formula",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/rashidazarang/airtable-ai-agent",
+   "title": "rashidazarang/airtable-ai-agent",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/MrAliHasan/mcp-maker",
+   "title": "MrAliHasan/mcp-maker",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.airtable.com/",
+   "developer_portal": "https://airtable.com/developers",
+   "description": "Airtable is a no-code platform for building AI-powered workflows, apps and agents on a relational data layer, with a REST Web API and a hosted MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are from airtable.com and describe Airtable's developer platform, Web API and MCP server."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization code flow with PKCE (code_challenge/code_verifier) and refresh_token grant. The MCP server also supports Dynamic Client Registration.",
+   "token_refresh": "Access tokens expire after 60 minutes. Refresh tokens are valid for 60 days and are rotated on each use.",
+   "scopes_notes": "Scopes such as data.records:read/write, schema.bases:read/write, data.recordComments:read/write, workspacesAndBases:read. The token must also be granted access to specific bases/workspaces."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "The Public API limit is enforced on the Free plan. Organizations may require admins to approve OAuth apps or block MCP/API access. The Enterprise API requires an Enterprise Scale plan."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "WebSocket"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "records",
+    "bases",
+    "tables",
+    "fields",
+    "webhooks",
+    "comments"
+   ],
+   "read_ops": [
+    "List records",
+    "List bases",
+    "Read schema"
+   ],
+   "write_ops": [
+    "Create records",
+    "Update records",
+    "Delete records",
+    "Create and update fields",
+    "Create and update tables",
+    "Create bases"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "5 requests per second per base, and 50 requests per second for all traffic using personal access tokens from a user or service account. Exceeding either returns 429, and you must wait 30 seconds.",
+   "limitations": "Free plan has no access to the Views endpoints. Enterprise endpoints require an Enterprise Scale plan."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.airtable.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/domdomegg/airtable-mcp-server",
+    "https://github.com/rashidazarang/airtable-mcp",
+    "https://github.com/felores/airtable-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2, Bearer/PAT",
+    "url": "https://airtable.com/developers/web/api/authentication",
+    "quote": "We currently support using personal access tokens and OAuth access tokens during the authentication process.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://airtable.com/developers/web/api/billing-plans",
+    "quote": "Free Access to all \"Base Data\" endpoints except \"Views\" Public API limit is enforced.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://airtable.com/developers/web",
+    "quote": "Use the Airtable Web API to read, write, and sync your data with any external system.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://airtable.com/developers/web",
+    "quote": "List, create, update, and delete records across your bases.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://airtable.com/developers/agents/mcp/tools",
+    "quote": "Tools exposed by Airtable's remote MCP server at https://mcp.airtable.com/mcp .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "5 rps per base; 50 rps per token",
+    "url": "https://airtable.com/developers/web/api/rate-limits",
+    "quote": "The API is limited to 5 requests per second per base.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://airtable.com/developers/web",
+    "quote": "Use webhooks to get notified when data in your base changes.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "60 min access, 60 day refresh",
+    "url": "https://airtable.com/developers/web/api/oauth-reference",
+    "quote": "Access tokens expire after 60 minutes.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Is there a sandbox environment? The sources don't say.",
+   "Is there an app review requirement for publishing OAuth integrations? The sources don't say."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST/WebSocket interface."
+  ]
+ },
+ "evidence_support_rate": 0.125,
+ "flags": [],
+ "error": null
+}

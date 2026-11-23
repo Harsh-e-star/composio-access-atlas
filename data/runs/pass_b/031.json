@@ -1,0 +1,226 @@
+{
+ "id": 31,
+ "name": "Google Ads",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:31:42Z",
+ "duration_s": 67.5,
+ "cost_usd": 0.0578,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://ads.google.com",
+   "developer_portal": "https://developers.google.com/google-ads/api/docs/start",
+   "description": "Google Ads API: Google's advertising platform API for managing Google Ads accounts, campaigns and reporting, reached via the Google Ads API (developers.google.com/google-ads/api) and a Google-owned MCP server (github.com/googleads/google-ads-mcp).",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources clearly describe the Google Ads API product. The assignment hint developers.google.com/google-ads matches. Not to be confused with the Google Ads web UI or the older AdWords API, which the docs describe as the predecessor."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Service account/JWT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Standard Google OAuth 2.0 user consent (client ID and secret) for signed-in users; service accounts use a JSON key file. Exact grant type not confirmed on the fetched page.",
+   "token_refresh": "unknown",
+   "scopes_notes": "Scope URL not confirmed in fetched sources. Service accounts cannot use the Email only access level and by default cannot be granted administrator access."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Test access is limited to test accounts at 15,000 operations per day. Basic access (production accounts, same 15,000 ops/day cap) requires a Basic access application form and completed brand verification of the Google Cloud project. Standard access (unlimited operations) requires a separate application that includes a manual audit. Access levels are now managed per Google Cloud project, not per developer token."
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [
+    "GAQL search queries of account data (via the official MCP server's search_search tool)",
+    "List accessible customer accounts (via the official MCP server's customers_list_accessible_customers tool)",
+    "Get resource metadata (via the official MCP server's metadata_get_resource_metadata tool)"
+   ],
+   "write_ops": [
+    "Standalone asset creation (via the official MCP server's assets_create_asset tool)",
+    "Video asset upload (via the official MCP server's assets_upload_video_asset tool)",
+    "Label management (via the official MCP server's labels_manage_labels and labels_manage_label_associations tools)"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "Test and Basic access: 15,000 operations per day. Standard access: unlimited operations per day.",
+   "limitations": "Developer tokens were sunset on September 9, 2026 and are now optional and ignored by the API servers. Access levels are per Google Cloud project. Production use requires brand verification and an application. Test access covers test accounts only (15,000 operations/day). Protocols, webhooks and full resource breadth were not verified from fetched pages."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/googleads/google-ads-mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/locomotive-agency/google-ads-mcp",
+    "https://docsearch.algolia.com/mcp/docs/repo/cohnen/mcp-google-ads"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Google Ads API uses OAuth 2.0 and is a Google API",
+    "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+    "quote": "Just like other Google APIs, Google Ads API uses the OAuth 2.0 protocol for authentication and authorization.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "Test access granted on enabling the API (15,000 ops/day on test accounts)",
+    "url": "https://developers.google.com/google-ads/api/docs/first-call/dev-token",
+    "quote": "enabling the API grants Test access (15,000 operations per day on test accounts)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.test_scope",
+    "value": "Test access only reaches test accounts",
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+    "quote": "This means that the project can only make Google Ads API requests against test accounts.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.basic_requirement",
+    "value": "Basic access requires brand verification",
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+    "quote": "Completing brand verification for your Google Cloud project is a prerequisite to apply for Basic access level.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.standard_requirement",
+    "value": "Standard access requires a manual audit",
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+    "quote": "The Standard access application involves a detailed manual audit of your application.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.project_scoped",
+    "value": "Access levels are managed per Google Cloud project",
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+    "quote": "API access levels are now managed per Google Cloud project.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.developer_token_sunset",
+    "value": "Developer tokens sunset on September 9, 2026; optional and ignored",
+    "url": "https://developers.google.com/google-ads/api/docs/first-call/dev-token",
+    "quote": "You can continue sending developer tokens in your API call headers, but this is optional and ignored by the API servers.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.no_manager_account_needed",
+    "value": "No developer token or manager account needed to get started",
+    "url": "https://developers.google.com/google-ads/api/docs/first-call/dev-token",
+    "quote": "You no longer need a developer token or a Google Ads manager account to get started.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.service_account",
+    "value": "Service accounts are supported; JSON key file",
+    "url": "https://developers.google.com/google-ads/api/docs/oauth/service-accounts",
+    "quote": "Download the service account key in JSON format and note the service account ID and email.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.service_account_limits",
+    "value": "Service accounts cannot get admin access by default; no Email-only access",
+    "url": "https://developers.google.com/google-ads/api/docs/oauth/service-accounts",
+    "quote": "By default, you cannot grant administrator access to a service account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks",
+    "value": "Official client libraries for Java, .NET, PHP, Python, Ruby, Perl",
+    "url": "https://developers.google.com/google-ads/api/docs/client-libs",
+    "quote": "The following table lists the official client libraries",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks.community",
+    "value": "Community Node.js and Go libraries are not maintained by Google",
+    "url": "https://developers.google.com/google-ads/api/docs/client-libs",
+    "quote": "We don't test, contribute to, or maintain these libraries; use them at your own risk.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Google-owned open-source MCP server in the googleads org",
+    "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+    "quote": "The Google Ads MCP server provides a standardized bridge to the Google Ads API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.repo_owner",
+    "value": "Repository owned by the googleads GitHub organization",
+    "url": "https://github.com/googleads/google-ads-mcp",
+    "quote": "An [MCP (Model Context Protocol)] server that enables LLMs and AI agents to query and manage Google Ads accounts.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "Local stdio uses Application Default Credentials; remote needs OAuth web client",
+    "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+    "quote": "Remote streamable-http deployments instead require an OAuth 2.0 Web application Client ID and Client secret",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.mutate_scope",
+    "value": "Only asset creation, video upload, label management can write; no campaign changes",
+    "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+    "quote": "It also cannot create, modify, pause, or enable campaigns, ad groups, ads, budgets, or bids.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Protocols (REST and gRPC) were not verified from a fetched page. A search result listed a REST interface overview at https://developers.google.com/google-ads/api/rest/overview but I did not fetch it.",
+   "Webhooks or push notifications: no evidence found. Not searched successfully.",
+   "Full resource breadth of the core API (campaigns, ad groups, keywords, etc.) was not verified. Only MCP-exposed operations were confirmed.",
+   "OAuth grant type and exact scope URL were not confirmed. The fetched OAuth overview page did not state them.",
+   "Refresh token behavior was not confirmed.",
+   "Whether the official MCP README and the developer guide say the server is experimental or preview was unclear. Neither page labels it as such. One search snippet claimed it was read-only at launch, which the current README contradicts.",
+   "Whether the developer token still exists as a required credential for any path (the sunset page says it is optional, not removed).",
+   "Community MCP server ownership and maintenance status were not verified. The listed community URLs come from search results only."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "review_required",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

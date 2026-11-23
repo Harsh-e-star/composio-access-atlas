@@ -1,0 +1,219 @@
+{
+ "id": 57,
+ "name": "Bright Data",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:34:16Z",
+ "duration_s": 73.9,
+ "cost_usd": 0.0628,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://brightdata.com",
+   "developer_portal": "https://docs.brightdata.com",
+   "description": "Bright Data is a web data platform (proxy networks, Web Unlocker, Scraping Browser, SERP API, Web Scraper API/datasets) run by Bright Data Ltd. The docs, GitHub org, and MCP server all describe this product.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs at docs.brightdata.com, MCP repo under github.com/brightdata owned by Bright Data Ltd (MIT footer), and the product name matches the assignment hint brightdata.com. The vendor's own pages confirm identity."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "Basic",
+    "OAuth2"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Remote MCP server (mcp.brightdata.com) uses OAuth 2.1 authorization code flow with PKCE (S256), a resource parameter, dynamic client registration (RFC 7591), and a single scope 'mcp'. OAuth is for the MCP server only; the REST API uses API tokens.",
+   "token_refresh": "unknown",
+   "scopes_notes": "Single 'mcp' scope for the MCP OAuth flow. No scope model is documented for the REST API token."
+  },
+  "access": {
+   "tier": "admin_approval",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "yes",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "unknown"
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "Proxy zones and zone passwords",
+    "Web Unlocker / Web Unlocker API",
+    "Scraping Browser",
+    "SERP",
+    "Web Scraper API scrapers and snapshots",
+    "Datasets",
+    "API keys (account settings)",
+    "Agent API keys"
+   ],
+   "read_ops": [
+    "Retrieve Web Scraper API snapshot results by snapshot ID (available 30 days after job completes)",
+    "Check scraper job progress",
+    "List and inspect scrapers (MCP tools search_scrapers, get_scraper_details)",
+    "List account zone passwords (Account Management API)"
+   ],
+   "write_ops": [
+    "Trigger scraper runs",
+    "Deliver existing snapshot to cloud storage (POST /datasets/v3/deliver/{snapshot_id})",
+    "Create additional API keys (admin only, in account settings)",
+    "Manage zones (Account Management API, not fully verified)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "unknown",
+   "limitations": "Docs describe proxy access, Web Unlocker, Scraping Browser, SERP, Scrapers, Functions and Marketplace at a high level; the API reference fetch did not confirm full CRUD coverage. Rate limits not stated in fetched content. Sandbox/trial not stated. Only admins can generate API keys; each user can generate only one key."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/brightdata/brightdata-mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://elements.heroku.com/mcp-servers/dsouza-anush/brightdata-mcp-heroku",
+    "https://mcpservers.org/servers/brightdata/brightdata-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Bright Data is a web data platform; docs cover proxy networks, Web Unlocker, Scraping Browser, SERP, Web Scraper API.",
+    "url": "https://docs.brightdata.com/api-reference/introduction",
+    "quote": "All proxy networks (Datacenter, ISP, Residential, and Mobile)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary_method",
+    "value": "Two primary authentication methods: API Access (API key/token) and Native Access (proxy username and password).",
+    "url": "https://docs.brightdata.com/api-reference/authentication",
+    "quote": "Bright Data provides two primary methods for authentication:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.bearer_header",
+    "value": "API token is sent in the Authorization header using the Bearer scheme and is required for every API request.",
+    "url": "https://docs.brightdata.com/api-reference/authentication",
+    "quote": "This <token> is your API key, which is required for every API request.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.key_creation",
+    "value": "A default API key is created at account creation; more keys are created in Account settings via Add API key.",
+    "url": "https://docs.brightdata.com/api-reference/authentication",
+    "quote": "We create a default key for you upon account creation automatically.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.admin_required",
+    "value": "Only admins can generate API keys; each user can generate only one API key.",
+    "url": "https://docs.brightdata.com/api-reference/authentication",
+    "quote": "only admins can generate API keys.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.one_time_display",
+    "value": "API key is shown only once after generation.",
+    "url": "https://docs.brightdata.com/api-reference/authentication",
+    "quote": "Once generated, your API key will only be shown once.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_tier",
+    "value": "Every new account includes 5,000 free requests per month for the MCP server; team free tier is shared across users.",
+    "url": "https://docs.brightdata.com/mcp-server/overview",
+    "quote": "Every new account includes 5,000 free requests per month.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_repo",
+    "value": "Official MCP server repo github.com/brightdata/brightdata-mcp, owned by the brightdata org, MIT licensed.",
+    "url": "https://github.com/brightdata/brightdata-mcp",
+    "quote": "A powerful Model Context Protocol (MCP) server that provides an all-in-one solution for public web access.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.api_token_required",
+    "value": "MCP server requires a Bright Data API token (API_TOKEN env var).",
+    "url": "https://github.com/brightdata/brightdata-mcp",
+    "quote": "Your Bright Data API token (required)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.remote_oauth",
+    "value": "Remote MCP server at mcp.brightdata.com is an OAuth 2.1 protected resource; API key method still works.",
+    "url": "https://docs.brightdata.com/products/mcp-server/remote/oauth",
+    "quote": "The Bright Data MCP server at https://mcp.brightdata.com is an OAuth 2.1 protected resource.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.tool_count",
+    "value": "Official MCP server exposes 31 tools across search/scraping, Web Scraper API, browser automation, GEO, datasets and assistant.",
+    "url": "https://github.com/brightdata/brightdata-mcp",
+    "quote": "Tools (31 total)",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "sdks",
+    "value": "Official Python SDK (brightdata-sdk, GitHub brightdata/sdk-python) and JavaScript SDK (@brightdata/sdk) plus a Bright Data CLI; all use the same API key.",
+    "url": "https://docs.brightdata.com/api-reference/introduction",
+    "quote": "The Bright Data CLI, Python SDK and JavaScript SDK use the same API key.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks",
+    "value": "Web Scraper API can POST snapshot results to a per-request endpoint on job completion; retries on failure; 14 source IPs for allowlisting.",
+    "url": "https://docs.brightdata.com/products/scrapers/scrapers-library/data-delivery",
+    "quote": "Bright Data sends a POST request to your endpoint with the scraped data once the job completes.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Whether a trial or sandbox exists for the REST API beyond the 5,000 free requests per month; not established.",
+   "Rate limits for the REST API and MCP server are not stated in fetched content.",
+   "Versions conflict: MCP registry entry shows 4.3.0 while npm @brightdata/mcp shows 1.7.0 in search summaries; not reconciled.",
+   "The Python SDK env var name is inconsistent across sources (BRIGHTDATA_API_TOKEN vs BRIGHTDATA_API_KEY); verify in the SDK code.",
+   "Official JavaScript SDK GitHub repo URL not confirmed.",
+   "Whether free-tier request quota (5,000/mo) is 'requests' or 'credits' is inconsistent across pages.",
+   "Full API reference breadth (CRUD coverage for zones, datasets, SERP) was not fully fetched; breadth rated Medium.",
+   "The docs.brightdata.com/general/account/api-token page returned 404 on direct fetch; admin rule relies on the authentication page.",
+   "Whether admin_approval should be the tier: new accounts get an automatic default key, so the practical gate for a solo developer may be lower than admin approval implies.",
+   "Remote MCP OAuth token refresh behavior is not documented in fetched content."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Workspace admin approval",
+  "rationale": [
+   "A workspace admin must approve/install or issue credentials."
+  ]
+ },
+ "evidence_support_rate": 0.846,
+ "flags": [],
+ "error": null
+}

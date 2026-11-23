@@ -1,0 +1,160 @@
+{
+ "id": 94,
+ "name": "Consensus",
+ "category": "AI, Research and Media-native",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:37:53Z",
+ "duration_s": 71.9,
+ "cost_usd": 0.045,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://consensus.app",
+   "developer_portal": "https://docs.consensus.app",
+   "description": "Consensus (consensus.app): an AI-powered scientific research search engine over peer-reviewed papers, with a REST search API, a Threads research-agent API, and a hosted MCP server. Not the same company as goconsensus.com (a sales-demo platform), which surfaced in search results and was excluded.",
+   "identity_confirmed": "yes",
+   "identity_notes": "consensus.app/llms.txt describes the product as a scientific-sources tool for agents via REST API or MCP server. Search results about goconsensus.com (app.goconsensus.com, Integrations/Access Credentials) describe a different product and were rejected."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "API key"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "MCP server uses OAuth 2.1 with dynamic client registration (per consensus.app/llms.txt). Browser sign-in on first MCP connection per search snippets.",
+   "token_refresh": "unknown",
+   "scopes_notes": "unknown"
+  },
+  "access": {
+   "tier": "partner_or_sales",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "yes",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Pricing page describes API as optional, available upon approval, and rate limited for Team; Enterprise has custom pricing and limits (contact sales@consensus.app). No public self-serve free API tier was found in the sources read. MCP access tier for Free/Pro not confirmed because the MCP docs page returned HTTP 403."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "none"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "search (papers)",
+    "threads (Consensus Research Agent answers with citations)"
+   ],
+   "read_ops": [
+    "GET /v1/search",
+    "get_thread",
+    "find_threads",
+    "get_full_text (MCP)"
+   ],
+   "write_ops": [
+    "POST /v1/threads",
+    "create_thread (MCP)",
+    "add_to_thread (MCP)"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "Plan-based quotas; exact API rate limits not established (pricing page says 'rate limited'). Results-per-search caps reported by a summarizer: Pro and Team 300, Deep 750, Enterprise 1000.",
+   "limitations": "Only search and thread endpoints seen; OpenAPI spec at docs.consensus.app/openapi.json returned 403 and could not be read. Protocols list 'REST' for the API and MCP (Streamable HTTP) is a hosted remote server, not a REST protocol; 'none' is a placeholder and should be ignored. Full endpoint list unverified."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.consensus.app/mcp",
+   "community": "unknown",
+   "community_urls": [
+    "https://smithery.ai/server/consensus",
+    "https://composio.dev/toolkits/consensus"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Consensus is a scientific research search product; llms.txt says agents can use its REST API or MCP server for citable scientific sources.",
+    "url": "https://consensus.app/llms.txt",
+    "quote": "Power agent workflows that need citable scientific sources via the REST API or MCP server.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp_auth",
+    "value": "Official MCP server uses OAuth 2.1 with dynamic client registration.",
+    "url": "https://consensus.app/llms.txt",
+    "quote": "first-class MCP server with OAuth 2.1 and dynamic client registration.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api_paid_plan",
+    "value": "API access is included on paid plans; Deep has 5x Pro usage.",
+    "url": "https://consensus.app/home/api/",
+    "quote": "Included on every paid plan, and Deep includes 5x the usage of Pro.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api_access_gate",
+    "value": "Team API access is optional and available upon approval, rate limited.",
+    "url": "https://consensus.app/.well-known/pricing.md",
+    "quote": "Optional access to the Consensus Search API (available upon approval, rate limited)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api_endpoints",
+    "value": "The API offers Threads (Research Agent) access alongside search.",
+    "url": "https://consensus.app/home/api/",
+    "quote": "Threads brings the Consensus Research Agent to the API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api_key",
+    "value": "Consensus API keys are created via a 'Create API key' button linking to /api-mcp/; that page returned 403.",
+    "url": "https://consensus.app/home/api/",
+    "quote": "Create API key",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp_endpoint",
+    "value": "Hosted MCP endpoint at mcp.consensus.app/mcp using Streamable HTTP.",
+    "url": "https://mcpservers.org/remote-mcp-servers/consensus",
+    "quote": "claude mcp add consensus --transport http https://mcp.consensus.app/mcp",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Fetch of docs.consensus.app/docs/mcp.md, docs.consensus.app/consensus-mcp.md, docs.consensus.app/api-quickstart-search.md, docs.consensus.app/openapi.json, consensus.app/api-mcp/, and consensus.app/.well-known/pricing.md (some) returned HTTP 403; API auth header format, full endpoint list, and rate limits are unverified.",
+   "Whether a free/self-serve API key exists for Free or Pro accounts, or whether approval by Consensus is required for every API key.",
+   "Whether MCP access is available on Free/Pro plans or requires a paid plan.",
+   "SDK availability (official Python/JS libraries) and webhooks: not found.",
+   "Official GitHub repos for an MCP server or SDK: none found in searches; the MCP server appears hosted only.",
+   "Token refresh and OAuth scopes for the MCP server: not confirmed.",
+   "Community MCP servers: only aggregator/wrapper listings (Smithery, Composio, mcpservers.org) were found; no community GitHub repos were identified."
+  ]
+ },
+ "assessment": {
+  "verdict": "GATED",
+  "group": "OUTREACH REQUIRED",
+  "technical_feasibility": "low",
+  "credential_accessibility": "gated",
+  "production_readiness": "restricted",
+  "security_risk": "standard",
+  "commercial_dependency": "yes",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Partnership / vendor approval / sales contact",
+  "rationale": [
+   "Credentials require partnership, vendor approval or sales."
+  ]
+ },
+ "evidence_support_rate": 0.857,
+ "flags": [],
+ "error": null
+}

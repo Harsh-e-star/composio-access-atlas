@@ -1,0 +1,155 @@
+{
+ "id": 50,
+ "name": "fanbasis",
+ "category": "Ecommerce",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:33:29Z",
+ "duration_s": 76.1,
+ "cost_usd": 0.0816,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://fanbasis.com",
+   "developer_portal": null,
+   "description": "FanBasis (fanbasis.com) is described by third parties as a creator economy platform for monetizing content, selling digital products via checkout, and managing subscriptions and members. The official site (403) and the GitHub repo FanBasis/fbnewapi (404) could not be read, so official-source details are unverified.",
+   "identity_confirmed": "unknown",
+   "identity_notes": "Only third-party sources describe the product. Name collisions exist: Fanvue (api.fanvue.com), Openstage Fanbase API (openstage.live), and the Fanbase identity platform (fb-apidocs.pages.dev) are different products."
+  },
+  "auth": {
+   "methods": [
+    "API key"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "Unofficial mirror/search snippet says API keys carry scopes and a 'webhooks' scope covers webhook-subscription routes. Not verified on an official page."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Unknown",
+   "resources": [
+    "products",
+    "checkout",
+    "webhook-subscriptions"
+   ],
+   "read_ops": [
+    "List products (unofficial mirror example)",
+    "List webhook subscriptions"
+   ],
+   "write_ops": [
+    "Create webhook subscription with webhook_url",
+    "Delete webhook subscription by ID",
+    "Send test event to a subscription"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Official docs (docs.fanbasis.com, FanBasis/fbnewapi) were not readable. Endpoint details come only from unofficial mirrors and search snippets. Rate limits, key issuance, and sandbox details are not established."
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "unknown",
+   "community_urls": [
+    "https://zapier.com/mcp/fanbasis"
+   ]
+  },
+  "claims": [
+   {
+    "field": "product_description",
+    "value": "FanBasis is a comprehensive creator economy platform trusted by content creators, influencers, coaches",
+    "url": "https://emergent.sh/integrations/fanbasis",
+    "quote": "FanBasis is a comprehensive creator economy platform trusted by content creators, influencers, coaches,",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api_credentials",
+    "value": "Integration uses FanBasis API credentials or a Checkout SDK",
+    "url": "https://emergent.sh/integrations/fanbasis",
+    "quote": "or API credentials for direct integration using the FanBasis Checkout SDK",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks",
+    "value": "Webhook events available via API credentials or Zapier triggers",
+    "url": "https://emergent.sh/integrations/fanbasis",
+    "quote": "Provide your FanBasis API credentials or connect through Zapier triggers for webhook events.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdk",
+    "value": "@fanbasis/checkout-sdk npm package wraps Checkout REST API with sandbox/production environment option",
+    "url": "https://www.npmjs.com/package/@fanbasis/checkout-sdk?activeTab=dependencies",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "api_key_header",
+    "value": "Requests to https://www.fanbasis.com/public-api/... carry API key in x-api-key header",
+    "url": "https://raw.githubusercontent.com/otniel-bit/fbnewapi/main/api-docs.md",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "official_docs_repo",
+    "value": "GitHub FanBasis/fbnewapi described as official FanBasis API docs with webhook section and 13 event types",
+    "url": "https://github.com/FanBasis/fbnewapi",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp_zapier",
+    "value": "Hosted FanBasis MCP is offered by Zapier, not FanBasis",
+    "url": "https://zapier.com/mcp/fanbasis",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Is fanbasis.com's official developer documentation (docs.fanbasis.com or similar) reachable, and does it confirm the x-api-key header?",
+   "How do developers obtain API keys: self-serve dashboard, paid plan, or admin/partner approval?",
+   "Is there a sandbox or test mode, and what are the rate limits?",
+   "Does the official FanBasis/fbnewapi GitHub repo exist and is it owned by FanBasis? The fetch returned 404.",
+   "Full webhook event list and signature verification method are unconfirmed.",
+   "Is there any official FanBasis-published MCP server? None found; only a Zapier-hosted one."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "high",
+  "commercial_dependency": "unknown",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 0.429,
+ "flags": [],
+ "error": null
+}

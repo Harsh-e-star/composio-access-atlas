@@ -1,0 +1,61 @@
+{
+ "id": 44,
+ "name": "Salesforce Commerce Cloud",
+ "category": "Ecommerce",
+ "pass_name": "a",
+ "model": "",
+ "researched_at": "2026-11-23T14:49:32Z",
+ "duration_s": 19.7,
+ "cost_usd": 0.0247,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": null,
+   "developer_portal": null,
+   "description": "",
+   "identity_confirmed": "unknown",
+   "identity_notes": ""
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [],
+  "open_questions": []
+ },
+ "assessment": null,
+ "evidence_support_rate": null,
+ "flags": [],
+ "error": "RuntimeError: no documentation pages could be fetched"
+}

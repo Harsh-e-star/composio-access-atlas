@@ -1,0 +1,253 @@
+{
+ "id": 33,
+ "name": "LinkedIn Ads",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:31:52Z",
+ "duration_s": 78.0,
+ "cost_usd": 0.0763,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://learn.microsoft.com/linkedin/marketing",
+   "developer_portal": "https://www.linkedin.com/developers/apps",
+   "description": "LinkedIn Advertising API (Marketing Developer Platform) for managing LinkedIn ad accounts, campaigns, creatives and reporting, documented on Microsoft Learn under linkedin/marketing.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Microsoft Learn LinkedIn Marketing docs and the Developer Portal product catalog describe the Advertising API for Campaign Manager ad accounts. Task assignment hint pointed to the same docs."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "3-legged OAuth 2.0 Authorization Code flow via https://www.linkedin.com/oauth/v2/authorization and https://www.linkedin.com/oauth/v2/accessToken; requires Client ID and Client Secret from the Developer Portal Auth tab.",
+   "token_refresh": "Access tokens have a 60-day lifespan; LinkedIn states it does not generate long-lived access tokens. Programmatic refresh tokens are limited to a small set of partners; otherwise users re-authorize, which is typically seamless if still logged in.",
+   "scopes_notes": "Marketing APIs require rw_ads; other ads scopes include r_ads, r_ads_reporting, r_organization_admin, rw_organization_admin, w_member_social, r_member_boost, rw_member_boost. All scopes are member permissions (3-legged). Scopes are granted only after the matching product is approved."
+  },
+  "access": {
+   "tier": "partner_or_sales",
+   "free_credentials": "no",
+   "trial_available": "no",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "yes",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "no",
+   "production_restrictions": "Access is tiered by ad-account count: Development allows read on accounts you administer, create 1 test ad account, and edit up to 5 ad accounts; Standard requires a support ticket and LinkedIn may decline upgrades at its discretion. All API calls at all tiers hit production data, so there is no sandbox. Ad accounts must be mapped to the app in the Developer Portal at Development tier, and the authenticating member needs an ad account role (e.g., ACCOUNT_MANAGER or CAMPAIGN_MANAGER) for rw_ads."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "adAccounts",
+    "adCampaignGroups",
+    "adCampaigns",
+    "creatives",
+    "adTargetingFacets",
+    "adTargetingEntities",
+    "audienceCounts",
+    "adBudgetPricing",
+    "Ad Analytics"
+   ],
+   "read_ops": [
+    "List/read ad accounts and account user roles",
+    "Read campaign groups, campaigns and creatives",
+    "Ad Analytics reporting (account-level and per-campaign)",
+    "Ad targeting facets and entities",
+    "Audience counts",
+    "Ad budget pricing"
+   ],
+   "write_ops": [
+    "Create ad accounts (Standard tier unlimited; Development 1 test account)",
+    "Create ad campaign groups",
+    "Create ad campaigns",
+    "Create ad creatives",
+    "Update ad accounts/campaigns/creatives (edit limits by tier)"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "unknown",
+   "limitations": "Covers ad accounts, campaign groups, campaigns, creatives, targeting, budget pricing and ad analytics. Write coverage is on campaign-management objects; reporting and targeting are read-only. Restricted products (Matched Audiences, Audience Insights, Media Planning) need extra approval. Company Intelligence is closed to new applications. Development tier caps edits to 5 ad accounts."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/meshpilot-hq/linkedin-ads-mcp",
+    "https://pypi.org/project/linkedin-ads-mcp/",
+    "https://socket.dev/npm/package/mcp-linkedin-ads",
+    "https://mcpservers.org/servers/danielpopamd/linkedin-ads-mcp",
+    "https://mcpservers.org/servers/twominutereports/linkedin-ads-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "LinkedIn Advertising API is a Marketing API product with Development and Standard tiers",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers",
+    "quote": "LinkedIn has two tiers of access to our Advertising API: Development and Standard.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier (apply)",
+    "value": "Apply via app's Products tab in Developer Portal; LinkedIn reviews",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers",
+    "quote": "Visit your app's Product tab in the Developer Portal to apply for the Advertising API product.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access (review/approval)",
+    "value": "Applicants must agree to terms and use case must align with supported solutions; LinkedIn reviews and can reject",
+    "url": "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+    "quote": "Does your use case align with our supported solutions and is not restricted?",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access (standard tier)",
+    "value": "Standard tier requires a support ticket and LinkedIn chooses partners at its discretion",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access",
+    "quote": "The Standard API Access must be requested via a support ticket to be submitted on the Developer Support Portal.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access (discretion)",
+    "value": "LinkedIn may decline upgrades even when minimum requirements are met",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers",
+    "quote": "LinkedIn reserves the right to review applications and select partners at its discretion and a partner might not be upgraded even if they meet these minimum requirements.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access (sandbox)",
+    "value": "All API calls at all access levels use production data; no sandbox documented",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers",
+    "quote": "Please note that all API Calls at all access levels are made on production data.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access (ad account mapping)",
+    "value": "Development tier requires mapping ad accounts to the app",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/getting-started",
+    "quote": "This step is only required for a developer application with development tier access of the Advertising API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2 3-legged authorization code flow",
+    "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow",
+    "quote": "The Authorization Code Flow is used for applications to request permission from a LinkedIn member to access their account data.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_lifetime",
+    "value": "Access tokens issued with 60-day lifespan",
+    "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow",
+    "quote": "Currently, all access tokens are issued with a 60-day lifespan.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.refresh",
+    "value": "Programmatic refresh tokens only for limited partners",
+    "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow",
+    "quote": "Programmatic refresh tokens are available for a limited set of partners.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.scopes",
+    "value": "Marketing APIs require rw_ads scope",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/getting-started",
+    "quote": "Marketing APIs require the rw_ads scope.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST endpoints under api.linkedin.com/rest",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/getting-started",
+    "quote": "POST https://api.linkedin.com/rest/adAccounts/{adAccountID}/adCampaigns",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.write_ops (campaigns/creatives)",
+    "value": "Create campaign groups, campaigns and creatives",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/getting-started",
+    "quote": "POST https://api.linkedin.com/rest/adAccounts/{adAccountID}/creatives",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.read_ops (analytics)",
+    "value": "Ad Analytics API pulls campaign performance data",
+    "url": "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+    "quote": "Leverage the Ad Analytics API to pull campaign performance data and identify which campaigns are delivering results",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Lead Sync supports webhook notifications of new leads (leadNotificationUrls)",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview",
+    "quote": "Register URLs to receive webhook notifications of new leads.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community MCP server for LinkedIn Marketing API (meshpilot-hq repo, maintained by Nuraveda Lab)",
+    "url": "https://github.com/meshpilot-hq/linkedin-ads-mcp",
+    "quote": "MCP server for the LinkedIn Marketing API — campaigns, analytics, creatives, from any MCP client. MIT.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "README states no official LinkedIn MCP exists",
+    "url": "https://github.com/meshpilot-hq/linkedin-ads-mcp",
+    "quote": "There's no official LinkedIn MCP.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Official LinkedIn MCP server: none found in searches; not exhaustively checked. Official status left unknown.",
+   "SDKs: no official LinkedIn Marketing API SDK was found; unknown.",
+   "Webhooks for general Advertising API events (campaign status, etc.) not established; only Lead Sync lead notifications seen in a snippet.",
+   "Rate limits for Advertising API not established from fetched pages (only ad-account count limits).",
+   "Paid plan requirement: no evidence found either way; unknown.",
+   "Deprecation: Marketing version 202601 sunsets Jan 15, 2027 per Microsoft Learn; 202508 sunset date from a search snippet (Aug 17, 2026) has passed as of 2026-11-23 and was not verified on a fetched page.",
+   "Repo identity conflict: a search result listed Nuraveda-Labs/linkedin-ads-mcp, but the fetched GitHub page is meshpilot-hq/linkedin-ads-mcp (README says maintained by Nuraveda Lab). Ownership should be checked.",
+   "Other community MCP servers (souravdasbiswas, stickerdaniel, Kembec, CData, Two Minute Reports, mcp-linkedin-ads npm) were seen in search results only and not verified; some are not Ads-focused or use browser sessions rather than the official API."
+  ]
+ },
+ "assessment": {
+  "verdict": "GATED",
+  "group": "OUTREACH REQUIRED",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "gated",
+  "production_readiness": "restricted",
+  "security_risk": "elevated",
+  "commercial_dependency": "yes",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "Partnership / vendor approval / sales contact",
+  "rationale": [
+   "Credentials require partnership, vendor approval or sales."
+  ]
+ },
+ "evidence_support_rate": 0.941,
+ "flags": [],
+ "error": null
+}

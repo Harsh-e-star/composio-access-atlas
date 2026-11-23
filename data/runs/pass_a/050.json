@@ -1,0 +1,117 @@
+{
+ "id": 50,
+ "name": "fanbasis",
+ "category": "Ecommerce",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:20:38Z",
+ "duration_s": 21.2,
+ "cost_usd": 0.0287,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://commas.com/",
+   "title": "Commas | Where you make money on the internet",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://commas.com/enterprises",
+   "title": "Commas Enterprise | Infrastructure built for scale",
+   "rendered": false
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://commas.com/",
+   "developer_portal": null,
+   "description": "FanBasis, now rebranded as Commas, is a platform to create, sell and get paid online (checkouts, funnels, courses, communities, webinars, affiliates) with built-in payments, BNPL, and enterprise APIs/SDKs.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources state 'FanBasis is now Commas!' on commas.com. No public API docs in sources."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Sources only mention APIs and SDKs for enterprise marketing; no endpoint docs, resources or auth details."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://commas.com/",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://commas.com/",
+    "quote": "MCP beta Run Commas from your AI assistant. Create checkout links, issue refunds and pull your numbers in plain English.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "yes",
+    "url": "https://commas.com/",
+    "quote": "Embedded checkouts, multi-rail payouts, APIs and SDKs. Everything you'd replace Stripe with, plus BNPL, recovery and lower effective rates.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "identity",
+    "value": "FanBasis rebranded to Commas",
+    "url": "https://commas.com/enterprises",
+    "quote": "FanBasis is now Commas!",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Auth methods are not documented in the sources.",
+   "Access tier for API credentials is unknown (enterprise page suggests sales-led, but not explicit).",
+   "API protocols, resources and breadth are not documented; no developer docs found.",
+   "Is the MCP server hosted/documented anywhere? No URL provided."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

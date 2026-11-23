@@ -1,0 +1,240 @@
+{
+ "id": 8,
+ "name": "Close",
+ "category": "CRM and Sales",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:19:08Z",
+ "duration_s": 65.3,
+ "cost_usd": 0.0591,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://close.com",
+   "developer_portal": "https://developer.close.com",
+   "description": "Close is a sales CRM (close.com) with a public REST API at api.close.com and developer docs at developer.close.com. Sources consistently describe the same product.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Developer docs at developer.close.com describe the Close sales CRM (leads, contacts, opportunities, activities) and API base https://api.close.com/api/v1. Matches the 'CRM and Sales' category and close.com hint."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Authorization code flow: authorize at https://app.close.com/oauth2/authorize/ with client_id and redirect_uri; exchange code by POST to https://api.close.com/oauth2/token/; grant_type refresh_token supported. Refresh tokens issued only when app requests offline_access scope; refresh rotates and old refresh token is revoked.",
+   "token_refresh": "Access token has limited lifetime (expires_in seconds). With offline_access, refresh_token is returned; server issues a new refresh token on each refresh and revokes the old one.",
+   "scopes_notes": "No granular OAuth scopes were established beyond offline_access. API keys carry an access level (Read only or Read, write, and delete) capped by the user's role."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Public OAuth apps must be made public via 'Make Public and submit for review' and reviewed by Close; Integrations Directory listing requires emailing support@close.com with integration name, description, product link, use description, and OAuth Client ID. Integrations Directory requires OAuth 2.0 (not API keys) and public availability. Partners not using Close can request a free Dev organization by emailing support@close.com."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Leads",
+    "Contacts",
+    "Opportunities",
+    "Activities",
+    "Custom Fields",
+    "Event Log"
+   ],
+   "read_ops": [
+    "Query last 30 days of changes to any object via Event Log"
+   ],
+   "write_ops": [
+    "Create/update leads, contacts, opportunities, activities, custom fields (write access level required)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Rate limits apply to all endpoints; handle 429 with exponential backoff. Specific numbers not established.",
+   "limitations": "Specific rate limit values and full endpoint list not established. Webhooks are set up via subscriptions per developer docs ('Set up webhooks if you need real-time updates'). Breadth rated Broad based on resource list and read/write access levels; not fully enumerated."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developer.close.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://pypi.org/project/mcparmory-close/",
+    "https://www.developersdigest.tech/mcp-servers/close",
+    "https://hub.docker.com/mcp/server/close/overview",
+    "https://www.apideck.com/mcp-server/close.md"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Close sales CRM; API base https://api.close.com/api/v1",
+    "url": "https://developer.close.com/api/overview",
+    "quote": "Base URL https://api.close.com/api/v1",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.api_key_basic",
+    "value": "API key acts as username with empty password (HTTP Basic)",
+    "url": "https://developer.close.com/api/overview/api-key-authentication",
+    "quote": "The API key acts as the username and the password is always empty.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.key_creation",
+    "value": "Keys created at Settings → Developer → API Keys",
+    "url": "https://developer.close.com/api/overview/api-key-authentication",
+    "quote": "API keys can be created and managed in your Close account under Settings → Developer → API Keys.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.key_scope",
+    "value": "Keys scoped to user/org combination",
+    "url": "https://developer.close.com/api/overview/api-key-authentication",
+    "quote": "API keys are scoped to a particular user/organization combination and can be generated and deleted in the Settings page.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.key_access_levels",
+    "value": "Read only or Read, write, and delete; capped by role",
+    "url": "https://help.close.com/api-keys",
+    "quote": "Your role sets the maximum access level for your keys.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_endpoints",
+    "value": "Authorize at app.close.com/oauth2/authorize; token at api.close.com/oauth2/token",
+    "url": "https://developer.close.com/api/overview/oauth-authentication",
+    "quote": "The Authorization Code can be exchanged for an Access Token by performing a POST",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.refresh_token",
+    "value": "Refresh token only with offline_access scope; rotates",
+    "url": "https://developer.close.com/api/overview/oauth-authentication",
+    "quote": "The authorization server revokes the old Refresh Token after issuing a new one.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.oauth_app_creation",
+    "value": "OAuth apps created at Settings → Developer → OAuth Apps",
+    "url": "https://developer.close.com/integrations",
+    "quote": "Create an OAuth app for Close so your integration can securely connect to Close accounts.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.free_dev_org",
+    "value": "Free Dev organization for integration partners; no subscription fees",
+    "url": "https://developer.close.com/integrations",
+    "quote": "Dev organizations work identically to standard Close organizations but have no subscription fees.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.publish_review",
+    "value": "Public apps reviewed by Close; apply via email",
+    "url": "https://developer.close.com/integrations/publish",
+    "quote": "We'll review your app and reply by email.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks/event subscriptions supported",
+    "url": "https://developer.close.com/api/overview",
+    "quote": "Subscribe to events and receive POST notifications when data changes.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Rate limits apply to all endpoints; 429 backoff",
+    "url": "https://developer.close.com/api/overview",
+    "quote": "Rate limits apply to all endpoints.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdk.python",
+    "value": "Official Python wrapper closeio-api (officially maintained by Close)",
+    "url": "https://developer.close.com/api/overview/api-clients",
+    "quote": "Close's Python Wrapper (Officially maintained by Close)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdk.node",
+    "value": "Close Node.js wrapper closeio-node (not labeled official)",
+    "url": "https://developer.close.com/api/overview/api-clients",
+    "quote": "Close's Node.js Wrapper",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Official hosted MCP server at https://mcp.close.com/mcp, HTTP Streamable, OAuth DCR or API key",
+    "url": "https://developer.close.com/mcp",
+    "quote": "The MCP server URL is `https://mcp.close.com/mcp`",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.scopes",
+    "value": "mcp.read (read-only), mcp.write_safe (read/write), mcp.write_destructive (read/write/delete)",
+    "url": "https://developer.close.com/mcp",
+    "quote": "`mcp.write_destructive`: \"can read, write, and delete data\"",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.github",
+    "value": "No GitHub repo referenced for official MCP server",
+    "url": "https://developer.close.com/mcp",
+    "quote": "The content does not reference any GitHub repository.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Whether a paid Close plan is required to use the API or create OAuth apps (not stated on fetched pages).",
+   "Exact rate limit numbers and full endpoint list (only general statements fetched).",
+   "Whether the official MCP server code is open-sourced on GitHub (no repo found).",
+   "Whether a formal sandbox exists beyond free Dev organizations.",
+   "Community MCP servers (mcparmory-close on PyPI, developersdigest, Docker MCP catalog, Apideck, SecureAuth, salesgear) were identified via search only and not fetched/verified; they are not vendor-maintained.",
+   "Whether the 'Settings → Developer → OAuth Apps' menu path is verbatim on the official page (came from search snippet, not fetched)."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "review_required",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 0.882,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,196 @@
+{
+ "id": 44,
+ "name": "Salesforce Commerce Cloud",
+ "category": "Ecommerce",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:32:45Z",
+ "duration_s": 60.6,
+ "cost_usd": 0.0713,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://developer.salesforce.com/docs/commerce",
+   "developer_portal": "https://developer.salesforce.com/docs/commerce",
+   "description": "Salesforce Commerce Cloud (B2C Commerce), now also branded Agentforce Commerce per a Trailhead community snippet (not fetched). Docs at developer.salesforce.com/docs/commerce cover B2C Commerce, its Commerce APIs (SCAPI), and the B2C developer tooling.",
+   "identity_confirmed": "yes",
+   "identity_notes": "The assignment's docs URL is the B2C Commerce developer documentation hub; the fetched pages describe Account Manager, SCAPI, and B2C Commerce storefront tooling. Renamed to Agentforce Commerce in some search snippets, which I did not fetch."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Service account/JWT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Client credentials for automation/service-to-service; interactive sign-in is available for the CLI; JWT signed with a certificate is also supported. Shopper APIs use SLAS (OAuth 2.1) per search snippet, not fetched.",
+   "token_refresh": "unknown",
+   "scopes_notes": "Scopes are listed in an Authorization Scopes Catalog; multiple scopes are space-separated (from search snippet, not fetched). Shopper MCP pilot needs an SLAS client with the sfcc.shopper-mcpagent scope."
+  },
+  "access": {
+   "tier": "partner_or_sales",
+   "free_credentials": "no",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "yes",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No public self-serve sandbox was found. Sources point to partner-program access or an employer's existing realm; I could not confirm eligibility terms from official pages."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Products",
+    "Orders",
+    "Custom objects",
+    "Content assets",
+    "Sites",
+    "Inventory (admin APIs, from search snippet)",
+    "Shopper browse/cart/checkout (SLAS shopper APIs)"
+   ],
+   "read_ops": [
+    "Product details",
+    "Order analysis",
+    "Custom objects",
+    "Content assets",
+    "Sales, search, and promotion performance analysis"
+   ],
+   "write_ops": [
+    "Product updates",
+    "Deploy cartridges and Managed Runtime storefronts",
+    "Manage sites"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "unknown",
+   "limitations": "Legacy OCAPI is deprecated and being disabled. SCAPI Admin APIs do not support browser sign-in as of release 26.8. Shopper MCP pilot exposes only a subset of shopper tools. Webhooks and SDKs could not be verified."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://cdn.jsdelivr.net/npm/@salesforce/b2c-dx-mcp@3.15.0/README.md",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/brinzl/commercecloud-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Salesforce B2C Commerce developer documentation hub at developer.salesforce.com/docs/commerce",
+    "url": "https://developer.salesforce.com/docs/commerce/commerce-solutions/guide/scapi-get-started.html",
+    "quote": "Get Started with the B2C Commerce API (page titled in search results; fetch returned 403)",
+    "verified": false,
+    "verify_note": "source unreachable (http_403)"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Admin APIs: client secret or JWT required; browser sign-in not supported yet",
+    "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/guide/authentication.html",
+    "quote": "SCAPI Admin APIs need a client secret or JWT; browser sign-in isn't supported yet (as of release 26.8).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "API client can authenticate by interactive sign-in, client credentials, or JWT signed with certificate",
+    "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/guide/authentication.html",
+    "quote": "An API client can authenticate in three ways: interactive sign-in with your user account, client credentials for automation, and JWT signed with a certificate.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.credentials_source",
+    "value": "API clients are configured in Account Manager",
+    "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/guide/authentication.html",
+    "quote": "This is configured in the Salesforce Commerce Cloud Account Manager.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "Creating API clients requires roles on the user account; no free self-serve sandbox found",
+    "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/guide/authentication.html",
+    "quote": "Account Manager commands that manage organizations and API clients need roles on your user account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.partner_path",
+    "value": "Sandbox trial route runs through partner program",
+    "url": "https://appexchangeguides-content.relayto.com/e/b2c-commerce-isv-partner-onboarding-guide-s9qfhyhoxr924/HGof73hz",
+    "quote": "partners need Partner Community access to explore developer tools, including a trial B2C Commerce sandbox",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Official Salesforce B2C Commerce MCP server @salesforce/b2c-dx-mcp, Apache-2.0",
+    "url": "https://cdn.jsdelivr.net/npm/@salesforce/b2c-dx-mcp@3.15.0/README.md",
+    "quote": "Connect your AI assistant to Salesforce B2C Commerce tools, documentation, and workflow skills.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_pilot",
+    "value": "Agentic MCP Shopper Tools is a pilot requiring SLAS onboarding and contacting the account executive",
+    "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/agentic-mcp-shopper-tools-quick-start.html",
+    "quote": "Your business must already be onboarded to SLAS and use the B2C Commerce API (SCAPI); contact your Salesforce account executive.",
+    "verified": false,
+    "verify_note": "source unreachable (http_403)"
+   },
+   {
+    "field": "mcp.community",
+    "value": "brinzl/commercecloud-mcp-server is a community MCP server, MIT licensed, not Salesforce-affiliated",
+    "url": "https://github.com/brinzl/commercecloud-mcp-server",
+    "quote": "An MCP server that helps connect your AI applications with your Salesforce Commerce Cloud instance",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Nearly 600 Commerce API operations exposed via DX MCP",
+    "url": "https://cdn.jsdelivr.net/npm/@salesforce/b2c-dx-mcp@3.15.0/README.md",
+    "quote": "Manage your sites with nearly 600 Commerce API operations",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "Bearer JWT tokens in HTTP header for SCAPI",
+    "url": "https://developer.salesforce.com/docs/commerce/commerce-solutions/guide/authorization.html",
+    "quote": "Tokens are sent as an HTTP header following the Bearer scheme.",
+    "verified": false,
+    "verify_note": "source unreachable (http_403)"
+   }
+  ],
+  "open_questions": [
+   "Webhooks/event subscriptions for SCAPI: not found; the one search returned only other vendors' docs.",
+   "Official SDK (e.g. commerce-sdk-isomorphic) not verified in any source.",
+   "Whether a non-partner can obtain a B2C sandbox and what trial length applies: not confirmed by an official page.",
+   "Rate limits: not found.",
+   "Several developer.salesforce.com pages returned 403 to WebFetch (SCAPI get-started, admin auth, custom API auth, MCP pilot quick-start, and the brinzl repo), so some claims rest on search snippets and summarizer output rather than verified page text.",
+   "Whether the b2c-dx-mcp DX server is Salesforce's intended general MCP for Commerce APIs, or a developer-preview tool; the README does not state its status.",
+   "Current pilot status and GA date for the Shopper MCP service."
+  ]
+ },
+ "assessment": {
+  "verdict": "GATED",
+  "group": "OUTREACH REQUIRED",
+  "technical_feasibility": "high",
+  "credential_accessibility": "gated",
+  "production_readiness": "restricted",
+  "security_risk": "elevated",
+  "commercial_dependency": "yes",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Partnership / vendor approval / sales contact",
+  "rationale": [
+   "Credentials require partnership, vendor approval or sales."
+  ]
+ },
+ "evidence_support_rate": 0.545,
+ "flags": [],
+ "error": null
+}

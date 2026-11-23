@@ -256,3 +256,18 @@ def test_score_accuracy_formula_and_unknown_not_credited(tmp_path, monkeypatch):
     assert r["corrected_accuracy"] == 0.75       # rows 1,2,3
     assert r["corrected_app_exact"] == 0.5       # app 1 all right, app 2 not
     assert r["first_pass_unknown"] == 1
+
+
+def test_reconcile_both_failed_is_all_unknown():
+    a = rec("a", "free_self_serve", []); a.error = "boom"
+    x, ch = verify.reconcile(a, None)
+    assert x.access.tier == "unknown" and ch[0]["rule"].startswith("R0")
+
+
+def test_union_never_mixes_none_with_protocols():
+    a = rec("a", "free_self_serve", [])
+    a.extraction.api.protocols = ["REST"]
+    b = rec("b", "free_self_serve", [("api.protocols", True)])
+    b.extraction.api.protocols = ["REST", "none", "GraphQL"]
+    x, ch = verify.reconcile(a, b)
+    assert x.api.protocols == ["GraphQL", "REST"]

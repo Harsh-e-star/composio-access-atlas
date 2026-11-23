@@ -1,0 +1,242 @@
+{
+ "id": 84,
+ "name": "Paygent Connect",
+ "category": "Finance and Fintech",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:25:35Z",
+ "duration_s": 68.0,
+ "cost_usd": 0.1073,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.nmi.com",
+   "title": "NMI Developer Documentation",
+   "rendered": true
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.nmi.com/reference/getting-started",
+   "title": "Getting Started with Our APIs",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.nmi.com/llms.txt",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://www.nmi.com/products/payment-gateway/",
+   "title": "White Label Payment Gateway & Value-Added Solutions",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.nmi.com/reference/authentication",
+   "title": "Authentication",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.nmi.com/reference/create-embedded-component-session",
+   "title": "Create a Session",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.nmi.com/reference/authentication-1",
+   "title": "Authentication",
+   "rendered": true
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.nmi.com/reference/create-auth-v5",
+   "title": "Authorization",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.nmi.com/reference/create-device-payment-request-auth-v5",
+   "title": "Create Authorization Payment Request on Device",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.nmi.com/reference/mcp",
+   "title": "MCP Server",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://docs.nmi.com/reference/rate-limiting",
+   "title": "Rate Limiting",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://www.nmi.com/products/payment-gateway/payer-authentication/",
+   "title": "Payer Authentication 2.0 for Fraud Prevention - NMI",
+   "rendered": false
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.nmi.com",
+   "developer_portal": "https://docs.nmi.com",
+   "description": "Sources describe NMI's white-label payment gateway and developer APIs (the hint says Paygent is NMI-powered). Sources do not mention 'Paygent Connect' by name.",
+   "identity_confirmed": "unknown",
+   "identity_notes": "Sources cover NMI (Network Merchants) docs only; none mention Paygent or Paygent Connect, so the link is based only on the assignment hint."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "An OAuth access token endpoint exists (POST, token valid 60 minutes); grant type not specified.",
+   "token_refresh": "OAuth access tokens are valid for 60 minutes; request a new token after expiry.",
+   "scopes_notes": "API keys are public (client-side) or private (server-side) and inherit permissions from the associated user. The OAuth token endpoint lists scopes."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "yes",
+   "production_restrictions": "Not established. Keys are created in the Merchant Portal or Partner Portal; sources do not say how those accounts are obtained."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "payments",
+    "devices",
+    "subscriptions",
+    "plans",
+    "packages",
+    "merchant applications",
+    "reporting",
+    "customer vault"
+   ],
+   "read_ops": [
+    "List plans",
+    "Get plan",
+    "Reporting data"
+   ],
+   "write_ops": [
+    "Authorization",
+    "Create plan",
+    "Update plan",
+    "Delete plan",
+    "Update subscription",
+    "Delete subscription",
+    "Device payment requests"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Rate limits are rare. Payment API returns response_code 301; system-wide limit returns HTTP 429.",
+   "limitations": "Some Classic APIs (transact.php) authenticate with the API key in the request body."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.nmi.com/mcp",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://docs.nmi.com/reference/authentication",
+    "quote": "Authentication across our APIs is done via secure API keys. These keys are assigned to specific users on your account and inherit permissions from those users",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://docs.nmi.com/reference/authentication-1",
+    "quote": "This API uses OAuth 2.0 for authentication.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.nmi.com/reference/authentication",
+    "quote": "Log into your Merchant Portal Navigate to Settings > Security Keys Click Add a New Key",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.nmi.com/reference/authentication",
+    "quote": "curl -X GET \"https://sandbox.nmi.com/api/v5/endpoint\" \\ -H \"Authorization: YOUR_API_KEY\"",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.nmi.com/reference/getting-started",
+    "quote": "Process transactions seamlessly across a wide range of payment methods, including card-present, e-commerce, and alternative payment options like Apple Pay and Google Pay.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.nmi.com/reference/mcp",
+    "quote": "The NMI Developer Docs MCP connects AI coding assistants—Claude Code, Cursor, VS Code, Windsurf, and Claude Desktop—to our developer documentation",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "HTTP 429 and response_code 301",
+    "url": "https://docs.nmi.com/reference/rate-limiting",
+    "quote": "your request will receive HTTP 429: Too Many Requests",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://docs.nmi.com/reference/getting-started",
+    "quote": "Configure webhooks for real-time notifications and build automated workflows with retry logic and event monitoring.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is Paygent Connect actually NMI-powered, and does it have its own API or docs? No source mentions Paygent.",
+   "How are Merchant Portal or Partner Portal accounts obtained, and is there a free sandbox signup?",
+   "Which OAuth 2.0 grant does the token endpoint use?"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,263 @@
+{
+ "id": 29,
+ "name": "Aircall",
+ "category": "Communications and Messaging",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:25:18Z",
+ "duration_s": 68.1,
+ "cost_usd": 0.0534,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://aircall.io",
+   "developer_portal": "https://developer.aircall.io/docs",
+   "description": "Aircall, a cloud phone and call center platform. Its Public REST API covers calls, contacts, numbers, messages (SMS/WhatsApp), webhooks, tags, teams, and analytics.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Developer docs at developer.aircall.io describe the 'Aircall Public API' and the 'Aircall Dashboard'. The aircall.io hint matches. Redirected to developers.aircall.io for API references."
+  },
+  "auth": {
+   "methods": [
+    "Basic",
+    "OAuth2"
+   ],
+   "primary": "Basic",
+   "oauth_flows": "Authorization code grant only (per OAuth guide). Client ID/secret must be obtained through the Tech Partner program.",
+   "token_refresh": "OAuth access_token is described as permanent and does not expire; no refresh-token flow described.",
+   "scopes_notes": "Scopes not established."
+  },
+  "access": {
+   "tier": "partner_or_sales",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "yes",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Only technology partners can publish public integrations; public MCP/app listing requires tech partner approval."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Calls",
+    "Contacts",
+    "Users",
+    "Teams",
+    "Numbers",
+    "Conversations",
+    "Messages (SMS/WhatsApp)",
+    "Tags",
+    "Webhooks",
+    "Dialer/Outbound campaigns",
+    "Conversation Intelligence",
+    "Analytics",
+    "Integrations"
+   ],
+   "read_ops": [
+    "List/retrieve users, teams, calls, conversations, numbers, contacts, tags, webhooks",
+    "Search contacts",
+    "Retrieve analytics report exports",
+    "Retrieve conversation intelligence (transcription, summary, sentiment)"
+   ],
+   "write_ops": [
+    "Create/update/delete contacts, tags, webhooks, teams",
+    "Start outbound calls and dial",
+    "Transfer, comment, tag, archive calls",
+    "Send SMS, group and WhatsApp messages",
+    "Assign/close/reopen conversations",
+    "Create and launch outbound campaigns",
+    "Update numbers"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "120 requests per minute per company",
+   "limitations": "Only HTTPS is valid. Webhooks require a public HTTPS endpoint with valid SSL (self-signed/HTTP not supported per support article). OAuth credentials require tech partner application. SDK found is the Aircall Everywhere UI SDK, not an API client SDK."
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://lobehub.com/mcp/themobilefirstco-aircall-mcp-server",
+    "https://lobehub.com/mcp/itaygadot111-aircall-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Aircall Public API docs at developer.aircall.io describe the Aircall Public API and Aircall Dashboard",
+    "url": "https://developer.aircall.io/api-references/",
+    "quote": "Aircall limits the number of requests to its Public API to 120 requests per minute per company.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods Basic",
+    "value": "Basic auth: API ID and API token generated in the Aircall Dashboard",
+    "url": "https://developer.aircall.io/docs/basic-authentication",
+    "quote": "Aircall will generate two strings: an API ID and an API token, which act as your username and password.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods OAuth2",
+    "value": "Aircall implements OAuth 2.0",
+    "url": "https://developers.aircall.io/api-references",
+    "quote": "Aircall implemented the OAuth 2.0 authentication protocol",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_flows",
+    "value": "Authorization code grant",
+    "url": "https://developer.aircall.io/docs/oauth",
+    "quote": "grant_type: 'authorization_code'",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "Access token is permanent and does not expire",
+    "url": "https://developer.aircall.io/docs/oauth",
+    "quote": "You'll receive a permanent access_token in response — this token does not expire.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier / partnership",
+    "value": "OAuth client credentials are obtained by applying to the Tech Partner program",
+    "url": "https://developer.aircall.io/docs/oauth",
+    "quote": "If you haven't received them yet, apply to the Tech Partner program.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.developer account",
+    "value": "Developer account and OAuth credentials are issued only if the partner application is approved",
+    "url": "https://developer.aircall.io/docs/plan-your-integration",
+    "quote": "If approved, you'll receive your developer account and OAuth credentials to start building",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.Basic key generation",
+    "value": "Basic API keys are generated from the Aircall dashboard under Integrations > API keys",
+    "url": "https://developer.aircall.io/docs/basic-authentication",
+    "quote": "Open your Aircall Dashboard > Integrations > API keys.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial",
+    "value": "No trial period, sandbox, or free tier is described on the pages checked",
+    "url": "https://support.aircall.io/en-gb/articles/10375355327517",
+    "quote": "The page also has a \"Try for free\" button, but it doesn't describe a trial period.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.protocols",
+    "value": "Classic REST API over HTTPS",
+    "url": "https://developers.aircall.io/api-references",
+    "quote": "Aircall Public API is a classic REST API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.transport",
+    "value": "HTTPS only",
+    "url": "https://developers.aircall.io/api-references",
+    "quote": "only HTTPS requests are valid as requests will communicate over SSL connection.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "120 requests per minute per company",
+    "url": "https://developers.aircall.io/api-references",
+    "quote": "Aircall limits the number of requests to its Public API to 120 requests per minute per company.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Only SDK referenced is Aircall Everywhere SDK V2 (embedded UI), no API client SDK found",
+    "url": "https://developers.aircall.io/api-references",
+    "quote": "New version of Aircall Everywhere SDK V2 has been released which is based on Aircall Workspace App.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks are created via POST /v1/webhooks",
+    "url": "https://developer.aircall.io/docs/setup-webhooks",
+    "quote": "Send a POST request to /v1/webhooks using the user's access token:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks requirements",
+    "value": "Webhook setup needs a registered App, public HTTPS server, and OAuth access token",
+    "url": "https://developer.aircall.io/docs/setup-webhooks",
+    "quote": "You'll need a registered App, a public HTTPS server, and an OAuth access token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "No official Aircall MCP server as of the FAQ page",
+    "url": "https://developer.aircall.io/docs/mcp-faqs",
+    "quote": "As of this writting we don't offer an MCP servier but stay tuned. We might have news soon.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.public registration",
+    "value": "Public MCP registration requires tech partner application",
+    "url": "https://developer.aircall.io/docs/how-to-register",
+    "quote": "Only technology partners can publish public integrations.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community MCP servers exist (themobilefirstco and itaygadot111); not Aircall-maintained",
+    "url": "https://lobehub.com/mcp/themobilefirstco-aircall-mcp-server",
+    "quote": "The listing says it is not built, maintained, or endorsed by Aircall.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Whether a free or self-serve developer account, trial, or sandbox exists. The pages checked do not say. The search snippet mentioning a 4-month trial was not confirmed on a fetched page.",
+   "Whether a paid Aircall plan is required to generate Basic API keys.",
+   "Which account roles (owner/admin) can create API keys.",
+   "Whether an official Aircall MCP server has launched since the FAQ page was written. Date of the FAQ is unknown.",
+   "Client-library SDKs (Python, Node, etc.) for the API were not found.",
+   "Full webhook event list was not retrieved (only examples: call.ended, call.tagged, call.commented).",
+   "Community MCP repo URLs and maintenance status on GitHub were not opened; themobilefirstco and itaygadot111 are only from lobehub listings.",
+   "Hosted third-party MCP servers (Zapier, StackOne, Activepieces) exist but are not Aircall-owned and were not verified."
+  ]
+ },
+ "assessment": {
+  "verdict": "GATED",
+  "group": "OUTREACH REQUIRED",
+  "technical_feasibility": "high",
+  "credential_accessibility": "gated",
+  "production_readiness": "restricted",
+  "security_risk": "standard",
+  "commercial_dependency": "yes",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "Partnership / vendor approval / sales contact",
+  "rationale": [
+   "Credentials require partnership, vendor approval or sales."
+  ]
+ },
+ "evidence_support_rate": 0.944,
+ "flags": [],
+ "error": null
+}

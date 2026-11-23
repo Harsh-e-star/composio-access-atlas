@@ -1,0 +1,198 @@
+{
+ "id": 54,
+ "name": "MrScraper",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:34:16Z",
+ "duration_s": 100.3,
+ "cost_usd": 0.0449,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://mrscraper.com",
+   "developer_portal": "https://docs.mrscraper.com",
+   "description": "MrScraper is a web scraping platform offering a Scraper API (HTML, Markdown, screenshots, brand data, JSON), Web Search, workflows run through a Platform API, and an official MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "docs.mrscraper.com describes MrScraper as a web scraping platform; the official MCP repo sits in the mrscraper-com GitHub org. Matches the Data, SEO and Scraping category."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "OAuth 2.1 browser sign-in applies only to the hosted MCP endpoint (https://mcp.mrscraper.com/mcp). No OAuth is documented for the REST API.",
+   "token_refresh": "unknown",
+   "scopes_notes": "MCP OAuth approvals: account:read (status) and scrape:read (scraping and search tools)."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No app review found. The pricing page shows a Free plan but does not confirm it includes API token access."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "Scraper API (HTML, Markdown, screenshot, brand, JSON)",
+    "Web Search",
+    "Workflow (Platform API)",
+    "Analytics",
+    "Result",
+    "Cancel Bulk Scraping"
+   ],
+   "read_ops": [
+    "Scrape HTML (GET)",
+    "Scrape Markdown (GET)",
+    "Get Screenshot (GET)",
+    "Scrape Brand (GET)",
+    "Scrape JSON (GET)",
+    "Web Search (GET)"
+   ],
+   "write_ops": [
+    "Workflow rerun and manage via Platform API (methods and paths not documented)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "unknown",
+   "limitations": "The API overview lists only GET endpoints; Platform API methods and paths are not shown. No rate-limit documentation found. Base URL conflict: api.app.mrscraper.com/api/v1 in official docs vs api.mrscraper.com in a third-party skill file."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+   "community": "unknown",
+   "community_urls": [
+    "https://www.scalekit.com/connectors/mrscraper",
+    "https://composio.dev/toolkits/mrscraper",
+    "https://zapier.com/mcp/mrscraper",
+    "https://www.mcpbundles.com/skills/mrscraper"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.primary",
+    "value": "API key (x-api-token header)",
+    "url": "https://docs.mrscraper.com/docs/api/authentication",
+    "quote": "Include your API token in the x-api-token HTTP header on every request",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.bearer",
+    "value": "Bearer token in Authorization header for Marketplace endpoints",
+    "url": "https://docs.mrscraper.com/docs/api/authentication",
+    "quote": "For Marketplace endpoints, authenticate using the standard RFC 6750 Authorization header with a Bearer token",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.token_source",
+    "value": "Tokens are created in the MrScraper dashboard (API Tokens page)",
+    "url": "https://docs.mrscraper.com/docs/api/authentication",
+    "quote": "API tokens are managed directly from your MrScraper dashboard",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_plan",
+    "value": "A Free plan exists; upgrade to Essential at $99/month or Enterprise (contact us)",
+    "url": "https://mrscraper.com/pricing",
+    "quote": "Upgrade from Free to Essential anytime from your account's billing settings, or move to Enterprise by booking a call.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocol",
+    "value": "REST, JSON payloads",
+    "url": "https://docs.mrscraper.com/docs/api/overview",
+    "quote": "Built on REST principles, our API offers predictable resource-oriented URLs",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.auth_requirement",
+    "value": "All API endpoints require an API token in x-api-token",
+    "url": "https://docs.mrscraper.com/docs/api/overview",
+    "quote": "All API endpoints require authentication using an API token passed in the x-api-token header.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks",
+    "value": "Scraper results can be sent to external services via webhooks",
+    "url": "https://docs.mrscraper.com",
+    "quote": "Send scraper results directly to external services through webhooks.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks",
+    "value": "Python package mrscraper-sdk; Node package @mrscraper/sdk; LangChain tools",
+    "url": "https://docs.mrscraper.com",
+    "quote": "Scrape pages, extract brand details and JSON, search the web, and check account status with the @mrscraper/sdk package.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Official MCP server, hosted Streamable HTTP at https://mcp.mrscraper.com/mcp, OAuth 2.1 or API key",
+    "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+    "quote": "MrScraper MCP is the official Model Context Protocol server for MrScraper.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.repo",
+    "value": "GitHub repo mrscraper-com/mrscraper-mcp (MIT), described as the official MCP server",
+    "url": "https://github.com/mrscraper-com/mrscraper-mcp",
+    "quote": "Official MrScraper MCP server: Scraper API for HTML, Markdown, and screenshots, web search, and account usage for AI agents.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.tools",
+    "value": "Seven tools: status, scrapeHtml, scrapeMarkdown, getScreenshot, scrapeBrand, scrapeJson, webSearch",
+    "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+    "quote": "The server exposes seven tools: status, scrapeHtml, scrapeMarkdown, getScreenshot, scrapeBrand, scrapeJson, and webSearch.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Exact tier gate: does the Free plan include API token creation, or is a paid Essential plan required? Check the dashboard or sign up.",
+   "Rate limits are not documented in the pages checked.",
+   "Platform API (workflow rerun/manage) methods and paths are not documented in the pages checked.",
+   "Base URL conflict: api.app.mrscraper.com/api/v1 (official docs) vs api.mrscraper.com (third-party skill file).",
+   "The old mrscraper.com/docs/api/v1 page says Authorization: Bearer; the current docs say x-api-token. Confirm with a test call.",
+   "Community MCP: only third-party integrator listings (Scalekit, Composio, Zapier, MCPBundles) were found; no independent community GitHub repo was confirmed. Composio's listing is a competitor-adjacent source.",
+   "The docs MCP page's exact quotes and the API overview quotes came via a summarizing fetch and were not checked against raw page text."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "low",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 0.909,
+ "flags": [],
+ "error": null
+}

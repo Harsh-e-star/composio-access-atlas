@@ -1,0 +1,180 @@
+{
+ "id": 45,
+ "name": "Magento (Adobe Commerce)",
+ "category": "Ecommerce",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:33:14Z",
+ "duration_s": 91.6,
+ "cost_usd": 0.0419,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://developer.adobe.com/commerce",
+   "developer_portal": "https://developer.adobe.com/commerce",
+   "description": "Adobe Commerce, the e-commerce platform documented at developer.adobe.com/commerce. Two deployment types with different API surfaces: PaaS (Adobe Commerce on Cloud / on-premises) and SaaS (Adobe Commerce as a Cloud Service).",
+   "identity_confirmed": "yes",
+   "identity_notes": "The developer.adobe.com/commerce pages document the Adobe Commerce REST, GraphQL and SOAP APIs, matching the requested product. The Magento-to-Adobe Commerce naming lineage was not quoted from a fetched page."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "Other"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "No OAuth 2.0 flow found. The documented OAuth option is OAuth 1.0a for third-party integrations, categorized here as Other.",
+   "token_refresh": "unknown. The auth page does not state token expiry or refresh. Session cookies expire after inactivity, with the timeout not stated.",
+   "scopes_notes": "Access is limited to the resources selected when an integration is created in Admin (System > Extension > Integration). Admin and customer tokens are limited to what that user's role or the customer's own data allows."
+  },
+  "access": {
+   "tier": "partner_or_sales",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "yes",
+   "sandbox_available": "yes",
+   "production_restrictions": "No app-review gate for publishing was found in the sources reviewed. A search snippet (not fetched) says Adobe Commerce extension submissions (EE) require a partner account or a developer license."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "GraphQL",
+    "SOAP"
+   ],
+   "breadth": "Broad",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "unknown",
+   "limitations": "The 'wide range' claim applies to PaaS. SaaS gets a smaller REST subset, and SaaS excludes the customer and guest REST APIs. Specific resource names and write-method details were not confirmed from the fetched pages. Rate limits, webhooks and SDKs are not established."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developer.adobe.com/commerce/extensibility/developer-agent/tools-overview",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/rafaelstz/adobe-commerce-dev-mcp",
+    "https://www.cdata.com/drivers/adobecommerce/docs/mcp/",
+    "https://lobehub.com/mcp/codexpect-adobe-commerce-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.official_website",
+    "value": "Adobe Commerce developer documentation at developer.adobe.com/commerce",
+    "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+    "quote": "Support for GraphQL, REST (Representational State Transfer) and SOAP (Simple Object Access Protocol).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Token-based (Bearer) authentication for admin and customer users",
+    "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+    "quote": "The token acts like an electronic key that provides access to the API(s).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Integration access via OAuth 1.0a",
+    "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+    "quote": "This method is a good choice for integrating with a third-party system that supports OAuth 1.0a.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.credentials",
+    "value": "Integrations are created in Admin and their resource access is restricted",
+    "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+    "quote": "Be sure to restrict which resources the integration can access.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.credentials",
+    "value": "Admin must register a web service and create a web services user for token auth",
+    "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+    "quote": "You must register a web service on Admin.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.coverage",
+    "value": "PaaS has a wide range of REST endpoints; SaaS has a smaller subset",
+    "url": "https://developer.adobe.com/commerce/webapi/rest/",
+    "quote": "Primarily the Cloud Service REST API differs in that it includes a smaller subset of endpoints.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.graphql",
+    "value": "GraphQL is available for PaaS and SaaS",
+    "url": "https://developer.adobe.com/commerce/webapi/graphql/",
+    "quote": "Adobe Commerce as a Cloud Service (SaaS) projects can connect to a supergraph",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Adobe lists an 'Adobe Commerce App Builder MCP server' as developer tooling",
+    "url": "https://developer.adobe.com/commerce/extensibility/developer-agent/tools-overview",
+    "quote": "IDE integration for Commerce development tasks, documentation-aware assistance",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "rafaelstz/adobe-commerce-dev-mcp is a community MCP server for Commerce dev tooling, not Adobe-affiliated",
+    "url": "https://github.com/rafaelstz/adobe-commerce-dev-mcp",
+    "quote": "This project implements a Model Context Protocol (MCP) server that interacts with Adobe Commerce.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "Partner sandboxes are gated by Adobe partner membership",
+    "url": "https://partners.adobe.com/technologyprogram/experiencecloud/knowledgebase/7069a017937f4214257ff9ed0bba1032.html",
+    "quote": "To get sandbox access, please submit a support ticket.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "webhooks",
+    "value": "unknown",
+    "url": "https://developer.adobe.com/commerce/webhooks/",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Token expiry and refresh behavior for integration and admin tokens is not stated in the sources reviewed.",
+   "Rate limits, webhooks/events and official SDKs were not established. The webhooks page returned 404.",
+   "Whether a non-partner developer can get free test credentials (for example, a self-hosted Magento Open Source install) was not confirmed for Adobe Commerce. Snippets conflict.",
+   "The App Builder MCP server's owner repository and its data access (REST API vs docs only) were not located.",
+   "The free account and developer license claims come from search snippets that were not fetched."
+  ]
+ },
+ "assessment": {
+  "verdict": "GATED",
+  "group": "OUTREACH REQUIRED",
+  "technical_feasibility": "high",
+  "credential_accessibility": "gated",
+  "production_readiness": "restricted",
+  "security_risk": "high",
+  "commercial_dependency": "yes",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Partnership / vendor approval / sales contact",
+  "rationale": [
+   "Credentials require partnership, vendor approval or sales."
+  ]
+ },
+ "evidence_support_rate": 0.818,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,74 @@
+{
+ "id": 12,
+ "name": "Intercom",
+ "category": "Support and Helpdesk",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:20:23Z",
+ "duration_s": 79.1,
+ "cost_usd": 0.0614,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.intercom.com/",
+   "developer_portal": "https://developers.intercom.com/",
+   "description": "Intercom: customer messaging and support platform (Inbox, Fin AI agent, Help Center). Developer docs cover the Intercom REST API, Developer Hub apps, webhooks, and the hosted MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Developer docs at developers.intercom.com describe the Intercom REST API (api.intercom.io) and Developer Hub for workspace apps. Matches the assignment hint intercom.com. Product-level description is inferred from the developer docs and the Intercom-hosted MCP page, not a verbatim 'customer messaging' statement."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [],
+  "open_questions": []
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "None until interface confirmed",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": null,
+ "flags": [],
+ "error": null
+}

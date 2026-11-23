@@ -1,0 +1,234 @@
+{
+ "id": 96,
+ "name": "Devin",
+ "category": "AI, Research and Media-native",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:37:58Z",
+ "duration_s": 72.2,
+ "cost_usd": 0.0508,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://docs.devin.ai",
+   "developer_portal": "https://docs.devin.ai",
+   "description": "Devin is an autonomous AI software engineer built by Cognition (an applied AI lab). Its docs are at docs.devin.ai and its web app at app.devin.ai. The assignment hint pointed at docs.devin.ai, which is the correct vendor site.",
+   "identity_confirmed": "yes",
+   "identity_notes": "docs.devin.ai describes Devin as an AI software engineer from Cognition. Not Devin Technologies or other unrelated 'Devin' products. Confirmed via the docs homepage quote and Cognition's own pricing blog."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Bearer/PAT"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "No refresh flow. Service user keys default to 30-day expiry (7 days, 90 days, or Never where allowed). Rotation is manual: generate new keys and revoke old ones; enterprises can rotate via API (beta).",
+   "scopes_notes": "Service users are role-based bot accounts (Admin role gives full org access; Admin is required for impersonation via ImpersonateOrgSessions). Scope is determined by the service user's role, not per-key OAuth scopes. No OAuth flow documented on the authentication page."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No app review was found in the sources. Enterprise API scope (cross-org management) is for enterprise customers with RBAC, per the docs. Free plan exists but official sources do not state whether it includes API access. A third-party guide claims Devin API is paid-only (unverified). Official blog gives a 2-week trial for Devin Review only, not for the API."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "sessions",
+    "knowledge",
+    "playbooks",
+    "secrets",
+    "analytics",
+    "audit logs",
+    "users",
+    "billing",
+    "infrastructure"
+   ],
+   "read_ops": [
+    "Session listing (organization users list endpoints also referenced, details unverified)"
+   ],
+   "write_ops": [
+    "Create session (POST, supports create_as_user_id)"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "Not specified in fetched docs; only a 429 'Rate limit exceeded' status is documented.",
+   "limitations": "Only partial endpoint list verified. Organization API covers sessions, knowledge, playbooks, secrets and more. Enterprise API covers analytics, audit logs, user management, billing, infrastructure. Read vs write split per resource not verified beyond session creation. Rate limit documented only as 429 response."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+   "community": "unknown",
+   "community_urls": [
+    "https://mcp.gumloop.com/devin/mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Devin is an autonomous AI software engineer (Cognition)",
+    "url": "https://docs.devin.ai",
+    "quote": "Devin is an autonomous AI software engineer that can write, run and test code.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.service_user",
+    "value": "Service users are bot accounts for API access with role-based permissions and are recommended for new integrations",
+    "url": "https://docs.devin.ai/api-reference/authentication",
+    "quote": "Service users are dedicated bot accounts for API access with role-based permissions. This is the recommended authentication method for all new integrations.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.provisioning",
+    "value": "Service users are provisioned in Settings > Devin API for an organization",
+    "url": "https://docs.devin.ai/api-reference/authentication",
+    "quote": "Provision a service user in Settings > Devin API (Service users tab) for an organization.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.pat",
+    "value": "Personal access tokens authenticate as the human user",
+    "url": "https://docs.devin.ai/api-reference/authentication",
+    "quote": "Personal Access Tokens (PATs) allow human users to authenticate programmatically under their own identity.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.key_prefix",
+    "value": "Current credentials use the cog_ prefix; legacy apk_ keys are deprecated",
+    "url": "https://docs.devin.ai/api-reference/authentication",
+    "quote": "All API credentials use the `cog_` prefix format.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.expiry",
+    "value": "Service user key expiration defaults to 30 days",
+    "url": "https://docs.devin.ai/api-reference/authentication",
+    "quote": "defaults to 30 days",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.admin_role",
+    "value": "Admin role is required for impersonating users when creating sessions",
+    "url": "https://docs.devin.ai/api-reference/getting-started/teams-quickstart",
+    "quote": "This requires the **Admin** role (which includes the `ImpersonateOrgSessions` permission).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.setup_path",
+    "value": "Keys are created under Settings > Devin API, Service users tab",
+    "url": "https://docs.devin.ai/api-reference/getting-started/teams-quickstart",
+    "quote": "Go to **Settings > Devin API** in your organization and open the **Service users** tab.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.resources",
+    "value": "Organization API covers sessions, knowledge, playbooks, secrets and more",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "For managing resources within a single organization — sessions, knowledge, playbooks, secrets, and more.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.enterprise",
+    "value": "Enterprise API covers analytics, audit logs, user management, billing, infrastructure",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "For cross-organization management — analytics, audit logs, user management, billing, and infrastructure.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.base",
+    "value": "REST API at api.devin.ai/v3 with Bearer auth",
+    "url": "https://docs.devin.ai/api-reference/authentication",
+    "quote": "All Devin APIs use Bearer token authentication. Include your key in the Authorization header",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official_server",
+    "value": "Devin MCP server is official, hosted at https://mcp.devin.ai/mcp",
+    "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+    "quote": "Set up the official Devin MCP server so external AI tools can manage sessions, playbooks, knowledge, and repository docs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "Devin MCP requires a Devin API key (PAT or service user key)",
+    "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+    "quote": "To use the Devin MCP server, you need a Devin API key:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.capabilities",
+    "value": "MCP server gives session management, playbooks, knowledge and scheduling",
+    "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+    "quote": "it gives any MCP-compatible AI agent or IDE full access to session management, playbooks, knowledge, and scheduling.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "pricing.free_tier",
+    "value": "Free plan at $0 is listed; Pro $20/mo; Max $200/mo; Teams usage-based min $80/mo; Enterprise custom",
+    "url": "https://cognition.com/blog/new-self-serve-plans-for-devin",
+    "quote": "Teams — Usage based, with a minimum spend of $80/month",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "trial",
+    "value": "Only a 2-week free trial for Devin Review is announced",
+    "url": "https://cognition.com/blog/new-self-serve-plans-for-devin",
+    "quote": "We’re now introducing a 2-week free trial for Devin Review.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Exact paid/plan gate for API access: official pricing does not say whether the Free plan includes API keys. A third-party guide says Devin Cloud and the Devin API are paid-only; unverified.",
+   "Whether Service Users tab requires Admin/Owner role to create keys is not stated.",
+   "Webhooks: no evidence found in fetched docs. Need llms.txt or API reference index.",
+   "SDKs (official Python/TypeScript) not verified.",
+   "Full endpoint list and read/write split not verified; only sessions create and list-type endpoints observed.",
+   "Community MCP: no GitHub community repo verified. Gumloop-hosted connector and a Notion connection page exist but are third-party listings, not vendor servers.",
+   "DeepWiki MCP is a separate Cognition product (public, no auth) per a search snippet; not fetched, so not counted here as the Devin MCP.",
+   "Rate limit numbers not published in fetched pages.",
+   "Recheck mcp.devin.ai/mcp directly for auth header format and tool list."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 0.875,
+ "flags": [],
+ "error": null
+}

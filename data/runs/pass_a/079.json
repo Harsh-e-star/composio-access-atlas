@@ -1,0 +1,314 @@
+{
+ "id": 79,
+ "name": "Smartsheet",
+ "category": "Productivity and Project Management",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:30:02Z",
+ "duration_s": 241.5,
+ "cost_usd": 0.0863,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developers.smartsheet.com/",
+   "title": "Smartsheet Developers & API",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://www.smartsheet.com/",
+   "title": "The Execution Hub for Enterprise Work | Smartsheet",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.smartsheet.com",
+   "title": "Smartsheet Developers & API",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://www.smartsheet.com/content-center/best-practices/tips-tricks/api-getting-started",
+   "title": "5 steps for getting started with the Smartsheet API | Smartsheet",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+   "title": "Smartsheet MCP server introduction",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server-tools",
+   "title": "Smartsheet MCP server tools",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developers.smartsheet.com/register",
+   "title": "Register for Smartsheet Developer Tools",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+   "title": "Smartsheet API introduction",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developers.smartsheet.com/api/brandfolder/introduction",
+   "title": "Brandfolder API introduction",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+   "title": "Authentication",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/oauth",
+   "title": "OAuth",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+   "title": "Get Started",
+   "rendered": false
+  },
+  {
+   "id": "S13",
+   "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-quickstart",
+   "title": "Quickstart with the MCP server",
+   "rendered": false
+  },
+  {
+   "id": "S14",
+   "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/agents/cli-agent-power-tools-overview",
+   "title": "CLI Agent Power Tools overview",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/smartsheet-platform/smar-mcp",
+   "title": "smartsheet-platform/smar-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/terilios/smartsheet-server",
+   "title": "terilios/smartsheet-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/smartsheet/cli-agent-power-tools",
+   "title": "smartsheet/cli-agent-power-tools",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Beltran12138/wecom-docs-mcp-server",
+   "title": "Beltran12138/wecom-docs-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Abdeltoto/smartsheet-controller",
+   "title": "Abdeltoto/smartsheet-controller",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/xbenng/smartsheet-mcp-server",
+   "title": "xbenng/smartsheet-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Jiplet/wiki-to-ticket",
+   "title": "Jiplet/wiki-to-ticket",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/prmbr42-bot/smartsheet-mcp-server",
+   "title": "prmbr42-bot/smartsheet-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.smartsheet.com/",
+   "developer_portal": "https://developers.smartsheet.com/",
+   "description": "Smartsheet is a work management platform; its developer program offers a REST API, SDKs, webhooks and an official MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are the official Smartsheet developer site and API docs."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Authorization code flow via POST /token with grant_type=authorization_code; refresh via grant_type=refresh_token.",
+   "token_refresh": "OAuth access tokens expire after 604799 seconds (~7 days); refresh with a refresh token.",
+   "scopes_notes": "Access scopes such as READ_SHEETS, WRITE_SHEETS, ADMIN_SHEETS, ADMIN_WORKSPACES, ADMIN_USERS; scopes don't override sharing permissions."
+  },
+  "access": {
+   "tier": "paid_plan",
+   "free_credentials": "no",
+   "trial_available": "unknown",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Required plan: Business, Enterprise, or Advanced Work Management. Developer Tools registration (for OAuth apps and sandbox account) requires a licensed Business plan or higher user."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Sheets",
+    "Rows",
+    "Columns",
+    "Cells",
+    "Folders",
+    "Workspaces",
+    "Reports",
+    "Dashboards",
+    "Users",
+    "Groups",
+    "Webhooks",
+    "Attachments",
+    "Comments",
+    "Discussions",
+    "Automation Rules",
+    "Sharing",
+    "Search"
+   ],
+   "read_ops": [
+    "List workspaces",
+    "Get sheets",
+    "Search",
+    "Get reports",
+    "Events"
+   ],
+   "write_ops": [
+    "Create/update rows",
+    "Create workspaces",
+    "Report CRUD",
+    "Manage webhooks",
+    "Manage users"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "The API is subject to rate limiting; SDKs include retry logic for rate limit errors (specific limits not in sources).",
+   "limitations": "Requires Business, Enterprise, or Advanced Work Management plan. Separate tokens for Smartsheet, Gov, and Regions environments."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/xbenng/smartsheet-mcp-server",
+    "https://github.com/terilios/smartsheet-server",
+    "https://github.com/Abdeltoto/smartsheet-controller"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+    "quote": "Each API request requires passing in an access token as the Bearer value in your authorization header.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/oauth",
+    "quote": "You can request an access token by calling POST /token with grant_type=authorization_code",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "paid_plan",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+    "quote": "Required plan: Business, Enterprise, or Advanced Work Management",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+    "quote": "Base URL Smartsheet: https://api.smartsheet.com/2.0",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+    "quote": "The API Reference includes object schemas, operation specifications, and code snippets for Sheets , Folders , Users , and more.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+    "quote": "Interact with your project data in Smartsheet using the Smartsheet MCP server connected to Claude, ChatGPT, and other AI clients.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Developer registration requires Business plan or higher",
+    "url": "https://developers.smartsheet.com/register",
+    "quote": "The email address used to register for Developer Tools must belong to an existing licensed Smartsheet user on a Business plan or higher.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sandbox_available",
+    "value": "yes",
+    "url": "https://www.smartsheet.com/content-center/best-practices/tips-tricks/api-getting-started",
+    "quote": "if you want to create a sandbox Smartsheet account that you can use for development and testing purposes",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Specific API rate limit numbers not in sources.",
+   "Whether a free trial of a qualifying plan can be used to get API tokens is not established."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "high",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "yes",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Paid plan required",
+  "rationale": [
+   "API needs a paid plan."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

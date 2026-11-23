@@ -1,0 +1,273 @@
+{
+ "id": 100,
+ "name": "Grain",
+ "category": "AI, Research and Media-native",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:28:26Z",
+ "duration_s": 41.9,
+ "cost_usd": 0.0762,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://grain.com",
+   "title": "Grain | The AI Notetaker Built for Growing Teams",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.grain.com",
+   "title": "Overview — Grain Developers",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.grain.com/authentication.html",
+   "title": "Authentication — Grain Developers",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developers.grain.com/rate-limits.html",
+   "title": "Rate Limits — Grain Developers",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developers.grain.com/mcp/",
+   "title": "Official Grain MCP Server: Quick Start Guide — Grain Developers",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developers.grain.com/endpoints.html",
+   "title": "Endpoints — Grain Developers",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://grain.com/pricing",
+   "title": "Pricing | Grain",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developers.grain.com/mcp/claude-setup.html",
+   "title": "Claude 60-Second Setup — Grain Developers",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developers.grain.com/mcp/chatgpt-setup.html",
+   "title": "ChatGPT Quick Setup — Grain Developers",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developers.grain.com/mcp/tools-and-usage.html",
+   "title": "Available MCP Tools and Basic Usage Examples — Grain Developers",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://developers.grain.com/mcp/structured-reporting.html",
+   "title": "Structured Reporting Examples — Grain Developers",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://developers.grain.com/mcp/faq.html",
+   "title": "Frequently Asked Questions — Grain Developers",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mcpgod/cli",
+   "title": "mcpgod/cli",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/alessandro-afloarei/shadowgit-mcp",
+   "title": "alessandro-afloarei/shadowgit-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/autodesk-platform-services/aps-mcp-server-nodejs",
+   "title": "autodesk-platform-services/aps-mcp-server-nodejs",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/bdecost/mcpm",
+   "title": "bdecost/mcpm",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/hannesill/Gatelet",
+   "title": "hannesill/Gatelet",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/NatLee/telepy",
+   "title": "NatLee/telepy",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/khimaros/mimic",
+   "title": "khimaros/mimic",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/aymanali98/ai-connect",
+   "title": "aymanali98/ai-connect",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://grain.com",
+   "developer_portal": "https://developers.grain.com",
+   "description": "Grain is an AI notetaker that captures and enriches meetings and delivers them to Claude, ChatGPT, or other AI tools; offers a public API and official MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "grain.com meeting notes product confirmed."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "OAuth2 Authorization Code (with PKCE code_verifier); client ID/secret requested manually, or Client ID Metadata Document URL for public clients",
+   "token_refresh": "OAuth access tokens expire and are refreshed via POST oauth2/token with grant_type=refresh_token; PATs and WATs don't expire.",
+   "scopes_notes": "Token scopes: personal (same access as user) and workspace (full workspace data, admin only, not on all plans; workspace scope for OAuth only for Grain-verified clients). MCP accepts only personal-scope tokens."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Workspace-scope tokens require workspace admin and a plan that includes Workspace API; OAuth client ID/secret must be requested manually from Grain; MCP deals/coaching tools limited to Business/Enterprise."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "recordings",
+    "highlights",
+    "uploads",
+    "users",
+    "hooks",
+    "token-info"
+   ],
+   "read_ops": [
+    "token info",
+    "list users"
+   ],
+   "write_ops": [
+    "create/delete hooks"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Token bucket per auth token: capacity 30 requests, refill 2 req/sec (120 req/min sustained); 429 with Retry-After.",
+   "limitations": "Detailed endpoint list only partially visible in sources; requires Public-Api-Version header."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developers.grain.com/mcp/",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT and OAuth2",
+    "url": "https://developers.grain.com/authentication.html",
+    "quote": "Personal Access Token ( PAT ) personal Generated manually from the integrations page . Doesn't expire, and can be revoked at any time.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://developers.grain.com/authentication.html",
+    "quote": "OAuth Token personal , workspace Issued through the OAuth2 Flow . Expires, must be refreshed.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developers.grain.com/",
+    "quote": "A Personal Access Token (PAT) authenticates requests as you, with the same access you have in Grain.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.grain.com/",
+    "quote": "curl -X GET \\ -H \"Authorization: Bearer grain_pat_example123\" \\ -H \"Public-Api-Version: 2026-10-01\" \\ https://api.grain.com/_/public-api/v2/token-info",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Medium",
+    "url": "https://developers.grain.com/",
+    "quote": "The Grain API lets you read and manage recordings, highlights, uploads, and more.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developers.grain.com/mcp/",
+    "quote": "Official Grain MCP Server: Quick Start Guide",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "30 burst, 2 req/sec",
+    "url": "https://developers.grain.com/rate-limits.html",
+    "quote": "Bucket capacity 30 requests Refill rate 2 req/sec",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Full list of v2 endpoints/resources not shown in sources.",
+   "Whether API access is available on the Free plan (workspace scope plan-gated; PAT appears generally available).",
+   "Official SDKs not established."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

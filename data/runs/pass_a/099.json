@@ -1,0 +1,252 @@
+{
+ "id": 99,
+ "name": "YouTube Transcript",
+ "category": "AI, Research and Media-native",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:28:13Z",
+ "duration_s": 34.6,
+ "cost_usd": 0.0826,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://transcriptapi.com",
+   "title": "YouTube Transcript API with Search, Channels & Playlists | TranscriptAPI",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://transcriptapi.com/docs/api/",
+   "title": "YouTube Transcript API Reference | TranscriptAPI.com",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://transcriptapi.com/dashboard/api-keys",
+   "title": "Log in to TranscriptAPI",
+   "rendered": true
+  },
+  {
+   "id": "S4",
+   "url": "https://transcriptapi.com/docs/mcp/",
+   "title": "MCP (Model Context Protocol) | TranscriptAPI.com",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://transcriptapi.com/docs/mcp/chatgpt/",
+   "title": "How to Connect YouTube to ChatGPT (Transcripts and Search) | TranscriptAPI.com",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://transcriptapi.com/docs/mcp/claude/",
+   "title": "Connect TranscriptAPI to Claude (Step-by-Step Guide 2026) | TranscriptAPI.com",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://transcriptapi.com/docs/getting-started/",
+   "title": "Getting Started | TranscriptAPI.com",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://transcriptapi.com/",
+   "title": "YouTube Transcript API with Search, Channels & Playlists | TranscriptAPI",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/kimtaeyoon83/mcp-server-youtube-transcript",
+   "title": "kimtaeyoon83/mcp-server-youtube-transcript",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jkawamoto/mcp-youtube-transcript",
+   "title": "jkawamoto/mcp-youtube-transcript",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/cottongeeks/ytt-mcp",
+   "title": "cottongeeks/ytt-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mybuddymichael/youtube-transcript-mcp",
+   "title": "mybuddymichael/youtube-transcript-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/JangHyuckYun/mcp-youtube-intelligence",
+   "title": "JangHyuckYun/mcp-youtube-intelligence",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/adhikasp/mcp-youtube",
+   "title": "adhikasp/mcp-youtube",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ergut/youtube-transcript-mcp",
+   "title": "ergut/youtube-transcript-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sinco-lab/mcp-youtube-transcript",
+   "title": "sinco-lab/mcp-youtube-transcript",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://transcriptapi.com",
+   "developer_portal": "https://transcriptapi.com/docs/api/",
+   "description": "TranscriptAPI is a hosted REST API and MCP server for fetching YouTube transcripts, searching YouTube, browsing channels and playlists.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Matches assignment hint transcriptapi.com; product is a third-party YouTube transcript API (not Google/YouTube official)."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "OAuth 2.1 for MCP clients: Dynamic Client Registration (Claude) and Static Client Registration with Client ID/Secret (ChatGPT). Required scope mcp:access.",
+   "token_refresh": "OAuth: automatic token refresh for MCP; API keys never expire unless revoked.",
+   "scopes_notes": "MCP OAuth scope: mcp:access. REST API uses Bearer API key (sk_ prefix)."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "no",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "100 free credits to start; after that a paid plan ($5/month for 1,000 credits) is needed. Rate limit 200-300 RPM."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "transcript",
+    "video info",
+    "video metadata",
+    "search",
+    "channel",
+    "playlist"
+   ],
+   "read_ops": [
+    "get transcript",
+    "video info/metadata",
+    "search YouTube",
+    "resolve channel",
+    "list channel videos",
+    "search within channel",
+    "playlist videos",
+    "latest uploads via RSS"
+   ],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "Starter Monthly 200 requests per minute; Annual 300 RPM (more on request); per account, shared across keys. HTTP 429 when exceeded.",
+   "limitations": "Read-only access to YouTube data; each paid request costs 1 credit; 402 when credits exhausted."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://transcriptapi.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/kimtaeyoon83/mcp-server-youtube-transcript",
+    "https://github.com/jkawamoto/mcp-youtube-transcript"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key (Bearer) and OAuth2",
+    "url": "https://transcriptapi.com/docs/mcp/",
+    "quote": "Authentication: OAuth 2.1 (Claude, ChatGPT) or an API key sent as a Bearer token (OpenAI Agent Builder and other clients).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "REST uses Bearer API key",
+    "url": "https://transcriptapi.com/docs/api/",
+    "quote": "The API uses Bearer token authentication. Include your API key in the Authorization header of every request",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://transcriptapi.com",
+    "quote": "new accounts get 100 free credits, no card required, and one transcript costs one credit.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://transcriptapi.com/docs/getting-started/",
+    "quote": "Get YouTube video transcripts through our REST API or seamlessly integrate with AI assistants using Model Context Protocol (MCP).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Medium",
+    "url": "https://transcriptapi.com/docs/getting-started/",
+    "quote": "Search YouTube videos and channels (paginated) Browse channel uploads with pagination Get latest channel videos (free, via RSS) Browse playlist contents with pagination",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://transcriptapi.com/docs/mcp/",
+    "quote": "TranscriptAPI runs a hosted (remote) MCP server at https://transcriptapi.com/mcp .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "200/300 RPM",
+    "url": "https://transcriptapi.com/docs/api/",
+    "quote": "The limit applies per account : all API keys on your account share it.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": []
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

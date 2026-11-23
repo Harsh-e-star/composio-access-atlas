@@ -1,0 +1,244 @@
+{
+ "id": 21,
+ "name": "Slack",
+ "category": "Communications and Messaging",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:23:22Z",
+ "duration_s": 82.7,
+ "cost_usd": 0.0569,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://slack.com",
+   "developer_portal": "https://docs.slack.dev/",
+   "description": "Slack is a workspace messaging and collaboration platform (slack.com). Slack's developer platform, documented at docs.slack.dev, exposes the Web API, Events API, Socket Mode, Incoming Webhooks, and an official Slack-hosted MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources clearly describe the Slack workspace messaging product and its developer platform. Slack's own docs, the official slackapi GitHub org, and Slack's help center all point to the same product."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT",
+    "Other"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "OAuth 2.0 v2 install flow: the app exchanges a code via oauth.v2.access for bot or user tokens. For MCP, Slack supports confidential OAuth with client_id/client_secret, user authorize endpoint https://slack.com/oauth/v2_user/authorize, token endpoint https://slack.com/api/oauth.v2.user.access; PKCE for desktop clients. DCR and SSE are not supported.",
+   "token_refresh": "unknown: sources do not describe refresh-token behavior for bot or user tokens. Workflow tokens expire after 15 minutes.",
+   "scopes_notes": "Granular OAuth scopes, especially for bot users (v2 flow). Bot tokens (xoxb-) are tied to an installed app; user tokens (xoxp-) are issued to the installing user and authenticating users. App-level tokens (xapp-) are used for Socket Mode. Workflow tokens (xwfp-) expire after 15 minutes. Service tokens are only for Deno Slack SDK apps."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "For the MCP server only: Only apps published in the Slack Marketplace and internal apps can use MCP at this time; workspace admins must approve MCP client integrations. Unlisted apps are not permitted. Marketplace listing requires Slack's standard app approval process. The Web API has no stated production review in these sources."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "WebSocket"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "messages",
+    "channels/conversations",
+    "users",
+    "files",
+    "canvases",
+    "lists",
+    "reactions",
+    "usergroups",
+    "emoji",
+    "views/dialogs",
+    "Slack MCP server (JSON-RPC 2.0 over Streamable HTTP)"
+   ],
+   "read_ops": [
+    "search messages, files, users, channels, emoji (MCP)",
+    "list a user's channels",
+    "read channel history, threads, canvases",
+    "fetch user info",
+    "list channel members",
+    "read files",
+    "get reactions",
+    "read lists",
+    "conversations.history/replies (Web API)"
+   ],
+   "write_ops": [
+    "send and schedule messages (chat.postMessage)",
+    "create conversations/channels (conversations.create)",
+    "add reactions",
+    "create and update canvases",
+    "upload files",
+    "create and update lists and records",
+    "open dialogs (dialog.open)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Tiered per method: Tier 2 (20+/min) to Tier 4 (100+/min); search and message-sending have special limits (per Slack MCP docs).",
+   "limitations": "Web API is HTTP RPC-style and Slack says it is 'not a REST API'; REST is the closest enum value. Method count is stated as 'over 200' on the Web API page and 'over 270' in the Node SDK README. The MCP server only works with Marketplace-published or internal apps and does not support SSE or Dynamic Client Registration. Events API is delivered via Socket Mode or HTTP request URL."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.slack.dev/ai/slack-mcp-server/",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/korotovsky/slack-mcp-server",
+    "https://github.com/dennisonbertram/mcp-slack",
+    "https://github.com/redhat-ai-tools/slack-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity: product description",
+    "value": "Slack's developer platform docs describe the Web API as an interface for querying information from and enacting change in a Slack workspace",
+    "url": "https://docs.slack.dev/apis/web-api/",
+    "quote": "an interface for querying information _from_ and enacting change _in_ a Slack workspace.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api: breadth/size",
+    "value": "Web API has over 200 methods",
+    "url": "https://docs.slack.dev/apis/web-api/",
+    "quote": "With over 200 methods, surely there's one right for you.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api: protocol",
+    "value": "Web API is HTTP RPC-style, not a REST API, with URLs of the form https://slack.com/api/METHOD_FAMILY.method",
+    "url": "https://docs.slack.dev/apis/web-api/",
+    "quote": "The page says it's 'not a REST API,' though it builds on HTTP.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth: bearer tokens",
+    "value": "Web API requests authenticate with bearer tokens, OAuth 2.0 is the supported scheme",
+    "url": "https://docs.slack.dev/apis/web-api/",
+    "quote": "Tokens should be sent in the Authorization: Bearer header",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth: token types",
+    "value": "User tokens (xoxp-) are issued for the installing user and for users who authenticate the app",
+    "url": "https://docs.slack.dev/authentication/tokens",
+    "quote": "They are issued for the user who installed the app and for users who authenticate the app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth: bot tokens",
+    "value": "Bot tokens (xoxb-) are tied to an app installed in a workspace; the quickstart guide explains how to get one",
+    "url": "https://docs.slack.dev/authentication/tokens",
+    "quote": "Refer to the quickstart guide for Slack apps to learn how to get one.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth: OAuth v2 install",
+    "value": "Slack's OAuth v2 flow provides more granular scopes, especially for bot users; the app exchanges the code by calling oauth.v2.access",
+    "url": "https://api.slack.com/authentication/oauth-v2",
+    "quote": "We've created this V2 OAuth flow because it provides more granular Slack scopes, especially for bot users.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access: developer sandbox",
+    "value": "Developer Program provides a free sandbox for building and experimenting with apps outside production",
+    "url": "https://docs.slack.dev/ai/slack-mcp-server/developing",
+    "quote": "for access to a free sandbox where you can build and experiment with apps outside of a production environment.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access: MCP production gate",
+    "value": "Only Marketplace-published or internal apps can use MCP at this time",
+    "url": "https://docs.slack.dev/ai/slack-mcp-server/",
+    "quote": "Only apps published in the Slack Marketplace and internal apps can use MCP at this time.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access: admin approval for MCP",
+    "value": "Workspace admins can approve and manage all MCP client integrations",
+    "url": "https://docs.slack.dev/ai/slack-mcp-server/",
+    "quote": "Workspace admins can approve and manage all MCP client integrations.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp: official server endpoint/transport",
+    "value": "Slack hosts an official MCP server at https://mcp.slack.com/mcp using JSON-RPC 2.0 over Streamable HTTP; no SSE or Dynamic Client Registration",
+    "url": "https://docs.slack.dev/ai/slack-mcp-server/",
+    "quote": "We do not support SSE-based connections or Dynamic Client Registration at this time.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp: rate limits",
+    "value": "Slack MCP server is subject to the same tiered rate limits as Web API methods",
+    "url": "https://docs.slack.dev/ai/slack-mcp-server/",
+    "quote": "Like all Slack Web API methods, the Slack MCP server is subject to rate limits.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks: events api",
+    "value": "Events API pushes JSON events to the app via Socket Mode or an HTTP request URL",
+    "url": "https://docs.slack.dev/apis/events-api/",
+    "quote": "When you use the Events API, Slack calls you.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks: official node sdk",
+    "value": "Official Node.js SDK slackapi/node-slack-sdk (MIT) with Web API, OAuth, Webhooks, and Socket Mode packages",
+    "url": "https://github.com/slackhq/node-slack-sdk",
+    "quote": "Slack Developer Kit for Node.js",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp: community server",
+    "value": "korotovsky/slack-mcp-server is a community MIT-licensed MCP server owned by an individual, not an official Slack product",
+    "url": "https://github.com/korotovsky/slack-mcp-server",
+    "quote": "Model Context Protocol (MCP) server for Slack Workspaces.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Whether a free developer workspace or an admin approval step is required to install a test app in a workspace (not stated on the pages fetched).",
+   "Whether a paid Slack plan is required for Web API access in test workspaces (not stated).",
+   "Exact rate-limit tier per method and the specific limits for search and message-sending (method pages not fetched).",
+   "Whether the Web API method count is 200+ or 270+ (sources conflict).",
+   "Whether Slack's official MCP server ships as a GitHub repo under a slackapi or similar org; only the docs.slack.dev page was confirmed.",
+   "Whether the 'GA February 17, 2026' date for the MCP server is correct (one third-party source only).",
+   "Quotes were drawn from model-extracted page text, so they should be checked against the raw pages before relying on them."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST/WebSocket interface."
+  ]
+ },
+ "evidence_support_rate": 0.8,
+ "flags": [],
+ "error": null
+}

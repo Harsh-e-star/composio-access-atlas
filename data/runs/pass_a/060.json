@@ -1,0 +1,269 @@
+{
+ "id": 60,
+ "name": "Clay",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:21:54Z",
+ "duration_s": 33.8,
+ "cost_usd": 0.083,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.clay.com/",
+   "title": "Clay | Build systems to grow revenue",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.clay.com",
+   "title": "Overview - Clay docs",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://university.clay.com/",
+   "title": "Clay University | The fastest way to master Clay",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://www.clay.com/mcp",
+   "title": "Clay MCP Give reps the best prospecting data in their AI tools | clay.com",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://university.clay.com/courses/clay-mcps-for-reps",
+   "title": "Clay MCP for Reps - Clay University",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://university.clay.com/courses/clay-mcp-for-ops",
+   "title": "Clay MCP for Ops - Clay University",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developers.clay.com/quickstart",
+   "title": "Quickstart - Clay docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://www.clay.com/pricing",
+   "title": "Compare plans, features & costs | Clay.com",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developers.clay.com/public-api/authentication",
+   "title": "Authentication - Clay docs",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://www.clay.com/customers/saviynt",
+   "title": "How Saviynt SDRs used Clay MCP to grow pipeline by $32.2M | Clay.com",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://university.clay.com/lessons/what-is-clay-mcp",
+   "title": "Introducing Clay MCP for Reps [Clay MCP for Reps] - Clay University",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://university.clay.com/lessons/why-mcp-for-operators",
+   "title": "Why MCP for Operators [Clay MCP for Ops] - Clay University",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/clay-run/agent-plugins",
+   "title": "clay-run/agent-plugins",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/clay-good/proxilion-mcp",
+   "title": "clay-good/proxilion-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/bpw-civic/clay-mcp-server",
+   "title": "bpw-civic/clay-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mambalabsdev/mcp-gtm-suite",
+   "title": "mambalabsdev/mcp-gtm-suite",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mambalabsdev/mcp-icp-fit-scorer",
+   "title": "mambalabsdev/mcp-icp-fit-scorer",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mambalabsdev/mcp-job-board-keyword-signal-scanner",
+   "title": "mambalabsdev/mcp-job-board-keyword-signal-scanner",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mambalabsdev/mcp-domain-to-linkedin-url-resolver",
+   "title": "mambalabsdev/mcp-domain-to-linkedin-url-resolver",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/loootai/looot-tables",
+   "title": "loootai/looot-tables",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.clay.com/",
+   "developer_portal": "https://developers.clay.com",
+   "description": "Clay is a GTM data and workflow platform offering enrichment across 150-200+ data providers, people/company search, agents, Audiences, and a developer platform (Public API, CLI, agent plugin, MCP).",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources from clay.com and developers.clay.com describe the product."
+  },
+  "auth": {
+   "methods": [
+    "API key"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "API keys are tied to a Clay user and workspace access. CLI sign-in opens a browser to authorize the CLI."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Pricing page lists Clay API access under the Enterprise plan; developer docs say Tables API is Enterprise only. Whether the Public API with keys is available on the free plan is not clearly established."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "Searches",
+    "Routines",
+    "Tables (Enterprise)",
+    "Audiences",
+    "Signals"
+   ],
+   "read_ops": [
+    "Search companies and people",
+    "Query table data",
+    "Read Audiences records, segments, activities, signal events"
+   ],
+   "write_ops": [
+    "Run routines/functions/workflows",
+    "Create signals",
+    "Create API keys"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "Tables are Enterprise only; Workflows API is Alpha."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://www.clay.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/bpw-civic/clay-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://developers.clay.com/public-api/authentication",
+    "quote": "Every request to the Clay Public API must include a Clay API key in the clay-api-key header.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "unknown",
+    "url": "https://www.clay.com/pricing",
+    "quote": "Includes everything in Growth , plus unlimited Audiences across sources, unlimited row bulk enrichment, Clay API access, data warehouse syncs, SSO, RBAC permissions management",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST, CLI/library",
+    "url": "https://developers.clay.com/quickstart",
+    "quote": "The agent plugin gives your coding agent Clay’s skills and the clay CLI — the fastest way to build with Clay from a coding agent.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Medium",
+    "url": "https://developers.clay.com",
+    "quote": "Searches Find companies and people using Clay’s GTM database Routines Run Clay-managed functions, custom functions, and Workflows Tables (Enterprise) Query existing Clay table data from known tables",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://www.clay.com/mcp",
+    "quote": "Prompt ChatGPT, Codex or Claude to use Clay Functions, reason across your Audiences, or return up to 1,000 People Search results.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial_available",
+    "value": "yes",
+    "url": "https://www.clay.com/pricing",
+    "quote": "Free Start building in Clay for free. No strings attached.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is Public API key creation available on the free plan or only Enterprise?",
+   "Rate limits and webhooks for the Public API are not stated.",
+   "Are there official SDKs?"
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

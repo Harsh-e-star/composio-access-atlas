@@ -1,0 +1,192 @@
+{
+ "id": 68,
+ "name": "MongoDB Atlas",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:35:02Z",
+ "duration_s": 74.5,
+ "cost_usd": 0.0725,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.mongodb.com/docs/atlas/",
+   "developer_portal": "https://www.mongodb.com/docs/atlas/api/",
+   "description": "MongoDB Atlas is MongoDB's fully managed cloud database service. Its Atlas Administration API (v2) manages Atlas organizations, projects, clusters, users and related objects over HTTP.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Assignment hint matches the Atlas Administration API docs at mongodb.com/docs/atlas/api. The pages fetched describe MongoDB Atlas and its Admin API directly. The Admin API is the programmatic surface of the Atlas product, not a separate product."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "API key"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "OAuth 2.0 Client Credentials flow for service accounts (client ID + rotatable secret exchanged for an access token).",
+   "token_refresh": "Access tokens last 1 hour (3600 seconds). Tokens cannot be refreshed; a new token is generated when the current one nears expiry. Tokens can be reused until then.",
+   "scopes_notes": "No OAuth scopes. Access is governed by Atlas roles assigned to the service account or API key. Service accounts are scoped to one organization and can be granted access to any number of its projects."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No app review found. An Atlas account and an organization are needed, and creating service accounts or API keys for an organization requires the Organization Owner role. The creator is the owner, so no third-party approval was found. Paid-plan gating for service accounts was not stated in the pages reviewed."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "organizations",
+    "projects",
+    "clusters",
+    "database users",
+    "users",
+    "access/IP access lists",
+    "alerts",
+    "rate limits",
+    "service accounts"
+   ],
+   "read_ops": [
+    "List/get clusters, projects, users, rate limits (GET /api/atlas/v2/rateLimits)"
+   ],
+   "write_ops": [
+    "Create, edit or delete administrative objects such as projects, users and clusters"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "Token-bucket rate limiting per endpoint set and scope. Exceeding it returns HTTP 429 with Retry-After. The docs do not publish a single requests-per-second number; higher limits are available on request.",
+   "limitations": "Service accounts only grant access to the Atlas Administration API; they do not include UI access or access to cluster data. API keys are a legacy method. Rate limits are not part of the API contract and may change. Breadth 'Broad' rests on summary-level evidence from the overview page and the MCP tool list, not a full endpoint inventory."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/mongodb-js/mongodb-mcp-server",
+   "community": "unknown",
+   "community_urls": [
+    "https://github.com/mongodb-developer/mcp-mongodb-atlas"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "MongoDB Atlas Administration API lets you programmatically perform administrative tasks on Atlas outside the UI",
+    "url": "https://www.mongodb.com/docs/atlas/api/",
+    "quote": "Programmatically perform administrative tasks on your Atlas cluster outside of the Atlas UI with the Atlas Administration API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.service_account",
+    "value": "Service accounts use OAuth 2.0 Client Credentials with a client ID and rotatable secret",
+    "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+    "quote": "Each service account has a client ID and a rotatable secret that function as a username and a password for creating access tokens.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_lifetime",
+    "value": "Access tokens last 1 hour and cannot be refreshed",
+    "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+    "quote": "Service account access tokens have a 1 hour (3600 seconds) lifespan, during which you can reuse the token multiple times.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.api_key",
+    "value": "API keys are a legacy method using HTTP Digest authentication",
+    "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+    "quote": "API keys are a legacy method of authenticating to the Atlas Administration API that uses HTTP Digest Authentication.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.recommendation",
+    "value": "Service accounts are recommended over API keys",
+    "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+    "quote": "We recommend you use service accounts instead of API keys to authenticate to the Atlas Administration API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.who_can_create",
+    "value": "Creating service accounts or API keys for an organization requires the Organization Owner role",
+    "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+    "quote": "To create a service account or API keys for an organization, you must have Organization Owner access to that organization.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.prerequisite",
+    "value": "An Atlas account is the only prerequisite stated; no paid plan or approval step was listed",
+    "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+    "quote": "You have an Atlas account. To create one, see Create an Atlas Account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdk",
+    "value": "Atlas Go SDK is published for use with the Admin API",
+    "url": "https://www.mongodb.com/docs/atlas/api/",
+    "quote": "The Atlas Go SDK provides platform-specific and Go language-specific tools, libraries, and documentation to help you build applications",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Official MongoDB MCP server repo under mongodb-js org, Apache-2.0; bundled with MongoDB plugins for AI agents",
+    "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "quote": "comes bundled with the official MongoDB plugins for AI agents",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.atlas_tools",
+    "value": "The official MCP server's Atlas tools require service account credentials",
+    "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "quote": "Service Accounts Atlas API credentials are required to use the Atlas tools.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.docs",
+    "value": "MongoDB docs document an MCP server for managing deployments, including databases, collections and indexes",
+    "url": "https://www.mongodb.com/docs/mcp-server/",
+    "quote": "Use the MongoDB MCP Server to manage your MongoDB deployments, including creating and managing databases, collections, and indexes.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Webhooks: no evidence found for Atlas Admin API webhooks or webhook-based alert notifications. Status is unknown.",
+   "Numeric rate limits for the Admin API are not published. The rate-limit docs (https://www.mongodb.com/docs/atlas/api/api-rate-limit/) describe token buckets and 429/Retry-After, but the page was not fetched.",
+   "Whether a paid plan or Project Owner role is needed to create a Free (M0) cluster via the API is not confirmed.",
+   "Is there a full Admin API SDK list beyond the Go SDK? Only the Go SDK was confirmed.",
+   "The mongodb-developer/mcp-mongodb-atlas repo (community-labelled in search) was not fetched; its ownership and maintenance are unverified. Forks of mongodb-js/mongodb-mcp-server under other users were seen in search results but not verified.",
+   "Atlas Managed (remote) MCP server exists per the MCP rate-limit docs. Its exact vendor status and auth flow were not fetched.",
+   "Whether the Admin API spec (v2) is broad across all product areas (e.g., search, data federation, stream processing) was not independently inventoried."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

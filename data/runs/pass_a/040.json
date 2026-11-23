@@ -1,0 +1,269 @@
+{
+ "id": 40,
+ "name": "SendGrid",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:19:37Z",
+ "duration_s": 45.3,
+ "cost_usd": 0.0833,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.twilio.com/en-us/sendgrid",
+   "title": "SendGrid Email API and Email Marketing Campaigns | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://www.twilio.com/docs/sendgrid",
+   "title": "Twilio SendGrid | SendGrid Docs | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://www.twilio.com/en-us/user-authentication-identity/pricing/lookup",
+   "title": "Lookup API Pricing | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/api-keys",
+   "title": "API Keys | SendGrid Docs | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://www.twilio.com/en-us/user-authentication-identity",
+   "title": "User Authentication & Identity | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://www.twilio.com/en-us/user-authentication-identity/verify",
+   "title": "Verify API | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://www.twilio.com/en-us/user-authentication-identity/lookup",
+   "title": "Lookup API | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/how-to-set-up-domain-authentication",
+   "title": "Configure domain authentication | SendGrid Docs | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+   "title": "SendGrid v3 API reference | SendGrid Docs | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://www.twilio.com/en-us/pricing",
+   "title": "Twilio Pricing | Twilio",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Garoth/sendgrid-mcp",
+   "title": "Garoth/sendgrid-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/KiKi-Builds/AI-Briefing-Skill",
+   "title": "KiKi-Builds/AI-Briefing-Skill",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/deyikong/sendgrid-mcp",
+   "title": "deyikong/sendgrid-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/garethcull/sendgrid-mcp",
+   "title": "garethcull/sendgrid-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/reshashi/opensend",
+   "title": "reshashi/opensend",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/defy-works/sendsprite",
+   "title": "defy-works/sendsprite",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/universal-mcp/sendgrid",
+   "title": "universal-mcp/sendgrid",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/alexcong/sendgrid-mcp",
+   "title": "alexcong/sendgrid-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.twilio.com/en-us/sendgrid",
+   "developer_portal": "https://www.twilio.com/docs/sendgrid",
+   "description": "Twilio SendGrid is a cloud email platform offering a transactional Email API/SMTP service and Marketing Campaigns, now hosted on Twilio.com.",
+   "identity_confirmed": "yes",
+   "identity_notes": "SendGrid is now part of Twilio; the sendgrid.com site was merged into twilio.com."
+  },
+  "auth": {
+   "methods": [
+    "API key"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "API keys do not expire. They are shown once at creation and can be revoked or replaced manually.",
+   "scopes_notes": "API keys have Full Access, Custom Access (per endpoint and access level), Billing Access, or Email Address Validation Access permissions. Limit of 100 keys per account."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Free tier is limited to 100 emails/day. EU-pinned domains and link branding need the Email API Pro or higher plan, or the Marketing Campaigns Advanced or higher plan."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "mail send",
+    "marketing campaigns",
+    "contacts",
+    "templates",
+    "stats",
+    "API keys",
+    "subusers",
+    "teammates",
+    "domain authentication",
+    "inbound parse",
+    "event webhook"
+   ],
+   "read_ops": [
+    "email statistics",
+    "email activity",
+    "contacts"
+   ],
+   "write_ops": [
+    "send mail",
+    "create marketing campaigns",
+    "manage contacts",
+    "manage API keys"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Each user may have a maximum of 3,000 authenticated domains and 3,000 link brandings."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/Garoth/sendgrid-mcp",
+    "https://github.com/deyikong/sendgrid-mcp",
+    "https://github.com/garethcull/sendgrid-mcp",
+    "https://github.com/universal-mcp/sendgrid",
+    "https://github.com/alexcong/sendgrid-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/api-keys",
+    "quote": "To authenticate access to Twilio SendGrid services, use Application Programming Interface (API) keys.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://www.twilio.com/en-us/pricing",
+    "quote": "Start for free with 100 emails/day. Paid plans start at $19.95/month.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+    "quote": "The SendGrid v3 Web API provides a REST interface to send email at scale and ensure your application can handle high volumes.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+    "quote": "The SendGrid API endpoints allow you to integrate with your tech stack to send transactional emails, create marketing campaigns, manage your contacts, and monitor the health of your email statistics.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "unknown",
+    "url": "https://www.twilio.com/docs/sendgrid",
+    "quote": "Build transactional and marketing email solutions with Twilio SendGrid.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "yes",
+    "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+    "quote": "See our open-source SDKs and tools to integrate with SendGrid.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Does Twilio publish an official SendGrid MCP server? The sources show only community repos.",
+   "What are the API rate limits?",
+   "Is there a sandbox mode? Mail Send sandbox mode is not covered in these sources.",
+   "Does the free plan remain available after the trial period? The pricing page says 'Start for free with 100 emails/day', but the duration is not stated."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "high",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

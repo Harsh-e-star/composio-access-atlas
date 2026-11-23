@@ -1,0 +1,232 @@
+{
+ "id": 24,
+ "name": "Lark (Larksuite)",
+ "category": "Communications and Messaging",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:24:09Z",
+ "duration_s": 77.0,
+ "cost_usd": 0.0512,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.larksuite.com",
+   "developer_portal": "https://open.larksuite.com/llms.txt",
+   "description": "Lark (Larksuite) is the international version of Feishu, a collaboration suite (messaging, docs, calendar, tasks, approvals, admin) run by ByteDance. Its developer platform is Lark Open Platform at open.larksuite.com; the Feishu equivalent is open.feishu.cn.",
+   "identity_confirmed": "yes",
+   "identity_notes": "open.larksuite.com/llms.txt is the Lark Developer index. The official MCP README calls the product Feishu/Lark. The docs describe the Larksuite overseas domain, so this is the Larksuite product."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "user_access_token is obtained via the standard OAuth 2.0 browser web flow; tenant_access_token is used for app-identity calls.",
+   "token_refresh": "unknown",
+   "scopes_notes": "The app must apply for API permissions (scopes), and a tenant administrator must approve them before API calls or event listening work. Data scope is further limited by app data permissions."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "yes",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Scopes need tenant administrator approval, and a published app version needs admin approval. Store (marketplace) apps can only be created by ISV-qualified users. A test company can be configured for development so permissions take effect without approval."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Contacts",
+    "Messaging (IM)",
+    "Group chat",
+    "Message feed",
+    "Cloud docs",
+    "Calendar",
+    "Video conferencing",
+    "Attendance",
+    "Approval",
+    "Bot",
+    "Tasks",
+    "Email",
+    "App and company info",
+    "Admin",
+    "OKR",
+    "Security and compliance",
+    "Minutes",
+    "Workplace",
+    "Base (Bitable) extensions",
+    "AI"
+   ],
+   "read_ops": [
+    "List and get messages and group chats (IM)",
+    "Contacts batch user ID lookup",
+    "Calendar events and free/busy queries",
+    "Bitable tables, fields, and records",
+    "Docx content, search, and wiki nodes"
+   ],
+   "write_ops": [
+    "Send messages",
+    "Create and modify tasks, including members and reminders",
+    "Create, update, and delete Bitable records",
+    "Document content import and drive permissions"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "unknown",
+   "limitations": "Permissions are gated by admin approval and data permissions. Rate limits and paid-plan requirements were not established. The official MCP server is in Beta."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/larksuite/lark-openapi-mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://mcpservers.org/de/servers/KAIpany/Lark-MCP-KAIpany"
+   ]
+  },
+  "claims": [
+   {
+    "field": "product identity",
+    "value": "Lark Developer index describes Lark developer platform (Larksuite overseas domain)",
+    "url": "https://open.larksuite.com/llms.txt",
+    "quote": "Lark Developer",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "app creation",
+    "value": "Developers create self-built or store apps in the developer console; store apps require ISV qualification",
+    "url": "https://open.larksuite.com/llms.txt",
+    "quote": "创建自建应用或者商店应用。仅拥有 ISV 资质的用户可以创建商店应用。",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth tokens",
+    "value": "user_access_token uses standard OAuth 2.0 browser web flow; tenant_access_token is for app-identity calls",
+    "url": "https://open.larksuite.com/llms.txt",
+    "quote": "以用户身份调用 API 时需要使用的凭证，可读写的数据范围由用户权限决定。",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "admin approval",
+    "value": "App permissions need tenant admin approval before API calls or event listening",
+    "url": "https://open.larksuite.com/llms.txt",
+    "quote": "由企业管理员审核通过后，应用才可以进行后续的 API 调用或事件监听。",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "test company",
+    "value": "Test company/version lets developers debug APIs without waiting for approval",
+    "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes.md",
+    "quote": "基于测试版本开通的权限无需等待审核通过即可生效，从而进行 API 调试。",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "test company",
+    "value": "Developer can use user_access_token directly for debugging without publishing the app",
+    "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes.md",
+    "quote": "申请后，无需发布应用并等待审核通过，直接使用应用开发者的用户访问凭证（user_access_token）即可调试 API。",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "admin review",
+    "value": "Developer-requested permissions must pass tenant administrator review",
+    "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes.md",
+    "quote": "应用开发者申请的权限需要通过 租户管理员 的审核。",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "API call credential",
+    "value": "API calls must carry access credential in HTTP header",
+    "url": "https://open.larksuite.com/llms.txt",
+    "quote": "调用 API 时，必须在 HTTP Header 中携带访问凭证",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "events",
+    "value": "Lark sends event messages per configured subscription method; traditional Webhook mode needs a public server URL",
+    "url": "https://open.larksuite.com/llms.txt",
+    "quote": "传统的 Webhook 模式，该方式需要你提供用于接收事件或回调消息的服务器公网地址。",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "SDKs",
+    "value": "Official server SDKs for Go, Python, Java, Node.js handle token management, encryption, and signature verification",
+    "url": "https://open.larksuite.com/llms.txt",
+    "quote": "将访问凭证（access token）的获取与维护、数据加解密、请求验签逻辑内置处理。",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "official MCP",
+    "value": "Official Feishu/Lark OpenAPI MCP server owned by larksuite GitHub org, MIT license",
+    "url": "https://github.com/larksuite/lark-openapi-mcp",
+    "quote": "This is the Feishu/Lark official OpenAPI MCP (Model Context Protocol) tool.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "official MCP",
+    "value": "Published on npm as @larksuiteoapi/lark-mcp; stdio default, SSE deprecated",
+    "url": "https://cdn.jsdelivr.net/npm/@larksuiteoapi/lark-mcp@0.5.1/README.md",
+    "quote": "This is the Feishu/Lark official OpenAPI MCP (Model Context Protocol) tool",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "MCP beta",
+    "value": "Official MCP README says it is in Beta; features may change",
+    "url": "https://cdn.jsdelivr.net/npm/@larksuiteoapi/lark-mcp@0.5.1/README.md",
+    "quote": "This tool is currently in Beta stage.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "community MCP",
+    "value": "Community Feishu/Lark OpenAPI MCP listing by KAIpany (not vendor)",
+    "url": "https://mcpservers.org/de/servers/KAIpany/Lark-MCP-KAIpany",
+    "quote": "Feishu/Lark OpenAPI MCP Server",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Whether a free developer account or test enterprise can be created without a paid plan (pricing/tier not established).",
+   "Exact token exchange (app_id+app_secret to tenant_access_token) and token refresh mechanics were not fetched.",
+   "Rate limits and whether the Lark developer console is available in all regions were not verified.",
+   "Whether the npm page (403 on fetch) and the official MCP repository's current release status match the Beta label.",
+   "Webhook long-connection mode (if any) not verified; only traditional public-URL webhook mode was confirmed."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "high",
+  "credential_accessibility": "unknown",
+  "production_readiness": "review_required",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 0.786,
+ "flags": [],
+ "error": null
+}

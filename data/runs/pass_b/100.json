@@ -1,0 +1,195 @@
+{
+ "id": 100,
+ "name": "Grain",
+ "category": "AI, Research and Media-native",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:38:02Z",
+ "duration_s": 63.4,
+ "cost_usd": 0.0485,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://grain.com/",
+   "developer_portal": "https://developers.grain.com/",
+   "description": "Grain (grain.com) is an AI meeting recorder and notes product. Its public API is documented at developers.grain.com and served from api.grain.com.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Support article and developer docs both describe the Grain API for meeting recordings. The 'grain.com (meeting notes)' hint matches. Some third-party listings have similar names, but these pages are Grain's own."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Confirmed for the official MCP server only (OAuth 2.1 with Dynamic Client Registration, per Scalekit's listing of Grain's MCP). The REST API accepting OAuth2 access tokens is reported only by Jentic, a secondary source, and is unverified.",
+   "token_refresh": "unknown",
+   "scopes_notes": "Personal tokens act as the user with that user's Grain permissions. Workspace tokens grant access to all workspace data. No scope list was retrieved."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Not established. Personal tokens are self-issued. Workspace tokens need a workspace admin and a Business or Enterprise plan. Public app/OAuth listing requirements were not checked."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Unknown",
+   "resources": [
+    "recordings",
+    "highlights",
+    "uploads",
+    "meetings"
+   ],
+   "read_ops": [
+    "token-info (GET /_/public-api/v2/token-info, confirmed in docs example)"
+   ],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "A Rate Limits page exists at developers.grain.com but its values were not retrieved.",
+   "limitations": "Only the token-info endpoint was seen directly. Endpoint reference, Hooks and Authentication pages returned HTTP 403 to my fetch. Requests require Authorization and Public-Api-Version headers (example version 2026-10-01). Third-party listings describe recording, highlight and story webhook events, but these were not verified on Grain's pages. v1 (beta) reportedly sunset Sept 2026 (search snippet only)."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developers.grain.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://awesome.ecosyste.ms/projects/github.com%2Feadm%2Fgrain-mcp-server",
+    "https://mcp.so/servers/grain-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "product_description",
+    "value": "The Grain API lets developers read meeting data, manage recordings, and receive real-time events",
+    "url": "https://support.grain.com/en/articles/15507288-grain-api",
+    "quote": "The Grain API lets developers read meeting data, manage recordings, and receive real-time events from Grain programmatically.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "personal_token_access",
+    "value": "Personal API tokens are generated in Account settings, Integrations, Personal API; available on every plan including Free",
+    "url": "https://support.grain.com/en/articles/15507288-grain-api",
+    "quote": "They are available on every plan, including Free.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "workspace_token_gate",
+    "value": "Workspace tokens require admin access and Business or Enterprise plans",
+    "url": "https://support.grain.com/en/articles/15507288-grain-api",
+    "quote": "Requires admin access to generate and is available on Business and Enterprise plans.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "workspace_token_scope",
+    "value": "Workspace tokens grant access to all data in the workspace",
+    "url": "https://support.grain.com/en/articles/15507288-grain-api",
+    "quote": "grants access to all data in the workspace, regardless of which user owns it.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth_pat_bearer",
+    "value": "Personal Access Token authenticates requests as the user, sent as Bearer token; generated at grain.com settings integrations API",
+    "url": "https://developers.grain.com/",
+    "quote": "A Personal Access Token (PAT) authenticates requests as you, with the same access you have in Grain.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "required_headers_and_endpoint",
+    "value": "Requests need Authorization and Public-Api-Version headers; example GET to api.grain.com/_/public-api/v2/token-info",
+    "url": "https://developers.grain.com/",
+    "quote": "Every request needs the Authorization header and a Public-Api-Version header.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "official_mcp_auth",
+    "value": "Grain's MCP server uses OAuth and HTTPS; personal access token also supported",
+    "url": "https://support.grain.com/en/articles/14811968-how-to-use-the-grain-mcp-server",
+    "quote": "Grain's MCP server uses OAuth and HTTPS.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "official_mcp_capability",
+    "value": "Official MCP gives AI assistants direct access to meetings, transcripts, AI notes and workspace data",
+    "url": "https://support.grain.com/en/articles/14811968-how-to-use-the-grain-mcp-server",
+    "quote": "gives AI assistants direct access to your meetings, transcripts, AI notes, and workspace data.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "official_mcp_docs",
+    "value": "Official Grain MCP Server quick start guide at developers.grain.com/mcp",
+    "url": "https://developers.grain.com/mcp",
+    "quote": "Official Grain MCP Server: Quick Start Guide",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "official_mcp_oauth_dcr",
+    "value": "Vendor-built MCP at Grain's own server, OAuth 2.1 with Dynamic Client Registration (per Scalekit listing)",
+    "url": "https://docs.scalekit.com/agentkit/connectors/grainmcp/",
+    "quote": "Grain MCP uses Dynamic Client Registration (DCR), so no client ID or secret is required for your own app.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "community_mcp",
+    "value": "eadm/grain-mcp-server, a community Python MCP server using browser automation (Playwright), Apache-2.0",
+    "url": "https://awesome.ecosyste.ms/projects/github.com%2Feadm%2Fgrain-mcp-server",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "webhooks_existence",
+    "value": "Grain API supports receiving real-time events (webhooks); event list unverified",
+    "url": "https://support.grain.com/en/articles/15507288-grain-api",
+    "quote": "The Grain API lets developers read meeting data, manage recordings, and receive real-time events from Grain programmatically.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Full REST endpoint list and read/write breadth: developers.grain.com endpoint reference was not reached.",
+   "Webhook (Hooks) event types, payload format, signature verification, and whether hooks require admin or a plan: developers.grain.com/hooks returned HTTP 403.",
+   "Authentication page (developers.grain.com/authentication) returned HTTP 403; OAuth2 for REST API, scopes and token refresh are unconfirmed.",
+   "Rate limits values: developers.grain.com Rate Limits page not retrieved.",
+   "Official SDKs: none found in sources.",
+   "Whether a sandbox or trial exists; whether Free plan has API limits.",
+   "Whether the official MCP server is hosted on a Grain-owned GitHub repo (no repo found; only a vendor-hosted endpoint is described).",
+   "Whether the eadm community MCP repo is still maintained (last push reportedly April 2025, unverified)."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.75,
+ "flags": [],
+ "error": null
+}

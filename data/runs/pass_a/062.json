@@ -1,0 +1,221 @@
+{
+ "id": 62,
+ "name": "Vercel",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:21:55Z",
+ "duration_s": 29.3,
+ "cost_usd": 0.0821,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://vercel.com/docs/rest-api",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://vercel.com",
+   "title": "Agentic Infrastructure - Vercel",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://vercel.com/docs",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://vercel.com/pricing",
+   "title": "Vercel Pricing: Hobby, Pro, and Enterprise plans",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/vercel/next-devtools-mcp",
+   "title": "vercel/next-devtools-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/vercel-labs/mcp-handler",
+   "title": "vercel-labs/mcp-handler",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/vercel-labs/mcp-for-next.js",
+   "title": "vercel-labs/mcp-for-next.js",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/vercel-labs/mcp-on-vercel",
+   "title": "vercel-labs/mcp-on-vercel",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/zendev-sh/goai",
+   "title": "zendev-sh/goai",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/baponray12357-svg/-https-ryze-mcp-links.vercel.app-",
+   "title": "baponray12357-svg/-https-ryze-mcp-links.vercel.app-",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/agentfront/frontmcp",
+   "title": "agentfront/frontmcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/liyupi/github-global",
+   "title": "liyupi/github-global",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://vercel.com",
+   "developer_portal": "https://vercel.com/docs/rest-api",
+   "description": "Vercel is a developer cloud platform for deploying web apps and agents, with a REST API for managing projects, deployments, domains, sandboxes, and more.",
+   "identity_confirmed": "yes",
+   "identity_notes": "REST API reference at vercel.com/docs/rest-api describes the Vercel platform."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "Auth tokens can be created via the API (/v3/user/tokens). An SSO token exchange endpoint exists for integrations."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Some features (e.g. Rolling Releases) require Pro or Enterprise."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Access Groups",
+    "AI Gateway",
+    "Artifacts",
+    "Projects",
+    "Sandboxes",
+    "Global Config",
+    "Feature Flags",
+    "Marketplace",
+    "Networking",
+    "Connect",
+    "Daemons",
+    "KMS",
+    "Authentication"
+   ],
+   "read_ops": [
+    "Read access group",
+    "List sandboxes",
+    "List auth tokens",
+    "List PrivateLink endpoints"
+   ],
+   "write_ops": [
+    "Create project",
+    "Create access group",
+    "Create auth token",
+    "Execute sandbox command",
+    "Create sandbox"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.vercel.com",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT",
+    "url": "https://vercel.com/docs/rest-api",
+    "quote": "| **POST** | [`/v3/user/tokens`](/docs/rest-api/authentication/create-an-auth-token.md) | Create an Auth Token |",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://vercel.com/pricing",
+    "quote": "Our Hobby plan is free and a great way to get started.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://vercel.com/docs/rest-api",
+    "quote": "Interact programmatically with your Vercel account using the SDK or direct HTTP requests.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://vercel.com/docs/rest-api",
+    "quote": "| **POST** | [`/v11/projects`](/docs/rest-api/projects/create-a-new-project.md) | Create a new project |",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://vercel.com/docs/",
+    "quote": "Let your agent manage projects, deployments, and logs\nnpx -y add-mcp https://mcp.vercel.com -g",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Exact rate limits not in sources",
+   "OAuth2 (Sign in with Vercel / integrations) not confirmed in sources",
+   "Webhook support not confirmed in sources"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

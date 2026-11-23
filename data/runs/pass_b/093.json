@@ -1,0 +1,74 @@
+{
+ "id": 93,
+ "name": "Fathom",
+ "category": "AI, Research and Media-native",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:37:36Z",
+ "duration_s": 47.5,
+ "cost_usd": 0.0473,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://fathom.video",
+   "developer_portal": "https://developers.fathom.ai",
+   "description": "Fathom is an AI meeting notetaker/recorder product at fathom.video that records, transcribes, and summarizes meetings. Its developer docs are at developers.fathom.ai.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Fathom's developer docs and help center describe meeting summaries, transcripts and recordings, matching the fathom.video product. Not to be confused with Fathom Analytics (a different company, per a third-party source). Sources are the vendor's own docs and help center."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [],
+  "open_questions": []
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "None until interface confirmed",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": null,
+ "flags": [],
+ "error": null
+}

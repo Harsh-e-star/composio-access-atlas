@@ -1,0 +1,261 @@
+{
+ "id": 52,
+ "name": "SE Ranking",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:33:48Z",
+ "duration_s": 88.9,
+ "cost_usd": 0.0576,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://seranking.com/api/",
+   "developer_portal": "https://seranking.com/api/",
+   "description": "SE Ranking is an SEO platform (rank tracking, keyword research, backlinks, site audits) that offers a Data API and a Project API, plus a hosted MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "seranking.com/api describes the Data API and Project API of the SE Ranking SEO platform, matching the assignment. A separate SE Visible product also has API sections; it is not the subject here."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "OAuth 2.1 with dynamic client registration, used by the hosted MCP server at https://api.seranking.com/mcp. No OAuth flow was found for the REST Data or Project APIs.",
+   "token_refresh": "Not applicable for static API keys; no refresh flow documented in pages reviewed.",
+   "scopes_notes": "Data API and Project API use separate keys (created from the API Dashboard, selecting the type). The MCP server takes DATA_API_TOKEN and/or PROJECT_API_TOKEN per a mirrored README (not verified on the official repo)."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Data API access is tied to plan credits; API access lives with the master account, not sub-accounts. Enterprise rate limits/pricing go through sales."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "Data API: Backlinks, Domain Analysis, Keyword Research, AI Search, Website Audit, Account System",
+    "Project API: Project Management, Keyword Groups, Competitors, Backlink Checker, AI Results Tracker, Marketing Plan, Analytics Traffic",
+    "Local Marketing API",
+    "SE Visible API (Beta)"
+   ],
+   "read_ops": [
+    "keyword research",
+    "backlink analysis",
+    "domain performance",
+    "SERP data",
+    "site audits",
+    "AI visibility research"
+   ],
+   "write_ops": [
+    "Project management (create/manage projects) implied by Project API description; exact write endpoints not verified"
+   ],
+   "webhooks": "unknown",
+   "sdks": "no",
+   "rate_limits": "Default requests-per-second limits, increasable by contacting support. A mirrored README (unofficial) cites 10 rps for Data API and 5 rps for Project API.",
+   "limitations": "No first-party SDKs; integration via REST reference and Postman collection. Not every API endpoint is exposed through MCP. Webhooks not mentioned on pages reviewed. Write coverage not confirmed from official reference."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://seranking.com/api/mcp/",
+   "community": "yes",
+   "community_urls": [
+    "https://glama.ai/mcp/servers/@TeamDay-AI/se-ranking-mcp/blob/7523f479265208d577fa9efb485a67f8b7691b48/README.md",
+    "https://lobehub.com/mcp/guifreballester-seranking-mcp-test",
+    "https://mcpservers.org/de/servers/seranking-com-mcp-html"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "SE Ranking Data API and Project API cover SEO data and SEO workflow management",
+    "url": "https://seranking.com/api/",
+    "quote": "The Data API covers keyword research, backlink analysis, domain performance, SERP data, site audits",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.plans",
+    "value": "Data API included with Essential, Pro, Business, Core, Growth, Enterprise plans with monthly credit allowance",
+    "url": "https://seranking.com/api/how-to-get-api/",
+    "quote": "All Essential, Pro, Business, Core, Growth, and Enterprise plans include Data API access with a monthly credit allowance:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.project_api_plans",
+    "value": "Project API available on every current subscription plan",
+    "url": "https://seranking.com/api/how-to-get-api/",
+    "quote": "The Project API is available on every current subscription plan: Essential, Pro, Business, Core, Growth, and Enterprise.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.key_creation",
+    "value": "Keys created from API Dashboard via + CREATE API KEY, selecting Data or Project type",
+    "url": "https://seranking.com/api/how-to-get-api/",
+    "quote": "Navigate to the API Dashboard. Click the API icon in the main left-hand navigation menu, then select Dashboard.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.credits_purchase",
+    "value": "Pay-as-you-go credits from $50 for 250,000 credits",
+    "url": "https://seranking.com/api/how-to-get-api/",
+    "quote": "From $50 for 250,000 credits, with no limit on how many you buy.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial",
+    "value": "Free trial offered (Start free trial link); a demo can also be requested",
+    "url": "https://seranking.com/api/how-to-get-api/",
+    "quote": "Request a free demo to see our tools and integrations in action",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sales",
+    "value": "Enterprise options, custom rate limiting and pricing go through sales",
+    "url": "https://seranking.com/api/how-to-get-api/",
+    "quote": "contact our team to discuss enterprise options, custom rate limiting, and pricing.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.verify_api",
+    "value": "Developers should verify API access in the API Dashboard",
+    "url": "https://seranking.com/api/mcp/",
+    "quote": "Verify your SE Ranking or SE Visible account has API access at the API Dashboard.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sub_accounts",
+    "value": "API access lives with master account, not sub-accounts",
+    "url": "https://seranking.com/api/mcp/",
+    "quote": "API access lives with the master account, not with sub-accounts.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.data_api",
+    "value": "Authorization header uses Token scheme (recommended); apikey query parameter also accepted",
+    "url": "https://github.com/seranking/openapi",
+    "quote": "Send it in the `Authorization` header with the `Token` scheme (recommended):",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.base_url",
+    "value": "https://api.seranking.com",
+    "url": "https://github.com/seranking/openapi",
+    "quote": "All four APIs are served from `https://api.seranking.com`",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "license.openapi_repo",
+    "value": "MIT License for seranking/openapi",
+    "url": "https://github.com/seranking/openapi",
+    "quote": "This project is licensed under the MIT License.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks",
+    "value": "No first-party SDKs; integration via REST reference and Postman collection",
+    "url": "https://seranking.com/api/",
+    "quote": "integration is done via the REST API reference and a Postman collection for endpoint testing",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "rate_limits",
+    "value": "Default requests-per-second limits; increased by contacting support",
+    "url": "https://seranking.com/api/",
+    "quote": "these can be increased by contacting the support team",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Official hosted remote MCP server at https://api.seranking.com/mcp, Streamable HTTP, OAuth 2.1 with dynamic client registration",
+    "url": "https://seranking.com/api/mcp/",
+    "quote": "This transport uses OAuth 2.1 with dynamic client registration for authentication at the following address:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.hosted_model",
+    "value": "MCP server is centrally hosted and managed",
+    "url": "https://seranking.com/api/mcp/",
+    "quote": "MCP server server follows the authenticated remote MCP spec, so it's centrally hosted and managed.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.api_key_header",
+    "value": "API key may be passed in X-Api-Key header to MCP server",
+    "url": "https://seranking.com/api/mcp/",
+    "quote": "you can pass your API key in the `X-Api-Key` header.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.coverage",
+    "value": "Not every API endpoint is available through MCP; tools depend on subscription",
+    "url": "https://seranking.com/api/mcp/",
+    "quote": "Not every API endpoint is available through MCP",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.data_scope",
+    "value": "Data available depends on subscription",
+    "url": "https://seranking.com/api/mcp/",
+    "quote": "The data available to you depends on your subscription.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Webhooks: not mentioned on seranking.com/api, /api/data/reference, or /api/how-to-get-api; unknown.",
+   "Conflict on plan inclusion: a search snippet from SE Ranking's Help Center says Essential and Pro plans do not include API access and need an add-on, while the how-to-get-api page says all listed plans include Data API access. Help Center page was not fetched; resolve with the API Dashboard or sales.",
+   "Base URL conflict: a search snippet for the Project API getting-started page cites https://api4.seranking.com/, while the OpenAPI repo says all four APIs are served from https://api.seranking.com. Current Project API host not verified.",
+   "Auth method for Project API: snippet says token via query parameter or Authorization header; not verified on the official getting-started page (fetch not completed).",
+   "Official GitHub MCP repo github.com/seranking/seo-data-api-mcp-server returned 404 to WebFetch; ownership and README unverified. Only mirrored README snippets (Data API token and Project API token env vars; 10 rps / 5 rps) were seen, so they are not official-source claims.",
+   "Community MCP servers exist (TeamDay-AI on Glama, guifreballester on LobeHub, mcpservers.org listings) per search results only; their pages were not fetched.",
+   "Quickstart guide at seranking.com/api/data/quickstart-guide returned 404; Data API header format rests on the OpenAPI repo.",
+   "Rate limit numbers (10 rps Data, 5 rps Project) come only from a mirrored README, not from official docs.",
+   "Trial length and whether API access is included during the free trial are unknown; 'Start with 100K free credits' appeared on the MCP page but was not verified in detail.",
+   "Write endpoints: Project API management suggests writes, but no official write operation list was confirmed."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

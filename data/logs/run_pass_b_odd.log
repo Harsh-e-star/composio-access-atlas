@@ -1,0 +1,109 @@
+pass b: 36 apps to research with 6 workers
+[14:30:34] #23  B independent    web-search agent researching from name only
+[14:30:34] #31  B independent    web-search agent researching from name only
+[14:30:34] #33  B independent    web-search agent researching from name only
+[14:30:34] #35  B independent    web-search agent researching from name only
+[14:30:35] #37  B independent    web-search agent researching from name only
+[14:30:35] #39  B independent    web-search agent researching from name only
+[14:31:24] #37  B 6-evidence     checking 0 claims against source text
+[14:31:24] #37  B 5-verdict      UNKNOWN | tier=unknown | auth=[] | evidence None | $0.0456 | 49.2s
+[14:31:24] #41  B independent    web-search agent researching from name only
+[14:31:32] #39  B 6-evidence     checking 16 claims against source text
+[14:31:35] #31  B 6-evidence     checking 16 claims against source text
+[14:31:39] #35  B 6-evidence     checking 16 claims against source text
+[14:31:40] #39  B 5-verdict      READY | tier=free_self_serve | auth=['OAuth2'] | evidence 0.562 | $0.0498 | 65.1s
+[14:31:40] #43  B independent    web-search agent researching from name only
+[14:31:42] #31  B 5-verdict      UNKNOWN | tier=free_self_serve | auth=['OAuth2', 'Service account/JWT'] | evidence 1.0 | $0.0578 | 67.5s
+[14:31:42] #45  B independent    web-search agent researching from name only
+[14:31:45] #35  B 5-verdict      READY | tier=free_self_serve | auth=['API key', 'OAuth2'] | evidence 0.688 | $0.0852 | 70.0s
+[14:31:45] #47  B independent    web-search agent researching from name only
+[14:31:46] #33  B 6-evidence     checking 17 claims against source text
+[14:31:52] #33  B 5-verdict      GATED | tier=partner_or_sales | auth=['OAuth2'] | evidence 0.941 | $0.0763 | 78.0s
+[14:31:52] #49  B independent    web-search agent researching from name only
+[14:31:59] #23  B 6-evidence     checking 14 claims against source text
+[14:32:20] #41  B 6-evidence     checking 16 claims against source text
+[14:32:32] #41  B 5-verdict      READY | tier=free_self_serve | auth=['OAuth2'] | evidence 0.812 | $0.0366 | 68.1s
+[14:32:32] #51  B independent    web-search agent researching from name only
+[14:32:48] #43  B 6-evidence     checking 15 claims against source text
+[14:32:53] #47  B 6-evidence     checking 13 claims against source text
+[14:32:55] #43  B 5-verdict      READY | tier=trial_self_serve | auth=['API key', 'OAuth2', 'Bearer/PAT', 'Basic'] | evidence 0.733 | $0.0629 | 75.4s
+[14:32:55] #53  B independent    web-search agent researching from name only
+[14:32:56] #47  B 5-verdict      CONDITIONAL | tier=paid_plan | auth=['OAuth2', 'Bearer/PAT'] | evidence 0.615 | $0.04 | 71.5s
+[14:32:56] #55  B independent    web-search agent researching from name only
+[14:32:59] #49  B 6-evidence     checking 10 claims against source text
+[14:33:02] #49  B 5-verdict      CONDITIONAL | tier=paid_plan | auth=['OAuth2'] | evidence 0.3 | $0.0574 | 69.6s
+[14:33:02] #57  B independent    web-search agent researching from name only
+[14:33:07] #45  B 6-evidence     checking 11 claims against source text
+[14:33:14] #45  B 5-verdict      GATED | tier=partner_or_sales | auth=['Bearer/PAT', 'Other'] | evidence 0.818 | $0.0419 | 91.6s
+[14:33:14] #59  B independent    web-search agent researching from name only
+[14:33:40] #23  B 5-verdict      UNKNOWN | tier=unknown | auth=['OAuth2'] | evidence 0.0 | $0.0986 | 185.5s
+[14:33:40] #61  B independent    web-search agent researching from name only
+[14:33:47] #51  B 6-evidence     checking 17 claims against source text
+[14:33:56] #51  B 5-verdict      READY | tier=free_self_serve | auth=['Basic'] | evidence 0.765 | $0.0691 | 84.0s
+[14:33:56] #63  B independent    web-search agent researching from name only
+[14:34:02] #53  B 6-evidence     checking 17 claims against source text
+[14:34:08] #53  B 5-verdict      CONDITIONAL | tier=paid_plan | auth=['API key', 'Bearer/PAT', 'OAuth2'] | evidence 0.706 | $0.0501 | 72.9s
+[14:34:08] #65  B independent    web-search agent researching from name only
+[14:34:12] #57  B 6-evidence     checking 13 claims against source text
+[14:34:13] #55  B 6-evidence     checking 10 claims against source text
+[14:34:16] #57  B 5-verdict      CONDITIONAL | tier=admin_approval | auth=['Bearer/PAT', 'Basic', 'OAuth2'] | evidence 0.846 | $0.0628 | 73.9s
+[14:34:16] #67  B independent    web-search agent researching from name only
+[14:34:17] #55  B 5-verdict      READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2'] | evidence 1.0 | $0.0304 | 81.0s
+[14:34:17] #69  B independent    web-search agent researching from name only
+[14:34:20] #59  B 6-evidence     checking 15 claims against source text
+[14:34:23] #59  B 5-verdict      GATED | tier=partner_or_sales | auth=['API key'] | evidence 0.867 | $0.0587 | 69.4s
+[14:34:23] #71  B independent    web-search agent researching from name only
+[14:34:47] #61  B 6-evidence     checking 16 claims against source text
+[14:34:54] #61  B 5-verdict      READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2', 'Service account/JWT', 'Basic', 'Other'] | evidence 0.938 | $0.0464 | 74.2s
+[14:34:54] #73  B independent    web-search agent researching from name only
+[14:35:05] #63  B 6-evidence     checking 14 claims against source text
+[14:35:09] #65  B 6-evidence     checking 12 claims against source text
+[14:35:09] #63  B 5-verdict      READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2'] | evidence 0.857 | $0.0647 | 73.3s
+[14:35:09] #75  B independent    web-search agent researching from name only
+[14:35:14] #65  B 5-verdict      READY | tier=free_self_serve | auth=['API key', 'Bearer/PAT', 'OAuth2'] | evidence 0.583 | $0.0652 | 66.5s
+[14:35:14] #77  B independent    web-search agent researching from name only
+[14:35:17] #71  B 6-evidence     checking 13 claims against source text
+[14:35:24] #71  B 5-verdict      READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2'] | evidence 0.923 | $0.0272 | 60.6s
+[14:35:24] #79  B independent    web-search agent researching from name only
+[14:35:24] #67  B 6-evidence     checking 16 claims against source text
+[14:35:33] #67  B 5-verdict      READY | tier=trial_self_serve | auth=['OAuth2', 'Service account/JWT', 'Bearer/PAT', 'Other'] | evidence 0.812 | $0.0689 | 77.3s
+[14:35:33] #81  B independent    web-search agent researching from name only
+[14:35:58] #77  B 6-evidence     checking 0 claims against source text
+[14:35:58] #77  B 5-verdict      UNKNOWN | tier=unknown | auth=[] | evidence None | $0.0333 | 43.2s
+[14:35:58] #83  B independent    web-search agent researching from name only
+[14:36:00] #73  B 6-evidence     checking 19 claims against source text
+[14:36:04] #73  B 5-verdict      READY | tier=free_self_serve | auth=['OAuth2', 'API key', 'Bearer/PAT'] | evidence 0.895 | $0.0497 | 69.5s
+[14:36:04] #85  B independent    web-search agent researching from name only
+[14:36:06] #69  B 6-evidence     checking 8 claims against source text
+[14:36:14] #69  B 5-verdict      READY | tier=trial_self_serve | auth=['API key', 'Bearer/PAT', 'OAuth2'] | evidence 0.625 | $0.0518 | 117.2s
+[14:36:14] #87  B independent    web-search agent researching from name only
+[14:36:17] #75  B 6-evidence     checking 17 claims against source text
+[14:36:23] #75  B 5-verdict      READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2', 'Service account/JWT'] | evidence 0.882 | $0.0627 | 74.0s
+[14:36:23] #89  B independent    web-search agent researching from name only
+[14:36:44] #81  B 6-evidence     checking 26 claims against source text
+[14:36:45] #79  B 6-evidence     checking 16 claims against source text
+[14:36:48] #79  B 5-verdict      CONDITIONAL | tier=paid_plan | auth=['OAuth2', 'Bearer/PAT'] | evidence 0.625 | $0.0528 | 84.2s
+[14:36:48] #91  B independent    web-search agent researching from name only
+[14:36:49] #81  B 5-verdict      READY | tier=free_self_serve | auth=['API key', 'Bearer/PAT', 'Basic', 'OAuth2', 'Other'] | evidence 0.885 | $0.0666 | 75.5s
+[14:36:49] #93  B independent    web-search agent researching from name only
+[14:37:01] #87  B 6-evidence     checking 0 claims against source text
+[14:37:01] #87  B 5-verdict      UNKNOWN | tier=unknown | auth=[] | evidence None | $0.0444 | 47.2s
+[14:37:01] #95  B independent    web-search agent researching from name only
+[14:37:24] #89  B 6-evidence     checking 12 claims against source text
+[14:37:29] #89  B 5-verdict      CONDITIONAL | tier=admin_approval | auth=['OAuth2'] | evidence 1.0 | $0.0501 | 65.9s
+[14:37:29] #97  B independent    web-search agent researching from name only
+[14:37:30] #83  B 6-evidence     checking 12 claims against source text
+[14:37:33] #85  B 6-evidence     checking 19 claims against source text
+[14:37:34] #83  B 5-verdict      READY | tier=free_self_serve | auth=['API key', 'Other'] | evidence 0.083 | $0.0603 | 96.6s
+[14:37:34] #99  B independent    web-search agent researching from name only
+[14:37:36] #93  B 6-evidence     checking 0 claims against source text
+[14:37:36] #93  B 5-verdict      UNKNOWN | tier=unknown | auth=[] | evidence None | $0.0473 | 47.5s
+[14:37:39] #85  B 5-verdict      UNKNOWN | tier=unknown | auth=['API key'] | evidence 0.263 | $0.0391 | 95.7s
+[14:37:45] #95  B 6-evidence     checking 10 claims against source text
+[14:37:47] #95  B 5-verdict      READY | tier=free_self_serve | auth=['API key', 'OAuth2'] | evidence 0.7 | $0.049 | 45.7s
+[14:38:20] #91  B 6-evidence     checking 13 claims against source text
+[14:38:25] #91  B 5-verdict      READY | tier=trial_self_serve | auth=['Bearer/PAT'] | evidence 0.846 | $0.0786 | 97.2s
+[14:38:41] #97  B 6-evidence     checking 14 claims against source text
+[14:38:44] #97  B 5-verdict      READY | tier=free_self_serve | auth=['API key', 'Other'] | evidence 0.857 | $0.0549 | 75.3s
+[14:39:05] #99  B 6-evidence     checking 16 claims against source text
+[14:39:10] #99  B 5-verdict      READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2'] | evidence 0.75 | $0.0684 | 96.3s

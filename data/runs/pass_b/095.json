@@ -1,0 +1,193 @@
+{
+ "id": 95,
+ "name": "Reducto",
+ "category": "AI, Research and Media-native",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:37:47Z",
+ "duration_s": 45.7,
+ "cost_usd": 0.049,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://reducto.ai/",
+   "developer_portal": "https://docs.reducto.ai/quickstart",
+   "description": "Reducto is an AI document-processing company whose API parses, extracts, splits, classifies and edits documents (PDFs, scans, etc.). Its docs live at docs.reducto.ai and the product site is reducto.ai.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Vendor docs at docs.reducto.ai and the reducto.ai pricing page describe the same document-parsing product (Parse, Extract, Edit, Split APIs). Matches the assignment hint reducto.ai (document parsing)."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Local MCP server only: `uvx mcp-server-reducto --login` runs a browser-based OAuth device-code flow (per docs.reducto.ai/mcp-server). No OAuth flow documented for the REST API.",
+   "token_refresh": "unknown",
+   "scopes_notes": "No scopes documented for the REST API key. Not established from sources."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Standard plan gives $150 of free usage, then list (pay-as-you-go) rates apply. Growth and Enterprise use custom pricing via Contact sales. Whether production use needs review is not established."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "parse",
+    "extract",
+    "split",
+    "classify",
+    "edit",
+    "upload",
+    "jobs"
+   ],
+   "read_ops": [
+    "GET /job/{job_id} (job status and results)",
+    "list_jobs (MCP tool)",
+    "get_documentation (MCP tool)"
+   ],
+   "write_ops": [
+    "POST /parse (and /parse_async)",
+    "POST /extract (and /extract_async)",
+    "POST /split (and /split_async)",
+    "POST /classify (and /classify_async)",
+    "POST /edit (and /edit_async)",
+    "POST /upload (multipart file upload)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "No numeric limits found. The 429 error row says: \"Too many concurrent requests. Retry with backoff.\" and links to a Rate Limits page not read.",
+   "limitations": "Processing-oriented API: the write endpoints are document-processing jobs rather than CRUD on persistent resources. Async endpoints take a webhook parameter; no separate webhook endpoint or payload/retry docs were found. Base URL https://platform.reducto.ai is from search summaries and the cURL example in docs."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.reducto.ai/mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://www.gumloop.com/connectors/reducto-mcp",
+    "https://www.gamut.so/mcp/search-ai/reducto",
+    "https://zapier.com/mcp/reduct"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Reducto is a document parsing/extraction API with Parse, Extract, Edit and Split APIs",
+    "url": "https://reducto.ai/pricing",
+    "quote": "Standard lists the Parse, Extract, Edit, and Split APIs under \"Core Functionality.\"",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve: free account, API key created self-serve in Studio",
+    "url": "https://docs.reducto.ai/quickstart",
+    "quote": "Create a key right here. Give it a name and copy it. It also shows up in Studio under API Keys.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_credits",
+    "value": "$150 free usage on Standard, then list rates apply",
+    "url": "https://reducto.ai/pricing",
+    "quote": "Standard includes $150 of free usage, then list rates apply.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary",
+    "value": "API key sent as Authorization Bearer header",
+    "url": "https://docs.reducto.ai/quickstart",
+    "quote": "-H \"Authorization: Bearer $REDUCTO_API_KEY\"",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST API plus Python, Node.js, Go SDKs and CLI",
+    "url": "https://docs.reducto.ai/llms-full.txt",
+    "quote": "Available in Python, Node.js, Go, and REST, with Studio for visual pipeline building.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Async endpoints accept a webhook parameter; push delivery supported",
+    "url": "https://docs.reducto.ai/llms-full.txt",
+    "quote": "Configure webhooks for push-based delivery instead of polling.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_hosted",
+    "value": "Vendor-hosted MCP server at mcp.reducto.ai/mcp",
+    "url": "https://docs.reducto.ai/mcp-server",
+    "quote": "The hosted server runs at https://mcp.reducto.ai/mcp.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_local",
+    "value": "Local MCP server package mcp-server-reducto, run via uvx",
+    "url": "https://docs.reducto.ai/mcp-server",
+    "quote": "Local package: mcp-server-reducto, run with uvx mcp-server-reducto.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.tools",
+    "value": "get_documentation, parse_document, extract_data, split_document, classify_document, edit_document, upload_file, get_job, list_jobs",
+    "url": "https://docs.reducto.ai/mcp-server",
+    "quote": "parse_document, extract_data, split_document, classify_document, edit_document, upload_file, get_job, list_jobs",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Third-party connectors host Reducto MCP (Gumloop, Gamut, Zapier)",
+    "url": "https://www.gumloop.com/connectors/reducto-mcp",
+    "quote": "Reducto MCP Server",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "GitHub repo for mcp-server-reducto not found; official ownership relies on vendor docs only. Check PyPI/GitHub for the Reducto org.",
+   "Trial availability and any sandbox/test environment not established (docs did not answer 'Do you offer trials?').",
+   "Production restrictions or app review for the API not established.",
+   "Numeric rate limits are on a separate Rate Limits page that was not read.",
+   "Webhook setup, payload schema and retry behavior not read (docs.reducto.ai/llms-full.txt was only read up to 100,000 characters of 4.1M).",
+   "Base URL platform.reducto.ai was taken from search summaries and the cURL example; not checked on a dedicated page.",
+   "The docs.reducto.ai/mcp-server.md URL returned HTTP 404 on a later fetch; the non-.md URL returned content.",
+   "Quotes were extracted by a summarizing fetch tool and may not be verbatim; treat verified as null until checked against the live pages."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.7,
+ "flags": [],
+ "error": null
+}

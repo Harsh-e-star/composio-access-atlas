@@ -1,0 +1,132 @@
+{
+ "id": 85,
+ "name": "iPayX",
+ "category": "Finance and Fintech",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:25:28Z",
+ "duration_s": 57.1,
+ "cost_usd": 0.0179,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.ipayx.ai/docs",
+   "title": "iPayX Protocol — FINTRAC-registered FX forensic audit layer",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://www.ipayx.ai/",
+   "title": "iPayX Protocol — FINTRAC-registered FX forensic audit layer",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://www.ipayx.ai/pricing",
+   "title": "Pricing — iPayX Forensic Reports & FX Audit API",
+   "rendered": true
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Ipayx-stellar/mcp-submit",
+   "title": "Ipayx-stellar/mcp-submit",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+   "title": "Ipayx-stellar/mcp-fx-audit",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+   "title": "iPAYX-Technologies/mcp-fx-audit",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.ipayx.ai/",
+   "developer_portal": "https://www.ipayx.ai/docs",
+   "description": "iPayX Protocol is a FINTRAC-registered FX forensic audit layer offering forensic FX reports and an FX Audit API for fintechs and finance teams.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe iPayX Protocol FX forensic audit and Audit API; docs page content was only a title."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Pricing page mentions upgrade to production-grade API; banks and institutions contact sales. API key issuance details not established."
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "Docs page content not available; only pricing page describes an Audit API."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://www.ipayx.ai/pricing",
+    "quote": "Free You have 3 free audits. $0 3 audits, lifetime FX Score 0-10 Automatic markup detection Multi-bank (PDF / CSV) Start free",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+    "quote": "MCP server for iPayX Protocol — audit FX fees, compare currency margins and score cross-border invoices in Claude, Cursor, Cline, ChatGPT and any MCP client.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "What auth methods does the iPayX Audit API use? Docs content did not load.",
+   "What protocols and endpoints does the API expose?",
+   "Is the iPAYX-Technologies/mcp-fx-audit repo the vendor's official one? Its description is empty."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": 0.5,
+ "flags": [],
+ "error": null
+}

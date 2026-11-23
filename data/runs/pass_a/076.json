@@ -1,0 +1,256 @@
+{
+ "id": 76,
+ "name": "Monday.com",
+ "category": "Productivity and Project Management",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:23:41Z",
+ "duration_s": 28.0,
+ "cost_usd": 0.0723,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developer.monday.com",
+   "title": "monday.com Developer Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developer.monday.com/api-reference/reference/webhooks",
+   "title": "Webhooks",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developer.monday.com/api-reference/docs/basics",
+   "title": "The basics",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developer.monday.com/api-reference/docs/control-mcp-access-with-oauth-app",
+   "title": "Control MCP access with your own OAuth app",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developer.monday.com/api-reference/docs/mcp-enterprise-managed-auth-claude",
+   "title": "Set up enterprise-managed authorization for Claude",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developer.monday.com/api-reference/docs/authentication",
+   "title": "Authentication",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.monday.com/api-reference/docs/mcp-api-token",
+   "title": "Authenticate with an API token",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developer.monday.com/api-reference/docs/mcp-enterprise-managed-auth",
+   "title": "Enterprise managed auth",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Prat011/mcp-server-monday",
+   "title": "Prat011/mcp-server-monday",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/aliansoftwareteam/AlianHub-Project-Management-System",
+   "title": "aliansoftwareteam/AlianHub-Project-Management-System",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/pranavV77/skylark-bi-agent",
+   "title": "pranavV77/skylark-bi-agent",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/RomKadria/monday-mcp-server",
+   "title": "RomKadria/monday-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/AStheTECH/mewcp-monday",
+   "title": "AStheTECH/mewcp-monday",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/pipeworx-io/mcp-monday",
+   "title": "pipeworx-io/mcp-monday",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mrbaune/monday-mcp",
+   "title": "mrbaune/monday-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/primrose-mcp/primrose-mcp-monday",
+   "title": "primrose-mcp/primrose-mcp-monday",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://monday.com",
+   "developer_portal": "https://developer.monday.com",
+   "description": "monday.com is an AI work platform / work OS with a GraphQL platform API, hosted MCP server, apps framework and webhooks.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Official developer docs for monday.com."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Standard monday.com OAuth flow: redirect to https://auth.monday.com/oauth2/authorize, exchange authorization code for access token. Hosted MCP supports OAuth and custom OAuth apps.",
+   "token_refresh": "Not established for standard API; EMA access tokens last 24 hours with no refresh token.",
+   "scopes_notes": "App tokens have granular scopes (e.g. boards:read, webhooks:read/write); personal tokens have all scopes and mirror UI permissions."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Enterprise-managed auth for MCP requires Enterprise plan; viewers, guests, deactivated users and student accounts have limited or no API access."
+  },
+  "api": {
+   "protocols": [
+    "GraphQL",
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "boards",
+    "items",
+    "column values",
+    "users",
+    "workspaces",
+    "webhooks"
+   ],
+   "read_ops": [
+    "query webhooks",
+    "query boards/items/users/workspaces"
+   ],
+   "write_ops": [
+    "create_webhook",
+    "delete_webhook",
+    "create/update items and column values"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "Does not support Workforms. Supports work management, dev, sales CRM and service products."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.monday.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/Prat011/mcp-server-monday",
+    "https://github.com/RomKadria/monday-mcp-server",
+    "https://github.com/pipeworx-io/mcp-monday"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT",
+    "url": "https://developer.monday.com/api-reference/docs/authentication",
+    "quote": "The monday.com platform API utilizes personal V2 API tokens to authenticate requests and identify the user making the call.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://developer.monday.com/api-reference/docs/control-mcp-access-with-oauth-app",
+    "quote": "Your MCP client redirects the user to https://auth.monday.com/oauth2/authorize with your client ID",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developer.monday.com/api-reference/docs/authentication",
+    "quote": "If you don't have a monday.com account yet, create a free developer account to get an API token and start testing.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "GraphQL",
+    "url": "https://developer.monday.com/api-reference/docs/basics",
+    "quote": "The monday.com API is built with GraphQL, a flexible query language that allows you to return as much or as little data as you need.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developer.monday.com/api-reference/docs/basics",
+    "quote": "It supports operations boards, items, column values, users, workspaces, and more.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developer.monday.com/api-reference/docs/mcp-api-token",
+    "quote": "Connect to the monday.com hosted MCP server with a personal API token for personal use, prototyping, and testing",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://developer.monday.com/api-reference/reference/webhooks",
+    "quote": "Requests sent through our webhook integration will retry once a minute for 30 minutes.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Exact rate limits not in sources",
+   "Official SDKs not confirmed in sources",
+   "Whether API access requires a paid plan on production accounts is not stated"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented GraphQL/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

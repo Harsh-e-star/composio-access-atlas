@@ -1,0 +1,149 @@
+{
+ "id": 86,
+ "name": "QuickBooks",
+ "category": "Finance and Fintech",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:25:22Z",
+ "duration_s": 48.5,
+ "cost_usd": 0.0185,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developer.intuit.com/app/developer/homepage",
+   "title": "Intuit Developer",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+   "title": "intuit/quickbooks-online-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Scottcjn/qb-auto",
+   "title": "Scottcjn/qb-auto",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/CDataSoftware/quickbooks-mcp-server-by-cdata",
+   "title": "CDataSoftware/quickbooks-mcp-server-by-cdata",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/laf-rge/quickbooks-mcp",
+   "title": "laf-rge/quickbooks-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/LibreChat-AI/quickbooks-online-mcp",
+   "title": "LibreChat-AI/quickbooks-online-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/aallsbury/qb-time-mcp-server",
+   "title": "aallsbury/qb-time-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/rajurayhan/laravel-quickbooks-mcp-server",
+   "title": "rajurayhan/laravel-quickbooks-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/nikhilgy/quickbooks-mcp-server",
+   "title": "nikhilgy/quickbooks-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": null,
+   "developer_portal": "https://developer.intuit.com/app/developer/homepage",
+   "description": "QuickBooks (Intuit) accounting software; developer portal at developer.intuit.com.",
+   "identity_confirmed": "unknown",
+   "identity_notes": "The only fetched page was a placeholder (\"Compiling and pre-filling your Intuit info...\") with no product details."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/intuit/quickbooks-online-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/Scottcjn/qb-auto",
+    "https://github.com/laf-rge/quickbooks-mcp",
+    "https://github.com/LibreChat-AI/quickbooks-online-mcp",
+    "https://github.com/nikhilgy/quickbooks-mcp-server",
+    "https://github.com/rajurayhan/laravel-quickbooks-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "quote": "The QuickBooks MCP Server lets AI assistants access QuickBooks data via a standard interface.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Auth methods are not established. The only fetched page was a placeholder.",
+   "Access tier, sandbox availability, and app review requirements are not established.",
+   "API protocols, breadth, resources, rate limits, SDKs, and webhooks are not established.",
+   "Official website and product identity could not be confirmed from the fetched page."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

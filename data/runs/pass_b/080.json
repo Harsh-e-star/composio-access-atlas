@@ -1,0 +1,223 @@
+{
+ "id": 80,
+ "name": "Harvest",
+ "category": "Productivity and Project Management",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:36:41Z",
+ "duration_s": 83.6,
+ "cost_usd": 0.0632,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.getharvest.com",
+   "developer_portal": null,
+   "description": "Harvest is a time tracking, invoicing, expense and project management app. Its API v2 docs are hosted at help.getharvest.com/api-v2.",
+   "identity_confirmed": "yes",
+   "identity_notes": "The official API v2 documentation at help.getharvest.com/api-v2 describes the Harvest product (clients, invoices, time entries, projects, etc.), matching the assignment hint harvestapp.com. The Developers area lives in Harvest ID; its exact URL was not verified."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Authorization Code flow for server-side apps (recommended by vendor); Implicit Grant for client-side apps. Access tokens expire (expires_in in seconds).",
+   "token_refresh": "OAuth2 access tokens can be refreshed with a Refresh Token. Personal access token refresh behavior not established.",
+   "scopes_notes": "Scopes not established from sources reviewed."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No app review or partner gate found for personal access tokens. OAuth2 app approval not established. The claim that API access is available on free accounts comes from a search summary; the support article returned HTTP 403 and could not be fetched."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "Clients",
+    "Users",
+    "Roles",
+    "Company Settings",
+    "Invoices",
+    "Estimates",
+    "Expenses",
+    "Reimbursements",
+    "Timesheets / Time entries",
+    "Tasks",
+    "Projects",
+    "Approvals",
+    "Reports",
+    "Forecast",
+    "Paid Time Off",
+    "Notifications",
+    "Imports",
+    "Integrations"
+   ],
+   "read_ops": [
+    "List time entries",
+    "Retrieve time entry by ID"
+   ],
+   "write_ops": [
+    "Create time entry",
+    "Update time entry",
+    "Delete time entry",
+    "Stop running time entry",
+    "Restart time entry"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "General API: 100 requests per 15 seconds. Reports API: 100 requests per 15 minutes.",
+   "limitations": "Write operations verified only for time entries (create, update, delete, start/stop/restart). Other resource write ops not verified. Webhooks not confirmed."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+   "community": "yes",
+   "community_urls": [
+    "https://mcpservers.org/servers/taiste/harvest-mcp-server",
+    "https://pypi.org/project/harvest-mcp/",
+    "https://mcpservers.org/de/servers/ianaleck/harvest-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods / token creation",
+    "value": "Personal access token created from Developers section of Harvest ID",
+    "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+    "quote": "The API can be accessed by creating a Personal Access Token from the Developers section of Harvest ID.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_flows",
+    "value": "Authorization Code flow recommended for server-side; Implicit Grant for client-side",
+    "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+    "quote": "we recommend the Authorization Code flow, because it’s more secure and the access token is never visible by a browser.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "OAuth2 access tokens refreshed with Refresh Token",
+    "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+    "quote": "When your Access Token is about to expire, you can use the Refresh Token to get a new Access Token:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.account_id",
+    "value": "Each request requires account ID",
+    "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+    "quote": "Each request will require your account ID as well",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.developer_app",
+    "value": "OAuth2 app created from Developers section of Harvest ID",
+    "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+    "quote": "The application can be created from the Developers section of Harvest ID",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "100 requests per 15 seconds (general); 100 per 15 minutes (Reports)",
+    "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+    "quote": "The rate limit for general API requests is 100 requests per 15 seconds.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.write_ops (time entries)",
+    "value": "Stop a running time entry (PATCH /v2/time_entries/{id}/stop); update, delete",
+    "url": "https://help.getharvest.com/api-v2/timesheets-api/timesheets/time-entries/",
+    "quote": "Stopping a time entry is only possible if it’s currently running.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.write_ops (time entries update)",
+    "value": "Update time entry by setting parameters passed",
+    "url": "https://help.getharvest.com/api-v2/timesheets-api/timesheets/time-entries/",
+    "quote": "Updates the specific time entry by setting the values of the parameters passed.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.resources",
+    "value": "Core, billing, time/projects, reporting, integrations resource areas",
+    "url": "https://help.getharvest.com/api-v2/",
+    "quote": "This is the current API V2 documentation.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_api_access",
+    "value": "API access included on all plans including free and trial",
+    "url": "https://support.getharvest.com/hc/en-us/articles/360048180732",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Harvest help center describes a Harvest MCP server; endpoint https://api.harvestapp.com/mcp",
+    "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community servers exist: taiste/harvest-mcp-server, ianaleck/harvest-mcp-server (npm, unofficial), PyPI harvest-mcp",
+    "url": "https://pypi.org/project/harvest-mcp/",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "sdks",
+    "value": "No official Harvest SDK found",
+    "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Confirm official MCP server details at support.getharvest.com (HTTP 403 during research); endpoint https://api.harvestapp.com/mcp reported in search summary only.",
+   "Webhooks: sources conflict. Harvest official docs not confirmed; third-party sources disagree.",
+   "Whether a free/trial account can create PATs with full scope; whether a sandbox exists (none found).",
+   "Whether Harvest offers official SDKs; a github.com/harvesthq/api repo was surfaced in search but not verified.",
+   "Full write-op coverage beyond time entries (clients, invoices, projects, etc.) not verified.",
+   "OAuth2 scopes and app approval process not established."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.692,
+ "flags": [],
+ "error": null
+}

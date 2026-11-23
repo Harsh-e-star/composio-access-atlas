@@ -1,0 +1,272 @@
+{
+ "id": 55,
+ "name": "Apify",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:21:34Z",
+ "duration_s": 55.5,
+ "cost_usd": 0.0696,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.apify.com",
+   "title": "Apify Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.apify.com/api/v2",
+   "title": "Apify API | Apify Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://github.com/apify/mcpc",
+   "title": "GitHub - apify/mcpc: The most compatible MCP CLI client. Supports: Tools, Resources, Prompts, Completions, Tasks, Skills, stdio and streamable HTTP, MCP versions 2024-10-07 through 2026-07-28, persist",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.apify.com/mcp",
+   "title": "Apify MCP server | Platform | Apify Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.apify.com/academy/apify-platform",
+   "title": "Introduction to the Apify platform | Academy | Apify Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.apify.com/api",
+   "title": "Apify Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.apify.com/api/client/js/docs",
+   "title": "Overview | API client for JavaScript | Apify Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.apify.com/api/client/python/docs",
+   "title": "Overview | API client for Python | Apify Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.apify.com/cli/docs/quick-start",
+   "title": "Quick start | CLI | Apify Documentation",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/apify/apify-mcp-server",
+   "title": "apify/apify-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/apify/mcpc",
+   "title": "apify/mcpc",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/apify/mcp-server-rag-web-browser",
+   "title": "apify/mcp-server-rag-web-browser",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/apify/tester-mcp-client",
+   "title": "apify/tester-mcp-client",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/apify/mcp-client-capabilities",
+   "title": "apify/mcp-client-capabilities",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ArsenOria/tau-job-research-skills",
+   "title": "ArsenOria/tau-job-research-skills",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/SaM-92/mcp_autogen_sse_stdio",
+   "title": "SaM-92/mcp_autogen_sse_stdio",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/apify/actor-mcp-servers",
+   "title": "apify/actor-mcp-servers",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://apify.com",
+   "developer_portal": "https://docs.apify.com",
+   "description": "Apify is a web scraping and automation platform built around Actors (serverless cloud programs), with storage, proxies, scheduling, integrations, and a REST API.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs at docs.apify.com describe the Apify platform."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "The hosted MCP server (mcp.apify.com) supports OAuth sign-in via Streamable HTTP. The REST API uses an API token.",
+   "token_refresh": "Tokens are static. They are shown only once, and you can rotate them.",
+   "scopes_notes": "API token created on the Integrations page in Apify Console. It can be sent as a Bearer header or as a token query parameter. Prepaid spend-capped tokens run Actors that use limited permissions."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Actors",
+    "Actor runs",
+    "Datasets",
+    "Key-value stores",
+    "Request queues",
+    "Schedules",
+    "Tasks",
+    "Webhooks"
+   ],
+   "read_ops": [
+    "list and get Actors",
+    "get Actor runs",
+    "list dataset items",
+    "get key-value store records",
+    "read request queues"
+   ],
+   "write_ops": [
+    "run Actors",
+    "set key-value store records",
+    "add requests to request queue",
+    "delete key-value store records"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Global limit of 250,000 requests per minute. Default per-resource limit of 60 requests per second, with some endpoints at 35, 100, 200 or 350 requests per second.",
+   "limitations": "Some Actors may require limited permissions for prepaid tokens. Clients for Go, PHP, Java, .NET and Rust are experimental."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.apify.com",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT",
+    "url": "https://docs.apify.com/api/v2",
+    "quote": "Add it to your request's Authorization header as Bearer <token> . E.g., Authorization: Bearer xxxxxxx .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://docs.apify.com/mcp",
+    "quote": "Add https://mcp.apify.com to your MCP client. On first connection, your browser opens so you can sign in to Apify and approve access.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.apify.com/api/v2",
+    "quote": "You can create an API token on the Integrations page in the Apify Console.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.apify.com/api",
+    "quote": "The Apify API is built around HTTP REST, uses predictable resource-oriented URLs, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.apify.com/api/client/js/docs",
+    "quote": "Intuitive methods for working with Actors , datasets , key-value stores , and other Apify resources",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.apify.com/mcp",
+    "quote": "The Apify's MCP server ( mcp.apify.com ) allows AI applications and agents to interact with the Apify platform using Model Context Protocol (MCP).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "250,000 requests per minute globally; 60 requests per second per resource",
+    "url": "https://docs.apify.com/api/v2",
+    "quote": "The global rate limit is set to 250 000 requests per minute .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "yes",
+    "url": "https://docs.apify.com/api",
+    "quote": "The client libraries are a more convenient way to interact with the Apify platform than the HTTP REST API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Free plan limits and credits are not described in the sources.",
+   "The OAuth scopes for the MCP server are not documented.",
+   "Webhook details are not covered in the sources. The Academy page only mentions webhooks as a platform feature.",
+   "The sources do not say whether a sandbox exists."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

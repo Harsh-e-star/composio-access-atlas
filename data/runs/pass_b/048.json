@@ -1,0 +1,193 @@
+{
+ "id": 48,
+ "name": "Gumroad",
+ "category": "Ecommerce",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:32:37Z",
+ "duration_s": 52.1,
+ "cost_usd": 0.0438,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://gumroad.com",
+   "developer_portal": "https://gumroad.com/api",
+   "description": "Gumroad is a creator commerce platform for selling products, memberships and subscriptions directly to customers. The assignment URL gumroad.com/api is its official API landing page.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe the Gumroad commerce platform and its API (n8n integration docs, Gumroad help center title, rmarescu MCP README). The official gumroad.com/api fetch returned only the word 'API' (page appears JS-rendered), so official API content was not verified directly."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Authorization code flow with a token endpoint and a refresh-token grant, per Mintlify mirror summary (unverified against official docs). n8n also uses OAuth2 with Client ID and Client Secret created from a Gumroad application under Settings > Advanced (verified via n8n docs fetch summary).",
+   "token_refresh": "Refresh-token grant supported per Mintlify mirror summary (unverified). Access tokens reportedly stay valid until revoked (help center snippet, unverified).",
+   "scopes_notes": "n8n docs say the default scope is view_sales and custom scopes can be entered. Official scope list not verified. A search snippet says the user endpoint needs a public-view scope (unverified)."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "no",
+   "production_restrictions": "Not established."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "products",
+    "sales",
+    "offer codes",
+    "user",
+    "resource subscriptions (webhooks)"
+   ],
+   "read_ops": [
+    "GET products (list and single)",
+    "GET sales",
+    "GET offer codes (list and single)",
+    "GET user",
+    "GET resource_subscriptions"
+   ],
+   "write_ops": [
+    "enable product",
+    "disable product",
+    "create offer code",
+    "update offer code",
+    "delete offer code",
+    "PUT resource_subscriptions",
+    "DELETE resource_subscriptions"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Not established. One mirror says a 429 is returned when exceeded, with no numbers. Another says no hard numbers are published. Treat as unknown.",
+   "limitations": "Official endpoint reference was not retrieved. Breadth is inferred from a community MCP server (products, sales, offer codes, user) and Mintlify mirror snippets. Rate limits are undocumented in what was read. Some of this is inferred, so treat as provisional."
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/rmarescu/gumroad-mcp",
+    "https://github.com/keithah/gumroad-mcp",
+    "https://npmjs.com/package/gumroad-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Gumroad API overview page is gumroad.com/api; the page text fetched returned only 'API', so identity rests on other sources.",
+    "url": "https://gumroad.com/api",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "auth.primary / access token",
+    "value": "Developers create an application to generate an access token (n8n integration docs).",
+    "url": "https://docs.n8n.io/integrations/builtin/credentials/gumroad.md",
+    "quote": "Create an application to generate an access token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth",
+    "value": "Self-hosted OAuth2 setup uses Settings > Advanced in Gumroad to create an application that produces an Application ID and Secret.",
+    "url": "https://docs.n8n.io/integrations/builtin/credentials/gumroad.md",
+    "quote": "Create the application. Gumroad generates an Application ID and Application Secret.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_setup",
+    "value": "OAuth application registration is required before using the API, per the official API page search snippet.",
+    "url": "https://gumroad.com/api",
+    "quote": "To start using the API, you'll need to register your OAuth application.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "help_article",
+    "value": "Gumroad help article exists titled 'Create an application for the API'.",
+    "url": "https://gumroad.com/help/article/280-create-application-api",
+    "quote": "Create an application for the API - Gumroad Help Center.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "rmarescu/gumroad-mcp describes itself as a Model Context Protocol server for the Gumroad API. It is owned by a personal account, not Gumroad.",
+    "url": "https://github.com/rmarescu/gumroad-mcp",
+    "quote": "A Model Context Protocol (MCP) server implementation for Gumroad API",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community_2",
+    "value": "keithah/gumroad-mcp is a separate community MCP server for the Gumroad API (MIT, per search snippet).",
+    "url": "https://github.com/keithah/gumroad-mcp",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "sdks",
+    "value": "Third-party Gumroad client libraries exist (npm @deox/gumroad, Hex gumroad_elixir, Nim gumroad, beydogan/gumroad-api). None is confirmed official.",
+    "url": "https://npmjs.com/package/@deox/gumroad",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "webhooks",
+    "value": "Resource subscriptions (webhook URLs registered per event type) are documented on a Mintlify mirror of the Gumroad API docs. Ping notifications also exist.",
+    "url": "https://www.mintlify.com/antiwork/gumroad/api/resource-subscriptions",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "rate_limits",
+    "value": "No public numeric rate limits were established.",
+    "url": "https://www.mintlify.com/antiwork/gumroad/api/overview",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Official gumroad.com/api content was not readable (JS-rendered). Need the full endpoint reference, exact auth flow, token endpoint, and scope list.",
+   "Is an official Gumroad MCP server published by the vendor (e.g., under the antiwork GitHub org)? Not checked. Only community MCPs were found.",
+   "Does creating an application or access token cost anything or need a paid plan, a trial, or admin approval? The help article body was not retrieved.",
+   "Official rate limits and 429 behavior are unknown.",
+   "Official SDK availability is unknown; only third-party libraries were found.",
+   "Official webhook/resource-subscription event types and whether they are documented by Gumroad itself are unverified.",
+   "The rmarescu MCP repo is archived as of Oct 15, 2026 per its page. Check the current status of the npm gumroad-mcp package before relying on it.",
+   "Does a sandbox or test-mode environment exist? None was found."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 0.4,
+ "flags": [],
+ "error": null
+}

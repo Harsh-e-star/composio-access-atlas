@@ -1,0 +1,231 @@
+{
+ "id": 38,
+ "name": "Pinterest",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:31:44Z",
+ "duration_s": 69.8,
+ "cost_usd": 0.0486,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.pinterest.com/",
+   "developer_portal": "https://developers.pinterest.com/",
+   "description": "Pinterest Developer Platform: Pinterest's portal for building apps on the Pinterest API (Conversions, organic Pins and Boards, Ads, Shopping catalogs, analytics).",
+   "identity_confirmed": "yes",
+   "identity_notes": "The developer portal describes the Pinterest product and its API. Pinterest is the vendor; the Pinterest Ads and organic content APIs are all part of this one platform."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Browser authorization request, redirect to a registered redirect URI, then exchange of the authorization code for an access token (per the getting-started guide). Refresh grant uses the token endpoint, per a search snippet only (not fetched).",
+   "token_refresh": "Store the access token and refresh it as needed (getting-started guide). Refresh-token rotation and lifetimes are unverified: sources conflict (30-day access token / 1-year refresh in one search snippet, 1-hour access token in a third-party guide).",
+   "scopes_notes": "Scopes exist and are required per endpoint (per the FAQ summary). Example names such as boards:read, pins:write, ads:read come from a search snippet; the scopes page returned 404 on fetch, so they are unverified. Adding scopes later requires a new token."
+  },
+  "access": {
+   "tier": "partner_or_sales",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Trial access requires Pinterest to approve the app request, which is the most restrictive gate for test credentials. Standard access (needed for public posting) requires a video of the OAuth flow and a live integration, reviewed by Pinterest. Costs are not mentioned on the official access-tiers page; a third-party claim that the API is free is unverified."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Pins",
+    "Boards",
+    "Ads campaigns and targeting",
+    "Conversions",
+    "Shopping catalogs",
+    "Analytics for content and ads",
+    "User accounts"
+   ],
+   "read_ops": [
+    "Search Pins (MCP)",
+    "Report on campaign performance (Ads)",
+    "Ingest analytics data"
+   ],
+   "write_ops": [
+    "Create and manage organic Pins and Boards",
+    "Manage ad campaigns and targeting",
+    "Create and manage product catalogs"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "Trial: calls per day per app. Standard: calls per minute, per user, per app. Numeric limits not established from official pages (a third-party 1,000/day figure is unverified).",
+   "limitations": "Trial-created Pins and Boards are visible only to their creator as Sandbox entities. Test tokens expire after 24 hours. Webhooks were not mentioned on any page read; only breaking-change email notifications were found. Access tokens are API-based, not CLI."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developers.pinterest.com/about-pinterest-mcp/",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/clugtu/pinterest-mcp",
+    "https://github.com/sinalkar/pinterest-mcp-docker",
+    "https://github.com/cdatasoftware/pinterest-mcp-server-by-cdata",
+    "https://lobehub.com/mcp/oceaneqaze-pinterest-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Pinterest Developer Platform, Pinterest's portal for building apps that work with Pinterest",
+    "url": "https://developers.pinterest.com/",
+    "quote": "This is the Pinterest Developer Platform, Pinterest's portal for building apps that work with Pinterest.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.breadth (organic)",
+    "value": "Apps can create and manage organic Pins and Boards",
+    "url": "https://developers.pinterest.com/",
+    "quote": "create and manage organic content (Pins and Boards)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth (ads)",
+    "value": "Ads campaigns, targeting, and reporting via the API",
+    "url": "https://developers.pinterest.com/",
+    "quote": "Use Pinterest API to manage ad campaigns, set up targeting, and report on campaign performance.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial",
+    "value": "Trial access is granted after the app is approved for API use",
+    "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+    "quote": "If approved for API use, your app receives Trial access, which is best for exploring our API features.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial_request",
+    "value": "Developers submit a request form and Pinterest reviews it for trial access",
+    "url": "https://developers.pinterest.com/docs/getting-started/",
+    "quote": "Submit your request for trial access. Pinterest reviews the request and emails you the result.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.standard_upgrade",
+    "value": "Standard access requires a demo video of the OAuth flow and a live integration, reviewed by Pinterest",
+    "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+    "quote": "Prepare a video recording of your app completing an action using the Pinterest API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.rate_limits",
+    "value": "Trial is limited per day per app; Standard per minute, per user, per app",
+    "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+    "quote": "Apps with Trial access are rate limited based on calls per day/per app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sandbox",
+    "value": "A sandbox environment allows test calls without affecting production",
+    "url": "https://developers.pinterest.com/docs/getting-started/",
+    "quote": "Our sandbox environment allows you to make test calls without impacting the Pinterest product environment.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth",
+    "value": "OAuth authorization code flow: authorize in browser, redirect, exchange code for access token",
+    "url": "https://developers.pinterest.com/docs/getting-started/",
+    "quote": "Exchange the authorization code for an access token",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.test_tokens",
+    "value": "Product-limited test tokens are available after trial approval and expire after 24 hours",
+    "url": "https://developers.pinterest.com/docs/getting-started/",
+    "quote": "Test tokens expire after 24 hours.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks",
+    "value": "Official Python SDK for campaign management",
+    "url": "https://developers.pinterest.com/docs/sdks/",
+    "quote": "We offer several developer tools such as a Python SDK, sandbox environment, and test tokens.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks",
+    "value": "Only breaking-change email notifications were found; no webhooks mentioned",
+    "url": "https://developers.pinterest.com/docs/sdks/",
+    "quote": "For breaking changes we'll send an email notification to the contacts provided under your app's details.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Pinterest publishes a Pinterest MCP Server on its developer site; not yet publicly launched per the page",
+    "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+    "quote": "Be the first to know when it launches.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.setup",
+    "value": "Setup is an HTTP MCP entry at api.pinterest.com/mcp with a Bearer token",
+    "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+    "quote": "Set up the Pinterest MCP Server once in your preferred AI environment.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.announcement",
+    "value": "Pinterest says the MCP server is built on the open Model Context Protocol",
+    "url": "https://community.pinterest.biz/t/introducing-the-pinterest-mcp-server/51358.md",
+    "quote": "lets AI assistants, copilots, and agentic workflows securely access Pinterest intelligence",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Auth page (developers.pinterest.com/docs/getting-started/authentication/) and scopes page (developers.pinterest.com/docs/getting-started/scopes/) returned 404; scope names and the Bearer header format need a working source.",
+   "Token lifetimes conflict: a search snippet cites a 30-day access token and 1-year refresh token; a third-party guide cites 1 hour; another cites a 60-day refresh token. Needs the official token endpoint reference (developers.pinterest.com/docs/api/v5/oauth-token) or a live token response.",
+   "Official webhooks: none found on the pages read. Needs a check of the full API reference.",
+   "Costs: official pages read do not state pricing. Third-party sources say free; unverified.",
+   "Standard review timeline and trial approval timeline are not official; forum reports of 1-2 week waits are anecdotal.",
+   "MCP launch status: page says 'Be the first to know when it launches.' Need confirmation that the server is generally available and whether a GitHub repo under the pinterest org exists (a pinterest/mcp-server label was mentioned but no repo link was verified).",
+   "Community MCP URLs were from search results only and were not fetched; maintenance status and affiliation are unverified.",
+   "Lead not fetched: github.com/pinterest/api-quickstart and github.com/pinterest/pinterest-python-generated-api-client (appear as Pinterest-owned by name; ownership not verified by fetch).",
+   "Fetch budget (8) was used up before verifying sandbox token expiry, numeric rate limits, or the full list of endpoints and scopes."
+  ]
+ },
+ "assessment": {
+  "verdict": "GATED",
+  "group": "OUTREACH REQUIRED",
+  "technical_feasibility": "high",
+  "credential_accessibility": "gated",
+  "production_readiness": "restricted",
+  "security_risk": "elevated",
+  "commercial_dependency": "yes",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Partnership / vendor approval / sales contact",
+  "rationale": [
+   "Credentials require partnership, vendor approval or sales."
+  ]
+ },
+ "evidence_support_rate": 0.867,
+ "flags": [],
+ "error": null
+}

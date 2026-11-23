@@ -1,0 +1,187 @@
+{
+ "id": 92,
+ "name": "Otter AI",
+ "category": "AI, Research and Media-native",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:37:12Z",
+ "duration_s": 54.3,
+ "cost_usd": 0.0462,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://otter.ai",
+   "developer_portal": "https://otter.ai/api/docs/",
+   "description": "Otter.ai (Otter Voice Meeting Notes) is an AI meeting transcription and notes product. The claude.com connector page and the otter.ai title confirm the product.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Product is Otter.ai, the AI meeting notes/transcription service. Page title at otter.ai/api/docs/ reads 'Otter Voice Meeting Notes - Otter.ai'. The MCP listing is 'Made by Otter.ai'. Help center article on MCP server is cited by search but was not fetchable (403)."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "MCP server (mcp.otter.ai/mcp) connects over OAuth via the user's Otter account, per Scalekit and the Claude connector 'Sign-in Required' label. Public API uses a static Bearer key generated in workspace Developer settings; Scalekit says it does not support OAuth.",
+   "token_refresh": "Not established for API key. MCP OAuth refresh behavior unknown.",
+   "scopes_notes": "Not established."
+  },
+  "access": {
+   "tier": "paid_plan",
+   "free_credentials": "no",
+   "trial_available": "unknown",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "REST Public API is Enterprise-workspace only per Scalekit (third-party). Official MCP server requires Sign-in with an Otter account (OAuth); no developer key needed. Plan requirements for the MCP server are unverified; one third-party source claims all plans."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "none"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "conversations",
+    "channels",
+    "members",
+    "audio download links",
+    "user info"
+   ],
+   "read_ops": [
+    "search meetings",
+    "fetch full transcript",
+    "get current user info (MCP)",
+    "list/retrieve conversations (REST, per Scalekit)"
+   ],
+   "write_ops": [
+    "POST to ingest a file into conversations (REST, per Scalekit)"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "10 requests per second and two keys per user (per Scalekit, third-party; unverified against Otter docs)",
+   "limitations": "Public REST API is Enterprise-only (per Scalekit). MCP server is read-only by design with three tools: search, fetch, get_user_info (per Scalekit and Claude connector). Recall.ai article states Otter has no official API, which is older and conflicts with later sources. Official API docs page at otter.ai/api/docs/ could not be read beyond its title."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.otter.ai/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/bcharleson/otter-cli",
+    "https://mcpservers.org/servers/cotlet-dev-integrations-otter-api-mcp-server",
+    "https://anythingmcp.com/marketplace/otter",
+    "https://composio.dev/toolkits/otter_ai_mcp.md",
+    "https://www.stackone.com/connectors/otterai/mcp/"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Otter's MCP Server integrates with Otter.ai's meeting intelligence platform, enabling users to search meeting transcripts",
+    "url": "https://claude.com/connectors/otter-ai",
+    "quote": "Otter's MCP Server integrates with Otter.ai's meeting intelligence platform, enabling users to search meeting transcripts",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Made by Otter.ai; MCP server URL https://mcp.otter.ai/mcp; tools get_user_info, search, fetch; Sign-in Required",
+    "url": "https://claude.com/connectors/otter-ai",
+    "quote": "Made by Otter.ai",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.access",
+    "value": "The Public API is a REST surface at api.otter.ai/v1, available to Enterprise workspaces only.",
+    "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+    "quote": "The Public API is a REST surface at api.otter.ai/v1, available to Enterprise workspaces only.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.api_key",
+    "value": "Bearer API key created in workspace Developer settings, capped at two keys per user",
+    "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+    "quote": "It authenticates with a Bearer API key created in the workspace Developer settings, capped at two keys per user",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limit",
+    "value": "10 requests per second",
+    "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+    "quote": "capped at two keys per user and 10 requests per second.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "The API ships webhooks",
+    "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+    "quote": "It also ships webhooks.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "MCP connects from a standard Otter account over OAuth; the API does not support OAuth",
+    "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+    "quote": "The MCP server connects from a standard Otter account over OAuth;",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.read_only",
+    "value": "Three tools (search, fetch, get user info); no create/update/delete; read-only by design",
+    "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+    "quote": "There are no create, update, or delete tools; the server is read-only by design.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.no_official_api_legacy",
+    "value": "Otter does not have an official API (older statement)",
+    "url": "https://www.recall.ai/blog/how-to-integrate-with-otter-ai",
+    "quote": "Unfortunately, Otter does not have an official API, nor does it integrate with automation tools like Zapier.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community_repo",
+    "value": "Community CLI/MCP wrapper by bcharleson",
+    "url": "https://github.com/bcharleson/otter-cli/blob/main/AGENTS.md",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Could not read help.otter.ai MCP article (403); plan requirements for official MCP server unknown (one third-party claims all plans).",
+   "Could not read otter.ai/api/docs content beyond title; API endpoints, SDKs, and webhook events need confirmation from official docs.",
+   "Whether Enterprise API access requires admin approval or sales contact is unknown.",
+   "Trial availability and sandbox availability unknown.",
+   "SDK availability unknown; an apis.io listing claimed Python, Node.js, Java clients but was not verified against Otter.",
+   "Official MCP OAuth scopes and token refresh behavior unknown."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "low",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "yes",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Paid plan required",
+  "rationale": [
+   "API needs a paid plan."
+  ]
+ },
+ "evidence_support_rate": 0.9,
+ "flags": [],
+ "error": null
+}

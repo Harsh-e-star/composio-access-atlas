@@ -1,0 +1,242 @@
+{
+ "id": 61,
+ "name": "GitHub",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:34:54Z",
+ "duration_s": 74.2,
+ "cost_usd": 0.0464,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://github.com",
+   "developer_portal": "https://docs.github.com/en/rest",
+   "description": "GitHub: a software development platform (git hosting, issues, pull requests, Actions, Copilot). The REST API docs at docs.github.com are its official reference.",
+   "identity_confirmed": "yes",
+   "identity_notes": "The docs.github.com REST docs and the github/github-mcp-server repo (owner github, described as GitHub's official MCP server) are consistent with the product named."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2",
+    "Service account/JWT",
+    "Basic",
+    "Other"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "OAuth apps and GitHub Apps (user-to-server tokens). The MCP GA changelog says the remote server uses OAuth 2.1 with PKCE.",
+   "token_refresh": "GitHub App user tokens can be refreshed; the MCP changelog mentions automatic token refresh and short-lived credentials for the remote server. Refresh details for other flows were not fetched.",
+   "scopes_notes": "Fine-grained PATs use per-endpoint permissions. Classic PATs use scopes. GitHub Apps use installation tokens."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Fine-grained PATs can be set to require organization owner approval; until approved, a token can only read public resources. Organizations can also restrict classic PATs. Test against a personal account or a test org to avoid this."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "GraphQL"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "repos",
+    "issues",
+    "pull_requests",
+    "users",
+    "orgs",
+    "actions",
+    "code_security",
+    "dependabot",
+    "discussions",
+    "gists",
+    "projects",
+    "notifications",
+    "security_advisories",
+    "copilot"
+   ],
+   "read_ops": [
+    "Repository, issue, pull request, user, organization, and Actions resources (per MCP toolsets; REST reference not fetched directly)"
+   ],
+   "write_ops": [
+    "Create/update issues and pull requests (inferred from MCP toolsets; REST reference not fetched directly)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "unknown (authenticated requests get a higher limit per the authentication page; exact numbers not verified)",
+   "limitations": "Rate limit figures were not established from the fetched pages. The REST overview page did not state rate limits or pagination. Org-owned resources may require org approval for fine-grained PATs. Webhooks are configured per repository, organization, or GitHub App."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/github/github-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/steinybot/github-mcp-server",
+    "https://github.com/nickytonline/github-mcp-http"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "GitHub is a developer platform; docs.github.com/en/rest is its REST API reference.",
+    "url": "https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api",
+    "quote": "If you want to use the GitHub REST API for personal use, you can create a personal access token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Personal access tokens (fine-grained and classic) are supported.",
+    "url": "https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api",
+    "quote": "Fine-grained tokens are preferred. Their access depends on per-endpoint permissions",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.methods",
+    "value": "GitHub Apps are recommended for organization or delegated use; OAuth app tokens are allowed.",
+    "url": "https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api",
+    "quote": "If you want to use the API for an organization or on behalf of another user, GitHub recommends that you use a GitHub App.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Some GitHub App and OAuth app endpoints require basic authentication with client ID and secret.",
+    "url": "https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api",
+    "quote": "Some REST API endpoints for GitHub Apps and OAuth apps require you to use basic authentication to access the endpoint.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Username and password authentication is not supported.",
+    "url": "https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api",
+    "quote": "Authentication with username and password is not supported.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "A personal access token can be created by a user; no paid plan is mentioned for the basic PAT flow, and free-plan eligibility is not stated.",
+    "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens",
+    "quote": "Verify your email address, if it hasn't been verified yet.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Organization owners can require approval for fine-grained PATs; pending tokens only read public resources until approved.",
+    "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens",
+    "quote": "Organization owners can require approval for any fine-grained personal access tokens",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.admin_approval",
+    "value": "Organization owners can restrict classic PATs to their organization.",
+    "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens",
+    "quote": "Organization owners can set a policy to restrict the access of personal access tokens (classic) to their organization.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks are supported; they can be created within a repository, organization, or GitHub App.",
+    "url": "https://docs.github.com/en/webhooks/about-webhooks",
+    "quote": "Webhooks provide a way for notifications to be delivered to an external web server whenever certain events occur on GitHub.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST and GraphQL APIs are both available.",
+    "url": "https://github.com/octokit/octokit.js",
+    "quote": "The Octokit client can be used to send requests to GitHub's REST API and queries to GitHub's GraphQL API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.versioning",
+    "value": "The REST API is versioned by a calendar-based header, X-GitHub-Api-Version; latest version 2026-03-10.",
+    "url": "https://docs.github.com/en/enterprise-server/rest",
+    "quote": "The REST API is now versioned. For more information, see \"About API versioning.\"",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks",
+    "value": "Octokit is GitHub's all-batteries-included SDK for Browsers, Node.js, and Deno; it covers REST and GraphQL.",
+    "url": "https://github.com/octokit/octokit.js",
+    "quote": "The all-batteries-included GitHub SDK for Browsers, Node.js, and Deno.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "github/github-mcp-server is GitHub's official MCP server, owned by the github organization.",
+    "url": "https://github.com/github/github-mcp-server",
+    "quote": "GitHub's official MCP Server.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.remote",
+    "value": "A remote GitHub MCP Server is hosted by GitHub and is generally available.",
+    "url": "https://github.com/github/github-mcp-server",
+    "quote": "The remote GitHub MCP Server is hosted by GitHub and provides the easiest method for getting up and running.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "The remote MCP server uses OAuth 2.1 + PKCE, and a PAT can also be used with the local server.",
+    "url": "https://github.blog/changelog/2025-09-04-remote-github-mcp-server-is-now-generally-available/",
+    "quote": "The GitHub MCP Server now supports OAuth 2.1 + PKCE",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community MCP servers exist, e.g. steinybot/github-mcp-server and nickytonline/github-mcp-http.",
+    "url": "https://github.com/steinybot/github-mcp-server",
+    "quote": "github mcp server",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Exact REST rate limits (primary per hour and secondary) were not established from fetched pages.",
+   "Whether a sandbox or test environment exists for GitHub.com (the free account path is assumed but not verified).",
+   "Webhook retries and HMAC signature validation were not on the fetched about-webhooks page.",
+   "Whether GitHub App installation requires org owner approval (only fine-grained PAT approval was verified).",
+   "The exact hosted endpoint (api.githubcopilot.com/mcp/) comes from third-party directories and was not confirmed on a GitHub page.",
+   "Whether the community MCP repos steinybot and nickytonline are maintained; only search titles were seen.",
+   "Full REST endpoint breadth and read/write counts were inferred from MCP toolsets, not from the REST reference."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented GraphQL/REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.938,
+ "flags": [],
+ "error": null
+}

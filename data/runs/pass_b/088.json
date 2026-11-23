@@ -1,0 +1,208 @@
+{
+ "id": 88,
+ "name": "Brex",
+ "category": "Finance and Fintech",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:36:59Z",
+ "duration_s": 62.5,
+ "cost_usd": 0.0448,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.brex.com/",
+   "developer_portal": "https://developer.brex.com/",
+   "description": "Brex is a fully unified spend platform for finance teams (corporate cards, expenses, bill pay/payments, banking). developer.brex.com is its official developer portal for the Brex REST API.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Developer portal and API docs are on Brex's own domains. The product is the Brex business spend/card platform, not an unrelated company named Brex. Quotes below came from summarizing fetches; verify verbatim before publication."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Partner OAuth 2.0: Authorization Code Grant for most APIs; Client Credentials Grant for the Onboarding API. Partners must get a client ID/secret from developer support.",
+   "token_refresh": "No refresh mechanism described. User tokens expire after 90 days of non-use and stop working when the associated user is non-active.",
+   "scopes_notes": "User tokens carry scopes chosen at creation, which set the data access level."
+  },
+  "access": {
+   "tier": "admin_approval",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "yes",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "no",
+   "production_restrictions": "Developer API agreement must be accepted by an account or card admin before use. Sending more than 1,000 payments per day requires contacting developer-support@brex.com. OAuth partner access requires developer support to issue client credentials. No sandbox was found in the sources reviewed; the sandbox_available value is 'no' only because no sandbox was mentioned, not because one was ruled out."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Accounting",
+    "Budgets",
+    "Expenses",
+    "Fields",
+    "Onboarding",
+    "Payments",
+    "Team (users, locations, departments, cards)",
+    "Transactions (transactions, accounts, statements)",
+    "Travel",
+    "Webhooks"
+   ],
+   "read_ops": [
+    "view transactions, accounts, and statements",
+    "view trips (Travel)",
+    "list expenses, cards, users (per MCP tool list)"
+   ],
+   "write_ops": [
+    "manage card expenses, receipt matching, and receipt uploads",
+    "manage budgets and budget programs",
+    "manage vendors and send ACH, domestic wires, and checks",
+    "manage users, locations, departments, and cards",
+    "manage fields and their options",
+    "refer customers and prefill signup information (Onboarding)"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "unknown",
+   "limitations": "Payments volume above 1,000/day needs developer support. Brex MCP is in beta and its tools may change. No sandbox was found in the sources. Rate limits not established."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developer.brex.com/docs/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/crazyrabbitLTC/mcp-brex-server",
+    "https://github.com/dennisonbertram/brex-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Brex is the first fully unified spend platform; the Brex API lets teams power internal tools and custom workflows",
+    "url": "https://developer.brex.com/",
+    "quote": "Using the Brex API, you can power your internal tools and create custom workflows.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Bearer user token generated from the Brex dashboard, passed as Authorization Bearer header",
+    "url": "https://developer.brex.com/docs/authentication",
+    "quote": "Authorization: \"Bearer {{your user_token here}}\"",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_creation",
+    "value": "Only account or card admins can create API tokens in the dashboard",
+    "url": "https://brex.com/support/brex-api/",
+    "quote": "Only account or card admins can create API tokens in the dashboard.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_expiry",
+    "value": "User tokens expire after 90 days without use and stop working for non-active users",
+    "url": "https://developer.brex.com/docs/authentication",
+    "quote": "User tokens will expire if they are not used to make an API call for 90 days",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.partner_oauth",
+    "value": "Partners get client ID and secret from developer support; authorization code grant",
+    "url": "https://developer.brex.com/guides/partner_authentication",
+    "quote": "Please contact our developer support team to be issued a client ID and client secret for partner authentication.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.admin_approval_required",
+    "value": "Developer API agreement must be accepted by an account or card admin",
+    "url": "https://developer.brex.com/docs/mcp",
+    "quote": "An account admin or card admin must accept the Developer API agreement in Settings → Developer.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST APIs defined with OpenAPI; JSON over HTTPS",
+    "url": "https://developer.brex.com/",
+    "quote": "All APIs accept and return JSON and require HTTPS.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks API sends real-time event notifications",
+    "url": "https://developer.brex.com/",
+    "quote": "Send real-time notifications based on events",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_url",
+    "value": "Brex hosts an official MCP server at https://api.brex.com/mcp, in beta, supports OAuth and API token auth",
+    "url": "https://developer.brex.com/docs/mcp",
+    "quote": "The server is hosted at `https://api.brex.com/mcp` and supports any MCP-compatible client.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_beta",
+    "value": "MCP server is beta and its tools may change",
+    "url": "https://developer.brex.com/docs/mcp",
+    "quote": "The MCP server's tools may change as we continue developing new use cases and features.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.access",
+    "value": "Once enabled, all users in the account can connect with their own credentials",
+    "url": "https://developer.brex.com/docs/mcp",
+    "quote": "Once enabled, all users in your Brex account can connect to the MCP server with their own credentials.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community MCP servers exist (crazyrabbitLTC/mcp-brex-server; dennisonbertram/brex-mcp-server)",
+    "url": "https://github.com/crazyrabbitLTC/mcp-brex-server",
+    "quote": "Model Context Protocol server that provides AI assistants read-only access to the Brex API",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Whether a sandbox or test environment exists (none found in sources reviewed).",
+   "Whether a paid Brex plan is required for API token access (not stated on the pages read).",
+   "Rate limits (not found).",
+   "Publisher and status of the npm package 'brex' (search lead only; not fetched; repo/owner unverified).",
+   "Whether the Developer API agreement requires any approval by Brex beyond admin acceptance.",
+   "Exact verbatim quotes: several quotes came from summarizing fetches and need byte-level verification before use."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "high",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Workspace admin approval",
+  "rationale": [
+   "A workspace admin must approve/install or issue credentials."
+  ]
+ },
+ "evidence_support_rate": 0.917,
+ "flags": [],
+ "error": null
+}

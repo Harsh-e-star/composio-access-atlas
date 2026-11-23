@@ -1,0 +1,245 @@
+{
+ "id": 89,
+ "name": "Ramp",
+ "category": "Finance and Fintech",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:26:46Z",
+ "duration_s": 39.4,
+ "cost_usd": 0.0763,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.ramp.com",
+   "title": "Welcome — Ramp API docs",
+   "rendered": true
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.ramp.com/developer-api/v1/api/authorization",
+   "title": "Ramp API docs",
+   "rendered": true
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.ramp.com/developer-api/v1/authorization",
+   "title": "Authorization — Ramp API docs",
+   "rendered": true
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.ramp.com/developer-api/v1/rate-limiting",
+   "title": "Rate Limits and Timeouts — Ramp API docs",
+   "rendered": true
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.ramp.com/openapi/developer-api.json",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/highflame-ai/ramparts",
+   "title": "highflame-ai/ramparts",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ramp-public/ramp_mcp",
+   "title": "ramp-public/ramp_mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/KevinRabun/FedRAMP20xMCP",
+   "title": "KevinRabun/FedRAMP20xMCP",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/PrynAI/AgenticAI-OnRamp-with-Langgraph",
+   "title": "PrynAI/AgenticAI-OnRamp-with-Langgraph",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/rampify-dev/rampify-mcp",
+   "title": "rampify-dev/rampify-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/NickyHeC/ramp-mcp",
+   "title": "NickyHeC/ramp-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/dsmithnautel/Repo-Ramp",
+   "title": "dsmithnautel/Repo-Ramp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/miloudbelarebia/mcp-rampart",
+   "title": "miloudbelarebia/mcp-rampart",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://ramp.com",
+   "developer_portal": "https://docs.ramp.com",
+   "description": "Ramp is a corporate spend management platform (cards, bill pay, reimbursements, procurement) with a Developer API, MCP server and CLI.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs at docs.ramp.com describe the Ramp Developer API for cards, bills, users, accounting."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Client Credentials, Authorization Code, Refresh Token, and JWT Bearer (ID-JAG) grants; client authenticates via HTTP Basic with client_id:client_secret at /developer/v1/token",
+   "token_refresh": "Client credentials tokens last 10 days; auth code/refresh access tokens default 1 hour. Refresh token grant must be enabled for the app; client credentials returns no refresh token.",
+   "scopes_notes": "Scopes follow resource:permission pattern (e.g. transactions:read). Some are partner-only; cards:read_vault only for approved integrators. Ramp MCP/CLI use OAuth with Full or Read-only access instead of scopes."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "yes",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Production write requests are disabled in the docs try-it console (use sandbox). Apps accessing the whole business require an Admin or Business Owner to approve. Some endpoints require a Ramp plan feature (403 otherwise). cards:read_vault only for approved integrators."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Accounting",
+    "Transactions",
+    "Bills",
+    "Purchase orders",
+    "Users",
+    "Cards",
+    "Vendors",
+    "Reimbursements",
+    "Custom Records",
+    "Spend programs",
+    "Applications",
+    "AI spend"
+   ],
+   "read_ops": [
+    "List GL accounts",
+    "Fetch accounting connections",
+    "List transactions",
+    "List bills",
+    "List purchase orders"
+   ],
+   "write_ops": [
+    "Upload GL accounts",
+    "Update/delete GL account",
+    "Post accounting codings",
+    "Register accounting connection",
+    "Create bills",
+    "Create/update users"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "200 requests per 10 seconds per source IP; token issuance 100 POST /developer/v1/token per 10 seconds per IP; exceeding returns 429 and may block for 60 seconds. Higher limits by support request.",
+   "limitations": "Some endpoints need a Ramp plan feature; partner-only scopes; transactions synced_after is not an updated-at filter; no updated-at filters on bills/purchase orders."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/ramp-public/ramp_mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/NickyHeC/ramp-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://docs.ramp.com/developer-api/v1/authorization",
+    "quote": "Ramp uses OAuth 2.0. Your app gets an access token from /developer/v1/token , authenticating with its client ID and secret (typically HTTP Basic Auth)",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.ramp.com",
+    "quote": "Don't have a Ramp account? Request a sandbox to start building right away.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.ramp.com/developer-api/v1/rate-limiting",
+    "quote": "GET /developer/v1/transactions synced_after Only accounting sync events",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.ramp.com",
+    "quote": "Bill Pay Bills, draft bills, payments, vendors, 3-way match. Cards Virtual, physical, and agent cards. Every card draws against a fund. Custom Records Define your own data model in Ramp.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.ramp.com/developer-api/v1/authorization",
+    "quote": "For Ramp's own MCP server and CLI, see Ramp MCP and Ramp CLI .",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.admin_approval_required",
+    "value": "yes",
+    "url": "https://docs.ramp.com/developer-api/v1/authorization",
+    "quote": "For apps that access the whole business, an Admin or Business Owner must approve. Other users see \"An admin must connect this app.\"",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "200 requests per 10 seconds per IP",
+    "url": "https://docs.ramp.com/developer-api/v1/rate-limiting",
+    "quote": "The standard Developer API limit is 200 requests per 10 seconds per source IP address .",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Whether webhooks and SDKs details are confirmed beyond docs index (webhooks listed in docs nav).",
+   "Whether sandbox access requires approval from Ramp."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.0,
+ "flags": [],
+ "error": null
+}

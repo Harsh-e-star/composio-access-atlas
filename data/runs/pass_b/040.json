@@ -1,0 +1,206 @@
+{
+ "id": 40,
+ "name": "SendGrid",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:31:45Z",
+ "duration_s": 70.8,
+ "cost_usd": 0.0526,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.twilio.com/en-us/sendgrid",
+   "developer_portal": "https://www.twilio.com/docs/sendgrid",
+   "description": "SendGrid (Twilio SendGrid) is a cloud email delivery service with a v3 REST API for sending transactional and marketing email, plus templates, contacts, stats, suppressions, billing and email validation. It is owned by Twilio.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs at twilio.com/docs/sendgrid describe the Twilio SendGrid v3 API, its API keys, Event Webhook and SDKs. Matches the assigned sendgrid.com hint; sendgrid.com now redirects to twilio.com/en-us/sendgrid."
+  },
+  "auth": {
+   "methods": [
+    "API key"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "None documented; keys are static until deleted. Deleting a key stops calls made with it.",
+   "scopes_notes": "Keys carry permissions: Full Access, Custom Access (per-endpoint, per-access-level), Billing Access, and Email Address Validation Access. A key cannot exceed the creating account's permissions. Billing calls need a separate key."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Not established. Free-plan API access and daily send limits were not confirmed; pricing pages did not load their plan details."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "Mail send",
+    "Templates (/v3/templates)",
+    "API keys",
+    "Billing",
+    "Email address validation",
+    "Reporting/stats"
+   ],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "unknown",
+   "limitations": "Breadth is only partly established: the sources confirmed the v3 REST pattern, a templates example and permission groups, but not a full endpoint list. Resource-level read/write operations were not verified. SMTP sending is not covered here."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/FINCH285/SendGrid-MCP-Server",
+    "https://mcpservers.org/servers/neschadin/sendgrid-mcp",
+    "https://mcpservers.org/servers/deyikong/sendgrid-mcp",
+    "https://github.com/coopersully/sendgrid-mcp",
+    "https://mcpservers.org/en/servers/Garoth/sendgrid-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.primary",
+    "value": "API key sent as Bearer token in Authorization header",
+    "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+    "quote": "include an Authorization header with the value Bearer <YOUR_API_KEY_HERE> in your request.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.key_creation",
+    "value": "API keys are created in the account console",
+    "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+    "quote": "You can create API keys in your account",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.permissions_ceiling",
+    "value": "A key cannot have more permissions than the creating user",
+    "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/api-keys",
+    "quote": "You can't give an API key greater permissions than your own.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.key_types",
+    "value": "Full Access, Custom Access, Billing Access, Email Address Validation Access",
+    "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/api-keys",
+    "quote": "Grants all API endpoints full access to your account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.billing_key",
+    "value": "Billing calls need a separate API key",
+    "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/api-keys",
+    "quote": "To make billing-related API calls, Twilio requires a separate API key.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.key_limit",
+    "value": "Accounts are limited to 100 API keys",
+    "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/api-keys",
+    "quote": "Twilio limits accounts to 100 API keys.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.basic",
+    "value": "Basic auth with username/password is not supported; key-as-password Basic auth is mentioned for some services",
+    "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "webhooks",
+    "value": "Event Webhook sends delivery, engagement and account events",
+    "url": "https://www.twilio.com/docs/sendgrid/for-developers/tracking-events/event",
+    "quote": "When Twilio SendGrid and email service providers process email messages, these messages generate events that Twilio logs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.security",
+    "value": "Webhook data can be secured with Signed Event Webhook and/or OAuth 2.0",
+    "url": "https://www.twilio.com/docs/sendgrid/for-developers/tracking-events/event",
+    "quote": "To secure the Event Webhook data, use the Signed Event Webhook, OAuth 2.0, or both.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks",
+    "value": "Official SDKs for C#, Go, Java, Node.js, PHP, Python, Ruby",
+    "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "access.trial",
+    "value": "Free trial with no credit card required",
+    "url": "https://www.twilio.com/en-us/sendgrid",
+    "quote": "Sign up for a free trial—no credit card required.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.community_repo",
+    "value": "Community Twilio blog tutorial repo FINCH285/SendGrid-MCP-Server; the post is a contributor article, not an official release",
+    "url": "https://www.twilio.com/en-us/blog/developers/community/build-a-sendgrid-mcp-server-for-ai-email-workflows",
+    "quote": "The complete source code is available in this GitHub repository.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "No vendor-owned SendGrid MCP server confirmed",
+    "url": "https://www.twilio.com/en-us/blog/developers/community/build-a-sendgrid-mcp-server-for-ai-email-workflows",
+    "quote": "Opinions expressed by Twilio contributors are their own.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Does the free/no-credit-card trial or free plan allow API calls and key creation without paying? Pricing pages did not load plan details (sendgrid.com/pricing redirected to twilio.com/en-us/sendgrid; the pricing product page was not fetched).",
+   "Is Basic auth with 'apikey' as username and key as password supported? Sources conflict; WebSearch summaries say both 'not supported' and 'supported for some services'.",
+   "Does the Event Webhook POST JSON, and is it ECDSA-signed? The page did not confirm transport or signing details.",
+   "Rate limits: not established.",
+   "Full endpoint list and read/write operations per resource: not established from fetched pages.",
+   "Official MCP: secondary sources conflict. One says Twilio runs an official docs server at mcp.twilio.com/docs (Public Beta, SendGrid spec search only). Another says SendGrid ships none. Not verified on Twilio's own pages or GitHub org. Check mcp.twilio.com and github.com/twilio-labs and github.com/sendgrid directly.",
+   "Community MCP servers found (not official): neschadin/sendgrid-mcp (MIT, states it is not affiliated with Twilio SendGrid), deyikong/sendgrid-mcp (58 tools, independent), coopersully/sendgrid-mcp, Garoth/sendgrid-mcp (Marketing API), @codespar/mcp-sendgrid on npm, FINCH285/SendGrid-MCP-Server (blog tutorial repo). Repos were listed in search results only, not fetched.",
+   "Fetch budget: about 8 page fetches used (two sendgrid.com/pricing redirects and one twilio.com redirect count), plus 2 searches.",
+   "SMTP is a separate sending protocol, not covered by the REST-only protocol field."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "high",
+  "commercial_dependency": "unknown",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.769,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,210 @@
+{
+ "id": 9,
+ "name": "Copper",
+ "category": "CRM and Sales",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:19:02Z",
+ "duration_s": 59.3,
+ "cost_usd": 0.0716,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.copper.com/",
+   "developer_portal": "https://developer.copper.com/",
+   "description": "Copper CRM: a CRM for relationship-focused service businesses that works inside Google Workspace. Its REST Developer API is documented at developer.copper.com.",
+   "identity_confirmed": "yes",
+   "identity_notes": "copper.com is the CRM (confirmed by homepage). Do NOT conflate with developer.copper.co, which is a different company's platform (api.copper.co/platform, Copper crypto/custody API) and was returned in some searches. Its base URL and rate-limit details were excluded."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Authorization Code Grant (per official OAuth page). Client credentials issued after app registration via partners@copper.com. Refresh-token behavior not documented on the page I fetched.",
+   "token_refresh": "unknown",
+   "scopes_notes": "Only developer/v1/all is currently supported (described as 'Read and modify user records'). More granular scopes are promised for the future."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "no",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "OAuth2 requires registering the app first: contact partners@copper.com with app name, purpose, and an HTTPS callback URL to receive client_id and client_secret. No app-review requirement was found."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Account",
+    "Users",
+    "Leads",
+    "People",
+    "Companies",
+    "Opportunities",
+    "Projects",
+    "Tags",
+    "Tasks",
+    "Activities",
+    "Custom Fields",
+    "Field Layouts",
+    "Related Items",
+    "File Upload",
+    "Webhooks"
+   ],
+   "read_ops": [
+    "Fetch single record and list/search for Account and Users, Leads, People, Companies, Opportunities, Projects, Tags, Tasks, Activities, Custom Fields, Field Layouts, Related Items"
+   ],
+   "write_ops": [
+    "Create (including bulk create for several resources)",
+    "Update (including bulk update for some)",
+    "Delete",
+    "Webhook subscription create/update/delete"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "unknown",
+   "limitations": "Official developer docs say the API is still expanding. Rate limits not documented on the official page. Whether API access requires a paid plan is unresolved: third-party docs conflict (n8n says Professional or Business; StackOne says the 14-day trial includes API access). Base URL https://api.copper.com/developer_api/v1 and the X-PW-* header names come from third-party guides, not the official page I fetched. No official SDK found."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://glama.ai/mcp/servers/pfiwqd1su5",
+    "https://mcpservers.org/servers/cotlet-dev-integrations-copper-crm-api-mcp-server",
+    "https://conare.ai/marketplace/mcp/copper-crm"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Copper is a CRM for relationship-focused service businesses, built to work inside Google Workspace (copper.com, product confirmed)",
+    "url": "https://www.copper.com/",
+    "quote": "Copper is a CRM software for relationship-focused service businesses, built to work inside Google Workspace.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "14-day free trial, no credit card required, on all plans",
+    "url": "https://www.copper.com/",
+    "quote": "Every plan starts with a 14-day free trial, and no credit card is required.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "pricing",
+    "value": "Three per-seat paid plans: Basic, Professional, Business",
+    "url": "https://www.copper.com/",
+    "quote": "Copper has three plans, priced per seat, per month.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Two ways to access the Developer API: API keys and OAuth2.0; API keys for individual users, OAuth2.0 preferred for partner integrations",
+    "url": "https://developer.copper.com/introduction/authentication.html",
+    "quote": "API Keys are suitable for individual users, while OAuth2.0 is the preferred approach for partner integrations.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.api_key_generation",
+    "value": "Users create API keys in the web app under System settings > API Keys; admins can see and generate tokens",
+    "url": "https://developer.copper.com/introduction/authentication.html",
+    "quote": "Admins can see all user generated tokens and generate new ones.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_open_to_all",
+    "value": "OAuth authentication is open to all users, not only admins",
+    "url": "https://developer.copper.com/introduction/oauth/index.html",
+    "quote": "Authentication is open to all users, not just administrators.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.partner_registration",
+    "value": "OAuth2 requires registering the app first via partners@copper.com (name, purpose, HTTPS callback URL) to get client_id and client_secret",
+    "url": "https://developer.copper.com/introduction/oauth/index.html",
+    "quote": "To use OAuth2.0 with Copper, you must first register your application.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_flow",
+    "value": "Authorization Code Grant",
+    "url": "https://developer.copper.com/introduction/oauth/index.html",
+    "quote": "Copper implements the commonly-used Authorization Code Grant flow.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.scopes",
+    "value": "Only developer/v1/all supported; more granular scopes planned",
+    "url": "https://developer.copper.com/introduction/oauth/index.html",
+    "quote": "more granular scopes will be added in the future.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "RESTful interface with JSON-formatted responses to access most Copper resources",
+    "url": "https://developer.copper.com/",
+    "quote": "RESTful interface with JSON-formatted responses to access most Copper resources.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks supported (subscription create/update/delete/list endpoints)",
+    "url": "https://developer.copper.com/",
+    "quote": "Webhooks",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.sdks",
+    "value": "No official SDK mentioned; official Postman collection exists. Only unofficial third-party SDKs found (ClaimerApp/copper-sdk, Gamesight/copper-typescript, AryeoHQ PHP SDK)",
+    "url": "https://developer.copper.com/",
+    "quote": "Postman collection and environment for interacting with the API",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Does API access require a paid plan? Third-party sources conflict (n8n: Professional or Business; StackOne: trial includes API). Check support.copper.com.",
+   "Official base URL and exact auth header names (X-PW-AccessToken, X-PW-UserEmail, X-PW-Application) were not confirmed on the official developer.copper.com page.",
+   "OAuth access token lifetime and refresh-token behavior are not documented on the official OAuth page.",
+   "API rate limits are not documented on the official developer page.",
+   "No official Copper MCP server was found in searches or on copper.com/developer.copper.com. Community MCP servers (Glama, mcpservers.org, Conare) were seen in search results only and not fetched; none was verified as a live repo.",
+   "No official SDK repository was found. Only unofficial SDKs were seen in search results."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.833,
+ "flags": [],
+ "error": null
+}

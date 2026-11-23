@@ -1,0 +1,74 @@
+{
+ "id": 82,
+ "name": "Plaid",
+ "category": "Finance and Fintech",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:36:18Z",
+ "duration_s": 37.8,
+ "cost_usd": 0.0271,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://plaid.com",
+   "developer_portal": "https://dashboard.plaid.com",
+   "description": "Plaid is a fintech infrastructure company whose API links end users' bank accounts to developer apps (Link flow) and provides account, balance, transaction, identity, investment, liability, and transfer data.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs at plaid.com/docs describe Plaid Link, Items, and API products (Auth, Transactions, Identity, etc.), matching the product named in the task. Confirmed as the financial data API company, not another 'Plaid'."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [],
+  "open_questions": []
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "None until interface confirmed",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": null,
+ "flags": [],
+ "error": null
+}

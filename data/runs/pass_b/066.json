@@ -1,0 +1,237 @@
+{
+ "id": 66,
+ "name": "Neo4j",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:34:27Z",
+ "duration_s": 52.5,
+ "cost_usd": 0.0486,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://neo4j.com",
+   "developer_portal": "https://neo4j.com/docs/aura/current/api/authentication/",
+   "description": "Neo4j, the graph database company and its graph database platform (Neo4j Aura cloud service, Cypher query language, Neo4j drivers). The assignment's neo4j.com/docs/api path redirects to the Aura API docs (neo4j.com/docs/aura/current/api/...); there is no separate general 'Neo4j API' page found.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources clearly describe the Neo4j graph database product. The 'neo4j.com/docs/api' hint is a general path; the substantive API docs are the Aura API (cloud management) plus the HTTP Query API and Bolt drivers (database access)."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Basic",
+    "Bearer/PAT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Aura API: OAuth 2.0 client_credentials grant. POST to https://api.neo4j.io/oauth/token with grant_type=client_credentials; client ID/secret sent via HTTP Basic auth. Returned bearer token used in Authorization header.",
+   "token_refresh": "Access tokens expire after one hour; request a new token via the same client_credentials exchange. Client credentials do not expire unless deleted.",
+   "scopes_notes": "No scopes described in fetched sources. Aura API credentials are per-client ID/secret pairs created in the console."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No app review found. Docs say all tiers can create Aura API credentials, but a community thread reports Free/Professional users must add billing info or join a marketplace project to create API credentials, and Aura API rate limits apply to Free/Professional trial accounts without a billing method (25 req/min). Treat as free self-serve with a possible billing gate; verify in console."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "Aura instances",
+    "Billing ledger/usage (v2beta1, org-level)"
+   ],
+   "read_ops": [
+    "GET /v1/instances (list Aura instances)"
+   ],
+   "write_ops": [
+    "Instance actions (create/update/delete not confirmed from fetched pages beyond 'perform actions on your Aura instances')"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "25 requests/min for AuraDB Free and Professional trial accounts without billing method; billing endpoints 10 requests/day per org; 45-second request timeout; excessive token requests may be rate-limited.",
+   "limitations": "Aura management API covers instances per fetched overview; full endpoint list is in a separate API Specification not fetched. Database data access uses the HTTP Query API (REST, Basic/Bearer auth) and Bolt drivers (binary protocol, not in enum) for Cypher queries; those were not fully enumerated. Webhooks not mentioned in fetched docs. Python driver API reference exists (search snippet only, not fetched)."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/neo4j/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/neo4j-contrib/mcp-neo4j"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Neo4j official MCP Server / graph database",
+    "url": "https://github.com/neo4j/mcp",
+    "quote": "Neo4j official MCP Server",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary_aura_api",
+    "value": "OAuth 2.0 for Aura API",
+    "url": "https://neo4j.com/docs/aura/current/api/authentication/",
+    "quote": "The Aura API uses OAuth 2.0 for API authentication.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_endpoint",
+    "value": "POST https://api.neo4j.io/oauth/token with grant_type=client_credentials, Basic auth",
+    "url": "https://neo4j.com/docs/aura/current/api/authentication/",
+    "quote": "Authentication to the token endpoint uses HTTP Basic Authentication",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_expiry",
+    "value": "Access tokens expire after one hour",
+    "url": "https://neo4j.com/docs/aura/current/api/authentication/",
+    "quote": "Access tokens are temporary and expire after one hour.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.credential_creation_tiers",
+    "value": "All tiers can create Aura API credentials",
+    "url": "https://neo4j.com/docs/aura/current/api/authentication/",
+    "quote": "All tiers can create Aura API credentials.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.credential_lifetime",
+    "value": "Credentials never expire unless deleted",
+    "url": "https://neo4j.com/docs/aura/current/api/authentication/",
+    "quote": "The API credentials never expire unless you delete them.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial",
+    "value": "$150 credits, 14-day trial",
+    "url": "https://neo4j.com/docs/aura/getting-started/free-trial/",
+    "quote": "The free trial grants you $150 in credits, valid for 14 days.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_tier",
+    "value": "Free tier available indefinitely with limits",
+    "url": "https://neo4j.com/docs/aura/getting-started/free-trial/",
+    "quote": "The Free tier is available indefinitely, but has limitations compared to the paid plans.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limit",
+    "value": "25 requests/min for Free and Professional trial accounts without billing method",
+    "url": "https://neo4j.com/docs/aura/current/api/overview/",
+    "quote": "AuraDB Free and AuraDB Professional trial accounts without a billing method attached, get a rate limit of 25 requests per minute.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.scope",
+    "value": "Programmatic actions on Aura instances",
+    "url": "https://neo4j.com/docs/aura/current/api/overview/",
+    "quote": "programmatically perform actions on your Aura instances",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.endpoint_example",
+    "value": "GET https://api.neo4j.io/v1/instances",
+    "url": "https://neo4j.com/docs/aura/current/api/overview/",
+    "quote": "GET https://api.neo4j.io/v1/instances",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.timeout",
+    "value": "45-second timeout",
+    "url": "https://neo4j.com/docs/aura/current/api/overview/",
+    "quote": "Aura API requests have a timeout of 45 seconds.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.http_query_api",
+    "value": "Basic and Bearer auth supported for HTTP API",
+    "url": "https://neo4j.com/docs/http-api/current/authentication-authorization/",
+    "quote": "Both *basic* and *bearer* authentication are supported.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_readme",
+    "value": "Official MCP server giving LLM tools structured access to Neo4j",
+    "url": "https://github.com/neo4j/mcp",
+    "quote": "gives AI assistants and LLM-powered tools direct, structured access to your Neo4j graph database.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.transports",
+    "value": "STDIO and HTTP transport modes",
+    "url": "https://neo4j.com/docs/mcp/current/authentication/",
+    "quote": "export NEO4J_MCP_TRANSPORT_MODE=\"http\"",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.http_auth",
+    "value": "Basic and Bearer auth for MCP HTTP mode",
+    "url": "https://neo4j.com/docs/mcp/current/authentication/",
+    "quote": "Bearer token authentication enables seamless integration with",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "neo4j-contrib/mcp-neo4j is a Neo4j Labs collection, not official",
+    "url": "https://github.com/neo4j-contrib/mcp-neo4j",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Does the Aura API let Free-tier accounts create API credentials without adding billing info? Docs say all tiers can; a community thread says Create is disabled until billing info is added or a marketplace project is joined.",
+   "Full Aura API endpoint list (create/update/delete instance, tenants, projects, webhooks) is in an API Specification not fetched.",
+   "Does the Aura API or Neo4j have webhooks? Not mentioned in fetched docs.",
+   "Are official Python/JS/Java/Go drivers considered SDKs for the Aura API? Only the Python driver API reference was seen (search snippet); no Aura API client SDK confirmed.",
+   "License of github.com/neo4j/mcp not identified from fetched page.",
+   "Maintenance status and license of neo4j-contrib/mcp-neo4j not verified by fetch.",
+   "Whether a Neo4j HTTP Query API (Cypher over REST) should be treated as the primary API for the assignment instead of the Aura management API; current breadth rating reflects the Aura management API only.",
+   "Admin approval for Aura organization/project roles not verified."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "low",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface.",
+   "API surface is limited; toolkit would cover few actions."
+  ]
+ },
+ "evidence_support_rate": 0.941,
+ "flags": [],
+ "error": null
+}

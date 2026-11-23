@@ -1,0 +1,232 @@
+{
+ "id": 98,
+ "name": "Mermaid CLI",
+ "category": "AI, Research and Media-native",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:28:05Z",
+ "duration_s": 35.4,
+ "cost_usd": 0.0685,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://github.com/mermaid-js/mermaid-cli",
+   "title": "GitHub - mermaid-js/mermaid-cli: Command line tool for the Mermaid library · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://github.com",
+   "title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHub · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.github.com/en",
+   "title": "GitHub Docs",
+   "rendered": true
+  },
+  {
+   "id": "S4",
+   "url": "https://github.com/developers",
+   "title": "Developers · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.github.com/en/authentication",
+   "title": "Authentication documentation - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://github.com/pricing",
+   "title": "GitHub plans and pricing · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://github.com/features/copilot/plans",
+   "title": "GitHub Copilot · Plans & pricing for every developer & team · GitHub · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://github.com/mcp",
+   "title": "MCP Registry · Connect Agents to tools · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://learn.github.com/credentials",
+   "title": "GitHub Learn - Credentials",
+   "rendered": true
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.github.com/en/integrations/concepts/about-building-integrations",
+   "title": "About building integrations - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://docs.github.com/en/graphql",
+   "title": "GitHub GraphQL API documentation - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://docs.github.com/en/webhooks",
+   "title": "Webhooks documentation - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/andrewginns/mermaid-mcp-server",
+   "title": "andrewginns/mermaid-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/xsp52Hz/cognigraph-mcp-server",
+   "title": "xsp52Hz/cognigraph-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Volare-Consulting-Software/mermaid-mcp",
+   "title": "Volare-Consulting-Software/mermaid-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/rainj2013/mermaid_mcp",
+   "title": "rainj2013/mermaid_mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/letya999/pane-md",
+   "title": "letya999/pane-md",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://github.com/mermaid-js/mermaid-cli",
+   "developer_portal": "https://github.com/mermaid-js/mermaid-cli",
+   "description": "Command line tool for the Mermaid library; converts Mermaid diagram definitions (.mmd) to SVG/PNG/PDF via the mmdc command, also usable via Docker and a Node.js API.",
+   "identity_confirmed": "yes",
+   "identity_notes": "S1 is the mermaid-js/mermaid-cli GitHub repo, MIT licensed."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "Local CLI tool; no authentication described."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No credentials required; MIT-licensed open source tool installed locally."
+  },
+  "api": {
+   "protocols": [
+    "CLI/library"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "diagram"
+   ],
+   "read_ops": [],
+   "write_ops": [
+    "Render Mermaid diagram to PNG/SVG output"
+   ],
+   "webhooks": "no",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "Single-purpose diagram rendering. The Node.js API is not covered by semver."
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/andrewginns/mermaid-mcp-server",
+    "https://github.com/Volare-Consulting-Software/mermaid-mcp",
+    "https://github.com/rainj2013/mermaid_mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "api.protocols",
+    "value": "CLI/library",
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "quote": "It's possible to call mermaid-cli via a Node.JS API. Please be aware that the NodeJS API is not covered by semver",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Limited",
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "quote": "mmdc -i input.mmd -o output.png -t dark -b transparent",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "quote": "brew install mermaid-cli",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "none (empty)",
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "quote": "Command line tool for the Mermaid library",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "no",
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "quote": "Command line tool for the Mermaid library",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is there an official MCP server from the mermaid-js org?",
+   "SDK availability: Node.js API exists but is not semver-covered."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "low",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Local CLI/library skill (sandboxed execution)",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library interface.",
+   "API surface is limited; toolkit would cover few actions."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

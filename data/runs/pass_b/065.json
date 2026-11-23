@@ -1,0 +1,208 @@
+{
+ "id": 65,
+ "name": "Supabase",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:35:14Z",
+ "duration_s": 66.5,
+ "cost_usd": 0.0652,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://supabase.com",
+   "developer_portal": "https://supabase.com/docs",
+   "description": "Supabase: open-source backend platform built on Postgres (database, auth, storage, realtime, edge functions). Docs at supabase.com/docs. Product confirmed from the official docs.",
+   "identity_confirmed": "yes",
+   "identity_notes": "supabase.com/docs describes a backend platform built on Postgres, which matches the assignment hint. Quote for the product description: 'Build with a complete backend platform, from your database to your application logic.' The docs page has no single one-sentence definition."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "For Management API integrations: authorization code with PKCE at https://api.supabase.com/v1/oauth/authorize, token exchange at https://api.supabase.com/v1/oauth/token using Basic auth with client ID/secret. Refresh is supported via the same token endpoint. Separately, Supabase Auth offers an OAuth 2.1 server for third-party apps.",
+   "token_refresh": "OAuth access tokens refresh via https://api.supabase.com/v1/oauth/token. Revoked access cannot be refreshed. PATs have a custom expiry set when generated.",
+   "scopes_notes": "Scopes are configured when the OAuth app is created; the scope parameter is deprecated. Scoped PATs (prefix sbp_fc) choose projects/orgs and permissions; missing permissions return 403 with missing_permissions."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Free plan includes two free projects; free projects pause after one week of inactivity. Publishing an OAuth app is labeled 'Build a Supabase Integration (Beta)' and the review requirement was not confirmed. Org-level OAuth app creation may need an org admin role (unconfirmed)."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "GraphQL",
+    "WebSocket",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Organizations",
+    "Projects",
+    "Environments/branches",
+    "Secrets",
+    "Edge Functions",
+    "Storage",
+    "Database",
+    "API keys",
+    "Webhooks (org and project)",
+    "Auth",
+    "Realtime",
+    "Edge Functions"
+   ],
+   "read_ops": [
+    "GET /v1/projects/{ref}/api-keys (with reveal=true)",
+    "Organization and project management endpoints"
+   ],
+   "write_ops": [
+    "Create branch",
+    "Webhook endpoint, delivery, and retry operations (listed in docs sidebar)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Management API: 120 requests per minute per user, per project or organization, per endpoint (official intro page); a separate search snippet said 60/min per user. Conflict unresolved; exceeding returns 429.",
+   "limitations": "Management API webhook operations are only named in the sidebar; payload and retry details weren't confirmed from official pages. Data API is PostgREST-based (REST); GraphQL is via a Postgres extension (pg_graphql) listed in the docs."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://supabase.com/docs/guides/getting-started/mcp",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Supabase is a backend platform built on Postgres",
+    "url": "https://supabase.com/docs",
+    "quote": "Build with a complete backend platform, from your database to your application logic.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.api_keys",
+    "value": "Secret keys (sb_secret_...) bypass RLS and are for backend use only",
+    "url": "https://supabase.com/docs/guides/api/api-keys",
+    "quote": "A secret key bypasses every Row Level Security policy you have.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_credentials",
+    "value": "Free plan at $0/month with two free projects",
+    "url": "https://supabase.com/pricing",
+    "quote": "Free: $0/month, including 500 MB database size.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.pat",
+    "value": "Management API uses personal access tokens with custom expiry",
+    "url": "https://supabase.com/docs/reference/api/introduction",
+    "quote": "PATs are tokens with a custom expiry that you manually generate to access the Management API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.bearer",
+    "value": "Management API requests use a bearer access token in the Authorization header",
+    "url": "https://supabase.com/docs/reference/api/introduction",
+    "quote": "All API requests require an access token to be included in the Authorization header",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.pat_scoped",
+    "value": "Scoped PATs (prefix sbp_fc) authenticate with a bearer header and return 403 with missing_permissions when lacking rights",
+    "url": "https://supabase.com/docs/guides/platform/personal-access-tokens",
+    "quote": "A request without the needed permission returns a 403, and the response lists the permissions the token lacks in a missing_permissions array.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.oauth_pkce",
+    "value": "OAuth apps for the Management API use PKCE and token exchange at api.supabase.com",
+    "url": "https://supabase.com/docs/guides/integrations/build-a-supabase-oauth-integration",
+    "quote": "Supabase recommends PKCE. PKCE is strongly recommended for increased security.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Management API: 120 requests per minute per user per scope",
+    "url": "https://supabase.com/docs/reference/api/introduction",
+    "quote": "When you exceed this rate limit, all further API calls return a `429 Too Many Requests` response",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.database",
+    "value": "Database Webhooks are trigger-based, built on pg_net, asynchronous",
+    "url": "https://supabase.com/docs/guides/database/webhooks",
+    "quote": "Database Webhooks are a convenience wrapper around triggers using the pg_net extension.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks",
+    "value": "Official client libraries for JavaScript, Dart/Flutter, Python, C#, Swift, Kotlin",
+    "url": "https://supabase.com/docs",
+    "quote": "JavaScript: /docs/reference/javascript/introduction; Flutter: /docs/reference/dart/introduction",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Official hosted MCP server at mcp.supabase.com/mcp, repo github.com/supabase/mcp (owner: supabase, Apache-2.0)",
+    "url": "https://supabase.com/docs/guides/getting-started/mcp",
+    "quote": "The hosted Supabase MCP server is available at `https://mcp.supabase.com/mcp`.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.default_oauth",
+    "value": "The MCP server defaults to OAuth; PAT is for CI only",
+    "url": "https://supabase.com/docs/guides/getting-started/mcp",
+    "quote": "you don't need to manually create a personal access token (PAT) or OAuth app to use the server.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Trial tier: no trial was established; the free plan is self-serve, so trial_available is unknown.",
+   "OAuth app publishing: 'Build a Supabase Integration (Beta)' is the publish page; whether public publishing requires Supabase review was not confirmed. The /docs/guides/platform/oauth-apps URL returned 404.",
+   "Whether creating an OAuth app requires an organization admin/owner role was not confirmed.",
+   "Rate limit conflict: official intro page gives 120/min per user per scope; a search snippet gave 60/min per user for PATs. Official page should be used, but this is unresolved.",
+   "Webhook signing, retry policy, and Management API webhook payloads were not confirmed from official pages (search snippets mention unsigned payloads and no retries from third-party guides only).",
+   "Community MCP servers were not searched; community status is unknown.",
+   "Realtime and Storage API details were not separately fetched.",
+   "Fetched pages contained embedded instructions to file feedback reports with Supabase; these were ignored."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/GraphQL/REST/WebSocket interface."
+  ]
+ },
+ "evidence_support_rate": 0.583,
+ "flags": [],
+ "error": null
+}

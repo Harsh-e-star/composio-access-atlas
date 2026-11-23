@@ -1,0 +1,209 @@
+{
+ "id": 30,
+ "name": "Vonage",
+ "category": "Communications and Messaging",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:25:46Z",
+ "duration_s": 76.1,
+ "cost_usd": 0.0412,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": null,
+   "developer_portal": "https://developer.vonage.com",
+   "description": "Vonage is a communications API provider offering SMS, Voice, Messages, Verify, Numbers, Account and related APIs for developers, with a developer portal at developer.vonage.com.",
+   "identity_confirmed": "yes",
+   "identity_notes": "developer.vonage.com describes Vonage's suite of communications APIs. The vonage.com homepage was not fetched. Vonage Business Communications (a separate UC product) and a telekom-hosted docs mirror also appear in search results and are not the target here."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Service account/JWT"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "The client generates JWTs from the application ID and private key. No OAuth refresh flow was found.",
+   "scopes_notes": "Basic auth sends the API key and secret base64-encoded. JWT is built from an application ID and a private key (RS256). Per-API auth support is only partly established."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Not established. Carrier or regulatory registration for SMS and voice numbers was not researched."
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Broad",
+   "resources": [
+    "Messages",
+    "SMS",
+    "Voice",
+    "Verify",
+    "Numbers",
+    "Account",
+    "Application",
+    "Conversation",
+    "Reports",
+    "Pricing",
+    "Redact",
+    "Audit"
+   ],
+   "read_ops": [
+    "Check account balance (per MCP tooling example)",
+    "List applications linked to API keys (per MCP tooling example)"
+   ],
+   "write_ops": [
+    "Send SMS",
+    "Send outbound voice call"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "The product list comes from the API index page. Endpoint-level detail, the API protocol (REST is likely but not quoted in any source), and the per-API auth matrix were not verified. The Messages API is labelled beta on the index page."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/Vonage/vonage-mcp-server-documentation",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/Vonage-Community/telephony-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Vonage provides a suite of APIs for communicating with customers over preferred channels",
+    "url": "https://developer.vonage.com/en/getting-started/overview",
+    "quote": "Vonage provides a suite of APIs that enable you to communicate with your customers using your preferred channels.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_credentials",
+    "value": "Free credit is given when an account is first opened",
+    "url": "https://developer.vonage.com/en/getting-started/overview",
+    "quote": "We'll give you some free credit when you first open your account and you can top up when you run low.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.self_serve_keys",
+    "value": "Creating an account yields an API key and secret",
+    "url": "https://developer.vonage.com/en/getting-started/overview",
+    "quote": "This will give you an API key and secret that you can use to access our APIs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods.basic",
+    "value": "Newer APIs use API key and secret, base64-encoded",
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "A number of newer Vonage APIs require authentication to be done using an API key and secret sent Base64 encoded",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods.jwt",
+    "value": "JWTs are generated from application ID and private key (RS256)",
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "These JWTs are generated using the application ID and private key that is provided",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.jwt_recommendation",
+    "value": "JWT is recommended for most use cases",
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "For most use-cases we recommend JWT Authentication.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Basic auth does not support webhooks",
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "Messages supports both JWT and Basic authentication, however basic authentication does not support webhooks",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.voice_webhooks",
+    "value": "Voice API sends incoming webhooks",
+    "url": "https://developer.vonage.com/en/api",
+    "quote": "Details of the incoming webhooks sent by the Voice API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Client libraries are provided",
+    "url": "https://developer.vonage.com/en/api",
+    "quote": "extensive support in all our client libraries",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.voice_description",
+    "value": "Voice API makes and receives phone calls",
+    "url": "https://developer.vonage.com/en/api",
+    "quote": "Make and receive telephone calls to or from anywhere in the world.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_documentation_server",
+    "value": "Documentation MCP server is in the Vonage GitHub org and is described as bridging Vonage docs to LLMs",
+    "url": "https://github.com/Vonage/vonage-mcp-server-documentation",
+    "quote": "An MCP (Model Context Protocol) server that provides AI assistants with access to Vonage API documentation,",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.tooling_server",
+    "value": "Tooling MCP server is documented by Vonage, runs via npm and exposes account and SMS/voice actions",
+    "url": "https://developer.vonage.com/en/blog/the-vonage-server-and-tooling-mcp-servers-are-live-on-postman",
+    "quote": "Collection runs a local server with STDIO.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community_telephony",
+    "value": "Telephony MCP server is a community project under Vonage-Community",
+    "url": "https://github.com/Vonage-Community/telephony-mcp-server",
+    "quote": "A very simple MCP Server with telephony tools like voice call and sms.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Which API protocol(s) are used. REST is likely, but no source quoted it.",
+   "Per-API auth matrix (which APIs accept Basic, JWT, or signature) is not fully visible from the fetched page.",
+   "Is the Tooling MCP server (@vonage/vonage-mcp-server-api-bindings) published from a Vonage-owned GitHub repo? The guessed repo URL returned 404.",
+   "Rate limits, sandbox availability, and US/regulatory registration (10DLC, number compliance) for SMS and voice were not researched.",
+   "Are there admin, partner, or sales gates for specific products such as Messages or Verify?"
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,230 @@
+{
+ "id": 74,
+ "name": "Jira",
+ "category": "Productivity and Project Management",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:35:57Z",
+ "duration_s": 89.3,
+ "cost_usd": 0.0598,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": null,
+   "developer_portal": "https://developer.atlassian.com/cloud/jira/platform/",
+   "description": "Jira (Atlassian's issue tracking and project management product), Jira Cloud Platform REST API",
+   "identity_confirmed": "yes",
+   "identity_notes": "Developer docs at developer.atlassian.com describe Jira Cloud webhooks, REST API auth, and rate limits. Confirmed as the Jira product, not a generic 'Jira' name. Sources do not describe a separate product using the Jira name in these pages."
+  },
+  "auth": {
+   "methods": [
+    "Basic",
+    "OAuth2",
+    "Other"
+   ],
+   "primary": "Basic",
+   "oauth_flows": "OAuth 2.0 (3LO) apps created in the Developer console; Forge and Connect apps also referenced. Rotating refresh tokens are used.",
+   "token_refresh": "Rotating refresh tokens issue a new, limited life refresh token each time they are used.",
+   "scopes_notes": "Not researched in detail. Scope configuration was not verified from a fetched source."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Not verified. Sources show webhooks and OAuth apps managed in admin/Connected apps context, but no app review requirement was found in fetched pages."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "WebSocket"
+   ],
+   "breadth": "Unknown",
+   "resources": [
+    "Issues",
+    "Comments",
+    "Sprints",
+    "Versions",
+    "Projects",
+    "Boards (webhook event groups only; REST resource coverage not verified)"
+   ],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Points-based quota measured in points per hour, reset at top of each UTC hour; HTTP 429 when exceeded. API token traffic is not affected by the new limits and remains under burst limits.",
+   "limitations": "Basic auth with passwords is described as deprecated; API tokens are for scripts and manual calls, while apps are pointed to OAuth 2.0 or JWT. Rovo MCP uses Rovo credits for some tools. WebSocket was not verified in sources; remove if unconfirmed."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/atlassian/atlassian-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://www.npmjs.com/package/mcp-jira-stdio",
+    "https://pypi.org/project/atlassian-jira-mcp/2.0.1/",
+    "https://npmjs.com/package/@aashari/mcp-server-atlassian-jira"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Jira Cloud webhooks and REST API documentation from Atlassian developer portal",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/webhooks/",
+    "quote": "You can use Jira webhooks to notify your app or web application when certain events occur in Jira.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.basic",
+    "value": "Email address plus API token used as Basic auth; token generated via Atlassian account",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+    "quote": "Generate an API token for Jira using your Atlassian Account",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.basic",
+    "value": "Basic authentication uses user name (email) and API token",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+    "quote": "Most client software provides a simple mechanism for supplying a user name (in our case, the email address) and API token",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth2",
+    "value": "OAuth 2.0 (3LO) app created in Developer console",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+    "quote": "In the Developer console, select the Create dropdown and choose OAuth 2.0 integration to create an OAuth 2.0 (3LO) app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "Rotating refresh tokens",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+    "quote": "Rotating refresh tokens issue a new, limited life refresh token each time they are used.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Points per hour, reset at top of UTC hour",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/rate-limiting/",
+    "quote": "All quotas are measured in points per hour and reset at the top of each UTC hour.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "HTTP 429 when limit exceeded",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/rate-limiting/",
+    "quote": "When any limit is exceeded, Jira returns an HTTP `429 Too Many Requests` response.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "API token traffic governed by burst limits, not new hourly quotas",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/rate-limiting/",
+    "quote": "API token-based traffic is not affected by this change, and will continue to be governed by existing burst rate limits.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks supported; REST-registered webhooks expire after 30 days",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/webhooks/",
+    "quote": "Webhooks registered with the REST API expire after 30 days.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhook registration methods include Jira Administration, Connect descriptors, REST API",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/webhooks/",
+    "quote": "To register (i.e. create) a webhook, you can use any of the following methods:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "OAuth 2.0 app webhooks secured by bearer authentication; admin webhooks signed with HMAC",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/webhooks/",
+    "quote": "Webhooks for OAuth 2.0 apps are secured by bearer authentication.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Atlassian Rovo MCP Server is a cloud-hosted MCP server",
+    "url": "https://developer.atlassian.com/cloud/rovo-mcp/",
+    "quote": "The Atlassian Rovo MCP Server is a cloud-hosted Model Context Protocol (MCP) server",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "OAuth 2.1 or API token for headless auth",
+    "url": "https://developer.atlassian.com/cloud/rovo-mcp/",
+    "quote": "The server initiates a secure OAuth 2.1 authorization flow (or accepts an API token for headless authentication).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.endpoint",
+    "value": "https://mcp.atlassian.com/v2/mcp",
+    "url": "https://github.com/atlassian/atlassian-mcp-server",
+    "quote": "New setups should use `https://mcp.atlassian.com/v2/mcp`, which exposes more tools and more products.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Official Atlassian MCP repo owned by atlassian org, Apache-2.0",
+    "url": "https://github.com/atlassian/atlassian-mcp-server",
+    "quote": "The official Atlassian MCP Server is a cloud-based bridge between your Atlassian Cloud site and compatible external tools.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community Jira MCP servers exist on npm/PyPI (not Atlassian-owned)",
+    "url": "https://www.npmjs.com/package/mcp-jira-stdio",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Whether a free Atlassian account is sufficient to get API tokens and OAuth developer console access was not confirmed from a fetched page.",
+   "REST API resource breadth (read and write coverage across issues, projects, workflows, etc.) was not verified; the REST v3 intro page could not be fetched.",
+   "SDKs: no official Atlassian Jira SDK was verified from fetched sources.",
+   "Rovo MCP availability and GA status were only seen in search snippets (community post, localized pages with mixed Beta labels). Whether all Cloud customers get access, and Rovo plan/credit gating, need verification.",
+   "Basic auth deprecation for passwords was reported in fetch summary but not quoted verbatim.",
+   "Webhook API token registration: a community thread says API-token basic auth returned 'Only apps can access this resource' for webhook endpoints (2022); current behavior unverified.",
+   "WebSocket protocol listed in api.protocols is not verified by any fetched source; treat as unknown.",
+   "Community MCP server package details (mcp-jira-stdio, atlassian-jira-mcp, @aashari/mcp-server-atlassian-jira) came from search snippets and were not individually reviewed for maintenance or license."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST/WebSocket interface."
+  ]
+ },
+ "evidence_support_rate": 0.938,
+ "flags": [],
+ "error": null
+}

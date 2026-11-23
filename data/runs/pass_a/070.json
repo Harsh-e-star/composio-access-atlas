@@ -1,0 +1,295 @@
+{
+ "id": 70,
+ "name": "Sentry",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:23:13Z",
+ "duration_s": 36.4,
+ "cost_usd": 0.0694,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.sentry.io/api/",
+   "title": "API Reference | Sentry Docs",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.sentry.io",
+   "title": "Sentry Docs | Application Performance Monitoring & Error Tracking Software",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.sentry.io/api/guides/create-auth-token/",
+   "title": "Tutorial: Create a Sentry Authentication Token | Sentry Docs",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.sentry.io/api/auth/",
+   "title": "API Authentication | Sentry Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.sentry.io/api/ratelimits/",
+   "title": "Rate Limits | Sentry Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.sentry.io/pricing/",
+   "title": "Pricing & Billing | Sentry Docs",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.sentry.io/api/pagination/",
+   "title": "Paginating Results | Sentry Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.sentry.io/api/permissions/",
+   "title": "Permissions & Scopes | Sentry Docs",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.sentry.io/api/requests/",
+   "title": "Requests | Sentry Docs",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.sentry.io/api/crons/",
+   "title": "Crons | Sentry Docs",
+   "rendered": true
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/buggregator/server",
+   "title": "buggregator/server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/TheHoltz/errex",
+   "title": "TheHoltz/errex",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/theRubberDuckiee/mcp-server-configs",
+   "title": "theRubberDuckiee/mcp-server-configs",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/MCP-100/mcp-sentry",
+   "title": "MCP-100/mcp-sentry",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/daltoniam/switchboard",
+   "title": "daltoniam/switchboard",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/codyde/mcp-sentry-ts",
+   "title": "codyde/mcp-sentry-ts",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ddfourtwo/sentry-selfhosted-mcp",
+   "title": "ddfourtwo/sentry-selfhosted-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/B1MAS/agent-sentry",
+   "title": "B1MAS/agent-sentry",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://sentry.io",
+   "developer_portal": "https://docs.sentry.io/api/",
+   "description": "Sentry is application performance monitoring and error tracking software with a web API for managing organizations, teams, projects, issues, releases and more.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs at docs.sentry.io describe Sentry web API."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT",
+    "Other"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Authorization code (with PKCE) flow with refresh tokens at https://sentry.io/oauth/token/",
+   "token_refresh": "Access tokens expire after 30 days; refresh using refresh_token grant.",
+   "scopes_notes": "Scopes such as org:read, org:write, project:read, project:write, event:read, event:write, member, team, project:releases, org:ci."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Creating organizational tokens via internal integration requires Manager or Admin org role (for the user's own org)."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Organizations",
+    "Projects",
+    "Teams",
+    "Members",
+    "Events & Issues",
+    "Releases",
+    "Crons/Monitors",
+    "Dashboards",
+    "Replays",
+    "Profiling",
+    "Environments",
+    "SCIM",
+    "Seer",
+    "Discover"
+   ],
+   "read_ops": [
+    "GET resources",
+    "List monitors",
+    "List issue events"
+   ],
+   "write_ops": [
+    "Create monitor",
+    "Update monitor",
+    "Delete monitor",
+    "Update issues",
+    "Create projects"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Per caller and endpoint; requests-per-second fixed window plus concurrent limit; X-Sentry-Rate-Limit-* headers.",
+   "limitations": "API version v0; beta endpoints subject to change. Cursor pagination via Link header."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/MCP-100/mcp-sentry",
+    "https://github.com/codyde/mcp-sentry-ts",
+    "https://github.com/ddfourtwo/sentry-selfhosted-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT",
+    "url": "https://docs.sentry.io/api/auth/",
+    "quote": "Authentication tokens are passed using an auth header, and are used to authenticate as a user or organization account with the API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://docs.sentry.io/api/auth/",
+    "quote": "Access tokens expire after 30 days. Use the refresh token to obtain new tokens:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Other (DSN)",
+    "url": "https://docs.sentry.io/api/auth/",
+    "quote": "Some API endpoints may allow DSN-based authentication. This is generally very limited and an endpoint will describe if its supported.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.sentry.io/api/guides/create-auth-token/",
+    "quote": "To use Sentry's APIs, you must have an authentication token. This tutorial walks you through creating an organizational auth token through an internal integration.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free Developer plan exists",
+    "url": "https://docs.sentry.io/pricing/",
+    "quote": "Without a paid plan, you will be automatically assigned a free Developer plan at the end of your trial.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.sentry.io/api/requests/",
+    "quote": "All API requests should be made to the /api/0/ prefix, and will return JSON as the response",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.sentry.io/api/",
+    "quote": "You can use the APIs to manage account-level resources, like organizations and teams, as well as manage and export data.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://docs.sentry.io/api/ratelimits/",
+    "quote": "Polling the API for updates is likely to quickly trigger rate limiting. We recommend using our webhooks , if possible.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "unknown",
+    "url": "https://docs.sentry.io/",
+    "quote": "Sentry for AI See all the ways Sentry plugs into your agents and workflows.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Does Sentry publish an official MCP server (not established in sources)?",
+   "Official SDK availability for the web API is not established.",
+   "Whether a sandbox exists for the API is unclear."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

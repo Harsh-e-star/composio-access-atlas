@@ -25,3 +25,10 @@ frontend/dist/
 # Local secrets & envs
 .env
 .env.local
+.cache/
+
+# unrelated local files
+*.pdf
+**/dist/
+**/.pytest_cache/
+*.db

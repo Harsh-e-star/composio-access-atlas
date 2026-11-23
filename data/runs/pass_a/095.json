@@ -1,0 +1,277 @@
+{
+ "id": 95,
+ "name": "Reducto",
+ "category": "AI, Research and Media-native",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:27:30Z",
+ "duration_s": 35.2,
+ "cost_usd": 0.0795,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://reducto.ai",
+   "title": "Reducto: The Agentic Document Platform for AI Teams",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.reducto.ai",
+   "title": "Reducto Documentation",
+   "rendered": true
+  },
+  {
+   "id": "S3",
+   "url": "https://reducto.ai/developers",
+   "title": "Developers | Reducto — The Agentic Document Platform API",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.reducto.ai/api-reference/api/sections/parse/operations/parse",
+   "title": "Parse | Reducto Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.reducto.ai/mcp-server",
+   "title": "Reducto MCP Server | Reducto Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.reducto.ai/reference/rate-limits",
+   "title": "Rate Limits | Reducto Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.reducto.ai/overview",
+   "title": "Overview | Reducto Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.reducto.ai/api-reference/api/sections/webhooks/operations/configure-webhook",
+   "title": "Webhook Portal | Reducto Documentation",
+   "rendered": true
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.reducto.ai/contextual-schema-optimization/reducto-beta",
+   "title": "reducto-beta MCP | Reducto Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.reducto.ai/reference/credit-usage",
+   "title": "Usage and Pricing | Reducto Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://docs.reducto.ai/reference/pricing-migration",
+   "title": "Pricing Migration Guide | Reducto Documentation",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/arpitpatel25/ReadAnyDoc",
+   "title": "arpitpatel25/ReadAnyDoc",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Reza2kn/reducto-agent-benchmark",
+   "title": "Reza2kn/reducto-agent-benchmark",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/b-mcilveen/reducto-mcp",
+   "title": "b-mcilveen/reducto-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/franckyo/mcp-server-reducto",
+   "title": "franckyo/mcp-server-reducto",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/settlegrid/settlegrid-reducto",
+   "title": "settlegrid/settlegrid-reducto",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://reducto.ai",
+   "developer_portal": "https://docs.reducto.ai",
+   "description": "Reducto is an agentic document platform offering APIs to parse, extract, split, classify and edit documents (30+ file types) for AI teams.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Reducto document parsing platform at reducto.ai."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "OAuth device-code flow used for CLI/local MCP login (uvx mcp-server-reducto --login); reducto-beta MCP uses browser OAuth sign-in with Studio account.",
+   "token_refresh": "",
+   "scopes_notes": "API keys created in Studio and sent as Bearer token in Authorization header."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Growth/Enterprise tiers trial requires contacting sales; Standard pay-as-you-go available immediately with 15,000 free credits."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "parse",
+    "extract",
+    "split",
+    "classify",
+    "edit",
+    "pipelines",
+    "jobs",
+    "upload",
+    "webhooks"
+   ],
+   "read_ops": [
+    "parse documents",
+    "extract structured data",
+    "classify documents",
+    "split documents",
+    "get job status"
+   ],
+   "write_ops": [
+    "edit/fill PDF forms and DOCX",
+    "upload files",
+    "configure webhook"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "1,000 req/s per API key sustained on all endpoints; GET /job/{job_id} 300 req/s; page concurrency by tier (r-1 Standard 500 US).",
+   "limitations": "Sync requests time out at 15 minutes; use async/webhooks for large volume."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.reducto.ai/mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/arpitpatel25/ReadAnyDoc",
+    "https://github.com/Reza2kn/reducto-agent-benchmark",
+    "https://github.com/b-mcilveen/reducto-mcp",
+    "https://github.com/franckyo/mcp-server-reducto",
+    "https://github.com/settlegrid/settlegrid-reducto"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key sent as Bearer token",
+    "url": "https://docs.reducto.ai/api-reference/api/sections/parse/operations/parse",
+    "quote": "curl -X POST \"https://platform.reducto.ai/parse\" \\ -H \"Authorization: Bearer $REDUCTO_API_KEY \" \\",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth device-code flow for login",
+    "url": "https://docs.reducto.ai/mcp-server",
+    "quote": "This opens an OAuth device-code flow in your browser. Once approved, your API key is saved to ~/.reducto/config.yaml with chmod 600 .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://reducto.ai",
+    "quote": "You can get API access right away by starting off on our Standard tier, pay-as-you-go",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "15,000 free credits",
+    "url": "https://docs.reducto.ai/reference/pricing-migration",
+    "quote": "Do I still get 15,000 free credits on the Standard pay-as-you-go plan? Yes. New customers will still have 15,000 credits to use.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.reducto.ai/",
+    "quote": "Available in Python, Node.js, Go, and REST, with Studio for visual pipeline building.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "CLI",
+    "url": "https://docs.reducto.ai/",
+    "quote": "CLI Parse local files and folders from a terminal with minimal setup.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://reducto.ai/developers",
+    "quote": "Five API endpoints plus a visual Studio for building, testing, and deploying workflows. Supports 30+ file types.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.reducto.ai/mcp-server",
+    "quote": "The Reducto MCP server connects AI agents directly to Reducto.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "1,000 req/s per key",
+    "url": "https://docs.reducto.ai/reference/rate-limits",
+    "quote": "All endpoints 1,000 req/s sustained",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": []
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

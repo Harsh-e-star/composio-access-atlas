@@ -1,0 +1,74 @@
+{
+ "id": 37,
+ "name": "systeme.io",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:31:24Z",
+ "duration_s": 49.2,
+ "cost_usd": 0.0456,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://systeme.io",
+   "developer_portal": "https://developer.systeme.io/reference/api",
+   "description": "systeme.io is an all-in-one online business platform (marketing, email, funnels, courses, subscriptions) with a public REST API, webhooks, and a vendor-built MCP server. Vendor-owned sources describe the product as systeme.io; the funnel-builder function was not directly quoted in the fetched pages.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Vendor's own domains (developer.systeme.io, help.systeme.io, systeme.io/mcp) describe the systeme.io product. The 'funnel builder' hint was not explicitly quoted from a fetched page; identity match is based on the product name and vendor docs."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [],
+  "open_questions": []
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "None until interface confirmed",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": null,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,196 @@
+{
+ "id": 15,
+ "name": "Pylon",
+ "category": "Support and Helpdesk",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:21:57Z",
+ "duration_s": 93.9,
+ "cost_usd": 0.0484,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.usepylon.com",
+   "developer_portal": "https://docs.usepylon.com/pylon-docs/developer",
+   "description": "Pylon is a customer support platform (usepylon.com) for B2B support teams, with issues, accounts, and contacts, plus an API, webhooks, and an MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs at docs.usepylon.com and the marketing site usepylon.com describe the Pylon customer support platform. Matches category Support and Helpdesk and the usepylon.com hint."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "OAuth 2.0 is used for the MCP server (interactive client sign-in). The direct REST API uses API tokens; no REST OAuth flow was found in the sources.",
+   "token_refresh": "unknown (API tokens are static; no refresh flow documented in fetched sources)",
+   "scopes_notes": "API tokens can be restricted by IP address or CIDR (up to 20 entries). A token either has its own identity with a role chosen at creation, or acts as a user/bot and uses that user's role. Domain restrictions are not mentioned."
+  },
+  "access": {
+   "tier": "admin_approval",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "yes",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Sandbox environment is listed only in the Enterprise column of the pricing feature table. Plan gating for API access is inferred from table layout, not stated explicitly. Only Admin users can create API tokens, so a developer needs an Admin seat in the workspace."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "Accounts",
+    "Issues",
+    "Customers"
+   ],
+   "read_ops": [
+    "Fetch accounts",
+    "Fetch issues",
+    "Fetch customer information"
+   ],
+   "write_ops": [
+    "Create issues programmatically"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "unknown (a separate rate limits page is linked from the API docs; contents not fetched)",
+   "limitations": "Docs show examples of fetching customers/issues and creating issues; the full endpoint list is in the API Reference, which was not fetched. Rate-limit page linked but not fetched."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.usepylon.com",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/Carter-S/pylon-mcp",
+    "https://cdn.jsdelivr.net/npm/pylon-mcp@1.1.2/README.md"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.primary",
+    "value": "Bearer/PAT: API token sent as Authorization: Bearer header",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+    "quote": "pass your API token in the header of your request",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.admin_approval_required",
+    "value": "yes; only Admins can create API tokens",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+    "quote": "Only Admins can create and manage API tokens.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.base_urls",
+    "value": "US https://api.usepylon.com; EU https://api.eu.usepylon.com",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+    "quote": "Configure your integration to use the region where your Pylon tenant is hosted.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.ip_restrictions",
+    "value": "Tokens can be restricted to IP addresses or CIDR blocks, up to 20 entries",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+    "quote": "Add IP addresses (for example 203.0.113.10) or CIDR blocks to restrict where a token can be used.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_url",
+    "value": "Official Pylon MCP server at https://mcp.usepylon.com (US) and https://mcp.eu.usepylon.com (EU)",
+    "url": "https://docs.usepylon.com/pylon-docs/integrations/mcp",
+    "quote": "Copy your workspace's regional MCP URL from Installation and use it in your AI tool.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.mcp_methods",
+    "value": "MCP server supports OAuth 2.0 or an existing API token",
+    "url": "https://docs.usepylon.com/pylon-docs/integrations/mcp",
+    "quote": "Use an existing API token for headless workers, scripts, or MCP clients that support custom authorization headers.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.required_permission",
+    "value": "MCP Access permission; Member and Admin roles include it",
+    "url": "https://docs.usepylon.com/pylon-docs/integrations/mcp",
+    "quote": "The standard Member and Admin roles include this permission.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes: webhooks configured in Settings with target endpoint URL and custom headers",
+    "url": "https://www.usepylon.com/integrations/api-webhooks",
+    "quote": "Go to the Webhooks page in Settings and specify your target endpoint URL, along with any custom headers.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Official-docs SDKs for TypeScript, Python, and Go",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+    "quote": "To call the API from TypeScript, Python, or Go, use our SDKs",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.read_write_examples",
+    "value": "Read: fetch customers/issues/accounts; Write: create issues",
+    "url": "https://www.usepylon.com/integrations/api-webhooks",
+    "quote": "Open issues in Pylon programmatically from your own applications",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sandbox_available",
+    "value": "Sandbox environment listed for Enterprise tier only",
+    "url": "https://www.usepylon.com/pricing",
+    "quote": "Sandbox Environment is marked only in the Enterprise column",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "community_mcp.carter",
+    "value": "Community MCP server Carter-S/pylon-mcp, generated from Pylon OpenAPI, claimed 114 endpoints",
+    "url": "https://github.com/Carter-S/pylon-mcp",
+    "quote": "auto-generated from Pylon's OpenAPI spec, so all 114 endpoints are available",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Rate limits: the linked rate-limits page was not fetched.",
+   "Whether API access requires a specific paid plan is not stated explicitly; the pricing table suggests Professional and higher, but the column mapping is an inference.",
+   "Free or trial credentials: not established.",
+   "MCP auth conflict: Pylon's MCP page says OAuth or API token; a third-party Scalekit article says OAuth-only and API keys unavailable. Pylon's own page was preferred.",
+   "Full endpoint breadth and write coverage: the API Reference was not fetched.",
+   "Whether the Stainless-generated TypeScript package is published by Pylon is not confirmed."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Workspace admin approval",
+  "rationale": [
+   "A workspace admin must approve/install or issue credentials."
+  ]
+ },
+ "evidence_support_rate": 0.917,
+ "flags": [],
+ "error": null
+}

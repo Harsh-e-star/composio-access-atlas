@@ -1,0 +1,282 @@
+{
+ "id": 61,
+ "name": "GitHub",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:21:42Z",
+ "duration_s": 21.8,
+ "cost_usd": 0.0759,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.github.com/en/rest",
+   "title": "GitHub REST API documentation - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.github.com/en",
+   "title": "GitHub Docs",
+   "rendered": true
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.github.com/en/rest/authentication/endpoints-available-for-github-app-installation-access-tokens",
+   "title": "Endpoints available for GitHub App installation access tokens - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.github.com/en/rest/authentication/endpoints-available-for-github-app-user-access-tokens",
+   "title": "Endpoints available for GitHub App user access tokens - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.github.com/en/rest/authentication/endpoints-available-for-fine-grained-personal-access-tokens",
+   "title": "Endpoints available for fine-grained personal access tokens - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.github.com/en/authentication",
+   "title": "Authentication documentation - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.github.com/en/rest/about-the-rest-api/api-versions",
+   "title": "API Versions - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://github.com/pricing",
+   "title": "GitHub plans and pricing · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.github.com/en/copilot/get-started/plans",
+   "title": "Plans for GitHub Copilot - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.github.com/en/graphql",
+   "title": "GitHub GraphQL API documentation - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://docs.github.com/en/webhooks",
+   "title": "Webhooks documentation - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/github/github-mcp-server",
+   "title": "github/github-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/idosal/git-mcp",
+   "title": "idosal/git-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/kucherenko/jscpd",
+   "title": "kucherenko/jscpd",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/fallow-rs/fallow",
+   "title": "fallow-rs/fallow",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sandbox-quantum/switch",
+   "title": "sandbox-quantum/switch",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/pipeshub-ai/pipeshub-ai",
+   "title": "pipeshub-ai/pipeshub-ai",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/julien040/anyquery",
+   "title": "julien040/anyquery",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/affaan-m/agentshield",
+   "title": "affaan-m/agentshield",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://github.com",
+   "developer_portal": "https://docs.github.com/en/rest",
+   "description": "GitHub is a developer platform offering REST and GraphQL APIs and webhooks to create integrations, retrieve data, and automate workflows.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are official GitHub Docs and pricing pages."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2",
+    "Service account/JWT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "GitHub App user access tokens (on behalf of a user) are documented; details of flows not in sources.",
+   "token_refresh": "",
+   "scopes_notes": "Fine-grained personal access tokens, GitHub App installation access tokens and GitHub App user access tokens each have documented lists of accessible endpoints."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Some endpoints (e.g. audit log API) are only on Enterprise plans."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "GraphQL"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "repositories",
+    "pull requests",
+    "branch protection",
+    "commit statuses",
+    "actions",
+    "copilot",
+    "dependabot",
+    "codespaces",
+    "organizations",
+    "code security"
+   ],
+   "read_ops": [
+    "GET repos, pulls, commits, orgs"
+   ],
+   "write_ops": [
+    "POST/PUT/PATCH/DELETE on repos, pull request reviews, statuses, branch protection, org settings"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Authenticating gives a higher rate limit than unauthenticated requests.",
+   "limitations": "REST API is versioned via X-GitHub-Api-Version header; some endpoints are limited by token type."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/github/github-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/idosal/git-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT, OAuth2, Service account/JWT",
+    "url": "https://docs.github.com/en/rest/authentication/endpoints-available-for-fine-grained-personal-access-tokens",
+    "quote": "Your fine-grained personal access token can make requests to the following REST endpoints.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "GitHub App user access tokens (OAuth-style)",
+    "url": "https://docs.github.com/en/rest/authentication/endpoints-available-for-github-app-user-access-tokens",
+    "quote": "Your GitHub App can make requests to the following REST endpoints with a user access token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://github.com/pricing",
+    "quote": "Unlimited public/private repositories Dependabot security and version updates 2,000 CI/CD minutes/month 500MB of Packages storage Issues & Projects Community support",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.github.com/en/rest",
+    "quote": "Create integrations, retrieve data, and automate your workflows with the GitHub REST API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "GraphQL",
+    "url": "https://docs.github.com/en/graphql",
+    "quote": "The GitHub GraphQL API offers more precise and flexible queries than the GitHub REST API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.github.com/en/rest",
+    "quote": "The GitHub REST API is fully described in an OpenAPI compliant document.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://docs.github.com/en/webhooks",
+    "quote": "Webhooks provide a way for notifications to be delivered to an external web server whenever certain events occur on GitHub.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://github.com/github/github-mcp-server",
+    "quote": "GitHub's official MCP Server",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "OAuth app flows (web/device) and token expiry are not detailed in the sources.",
+   "Specific rate limit numbers are not given.",
+   "Official SDKs (e.g., Octokit) are not mentioned in the sources."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented GraphQL/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

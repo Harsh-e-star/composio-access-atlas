@@ -1,0 +1,283 @@
+{
+ "id": 46,
+ "name": "Squarespace",
+ "category": "Ecommerce",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:20:23Z",
+ "duration_s": 25.7,
+ "cost_usd": 0.0699,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developers.squarespace.com",
+   "title": "Squarespace Developer Platform: APIs, Apps, and Docs",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.squarespace.com/changes/self-service-oauth-credential-management",
+   "title": "Squarespace Developer Platform: APIs, Apps, and Docs",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.squarespace.com/mcp/overview",
+   "title": "Squarespace Developer Platform: APIs, Apps, and Docs",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developers.squarespace.com/reseller/products-and-pricing",
+   "title": "Squarespace Developer Platform: APIs, Apps, and Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developers.squarespace.com/quick-start",
+   "title": "Squarespace Developer Platform: APIs, Apps, and Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://developers.squarespace.com/mcp/connect-a-client",
+   "title": "Squarespace Developer Platform: APIs, Apps, and Docs",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developers.squarespace.com/mcp/tools/domains",
+   "title": "Squarespace Developer Platform: APIs, Apps, and Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developers.squarespace.com/mcp/tools/commerce",
+   "title": "Squarespace Developer Platform: APIs, Apps, and Docs",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developers.squarespace.com/reseller/pricing-overview",
+   "title": "Squarespace Developer Platform: APIs, Apps, and Docs",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developers.squarespace.com/reseller/pricing",
+   "title": "Squarespace Developer Platform: APIs, Apps, and Docs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/BusyBee3333/squarespace-mcp-2026-complete",
+   "title": "BusyBee3333/squarespace-mcp-2026-complete",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/timncox/squarespace-mcp",
+   "title": "timncox/squarespace-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/nodemode-dev/formpublisher",
+   "title": "nodemode-dev/formpublisher",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/bj-beer/squarespace-mcp-2026-complete",
+   "title": "bj-beer/squarespace-mcp-2026-complete",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/dakshjotwani/squarespace-mcp",
+   "title": "dakshjotwani/squarespace-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/kausarkhan01786-star/Squarespace-MCP-Server",
+   "title": "kausarkhan01786-star/Squarespace-MCP-Server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/zaydiscold/squarespace-cli-mcp-api",
+   "title": "zaydiscold/squarespace-cli-mcp-api",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/BJSwing/squarespace-mcp-2026-complete",
+   "title": "BJSwing/squarespace-mcp-2026-complete",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.squarespace.com",
+   "developer_portal": "https://developers.squarespace.com",
+   "description": "Squarespace Developer Platform: Commerce APIs (orders, products, inventory, transactions), Reseller APIs, custom code spec, webhooks, and an official remote MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Official Squarespace developer site."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "API key"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "OAuth client ID/secret self-service; MCP sign-in uses OAuth 2.1.",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "New self-service apps start in Demo Mode; a review request is needed to take the app live. Listing in Squarespace Extensions is a separate process. Reseller API is for approved partners only."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "orders",
+    "products",
+    "inventory",
+    "transactions",
+    "pricing",
+    "domains",
+    "websites",
+    "customers"
+   ],
+   "read_ops": [
+    "read orders",
+    "read products",
+    "read inventory",
+    "read transactions",
+    "retrieve reseller pricing"
+   ],
+   "write_ops": [
+    "write orders",
+    "write products",
+    "write inventory"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "Reseller API is limited to approved partners."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.squarespace.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/timncox/squarespace-mcp",
+    "https://github.com/BusyBee3333/squarespace-mcp-2026-complete",
+    "https://github.com/zaydiscold/squarespace-cli-mcp-api"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://developers.squarespace.com/changes/self-service-oauth-credential-management",
+    "quote": "Instant Credential Generation: Generate OAuth client IDs and secrets immediately for development and testing.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://developers.squarespace.com/reseller/pricing",
+    "quote": "API key or OAuth access token Default: Bearer YOUR_API_KEY_OR_OAUTH_TOKEN",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developers.squarespace.com/changes/self-service-oauth-credential-management",
+    "quote": "all new applications created via the self-service tool will enter Demo Mode by default. When you are ready to take your integration live, simply request a review",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developers.squarespace.com",
+    "quote": "Read and write orders, products, inventory, and transactions. REST endpoints, webhooks for order events, and signed payloads for safe server-to-server delivery.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developers.squarespace.com",
+    "quote": "Read and write orders, products, inventory, and transactions.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developers.squarespace.com/mcp/overview",
+    "quote": "The Squarespace MCP server is a remote server. There's nothing to install. Your MCP client connects directly to:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://developers.squarespace.com",
+    "quote": "Subscribe to order, inventory, content, and customer events with signed delivery.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.partnership_or_sales_required",
+    "value": "Reseller API requires approval",
+    "url": "https://developers.squarespace.com/reseller/products-and-pricing",
+    "quote": "The Squarespace Reseller API lets approved partners programmatically resell select Squarespace products to their end-customers.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Specific OAuth scopes and token lifetimes not in sources.",
+   "Rate limits not stated.",
+   "Official SDKs not established.",
+   "Whether API key auth is available for the Commerce API (beyond the reseller docs) is unclear.",
+   "Whether Commerce API requires a paid Squarespace plan is not stated."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "review_required",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

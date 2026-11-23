@@ -1,0 +1,232 @@
+{
+ "id": 72,
+ "name": "Airtable",
+ "category": "Productivity and Project Management",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:35:17Z",
+ "duration_s": 61.6,
+ "cost_usd": 0.0496,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://airtable.com",
+   "developer_portal": "https://airtable.com/developers",
+   "description": "Airtable: a no-code/low-code database and workflow platform (structured bases, tables, records, interfaces, automations), now positioned as a data layer for AI agents.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Developer docs at airtable.com/developers describe the Airtable product (bases, records, OAuth integrations, MCP server). Product matches the assignment hint."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "authorization_code and refresh_token grants at https://airtable.com/oauth2/v1/token (per OAuth reference error table). Access tokens expire after 60 minutes; refresh tokens valid 60 days.",
+   "token_refresh": "Refresh via https://airtable.com/oauth2/v1/token using refresh_token grant; no limit on refresh count as long as each refresh happens within the 60-day window. PATs do not expire by default.",
+   "scopes_notes": "PATs are created with scopes that control which API endpoints the token can use (e.g. schema.bases:read, data.records:read per community README). Enterprise scopes restricted to Enterprise Scale plans (search summary of support FAQ, not fetched directly)."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Not established. Enterprise-only: webhooks created with user API keys are restricted to Enterprise plan users and can no longer be created. Enterprise-scale scopes restricted to Enterprise Scale plans. Who may create OAuth integrations was not established."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library",
+    "none"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "bases",
+    "tables",
+    "records",
+    "fields",
+    "comments",
+    "webhooks"
+   ],
+   "read_ops": [
+    "list bases",
+    "list and describe tables",
+    "list, search, and get records",
+    "list comments",
+    "list webhook payloads"
+   ],
+   "write_ops": [
+    "create, update, and delete records",
+    "create and update tables",
+    "create and update fields",
+    "create comments",
+    "create webhooks",
+    "change base schema (via official MCP, by role)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "5 requests per second per base (REST API; webhook API shares the limit)",
+   "limitations": "Official REST API resource list was not confirmed from fetched API intro page; resource list drawn from community README and MCP docs. Webhooks created with PAT or OAuth tokens expire and are disabled after 7 days. Webhook payloads contain only base ID, webhook ID, and timestamp; changes must be fetched separately. Official MCP does not appear to be a full admin API."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.airtable.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/domdomegg/airtable-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Airtable is a data platform for AI agents with structured field types, relational links, and automations",
+    "url": "https://airtable.com/developers",
+    "quote": "Airtable's structured field types, relational links, and built-in automations make it a rich data layer for AI agents.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods.OAuth2",
+    "value": "OAuth integrations use authorization_code and refresh_token grants at airtable.com/oauth2/v1/token",
+    "url": "https://airtable.com/developers/web/api/oauth-reference",
+    "quote": "grant_type was not one of: authorization_code or refresh_token.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "OAuth access tokens expire after 60 minutes; refresh tokens valid 60 days",
+    "url": "https://airtable.com/developers/web/api/oauth-reference",
+    "quote": "Access tokens expire after 60 minutes.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.methods.Bearer/PAT",
+    "value": "Personal access tokens are created from /create/tokens with chosen scopes",
+    "url": "https://airtable.com/developers/web/guides/personal-access-tokens",
+    "quote": "From /create/tokens, click the “Create new token” button to create a new personal access token.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.scopes_notes",
+    "value": "Token scopes control which API endpoints the token can use",
+    "url": "https://airtable.com/developers/web/guides/personal-access-tokens",
+    "quote": "Choose the scopes to grant to your token. This controls what API endpoints the token will be able to use.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.tier",
+    "value": "Personal access tokens are available on Airtable's free plan (free self-serve credentials)",
+    "url": "https://support.airtable.com/docs/creating-personal-access-tokens",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Enterprise-only restriction on webhooks created with user API keys",
+    "url": "https://airtable.com/developers/web/api/webhooks-overview",
+    "quote": "are restricted to usage on Enterprise plan users, and can no longer be created.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Airtable publishes an official MCP server hosted at mcp.airtable.com/mcp, available to all users on all plans",
+    "url": "https://airtable.com/developers/agents/mcp/getting-started",
+    "quote": "The server is available to all users on all plans.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.write_ops",
+    "value": "Official MCP can create/modify records and change base schema depending on role",
+    "url": "https://airtable.com/developers/agents/mcp/getting-started",
+    "quote": "Base Editor: will only be able to change and update records.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Airtable supports webhooks that send POST notifications on base data changes",
+    "url": "https://airtable.com/developers/web/api/webhooks-overview",
+    "quote": "Webhooks are a user-configurable way to get programmatic notifications when data is changed in an Airtable base.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.limitations",
+    "value": "Webhooks created with PAT or OAuth access tokens expire and are disabled after 7 days",
+    "url": "https://airtable.com/developers/web/api/webhooks-overview",
+    "quote": "webhooks created with personal access tokens or OAuth access tokens will expire and be disabled after 7 days.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "5 requests per second per base",
+    "url": "https://airtable.com/developers/web/api/webhooks-overview",
+    "quote": "The webhook API is subject to the same 5 requests per second per base as the REST API.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Official JavaScript client airtable.js (Node.js and browser)",
+    "url": "https://airtable.com/developers/web/api/introduction",
+    "quote": "Official API client:",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.protocols.CLI",
+    "value": "Official Airtable CLI installable via npm as @airtable/mcp-cli",
+    "url": "https://airtable.com/developers",
+    "quote": "npm install -g @airtable/mcp-cli",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community_urls",
+    "value": "domdomegg/airtable-mcp-server is a third-party community MCP server (456 stars, MIT), not owned by Airtable",
+    "url": "https://github.com/domdomegg/airtable-mcp-server",
+    "quote": "🗂️🤖 Airtable Model Context Protocol Server, for allowing AI systems to interact with your Airtable bases",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Who may create OAuth integrations (any developer vs. admin-only) was not established from the OAuth reference page; a guide at https://airtable.com/guides/oauth-integrations was not fetched.",
+   "Whether a sandbox or trial exists for testing was not established.",
+   "Whether admin approval is needed for OAuth integrations to be installed in a customer workspace was not established.",
+   "Official REST API full resource list and base URL (api.airtable.com) were not confirmed from fetched pages; breadth rated Medium pending confirmation.",
+   "The 'free plan' PAT claim relies on a search snippet; re-verify against https://support.airtable.com/docs/creating-personal-access-tokens.",
+   "Official MCP and plugin repo details (auto-wired .mcp.json in official skills library) were only seen in search summaries.",
+   "Verbatim quotes in claims come from fetch-tool extractions and were not independently re-checked against raw page text."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST/none interface."
+  ]
+ },
+ "evidence_support_rate": 0.333,
+ "flags": [],
+ "error": null
+}

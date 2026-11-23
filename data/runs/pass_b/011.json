@@ -1,0 +1,244 @@
+{
+ "id": 11,
+ "name": "Zendesk",
+ "category": "Support and Helpdesk",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:20:33Z",
+ "duration_s": 91.3,
+ "cost_usd": 0.0719,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.zendesk.com/",
+   "developer_portal": "https://developer.zendesk.com/",
+   "description": "Zendesk is a customer service and engagement software company; its Support (Ticketing) API covers tickets, users, organizations and workflows, and its developer platform is at developer.zendesk.com.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Official developer docs at developer.zendesk.com describe the Zendesk Support/Ticketing API, matching the Support and Helpdesk category."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Basic"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "OAuth access tokens are the recommended method; global OAuth access tokens are required for apps distributed to multiple Zendesk customers; a single-instance OAuth token is created via the OAuth client for one instance. Specific grant types were not confirmed on fetched pages.",
+   "token_refresh": "A refresh token page exists at developer.zendesk.com/documentation/authentication/refresh-token/ (listed in search results, not fetched).",
+   "scopes_notes": "Zendesk docs say OAuth tokens use scopes to limit account access (per search snippet); specific scope list not extracted."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Sponsored Marketplace developer accounts require a request form and are for building Marketplace apps; customer developers should use their own instances or sandboxes. Sandboxes are limited to Suite Growth+ or Support Enterprise customers who request them via Sales or Support."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Tickets",
+    "Requests (end-user)",
+    "Users",
+    "Organizations",
+    "Groups",
+    "Custom objects",
+    "Ticket workflows",
+    "Webhooks",
+    "Help Center",
+    "Chat",
+    "Sales CRM",
+    "Side conversations",
+    "External content"
+   ],
+   "read_ops": [
+    "List/get tickets",
+    "Get users",
+    "Get organizations",
+    "Search (unified search across tickets, users, organizations, groups)",
+    "Incremental exports",
+    "Ticket attachment content retrieval",
+    "Webhook invocation/attempt monitoring"
+   ],
+   "write_ops": [
+    "Create/update tickets",
+    "Create/update users",
+    "Update organizations",
+    "Create or reply to side conversations",
+    "Create webhooks and update/delete them",
+    "Upload attachments",
+    "Create external content records"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Account-wide limit 100,000 requests per minute. Support and Help Center API per minute: Team 200, Growth 400, Professional 400, Enterprise 700, Enterprise Plus 2,500 (Suite plan table). Over-limit returns HTTP 429.",
+   "limitations": "Rate limits vary by plan and endpoint (e.g., Update Ticket 30 per 10 minutes per user per ticket; Update User 5 per minute per user). Trial accounts limited to 10 webhooks and 60 webhook invocations per minute (from search snippet, not fetched page). API tokens are being deprecated in favor of OAuth. Explicit 'REST' wording was not extracted from a fetched official page; protocol inferred from endpoint documentation."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/michaelrice/zendesk-mcp",
+    "https://pypi.org/project/zendesk-mcp",
+    "https://github.com/mattcoatsworth/zendesk-mcp-server",
+    "https://github.com/levibe/zendesk-mcp-local",
+    "https://socket.dev/npm/package/@fruggr/zendesk-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.developer_portal",
+    "value": "Zendesk developer platform docs describe the Support Ticketing API (tickets, users, organizations, ticket workflows)",
+    "url": "https://developer.zendesk.com/api-reference/",
+    "quote": "Ticketing: Work with tickets, users and organizations and manage ticket workflows.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary / methods",
+    "value": "OAuth access tokens are the recommended authentication method",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "quote": "Zendesk supports using OAuth access tokens to authenticate API requests.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods (Basic)",
+    "value": "API tokens use basic authentication and are deprecated/auto-generated in Admin Center",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "quote": "API tokens are auto-generated passwords in the Zendesk Admin Center. They use basic authentication",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token location (API tokens managed page)",
+    "value": "API tokens managed under Apps and integrations > APIs > Zendesk API; up to 256 tokens",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "quote": "You can have up to 256 tokens.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.global OAuth requirement",
+    "value": "Multi-customer apps must use global OAuth access tokens",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "quote": "If you plan on making an app, integration, or bot available to multiple Zendesk customers, you must use global OAuth access tokens",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth deprecation timeline",
+    "value": "API tokens to be permanently deactivated April 30, 2027; migrate to OAuth",
+    "url": "https://developer.zendesk.com/documentation/api-basics/authentication/oauth-migration/",
+    "quote": "Zendesk API tokens will be permanently deactivated on April 30, 2027.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier / trial",
+    "value": "Free 14-day trial account for trying the platform",
+    "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+    "quote": "You can try out the Zendesk platform with a free, 14-day trial account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.partnership (sponsored account)",
+    "value": "Sponsored accounts reserved for Marketplace app developers, up to 5 agents, via request form",
+    "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+    "quote": "A sponsored test account is reserved for developers creating applications for the Zendesk Marketplace.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sandbox guidance",
+    "value": "Customer developers should use their own instances or sandboxes",
+    "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+    "quote": "Customer developers or individual private app developers should use their own instances or sandboxes.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Account-wide limit 100,000 requests per minute; Support plan per-minute limits by tier (Team 200, Professional 400, Enterprise 700)",
+    "url": "https://developer.zendesk.com/api-reference/introduction/rate-limits/",
+    "quote": "The account-wide limit is 100,000 requests per minute.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits (429)",
+    "value": "Exceeding limits returns HTTP 429",
+    "url": "https://developer.zendesk.com/api-reference/introduction/rate-limits/",
+    "quote": "If the rate limit is exceeded, the API responds with a 429 Too Many Requests status code.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks API reference exists (create, update, delete, monitor invocations, signing secret)",
+    "url": "https://developer.zendesk.com/api-reference/webhooks/introduction",
+    "quote": "The reference covers creating, updating, deleting, and retrieving webhooks, monitoring invocations and attempts, and retrieving or resetting the signing secret.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.sdks (embeddables)",
+    "value": "Mobile and Unity SDKs are listed under Embeddables; these are end-user widget SDKs, not API client libraries",
+    "url": "https://developer.zendesk.com/api-reference/",
+    "quote": "Control data passed to and from the Android SDK",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official (announcement)",
+    "value": "Zendesk announced an MCP Server at Relate 2026; early access timing unconfirmed; no official dev docs found",
+    "url": "https://techradar.com/pro/zendesk-becomes-the-latest-to-adopt-mcp-to-futureproof-customers-in-the-ai-first-era",
+    "quote": "Zendesk becomes the latest to adopt MCP to futureproof customers in the AI-first era",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community Zendesk MCP server on GitHub and PyPI exposing ticket read/write tools",
+    "url": "https://github.com/michaelrice/zendesk-mcp",
+    "quote": "zendesk-mcp exposes Zendesk ticket read and write tools to Claude Code and other MCP clients.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Whether API token/OAuth token creation requires a workspace admin role (not stated on fetched pages).",
+   "Whether the 14-day trial requires a credit card (not stated).",
+   "Specific OAuth grant types and scope list (scopes_notes only says scopes exist).",
+   "Whether a Zendesk-hosted general-purpose MCP server is generally available or in early access; no Zendesk-owned MCP repo or developer docs found.",
+   "Whether an official API client library/SDK exists for server-side use (only mobile/Unity widget SDKs and a third-party-cited zendesk_api_client gem were found).",
+   "Exact webhook limits on non-trial accounts and webhook signing details.",
+   "Whether API access requires a specific paid plan; rate-limit tables list Essential through Enterprise Plus tiers but do not state API gating."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.933,
+ "flags": [],
+ "error": null
+}

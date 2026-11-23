@@ -1,0 +1,247 @@
+{
+ "id": 75,
+ "name": "Asana",
+ "category": "Productivity and Project Management",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:36:23Z",
+ "duration_s": 74.0,
+ "cost_usd": 0.0627,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://asana.com",
+   "developer_portal": "https://developers.asana.com/docs",
+   "description": "Asana work management platform (Work Graph); developer docs at developers.asana.com cover its REST API, OAuth, webhooks, and MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "developers.asana.com documents Asana's own platform and API; the fetched overview calls the REST API 'the primary feature of Asana's platform'. Product matches the 'Asana' work-management app. I did not fetch the asana.com homepage."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2",
+    "Service account/JWT"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization code grant only (per docs); access tokens last one hour; refresh tokens issued. Client ID and secret come from an app registered in the developer console.",
+   "token_refresh": "Refresh token can be used to fetch a new access token when the current one expires (OAuth). PATs are long-lived and do not require refresh. Service accounts are described as long-lived tokens.",
+   "scopes_notes": "Scopes exist and must be registered in the developer console; only registered scopes are accepted during authorization. Apps may instead request 'Full permissions', which the docs say is not recommended. Service accounts have their own scope configuration."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "OAuth apps must be made available in a user's workspace to be authorized (distribution settings). Service-account creation is restricted to super admins. Whether public listing requires Asana review was not established. PATs can be created by any developer-console user for testing in any workspace they belong to or in a free account."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Tasks",
+    "Projects",
+    "Portfolios",
+    "Goals",
+    "Webhooks",
+    "Workspaces/teams (referenced in docs)"
+   ],
+   "read_ops": [
+    "GET /goals",
+    "GET /goals/{goal_gid}",
+    "GET /portfolios",
+    "GET /portfolios/{portfolio_gid}/items",
+    "GET /projects/{project_gid}/tasks",
+    "get_tasks (Python SDK)"
+   ],
+   "write_ops": [
+    "POST /portfolios",
+    "POST /portfolios/{portfolio_gid}/addItem",
+    "PUT /goals/{goal_gid}",
+    "POST /goals/{goal_gid}/setMetricCurrentValue",
+    "create_task / update_task / delete_task (Python SDK)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Limits are per authorization token, per minute: 150 requests/min on free domains and 1,500/min on paid domains; search API 60/min; GET concurrency 50, writes 15; 429 responses include Retry-After.",
+   "limitations": "Webhooks on Workspace, Team, or Portfolio subscriptions do not support field filters. Java client is end-of-support; Ruby also end-of-support. Full endpoint list was not fetched; Broad rating rests on tasks, projects, portfolios, goals, and webhooks evidence plus the OpenAPI-generated reference."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://mcpservers.org/servers/roychri/mcp-server-asana",
+    "https://docs.rs/crate/asanamcp/latest/source/README.md"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Asana developer docs describe Asana's REST API as the primary feature of the platform",
+    "url": "https://developers.asana.com/docs/overview",
+    "quote": "The primary feature of Asana's platform is our rest API",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.pat",
+    "value": "Personal access tokens are the quickest way to authenticate",
+    "url": "https://developers.asana.com/docs/authentication",
+    "quote": "A personal access token (PAT) is the quickest and simplest way to authenticate in the API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.pat_creation",
+    "value": "PATs are generated in the Asana developer console; no plan or admin approval stated on PAT page",
+    "url": "https://developers.asana.com/docs/personal-access-token",
+    "quote": "You can generate a personal access token from the Asana developer console",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.service_accounts",
+    "value": "Service accounts are long-lived tokens created only by super admins",
+    "url": "https://developers.asana.com/docs/authentication",
+    "quote": "Similar to PATs, Service Accounts (SAs) are long-lived tokens that provide programmatic access to the API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_flow",
+    "value": "OAuth supports the authorization code grant",
+    "url": "https://developers.asana.com/docs/oauth",
+    "quote": "Asana supports the authorization code grant flow.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.refresh",
+    "value": "Refresh tokens fetch new access tokens after expiry",
+    "url": "https://developers.asana.com/docs/oauth",
+    "quote": "A refresh token (which can be used to fetch a new access token when the current one expires).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.scopes",
+    "value": "Scopes must be registered in the developer console",
+    "url": "https://developers.asana.com/docs/oauth",
+    "quote": "Scopes allow your app to request only the access it needs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.workspace_install",
+    "value": "OAuth apps must be available in the user's workspace to be authorized",
+    "url": "https://developers.asana.com/docs/oauth",
+    "quote": "the application must be available in the user's workspace",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.bearer_header",
+    "value": "All Asana API tokens are sent as Bearer tokens in the Authorization header",
+    "url": "https://developers.asana.com/docs/personal-access-token",
+    "quote": "Authorization: Bearer ACCESS_TOKEN",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocol",
+    "value": "REST API",
+    "url": "https://developers.asana.com/docs/overview",
+    "quote": "The primary feature of Asana's platform is our rest API",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks notify on changes to Asana resources",
+    "url": "https://developers.asana.com/docs/webhooks",
+    "quote": "Webhooks allow you to subscribe to notifications about events that occur on Asana resources",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Limits per minute differ for free vs paid domains",
+    "url": "https://developers.asana.com/docs/rate-limits",
+    "quote": "Limits are based on minute-long windows and differ depending on whether the domain is free or paid",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Official JavaScript and Python client libraries are supported; Ruby and Java are end-of-support",
+    "url": "https://developers.asana.com/docs/client-libraries",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Asana offers an official MCP server",
+    "url": "https://developers.asana.com/docs/mcp-server",
+    "quote": "Asana offers a Model Context Protocol (MCP) server, accessible via app integration",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.endpoint",
+    "value": "V2 MCP server at https://mcp.asana.com/v2/mcp, Streamable HTTP, OAuth",
+    "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+    "quote": "The Asana MCP V2 server is available at: `https://mcp.asana.com/v2/mcp`.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.deprecation",
+    "value": "Older beta /sse MCP endpoint deprecated; shutdown date ambiguous (05/11/2026)",
+    "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+    "quote": "the beta server is deprecated and will be shut down on on *05/11/2026*.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community MCP server roychri/mcp-server-asana exists (third-party, not vendor-owned)",
+    "url": "https://mcpservers.org/servers/roychri/mcp-server-asana",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Exact shutdown status of the legacy /sse MCP beta endpoint given the ambiguous 05/11/2026 date (today is 2026-11-23).",
+   "Whether a paid plan, trial, or sandbox is needed for API use; the search snippet says a developer sandbox adds premium features, but this was not verified on a fetched page.",
+   "Whether publishing a public OAuth app requires Asana app review (distribution/listing rules were not fetched).",
+   "Full endpoint breadth and whether GraphQL or other protocols exist; only REST was confirmed.",
+   "Whether service-account creation really requires super admin role (from the fetched summary of the authentication page).",
+   "Whether the V2 MCP server is maintained by Asana's GitHub org; no vendor GitHub repo was checked."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.882,
+ "flags": [],
+ "error": null
+}

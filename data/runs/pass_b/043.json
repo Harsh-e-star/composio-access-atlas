@@ -1,0 +1,235 @@
+{
+ "id": 43,
+ "name": "BigCommerce",
+ "category": "Ecommerce",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:32:55Z",
+ "duration_s": 75.4,
+ "cost_usd": 0.0629,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.bigcommerce.com",
+   "developer_portal": "https://developer.bigcommerce.com",
+   "description": "BigCommerce is an ecommerce SaaS platform. Its developer docs cover the store control panel, REST and Storefront APIs, API accounts, sandboxes and MCP servers.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs describe the BigCommerce store platform (store control panel, store API accounts, sandbox stores). The developer portal redirects to docs.bigcommerce.com. Sources describe the same product."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2",
+    "Bearer/PAT",
+    "Basic"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "App-level API accounts: each installing app gets a store-specific access token (OAuth-style app install). Store Management MCP uses OAuth 2.1 with PKCE per the MCP overview page. Exact OAuth grant details not fetched.",
+   "token_refresh": "Access tokens do not expire based on time and cannot be manually invalidated. App-level tokens are regenerated on owner email or scope change. Legacy HTTP Basic accounts are no longer available to new stores.",
+   "scopes_notes": "Scopes should be the minimum the implementation needs. Scopes other than default include read-only variants. Store-level credential scopes are fixed after creation. Webhooks use the default scope."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "yes",
+   "production_restrictions": "Sandbox stores cannot process live transactions. The sandbox page says sandboxes are created through the Partner Portal, which implies partner access for that path. Trial store path described in search snippet only (15 days, no credit card, unverified)."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "GraphQL",
+    "WebSocket",
+    "none"
+   ],
+   "breadth": "Unknown",
+   "resources": [
+    "products",
+    "inventory",
+    "orders",
+    "promotions",
+    "store details"
+   ],
+   "read_ops": [
+    "look up products and prices",
+    "look up orders",
+    "read store details",
+    "set inventory levels (read-modify by area)"
+   ],
+   "write_ops": [
+    "update products and prices",
+    "set inventory levels",
+    "create promotions",
+    "refund orders"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "REST rate limits exist per BigCommerce docs (search snippet, not fetched). Sandbox plan shows 500,000/hr on a sandbox page. Unlimited-plan clients are not limited by request volume (search snippet, unverified).",
+   "limitations": "Store Management MCP exposes product, inventory, order and promotion areas only (read-only or modify). Storefront MCP covers guest shopping only, no API account required. Full REST resource list not verified. GraphQL Storefront endpoint and MCP protocol noted; GraphQL rate limits not established."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/isaacgounton/bigcommerce-api-mcp",
+    "https://www.cdata.com/drivers/bigcommerce/mcp/",
+    "https://github.com/cdatasoftware/bigcommerce-mcp-server-by-cdata"
+   ]
+  },
+  "claims": [
+   {
+    "field": "product identity",
+    "value": "BigCommerce is an ecommerce platform with store control panel and API accounts",
+    "url": "https://docs.bigcommerce.com/docs/start/authentication",
+    "quote": "Merchants generate single-store API credentials when they create API accounts in their store control panel.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth primary",
+    "value": "Access tokens sent via X-Auth-Token header",
+    "url": "https://docs.bigcommerce.com/docs/start/authentication",
+    "quote": "The `X-Auth-Token` header uses access tokens to authenticate requests.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth legacy",
+    "value": "Legacy HTTP Basic accounts not available to new stores",
+    "url": "https://docs.bigcommerce.com/docs/start/authentication",
+    "quote": "Legacy API accounts used HTTP basic authentication. They are no longer available to new stores.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth app-level OAuth",
+    "value": "App-level API accounts issue a unique token per installing store",
+    "url": "https://docs.bigcommerce.com/docs/start/authentication",
+    "quote": "App-level API accounts expect each application to generate a unique access token for every store that installs the app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks",
+    "value": "Webhooks available via default scope for all API accounts",
+    "url": "https://docs.bigcommerce.com/docs/start/authentication",
+    "quote": "Webhooks are accessible from the default scope that is automatically accessible to all API accounts.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sandbox",
+    "value": "Sandbox stores exist for app development and testing, no live transactions",
+    "url": "https://docs.bigcommerce.com/developer/docs/overview/sandboxes",
+    "quote": "Sandbox stores are intended for developing and testing apps.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sandbox access",
+    "value": "Sandbox creation starts in Partner Portal",
+    "url": "https://docs.bigcommerce.com/developer/docs/overview/sandboxes",
+    "quote": "Navigate to the BigCommerce Partner Portal and sign in using your credentials.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp official storefront",
+    "value": "Storefront MCP needs no API account or admin credentials",
+    "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+    "quote": "No API account or admin credentials are involved.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp official store mgmt auth",
+    "value": "Store Management MCP uses OAuth 2.1 with PKCE; agent never receives password or API token",
+    "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+    "quote": "The agent never receives a password or API token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp official store mgmt enablement",
+    "value": "Only store owner can turn on Management MCP",
+    "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+    "quote": "Only the store owner can turn on Management MCP and accept the terms of service.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp official availability",
+    "value": "Store Management MCP is in early access and available to all stores",
+    "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+    "quote": "Store Management MCP is in early access and available to all stores.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp endpoint",
+    "value": "Store Management MCP endpoint https://api.bigcommerce.com/mcp",
+    "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+    "quote": "All stores: https://api.bigcommerce.com/mcp",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "sdk",
+    "value": "Official checkout SDK repo under bigcommerce GitHub org",
+    "url": "https://github.com/bigcommerce",
+    "quote": "checkout-sdk-js: TypeScript, MIT, 140 stars. A checkout SDK written in JavaScript.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "trial",
+    "value": "Free trial store offered; API account creation allowed for store owners in trial stores",
+    "url": "https://docs.bigcommerce.com/developer/docs/overview/sandboxes",
+    "quote": "unverified",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "community MCP",
+    "value": "Community REST MCP server isaacgounton/bigcommerce-api-mcp",
+    "url": "https://github.com/isaacgounton/bigcommerce-api-mcp",
+    "quote": "unverified",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Conflict on MCP status: one search snippet says Store Management MCP is in Private Beta via AI Labs; fetched overview says early access and available to all stores. Verify on developer.bigcommerce.com beta page (redirect/404 blocked the fetch).",
+   "Is a self-serve trial store enough to create API accounts and get REST test credentials, or does sandbox access require Partner Portal membership? Sources conflict.",
+   "Full REST resource list and breadth of write ops across catalog, customers, carts, checkout were not verified; breadth left Unknown.",
+   "Official Ruby API client mentioned in a search snippet; repo name and URL not verified.",
+   "REST rate limits: exact numbers and per-plan rules not fetched from the official rate-limits page.",
+   "GraphQL Storefront endpoint and rate limits not verified from official docs.",
+   "Official MCP repo under github.com/bigcommerce not found; the org page showed 10 of 285 repos and no mcp-named repo. Only the hosted MCP at api.bigcommerce.com/mcp is official.",
+   "Developer app review requirements and partner program terms for public app listing not checked.",
+   "Community MCP repos (isaacgounton, CData) were identified from search snippets and not fetched directly."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented GraphQL/REST/WebSocket/none interface."
+  ]
+ },
+ "evidence_support_rate": 0.733,
+ "flags": [],
+ "error": null
+}

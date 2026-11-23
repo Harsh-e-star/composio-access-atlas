@@ -1,0 +1,253 @@
+{
+ "id": 85,
+ "name": "iPayX",
+ "category": "Finance and Fintech",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:37:39Z",
+ "duration_s": 95.7,
+ "cost_usd": 0.0391,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.ipayx.ai/",
+   "developer_portal": "https://www.ipayx.ai/developers",
+   "description": "iPayX Protocol (operating at ipayx.ai, registered as 11850091 Canada Inc. per directory listings): a 'MCP-Native FX Audit Engine' that scores bank/card FX transactions against live mid-market rates to surface hidden fees. Not a payments processor. Note: a different, unrelated 'iPayX' (ipayx.vercel.app) is a testnet USDC invoicing app; it has no public API.",
+   "identity_confirmed": "yes",
+   "identity_notes": "The task's hint domain ipayx.ai/docs returns 'Oops! Page not found' in the fetch, but ipayx.ai home, /docs/api, and /pricing describe the FX audit product. Name collision: ipayx.vercel.app (USDC invoicing, testnet-only) is a different product and was excluded. FINTRAC MSB registration C10001283 is self-claimed and not verified against the FINTRAC registry."
+  },
+  "auth": {
+   "methods": [
+    "API key"
+   ],
+   "primary": "API key",
+   "oauth_flows": "none found",
+   "token_refresh": "unknown (static key; no refresh flow described)",
+   "scopes_notes": "No scopes documented. Keys start with ipx_live_ and are sent as a Bearer token in the Authorization header. Unknown whether there is a test/sandbox key type."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "yes",
+   "production_restrictions": "Pricing page says 'Upgrade to signed reports or production-grade API', suggesting production API access is a paid upgrade. Page metadata (unverified) claims 'API plans from $99/mo', but this is not in the visible pricing body. The API key button links to the pricing page, and the key-issuance process is not described. The sandbox is the no-signup MCP test page at /mcp-test; there is no documented REST sandbox."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "audits",
+    "FX rates"
+   ],
+   "read_ops": [
+    "GET /rates (live mid-market rates)"
+   ],
+   "write_ops": [
+    "POST /audit (forensic audit of one transaction)",
+    "POST /audit/document (batch audit of parsed transactions, e.g. CSV/QuickBooks/Xero exports)"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "No numeric limit published. 429 rate_limit_exceeded is described as 'Too many requests in the last 60 seconds.' Free MCP audit tool: 3 per IP per calendar month.",
+   "limitations": "Only three REST endpoints. Base URL is a Supabase edge function (https://hvujzsdwcoweirroubeh.supabase.co/functions/v1/fx-public-api-v1). MCP is a separate protocol and is not listed as a REST protocol. No SDK languages are named; code samples are cURL, JavaScript, and Python. Webhook event listed: audit.completed."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+   "community": "yes",
+   "community_urls": [
+    "https://glama.ai/mcp/servers/j0a5aea03v",
+    "https://mcp.so/servers/mcp-fx-audit",
+    "https://mcpservers.org/servers/ipayx-technologies/mcp-fx-audit",
+    "https://wild-bird-a412.ybolduc.workers.dev/mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity: product description",
+    "value": "iPayX Protocol describes itself as 'World's First MCP-Native FX Audit Engine'; deterministic engine scores FX transactions against live mid-market rate",
+    "url": "https://www.ipayx.ai/",
+    "quote": "World's First MCP-Native FX Audit Engine. Our deterministic engine scores every FX transaction against the live mid-market rate",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "identity: docs path",
+    "value": "The hinted ipayx.ai/docs path returns a not-found page",
+    "url": "https://ipayx.ai/docs",
+    "quote": "Oops! Page not found",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "identity: name collision",
+    "value": "Separate iPayX app at ipayx.vercel.app is a testnet USDC invoicing app (excluded)",
+    "url": "https://ipayx.vercel.app/",
+    "quote": "Invoice in USDC. Get paid from any chain.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth: method",
+    "value": "Every request needs a Bearer token; keys start with ipx_live_",
+    "url": "https://www.ipayx.ai/docs/api",
+    "quote": "Every request requires a Bearer token in the `Authorization` header. Keys start with `ipx_live_`.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth: key source",
+    "value": "Bearer key is an API key obtained from ipayx.ai/ai-access",
+    "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+    "quote": "Auth: Bearer — API key from https://www.ipayx.ai/ai-access",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access: key issuance",
+    "value": "API key button links to pricing page; issuance rules not described",
+    "url": "https://www.ipayx.ai/docs/api",
+    "quote": "Get an API key",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access: free tier",
+    "value": "3 free lifetime audits at $0",
+    "url": "https://www.ipayx.ai/pricing",
+    "quote": "You have 3 free audits.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access: paid tier",
+    "value": "Unlimited plan at $299/mo for teams",
+    "url": "https://www.ipayx.ai/pricing",
+    "quote": "Unlimited audits. For teams running audits every week.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access: free audit",
+    "value": "Free audit requires no account",
+    "url": "https://www.ipayx.ai/",
+    "quote": "Our free audit gives you a forensic FX score in 60 seconds.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api: REST endpoints",
+    "value": "POST /audit runs a forensic audit on one transaction",
+    "url": "https://www.ipayx.ai/docs/api",
+    "quote": "Run a forensic audit on a single transaction.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api: REST endpoints",
+    "value": "GET /rates returns live mid-market rates from Twelve Data",
+    "url": "https://www.ipayx.ai/docs/api",
+    "quote": "Live mid-market rates from Twelve Data.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api: batch endpoint",
+    "value": "POST /audit/document audits batches of parsed transactions",
+    "url": "https://www.ipayx.ai/docs/api",
+    "quote": "Audit a batch of parsed transactions (e.g. exported from QuickBooks, Xero, Sage, or your CSV).",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api: webhooks",
+    "value": "Webhook event audit.completed; payloads signed with HMAC-SHA256",
+    "url": "https://www.ipayx.ai/docs/api",
+    "quote": "Subscribe to `audit.completed` events to power Zapier triggers, n8n workflows, or your own Slack alerts.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api: rate limits",
+    "value": "429 when too many requests in 60 seconds; no numeric limit published",
+    "url": "https://www.ipayx.ai/docs/api",
+    "quote": "Too many requests in the last 60 seconds.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp: official repo",
+    "value": "Official GitHub org iPAYX-Technologies publishes mcp-fx-audit; remote streamable HTTP, no install",
+    "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+    "quote": "A Model Context Protocol server for foreign exchange forensic auditing.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp: transport",
+    "value": "Remote streamable HTTP endpoint at mcp.ipayx.ai/mcp; no local install",
+    "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+    "quote": "remote, streamable HTTP, no install required.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp: sandbox",
+    "value": "MCP test sandbox at /mcp-test requires no signup",
+    "url": "https://www.ipayx.ai/",
+    "quote": "a sandbox at https://www.ipayx.ai/mcp-test, which requires no signup",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp: community listings",
+    "value": "Third-party directories list the server; a workers.dev mirror endpoint is not vendor-owned",
+    "url": "https://glama.ai/mcp/servers/j0a5aea03v",
+    "quote": "Expose hidden bank FX fees in 30 seconds. No signup required.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "fintrac claim",
+    "value": "Self-claimed FINTRAC MSB registration C10001283; not verified against registry",
+    "url": "https://www.ipayx.ai/",
+    "quote": "FINTRAC-registered (MSB C10001283) FX forensic audit layer.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Whether API keys are self-serve and free, or require a paid plan or sales contact. Pricing page does not say; the 'API plans from $99/mo' figure appears only in unverified metadata.",
+   "Whether a free test/sandbox API key exists for the REST API (only the no-signup MCP sandbox was found).",
+   "SDK languages: none named; only cURL, JavaScript, and Python code samples and a Node.js webhook signature snippet.",
+   "Whether the ipayx.ai/docs path is a dead link (404 on fetch), so the documented path may be /docs/api or /docs/mcp-server instead.",
+   "Relationship between the official mcp.ipayx.ai endpoint, the workers.dev mirror, and the io.github.Ipayx-stellar connector is unclear.",
+   "Repo license is not shown; the GitHub About section has no description.",
+   "The FINTRAC MSB registration C10001283 was not verified against the FINTRAC public registry.",
+   "Quotes were taken from summarized fetch output and were not verified character-for-character against live pages."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "low",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "high",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 0.263,
+ "flags": [],
+ "error": null
+}

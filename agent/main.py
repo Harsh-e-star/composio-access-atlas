@@ -44,9 +44,9 @@ async def research(app: dict, f: Fetcher, pass_name: str) -> AppRecord:
     try:
         if pass_name == "a":
             trace(app["id"], "A", "1-discovery", f"seeds={app['seeds']}")
-            extra = []
-            if not app["seeds"]:
-                # No URL in the brief: one small LLM web-search call to find official URLs.
+            async def web_search_urls():
+                # Fallback when the brief has no URL or all seeds fail: one small
+                # LLM web-search call to locate official URLs (then fetched by us).
                 found, m = await llm.complete_json(
                     "Find official URLs only. Return JSON.",
                     f"Find the official website and developer/API documentation URLs for "
@@ -54,10 +54,16 @@ async def research(app: dict, f: Fetcher, pass_name: str) -> AppRecord:
                     "Return up to 4 URLs you actually saw in search results.",
                     {"type": "object", "properties": {"urls": {"type": "array", "items": {"type": "string"}}},
                      "required": ["urls"]}, "haiku", tools=["WebSearch"], max_turns=6)
-                extra = [u for u in found.get("urls", []) if u.startswith("http")][:4]
-                meta["discovery_cost"] = m.get("cost_usd")
-                trace(app["id"], "A", "1-discovery", f"web-search fallback found {extra}")
-            disc = await discover.discover(app, f, extra_seeds=extra)
+                meta["discovery_cost"] = (meta.get("discovery_cost") or 0) + (m.get("cost_usd") or 0)
+                urls = [u for u in found.get("urls", []) if u.startswith("http")][:4]
+                trace(app["id"], "A", "1-discovery", f"web-search fallback found {urls}")
+                return urls
+            extra = await web_search_urls() if not app["seeds"] else []
+            disc = await asyncio.wait_for(discover.discover(app, f, extra_seeds=extra), 360)
+            if not disc["pages"] and app["seeds"]:
+                trace(app["id"], "A", "1-discovery", "all seed URLs failed; trying web-search fallback")
+                extra = await web_search_urls()
+                disc = await asyncio.wait_for(discover.discover(app, f, extra_seeds=extra), 360)
             trace(app["id"], "A", "1-discovery",
                   f"{len(disc['pages'])} pages fetched, {len(disc['failures'])} failed, "
                   f"{sum(1 for g in disc['github_mcp'] if 'repo' in g)} GitHub MCP candidates")
@@ -137,7 +143,7 @@ def main():
     if args.app:
         apps = [registry.by_name(args.app)]
     elif args.ids:
-        want = {int(i) for i in args.ids.split(",")}
+        want = {int(i) for i in args.ids.split(",") if i.strip()}
         apps = [a for a in apps if a["id"] in want]
     elif args.limit:
         apps = apps[: args.limit]

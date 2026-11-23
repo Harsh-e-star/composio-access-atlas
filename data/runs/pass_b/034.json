@@ -1,0 +1,278 @@
+{
+ "id": 34,
+ "name": "GoHighLevel",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:32:19Z",
+ "duration_s": 104.1,
+ "cost_usd": 0.0702,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": null,
+   "developer_portal": "https://marketplace.gohighlevel.com",
+   "description": "GoHighLevel (HighLevel, also branded LeadConnector) is an all-in-one marketing/CRM platform; its public API docs describe the 'HighLevel CRM platform'.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Assignment URL highlevel.stoplight.io returned no usable content (only the word 'Stoplight'). Identity established from HighLevel's own developer marketplace docs; GoHighLevel and HighLevel are used interchangeably across the sources. Official marketing website was not fetched."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Authorization Code Grant (v2 APIs); PKCE/S256 not currently supported for the Marketplace app installation flow",
+   "token_refresh": "Access token expires after 86,399 seconds (~24h); refresh token valid up to one year or until used, and each use returns a new refresh token that invalidates the old one",
+   "scopes_notes": "Private Integration tokens can be limited to specific scopes; select only the required scopes."
+  },
+  "access": {
+   "tier": "admin_approval",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "yes",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Private apps are limited to 5 unique Agency installs; to unblock more installs, publish as Public (listed) or request Security Review (available after 6+ Agencies)."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Contacts",
+    "Conversations",
+    "Calendars/Events",
+    "Opportunities",
+    "Payments",
+    "Locations",
+    "Webhooks"
+   ],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Burst limit of 100 API requests per 10 seconds per app per resource; daily cap of 200,000 requests per day (from search summary of official rate-limits page; not verified on page)",
+   "limitations": "Per-operation read/write detail not verified on official pages; 'Broad' rests on the landing page's 'Complete REST API documentation' claim and a secondary source citing 550+ operations via MCP. SDK existence conflicting. Webhook delivery retries only on HTTP 429 per a Freshdesk support article."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://marketplace.gohighlevel.com/docs/other/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/drausal/gohighlevel-mcp",
+    "https://github.com/hridayshah7/gohighlevel-mcp",
+    "https://github.com/busybee3333/go-high-level-mcp-2026-complete",
+    "https://github.com/CryptoJym/gohighlevel-mcp",
+    "https://github.com/mastanley13/GoHighLevel-MCP"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "HighLevel CRM platform API documentation",
+    "url": "https://marketplace.gohighlevel.com/docs/",
+    "quote": "Complete REST API documentation for the HighLevel CRM platform.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods (Private Integration token)",
+    "value": "Bearer token generated in agency settings",
+    "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken.md",
+    "quote": "Copy the token generated and share it with your third-party app developer.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.credential_location",
+    "value": "Private Integrations are found under agency settings",
+    "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken.md",
+    "quote": "You can find Private Integrations under agency settings.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.admin_approval_required",
+    "value": "All agency admins can create private integrations by default",
+    "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken.md",
+    "quote": "By default, all agency admins can create and manage Private Integrations.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_display",
+    "value": "Token shown only once",
+    "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken.md",
+    "quote": "Don't forget to copy the token generated as you won't be able to do it again later.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.rotation",
+    "value": "Rotate private integration tokens every 90 days (recommended)",
+    "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken.md",
+    "quote": "We recommend that you rotate your Private Integration tokens every 90 days.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_flows",
+    "value": "Authorization Code Grant with v2 APIs",
+    "url": "https://marketplace.gohighlevel.com/docs/Authorization/OAuth2.0.md",
+    "quote": "HighLevel supports the Authorization Code Grant flow with v2 APIs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh (access)",
+    "value": "Access token expires after 86,399 seconds (~24h)",
+    "url": "https://marketplace.gohighlevel.com/docs/Authorization/OAuth2.0.md",
+    "quote": "the Access Token expires after 86,399 seconds, which is approximately 24 hours.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh (refresh)",
+    "value": "Refresh token valid up to one year or until used; rotates on use",
+    "url": "https://marketplace.gohighlevel.com/docs/Authorization/OAuth2.0.md",
+    "quote": "The Refresh Token is valid for up to one year, or until it is used.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_credentials (developer signup)",
+    "value": "Free developer account signup at marketplace",
+    "url": "https://help.gohighlevel.com/support/solutions/articles/155000000136",
+    "quote": "Go to https://marketplace.gohighlevel.com and sign up for a developer account if you haven't already.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions (private limit)",
+    "value": "Private apps limited to 5 unique Agency installs",
+    "url": "https://help.gohighlevel.com/support/solutions/articles/155000000136",
+    "quote": "Private apps are limited to 5 unique Agency installs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions (public)",
+    "value": "Public apps are listed and installable by all after approval; Security Review after 6+ Agencies",
+    "url": "https://help.gohighlevel.com/support/solutions/articles/155000000136",
+    "quote": "To unblock new installs, publish the app as Public (listed) or request Security Review (available after you hit 6+ Agencies).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks supported; real-time notifications for 50+ events",
+    "url": "https://marketplace.gohighlevel.com/docs/",
+    "quote": "Real-time notifications for 50+ events. Stay updated with instant webhook callbacks.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks (definition)",
+    "value": "HTTP callbacks for events",
+    "url": "https://marketplace.gohighlevel.com/docs/Authorization/DeveloperGlossary/index.html",
+    "quote": "Webhooks are HTTP callbacks or notifications sent from one application to another when a specific event or trigger occurs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks (conflicting)",
+    "value": "Glossary says an SDK exists; landing page only mentions SDKs in quick-start; no package found",
+    "url": "https://marketplace.gohighlevel.com/docs/Authorization/DeveloperGlossary/index.html",
+    "quote": "HighLevel provides an SDK that facilitates the integration of custom apps with its API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST API with base URL https://services.leadconnectorhq.com",
+    "url": "https://marketplace.gohighlevel.com/docs/",
+    "quote": "Complete REST API documentation for the HighLevel CRM platform.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.docs_repo",
+    "value": "Official public API v2 docs repo owned by GoHighLevel (docs only)",
+    "url": "https://github.com/GoHighLevel/highlevel-api-docs",
+    "quote": "This repo is our public documentation for API v2.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "HighLevel (LeadConnector) publishes an official MCP server with 4 tools and sign-in based OAuth",
+    "url": "https://marketplace.gohighlevel.com/docs/other/mcp",
+    "quote": "HighLevel gives your assistant four tools to find and use the actions available to your connection.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.endpoint",
+    "value": "https://services.leadconnectorhq.com/mcp/ (client-specific paths such as /mcp/cursor/v2)",
+    "url": "https://marketplace.gohighlevel.com/docs/other/mcp",
+    "quote": "Cursor connects to HighLevel as a custom MCP server at https://services.leadconnectorhq.com/mcp/cursor/v2.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "Sign-in with HighLevel login, choose sub-accounts, approve permissions",
+    "url": "https://marketplace.gohighlevel.com/docs/other/mcp",
+    "quote": "You connect by signing in with your HighLevel login, choosing your sub-account(s), and approving the requested permissions.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official (listing)",
+    "value": "Official app in Muse",
+    "url": "https://marketplace.gohighlevel.com/docs/other/mcp",
+    "quote": "HighLevel (LeadConnector) is available as an official app in Muse.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "identity.location_model",
+    "value": "Location ID identifies a sub-account",
+    "url": "https://marketplace.gohighlevel.com/docs/Authorization/DeveloperGlossary/index.html",
+    "quote": "Location ID is a unique identifier assigned to a specific location within a HighLevel account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Assignment URL highlevel.stoplight.io returned no usable content; it could not be confirmed as the source of truth.",
+   "Whether a free sandbox, trial, or paid plan is needed to create an agency account and test credentials is not stated; free_credentials and paid_plan_required remain unknown.",
+   "Per-operation read/write endpoint lists were not verified; the official rate-limit page was not fetched directly (values came from search summary).",
+   "Official SDK existence is unconfirmed: the glossary says an SDK exists, the landing page only references SDKs in quick-start, and the GitHub docs repo lists no packages. Lead: github.com/gohighlevel/highlevel-api-php appeared in search but was not opened.",
+   "Official MCP tool count conflicts: docs page describes four tools (list_locations, search_operations, describe_operation, execute_operation); a search summary cites 550+ operations via unified tools and a 36-tool token-based variant. Whether the token-based server still exists is unverified.",
+   "Community MCP repos (drausal, hridayshah7, busybee3333, CryptoJym, mastanley13) were judged from search snippets only; none opened or verified for maintenance status.",
+   "Stoplight hint vs official docs: unclear whether highlevel.stoplight.io is an official mirror of marketplace.gohighlevel.com docs."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "high",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Workspace admin approval",
+  "rationale": [
+   "A workspace admin must approve/install or issue credentials."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

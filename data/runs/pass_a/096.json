@@ -1,0 +1,260 @@
+{
+ "id": 96,
+ "name": "Devin",
+ "category": "AI, Research and Media-native",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:27:45Z",
+ "duration_s": 25.1,
+ "cost_usd": 0.0811,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.devin.ai/get-started/devin-intro",
+   "title": "Introducing Devin - Devin Docs",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.devin.ai/work-with-devin/mcp",
+   "title": "Devin MCP servers and marketplace - Devin Docs",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.devin.ai/work-with-devin/browser-auth",
+   "title": "Devin browser authentication - Devin Docs",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.devin.ai/product-guides/oidc",
+   "title": "Cloud Authentication with OIDC - Devin Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.devin.ai/api-reference/overview",
+   "title": "API Overview - Devin Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.devin.ai/work-with-devin/deepwiki-mcp",
+   "title": "DeepWiki MCP - Devin Docs",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+   "title": "Devin MCP - Devin Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.devin.ai/product-guides/plugin-mcp-setups",
+   "title": "Plugin MCP servers in Devin - Devin Docs",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.devin.ai/enterprise/getting-started/get-started",
+   "title": "Getting Started with Devin Enterprise - Devin Docs",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.devin.ai/federal/introduction",
+   "title": "Introduction - Devin Docs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/TabularisDB/tabularis",
+   "title": "TabularisDB/tabularis",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jhacksman/OpenSCAD-MCP-Server",
+   "title": "jhacksman/OpenSCAD-MCP-Server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/midasmatterhorn/artcraft-skills",
+   "title": "midasmatterhorn/artcraft-skills",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/vibheksoni/session-export",
+   "title": "vibheksoni/session-export",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/dazhi666666/agent-router",
+   "title": "dazhi666666/agent-router",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/gustavolira/team-memory-mcp",
+   "title": "gustavolira/team-memory-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/HA2345567/awesome-autonomus-ai-agents",
+   "title": "HA2345567/awesome-autonomus-ai-agents",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/usesalt/wikigen",
+   "title": "usesalt/wikigen",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://devin.ai",
+   "developer_portal": "https://docs.devin.ai/api-reference/overview",
+   "description": "Devin is an autonomous AI software engineer from Cognition that writes, runs and tests code; available via web app, CLI, desktop, Slack/Teams and API.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs at docs.devin.ai describe Devin AI software engineer and its API/MCP."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "API key"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "v3 API uses service user credentials (cog_ prefix) with role-based access control; Personal Access Tokens also supported. Enterprise keys need X-Org-Id header for MCP."
+  },
+  "access": {
+   "tier": "paid_plan",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Enterprise API (cross-org) available only to enterprise customers; service user creation requires org permissions."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "sessions",
+    "knowledge",
+    "playbooks",
+    "secrets",
+    "users",
+    "analytics",
+    "audit logs",
+    "billing"
+   ],
+   "read_ops": [
+    "List organization users",
+    "sessions",
+    "knowledge"
+   ],
+   "write_ops": [
+    "Create sessions (with create_as_user_id)",
+    "manage playbooks, knowledge, secrets"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "429 Too Many Requests returned when rate limit exceeded; specifics not stated.",
+   "limitations": "v1/v2 APIs are deprecated and receive no new features. Enterprise API scope only for enterprise customers."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/gustavolira/team-memory-mcp",
+    "https://github.com/jhacksman/OpenSCAD-MCP-Server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT, API key",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "You can also authenticate directly as your user with a Personal Access Token — no service user or create_as_user_id needed.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Service user credentials (cog_ prefix) as Bearer",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "Both scopes use service user credentials ( cog_ prefix). See Authentication for setup.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "paid_plan",
+    "url": "https://docs.devin.ai/get-started/devin-intro",
+    "quote": "To access Devin, sign up at app.devin.ai . Individual and Teams plans are available.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "Learn how to programmatically interact with Devin using our REST APIs",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.devin.ai/api-reference/overview",
+    "quote": "For managing resources within a single organization — sessions, knowledge, playbooks, secrets, and more. This is where most integrations start.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+    "quote": "Set up the official Devin MCP server so external AI tools can manage sessions, playbooks, knowledge, and repository docs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is there a free tier or trial for getting API credentials?",
+   "Are there published rate limits?",
+   "Are official SDKs or webhooks available?"
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "high",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "yes",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Paid plan required",
+  "rationale": [
+   "API needs a paid plan."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,227 @@
+{
+ "id": 10,
+ "name": "DealCloud",
+ "category": "CRM and Sales",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:19:04Z",
+ "duration_s": 60.8,
+ "cost_usd": 0.0406,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.intapp.com/mcp-documentation/",
+   "developer_portal": "https://api.docs.dealcloud.com",
+   "description": "DealCloud is Intapp's CRM for private capital, banking and professional services firms. The API docs at api.docs.dealcloud.com are titled 'Dealcloud Developer Documentation - DealCloud API Docs'. The MCP docs footer reads '© 2026 Integration Appliance, Inc.' and the Intapp page calls DealCloud 'Intapp's CRM'.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Confirmed as Intapp DealCloud by api.docs.dealcloud.com and the intapp.com MCP/connector documentation, which names DealCloud as Intapp's CRM. The docs cover REST APIs for DealCloud sites."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "API key"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Client Credentials grant (grant_type=client_credentials) posted to {baseUrl}/api/rest/v1/oauth/token; returns a bearer token sent as 'Authorization: Bearer {token}'.",
+   "token_refresh": "Tokens expire after 900 seconds (15 minutes) and must be refreshed by repeating the client-credentials flow. No refresh token is described.",
+   "scopes_notes": "Access is governed by the user's group capabilities (Admin > User Management > user group > Capabilities > Site Areas, 'API' enabled), not OAuth scopes. Docs advise least privilege."
+  },
+  "access": {
+   "tier": "admin_approval",
+   "free_credentials": "no",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "yes",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Not established. The MCP server additionally requires a 'DealCloud with Celeste' license and a Celeste Member group with MCP Access for end users; this is MCP-specific."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Schema (entry types, fields, site metadata, currencies, users)",
+    "Data (cells, rows, history, files, template reports)",
+    "User Management",
+    "Publications",
+    "Site Backups",
+    "Relationship Intelligence",
+    "Schema Contracts",
+    "eMarketing"
+   ],
+   "read_ops": [
+    "Get Data",
+    "List Entries",
+    "List Entries using Filters",
+    "Query",
+    "Get",
+    "List Views",
+    "Get Data using View",
+    "historical data (cell/row history)",
+    "Schema entry types, fields, currencies, users (read)"
+   ],
+   "write_ops": [
+    "Create, Update, Upsert cells",
+    "Update and Create rows",
+    "Delete rows/entries",
+    "Merge",
+    "Create, Update, Delete users",
+    "Create Users Proxy",
+    "Invite Users",
+    "Request site backups"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "Per endpoint: /api/rest/v1/oauth/token 300 per minute; /api/rest/v1/management 5 per second; /api/rest/v4/data 5 per second; /api/rest/v4/schema 5 per second; /api/v1/rest/publication 1000 per second. Exceeding returns HTTP 429.",
+   "limitations": "Rate limits are per endpoint (e.g., 5 req/sec on Data, Schema, User Management; 300/min on token). Publications used for change polling rather than push webhooks. Exact coverage per resource not fully enumerated in research. Relationship between the Profile 'API Key' and the client ID/secret used for OAuth is not confirmed."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://api.docs.dealcloud.com/mcp",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "DealCloud developer docs are for Intapp DealCloud",
+    "url": "https://api.docs.dealcloud.com",
+    "quote": "Dealcloud Developer Documentation - DealCloud API Docs",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary",
+    "value": "OAuth2 Client Credentials flow issues bearer token",
+    "url": "https://api.docs.dealcloud.com/docs/token",
+    "quote": "DealCloud uses the OAuth2 Client Credentials flow to generate a bearer token.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_expiry",
+    "value": "900 seconds (15 minutes)",
+    "url": "https://api.docs.dealcloud.com/docs/token",
+    "quote": "Tokens expire after 900 seconds (15 minutes) and must be refreshed by repeating the flow.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.header",
+    "value": "Authorization: Bearer {token}",
+    "url": "https://api.docs.dealcloud.com/docs/token",
+    "quote": "Authorization: Bearer {{token}}",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "credentials.how_to_get",
+    "value": "API key enabled from user Profile",
+    "url": "https://api.docs.dealcloud.com/docs/apikeys",
+    "quote": "Once user permissions are set, click the User icon at the top-right of your DealCloud screen and select Profile.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.admin_gate",
+    "value": "Admin must grant API capability to user group",
+    "url": "https://api.docs.dealcloud.com/docs/apikeys",
+    "quote": "To enable API access, ensure the intended user is assigned to a user group with the appropriate permissions.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Per-endpoint limits; HTTP 429 on exceed",
+    "url": "https://api.docs.dealcloud.com/docs/limits",
+    "quote": "When a rate limit is exceeded, an HTTP 429 error will be triggered",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits.values",
+    "value": "Data/Schema/Management 5 per second; token 300 per minute",
+    "url": "https://api.docs.dealcloud.com/docs/limits",
+    "quote": "Limits are applied on an endpoint basis.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Python and C# SDKs documented",
+    "url": "https://api.docs.dealcloud.com/sdk/csharp/authentication",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.official",
+    "value": "DealCloud MCP Server is vendor-published and hosted",
+    "url": "https://api.docs.dealcloud.com/mcp",
+    "quote": "The DealCloud MCP Server helps teams turn their DealCloud data into faster, higher-quality outcomes.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.default_hosted",
+    "value": "Default MCP server out-of-the-box, no configuration",
+    "url": "https://api.docs.dealcloud.com/mcp/getting-started",
+    "quote": "DealCloud provides a default MCP Server out-of-the-box without any configuration required.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.write_tools",
+    "value": "Write tools exist; opt-in via 'Enable Write Tools' toggle",
+    "url": "https://api.docs.dealcloud.com/mcp/getting-started",
+    "quote": "Enable Write Tools",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.license",
+    "value": "DealCloud with Celeste license required for MCP",
+    "url": "https://api.docs.dealcloud.com/mcp/getting-started",
+    "quote": "DealCloud with Celeste license",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.write_capability",
+    "value": "Assistants can query, create and update DealCloud records",
+    "url": "https://www.intapp.com/mcp-documentation/",
+    "quote": "Query, create, and update records in your DealCloud CRM",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is the 'API Key' from the user Profile the same credential as the OAuth client ID/secret, or are these separate? The apikeys page mentions only a key; the token page uses client credentials; the client ID/secret wording came only from a third-party search snippet.",
+   "Does a trial, sandbox, or non-production site exist for developers? Not established.",
+   "Is a paid DealCloud license required for REST API access (not just MCP with Celeste)? Not established.",
+   "Does DealCloud offer push webhooks? Only Publications (Topics, Poll, Acknowledge) polling was found.",
+   "Community MCP servers for DealCloud: searches surfaced only unrelated repos and aggregators (Pipedream, Unified.to, RoboMQ, StackSync). None verified as a community MCP server for DealCloud.",
+   "Partner or sales requirement for the Intapp developer program or for API access: not checked."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "high",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Workspace admin approval",
+  "rationale": [
+   "A workspace admin must approve/install or issue credentials."
+  ]
+ },
+ "evidence_support_rate": 0.929,
+ "flags": [],
+ "error": null
+}

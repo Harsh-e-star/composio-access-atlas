@@ -1,0 +1,74 @@
+{
+ "id": 84,
+ "name": "Paygent Connect",
+ "category": "Finance and Fintech",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:36:57Z",
+ "duration_s": 71.2,
+ "cost_usd": 0.0924,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.paygent.co.jp/payment_service/connect/",
+   "developer_portal": null,
+   "description": "No product named 'Paygent Connect' found. Closest match is PAYGENT (ペイジェント), a Japanese payment agency (決済代行) run by Paygent Co., Ltd. Its official page on integration (URL path /payment_service/connect/) describes integration methods, not a product called 'Paygent Connect'. The 'NMI-powered' hint is not supported: no source links Paygent to NMI.",
+   "identity_confirmed": "no",
+   "identity_notes": "Searches for 'Paygent Connect' returned no vendor page with that name. Official Paygent (Japan) page is titled 決済システム導入・運用方法 and its URL slug is 'connect'. Other 'Paygent' results are unrelated AI-agent payment products (paygent.to, paygent.tech, withpaygent.com, gopaygent.com, paygentic). No NMI connection found."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [],
+  "open_questions": []
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "None until interface confirmed",
+  "main_blocker": "Product identity could not be confirmed.",
+  "rationale": [
+   "Product identity could not be confirmed."
+  ]
+ },
+ "evidence_support_rate": null,
+ "flags": [],
+ "error": null
+}

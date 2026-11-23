@@ -1,0 +1,173 @@
+{
+ "id": 49,
+ "name": "Amazon Selling Partner",
+ "category": "Ecommerce",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:33:02Z",
+ "duration_s": 69.6,
+ "cost_usd": 0.0574,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://sell.amazon.com/developers",
+   "developer_portal": "https://developer-docs.amazon.com/sp-api",
+   "description": "Amazon Selling Partner API (SP-API): Amazon's REST API for sellers and vendors to manage Amazon marketplace data and operations, documented at developer-docs.amazon.com/sp-api.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Search results from developer-docs.amazon.com and sell.amazon.com both describe the Selling Partner API as Amazon's seller/vendor API. Direct fetches of developer-docs.amazon.com/sp-api returned a 301 to a malformed host (developer-docs.amazon/, no TLD), which I did not follow, so identity rests on search-result excerpts and the sell.amazon.com developer page."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization-code OAuth 2.0 flow built on Login with Amazon (LWA). The selling partner grants consent via the Appstore or an Authorize button on the developer's website; the app exchanges the authorization code for a refresh token.",
+   "token_refresh": "Refresh token is exchanged at the LWA token endpoint (api.amazon.com/auth/o2/token) for an access token, which expires one hour after issue (per search-result excerpt of the authorization docs). Authorization code expires after five minutes.",
+   "scopes_notes": "Not established from fetched pages. Scope/role details were not retrieved."
+  },
+  "access": {
+   "tier": "paid_plan",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Developer profile is reviewed by Amazon; the decision to grant SP-API access is based on the developer profile information. Public apps listed in the Selling Partner Appstore require a complete security review. Sandbox registration does not need to wait for profile approval. Sources conflict on whether a Professional selling account is required: the sell.amazon.com page and the registration docs say yes; a FAQ says a Professional account is not needed for sandbox endpoints."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "Sandbox returns static mock responses for most APIs; a dynamic sandbox exists for select APIs (per search excerpt). Resource breadth was not verified from fetched vendor pages, so it is left Unknown."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/amzn/selling-partner-api-samples",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/jay-trivedi/amazon_sp_mcp",
+    "https://mcpservers.org/servers/kuudoai/amazon-selling-partner-mcp",
+    "https://glama.ai/mcp/servers/mattcoatsworth/AmazonSeller-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity: product description",
+    "value": "Amazon Selling Partner API is documented under developer-docs.amazon.com/sp-api and the Selling Partner API is Amazon's seller API",
+    "url": "https://sell.amazon.com/developers",
+    "quote": "Selling Partner API",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth: OAuth/LWA",
+    "value": "Authorization is an OAuth 2.0 flow built on Login with Amazon (LWA)",
+    "url": "https://developer-docs.amazon.com/sp-api/lang-US/docs/authorizing-selling-partner-api-applications",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "auth: token expiry",
+    "value": "LWA access token expires one hour after issue; refresh token used at api.amazon.com/auth/o2/token",
+    "url": "https://developer-docs.amazon.com/sp-api/lang-US/docs/authorizing-selling-partner-api-applications",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "access: developer profile review",
+    "value": "Amazon decides whether to grant SP-API access based on the developer profile information",
+    "url": "https://developer-docs.amazon.com/sp-api/lang-US/docs/onboarding-step-3-create-a-developer-profile",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "access: sandbox without waiting",
+    "value": "Sandbox application can be registered while the developer profile is under review",
+    "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-step-1-prepare-for-registration",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "access: Professional account conflict",
+    "value": "Sources conflict on whether a Professional selling account is needed for the developer profile vs. sandbox",
+    "url": "https://developer-docs.amazon.com/sp-api/docs/general-faq",
+    "quote": "No, you don't need a Professional Selling Account to develop or integrate with Sandbox endpoints.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "webhooks: notifications",
+    "value": "Notifications API delivers to SQS or EventBridge destinations rather than HTTP webhooks",
+    "url": "https://developer-docs.amazon.com/sp-api/docs/set-up-notifications-with-amazon-sqs",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp: official repo",
+    "value": "amzn/selling-partner-api-samples contains a Local MCP for SP-API developer tools and a Data Kiosk MCP server",
+    "url": "https://github.com/amzn/selling-partner-api-samples",
+    "quote": "This repository contains sample code in various programming languages for use cases supported by the Amazon Selling Partner API (SP-API).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp: official caveat",
+    "value": "Sample solutions are not supported products in their own right",
+    "url": "https://github.com/amzn/selling-partner-api-samples",
+    "quote": "These sample solutions are not supported products in their own right, but educational examples",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp: community servers",
+    "value": "Community MCP servers exist, e.g. jay-trivedi/amazon_sp_mcp and kuudoai's hosted Amazon Selling Partner MCP",
+    "url": "https://github.com/jay-trivedi/amazon_sp_mcp",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Exact resource breadth (orders, catalog, listings, inventory, reports, feeds, finances, etc.) was not verified from vendor pages; breadth left Unknown.",
+   "Whether a Professional selling account is required to create the developer profile is contradictory across Amazon sources; tier set to paid_plan provisionally.",
+   "Official SDKs (e.g., amzn GitHub SDK repos) were not verified; sdks left unknown.",
+   "Rate limits per endpoint were not retrieved.",
+   "developer-docs.amazon.com pages 301-redirect to developer-docs.amazon/ (no TLD) in the fetch tool; this redirect was not followed, so most vendor page quotes are unverified.",
+   "Whether the Data Kiosk MCP server in amzn/selling-partner-api-samples accesses live seller data was not established.",
+   "Scopes/roles for private vs public apps were not established.",
+   "Whether the community repos are maintained was not checked."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "conditional",
+  "production_readiness": "review_required",
+  "security_risk": "elevated",
+  "commercial_dependency": "yes",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Paid plan required",
+  "rationale": [
+   "API needs a paid plan.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 0.3,
+ "flags": [],
+ "error": null
+}

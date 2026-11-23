@@ -1,0 +1,226 @@
+{
+ "id": 90,
+ "name": "PitchBook",
+ "category": "Finance and Fintech",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:37:20Z",
+ "duration_s": 65.3,
+ "cost_usd": 0.0395,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://pitchbook.com",
+   "developer_portal": "https://pitchbook.com/help/pitchbook-api",
+   "description": "PitchBook: private capital markets data platform offering companies, deals, investors, funds, LPs, and service-provider data, plus an enterprise REST data API and a hosted MCP connector.",
+   "identity_confirmed": "yes",
+   "identity_notes": "The sources describe PitchBook's own API and Claude MCP connector. The official help page and Direct Access page returned HTTP 403, so official-page text was not read directly."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "OAuth applies to the hosted MCP connection (premium.mcp.pitchbook.com) per a search summary, not verified on a fetched page. The REST API uses a static key, not OAuth.",
+   "token_refresh": "Unknown for the REST API (static key). MCP token refresh not established.",
+   "scopes_notes": "Unknown."
+  },
+  "access": {
+   "tier": "partner_or_sales",
+   "free_credentials": "no",
+   "trial_available": "unknown",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "yes",
+   "sandbox_available": "yes",
+   "production_restrictions": "API is a separate offering needing a standalone direct data contract on top of a platform subscription; rate limits are set per contract; not all endpoints are included in every subscription."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "Companies",
+    "Deals",
+    "People",
+    "Investors",
+    "Funds",
+    "Service Providers",
+    "Limited Partners",
+    "Patents",
+    "Credit news and research"
+   ],
+   "read_ops": [
+    "Search companies, deals, entities, and funds",
+    "Get company, deal, investor, fund, limited partner, person, and service provider profiles",
+    "Company deals, investors, financials, valuation estimates, similar companies",
+    "Deal cap table, participants, and multiples",
+    "Fund commitments, performance, portfolio holdings",
+    "Credit news and research search",
+    "Bulk read endpoints for companies, funds, investors, people, and others",
+    "Account limits, credits history, usage report"
+   ],
+   "write_ops": [],
+   "webhooks": "no",
+   "sdks": "no",
+   "rate_limits": "Not published; set per contract. A 429 response reads '{LIMIT_TYPE} rate limit exceeded.'",
+   "limitations": "Read-only data API as far as sources show; no write operations found. Access is contract-gated, documentation is behind platform login, rate limits are not published, and webhooks are not supported (scheduled data feed delivery instead). Full Composio tool list was truncated, and the PitchBook help and Direct Access pages returned HTTP 403 so were not read directly."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://premium.mcp.pitchbook.com/mcp",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "PitchBook is the private-market data platform (pitchbook.com) whose API is documented in the PitchBook API help and Postman docs.",
+    "url": "https://documenter.gw.postman.com/view/metadata/TzCV1iRc",
+    "quote": "The API is a separate offering from the PitchBook platform that requires a standalone contract agreement.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.standalone_contract",
+    "value": "API is a separate offering requiring a standalone contract agreement",
+    "url": "https://documenter.gw.postman.com/view/metadata/TzCV1iRc",
+    "quote": "The API is a separate offering from the PitchBook platform that requires a standalone contract agreement.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.api_credits",
+    "value": "API key plus purchased API credits required",
+    "url": "https://documenter.gw.postman.com/view/metadata/TzCV1iRc",
+    "quote": "In addition to an API key, please make sure you have purchased API credits.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sandbox",
+    "value": "Sandbox key obtained via account manager",
+    "url": "https://documenter.gw.postman.com/view/metadata/TzCV1iRc",
+    "quote": "Please reach out to your account manager to request a sandbox key.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary",
+    "value": "Static API key sent as PB-Token header",
+    "url": "https://documenter.gw.postman.com/view/metadata/TzCV1iRc",
+    "quote": "include a header named \"Authorization\" with the value of \"PB-Token {API_KEY}\" on each request.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.base_url",
+    "value": "https://api.pitchbook.com/{route}, same for production and sandbox",
+    "url": "https://documenter.gw.postman.com/view/metadata/TzCV1iRc",
+    "quote": "Base URL (production and sandbox)\" as \"https://api.pitchbook.com\"",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Rate limits not published; set per contract",
+    "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+    "quote": "Rate limits are not published.\" \"They are set per contract.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "No SDKs published (third-party report)",
+    "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+    "quote": "SDKs: \"None published\"",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks not supported; scheduled data feed delivery available",
+    "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+    "quote": "Not supported. Scheduled data feed delivery is available",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.pricing",
+    "value": "API and data feed are quote-only add-ons requiring platform subscription and direct data contract",
+    "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+    "quote": "PitchBook's API and data feed are quote-only add-ons.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.api_key_or_token",
+    "value": "API key or token-based; specifics shared with contracted clients",
+    "url": "https://pipeline.zoominfo.com/sales/pitchbook-api-review",
+    "quote": "API key or token-based. Specifics are shared with contracted clients",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "composio.auth_sandbox",
+    "value": "Composio toolkit lists API_KEY auth and sandbox keys for testing",
+    "url": "https://docs.composio.dev/toolkits/pitchbook.md",
+    "quote": "Return entities available for testing with a PitchBook sandbox API key.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official_endpoint",
+    "value": "Official PitchBook Premium MCP endpoint https://premium.mcp.pitchbook.com/mcp listed on Claude connector marketplace",
+    "url": "https://claude.com/connectors/pitchbook",
+    "quote": "PitchBook clients can seamlessly search and analyze firms, deals, funds, and key players",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.tools",
+    "value": "Hosted MCP lists about 24 tools (search, profiles, deals, investors, funds, reports, valuation, etc.)",
+    "url": "https://claude.com/connectors/pitchbook",
+    "quote": "pitchbook_get_company_deals",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.oauth",
+    "value": "MCP connection uses OAuth browser sign-in (search summary only)",
+    "url": "https://mcpservers.org/remote-mcp-servers/pitchbook",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "The official PitchBook help page (pitchbook.com/help/pitchbook-api) and Direct Access API page returned HTTP 403, so their wording was not checked directly.",
+   "Does the hosted MCP require an active PitchBook Premium subscription? The connector page only says 'Sign-in: Required'.",
+   "Is the MCP OAuth flow confirmed? Only a search summary supports it.",
+   "Are there any community MCP servers on GitHub for PitchBook? Directory listings were found, but no repository was checked.",
+   "Is there a trial or free sandbox without a sales contact? Sources say sandbox keys come from the account manager.",
+   "What are the full REST endpoint list and exact rate limit values? Documentation is behind platform login."
+  ]
+ },
+ "assessment": {
+  "verdict": "GATED",
+  "group": "OUTREACH REQUIRED",
+  "technical_feasibility": "low",
+  "credential_accessibility": "gated",
+  "production_readiness": "restricted",
+  "security_risk": "elevated",
+  "commercial_dependency": "yes",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Partnership / vendor approval / sales contact",
+  "rationale": [
+   "Credentials require partnership, vendor approval or sales."
+  ]
+ },
+ "evidence_support_rate": 0.8,
+ "flags": [],
+ "error": null
+}

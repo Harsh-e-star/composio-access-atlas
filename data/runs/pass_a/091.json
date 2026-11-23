@@ -1,0 +1,218 @@
+{
+ "id": 91,
+ "name": "NotebookLM",
+ "category": "AI, Research and Media-native",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:26:55Z",
+ "duration_s": 15.2,
+ "cost_usd": 0.0754,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://cloud.google.com/ai/gemini",
+   "title": "Google AI Studio vs. Gemini platform vs. Gemini | Google Cloud",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://cloud.google.com",
+   "title": "AI and Cloud Computing Services | Google Cloud",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.google.com",
+   "title": "Google for Developers | Build with Gemini",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developers.google.com/",
+   "title": "Google for Developers | Build with Gemini",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://cloud.google.com/developers",
+   "title": "Developer Center | Google Cloud",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://cloud.google.com/api",
+   "title": "<!-- \"> '> --><title>",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://accounts.google.com/v3/signin/identifier?continue=https://aistudio.google.com/apikey&followup=https://aistudio.google.com/apikey&ltmpl=aistudio&passive=1209600&flowName=WebLiteSignIn&flowEntry=ServiceLogin&dsh=S-1558784204:1795443948945240",
+   "title": "Sign in - Google Accounts",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://codelabs.developers.google.com/getting-started-google-antigravity",
+   "title": "Getting Started with Google Antigravity  |  Google Codelabs",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform",
+   "title": "Gemini Enterprise Agent Platform  |  Google Cloud Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://cloud.google.com/pricing",
+   "title": "Pricing Overview | Google Cloud",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://cloud.google.com/products/calculator",
+   "title": "Google Cloud Pricing Calculator",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://cloud.google.com/products/compute/pricing",
+   "title": "VM instance pricing | Google Cloud",
+   "rendered": false
+  },
+  {
+   "id": "S13",
+   "url": "https://developers.google.com/program",
+   "title": "Google Developer Program  |  Google for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S14",
+   "url": "https://developers.google.com/community",
+   "title": "Community and Events | Google for Developers",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/PleasePrompto/notebooklm-mcp",
+   "title": "PleasePrompto/notebooklm-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/SourceWeft/SourceWeft",
+   "title": "SourceWeft/SourceWeft",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/claude-world/notebooklm-skill",
+   "title": "claude-world/notebooklm-skill",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/roomi-fields/gemini-notebook-mcp",
+   "title": "roomi-fields/gemini-notebook-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/capitalparser/notebooklm-wiki-pipeline",
+   "title": "capitalparser/notebooklm-wiki-pipeline",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Pantheon-Security/notebooklm-mcp-secure",
+   "title": "Pantheon-Security/notebooklm-mcp-secure",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/khengyun/notebooklm-mcp",
+   "title": "khengyun/notebooklm-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/WenyuChiou/research-hub",
+   "title": "WenyuChiou/research-hub",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": null,
+   "developer_portal": null,
+   "description": "",
+   "identity_confirmed": "unknown",
+   "identity_notes": "None of the provided sources mention NotebookLM. They cover the Gemini Developer API, Google AI Studio, Google Cloud, and Gemini Enterprise Agent Platform, which are different products. Nothing here establishes that NotebookLM has a public API."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/PleasePrompto/notebooklm-mcp",
+    "https://github.com/roomi-fields/gemini-notebook-mcp",
+    "https://github.com/claude-world/notebooklm-skill",
+    "https://github.com/Pantheon-Security/notebooklm-mcp-secure",
+    "https://github.com/khengyun/notebooklm-mcp"
+   ]
+  },
+  "claims": [],
+  "open_questions": [
+   "Does NotebookLM have an official public API? The sources never mention it, and they only cover the Gemini API and Gemini Enterprise Agent Platform.",
+   "Which auth methods does any NotebookLM API use?",
+   "What access tier would a developer face to get test credentials?",
+   "Does the vendor publish an official NotebookLM MCP server? The GitHub results all look like community projects, and several appear to automate the web UI."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "None until interface confirmed",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": null,
+ "flags": [],
+ "error": null
+}

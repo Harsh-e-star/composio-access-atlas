@@ -1,0 +1,215 @@
+{
+ "id": 19,
+ "name": "Gorgias",
+ "category": "Support and Helpdesk",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:22:52Z",
+ "duration_s": 100.8,
+ "cost_usd": 0.0581,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.gorgias.com",
+   "developer_portal": "https://developers.gorgias.com/reference",
+   "description": "Gorgias is a customer-support helpdesk product (Helpdesk plans, tickets, customers, macros, views) with a public REST API documented at developers.gorgias.com and docs.gorgias.com.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Vendor developer and help-center docs describe the Gorgias helpdesk product. gorgias.com homepage was not fetched directly."
+  },
+  "auth": {
+   "methods": [
+    "Basic",
+    "OAuth2"
+   ],
+   "primary": "Basic",
+   "oauth_flows": "OAuth2 bearer access tokens for approved public apps. Specific grant type not confirmed from fetched pages.",
+   "token_refresh": "unknown",
+   "scopes_notes": "OAuth2 Scopes page exists: OAuth2 scopes allow to limit your app's access to Gorgias user's account data. Full scope list not fetched."
+  },
+  "access": {
+   "tier": "admin_approval",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "yes",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Public OAuth2 apps are reviewed by Gorgias's tech partnership team before listing in the in-product App Store and public App Store page. API keys are for private apps only. API key docs say 'Available on all' Helpdesk plans; whether a paid tier is required is not confirmed."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Account",
+    "Customers",
+    "Custom Fields",
+    "Events",
+    "Files",
+    "Integrations",
+    "Jobs",
+    "Macros",
+    "Metric Cards",
+    "Rules",
+    "Satisfaction Surveys",
+    "Search",
+    "Statistics",
+    "Tags",
+    "Teams",
+    "Tickets",
+    "Ticket Messages",
+    "Users",
+    "Views",
+    "Voice Calls",
+    "Voice Call Recordings",
+    "Voice Call Events",
+    "Widgets",
+    "Reporting Statistics"
+   ],
+   "read_ops": [
+    "List and retrieve for most resources",
+    "Events list (paginated, newest first)",
+    "Statistics retrieve and CSV download",
+    "Voice Calls list/retrieve",
+    "Search"
+   ],
+   "write_ops": [
+    "Create, update, delete for most resources (Tickets, Customers, Macros, Rules, Tags, Teams, Users, Views, Widgets)",
+    "Create message on Ticket Messages",
+    "File upload"
+   ],
+   "webhooks": "yes",
+   "sdks": "no",
+   "rate_limits": "unknown",
+   "limitations": "Rate limits not stated on fetched pages (a Rate Limits page exists but was not retrieved). Webhooks not in the fetched API reference; HTTP integrations are a separate feature. No official SDK found."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-gorgias-6310546",
+   "community": "yes",
+   "community_urls": [
+    "https://mcp.so/servers/gorgias-mcp-server",
+    "https://glama.ai/mcp/servers/afybrg3fbv"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Gorgias is the customer-support helpdesk product; developer docs cover its REST API",
+    "url": "https://developers.gorgias.com/reference",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "auth.methods",
+    "value": "API key used as HTTP Basic (username = account email, password = API key)",
+    "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+    "quote": "Gorgias uses HTTP Basic Authentication with three pieces of information",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth2",
+    "value": "OAuth2 is required for public apps; API keys are private-app only",
+    "url": "https://developers.gorgias.com/docs/access-tokens-api-keys",
+    "quote": "If you plan to build a public app you have to use OAuth2.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.key_issuance",
+    "value": "Account owner and admins create API keys (admin-gated)",
+    "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+    "quote": "The account owner and admins can access the API credentials and create API keys",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.plan",
+    "value": "API credentials available on all Helpdesk plans",
+    "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+    "quote": "Available on all",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.app_review",
+    "value": "Public apps reviewed by tech partnership team before listing",
+    "url": "https://developers.gorgias.com/docs/5-submit-app-for-review",
+    "quote": "Our tech partnership team will review your app to make sure it works properly and is aligned with our expectations.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.resources",
+    "value": "24 REST resource groups incl. Tickets, Ticket Messages, Customers, Macros, Rules, Views",
+    "url": "https://developers.gorgias.com/reference",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Rate limits not stated on the reference index; separate Rate Limits page exists",
+    "url": "https://developers.gorgias.com/reference",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "webhooks",
+    "value": "Gorgias calls webhooks 'HTTP integrations' configured in Settings; sends to custom URLs with templated variables",
+    "url": "https://docs.gorgias.com/http-integrations-81822",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Gorgias help center documents its own MCP server at mcp.gorgias.com/mcp, connected via browser authorization",
+    "url": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-gorgias-6310546",
+    "quote": "the connection URL is the same: https://mcp.gorgias.com/mcp",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community Gorgias MCP servers exist (mattcoatsworth Node.js repo; NoBanks/gorgias-mcp Python placeholder)",
+    "url": "https://mcp.so/servers/gorgias-mcp-server",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Exact OAuth2 grant type and scope list (OAuth2 Scopes page not fetched).",
+   "Whether a free/trial Helpdesk account is available to developers and whether a paid plan is required for API access.",
+   "Rate limit values (Rate Limits page not retrieved).",
+   "Whether the official MCP server is still in open beta (search snippet claim, unverified on official page).",
+   "Community MCP GitHub URLs and maintenance status; NoBanks/gorgias-mcp described as a placeholder by one source.",
+   "Full HTTP integrations (webhook) event list and retry behavior; third-party blogs cite a 5s timeout and 3 retries, unverified.",
+   "Whether a sandbox or test account is available for developers."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "high",
+  "credential_accessibility": "conditional",
+  "production_readiness": "review_required",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Workspace admin approval",
+  "rationale": [
+   "A workspace admin must approve/install or issue credentials.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 0.545,
+ "flags": [],
+ "error": null
+}

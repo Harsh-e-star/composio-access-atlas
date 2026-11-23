@@ -1,0 +1,183 @@
+{
+ "id": 90,
+ "name": "PitchBook",
+ "category": "Finance and Fintech",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:26:46Z",
+ "duration_s": 34.3,
+ "cost_usd": 0.0329,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://pitchbook.com",
+   "title": "Private Market Data, Research & Tools - PitchBook",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://pitchbook.com/pricing",
+   "title": "PitchBook Pricing: Plans, Cost, and Subscriptions - PitchBook",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://pitchbook.com/news/syndicated-loans",
+   "title": "Syndicated Loan Markets & Lending Data - PitchBook",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Avierovich/openpitch",
+   "title": "Avierovich/openpitch",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/dontmesswithme-cpu/IBsuite",
+   "title": "dontmesswithme-cpu/IBsuite",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/JyothikKOPPULA/Multi-agent-pitchbook-generator",
+   "title": "JyothikKOPPULA/Multi-agent-pitchbook-generator",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/johnisanerd/Apify-PitchBook-Company-API",
+   "title": "johnisanerd/Apify-PitchBook-Company-API",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/seantei/milmed-connect",
+   "title": "seantei/milmed-connect",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://pitchbook.com",
+   "developer_portal": null,
+   "description": "PitchBook provides private capital market data, research and tools (companies, deals, investors, funds) for investment professionals.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe the PitchBook platform; no developer docs or API pages were provided."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "partner_or_sales",
+   "free_credentials": "no",
+   "trial_available": "unknown",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "yes",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Pricing is by request via a sales form; Direct Data and CRM Integration are premium offerings. A free trial is only offered at PitchBook's discretion."
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [
+    "companies",
+    "deals",
+    "investors",
+    "funds"
+   ],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "Sources do not document a public API; Direct Data is only mentioned as a premium offering."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/johnisanerd/Apify-PitchBook-Company-API"
+   ]
+  },
+  "claims": [
+   {
+    "field": "access.tier",
+    "value": "partner_or_sales",
+    "url": "https://pitchbook.com/pricing",
+    "quote": "Pricing options vary depending on how many seats you need and your firm type. Another primary consideration is whether you’re interested in additional premium offerings, such as Direct Data or CRM Integration.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial",
+    "value": "Free trial only at PitchBook's discretion",
+    "url": "https://pitchbook.com/pricing",
+    "quote": "Fill out a form and we’ll see if a free trial might be right for you.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Unknown",
+    "url": "https://pitchbook.com/pricing",
+    "quote": "Another primary consideration is whether you’re interested in additional premium offerings, such as Direct Data or CRM Integration.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "empty - no public API documented",
+    "url": "https://pitchbook.com/pricing",
+    "quote": "Another primary consideration is whether you’re interested in additional premium offerings, such as Direct Data or CRM Integration.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Unknown - no auth documentation in sources",
+    "url": "https://pitchbook.com/pricing",
+    "quote": "Pricing options vary depending on how many seats you need and your firm type.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "unknown - GitHub results are all from individual users, not the vendor",
+    "url": "https://pitchbook.com",
+    "quote": "If it’s out there, it’s in PitchBook.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Does PitchBook have a public developer portal or API docs (Direct Data)?",
+   "What auth methods does the PitchBook API use?",
+   "Is there an official PitchBook MCP server?"
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "gated",
+  "production_readiness": "restricted",
+  "security_risk": "elevated",
+  "commercial_dependency": "yes",
+  "approach": "None until interface confirmed",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

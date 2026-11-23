@@ -1,0 +1,206 @@
+{
+ "id": 28,
+ "name": "WhatsApp Business",
+ "category": "Communications and Messaging",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:25:14Z",
+ "duration_s": 65.3,
+ "cost_usd": 0.0373,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://developers.facebook.com/docs/whatsapp",
+   "developer_portal": "https://developers.facebook.com/docs/whatsapp",
+   "description": "WhatsApp Business Platform (Cloud API) by Meta, documented on Meta for Developers. Cloud API is the hosted Graph API interface for WhatsApp Business messaging.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Fetched Meta's WhatsApp Business Platform docs and Cloud API overview. Assignment hint URL resolves to the right product. 'WhatsApp Business' is the consumer-facing app; the developer product is the WhatsApp Business Platform / Cloud API."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Facebook Login for Business sign-in is used by the official MCP server; the docs' main developer path uses system user tokens.",
+   "token_refresh": "User access tokens expire after 24 hours per search summary; system user tokens are long-lived (up to 60 days or can be made permanent per search summary). Temporary dashboard token expires quickly.",
+   "scopes_notes": "System user tokens need whatsapp_business_messaging, whatsapp_business_management, and business_management permissions."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Test resources are auto-created and need no payment method to send template messages. Production use needs a Meta business portfolio; solution partners need App Review and Advanced access (per search summary, not verified on page). Business verification affects throughput. Production messages are billed per message; pricing pages exist but were not read in detail."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "messages",
+    "message templates",
+    "business phone numbers",
+    "calling",
+    "groups",
+    "media"
+   ],
+   "read_ops": [],
+   "write_ops": [
+    "send text, rich media and interactive messages",
+    "create or edit message templates (per MCP blog)",
+    "make and receive calls",
+    "create, manage and message group conversations"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "80 messages/second per business phone number by default; 200 requests/hour per app per Messaging account for certain endpoints by default.",
+   "limitations": "Read operations and full resource list not verified on fetched pages. Official Python SDK not found; PyWa is third-party."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developers.facebook.com/documentation/mcp",
+   "community": "unknown",
+   "community_urls": [
+    "https://mcpservers.org/servers/whatsapp-business-tools-mcp",
+    "https://glama.ai/mcp/servers/jpzlve3hwj"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "WhatsApp Business Platform Cloud API is the programmatic messaging interface",
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
+    "quote": "The WhatsApp Business Platform Cloud API enables you to programmatically message and call on WhatsApp.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.test_resources",
+    "value": "Test WhatsApp account, Messaging account and test number are auto-created",
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
+    "quote": "a test WhatsApp account, test Messaging account, and test business phone number are automatically created for you.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.app_setup",
+    "value": "Developer creates a Meta app with the WhatsApp use case in the Meta App Dashboard",
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+    "quote": "Open the Meta App Dashboard to create a new Meta app with the WhatsApp use case.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.temporary_token",
+    "value": "Dashboard temporary token is not for development",
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+    "quote": "expires quickly and is not suitable for development purposes",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.system_user_token",
+    "value": "Permanent token generated via Business Settings system user",
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+    "quote": "Copy the token and store it in a secure place to be used in the later steps.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "Graph API over HTTP",
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
+    "quote": "The WhatsApp Business Platform is built on Graph API and uses HTTP protocol.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.write_capabilities",
+    "value": "Send text, rich media, interactive messages; calling; groups; templates",
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
+    "quote": "Send text messages, rich media, and interactive messages",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "80 messages/second default per business phone number",
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
+    "quote": "Business phone numbers can send up to 80 messages per second by default, with capacity upgrades available.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks",
+    "value": "Webhooks deliver inbound messages and outbound status updates; mTLS supported",
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/webhooks",
+    "quote": "The WhatsApp Business Platform uses webhooks to inform you of incoming messages, the status of outgoing messages",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks",
+    "value": "Official Node.js SDK on npm; Python wrappers not Meta-maintained",
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
+    "quote": "Some SDKs, like PyWa (Python wrapper), are available but are not maintained or endorsed by Meta.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Official Meta remote MCP server: WhatsApp Business Tools MCP at mcp.facebook.com/whatsapp_business_tools",
+    "url": "https://developers.facebook.com/documentation/mcp",
+    "quote": "Meta runs official remote Model Context Protocol (MCP) servers that bring Facebook, Instagram, WhatsApp, and Meta Ads capabilities to your agentic workflows.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.announcement",
+    "value": "WhatsApp Business Tools MCP announced Sept 15, 2026; sign-in via Facebook Login for Business",
+    "url": "https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/",
+    "quote": "You sign in with Facebook Login for Business and grant a specific set of scopes",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.app_review",
+    "value": "Solution partners need App Review and Advanced access",
+    "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+    "quote": "Without Advanced access, API calls return error code 200 when they touch WABAs the business doesn't own.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Community MCP URLs are search-result leads only; not fetched, so their ownership and status are unknown.",
+   "Full read-operation list and webhook signature method (X-Hub-Signature-256) not confirmed.",
+   "Business verification and production App Review requirements not confirmed from primary pages.",
+   "Trial availability unknown.",
+   "Whether the official MCP server requires advanced access or specific partner status is unknown.",
+   "Official Node SDK package ownership on npm was not fetched; only the search-result title was seen."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.846,
+ "flags": [],
+ "error": null
+}

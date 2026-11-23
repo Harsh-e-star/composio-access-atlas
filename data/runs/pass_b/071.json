@@ -1,0 +1,214 @@
+{
+ "id": 71,
+ "name": "Notion",
+ "category": "Productivity and Project Management",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:35:24Z",
+ "duration_s": 60.6,
+ "cost_usd": 0.0272,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.notion.com/",
+   "developer_portal": "https://developers.notion.com/",
+   "description": "Notion is an all-in-one workspace (notes, docs, databases, project management). Its public REST API is documented at developers.notion.com, and Notion publishes an official hosted MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "developers.notion.com documents the Notion public API (api.notion.com) for pages, databases, comments, users, and search; the product is the Notion workspace app from notion.com. Confirmed as the Notion productivity app named in the assignment."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "OAuth 2.0 authorization for public and scoped integrations; exact grant types beyond the authorization flow not verified.",
+   "token_refresh": "unknown",
+   "scopes_notes": "Internal connections use static tokens; OAuth integrations choose installation scope (for example 'any workspace for public integrations'). Detailed capability scopes not verified."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Internal connection creation requires the workspace owner role; Business/Enterprise admins may restrict PAT creation. Public OAuth integrations: source says marketplace submission/review is not required to begin authorization; listing rules not verified."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Pages",
+    "Databases",
+    "Views",
+    "Data sources",
+    "File uploads",
+    "Comments",
+    "Content queries (search)",
+    "Users"
+   ],
+   "read_ops": [
+    "Retrieve pages",
+    "Query databases/data sources",
+    "Search content",
+    "List users",
+    "Retrieve comments"
+   ],
+   "write_ops": [
+    "Create page (POST /v1/pages)",
+    "Create comments",
+    "Upload files"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Per connection, a fixed budget per 60-second window: 180 requests/min (about 3/s) on all other plans; 600 requests/min (about 10/s) on Business and Enterprise.",
+   "limitations": "Requires Authorization Bearer token and Notion-Version header. Webhook event list includes page.content_updated (aggregated, may be delayed), comment.created (needs comment read capability), data_source.schema_updated; database.schema_updated is deprecated. Official SDK is JavaScript (makenotion/notion-sdk-js); no other official SDK language was confirmed. Write-op list is partial; only page creation and file uploads were directly verified."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+   "community": "unknown",
+   "community_urls": [
+    "https://github.com/makenotion/notion-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Notion public API at developers.notion.com for building tools that create pages, organize data, and share feedback",
+    "url": "https://developers.notion.com/",
+    "quote": "Build tools and automations that create pages, organize data, and share feedback in Notion.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols / base URL",
+    "value": "REST over HTTPS at https://api.notion.com",
+    "url": "https://developers.notion.com/reference/intro",
+    "quote": "Send requests over HTTPS to https://api.notion.com. To make your first request, follow the API quickstart.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary",
+    "value": "Bearer token (personal access token / internal connection token)",
+    "url": "https://developers.notion.com/guides/get-started/authorization",
+    "quote": "Internal connections use a static credential called an internal connection API token",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth 2.0 for public/scoped integrations",
+    "url": "https://developers.notion.com/guides/get-started/authorization",
+    "quote": "OAuth integrations follow the OAuth 2.0 protocol to authorize a connection to interact with a workspace.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier (internal token creation)",
+    "value": "Workspace owner required to create an internal connection",
+    "url": "https://developers.notion.com/guides/get-started/authorization",
+    "quote": "You are required to be a workspace owner to create a connection.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.provider_app_review",
+    "value": "Marketplace review not required to begin OAuth authorization",
+    "url": "https://developers.notion.com/guides/get-started/authorization",
+    "quote": "You can start authorization as soon as you configure the integration's client credentials and redirect URI.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions (PAT)",
+    "value": "Business/Enterprise workspaces may restrict PAT creation",
+    "url": "https://developers.notion.com/guides/get-started/quickstart",
+    "quote": "Business and Enterprise workspaces may restrict PAT creation, so an owner might need to enable it.",
+    "verified": false,
+    "verify_note": "source unreachable (http_404)"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks supported; subscriptions created in connection settings Webhooks tab",
+    "url": "https://developers.notion.com/reference/webhooks",
+    "quote": "Webhooks let your connection receive real-time updates from Notion.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Official JavaScript SDK makenotion/notion-sdk-js (@notionhq/client)",
+    "url": "https://developers.notion.com/reference/intro",
+    "quote": "Use the JavaScript SDK, curl, or any client that can send HTTPS requests.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "180 req/min (avg 3/s) for most plans; 600 req/min (avg 10/s) for Business and Enterprise",
+    "url": "https://developers.notion.com/reference/request-limits",
+    "quote": "180 requests per minute (an average of 3 per second)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Notion-maintained hosted MCP server at https://mcp.notion.com/mcp",
+    "url": "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+    "quote": "\"Notion MCP\" (`https://mcp.notion.com/mcp`) is our hosted, actively maintained server.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.auth",
+    "value": "Hosted MCP uses OAuth and MCP tokens",
+    "url": "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+    "quote": "It supports OAuth authorization and MCP tokens, and requires no infrastructure setup.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.open_source_repo_status",
+    "value": "makenotion/notion-mcp-server (MIT, owned by makenotion org) is no longer actively maintained; hosted server is recommended",
+    "url": "https://github.com/makenotion/notion-mcp-server",
+    "quote": "This repository is a separate, self-hosted MCP server implementation that is no longer actively maintained or supported.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Which plans (free, Plus, Business, Enterprise) include API access and whether a paid plan is needed for OAuth public integrations was not established.",
+   "Whether a trial or sandbox environment exists was not established.",
+   "OAuth token refresh behavior and grant types beyond the authorization code flow were not verified.",
+   "Full list of write operations (update page, update blocks, database writes, delete) was not verified; only page creation, comment creation, and file upload were directly seen.",
+   "Whether community-maintained third-party MCP servers (not in the makenotion org) exist with verified repos was not confirmed; directory listings such as mcpservers.org and Docker Hub were seen but not verified repositories.",
+   "Webhook signature verification and full event catalog were not fully confirmed.",
+   "Date for retiring the legacy SSE endpoint at https://mcp.notion.com/sse was not established.",
+   "Quotes were obtained through a summarizing fetch tool and may be paraphrased; verbatim accuracy should be re-checked before production use."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.923,
+ "flags": [],
+ "error": null
+}

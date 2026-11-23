@@ -1,0 +1,252 @@
+{
+ "id": 67,
+ "name": "Snowflake",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:22:55Z",
+ "duration_s": 61.4,
+ "cost_usd": 0.0691,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.snowflake.com/en/",
+   "title": "Snowflake Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.snowflake.com/en/user-guide-getting-started",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.snowflake.com/en/user-guide/tutorials/snowflake-in-20minutes",
+   "title": "Snowflake in 20 minutes | Snowflake Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.snowflake.com/en/developer",
+   "title": "Developer - Snowflake Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.snowflake.com/en/reference",
+   "title": "Reference | Snowflake Documentation",
+   "rendered": true
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.snowflake.com/en/developer-guide/native-apps/native-apps-about",
+   "title": "About the Snowflake Native App Framework | Snowflake Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.snowflake.com/en/developer-guide/snowpark/index",
+   "title": "Snowpark API | Snowflake Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.snowflake.com/en/developer-guide/extensibility",
+   "title": "Extending Snowflake with Functions and Procedures | Snowflake Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.snowflake.com/en/sql-reference-data-types",
+   "title": "SQL data types reference | Snowflake Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.snowflake.com/en/sql-reference-commands",
+   "title": "SQL command reference | Snowflake Documentation",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Snowflake-Labs/mcp",
+   "title": "Snowflake-Labs/mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/isaacwasserman/mcp-snowflake-server",
+   "title": "isaacwasserman/mcp-snowflake-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ralforion/orionbelt-analytics",
+   "title": "ralforion/orionbelt-analytics",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/datawiz168/mcp-snowflake-service",
+   "title": "datawiz168/mcp-snowflake-service",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/thorstenfoltz/octa",
+   "title": "thorstenfoltz/octa",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/giancarloerra/JanuScope",
+   "title": "giancarloerra/JanuScope",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Snowflake-Labs/MCP-HOL-BUILD-2025",
+   "title": "Snowflake-Labs/MCP-HOL-BUILD-2025",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/iblai/ontology",
+   "title": "iblai/ontology",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://docs.snowflake.com/en/",
+   "developer_portal": "https://docs.snowflake.com/en/developer",
+   "description": "Snowflake is a cloud data platform for data warehousing, data engineering, AI/ML and app development, with SQL, drivers, Snowpark and a SQL REST API.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs at docs.snowflake.com describe the Snowflake data platform."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Other"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "Service users (TYPE=SERVICE) must use key-pair authentication or OAuth; human users must enroll in MFA."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "A running virtual warehouse consumes credits; the 30-day trial provides free credits."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "databases",
+    "tables",
+    "views",
+    "users",
+    "stored procedures",
+    "warehouses"
+   ],
+   "read_ops": [
+    "submit SQL queries",
+    "check execution status",
+    "fetch results"
+   ],
+   "write_ops": [
+    "create and execute stored procedures",
+    "provision users",
+    "insert/update/delete/merge data via SQL"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Core interface is SQL; the SQL REST API submits statements via POST and fetches results via GET."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/Snowflake-Labs/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/isaacwasserman/mcp-snowflake-server",
+    "https://github.com/datawiz168/mcp-snowflake-service"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2, Other (key-pair)",
+    "url": "https://docs.snowflake.com/en/developer-guide/native-apps/native-apps-about",
+    "quote": "Users who have the TYPE property set to SERVICE must use key-pair authentication or OAuth .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "trial_self_serve",
+    "url": "https://docs.snowflake.com/en/user-guide/tutorials/snowflake-in-20minutes",
+    "quote": "If you are using a 30-day trial account , which provides free credits, you won’t incur any costs.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.snowflake.com/en/developer",
+    "quote": "Using the Snowflake RESTful SQL API, you can access and update data over HTTPS and REST.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.snowflake.com/en/developer",
+    "quote": "you can submit SQL statements, create and execute stored procedures, provision users, and so on.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://github.com/Snowflake-Labs/mcp",
+    "quote": "MCP Server for Snowflake including Cortex AI, object management, SQL orchestration, semantic view consumption, and more",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Exact OAuth flows and programmatic access tokens (PAT) not covered in sources.",
+   "API rate limits not documented in sources.",
+   "Whether Snowflake-Labs is vendor-owned org (likely) — ownership inferred from the org name."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

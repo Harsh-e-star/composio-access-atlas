@@ -1,0 +1,257 @@
+{
+ "id": 35,
+ "name": "Mailchimp",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:20:10Z",
+ "duration_s": 114.2,
+ "cost_usd": 0.0695,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://mailchimp.com/developer",
+   "title": "Mailchimp Developer | Mailchimp | Developer",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://mailchimp.com",
+   "title": "Email & SMS Marketing Platform | Mailchimp",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://mailchimp.com/developer/",
+   "title": "Mailchimp Developer | Mailchimp | Developer",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://mailchimp.com/developer/marketing/api/root/list",
+   "title": "List API root resources | Mailchimp | Developer",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://mailchimp.com/developer/transactional/api/allowlist/allowlists-add",
+   "title": "Add email to allowlist | Mailchimp | Developer",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://mailchimp.com/pricing/marketing/",
+   "title": "Mailchimp Pricing Plans | Get Started Today | Mailchimp",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://mailchimp.com/pricing/marketing/compare-plans/?gps_auto=true",
+   "title": "Mailchimp Marketing Plan Comparisons | Mailchimp",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://mailchimp.com/developer/marketing/api-concepts/api-structure",
+   "title": "API structure | Mailchimp | Developer",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://mailchimp.com/developer/transactional/guides/quick-start",
+   "title": "Transactional API Quick Start | Mailchimp | Developer",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://mailchimp.com/developer/integration-partner-program",
+   "title": "Mailchimp Integration Partner Program | Mailchimp | Developer",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/damientilman/mailchimp-mcp-server",
+   "title": "damientilman/mailchimp-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/AgentX-ai/mailchimp-mcp",
+   "title": "AgentX-ai/mailchimp-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/CosmoBlk/email-design",
+   "title": "CosmoBlk/email-design",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/LokiMCPUniverse/mailchimp-mcp-server",
+   "title": "LokiMCPUniverse/mailchimp-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/cyanheads/mailchimp-mcp-server",
+   "title": "cyanheads/mailchimp-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/bryangsmith/MailchimpMCP",
+   "title": "bryangsmith/MailchimpMCP",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/universal-mcp/mailchimp",
+   "title": "universal-mcp/mailchimp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Eyalm321/mailchimp-mcp",
+   "title": "Eyalm321/mailchimp-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://mailchimp.com",
+   "developer_portal": "https://mailchimp.com/developer",
+   "description": "Mailchimp is an email & SMS marketing platform with a Marketing API (v3.0) and Mailchimp Transactional (formerly Mandrill) API for developers.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Developer portal covers Marketing API and Transactional API."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "API key"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "OAuth 2 supported; partners must support OAuth 2 authentication.",
+   "token_refresh": "",
+   "scopes_notes": "Marketing API accepts API key as Bearer token or OAuth. Transactional uses a separate API key passed in the request body."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Integration Partner Program (apply, free) requires OAuth2, current Marketing API, 25+ active users for Marketplace listing. Transactional requires a separate account or Standard plan+ enablement."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "root",
+    "campaigns",
+    "subscribers",
+    "lists/audiences",
+    "transactional allowlists",
+    "transactional messages/templates"
+   ],
+   "read_ops": [
+    "Get account root info"
+   ],
+   "write_ops": [
+    "Add email to allowlist (Transactional)"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Two separate APIs: Marketing API (api.mailchimp.com/3.0) and Transactional API (mandrillapp.com/api/1.x)."
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/damientilman/mailchimp-mcp-server",
+    "https://github.com/AgentX-ai/mailchimp-mcp",
+    "https://github.com/cyanheads/mailchimp-mcp-server",
+    "https://github.com/Eyalm321/mailchimp-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2 and API key (Bearer)",
+    "url": "https://mailchimp.com/developer/marketing/api/root/list",
+    "quote": "Authorization using a Mailchimp API key (a.k.a. Bearer token) OR Authorization Bearer Authorization using OAuth",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://mailchimp.com/developer/transactional/guides/quick-start",
+    "quote": "You authenticate a request to the Transactional API using an API key. To generate one: Navigate to the Settings of your Mailchimp Transactional account",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/api-structure",
+    "quote": "The Marketing API generally follows REST conventions, with some deviations.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/api-structure",
+    "quote": "Resources are typically nouns like subscribers or campaigns . Subresources can be multiply nested under resources.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "no",
+    "url": "https://mailchimp.com/developer",
+    "quote": "Mailchimp Marketing API Send marketing campaigns Mailchimp core concepts API core concepts Building with Mailchimp API Reference",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "production_restrictions",
+    "value": "Partner requirements",
+    "url": "https://mailchimp.com/developer/integration-partner-program",
+    "quote": "Support OAuth 2 authentication Have had 25+ active users within the past 90 days",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Marketing API rate limits and webhooks not covered in sources.",
+   "No official vendor MCP server found in sources; only community repos.",
+   "Free plan API access for Marketing API not explicitly confirmed in sources."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

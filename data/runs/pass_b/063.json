@@ -1,0 +1,223 @@
+{
+ "id": 63,
+ "name": "Netlify",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:35:09Z",
+ "duration_s": 73.3,
+ "cost_usd": 0.0647,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.netlify.com",
+   "developer_portal": "https://developers.netlify.com",
+   "description": "Netlify is a web hosting and deployment platform (sites, atomic deploys, serverless functions, forms, DNS). Its public REST API at api.netlify.com manages sites and deploys, per the docs.",
+   "identity_confirmed": "yes",
+   "identity_notes": "The docs.netlify.com API reference and developers.netlify.com guides describe the Netlify platform and its REST API. This matches the named app."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "An OAuth app is registered under User Settings > Applications > New OAuth app. The developer guide's example authorization URL uses response_type=token, which is the implicit flow. Other grants (e.g. authorization code) are not established.",
+   "token_refresh": "Not established. The guide only says PATs 'offer configurable lifespans'; the example sets expires_in to 604800 (7 days).",
+   "scopes_notes": "Scopes not established from sources reviewed."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No app-review requirement found for public integrations. SAML/SSO teams deny personal access tokens to the team by default, and access must be granted when the token is generated. Admin approval is therefore possible for SSO teams, but it is not a general gate."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "sites",
+    "deploys",
+    "forms",
+    "hooks (notifications)",
+    "DNS zones and records",
+    "environment variables",
+    "snippets"
+   ],
+   "read_ops": [
+    "list sites (GET /sites)",
+    "list site forms (GET /sites/{site_id}/forms)",
+    "get site DNS (GET /sites/{site_id}/dns)"
+   ],
+   "write_ops": [
+    "create deploy (POST /sites/{site_id}/deploys)",
+    "cancel deploy",
+    "delete form",
+    "create env vars (createEnvVars)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "500 requests per minute for most requests. Deploys are limited to 3 per minute and 100 per day. Responses include X-RateLimit-* headers.",
+   "limitations": "Endpoint paths other than GET /sites come from third-party listings and were not checked against the official spec. The OpenAPI definition is Open API 2.0 and still described as a work in progress. The support forum warns that endpoints missing from the OpenAPI reference may change."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/netlify/netlify-mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/DynamicEndpoints/Netlify-MCP-Server",
+    "https://pypi.org/project/netlify-mcp/",
+    "https://www.npmjs.com/package/@mseep/netlify-server",
+    "https://mcp.so/server/netlify-mcp/MCERQUA"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Netlify REST API for atomic deploys of sites and apps",
+    "url": "https://docs.netlify.com/api/get-started",
+    "quote": "Use the Netlify REST API to manage atomic deploys of your sites and apps",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST, base URL https://api.netlify.com/api/v1/",
+    "url": "https://docs.netlify.com/api/get-started",
+    "quote": "All URLs start with `https://api.netlify.com/api/v1/`.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Personal access token used as Bearer token",
+    "url": "https://docs.netlify.com/api/get-started",
+    "quote": "Use your PAT for manual authentication in shell scripts or commands that use the Netlify API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2 required for public integrations",
+    "url": "https://docs.netlify.com/api/get-started",
+    "quote": "If you're making a public integration with Netlify for others to enjoy, you must use OAuth2.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_flows",
+    "value": "OAuth app registered via User Settings > Applications > New OAuth app; example uses response_type=token",
+    "url": "https://developers.netlify.com/guides/generating-personal-access-tokens-with-netlify-oauth/",
+    "quote": "Select “New OAuth app” and fill in any details for your project.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "PATs work on a free account (community forum report; no plan requirement found in official docs)",
+    "url": "https://docs.netlify.com/api/get-started",
+    "quote": "Go to **Applications > Personal access tokens**, select **New access token**, name it, choose an expiration, and select **Generate token**.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "SAML/SSO teams deny PATs by default",
+    "url": "https://docs.netlify.com/api/get-started",
+    "quote": "your personal access tokens will be denied access to the team by default.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "500 requests per minute for most requests",
+    "url": "https://docs.netlify.com/api/get-started",
+    "quote": "You can make up to 500 requests per minute for most requests.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Outgoing webhooks/notification hooks via /api/v1/hooks",
+    "url": "https://docs.netlify.com/api/get-started",
+    "quote": "Netlify can trigger webhooks, send email notifications, or send Slack messages on certain events.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Official Go client and JS client",
+    "url": "https://docs.netlify.com/api/get-started",
+    "quote": "Additionally, we have two API clients for your convenience:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad: sites, deploys, forms, hooks, DNS, env vars with read and write ops",
+    "url": "https://raw.githubusercontent.com/netlify/open-api/master/README.md",
+    "quote": "Netlify's API definition in the Open API format",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Official Netlify MCP server, remote endpoint https://mcp.netlify.com/mcp and npm @netlify/mcp",
+    "url": "https://docs.netlify.com/welcome/build-with-ai/netlify-mcp-server",
+    "quote": "Netlify offers an MCP server, which you can connect to through a connector, plugin, or your agent.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Repo netlify/netlify-mcp described as Netlify's official MCP server",
+    "url": "https://github.com/netlify/netlify-mcp",
+    "quote": "Netlify MCP Server follows the Model Context Protocol (MCP) to enable code agents to use the Netlify API and CLI",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community servers exist, e.g. DynamicEndpoints/Netlify-MCP-Server, MCERQUA, @mseep/netlify-server, PyPI netlify-mcp (unofficial Python port)",
+    "url": "https://awesome.ecosyste.ms/projects/github.com%2FDynamicEndpoints%2FNetlify-MCP-Server",
+    "quote": "a community server that provides tools and resources for interacting with Netlify through their CLI",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Whether any paid plan is required for API access or PATs. Official docs did not say; the 'free account' claim rests on an unfetched forum reply.",
+   "Full OAuth grant types, scope list, and token refresh behavior. The developer guide's example uses implicit (response_type=token); the authorization-code flow is not established.",
+   "Whether trial, sandbox, or test-only environments exist. Not found.",
+   "Complete endpoint inventory and write-operation list. The official OpenAPI spec (open-api.netlify.com) was not fetched; endpoint paths came from third-party listings.",
+   "Whether the remote MCP server (mcp.netlify.com) uses OAuth. The docs describe a login link but do not name the protocol.",
+   "Tool list for the official MCP server. Not published in the sources reviewed.",
+   "Maintenance status and license of the community MCP servers. The official repo's license was not found in the extraction.",
+   "Quotes were extracted by a small model and have not been checked against the live pages byte-for-byte; each claim is marked verified: null."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.857,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,226 @@
+{
+ "id": 20,
+ "name": "Gladly",
+ "category": "Support and Helpdesk",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:23:12Z",
+ "duration_s": 75.2,
+ "cost_usd": 0.0467,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://gladly.com",
+   "developer_portal": "https://developer.gladly.com/",
+   "description": "Gladly is a customer service and support platform (conversations, inboxes, customer profiles, agents) with a REST API, webhooks, and chat SDKs. Matches the 'Support and Helpdesk' category and the gladly.com hint.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Confirmed from Gladly's own docs domains (developer.gladly.com and help.gladly.com), which describe Gladly's agents, conversations, customers and inboxes. The gladly.com homepage itself was not fetched. Not to be confused with Ordergroove, which is a Gladly integration partner and appears in the migration pages."
+  },
+  "auth": {
+   "methods": [
+    "Basic"
+   ],
+   "primary": "Basic",
+   "oauth_flows": "",
+   "token_refresh": "No refresh flow found. Tokens are static and rotated manually (the developer docs include a rotation procedure, per search summary, not verified).",
+   "scopes_notes": "No OAuth scopes. Access is governed by the user's API User permission, and an API token can be used to perform any API request without restriction (per developer docs)."
+  },
+  "access": {
+   "tier": "partner_or_sales",
+   "free_credentials": "no",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "yes",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "yes",
+   "sandbox_available": "yes",
+   "production_restrictions": "No self-serve developer signup found. Tokens are created by a Gladly user who has the API User permission, which appears to be enabled by a Gladly administrator. A sandbox is available, but if you do not already have one you must contact your Gladly CSM or Gladly Support to purchase it. Tokens are environment-specific."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "WebSocket"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Agents",
+    "Answers",
+    "Audiences",
+    "Business Hours",
+    "Communications",
+    "Conversations",
+    "Customers",
+    "Events",
+    "Export",
+    "Freeform Topics",
+    "Inboxes",
+    "Organization",
+    "Proactive Conversations",
+    "Reports",
+    "Tasks",
+    "Teams",
+    "Topics",
+    "User Identity",
+    "Webhooks",
+    "Work Session Events"
+   ],
+   "read_ops": [
+    "Agent profiles and availability",
+    "Public answers search and retrieval",
+    "Conversation timelines, items, notes and topics",
+    "Customer profiles",
+    "Events from the past 24 hours",
+    "Reports",
+    "Organization metadata",
+    "Business hours"
+   ],
+   "write_ops": [
+    "Customer profile create, update and delete",
+    "Answers create, update and delete",
+    "Programmatic SMS and email sending",
+    "Conversation notes and topics",
+    "Tasks with due dates and assignees",
+    "Proactive conversation campaigns",
+    "Freeform topic data attached to conversations",
+    "Webhook creation (via admin UI)"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Default: 10 requests/second per method (GET, POST, PUT, PATCH, DELETE). Reports API: 10 requests/minute and 2 concurrent requests per organization. Response headers Ratelimit-Limit-Second and Ratelimit-Remaining-Second.",
+   "limitations": "Only Basic auth with API token is documented. A token belongs to one user in one environment. Lookup API is a web service Gladly calls into your system, not a client call. The SDKs found are client-side chat SDKs (Web, iOS, Android) and Help Center customization, not a server-side API SDK. WebSocket was not confirmed in sources, so it is listed here only from the REST and webhook docs and should be removed if unsupported."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "unknown",
+   "community_urls": [
+    "https://www.stackone.com/connectors/gladly/mcp/",
+    "https://www.truto.one/blog/connect-gladly-to-claude-sync-customer-profiles-and-inbox-workflows/"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Gladly is a customer support platform with agents, conversations, customers and inboxes",
+    "url": "https://developer.gladly.com/rest/",
+    "quote": "Customers: profile create, read, update, and delete; Conversations: timelines, items, notes, and topics",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.primary",
+    "value": "Token-based HTTP Basic auth, agent email as username and API token as password",
+    "url": "https://developer.gladly.com/rest/",
+    "quote": "The username is an agent email address, and the password is the API token.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.tier",
+    "value": "Token creation requires the API User permission on the user",
+    "url": "https://developer.gladly.com/rest/",
+    "quote": "To create and use an API token, your user must have the API User permission.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.self_issued_tokens",
+    "value": "Tokens are created by the user in the Gladly UI (Settings > API tokens) and shown once",
+    "url": "https://help.gladly.com/docs/generate-api-tokens-and-create-webhooks.md",
+    "quote": "The token is only shown once, so save it in a secure location.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.environment",
+    "value": "Tokens are tied to one user account and one environment",
+    "url": "https://help.gladly.com/docs/generate-api-tokens-and-create-webhooks.md",
+    "quote": "API tokens are tied to a single user account and a particular environment.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sandbox",
+    "value": "Sandbox at https://{organization}.gladly.qa; buying one requires contacting CSM or Support",
+    "url": "https://help.gladly.com/developer-tutorials/docs/setup-and-testing",
+    "quote": "If you do not have a sandbox environment and are interested in purchasing one, please contact your Gladly CSM or Gladly Support team.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.base_url",
+    "value": "https://{organization}.gladly.com REST base URL",
+    "url": "https://developer.gladly.com/rest/",
+    "quote": "Clients can access the REST API via HTTPS at your organization's Gladly domain",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "10 requests/second per method; Reports API 10/min and 2 concurrent per org",
+    "url": "https://developer.gladly.com/llms.txt",
+    "quote": "Default: 10 requests/second per method (GET, POST, PUT, PATCH, DELETE)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks configurable in Settings with up to 50 per organization; 35+ event types",
+    "url": "https://help.gladly.com/docs/generate-api-tokens-and-create-webhooks.md",
+    "quote": "Create up to 50 webhooks for your organization.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Client-side chat SDKs (Web, iOS, Android) documented; no server API SDK found",
+    "url": "https://developer.gladly.com/llms.txt",
+    "quote": "Chat Web SDK (embed chat on a website), Chat iOS SDK (native iOS), Chat Android SDK (native Android)",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official",
+    "value": "No official Gladly MCP server found; developer.gladly.com does not mention MCP",
+    "url": "https://developer.gladly.com/",
+    "quote": "Explore sample code and reference implementations for Gladly's APIs, webhooks, and platform tools.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Third-party hosted Gladly MCP offerings exist (StackOne, Truto); no GitHub community repo found",
+    "url": "https://www.stackone.com/connectors/gladly/mcp/",
+    "quote": "StackOne offers a hosted Gladly MCP server with 65 pre-built actions",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is there a self-serve or trial path for a developer without an existing Gladly customer contract? Not found. The available sources point to a customer relationship via CSM or Support.",
+   "Pricing or contractual gating for API access and the sandbox is not stated in sources.",
+   "Rate-limit and webhook event details were taken from fetch summaries and should be checked on the live developer.gladly.com pages.",
+   "WebSocket support is not confirmed by any source fetched, so it may be wrong and should be removed unless verified.",
+   "Confirm whether Gladly publishes an official MCP server, e.g. under a gladly-com GitHub org. None was found in searches, and developer.gladly.com does not mention MCP.",
+   "Server-side SDKs (e.g. Node/Python) are not established by sources.",
+   "Quotes are summaries from the WebFetch model rather than verbatim page text. Every claim needs a verbatim check before use."
+  ]
+ },
+ "assessment": {
+  "verdict": "GATED",
+  "group": "OUTREACH REQUIRED",
+  "technical_feasibility": "high",
+  "credential_accessibility": "gated",
+  "production_readiness": "restricted",
+  "security_risk": "standard",
+  "commercial_dependency": "yes",
+  "approach": "Custom toolkit over REST/WebSocket",
+  "main_blocker": "Partnership / vendor approval / sales contact",
+  "rationale": [
+   "Credentials require partnership, vendor approval or sales."
+  ]
+ },
+ "evidence_support_rate": 0.75,
+ "flags": [],
+ "error": null
+}

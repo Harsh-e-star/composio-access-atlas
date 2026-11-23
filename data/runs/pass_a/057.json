@@ -1,0 +1,294 @@
+{
+ "id": 57,
+ "name": "Bright Data",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:21:20Z",
+ "duration_s": 28.9,
+ "cost_usd": 0.087,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://brightdata.com",
+   "title": "Bright Data: Web Data Infrastructure for Humans & Agents",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.brightdata.com/introduction",
+   "title": "Bright Data documentation - Bright Data Docs",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.brightdata.com/api-reference/authentication",
+   "title": "Authentication - Bright Data Docs",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.brightdata.com/quickstart-coding-agent",
+   "title": "Bright Data for your coding agent - Bright Data Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.brightdata.com/products/mcp-server/overview",
+   "title": "MCP server overview - Bright Data Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.brightdata.com/products/mcp-server/integrations/overview",
+   "title": "MCP server integrations overview - Bright Data Docs",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.brightdata.com/api-reference/SDK",
+   "title": "Python SDK - Bright Data Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.brightdata.com/api-reference/SDK-JS",
+   "title": "JavaScript SDK - Bright Data Docs",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.brightdata.com/api-reference/media-data-api/media-data-api",
+   "title": "Media Data API - Bright Data Docs",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://brightdata.com/ai/mcp-server",
+   "title": "The Bright Data MCP Server - Start with a Free Plan",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://brightdata.com/use-cases/travel",
+   "title": "Scrape Travel Data: Trends, Prices & Insights",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/brightdata/real-estate-ai-agent",
+   "title": "brightdata/real-estate-ai-agent",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/liangdabiao/Bright-Data-MCP-Claude-Skill-deep-research",
+   "title": "liangdabiao/Bright-Data-MCP-Claude-Skill-deep-research",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/MeirKaD/MCP_ADK",
+   "title": "MeirKaD/MCP_ADK",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ToolMonsters/hand-raisers",
+   "title": "ToolMonsters/hand-raisers",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/brightdata/seo-article-generator",
+   "title": "brightdata/seo-article-generator",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/techwithtim/BrightDataMCPServerAgent",
+   "title": "techwithtim/BrightDataMCPServerAgent",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ScrapeAlchemist/brightdata-hack-pack",
+   "title": "ScrapeAlchemist/brightdata-hack-pack",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/brightdata/real-time-market-analysis",
+   "title": "brightdata/real-time-market-analysis",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://brightdata.com",
+   "developer_portal": "https://docs.brightdata.com",
+   "description": "Bright Data is a web data infrastructure platform offering scraper APIs, Web Unlocker, SERP API, Browser API, proxies, datasets and an MCP server for AI agents.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are brightdata.com and docs.brightdata.com."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Basic",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "MCP server accepts OAuth 2.1 with browser sign-in (MCP only).",
+   "token_refresh": "API keys can be refreshed manually; the old key stops working.",
+   "scopes_notes": "API keys have permission levels: Admin, Finance, Ops, Limit, User. Only admins can generate API keys."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Free tier is 5,000 credits/month; more credits require contacting the account manager. Only admins can generate API keys."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Scraper API",
+    "Web Unlocker API",
+    "SERP API",
+    "Browser API",
+    "Crawl API",
+    "Datasets",
+    "Scraper Studio",
+    "Media Data API",
+    "Proxies"
+   ],
+   "read_ops": [
+    "scrape pages",
+    "search results",
+    "collect datasets",
+    "media extraction"
+   ],
+   "write_ops": [
+    "trigger scrape/collection jobs",
+    "trigger media extraction"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Mostly a data-extraction platform; the sources don't show conventional CRUD resources."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.brightdata.com/products/mcp-server/overview",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/MeirKaD/MCP_ADK",
+    "https://github.com/techwithtim/BrightDataMCPServerAgent"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key (Bearer token)",
+    "url": "https://docs.brightdata.com/api-reference/authentication",
+    "quote": "An API key is a secure hashed token used to authenticate with Bright Data API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Basic (native proxy username/password)",
+    "url": "https://docs.brightdata.com/api-reference/authentication",
+    "quote": "Native Access - Authenticate and interact with the Bright Data platform using proxy protocol username and password",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2 on MCP",
+    "url": "https://docs.brightdata.com/quickstart-coding-agent",
+    "quote": "the server also accepts OAuth 2.1 , where the user signs in through a browser.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.brightdata.com/introduction",
+    "quote": "5,000 free credits per month , no credit card required.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST, CLI/library",
+    "url": "https://docs.brightdata.com/api-reference/authentication",
+    "quote": "The Bright Data CLI, Python SDK and JavaScript SDK use the same API key.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.brightdata.com/introduction",
+    "quote": "Guides, quickstarts and API references for Bright Data Scraper API, Scraper Studio, Web Unlocker API, SERP API, proxies, datasets and Bright Data MCP.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.brightdata.com/products/mcp-server/overview",
+    "quote": "The Bright Data MCP server gives AI agents and assistants real-time access to public web data through the Model Context Protocol (MCP).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://brightdata.com",
+    "quote": "Seamless API and webhook integration",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.scopes_notes",
+    "value": "Only admins can generate API keys",
+    "url": "https://docs.brightdata.com/api-reference/authentication",
+    "quote": "only admins can generate API keys.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Exact API rate limits are not stated in the sources.",
+   "Whether a sandbox exists is not established.",
+   "Whether non-admin users can obtain a key is unclear: the default key is created at signup, but only admins can add keys."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

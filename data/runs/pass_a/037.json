@@ -1,0 +1,255 @@
+{
+ "id": 37,
+ "name": "systeme.io",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:18:55Z",
+ "duration_s": 25.6,
+ "cost_usd": 0.0557,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://systeme.io",
+   "title": "Systeme.io - The only tool you need to launch your online business",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+   "title": "How to use the systeme.io public API (Application Programming Interface) | systeme.io Help Center",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://systeme.io/pricing",
+   "title": "Systeme.io Pricing — Free, Startup, Webinar, Unlimited Plans",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://help.systeme.io/category/11216-model-context-protocol-mcp",
+   "title": "systeme.io Help Center",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/snzeeee/mcp-server-systemeio",
+   "title": "snzeeee/mcp-server-systemeio",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/management3consulting69-ops/systeme-mcp",
+   "title": "management3consulting69-ops/systeme-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/cotlet-connect/systeme-io-mcp",
+   "title": "cotlet-connect/systeme-io-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/softreviewed/systeme-extra-mcp",
+   "title": "softreviewed/systeme-extra-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://systeme.io",
+   "developer_portal": "https://developer.systeme.io/reference/api",
+   "description": "All-in-one online business platform: sales funnels, email marketing, online courses, websites, affiliate management, automation.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe systeme.io as a funnel/email/course platform with a public API and MCP server."
+  },
+  "auth": {
+   "methods": [
+    "API key"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "Keys can have an expiration date or be left without expiry; max 3 keys per account.",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Up to 3 public API keys per account; API requests per minute vary by plan (details not shown in sources)."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "contacts",
+    "tags",
+    "custom fields",
+    "newsletters",
+    "campaigns",
+    "email statistics",
+    "funnels",
+    "pages",
+    "price plans",
+    "coupons",
+    "courses",
+    "modules",
+    "lectures",
+    "communities",
+    "automation rules",
+    "subscriptions",
+    "webhooks",
+    "digital products",
+    "physical products",
+    "offers",
+    "calendar events",
+    "bookings",
+    "SMS templates"
+   ],
+   "read_ops": [
+    "list contacts",
+    "list tags",
+    "list custom fields",
+    "list funnels",
+    "list courses",
+    "list communities and members",
+    "list automation rules",
+    "list webhooks",
+    "list products",
+    "list calendar bookings",
+    "email statistics"
+   ],
+   "write_ops": [
+    "create/update/delete contacts",
+    "create/assign/remove tags",
+    "create/send newsletters",
+    "create/update/delete campaigns",
+    "create funnels and opt-in steps",
+    "create/update/delete price plans and coupons",
+    "create/update/delete courses, modules, lectures",
+    "invite community members",
+    "create automation rules",
+    "cancel subscriptions",
+    "create/delete webhooks",
+    "manage products",
+    "manage offers",
+    "manage calendar events",
+    "manage SMS templates"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Plan comparison lists 'API requests per minute' but values were not captured.",
+   "limitations": "Funnels cannot be edited or deleted via MCP; course bundles are not yet supported; calendar event type cannot be updated. Some of these limits are stated for MCP, not necessarily the REST API."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://help.systeme.io/category/11216-model-context-protocol-mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/snzeeee/mcp-server-systeme-io",
+    "https://github.com/snzeeee/mcp-server-systemeio",
+    "https://github.com/management3consulting69-ops/systeme-mcp",
+    "https://github.com/cotlet-connect/systeme-io-mcp",
+    "https://github.com/softreviewed/systeme-extra-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+    "quote": "API keys are unique identifiers that authenticate requests to our public API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+    "quote": "Scroll down to the Public API keys section and click Create (3). Give your key a name, set an expiration date, and click Save (4).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_credentials",
+    "value": "yes",
+    "url": "https://systeme.io/pricing",
+    "quote": "The free plan never expires and does not require a credit card.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+    "quote": "Our API exposes a carefully selected set of features, enabling developers to interact with our platform transparently and efficiently.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+    "quote": "Contacts: Create new contacts, update existing ones, list your audience with advanced filters, or delete contacts.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://help.systeme.io/category/11216-model-context-protocol-mcp",
+    "quote": "How to use the systeme.io MCP server (Model Context Protocol)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+    "quote": "Programmatically create new webhooks to receive real-time notifications, retrieve lists of your existing webhooks, and remove webhooks that are no longer needed.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "Max 3 keys",
+    "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+    "quote": "You can create up to 3 API keys per account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "The API reference at developer.systeme.io was blocked by robots.txt, so the endpoints, protocol and rate limits are unverified.",
+   "The sources don't say which plans get API access or what the per-minute rate limits are.",
+   "Is there a sandbox or test environment?",
+   "Is there an official SDK?"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "high",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

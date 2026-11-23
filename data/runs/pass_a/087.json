@@ -1,0 +1,295 @@
+{
+ "id": 87,
+ "name": "Xero",
+ "category": "Finance and Fintech",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:25:53Z",
+ "duration_s": 72.2,
+ "cost_usd": 0.0867,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developer.xero.com",
+   "title": "Xero Developer Platform",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developer.xero.com/documentation/guides/oauth2/overview",
+   "title": "OAuth 2.0 — Xero Developer",
+   "rendered": true
+  },
+  {
+   "id": "S3",
+   "url": "https://developer.xero.com/documentation/guides/oauth2/custom-connections/",
+   "title": "Custom Connections — Xero Developer",
+   "rendered": true
+  },
+  {
+   "id": "S4",
+   "url": "https://developer.xero.com/documentation/api/accounting/overview",
+   "title": "Accounting API Overview — Xero Developer",
+   "rendered": true
+  },
+  {
+   "id": "S5",
+   "url": "https://developer.xero.com/documentation/guides/remote-mcp/overview/",
+   "title": "Xero Developer Remote MCP — Xero Developer",
+   "rendered": true
+  },
+  {
+   "id": "S6",
+   "url": "https://developer.xero.com/documentation/getting-started-guide/",
+   "title": "Getting started guide — Xero Developer",
+   "rendered": true
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+   "title": "Pricing and Policy Updates FAQs — Xero Developer",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developer.xero.com/documentation/xero-app-store/app-partner-guides/grow-your-app-with-xero/",
+   "title": "Grow your app with Xero — Xero Developer",
+   "rendered": true
+  },
+  {
+   "id": "S9",
+   "url": "https://developer.xero.com/documentation/xero-app-store/app-partner-guides/certification-checkpoints",
+   "title": "Certification checkpoints — Xero Developer",
+   "rendered": true
+  },
+  {
+   "id": "S10",
+   "url": "https://developer.xero.com/documentation/xero-app-store/app-partner-guides/app-listing",
+   "title": "Xero App Store listing — Xero Developer",
+   "rendered": true
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/XeroAPI/xero-mcp-server",
+   "title": "XeroAPI/xero-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/XeroAPI/xero-agent-toolkit",
+   "title": "XeroAPI/xero-agent-toolkit",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/john-zhang-dev/xero-mcp",
+   "title": "john-zhang-dev/xero-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/garfystyle/justmc-mcp",
+   "title": "garfystyle/justmc-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Xero-05/xenon-browser",
+   "title": "Xero-05/xenon-browser",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/zavora-ai/skill-finance-accounting",
+   "title": "zavora-ai/skill-finance-accounting",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/LokiMCPUniverse/xero-mcp-server",
+   "title": "LokiMCPUniverse/xero-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mrsmickers/xero-sli-mcp-skill",
+   "title": "mrsmickers/xero-sli-mcp-skill",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://developer.xero.com",
+   "developer_portal": "https://developer.xero.com",
+   "description": "Xero is cloud accounting software; the Xero Developer Platform offers Accounting and other APIs, SDKs, OAuth 2.0, and MCP servers.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are from developer.xero.com, the official Xero developer portal."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization code (standard), PKCE, and client credentials (Custom Connections, premium).",
+   "token_refresh": "Access tokens last 30 minutes; with offline_access, a refresh token can request a new access token for 60 days, and a new refresh token is issued each time.",
+   "scopes_notes": "Granular scopes are being introduced; the offline_access scope is needed for refresh tokens. Apps created before 2 March 2026 have until September 2027 to move from broad to granular scopes."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "The Starter tier is free but limited to 5 tenants. More connections need the Core tier or above. Plus tier and above require certification. The Journals endpoint, Practice Manager API and Bulk Connections need a security assessment and use case approval, and are available from Advanced. Custom Connections are a premium option (monthly fee on the Xero organisation). Remote MCP needs the Core plan or above, or a demo organisation on Starter."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Accounts",
+    "Bank Transactions",
+    "Contacts",
+    "Credit Notes",
+    "Invoices",
+    "Payments",
+    "Purchase Orders",
+    "Quotes",
+    "Reports",
+    "Journals",
+    "Manual Journals",
+    "Items",
+    "Tax Rates",
+    "Tracking Categories",
+    "Payroll",
+    "Projects",
+    "Files",
+    "Assets"
+   ],
+   "read_ops": [
+    "list_invoices",
+    "list_credit_notes",
+    "list_items",
+    "list_quotes",
+    "reports"
+   ],
+   "write_ops": [
+    "create invoices and credit notes"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "App daily limit: 1,000 calls per day for Starter, 5,000 per day for higher tiers. App minute limit: 10,000 calls per minute.",
+   "limitations": "Monthly egress allotment applies by tier. Starter has a 5-tenant limit."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/XeroAPI/xero-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/john-zhang-dev/xero-mcp",
+    "https://github.com/LokiMCPUniverse/xero-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://developer.xero.com/documentation/guides/oauth2/overview",
+    "quote": "Xero’s API supports the authorization code grant type using the standard authorization code flow or the Proof Key for Code Exchange (PKCE) extension.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.oauth_flows",
+    "value": "Client credentials via Custom Connections",
+    "url": "https://developer.xero.com/documentation/guides/oauth2/custom-connections/",
+    "quote": "Custom Connections are a premium integration option that utilise the client credentials grant type to access data f",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://developer.xero.com/documentation/getting-started-guide/",
+    "quote": "Signup for a free Xero account Enable the Xero demo company Add your OAuth 2.0 application",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Starter tier connection limit",
+    "url": "https://developer.xero.com/documentation/guides/oauth2/overview",
+    "quote": "Apps using the code or PKCE flow can connect to a maximum of 5 tenants . To connect to more than 5 tenants you need to upgrade to the Core Tier .",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developer.xero.com/documentation/guides/oauth2/custom-connections/",
+    "quote": "Make calls against the Xero APIs by simply adding the following headers to your request:",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developer.xero.com/documentation/api/accounting/overview",
+    "quote": "can be used for a variety of purposes such as creating transactions like invoices and credit notes, right through to extracting accounting data via our reports endpoint.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Daily and minute limits",
+    "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+    "quote": "Daily Limit: 1,000 calls per day for starter, 5,000 calls per day for higher tiers App Minute Limit: 10,000 calls per minute",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://developer.xero.com/documentation/guides/remote-mcp/overview/",
+    "quote": "The Developer Remote MCP Server is a hosted Model Context Protocol (MCP) server run by Xero.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.sdks",
+    "value": "yes",
+    "url": "https://developer.xero.com/documentation/guides/oauth2/overview",
+    "quote": "We have a range of new SDKs and sample apps that integrate with OAuth 2",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Webhooks are listed in the documentation navigation, but the sources provided no detail.",
+   "Exact write operations beyond invoices and credit notes are not detailed in the sources.",
+   "Rate limit details such as concurrent calls are not given."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "review_required",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 0.111,
+ "flags": [],
+ "error": null
+}

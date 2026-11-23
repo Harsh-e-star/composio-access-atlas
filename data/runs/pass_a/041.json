@@ -1,0 +1,264 @@
+{
+ "id": 41,
+ "name": "Shopify",
+ "category": "Ecommerce",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:20:04Z",
+ "duration_s": 68.6,
+ "cost_usd": 0.0784,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://shopify.dev/docs",
+   "title": "Shopify Dev Docs",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://shopify.dev/docs/api",
+   "title": "Shopify APIs, libraries, and tools",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://shopify.dev/docs/api/usage/authentication",
+   "title": "Shopify API authentication",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://shopify.dev/docs/api/customer-authentication/multipass",
+   "title": "Multipass",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://shopify.dev/docs/api/shopify-mcp",
+   "title": "Shopify MCP",
+   "rendered": true
+  },
+  {
+   "id": "S6",
+   "url": "https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens",
+   "title": "Access tokens",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://shopify.dev/docs/apps/build/authentication-authorization/id-tokens",
+   "title": "ID tokens",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+   "title": "About app authentication",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://shopify.dev/docs/api/customer/latest",
+   "title": "Customer Account API reference",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://shopify.dev/docs/api/customer-authentication",
+   "title": "Customer authentication",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/GeLi2001/shopify-mcp",
+   "title": "GeLi2001/shopify-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/henkisdabro/wookstar-claude-plugins",
+   "title": "henkisdabro/wookstar-claude-plugins",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ctrlaltdylan/mock-bridge",
+   "title": "ctrlaltdylan/mock-bridge",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Shopify/dev-mcp-gemini-cli",
+   "title": "Shopify/dev-mcp-gemini-cli",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Mobeen-Dev/chatbot_Shopify",
+   "title": "Mobeen-Dev/chatbot_Shopify",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ZenyaDAR/PlayGuard",
+   "title": "ZenyaDAR/PlayGuard",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/colbymchenry/shopify-graphql-admin-mcp",
+   "title": "colbymchenry/shopify-graphql-admin-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/antoineschaller/shopify-mcp-server",
+   "title": "antoineschaller/shopify-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://shopify.dev",
+   "developer_portal": "https://shopify.dev/docs",
+   "description": "Shopify is a commerce platform with GraphQL Admin, Storefront, Customer Account and Partner APIs for building apps, storefronts and agent experiences.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are official shopify.dev docs."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT",
+    "Other"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "GraphQL Admin API: OAuth, usually token exchange (also authorization code grant, client credentials). Customer Account API: OAuth 2.0 with PKCE.",
+   "token_refresh": "Expiring offline tokens come with a refresh_token; refresh tokens rotate on each refresh.",
+   "scopes_notes": "Access scopes (e.g. read_products, write_orders) gate access; some scopes require Shopify approval."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Apps must be submitted for App Store review to be listed; some scopes need Shopify approval; some APIs require specific Shopify plans (e.g. Multipass and custom identity provider require Plus)."
+  },
+  "api": {
+   "protocols": [
+    "GraphQL",
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "products",
+    "customers",
+    "orders",
+    "inventory"
+   ],
+   "read_ops": [
+    "Read store data via GraphQL Admin API"
+   ],
+   "write_ops": [
+    "Write store data via GraphQL Admin API mutations"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Rate limiting is described per API on the Limits page; figures not in sources.",
+   "limitations": "Customer Account API authenticates buyers rather than apps."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/Shopify/dev-mcp-gemini-cli",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/GeLi2001/shopify-mcp",
+    "https://github.com/colbymchenry/shopify-graphql-admin-mcp",
+    "https://github.com/antoineschaller/shopify-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://shopify.dev/docs/api/usage/authentication",
+    "quote": "GraphQL Admin API Your app, on behalf of a merchant OAuth, usually token exchange X-Shopify-Access-Token",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Other",
+    "url": "https://shopify.dev/docs/api/usage/authentication",
+    "quote": "Create a Partner API client in Organization settings, and use its access token X-Shopify-Access-Token",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://shopify.dev/docs/api",
+    "quote": "Dev stores are stores with test data that you build and test against.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "GraphQL",
+    "url": "https://shopify.dev/docs/api",
+    "quote": "GraphQL Admin API reads and writes products, customers, orders, inventory, and the rest of the data behind the Shopify admin.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens",
+    "quote": "If your app calls the GraphQL Admin API or REST Admin API and uses traditional non-expiring offline tokens",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://shopify.dev/docs/api",
+    "quote": "GraphQL Admin API reads and writes products, customers, orders, inventory, and the rest of the data behind the Shopify admin.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://shopify.dev/docs/api",
+    "quote": "Shopify AI Toolkit connects AI coding tools, such as Claude Code, Codex, and Cursor, to Shopify's developer docs, API schemas, and Shopify CLI",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Shopify MCP (store management) is marked 'coming soon'; the Dev MCP/AI Toolkit is official but is for docs/schemas, not store operations.",
+   "Rate limit figures not in sources.",
+   "Whether a dev store/Dev Dashboard account is free was not stated explicitly."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented GraphQL/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

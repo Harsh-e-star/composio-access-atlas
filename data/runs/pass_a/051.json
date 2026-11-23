@@ -1,0 +1,269 @@
+{
+ "id": 51,
+ "name": "DataForSEO",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:20:50Z",
+ "duration_s": 31.6,
+ "cost_usd": 0.0732,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.dataforseo.com/v3/",
+   "title": "Introduction | DataForSEO API v3",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.dataforseo.com/v3/auth/",
+   "title": "Authentication | DataForSEO API v3",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://dataforseo.com/pricing",
+   "title": "DataForSEO API v3 Pricing – Transparent Pay-As-You-Go Pricing Model",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://dataforseo.com/pricing/dataforseo-labs",
+   "title": "DataForSEO Labs API Pricing – DataForSEO",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://dataforseo.com/apis/keyword-data-api",
+   "title": "Keyword Data API – All Data for SEO & PPC Keyword Research",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://dataforseo.com/model-context-protocol",
+   "title": "DataForSEO Model Context Protocol – DataForSEO",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/dataforseo/mcp-server-typescript",
+   "title": "dataforseo/mcp-server-typescript",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/houtini-ai/seo-audit",
+   "title": "houtini-ai/seo-audit",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Skobyn/dataforseo-mcp-server",
+   "title": "Skobyn/dataforseo-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Skobyn/mcp-dataforseo",
+   "title": "Skobyn/mcp-dataforseo",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/aimonk2025/dataforseo-ai-mcp-server",
+   "title": "aimonk2025/dataforseo-ai-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/SimplerSoftwareIO/seo-ai-agent",
+   "title": "SimplerSoftwareIO/seo-ai-agent",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/amirjahfar1/automate-seo-with-claude",
+   "title": "amirjahfar1/automate-seo-with-claude",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/plori-ai/seo-mcp",
+   "title": "plori-ai/seo-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://dataforseo.com",
+   "developer_portal": "https://docs.dataforseo.com/v3/",
+   "description": "DataForSEO provides pay-as-you-go REST APIs for SEO data: SERP, keyword data, backlinks, on-page, labs, business data, domain analytics, and AI optimization.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe DataForSEO API v3 docs, pricing and MCP."
+  },
+  "auth": {
+   "methods": [
+    "Basic"
+   ],
+   "primary": "Basic",
+   "oauth_flows": "",
+   "token_refresh": "Not applicable; static credentials.",
+   "scopes_notes": "API login and password (auto-generated, different from account password) from the API Access dashboard; passed as Base64 in Authorization header. The hosted MCP connector also mentions an OAuth authorization prompt for Claude/ChatGPT, but the REST API uses Basic only."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "yes",
+   "production_restrictions": "Pay-as-you-go with $50 minimum top-up for production usage; $1 trial credit and free Sandbox for testing."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "SERP",
+    "Keywords Data",
+    "DataForSEO Labs",
+    "On-Page",
+    "Backlinks",
+    "Business Data",
+    "Domain Analytics",
+    "AI Optimization",
+    "Merchant",
+    "App Data",
+    "Reviews"
+   ],
+   "read_ops": [
+    "SERP results",
+    "keyword search volume",
+    "backlink data",
+    "on-page audits",
+    "WHOIS and technologies",
+    "business listings and reviews"
+   ],
+   "write_ops": [
+    "create tasks (POST task_post)"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Per-endpoint rate limit per minute, shown in X-RateLimit-Limit and X-RateLimit-Remaining headers; can be increased via support.",
+   "limitations": "Data API; write operations are task submissions rather than managing resources. Standard method is queue-based; Live is synchronous."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/dataforseo/mcp-server-typescript",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/Skobyn/dataforseo-mcp-server",
+    "https://github.com/Skobyn/mcp-dataforseo",
+    "https://github.com/plori-ai/seo-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Basic",
+    "url": "https://docs.dataforseo.com/v3/auth/",
+    "quote": "Basic authentication is the only way to access DataForSEO API; credentials should always be passed in the header of the request.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.dataforseo.com/v3/auth/",
+    "quote": "Create a free account with DataForSEO, then go to the API Access tab in the account dashboard to find your API login and password",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial_available",
+    "value": "yes",
+    "url": "https://dataforseo.com/pricing",
+    "quote": "You can sign up for free and use your $1 trial credit available to new accounts for trying our APIs in the Playground section",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sandbox_available",
+    "value": "yes",
+    "url": "https://dataforseo.com/pricing",
+    "quote": "You can also test API integration for free using the DataForSEO Sandbox.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.dataforseo.com/v3/",
+    "quote": "DataForSEO API is using the REST technology for interchanging data between your application and our service.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://dataforseo.com/model-context-protocol",
+    "quote": "Backlinks API Fetch accurate backlink and relevant domains data from our up-to-date index Business Data API Collect reviews, business listings, and social media data.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://dataforseo.com/model-context-protocol",
+    "quote": "Point your MCP-compatible client to the official DataForSEO remote endpoint:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "per-minute per-endpoint headers",
+    "url": "https://docs.dataforseo.com/v3/",
+    "quote": "X-RateLimit-Limit – the rate limit ceiling per minute for the given endpoint;",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sdks",
+    "value": "yes",
+    "url": "https://docs.dataforseo.com/v3/",
+    "quote": "Python DataForSEO Client Recommended: officially supported Python Client. Author – DataForSEO team",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://docs.dataforseo.com/v3/",
+    "quote": "Webhooks & callbacks",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": []
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

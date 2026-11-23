@@ -1,0 +1,215 @@
+{
+ "id": 59,
+ "name": "Waterfall.io",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:21:53Z",
+ "duration_s": 46.7,
+ "cost_usd": 0.0754,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.waterfall.io/",
+   "title": "Waterfall.io | One B2B data solution to connect them all",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.waterfall.io/v1/introduction",
+   "title": "Waterfall API introduction - Waterfall.io API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.waterfall.io/v1/api-keys-overview",
+   "title": "API Keys Management - Waterfall.io API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.waterfall.io/v1/api-keys-list",
+   "title": "API Keys - List - Waterfall.io API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.waterfall.io/v1/api-keys-create",
+   "title": "API Keys - Create - Waterfall.io API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.waterfall.io/v1/api-keys-modify",
+   "title": "API Keys - Modify - Waterfall.io API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.waterfall.io/v1/authentication",
+   "title": "Authentication - Waterfall.io API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.waterfall.io/v1/rate-limit",
+   "title": "Rate limits - Waterfall.io API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.waterfall.io/v1/quickstart",
+   "title": "Enrich your first contact - Waterfall.io API Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.waterfall.io/v1/webhook-verification",
+   "title": "Webhook Verification - Waterfall.io API Documentation",
+   "rendered": false
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.waterfall.io/",
+   "developer_portal": "https://docs.waterfall.io/v1/introduction",
+   "description": "Waterfall.io is a B2B data/GTM API that aggregates 30+ data vendors for contact, email and phone enrichment, prospecting, job-change tracking and email verification.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs and site clearly describe Waterfall.io contact/company intel API."
+  },
+  "auth": {
+   "methods": [
+    "API key"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "Static keys; rotate periodically.",
+   "scopes_notes": "Master key required to create/manage sub-keys; 403 can also indicate a feature/permission unavailable to the key (e.g., Preview APIs require access on key)."
+  },
+  "access": {
+   "tier": "partner_or_sales",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "yes",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Key management requires contacting account manager; higher rate limits via support email."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Prospector",
+    "Contact Enrichment",
+    "Phone Enrichment",
+    "Company Enrichment",
+    "Company Reveal",
+    "Company Titles",
+    "Job Change",
+    "Email Verification",
+    "API Keys",
+    "Account Reporting"
+   ],
+   "read_ops": [
+    "Search contacts",
+    "Search companies",
+    "Retrieve enrichment results via Finder",
+    "Company titles",
+    "Account reporting",
+    "List API keys",
+    "Webhook JWKS"
+   ],
+   "write_ops": [
+    "Launch enrichment/prospector jobs",
+    "Create API keys",
+    "Modify API keys"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Default 50 requests per 60 seconds for Prospector, Search, Enrichment, Job Change, Email Verification; higher on request.",
+   "limitations": "Search Company and Company Titles are Preview APIs; Company Titles requires access on key. Many endpoints are async (job_id then Finder or webhook)."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "no",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://docs.waterfall.io/v1/authentication",
+    "quote": "Authenticate data and account API requests with your Waterfall API key in the x-api-key header. Contact the team for API access and pricing.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "partner_or_sales",
+    "url": "https://docs.waterfall.io/v1/quickstart",
+    "quote": "You need a Waterfall API key with Contact Enrichment enabled. Contact the team for access and pricing.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.waterfall.io/v1/introduction",
+    "quote": "The Waterfall API is available at https://api.waterfall.io . Send your API key in the x-api-key header.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.waterfall.io/v1/introduction",
+    "quote": "Explore Waterfall’s APIs and compare their inputs, results, and use cases to choose the right endpoint for your workflow.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "50 requests per 60 seconds default",
+    "url": "https://docs.waterfall.io/v1/rate-limit",
+    "quote": "The default limit for Prospector, Search, Enrichment, Job Change, and Email Verification is 50 requests per 60 seconds .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://docs.waterfall.io/v1/webhook-verification",
+    "quote": "Webhook signing applies to every endpoint that accepts webhook_url .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is there an official MCP server? Sources do not mention one.",
+   "Is there a free trial or sandbox? Sources only say to contact the team for access and pricing.",
+   "Are official SDKs available?"
+  ]
+ },
+ "assessment": {
+  "verdict": "GATED",
+  "group": "OUTREACH REQUIRED",
+  "technical_feasibility": "high",
+  "credential_accessibility": "gated",
+  "production_readiness": "restricted",
+  "security_risk": "standard",
+  "commercial_dependency": "yes",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "Partnership / vendor approval / sales contact",
+  "rationale": [
+   "Credentials require partnership, vendor approval or sales."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

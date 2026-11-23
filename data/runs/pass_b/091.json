@@ -1,0 +1,210 @@
+{
+ "id": 91,
+ "name": "NotebookLM",
+ "category": "AI, Research and Media-native",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:38:25Z",
+ "duration_s": 97.2,
+ "cost_usd": 0.0786,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://cloud.google.com/gemini-enterprise/gemini-notebook",
+   "developer_portal": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs",
+   "description": "Google's NotebookLM, sold as NotebookLM Enterprise / Gemini Notebook Enterprise inside Google Cloud and Gemini Enterprise. The consumer notebooklm.google.com product is not covered by these API docs.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Google Cloud docs describe NotebookLM Enterprise and its newer name Gemini Notebook Enterprise. Matches the assigned Gemini Enterprise API surface. The official overview page was fetched; the naming change is confirmed by the page title variants."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "unknown. Docs show a bearer token from gcloud auth print-access-token under user sign-in; they do not name OAuth 2.0 explicitly.",
+   "token_refresh": "unknown",
+   "scopes_notes": "No scopes documented on pages checked. Drive-based sources need Google user credentials with Drive access enabled at gcloud login."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "unknown"
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "notebooks",
+    "notebooks.sources"
+   ],
+   "read_ops": [
+    "notebooks.get",
+    "notebooks.listRecentlyViewed",
+    "notebooks.sources.get"
+   ],
+   "write_ops": [
+    "notebooks.create",
+    "notebooks.share",
+    "notebooks.batchDelete",
+    "notebooks.sources.batchCreate",
+    "notebooks.sources.uploadFile",
+    "notebooks.sources.batchDelete"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "unknown",
+   "limitations": "Covers notebook management (create, get, list recently viewed, share, batch delete) and source management (batch add, single file upload, get, batch delete). No chat, audio, or content-generation endpoints found in the pages checked. Calling user needs a Gemini Notebook Enterprise license. Uses the v1alpha surface. Consumer NotebookLM API availability not established."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/jacob-bd/notebooklm-mcp-cli",
+    "https://github.com/roomi-fields/notebooklm-mcp",
+    "https://pypi.org/project/mcp-notebooklm/",
+    "https://pypi.org/project/notebooklm-enterprise-mcp/"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Gemini Notebook Enterprise is the enterprise-ready version of Gemini Notebook (product docs titled 'What is NotebookLM Enterprise?')",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs",
+    "quote": "Gemini Notebook Enterprise is a highly compliant, enterprise-ready version of Gemini Notebook.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.method",
+    "value": "Bearer token from gcloud user sign-in",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks-sources",
+    "quote": "Requests send a bearer token in the header Authorization:Bearer $(gcloud auth print-access-token).",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.requirement",
+    "value": "Methods require an authenticated user account with an active license",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+    "quote": "The methods require an authenticated user account with an active Gemini Notebook Enterprise license.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.role",
+    "value": "Calling user must be granted Cloud NotebookLM User role",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+    "quote": "Grant the Cloud NotebookLM User role (roles/discoveryengine.notebookLmUser) to your user account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.license",
+    "value": "A license must be obtained and assigned to the user",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+    "quote": "Get licenses for Gemini Notebook Enterprise and assign a license to your user account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial",
+    "value": "Free trial: 14-day, 5000 licenses (conflicts with a localized page that lists a 30-day trial then $9/license/month; unresolved)",
+    "url": "https://docs.cloud.google.com/agentspace/notebooklm-enterprise/docs/set-up-licensing",
+    "quote": "With this tier, you get a full-featured, 14-day trial subscription of 5000 licenses.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.paid",
+    "value": "Paid subscriptions: minimum 15 licenses, maximum 5,000 via self-service; monthly or yearly terms; price not stated on the docs page",
+    "url": "https://docs.cloud.google.com/agentspace/notebooklm-enterprise/docs/set-up-licensing",
+    "quote": "A subscription contains at least 15 licenses and can contain up to 5,000 licenses.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.sales",
+    "value": "Sales contact needed only above 5,000 licenses",
+    "url": "https://docs.cloud.google.com/agentspace/notebooklm-enterprise/docs/set-up-licensing",
+    "quote": "If you need more than 5,000 licenses, contact your Google sales representative.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.admin",
+    "value": "Setting up subscriptions requires Cloud NotebookLM Admin or Gemini Enterprise Admin role",
+    "url": "https://docs.cloud.google.com/agentspace/notebooklm-enterprise/docs/set-up-licensing",
+    "quote": "Cloud NotebookLM Admin (roles/discoveryengine.notebookLmOwner)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.endpoint",
+    "value": "discoveryengine.googleapis.com v1alpha; US multi-region host discoveryengine.us.rep.googleapis.com",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks-sources",
+    "quote": "Replace the ENDPOINT_LOCATION-discoveryengine.googleapis.com host with discoveryengine.us.rep.googleapis.com.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.operations",
+    "value": "Notebook management APIs: create, retrieve, list recently viewed, delete, share",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+    "quote": "perform the following notebook management tasks programmatically",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.sources",
+    "value": "Source ops include batch add (Drive files, text, URLs, YouTube), single-file upload, get, delete",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks-sources",
+    "quote": "Some of the sources include Google Docs, Google Slides, raw text, web content, and YouTube videos.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community MCP servers exist (e.g., jacob-bd/notebooklm-mcp-cli; roomi-fields/notebooklm-mcp; PyPI mcp-notebooklm built on unofficial notebooklm-py)",
+    "url": "https://github.com/jacob-bd/notebooklm-mcp-cli",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Trial length conflict: Cloud docs say 14-day, 5000-license trial; a localized product page reportedly says 30-day trial then $9/license/month (min 15). Not resolved; verify on live pricing page.",
+   "Rate limits: a search snippet mentions 500 queries per notebook per day; not verified on a fetched page.",
+   "No Google-published MCP server found. The Cloud API docs do not mention MCP, SDKs, or webhooks.",
+   "Whether a Google-maintained client library exists for the v1alpha notebooks API is unknown.",
+   "Whether the consumer notebooklm.google.com product has any public API is not established by these sources.",
+   "Community repos (jacob-bd, roomi-fields, PyPI packages) were not fetched; their use of internal/unofficial APIs is from search snippets only. Their Enterprise support is described as experimental in one snippet."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "low",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented REST interface.",
+   "API surface is limited; toolkit would cover few actions."
+  ]
+ },
+ "evidence_support_rate": 0.846,
+ "flags": [],
+ "error": null
+}

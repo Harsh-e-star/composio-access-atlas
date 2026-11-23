@@ -1,0 +1,188 @@
+{
+ "id": 39,
+ "name": "Threads (Meta)",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:19:03Z",
+ "duration_s": 22.9,
+ "cost_usd": 0.0259,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developers.facebook.com/documentation/threads",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developers.facebook.com",
+   "title": "Social technologies | Meta for Developers",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://developers.facebook.com/tools/",
+   "title": "Developer Tools - Meta for Developers",
+   "rendered": true
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Dicklesworthstone/mcp_agent_mail",
+   "title": "Dicklesworthstone/mcp_agent_mail",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/risa-labs-inc/BossConsole",
+   "title": "risa-labs-inc/BossConsole",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/irockel/tda",
+   "title": "irockel/tda",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jordanburke/reddit-mcp-server",
+   "title": "jordanburke/reddit-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/douglasmonsky/codex-usage-tracker",
+   "title": "douglasmonsky/codex-usage-tracker",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/TedHaley/pensieve",
+   "title": "TedHaley/pensieve",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/oliverames/meta-mcp-server",
+   "title": "oliverames/meta-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/publora/skills",
+   "title": "publora/skills",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://developers.facebook.com/documentation/threads",
+   "developer_portal": "https://developers.facebook.com/documentation/threads",
+   "description": "Threads API lets developers create and publish posts, retrieve media and profiles, moderate replies, and access insights.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Official Meta for Developers Threads API documentation."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": ""
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "posts",
+    "carousel posts",
+    "media",
+    "profiles",
+    "replies",
+    "mentions",
+    "insights",
+    "webhooks",
+    "keyword search",
+    "oEmbed"
+   ],
+   "read_ops": [
+    "retrieve media",
+    "retrieve profiles",
+    "insights",
+    "mentions",
+    "keyword search"
+   ],
+   "write_ops": [
+    "create and publish posts",
+    "moderate replies"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": ""
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/oliverames/meta-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developers.facebook.com/documentation/threads",
+    "quote": "Use the Threads API to create and publish posts, retrieve media and profiles, moderate replies, and access insights.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://developers.facebook.com/documentation/threads",
+    "quote": "[Webhooks](https://developers.facebook.com/documentation/threads/webhooks)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Auth methods (likely OAuth2 access tokens) not established by sources.",
+   "Access tier, app review, and test-user requirements not established.",
+   "Protocol (REST/Graph API) not explicitly stated in sources.",
+   "Rate limits not found.",
+   "No official Threads MCP server found; GitHub results are community/third-party."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "high",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

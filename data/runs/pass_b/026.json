@@ -1,0 +1,222 @@
+{
+ "id": 26,
+ "name": "Discord",
+ "category": "Communications and Messaging",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:24:29Z",
+ "duration_s": 67.5,
+ "cost_usd": 0.0518,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://discord.com",
+   "developer_portal": "https://discord.com/developers/applications",
+   "description": "Discord: chat and communications platform. Its developer docs (docs.discord.com, formerly discord.com/developers) cover the REST API, Gateway WebSocket, OAuth2, webhooks and bots. Confirmed as the Discord product.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Discord developer docs at docs.discord.com/developers describe the Discord API, OAuth2 and bot tokens. The 301 redirect from discord.com/developers/docs points to docs.discord.com, which is the same vendor's docs."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Other"
+   ],
+   "primary": "Other",
+   "oauth_flows": "Authorization code grant, implicit grant (discouraged), client credentials (for testing). Refresh via refresh_token grant. Bot users use a bot token from the app settings, not OAuth2.",
+   "token_refresh": "Access tokens expire; refresh tokens are issued with the authorization code flow and can be exchanged with a refresh_token grant. Implicit grant issues no refresh token.",
+   "scopes_notes": "Some OAuth2 scopes require approval from Discord to use."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Privileged intents (Message Content, Server Members, Presence) must be approved for apps in 100+ guilds (verification); some OAuth2 scopes require Discord approval. These block production scale, not test credentials."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "WebSocket"
+   ],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Excessive requests are rate-limited; users who regularly hit and ignore limits have API keys revoked. Specific numbers not established.",
+   "limitations": "Resource coverage not established from fetched pages. Bot/webhook/OAuth2 surfaces confirmed; full endpoint list not fetched. Privileged intents require approval at scale. Webhook names cannot contain 'clyde' or 'discord'."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": "https://docs.discord.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://mcpservers.org/servers/SaseQ/discord-mcp",
+    "https://glama.ai/mcp/servers/drvova/discord-mcp",
+    "https://mcpservers.org/servers/the-lukez/discord-docs-mcp",
+    "https://mcpservers.org/servers/cotlet-dev-integrations-discord-api-mcp-server",
+    "https://docs.workato.com/en/mcp/prebuilt-mcps/discord-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Discord developer docs describe the Discord API with OAuth2 and bot tokens",
+    "url": "https://docs.discord.com/developers/topics/oauth2",
+    "quote": "OAuth2 enables application developers to build applications that utilize authentication and data from the Discord API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Bot users authenticate with a bot token from the app settings",
+    "url": "https://docs.discord.com/developers/topics/oauth2",
+    "quote": "authenticated using the bot token found in your app's settings.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_flows",
+    "value": "Authorization code and client credentials grants supported; implicit grant discouraged",
+    "url": "https://docs.discord.com/developers/topics/oauth2",
+    "quote": "The implicit grant is not recommended outside of quick prototypes.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "Expired tokens are refreshed via refresh token; implicit grant gives no refresh token",
+    "url": "https://docs.discord.com/developers/topics/oauth2",
+    "quote": "You also are not returned a refresh token, so the user must explicitly re-authorize once their token expires.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.scopes_notes",
+    "value": "Some OAuth2 scopes require approval from Discord",
+    "url": "https://docs.discord.com/developers/topics/oauth2",
+    "quote": "Some scopes require approval from Discord to use.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "Discord API is a REST API",
+    "url": "https://docs.discord.com/developers/reference",
+    "quote": "The Discord API is a REST API that allows you to interact with Discord data from your own applications.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "Gateway API uses secure WebSocket connections",
+    "url": "https://docs.discord.com/developers/reference",
+    "quote": "The Gateway API uses secure websocket connections as specified in",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.header",
+    "value": "Authorization header format TOKEN_TYPE TOKEN",
+    "url": "https://docs.discord.com/developers/reference",
+    "quote": "For all authentication types, authentication is performed with the `Authorization` HTTP header in the format `Authorization: TOKEN_TYPE TOKEN`.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Users who regularly hit and ignore rate limits have API keys revoked",
+    "url": "https://docs.discord.com/developers/reference",
+    "quote": "API users that regularly hit and ignore rate limits will have their API keys revoked",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks post messages to channels without a bot user",
+    "url": "https://docs.discord.com/developers/resources/webhook",
+    "quote": "They do not require a bot user or authentication to use.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.write_ops",
+    "value": "Create webhook endpoint requires MANAGE_WEBHOOKS permission",
+    "url": "https://docs.discord.com/developers/resources/webhook",
+    "quote": "Creates a new webhook and returns a webhook object on success. Requires the `MANAGE_WEBHOOKS` permission.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Privileged intents must be approved for verified apps (100+ guilds)",
+    "url": "https://docs.discord.com/developers/topics/gateway",
+    "quote": "Apps that qualify for verification **must** be approved for the privileged intent(s) before they can use them.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Apps under 10,000 users can enable privileged intents in the Developer Portal",
+    "url": "https://docs.discord.com/developers/topics/gateway",
+    "quote": "Apps with fewer than 10,000 users can access privileged intents by enabling them in the Developer Portal.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "Developer creates app and resets bot token in the Developer Portal with no payment step described",
+    "url": "https://docs.discord.com/developers/topics/oauth2",
+    "quote": "Anyone with your token can control your bot, so if it's exposed, regenerate it immediately from the Developer Portal.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official_url",
+    "value": "docs.discord.com/mcp returned HTTP 405 on GET, and a search summary describes it as an official docs-search MCP server",
+    "url": "https://docs.discord.com/mcp",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Multiple community Discord MCP servers exist, and a DEV Community roundup says Discord has no official MCP server",
+    "url": "https://dev.to/grove_chatforest/discord-mcp-servers-five-community-servers-no-official-one-and-a-fragmented-landscape-131i",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Is docs.discord.com/mcp a Discord-published MCP server? A 405 on GET is consistent with an HTTP MCP endpoint, but no page content was retrieved to confirm. Discord's docs/MCP page should be checked directly.",
+   "Full REST resource list (guilds, channels, messages, members, roles, interactions) was not established. The reference fetch returned only the base URL, not endpoints. Breadth is therefore unknown.",
+   "Exact base URL https://discord.com/api was seen in a code block but no verbatim sentence was captured for it.",
+   "Whether a free developer account is required and whether a test server incurs any cost was not verified against Discord's own pages.",
+   "Gateway specifics (intents list, connection limits) and SDK ecosystem (official vs community libraries such as discord.js, discord.py) were not confirmed from fetched pages.",
+   "Whether a trial or sandbox exists was not established. Discord uses a test server rather than a sandbox, as far as the sources show."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Custom toolkit over REST/WebSocket",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST/WebSocket interface."
+  ]
+ },
+ "evidence_support_rate": 0.812,
+ "flags": [],
+ "error": null
+}

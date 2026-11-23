@@ -1,0 +1,181 @@
+{
+ "id": 92,
+ "name": "Otter AI",
+ "category": "AI, Research and Media-native",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:27:39Z",
+ "duration_s": 56.0,
+ "cost_usd": 0.0259,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://help.otter.ai/hc/en-us",
+   "title": "Help Center",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://help.otter.ai/hc/en-us/categories/360002285334-Getting-started",
+   "title": "Getting started – Help Center",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/DarrenZal/otter-mcp",
+   "title": "DarrenZal/otter-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/StanAngeloff/otter-mcp",
+   "title": "StanAngeloff/otter-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/bcharleson/otter-cli",
+   "title": "bcharleson/otter-cli",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/JarvusInnovations/otter-axi",
+   "title": "JarvusInnovations/otter-axi",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ephraimm/otter-ai-mcp",
+   "title": "ephraimm/otter-ai-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/dmvt/otter-mcp",
+   "title": "dmvt/otter-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ChocoTonic/otterai-mcp",
+   "title": "ChocoTonic/otterai-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/nsaranya-sb/otter-notion-mcp",
+   "title": "nsaranya-sb/otter-notion-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://otter.ai",
+   "developer_portal": null,
+   "description": "Otter.ai is an AI meeting assistant that records, transcribes, and summarizes meetings (Otter Notetaker, desktop and mobile apps, Otter Chat).",
+   "identity_confirmed": "yes",
+   "identity_notes": "Help center confirms Otter.ai product; sources do not describe any public API or developer portal."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Sources do not describe API access. A Basic free plan exists for the product itself."
+  },
+  "api": {
+   "protocols": [],
+   "breadth": "Unknown",
+   "resources": [],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "Provided sources (help center pages) do not document a public API; the pricing page failed to load."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/DarrenZal/otter-mcp",
+    "https://github.com/StanAngeloff/otter-mcp",
+    "https://github.com/bcharleson/otter-cli",
+    "https://github.com/dmvt/otter-mcp",
+    "https://github.com/ChocoTonic/otterai-mcp",
+    "https://github.com/ephraimm/otter-ai-mcp",
+    "https://github.com/nsaranya-sb/otter-notion-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Otter Help Center confirms Otter Notetaker and meeting recording product",
+    "url": "https://help.otter.ai/hc/en-us",
+    "quote": "Record meetings without a bot (Desktop App)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "unknown; free Basic plan exists for the product but API access is not described",
+    "url": "https://help.otter.ai/hc/en-us/categories/360002285334-Getting-started",
+    "quote": "Conversation, import, and app limits on the Basic free plan",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "unknown; a hosted Otter MCP server is only referenced by a third-party repo (JarvusInnovations/otter-axi), not by vendor sources",
+    "url": "https://github.com/JarvusInnovations/otter-axi",
+    "quote": "Agent-facing CLI to find and pull Otter.ai meeting transcripts — wraps the hosted Otter MCP server (an AXI tool)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "yes; community MCP servers exist",
+    "url": "https://github.com/StanAngeloff/otter-mcp",
+    "quote": "Unofficial Otter.ai MCP server — list conversations, search, and export transcripts",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Does Otter.ai have a public API, and what auth does it use (OAuth2/API key)?",
+   "Is there an official vendor-hosted Otter MCP server (JarvusInnovations/otter-axi mentions a hosted one)? Need vendor docs.",
+   "Which plan is required for API/MCP access? Pricing page failed to load.",
+   "Are there webhooks, rate limits, or SDKs?"
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "None until interface confirmed",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

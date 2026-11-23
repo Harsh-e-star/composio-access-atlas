@@ -1,0 +1,252 @@
+{
+ "id": 52,
+ "name": "SE Ranking",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:20:51Z",
+ "duration_s": 28.3,
+ "cost_usd": 0.0944,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://seranking.com",
+   "title": "SE Ranking: SEO software with data you can trust",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://seranking.com/api-pricing.html",
+   "title": "API Pricing: Credits, Wallet & Annual Plans | SE Ranking",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://seranking.com/mcp.html",
+   "title": "SEO MCP Server: Live SE Ranking Data in Any AI Assistant",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://seranking.com/subscription.html",
+   "title": "Subscription - SE Ranking",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://seranking.com/api/integrations/mcp/",
+   "title": "SE Ranking MCP: Setup & Configuration",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://seranking.com/de/api-pricing.html",
+   "title": "SE Ranking API-Preise: kostenlos testen, PAYG, Jahrespläne",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://seranking.com/fr/api-pricing.html",
+   "title": "Tarifs de l’API SE Ranking : essai gratuit, paiement à l’usage, plans annuels",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://seranking.com/es/api-pricing.html",
+   "title": "Precios de la API de SE Ranking: prueba gratuita, pago por uso, planes anuales",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://seranking.com/nl/api-pricing.html",
+   "title": "Kosten van SE Ranking API: gratis proefperiode, betaal alleen bij gebruik, jaarabonnementen",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/seranking/seo-skills",
+   "title": "seranking/seo-skills",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Teake1404/seo-data-api-mcp-server",
+   "title": "Teake1404/seo-data-api-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/TeamDay-AI/se-ranking-mcp",
+   "title": "TeamDay-AI/se-ranking-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/GeminiGeorge22/ecommerce-search-rankings-mcp",
+   "title": "GeminiGeorge22/ecommerce-search-rankings-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/bogdankrupin/se-ranking-super-user",
+   "title": "bogdankrupin/se-ranking-super-user",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/dirkschmid1/se-ranking-mcp-proxy",
+   "title": "dirkschmid1/se-ranking-mcp-proxy",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/maksymblyzniuk-oss/SE-Ranking-MCP",
+   "title": "maksymblyzniuk-oss/SE-Ranking-MCP",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/J-X0/mardale-trading-search-ranking-mcp",
+   "title": "J-X0/mardale-trading-search-ranking-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://seranking.com",
+   "developer_portal": "https://seranking.com/api",
+   "description": "SE Ranking is an SEO platform with a Data API and Project API (keywords, backlinks, domains, audits, AI search) plus a hosted MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe SE Ranking SEO software and its API/MCP."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "API key"
+   ],
+   "primary": "API key",
+   "oauth_flows": "MCP server uses OAuth 2.1 with dynamic client registration.",
+   "token_refresh": "",
+   "scopes_notes": "API key passed in X-Api-Key header has same access as the account; restricted or read-only keys aren't available yet."
+  },
+  "access": {
+   "tier": "trial_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Free trial is 14 days with 100K credits; continued use requires paid credits/plan."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Backlinks",
+    "Domain Research",
+    "Keyword Research",
+    "Website Audit",
+    "AI Search",
+    "Project Management"
+   ],
+   "read_ops": [
+    "keyword research",
+    "backlinks",
+    "domain research",
+    "website audit",
+    "AI search data"
+   ],
+   "write_ops": [
+    "project management"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "Custom RPS limits on Enterprise; specifics not given.",
+   "limitations": "Credit-based usage; trial is 14 days."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://api.seranking.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/Teake1404/seo-data-api-mcp-server",
+    "https://github.com/TeamDay-AI/se-ranking-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2, API key",
+    "url": "https://seranking.com/api/integrations/mcp/",
+    "quote": "This transport uses OAuth 2.1 with dynamic client registration for authentication at the following address:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://seranking.com/api/integrations/mcp/",
+    "quote": "you can pass your API key in the X-Api-Key header.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "trial_self_serve",
+    "url": "https://seranking.com/api-pricing.html",
+    "quote": "The 14-day free trial gives you 100K API credits across all six API endpo",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://seranking.com/api-pricing.html",
+    "quote": "One API for keywords, backlinks, domains, audits, AI search, and more.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://seranking.com/api-pricing.html",
+    "quote": "Backlinks API Domain Research API Keyword Research API Website Audit API AI Search API Project Management API",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://seranking.com/mcp.html",
+    "quote": "The MCP server is centrally hosted and managed by SE Ranking.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Exact REST base URL, rate limits and SDK availability not in sources.",
+   "Whether write operations beyond Project API exist is unclear."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (trial self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

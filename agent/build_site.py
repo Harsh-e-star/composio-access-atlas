@@ -84,7 +84,38 @@ def main():
     (ROOT / "docs").mkdir(exist_ok=True)
     (ROOT / "docs" / "index.html").write_text(html)
     (ROOT / "case_study.html").write_text(html)
+    write_readme(stats, atlas["meta"])
     print(f"wrote docs/index.html ({len(html)//1024} KB), case_study.html, exports/*")
+
+
+def write_readme(s: dict, m: dict):
+    p = ROOT / "README.md"
+    txt = p.read_text()
+    h = m["human_accuracy"]
+    tl = s["tiers"]
+    lines = [
+        f"## Results (generated {m['generated_at']})", "",
+        f"- Apps researched by pass A: **{m['pass_a_ok']}/{s['n']}** succeeded; independent pass B: **{m['pass_b_ok']}/{m['pass_b_count']}**.",
+        f"- Verdicts: " + ", ".join(f"{k} {v}" for k, v in s["verdicts"].items()) + f" (of {s['n']}).",
+        f"- Groups: " + ", ".join(f"{k} {v}" for k, v in s["groups"].items()) + ".",
+        f"- Access tier: " + ", ".join(f"{k} {v}" for k, v in tl.items()) + ".",
+        f"- Auth methods (multi-label, of {s['n']}): " + ", ".join(f"{k} {v}" for k, v in s["auth"]["counts"].items())
+        + f"; {s['auth']['multi']} apps support more than one method; {s['n'] - s['auth']['known']} unknown.",
+        f"- Official vendor MCP: **{len(s['mcp']['official'])}** apps; unknown {s['mcp']['unknown']}; community MCP found for {s['mcp']['community_n']}.",
+        f"- Evidence: {s['claims']['verified']}/{s['claims']['total']} quotes re-verified on the live page; "
+        f"{s['coverage']['supported_fields']}/{s['coverage']['total_fields']} core fields backed by a verified quote ({s['coverage']['pct']}%).",
+        f"- A↔B field comparison: " + ", ".join(f"{k} {v}" for k, v in s["agreement"].items()) + ".",
+        f"- Corrections applied by reconciliation: {len(m['corrections'])} field changes.",
+        f"- Cost: ${s['cost']['total']} total LLM spend, ${s['cost']['per_app']} per app (both passes); {s['duration']['per_app_s']} s per app (both passes, wall time).",
+        ("- **Human-audited accuracy:** first pass {:.1%} → corrected {:.1%} on {} fields / {} apps.".format(
+            h["first_pass_accuracy"], h["corrected_accuracy"], h["fields_evaluated"], h["apps_evaluated"])
+         if h.get("status") == "measured" else
+         "- **Human audit: pending.** Worksheet `data/audit/human_audit_worksheet.csv` is ready; no accuracy is claimed."),
+    ]
+    import re as _re
+    txt = _re.sub(r"<!-- RESULTS:START -->.*<!-- RESULTS:END -->",
+                  "<!-- RESULTS:START -->\n" + "\n".join(lines) + "\n<!-- RESULTS:END -->", txt, flags=_re.S)
+    p.write_text(txt)
 
 
 if __name__ == "__main__":

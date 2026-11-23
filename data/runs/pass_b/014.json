@@ -1,0 +1,218 @@
+{
+ "id": 14,
+ "name": "Front",
+ "category": "Support and Helpdesk",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:20:47Z",
+ "duration_s": 88.4,
+ "cost_usd": 0.0534,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://front.com",
+   "developer_portal": "https://dev.frontapp.com/",
+   "description": "Front (front.com / frontapp.com): shared inbox and customer communication platform for teams; Core API at api2.frontapp.com, developer portal at dev.frontapp.com.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Front's developer docs describe the Front Platform (shared inbox / conversations, teammates, channels). Assignment hint front.com is consistent with official docs at dev.frontapp.com and help.front.com."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "Authorization code grant only; authorize at https://app.frontapp.com/oauth/authorize, token at https://app.frontapp.com/oauth/token; access token expires in 60 minutes, refresh token in 6 months.",
+   "token_refresh": "Refresh via POST to token endpoint with grant_type=refresh_token; refresh token valid 6 months, rotated in last 24 hours of window.",
+   "scopes_notes": "API tokens: admin selects features, namespaces, and per-resource permissions (read, write, delete, send). OAuth scopes not retrieved."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "yes",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Public integrations must use OAuth; OAuth is required for public integrations available to all Front customers unless the vendor grants an exception. Apps can be published to all Front customers or kept private to one instance. API tokens must be created by a Front admin."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Accounts",
+    "Channels",
+    "Contacts",
+    "Conversations",
+    "Drafts",
+    "Messages",
+    "Comments",
+    "Attachments (download only)",
+    "Tags",
+    "Inboxes",
+    "Teammates",
+    "Teams/Workspaces",
+    "Teammate Groups",
+    "Contact Lists",
+    "Rules",
+    "Statuses",
+    "Links",
+    "Knowledge Bases",
+    "Views",
+    "Shifts",
+    "Signatures",
+    "Message Templates",
+    "Time Off",
+    "Analytics",
+    "Custom Fields",
+    "Events",
+    "Applications"
+   ],
+   "read_ops": [
+    "List/get across accounts, channels, conversations, contacts, inboxes, tags, teammates, teams, views, rules, statuses, events, knowledge bases, custom fields, analytics"
+   ],
+   "write_ops": [
+    "Create/update/delete accounts, channels, contacts, conversations, drafts, messages (create/reply/import), comments, tags, inboxes, links, views, shifts, signatures, teammate groups, time off, knowledge bases"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "unknown (Rate limiting page at dev.frontapp.com/docs/rate-limiting not retrieved)",
+   "limitations": "Rate limits page exists but content was not retrievable; rate limits reportedly vary by plan (third-party blog only, unverified). Attachments are download-only. Some resources are deprecated (Contact Groups). MCP server feature is not available for API tokens."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.frontapp.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/wearehoust/front-mcp",
+    "https://github.com/zqushair/Frontapp-MCP"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Front Core API base URL api2.frontapp.com; developer resources on dev.frontapp.com",
+    "url": "https://dev.frontapp.com/docs/fundamentals-1",
+    "quote": "The Core API ... base URL is https://api2.frontapp.com, and Front supports OAuth2.0 as well as API Tokens.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.primary/methods",
+    "value": "Two ways to get a Bearer token: API tokens or OAuth",
+    "url": "https://dev.frontapp.com/docs/authentication",
+    "quote": "There are two ways to get a Bearer token — through API tokens in your settings or through an OAuth implementation.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.header",
+    "value": "Bearer token in Authorization header",
+    "url": "https://dev.frontapp.com/docs/authentication",
+    "quote": "You MUST send the token for each request in the Authorization header. The token MUST be preceded by Bearer.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier/admin",
+    "value": "API tokens must be created by an admin",
+    "url": "https://dev.frontapp.com/docs/create-and-revoke-api-tokens",
+    "quote": "You must be an admin to create or manage API tokens.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_credentials",
+    "value": "Free developer account to begin building",
+    "url": "https://help.front.com/en/articles/2309",
+    "quote": "create a free developer account to begin building integrations on the Front Platform.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth_flows",
+    "value": "Authorization code grant only",
+    "url": "https://dev.frontapp.com/docs/oauth",
+    "quote": "Front's OAuth implementation only supports the authorization code grant type.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_lifetime",
+    "value": "Access token 60 min; refresh token 6 months",
+    "url": "https://dev.frontapp.com/docs/oauth",
+    "quote": "The access token expires in 60 minutes, and the refresh token in 6 months.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.production",
+    "value": "Public integrations must use OAuth",
+    "url": "https://dev.frontapp.com/docs/authentication",
+    "quote": "We require that public integrations use OAuth unless there is a reason they cannot.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_url",
+    "value": "Front's MCP server at mcp.frontapp.com/mcp, OAuth 2.1 with client ID and secret, no Dynamic Client Registration",
+    "url": "https://help.front.com/en/articles/4883136",
+    "quote": "Front's MCP server (mcp.frontapp.com/mcp) lets AI agents act on Front conversation data.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "webhooks",
+    "value": "Application and rule webhooks exist",
+    "url": "https://dev.frontapp.com/docs/webhooks-1",
+    "quote": "A webhook allows you to be automatically notified when something happens in Front without having to constantly poll the API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.features",
+    "value": "API token features include MCP server not available",
+    "url": "https://dev.frontapp.com/docs/create-and-revoke-api-tokens",
+    "quote": "The MCP server feature isn't available for API tokens.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "community_mcp",
+    "value": "Community MCP repo wearehoust/front-mcp",
+    "url": "https://github.com/wearehoust/front-mcp",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Rate limit numbers and plan dependence (dev.frontapp.com/docs/rate-limiting not retrieved).",
+   "Whether a sandbox or trial exists; whether a paid plan is needed for API access (not established).",
+   "SDK languages: only Plugin SDK, Chat Widget SDK, Autopilot Resolve SDK named; no general REST client libraries confirmed.",
+   "Webhook event list and signature verification not documented on the fetched page.",
+   "Whether mcp.frontapp.com is explicitly vendor-run (page calls it Front's MCP server; no GitHub org confirmed).",
+   "Whether MCP server is beta (no label found on the MCP help article)."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.667,
+ "flags": [],
+ "error": null
+}

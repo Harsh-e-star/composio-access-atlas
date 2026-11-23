@@ -1,0 +1,264 @@
+{
+ "id": 69,
+ "name": "Datadog",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:22:47Z",
+ "duration_s": 51.9,
+ "cost_usd": 0.0893,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.datadoghq.com/api",
+   "title": "Datadog API Reference",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.datadoghq.com",
+   "title": "Datadog Docs",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.datadoghq.com/api/latest/scopes/",
+   "title": "Authorization Scopes for OAuth Clients - Datadog API",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.datadoghq.com/extend/authorization/oauth2_in_datadog/",
+   "title": "OAuth2 in Datadog",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.datadoghq.com/extend/authorization/oauth2_endpoints/",
+   "title": "OAuth2 Authorization Endpoints Reference",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.datadoghq.com/api/latest/authentication/",
+   "title": "Authentication - Datadog API",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.datadoghq.com/api/latest/cloud-authentication/",
+   "title": "Cloud Authentication - Datadog API",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+   "title": "API and Application Keys",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.datadoghq.com/extend/authorization/",
+   "title": "Authorization",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.datadoghq.com/getting_started/software_delivery_mcp_tools/",
+   "title": "Getting Started with Software Delivery MCP Tools",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://docs.datadoghq.com/mcp_server/",
+   "title": "Datadog MCP Server",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/winor30/mcp-server-datadog",
+   "title": "winor30/mcp-server-datadog",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/GeLi2001/datadog-mcp-server",
+   "title": "GeLi2001/datadog-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/datadog-labs/mcp-server",
+   "title": "datadog-labs/mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/hoangsonww/PetSwipe-Match-App",
+   "title": "hoangsonww/PetSwipe-Match-App",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/daltoniam/switchboard",
+   "title": "daltoniam/switchboard",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/shelfio/datadog-mcp",
+   "title": "shelfio/datadog-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sqr/datadog-mcp",
+   "title": "sqr/datadog-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/TANTIOPE/datadog-mcp-server",
+   "title": "TANTIOPE/datadog-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.datadoghq.com",
+   "developer_portal": "https://docs.datadoghq.com/api",
+   "description": "Datadog is a monitoring and observability platform with an HTTP REST API for programmatic access to the platform.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources are official Datadog docs."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Authorization code grant with PKCE extension",
+   "token_refresh": "Access tokens have a 1 hour TTL; refresh tokens are used to obtain new access tokens (Marketplace OAuth clients' refresh tokens are long-lived).",
+   "scopes_notes": "OAuth clients can only be assigned a limited set of authorization scopes; scoped application keys can be assigned any Datadog permission."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Sources do not state signup gating; API/application keys are created in Organization settings."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Monitors",
+    "Logs",
+    "Metrics",
+    "Events",
+    "Incidents",
+    "Users",
+    "Roles",
+    "Synthetics",
+    "Service Level Objectives",
+    "Notebooks",
+    "Hosts",
+    "Teams"
+   ],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "API key required for all requests; application key also needed for read endpoints. Endpoints differ per Datadog site."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.datadoghq.com/mcp_server/",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/winor30/mcp-server-datadog",
+    "https://github.com/GeLi2001/datadog-mcp-server",
+    "https://github.com/shelfio/datadog-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://docs.datadoghq.com/api",
+    "quote": "Authenticate to the API with an API key using the header DD-API-KEY . For some endpoints, you also need an Application key",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://docs.datadoghq.com/extend/authorization/",
+    "quote": "Datadog uses the OAuth 2.0 (OAuth2) Authorization Framework to allow users to securely authorize third-party applications’ access to restricted Datadog resources",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.datadoghq.com/api",
+    "quote": "The Datadog API is an HTTP REST API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.datadoghq.com/api/latest/authentication/",
+    "quote": "Requests that write data require reporting access and require an API key . Requests that read data require full access and also require an application key .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.datadoghq.com/mcp_server/",
+    "quote": "Write operations require the corresponding permission, such as monitors_write , and the MCP Server checks it on each tool call.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "unknown",
+    "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+    "quote": "Navigate to the API keys or Client Tokens tab. Click the New Key or New Client Token button",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is a free tier or trial available for obtaining test API keys?",
+   "What are the API rate limits (page not included in sources)?",
+   "Does Datadog support webhooks for outbound events via API (Webhooks Integration exists but not detailed)?"
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "high",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

@@ -1,0 +1,231 @@
+{
+ "id": 23,
+ "name": "Zoho Cliq",
+ "category": "Communications and Messaging",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:33:40Z",
+ "duration_s": 185.5,
+ "cost_usd": 0.0986,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.zoho.com/cliq/",
+   "developer_portal": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+   "description": "Zoho Cliq: Zoho's team chat and collaboration product with channels, chats, bots, and developer platform, served from zoho.com/cliq.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Vendor pages at zoho.com/cliq describe the product; the MCP and REST API docs are Cliq-specific."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization code flow for server-based apps and implicit flow for client-based apps per the v3 OAuth page. Refresh via grant_type=refresh_token at the token URL. Self Client is offered as a client type in the API console.",
+   "token_refresh": "Access tokens are valid for 1 hour; use the stored refresh token to generate a new access token.",
+   "scopes_notes": "Scope format is service_name.scope_name.operation_type, with operation types CREATE, READ, UPDATE, DELETE, ALL (example ZohoCliq.Bots.READ). Incoming webhook endpoint requires ZohoCliq.Webhooks.CREATE and ZohoCliq.BotMessages.CREATE. Full scope table not retrieved."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No app-review gate found in sources reviewed; not established."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Chats",
+    "Messages",
+    "Threads",
+    "Channels",
+    "Bots",
+    "Reminders",
+    "Scheduled messages",
+    "Datastores",
+    "Functions",
+    "Extensions",
+    "Slash commands",
+    "Users and org admin",
+    "Files",
+    "Calls and meetings"
+   ],
+   "read_ops": [
+    "List channels",
+    "Get a specific channel",
+    "List chats",
+    "List messages",
+    "List bots",
+    "List reminders",
+    "List users"
+   ],
+   "write_ops": [
+    "Create channel",
+    "Update channel",
+    "Delete channel",
+    "Send message to chat, user, or channel",
+    "Update message",
+    "Delete message",
+    "Create bot",
+    "Send incoming webhook message to a bot"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "unknown",
+   "limitations": "Rate limits not published on the v3 introduction page. Vendor does not classify tools as read or write. Developer-platform objects are capped per organization by plan (Free plan: 100 bots, 100 slash commands, 10 extensions)."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Zoho Cliq is Zoho's team messaging product; MCP page calls it Cliq and says agents connect to Cliq",
+    "url": "https://www.zoho.com/cliq/mcp-server.html",
+    "quote": "MCP is a standardized bridge between AI agents (like Claude, Windsurf, VS Code) and Cliq",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "auth.primary",
+    "value": "OAuth 2.0 is the API authentication method",
+    "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+    "quote": "Authentication uses OAuth 2.0.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "auth.grants",
+    "value": "Authorization code flow for server-based apps",
+    "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+    "quote": "server-based applications can use the authorization code flow",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "auth.header",
+    "value": "Access token sent with Zoho-oauthtoken prefix (page also mentions Bearer scheme, conflicting)",
+    "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+    "quote": "the access token must be passed in the Authorization header with the prefix \"Zoho-oauthtoken\"",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "auth.token_expiry",
+    "value": "Access tokens valid for 1 hour",
+    "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+    "quote": "Access tokens are valid for 1 hour. Use the stored refresh token to generate a new access token.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "auth.scopes",
+    "value": "Scope format service.scope.operation e.g. ZohoCliq.Bots.READ",
+    "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+    "quote": "scope = service_name.scope_name.operation_type",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "access.credential_registration",
+    "value": "Developers register a client in the Zoho API Console; Self Client is an offered type",
+    "url": "https://www.zoho.com/cliq/help/restapi/v3/registerclient/",
+    "quote": "Go to the Zoho API Console, then click GET STARTED.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.protocol",
+    "value": "RESTful API with JSON bodies at cliq.zoho.com/api/v3",
+    "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+    "quote": "designed based on RESTful architecture principles",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.sdks",
+    "value": "No vendor SDK found; OpenAPI document and Postman collection are offered",
+    "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+    "quote": "Download Zoho Cliq OpenAPI Document",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.webhooks_incoming",
+    "value": "Each bot has an incoming webhook URL for external systems to post messages",
+    "url": "https://www.zoho.com/cliq/help/restapi/v3/bots/",
+    "quote": "Post a message to a bot using its incoming webhook URL.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "api.webhooks_outgoing",
+    "value": "Webhook bot type sends HTTP POST to an execution_url you configure",
+    "url": "https://www.zoho.com/cliq/help/restapi/v3/bots/",
+    "quote": "A Webhook bot delegates all handler execution to your own external server.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Zoho publishes an official Cliq MCP server, set up via the Zoho MCP console at mcp.zoho.com",
+    "url": "https://www.zoho.com/cliq/help/platform/configure-zoho-cliq-mcp.html",
+    "quote": "Navigate to the Zoho MCP console.",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "mcp.tools",
+    "value": "Roughly 300 tools across about 50 categories including bots, chats, messages, channels, reminders, datastores",
+    "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp-tools.html",
+    "quote": "Bots: list_bots, create_bot, get_bot, update_bot, delete_bot",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   },
+   {
+    "field": "access.plan_note",
+    "value": "MCP setup advises using the appropriate plan for integration sections",
+    "url": "https://www.zoho.com/cliq/help/platform/configure-zoho-cliq-mcp.html",
+    "quote": "Ensure you are using your AI agent with the appropriate plan to access the integration sections",
+    "verified": false,
+    "verify_note": "source unreachable (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010))"
+   }
+  ],
+  "open_questions": [
+   "Exact tier: whether a free Zoho account can create a Self Client and get working test tokens, or whether a workspace admin/paid plan is needed (a forum anecdote suggests admin role matters for some scopes; not official).",
+   "Published rate limits for the REST API.",
+   "Whether an official SDK exists (none found).",
+   "Full scope table for ZohoCliq.* scopes and which need admin.",
+   "Whether a community MCP server for Cliq exists on GitHub (none surfaced in search; third-party hosted connectors Zapier, Merge, Pipedream, Unified.to exist but are commercial).",
+   "Incoming webhook authentication details (token/zapikey vs extension_key) were not fully read.",
+   "Sandbox or test-org availability."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "high",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 0.0,
+ "flags": [],
+ "error": null
+}

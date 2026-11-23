@@ -1,0 +1,251 @@
+{
+ "id": 58,
+ "name": "Sherlock",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:21:54Z",
+ "duration_s": 53.3,
+ "cost_usd": 0.0697,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://github.com/sherlock-project/sherlock",
+   "title": "GitHub - sherlock-project/sherlock: Hunt down social media accounts by username across social networks · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://github.com",
+   "title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHub · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.github.com/en",
+   "title": "GitHub Docs",
+   "rendered": true
+  },
+  {
+   "id": "S4",
+   "url": "https://github.com/developers",
+   "title": "Developers · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.github.com/en/authentication",
+   "title": "Authentication documentation - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://github.com/pricing",
+   "title": "GitHub plans and pricing · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://github.com/features/copilot/plans",
+   "title": "GitHub Copilot · Plans & pricing for every developer & team · GitHub · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://github.com/mcp",
+   "title": "MCP Registry · Connect Agents to tools · GitHub",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://learn.github.com/credentials",
+   "title": "GitHub Learn - Credentials",
+   "rendered": true
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.github.com/en/integrations/concepts/about-building-integrations",
+   "title": "About building integrations - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://docs.github.com/en/graphql",
+   "title": "GitHub GraphQL API documentation - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://docs.github.com/en/webhooks",
+   "title": "Webhooks documentation - GitHub Docs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
+   "title": "holistis/bug-bounty-intelligence-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jcucci/dotnet-sherlock-mcp",
+   "title": "jcucci/dotnet-sherlock-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Burnsedia/sherlock-mcp",
+   "title": "Burnsedia/sherlock-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/qKitNp/sherlock_mcp",
+   "title": "qKitNp/sherlock_mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Hackerobi/pentest-osint-mcp-server",
+   "title": "Hackerobi/pentest-osint-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/NTU-Sherlock/wp-publisher-mcp",
+   "title": "NTU-Sherlock/wp-publisher-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/NaroChatyan/targetfinder",
+   "title": "NaroChatyan/targetfinder",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/H4RR1SON/sherlock-mcp",
+   "title": "H4RR1SON/sherlock-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://sherlockproject.xyz",
+   "developer_portal": "https://github.com/sherlock-project/sherlock",
+   "description": "Sherlock is an open-source Python CLI tool that hunts down social media accounts by username across 400+ social networks.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Source S1 is the sherlock-project/sherlock repo; it is a CLI OSINT tool, not a hosted API."
+  },
+  "auth": {
+   "methods": [],
+   "primary": null,
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "No authentication; the tool runs locally."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "None stated; MIT licensed open-source tool installed locally."
+  },
+  "api": {
+   "protocols": [
+    "CLI/library"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "usernames",
+    "sites"
+   ],
+   "read_ops": [
+    "search usernames across social networks",
+    "export results to txt/csv/xlsx/json"
+   ],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "",
+   "limitations": "A CLI tool with no hosted API; the sources show no REST API. It does single-purpose username lookup across sites."
+  },
+  "mcp": {
+   "official": "no",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/Burnsedia/sherlock-mcp",
+    "https://github.com/qKitNp/sherlock_mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "api.protocols",
+    "value": "CLI/library",
+    "url": "https://github.com/sherlock-project/sherlock",
+    "quote": "To search for only one user: sherlock user123 To search for more than one user: sherlock user1 user2 user3",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Limited",
+    "url": "https://github.com/sherlock-project/sherlock",
+    "quote": "Hunt down social media accounts by username across 400+ social networks",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "none; local CLI with no auth documented",
+    "url": "https://github.com/sherlock-project/sherlock",
+    "quote": "pipx install sherlock-project pip or uv may be used in place of pipx docker run -it --rm sherlock/sherlock",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://github.com/sherlock-project/sherlock",
+    "quote": "Accounts found will be stored in an individual text file with the corresponding username",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "no",
+    "url": "https://github.com/sherlock-project/sherlock",
+    "quote": "Community-maintained packages are available for Debian (>= 13), Ubuntu (>= 22.10), Homebrew, Kali, and BlackArch.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "No official Sherlock Project MCP server was found; the community sherlock-mcp repos are by individual users.",
+   "The sources do not state the MIT license in text beyond the 'MIT license' label."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "low",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Local CLI/library skill (sandboxed execution)",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library interface.",
+   "API surface is limited; toolkit would cover few actions."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

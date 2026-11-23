@@ -1,0 +1,259 @@
+{
+ "id": 63,
+ "name": "Netlify",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:22:36Z",
+ "duration_s": 62.8,
+ "cost_usd": 0.0743,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+   "title": "Get started with the Netlify API | Netlify Docs",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.netlify.com",
+   "title": "Netlify Documentation | Netlify Docs",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://app.netlify.com/applications",
+   "title": "Netlify",
+   "rendered": true
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.netlify.com/build/build-with-ai/agent-setup-guides/agent-setup-overview/",
+   "title": "Agent setup overview | Netlify Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.netlify.com/api-and-cli-guides/overview/",
+   "title": "API & CLI Guides | Netlify Docs",
+   "rendered": true
+  },
+  {
+   "id": "S6",
+   "url": "https://open-api.netlify.com",
+   "title": "Netlify API documentation",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.netlify.com/manage/security/overview/",
+   "title": "Security overview | Netlify Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://docs.netlify.com/build/data-and-storage/netlify-database/api/",
+   "title": "API reference | Netlify Docs",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.netlify.com/build/server/api/",
+   "title": "API reference | Netlify Docs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/netlify/netlify-mcp",
+   "title": "netlify/netlify-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/bella-and-c/sleepy-dog-lock",
+   "title": "bella-and-c/sleepy-dog-lock",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/jbulger82/LLAMA_Hub",
+   "title": "jbulger82/LLAMA_Hub",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/areebahmeddd/superbox.ai",
+   "title": "areebahmeddd/superbox.ai",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mathruffian-dot/clasp-netlify-mcp-guide",
+   "title": "mathruffian-dot/clasp-netlify-mcp-guide",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ChatGPT3a01/Google-Antigravity-MCP",
+   "title": "ChatGPT3a01/Google-Antigravity-MCP",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ozuijoy/personal-ai-netlify",
+   "title": "ozuijoy/personal-ai-netlify",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/demircigoksu/jev-netlify-mcp",
+   "title": "demircigoksu/jev-netlify-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://docs.netlify.com",
+   "developer_portal": "https://docs.netlify.com/api-and-cli-guides/overview/",
+   "description": "Netlify is a web development platform for deploying sites and apps, with a REST API, CLI, SDK, serverless functions, AI Gateway, and MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Docs describe the Netlify REST API and platform."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "OAuth2 required for public integrations; register an application for client key/secret; authorization endpoint https://app.netlify.com/authorize. Docs also mention a ticket-exchange flow in the OpenAPI reference.",
+   "token_refresh": "PATs have a selectable expiration date. Password reset invalidates all PATs and OAuth tokens.",
+   "scopes_notes": "PATs can optionally grant access to SAML-based teams; with SSO, PATs are denied team access by default."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Public integrations must use OAuth2 with a registered application. Some features (e.g. granular env var scopes) require Pro plans."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "sites",
+    "deploys",
+    "DNS",
+    "forms",
+    "accounts/teams",
+    "members",
+    "environment variables",
+    "snippets",
+    "OAuth tickets",
+    "audit log",
+    "databases"
+   ],
+   "read_ops": [
+    "getCurrentUser",
+    "listAccountsForUser",
+    "listMembersForAccount",
+    "listAccountAuditEvents",
+    "getEnvVars",
+    "GET /deploys/{deploy_id}"
+   ],
+   "write_ops": [
+    "createAccount",
+    "updateAccount",
+    "addMemberToAccount",
+    "updateAccountMember",
+    "createEnvVars",
+    "create site",
+    "create deploy",
+    "POST /sites/{site_id}/database"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Netlify Server is in Early Access."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/netlify/netlify-mcp",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2, Bearer/PAT",
+    "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+    "quote": "To authenticate API requests, include the token in the authorization header:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2 required for public integrations",
+    "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+    "quote": "If you’re making a public integration with Netlify for others to enjoy, you must use OAuth2.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+    "quote": "Select Generate token . Copy the token to your clipboard and store it in a safe location.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+    "quote": "Use the Netlify REST API to manage atomic deploys of your sites and apps, manage form submissions, inject JavaScript snippets, manage DNS",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.netlify.com/",
+    "quote": "Manage sites, deploys, DNS, and more programmatically with the Netlify REST API—ideal for automating workflows and integrating into your systems.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.netlify.com/build/build-with-ai/agent-setup-guides/agent-setup-overview/",
+    "quote": "Netlify offers an MCP server , which you can connect to through a connector, plugin, or your agent.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": []
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

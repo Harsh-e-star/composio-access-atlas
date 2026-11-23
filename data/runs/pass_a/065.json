@@ -1,0 +1,291 @@
+{
+ "id": 65,
+ "name": "Supabase",
+ "category": "Developer, Infra and Data platforms",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:22:54Z",
+ "duration_s": 60.7,
+ "cost_usd": 0.0853,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://supabase.com/docs",
+   "title": "Supabase Docs",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://supabase.com",
+   "title": "Supabase | The Postgres Development Platform",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://supabase.com/docs/guides/api",
+   "title": "Data REST API | Supabase Docs",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://supabase.com/docs/guides/getting-started/api-keys",
+   "title": "API keys | Supabase Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://supabase.com/docs/guides/getting-started/migrating-to-new-api-keys",
+   "title": "Migrating to publishable and secret API keys | Supabase Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://supabase.com/dashboard/project/_/settings/api-keys",
+   "title": "Sign in | Supabase Dashboard",
+   "rendered": true
+  },
+  {
+   "id": "S7",
+   "url": "https://supabase.com/docs/guides/auth",
+   "title": "Auth | Supabase Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://supabase.com/auth",
+   "title": "Auth | Supabase",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://supabase.com/docs/reference/self-hosting-auth/introduction",
+   "title": "Self-Hosting | Supabase Docs",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://supabase.com/docs/reference/api/introduction",
+   "title": "Introduction | Management API Reference | Supabase Docs",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://supabase.com/docs/guides/api/query-plans",
+   "title": "Query plans with explain() | Supabase Docs",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://supabase.com/docs/reference/cli/introduction",
+   "title": "CLI Reference | Supabase Docs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/supabase/mcp",
+   "title": "supabase/mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/alexander-zuev/supabase-mcp-server",
+   "title": "alexander-zuev/supabase-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/panaversity/learn-low-code-agentic-ai",
+   "title": "panaversity/learn-low-code-agentic-ai",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/coleam00/supabase-mcp",
+   "title": "coleam00/supabase-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/HenkDz/selfhosted-supabase-mcp",
+   "title": "HenkDz/selfhosted-supabase-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/zhensherlock/sp500-mcp-server",
+   "title": "zhensherlock/sp500-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/avivgerz-hue/vibe-shield",
+   "title": "avivgerz-hue/vibe-shield",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/JoshuaRileyDev/supabase-mcp-server",
+   "title": "JoshuaRileyDev/supabase-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://supabase.com",
+   "developer_portal": "https://supabase.com/docs",
+   "description": "Supabase is a Postgres development platform providing database, auth, storage, realtime, edge functions, vector, and auto-generated REST APIs, plus a Management API and CLI.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Supabase docs, Data REST API, Management API, CLI."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Management API supports OAuth2 for third-party apps acting on behalf of Supabase users; tokens short-lived and scoped.",
+   "token_refresh": "OAuth2 tokens are short-lived; PATs have custom expiry.",
+   "scopes_notes": "Scoped PATs limit orgs/projects/permissions; OAuth apps need scopes like secrets:read to read API keys."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Legacy anon/service_role keys deprecated by end of 2026; use publishable/secret keys. Secret keys must stay server-side."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "GraphQL",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "projects",
+    "organizations",
+    "api-keys",
+    "database tables (auto-generated REST)",
+    "auth users",
+    "storage",
+    "edge functions"
+   ],
+   "read_ops": [
+    "Data REST API reads",
+    "list projects",
+    "fetch API keys"
+   ],
+   "write_ops": [
+    "Data REST API create/update/delete",
+    "create projects via Management API"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "Management API: 120 requests per minute per user, per project or organization, per endpoint; some analytics endpoints 30/min.",
+   "limitations": "Data API is auto-generated from the Postgres schema and governed by Row Level Security."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/supabase/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/alexander-zuev/supabase-mcp-server",
+    "https://github.com/coleam00/supabase-mcp",
+    "https://github.com/HenkDz/selfhosted-supabase-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key, Bearer/PAT, OAuth2",
+    "url": "https://supabase.com/docs/reference/api/introduction",
+    "quote": "OAuth2: OAuth2 allows your application to generate tokens on behalf of a Supabase user, providing secure and limited access to their account without requiring their credentials.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "API key",
+    "url": "https://supabase.com/docs/guides/getting-started/api-keys",
+    "quote": "Every request to your Supabase project carries an API key. The key identifies what is calling your project: a web page, a mobile app, a server, or an Edge Function.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://supabase.com/docs/guides/api",
+    "quote": "You can find the API Keys in the Settings > API Keys section of the Dashboard.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://supabase.com/docs/guides/api",
+    "quote": "It exposes everything you need from a CRUD API at the URL https://<project_ref>.supabase.co/rest/v1/ .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "GraphQL",
+    "url": "https://supabase.com/docs",
+    "quote": "Data REST API GraphQL API Use a client library",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://supabase.com/docs/guides/api",
+    "quote": "Basic CRUD operations (Create/Read/Update/Delete)",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://github.com/supabase/mcp",
+    "quote": "Connect Supabase to your AI assistants",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "120/min",
+    "url": "https://supabase.com/docs/reference/api/introduction",
+    "quote": "Standard rate limit Limit Duration Scope 120 requests 1 minute Per user, per project or organization, per endpoint",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Is a paid plan needed for any API features?",
+   "Does Supabase offer webhooks via the Management API (Database Webhooks exist in-DB)?",
+   "Is the official MCP documented on supabase.com/docs?"
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/GraphQL/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

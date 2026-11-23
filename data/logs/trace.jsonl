@@ -224,3 +224,667 @@
 {"ts": "2026-11-23T14:18:51Z", "app": 36, "pass": "A", "stage": "6-evidence", "msg": "checking 5 claims against source text"}
 {"ts": "2026-11-23T14:18:52Z", "app": 36, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'OAuth2'] | evidence 1.0 | $0.0713 | 33.9s"}
 {"ts": "2026-11-23T14:18:52Z", "app": 40, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://sendgrid.com']"}
+{"ts": "2026-11-23T14:18:55Z", "app": 37, "pass": "A", "stage": "6-evidence", "msg": "checking 8 claims against source text"}
+{"ts": "2026-11-23T14:18:55Z", "app": 37, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key'] | evidence 1.0 | $0.0557 | 25.6s"}
+{"ts": "2026-11-23T14:18:55Z", "app": 41, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://shopify.dev']"}
+{"ts": "2026-11-23T14:18:56Z", "app": 39, "pass": "A", "stage": "6-evidence", "msg": "checking 2 claims against source text"}
+{"ts": "2026-11-23T14:18:57Z", "app": 38, "pass": "A", "stage": "1-discovery", "msg": "4 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:18:57Z", "app": 38, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 4 sources"}
+{"ts": "2026-11-23T14:18:57Z", "app": 10, "pass": "B", "stage": "6-evidence", "msg": "checking 14 claims against source text"}
+{"ts": "2026-11-23T14:18:59Z", "app": 8, "pass": "B", "stage": "6-evidence", "msg": "checking 17 claims against source text"}
+{"ts": "2026-11-23T14:19:02Z", "app": 9, "pass": "B", "stage": "6-evidence", "msg": "checking 12 claims against source text"}
+{"ts": "2026-11-23T14:19:02Z", "app": 9, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=trial_self_serve | auth=['API key', 'OAuth2'] | evidence 0.833 | $0.0716 | 59.3s"}
+{"ts": "2026-11-23T14:19:02Z", "app": 11, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:19:03Z", "app": 39, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence 1.0 | $0.0259 | 22.9s"}
+{"ts": "2026-11-23T14:19:03Z", "app": 42, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://woocommerce.com/document/woocommerce-rest-api', 'https://woocommerce.com']"}
+{"ts": "2026-11-23T14:19:03Z", "app": 7, "pass": "B", "stage": "6-evidence", "msg": "checking 19 claims against source text"}
+{"ts": "2026-11-23T14:19:04Z", "app": 10, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=admin_approval | auth=['OAuth2', 'API key'] | evidence 0.929 | $0.0406 | 60.8s"}
+{"ts": "2026-11-23T14:19:04Z", "app": 12, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:19:08Z", "app": 8, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'OAuth2'] | evidence 0.882 | $0.0591 | 65.3s"}
+{"ts": "2026-11-23T14:19:08Z", "app": 13, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:19:12Z", "app": 38, "pass": "A", "stage": "6-evidence", "msg": "checking 5 claims against source text"}
+{"ts": "2026-11-23T14:19:12Z", "app": 38, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['OAuth2'] | evidence 1.0 | $0.0291 | 39.9s"}
+{"ts": "2026-11-23T14:19:12Z", "app": 43, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developer.bigcommerce.com']"}
+{"ts": "2026-11-23T14:19:14Z", "app": 6, "pass": "B", "stage": "6-evidence", "msg": "checking 17 claims against source text"}
+{"ts": "2026-11-23T14:19:16Z", "app": 40, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:19:16Z", "app": 40, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:19:19Z", "app": 6, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=free_self_serve | auth=['OAuth2', 'Other'] | evidence 0.882 | $0.0622 | 76.3s"}
+{"ts": "2026-11-23T14:19:19Z", "app": 14, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:19:36Z", "app": 40, "pass": "A", "stage": "6-evidence", "msg": "checking 6 claims against source text"}
+{"ts": "2026-11-23T14:19:37Z", "app": 40, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key'] | evidence 1.0 | $0.0833 | 45.3s"}
+{"ts": "2026-11-23T14:19:37Z", "app": 44, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developer.salesforce.com/docs/commerce', 'https://developer.salesforce.com']"}
+{"ts": "2026-11-23T14:19:42Z", "app": 44, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 2 failed, 1 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:19:42Z", "app": 44, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:19:42Z", "app": 45, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developer.adobe.com/commerce', 'https://developer.adobe.com']"}
+{"ts": "2026-11-23T14:19:45Z", "app": 42, "pass": "A", "stage": "1-discovery", "msg": "13 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:19:45Z", "app": 42, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 13 sources"}
+{"ts": "2026-11-23T14:19:49Z", "app": 34, "pass": "A", "stage": "1-discovery", "msg": "7 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:19:49Z", "app": 34, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 7 sources"}
+{"ts": "2026-11-23T14:19:52Z", "app": 41, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:19:52Z", "app": 41, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:19:55Z", "app": 35, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:19:55Z", "app": 35, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:19:57Z", "app": 34, "pass": "A", "stage": "6-evidence", "msg": "checking 1 claims against source text"}
+{"ts": "2026-11-23T14:19:57Z", "app": 34, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence 0.0 | $0.0394 | 107.9s"}
+{"ts": "2026-11-23T14:19:57Z", "app": 46, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developers.squarespace.com']"}
+{"ts": "2026-11-23T14:20:04Z", "app": 41, "pass": "A", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:20:04Z", "app": 41, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT', 'Other'] | evidence 1.0 | $0.0784 | 68.6s"}
+{"ts": "2026-11-23T14:20:04Z", "app": 47, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://api-docs.ecwid.com']"}
+{"ts": "2026-11-23T14:20:04Z", "app": 45, "pass": "A", "stage": "1-discovery", "msg": "11 pages fetched, 1 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:20:04Z", "app": 45, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 11 sources"}
+{"ts": "2026-11-23T14:20:05Z", "app": 42, "pass": "A", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:20:05Z", "app": 42, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'Basic', 'Other'] | evidence 1.0 | $0.089 | 62.6s"}
+{"ts": "2026-11-23T14:20:05Z", "app": 48, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://gumroad.com/api', 'https://gumroad.com']"}
+{"ts": "2026-11-23T14:20:06Z", "app": 35, "pass": "A", "stage": "6-evidence", "msg": "checking 6 claims against source text"}
+{"ts": "2026-11-23T14:20:07Z", "app": 43, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:20:07Z", "app": 43, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:20:10Z", "app": 35, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'API key'] | evidence 1.0 | $0.0695 | 114.2s"}
+{"ts": "2026-11-23T14:20:10Z", "app": 49, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developer-docs.amazon.com/sp-api', 'https://developer-docs.amazon.com']"}
+{"ts": "2026-11-23T14:20:12Z", "app": 46, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:20:12Z", "app": 46, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:20:17Z", "app": 45, "pass": "A", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:20:17Z", "app": 45, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['OAuth2', 'API key'] | evidence 0.857 | $0.0741 | 34.6s"}
+{"ts": "2026-11-23T14:20:17Z", "app": 50, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://fanbasis.com']"}
+{"ts": "2026-11-23T14:20:17Z", "app": 43, "pass": "A", "stage": "6-evidence", "msg": "checking 5 claims against source text"}
+{"ts": "2026-11-23T14:20:19Z", "app": 43, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT'] | evidence 1.0 | $0.073 | 66.2s"}
+{"ts": "2026-11-23T14:20:19Z", "app": 51, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://docs.dataforseo.com']"}
+{"ts": "2026-11-23T14:20:19Z", "app": 47, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 0 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:20:19Z", "app": 47, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:20:22Z", "app": 48, "pass": "A", "stage": "1-discovery", "msg": "8 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:20:22Z", "app": 48, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 8 sources"}
+{"ts": "2026-11-23T14:20:22Z", "app": 11, "pass": "B", "stage": "6-evidence", "msg": "checking 15 claims against source text"}
+{"ts": "2026-11-23T14:20:23Z", "app": 12, "pass": "B", "stage": "6-evidence", "msg": "checking 0 claims against source text"}
+{"ts": "2026-11-23T14:20:23Z", "app": 12, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence None | $0.0614 | 79.1s"}
+{"ts": "2026-11-23T14:20:23Z", "app": 15, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:20:23Z", "app": 46, "pass": "A", "stage": "6-evidence", "msg": "checking 8 claims against source text"}
+{"ts": "2026-11-23T14:20:23Z", "app": 46, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'API key'] | evidence 1.0 | $0.0699 | 25.7s"}
+{"ts": "2026-11-23T14:20:23Z", "app": 52, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://seranking.com/api', 'https://seranking.com']"}
+{"ts": "2026-11-23T14:20:26Z", "app": 50, "pass": "A", "stage": "1-discovery", "msg": "2 pages fetched, 0 failed, 0 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:20:26Z", "app": 50, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 2 sources"}
+{"ts": "2026-11-23T14:20:29Z", "app": 47, "pass": "A", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:20:29Z", "app": 47, "pass": "A", "stage": "5-verdict", "msg": "CONDITIONAL | tier=paid_plan | auth=['OAuth2', 'Bearer/PAT'] | evidence 1.0 | $0.0575 | 25.5s"}
+{"ts": "2026-11-23T14:20:29Z", "app": 53, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://ahrefs.com/api', 'https://ahrefs.com']"}
+{"ts": "2026-11-23T14:20:33Z", "app": 51, "pass": "A", "stage": "1-discovery", "msg": "6 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:20:33Z", "app": 51, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 6 sources"}
+{"ts": "2026-11-23T14:20:33Z", "app": 11, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=trial_self_serve | auth=['OAuth2', 'Basic'] | evidence 0.933 | $0.0719 | 91.3s"}
+{"ts": "2026-11-23T14:20:33Z", "app": 16, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:20:33Z", "app": 48, "pass": "A", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:20:33Z", "app": 48, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2'] | evidence 1.0 | $0.0587 | 28.2s"}
+{"ts": "2026-11-23T14:20:33Z", "app": 54, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://docs.mrscraper.com']"}
+{"ts": "2026-11-23T14:20:35Z", "app": 50, "pass": "A", "stage": "6-evidence", "msg": "checking 3 claims against source text"}
+{"ts": "2026-11-23T14:20:38Z", "app": 50, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence 1.0 | $0.0287 | 21.2s"}
+{"ts": "2026-11-23T14:20:38Z", "app": 55, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://docs.apify.com']"}
+{"ts": "2026-11-23T14:20:41Z", "app": 14, "pass": "B", "stage": "6-evidence", "msg": "checking 12 claims against source text"}
+{"ts": "2026-11-23T14:20:42Z", "app": 52, "pass": "A", "stage": "1-discovery", "msg": "9 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:20:42Z", "app": 52, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 9 sources"}
+{"ts": "2026-11-23T14:20:46Z", "app": 51, "pass": "A", "stage": "6-evidence", "msg": "checking 10 claims against source text"}
+{"ts": "2026-11-23T14:20:46Z", "app": 53, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 1 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:20:46Z", "app": 53, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:20:47Z", "app": 13, "pass": "B", "stage": "6-evidence", "msg": "checking 18 claims against source text"}
+{"ts": "2026-11-23T14:20:47Z", "app": 14, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT'] | evidence 0.667 | $0.0534 | 88.4s"}
+{"ts": "2026-11-23T14:20:47Z", "app": 17, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:20:50Z", "app": 13, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=trial_self_serve | auth=['Basic', 'OAuth2'] | evidence 0.611 | $0.0858 | 101.8s"}
+{"ts": "2026-11-23T14:20:50Z", "app": 18, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:20:50Z", "app": 51, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Basic'] | evidence 1.0 | $0.0732 | 31.6s"}
+{"ts": "2026-11-23T14:20:50Z", "app": 56, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://firecrawl.dev']"}
+{"ts": "2026-11-23T14:20:51Z", "app": 52, "pass": "A", "stage": "6-evidence", "msg": "checking 6 claims against source text"}
+{"ts": "2026-11-23T14:20:51Z", "app": 52, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=trial_self_serve | auth=['OAuth2', 'API key'] | evidence 1.0 | $0.0944 | 28.3s"}
+{"ts": "2026-11-23T14:20:51Z", "app": 57, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://brightdata.com']"}
+{"ts": "2026-11-23T14:20:53Z", "app": 54, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:20:53Z", "app": 54, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:21:01Z", "app": 53, "pass": "A", "stage": "6-evidence", "msg": "checking 9 claims against source text"}
+{"ts": "2026-11-23T14:21:01Z", "app": 53, "pass": "A", "stage": "5-verdict", "msg": "CONDITIONAL | tier=paid_plan | auth=['Bearer/PAT', 'OAuth2'] | evidence 1.0 | $0.0774 | 31.6s"}
+{"ts": "2026-11-23T14:21:01Z", "app": 58, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://github.com/sherlock-project/sherlock', 'https://github.com']"}
+{"ts": "2026-11-23T14:21:05Z", "app": 49, "pass": "A", "stage": "1-discovery", "msg": "13 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:21:05Z", "app": 49, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 13 sources"}
+{"ts": "2026-11-23T14:21:07Z", "app": 54, "pass": "A", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:21:07Z", "app": 54, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'OAuth2', 'Basic'] | evidence 1.0 | $0.0876 | 33.3s"}
+{"ts": "2026-11-23T14:21:07Z", "app": 59, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://waterfall.io']"}
+{"ts": "2026-11-23T14:21:08Z", "app": 57, "pass": "A", "stage": "1-discovery", "msg": "11 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:21:08Z", "app": 57, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 11 sources"}
+{"ts": "2026-11-23T14:21:11Z", "app": 7, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2'] | evidence 0.053 | $0.0719 | 188.1s"}
+{"ts": "2026-11-23T14:21:11Z", "app": 19, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:21:11Z", "app": 56, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:21:11Z", "app": 56, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:21:18Z", "app": 49, "pass": "A", "stage": "6-evidence", "msg": "checking 6 claims against source text"}
+{"ts": "2026-11-23T14:21:20Z", "app": 57, "pass": "A", "stage": "6-evidence", "msg": "checking 9 claims against source text"}
+{"ts": "2026-11-23T14:21:20Z", "app": 57, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'Basic', 'OAuth2'] | evidence 1.0 | $0.087 | 28.9s"}
+{"ts": "2026-11-23T14:21:20Z", "app": 60, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://clay.com']"}
+{"ts": "2026-11-23T14:21:20Z", "app": 49, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['OAuth2'] | evidence 1.0 | $0.0754 | 70.1s"}
+{"ts": "2026-11-23T14:21:20Z", "app": 61, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://docs.github.com/rest', 'https://docs.github.com']"}
+{"ts": "2026-11-23T14:21:21Z", "app": 55, "pass": "A", "stage": "1-discovery", "msg": "9 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:21:21Z", "app": 55, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 9 sources"}
+{"ts": "2026-11-23T14:21:24Z", "app": 56, "pass": "A", "stage": "6-evidence", "msg": "checking 6 claims against source text"}
+{"ts": "2026-11-23T14:21:25Z", "app": 56, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'OAuth2'] | evidence 1.0 | $0.0818 | 35.2s"}
+{"ts": "2026-11-23T14:21:25Z", "app": 62, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://vercel.com/docs/rest-api', 'https://vercel.com']"}
+{"ts": "2026-11-23T14:21:28Z", "app": 61, "pass": "A", "stage": "1-discovery", "msg": "11 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:21:28Z", "app": 61, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 11 sources"}
+{"ts": "2026-11-23T14:21:31Z", "app": 59, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 0 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:21:31Z", "app": 59, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:21:34Z", "app": 55, "pass": "A", "stage": "6-evidence", "msg": "checking 8 claims against source text"}
+{"ts": "2026-11-23T14:21:34Z", "app": 55, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2'] | evidence 1.0 | $0.0696 | 55.5s"}
+{"ts": "2026-11-23T14:21:34Z", "app": 63, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://docs.netlify.com/api', 'https://docs.netlify.com']"}
+{"ts": "2026-11-23T14:21:34Z", "app": 58, "pass": "A", "stage": "1-discovery", "msg": "12 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:21:34Z", "app": 58, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 12 sources"}
+{"ts": "2026-11-23T14:21:39Z", "app": 60, "pass": "A", "stage": "1-discovery", "msg": "12 pages fetched, 1 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:21:39Z", "app": 60, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 12 sources"}
+{"ts": "2026-11-23T14:21:42Z", "app": 62, "pass": "A", "stage": "1-discovery", "msg": "4 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:21:42Z", "app": 62, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 4 sources"}
+{"ts": "2026-11-23T14:21:42Z", "app": 61, "pass": "A", "stage": "6-evidence", "msg": "checking 8 claims against source text"}
+{"ts": "2026-11-23T14:21:42Z", "app": 61, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2', 'Service account/JWT'] | evidence 1.0 | $0.0759 | 21.8s"}
+{"ts": "2026-11-23T14:21:42Z", "app": 64, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developers.cloudflare.com/api', 'https://developers.cloudflare.com']"}
+{"ts": "2026-11-23T14:21:43Z", "app": 16, "pass": "B", "stage": "6-evidence", "msg": "checking 14 claims against source text"}
+{"ts": "2026-11-23T14:21:44Z", "app": 15, "pass": "B", "stage": "6-evidence", "msg": "checking 12 claims against source text"}
+{"ts": "2026-11-23T14:21:53Z", "app": 59, "pass": "A", "stage": "6-evidence", "msg": "checking 6 claims against source text"}
+{"ts": "2026-11-23T14:21:53Z", "app": 59, "pass": "A", "stage": "5-verdict", "msg": "GATED | tier=partner_or_sales | auth=['API key'] | evidence 1.0 | $0.0754 | 46.7s"}
+{"ts": "2026-11-23T14:21:54Z", "app": 65, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://supabase.com/docs', 'https://supabase.com']"}
+{"ts": "2026-11-23T14:21:54Z", "app": 58, "pass": "A", "stage": "6-evidence", "msg": "checking 5 claims against source text"}
+{"ts": "2026-11-23T14:21:54Z", "app": 58, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=[] | evidence 1.0 | $0.0697 | 53.3s"}
+{"ts": "2026-11-23T14:21:54Z", "app": 66, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://neo4j.com/docs/api', 'https://neo4j.com']"}
+{"ts": "2026-11-23T14:21:54Z", "app": 60, "pass": "A", "stage": "6-evidence", "msg": "checking 6 claims against source text"}
+{"ts": "2026-11-23T14:21:54Z", "app": 60, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['API key'] | evidence 1.0 | $0.083 | 33.8s"}
+{"ts": "2026-11-23T14:21:54Z", "app": 67, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://docs.snowflake.com']"}
+{"ts": "2026-11-23T14:21:54Z", "app": 62, "pass": "A", "stage": "6-evidence", "msg": "checking 5 claims against source text"}
+{"ts": "2026-11-23T14:21:55Z", "app": 62, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT'] | evidence 1.0 | $0.0821 | 29.3s"}
+{"ts": "2026-11-23T14:21:55Z", "app": 68, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://mongodb.com/docs/atlas/api', 'https://mongodb.com']"}
+{"ts": "2026-11-23T14:21:55Z", "app": 64, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 2 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:21:55Z", "app": 64, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:21:55Z", "app": 69, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://docs.datadoghq.com/api', 'https://docs.datadoghq.com']"}
+{"ts": "2026-11-23T14:21:57Z", "app": 15, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=admin_approval | auth=['Bearer/PAT', 'OAuth2'] | evidence 0.917 | $0.0484 | 93.9s"}
+{"ts": "2026-11-23T14:21:57Z", "app": 20, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:21:59Z", "app": 16, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=trial_self_serve | auth=['API key', 'Bearer/PAT', 'OAuth2'] | evidence 1.0 | $0.0563 | 85.7s"}
+{"ts": "2026-11-23T14:21:59Z", "app": 21, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:22:09Z", "app": 17, "pass": "B", "stage": "6-evidence", "msg": "checking 17 claims against source text"}
+{"ts": "2026-11-23T14:22:13Z", "app": 17, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['API key', 'OAuth2'] | evidence 0.765 | $0.063 | 85.9s"}
+{"ts": "2026-11-23T14:22:13Z", "app": 22, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:22:25Z", "app": 63, "pass": "A", "stage": "1-discovery", "msg": "9 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:22:25Z", "app": 63, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 9 sources"}
+{"ts": "2026-11-23T14:22:29Z", "app": 69, "pass": "A", "stage": "1-discovery", "msg": "11 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:22:29Z", "app": 69, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 11 sources"}
+{"ts": "2026-11-23T14:22:36Z", "app": 63, "pass": "A", "stage": "6-evidence", "msg": "checking 6 claims against source text"}
+{"ts": "2026-11-23T14:22:36Z", "app": 63, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT'] | evidence 1.0 | $0.0743 | 62.8s"}
+{"ts": "2026-11-23T14:22:36Z", "app": 70, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://docs.sentry.io/api', 'https://docs.sentry.io']"}
+{"ts": "2026-11-23T14:22:38Z", "app": 65, "pass": "A", "stage": "1-discovery", "msg": "12 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:22:38Z", "app": 65, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 12 sources"}
+{"ts": "2026-11-23T14:22:41Z", "app": 18, "pass": "B", "stage": "6-evidence", "msg": "checking 18 claims against source text"}
+{"ts": "2026-11-23T14:22:42Z", "app": 67, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:22:42Z", "app": 67, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:22:45Z", "app": 68, "pass": "A", "stage": "1-discovery", "msg": "13 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:22:45Z", "app": 68, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 13 sources"}
+{"ts": "2026-11-23T14:22:45Z", "app": 18, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=paid_plan | auth=['OAuth2', 'API key'] | evidence 0.667 | $0.0851 | 115.4s"}
+{"ts": "2026-11-23T14:22:45Z", "app": 23, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:22:46Z", "app": 69, "pass": "A", "stage": "6-evidence", "msg": "checking 6 claims against source text"}
+{"ts": "2026-11-23T14:22:47Z", "app": 69, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['API key', 'OAuth2'] | evidence 1.0 | $0.0893 | 51.9s"}
+{"ts": "2026-11-23T14:22:47Z", "app": 71, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developers.notion.com']"}
+{"ts": "2026-11-23T14:22:47Z", "app": 19, "pass": "B", "stage": "6-evidence", "msg": "checking 11 claims against source text"}
+{"ts": "2026-11-23T14:22:52Z", "app": 19, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=admin_approval | auth=['Basic', 'OAuth2'] | evidence 0.545 | $0.0581 | 100.8s"}
+{"ts": "2026-11-23T14:22:52Z", "app": 24, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:22:53Z", "app": 65, "pass": "A", "stage": "6-evidence", "msg": "checking 8 claims against source text"}
+{"ts": "2026-11-23T14:22:53Z", "app": 67, "pass": "A", "stage": "6-evidence", "msg": "checking 5 claims against source text"}
+{"ts": "2026-11-23T14:22:54Z", "app": 65, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'Bearer/PAT', 'OAuth2'] | evidence 1.0 | $0.0853 | 60.7s"}
+{"ts": "2026-11-23T14:22:54Z", "app": 72, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://airtable.com/developers', 'https://airtable.com']"}
+{"ts": "2026-11-23T14:22:55Z", "app": 67, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=trial_self_serve | auth=['OAuth2', 'Other'] | evidence 1.0 | $0.0691 | 61.4s"}
+{"ts": "2026-11-23T14:22:55Z", "app": 73, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developers.linear.app']"}
+{"ts": "2026-11-23T14:22:56Z", "app": 70, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:22:56Z", "app": 70, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:22:56Z", "app": 68, "pass": "A", "stage": "6-evidence", "msg": "checking 5 claims against source text"}
+{"ts": "2026-11-23T14:22:59Z", "app": 68, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Other'] | evidence 1.0 | $0.0692 | 63.9s"}
+{"ts": "2026-11-23T14:22:59Z", "app": 74, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developer.atlassian.com']"}
+{"ts": "2026-11-23T14:23:00Z", "app": 71, "pass": "A", "stage": "1-discovery", "msg": "9 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:23:00Z", "app": 71, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 9 sources"}
+{"ts": "2026-11-23T14:23:07Z", "app": 20, "pass": "B", "stage": "6-evidence", "msg": "checking 12 claims against source text"}
+{"ts": "2026-11-23T14:23:08Z", "app": 70, "pass": "A", "stage": "6-evidence", "msg": "checking 9 claims against source text"}
+{"ts": "2026-11-23T14:23:11Z", "app": 71, "pass": "A", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:23:11Z", "app": 71, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT', 'API key'] | evidence 1.0 | $0.0695 | 24.0s"}
+{"ts": "2026-11-23T14:23:11Z", "app": 75, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developers.asana.com']"}
+{"ts": "2026-11-23T14:23:12Z", "app": 20, "pass": "B", "stage": "5-verdict", "msg": "GATED | tier=partner_or_sales | auth=['Basic'] | evidence 0.75 | $0.0467 | 75.2s"}
+{"ts": "2026-11-23T14:23:12Z", "app": 25, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:23:12Z", "app": 21, "pass": "B", "stage": "6-evidence", "msg": "checking 15 claims against source text"}
+{"ts": "2026-11-23T14:23:13Z", "app": 70, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT', 'Other'] | evidence 1.0 | $0.0694 | 36.4s"}
+{"ts": "2026-11-23T14:23:13Z", "app": 76, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developer.monday.com']"}
+{"ts": "2026-11-23T14:23:17Z", "app": 73, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:23:17Z", "app": 73, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:23:20Z", "app": 22, "pass": "B", "stage": "6-evidence", "msg": "checking 13 claims against source text"}
+{"ts": "2026-11-23T14:23:22Z", "app": 21, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT', 'Other'] | evidence 0.8 | $0.0569 | 82.7s"}
+{"ts": "2026-11-23T14:23:22Z", "app": 26, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:23:25Z", "app": 75, "pass": "A", "stage": "1-discovery", "msg": "9 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:23:25Z", "app": 75, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 9 sources"}
+{"ts": "2026-11-23T14:23:26Z", "app": 22, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'Basic', 'OAuth2'] | evidence 0.923 | $0.0518 | 72.3s"}
+{"ts": "2026-11-23T14:23:26Z", "app": 27, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:23:29Z", "app": 76, "pass": "A", "stage": "1-discovery", "msg": "8 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:23:29Z", "app": 76, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 8 sources"}
+{"ts": "2026-11-23T14:23:30Z", "app": 73, "pass": "A", "stage": "6-evidence", "msg": "checking 8 claims against source text"}
+{"ts": "2026-11-23T14:23:31Z", "app": 73, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'API key'] | evidence 1.0 | $0.0779 | 35.7s"}
+{"ts": "2026-11-23T14:23:31Z", "app": 77, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://clickup.com/api', 'https://clickup.com']"}
+{"ts": "2026-11-23T14:23:35Z", "app": 74, "pass": "A", "stage": "1-discovery", "msg": "9 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:23:35Z", "app": 74, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 9 sources"}
+{"ts": "2026-11-23T14:23:37Z", "app": 75, "pass": "A", "stage": "6-evidence", "msg": "checking 8 claims against source text"}
+{"ts": "2026-11-23T14:23:38Z", "app": 75, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT', 'Service account/JWT'] | evidence 1.0 | $0.0747 | 26.9s"}
+{"ts": "2026-11-23T14:23:38Z", "app": 78, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://coda.io/developers', 'https://coda.io']"}
+{"ts": "2026-11-23T14:23:41Z", "app": 76, "pass": "A", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:23:41Z", "app": 76, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT'] | evidence 1.0 | $0.0723 | 28.0s"}
+{"ts": "2026-11-23T14:23:41Z", "app": 79, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://smartsheet.com/developers', 'https://smartsheet.com']"}
+{"ts": "2026-11-23T14:23:43Z", "app": 72, "pass": "A", "stage": "1-discovery", "msg": "12 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:23:43Z", "app": 72, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 12 sources"}
+{"ts": "2026-11-23T14:23:46Z", "app": 74, "pass": "A", "stage": "6-evidence", "msg": "checking 5 claims against source text"}
+{"ts": "2026-11-23T14:23:47Z", "app": 74, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT'] | evidence 1.0 | $0.0657 | 48.0s"}
+{"ts": "2026-11-23T14:23:47Z", "app": 80, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://help.getharvest.com/api-v2', 'https://harvestapp.com']"}
+{"ts": "2026-11-23T14:23:55Z", "app": 72, "pass": "A", "stage": "6-evidence", "msg": "checking 8 claims against source text"}
+{"ts": "2026-11-23T14:23:55Z", "app": 72, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT'] | evidence 0.125 | $0.0679 | 61.0s"}
+{"ts": "2026-11-23T14:23:55Z", "app": 81, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://stripe.com/docs/api', 'https://stripe.com']"}
+{"ts": "2026-11-23T14:24:02Z", "app": 77, "pass": "A", "stage": "1-discovery", "msg": "11 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:24:02Z", "app": 77, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 11 sources"}
+{"ts": "2026-11-23T14:24:06Z", "app": 24, "pass": "B", "stage": "6-evidence", "msg": "checking 14 claims against source text"}
+{"ts": "2026-11-23T14:24:06Z", "app": 25, "pass": "B", "stage": "6-evidence", "msg": "checking 9 claims against source text"}
+{"ts": "2026-11-23T14:24:09Z", "app": 24, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['OAuth2', 'Bearer/PAT'] | evidence 0.786 | $0.0512 | 77.0s"}
+{"ts": "2026-11-23T14:24:09Z", "app": 28, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:24:10Z", "app": 23, "pass": "B", "stage": "6-evidence", "msg": "checking 19 claims against source text"}
+{"ts": "2026-11-23T14:24:10Z", "app": 25, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['API key'] | evidence 0.778 | $0.0359 | 58.2s"}
+{"ts": "2026-11-23T14:24:10Z", "app": 29, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:24:13Z", "app": 80, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 1 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:24:13Z", "app": 80, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:24:13Z", "app": 77, "pass": "A", "stage": "6-evidence", "msg": "checking 8 claims against source text"}
+{"ts": "2026-11-23T14:24:14Z", "app": 77, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'API key'] | evidence 1.0 | $0.0777 | 42.5s"}
+{"ts": "2026-11-23T14:24:14Z", "app": 82, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://plaid.com/docs', 'https://plaid.com']"}
+{"ts": "2026-11-23T14:24:16Z", "app": 81, "pass": "A", "stage": "1-discovery", "msg": "11 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:24:16Z", "app": 81, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 11 sources"}
+{"ts": "2026-11-23T14:24:20Z", "app": 78, "pass": "A", "stage": "1-discovery", "msg": "2 pages fetched, 6 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:24:20Z", "app": 78, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 2 sources"}
+{"ts": "2026-11-23T14:24:24Z", "app": 80, "pass": "A", "stage": "6-evidence", "msg": "checking 6 claims against source text"}
+{"ts": "2026-11-23T14:24:25Z", "app": 80, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT'] | evidence 1.0 | $0.0665 | 38.3s"}
+{"ts": "2026-11-23T14:24:25Z", "app": 83, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://binance-docs.github.io']"}
+{"ts": "2026-11-23T14:24:26Z", "app": 26, "pass": "B", "stage": "6-evidence", "msg": "checking 16 claims against source text"}
+{"ts": "2026-11-23T14:24:27Z", "app": 81, "pass": "A", "stage": "6-evidence", "msg": "checking 8 claims against source text"}
+{"ts": "2026-11-23T14:24:27Z", "app": 81, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'Basic', 'Bearer/PAT', 'Service account/JWT'] | evidence 1.0 | $0.0903 | 31.3s"}
+{"ts": "2026-11-23T14:24:27Z", "app": 84, "pass": "A", "stage": "1-discovery", "msg": "seeds=[]"}
+{"ts": "2026-11-23T14:24:29Z", "app": 26, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Other'] | evidence 0.812 | $0.0518 | 67.5s"}
+{"ts": "2026-11-23T14:24:29Z", "app": 30, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:24:30Z", "app": 82, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:24:30Z", "app": 82, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:24:31Z", "app": 78, "pass": "A", "stage": "6-evidence", "msg": "checking 6 claims against source text"}
+{"ts": "2026-11-23T14:24:31Z", "app": 78, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT'] | evidence 0.0 | $0.0709 | 53.6s"}
+{"ts": "2026-11-23T14:24:31Z", "app": 85, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://ipayx.ai/docs', 'https://ipayx.ai']"}
+{"ts": "2026-11-23T14:24:33Z", "app": 83, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 1 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:24:33Z", "app": 83, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:24:33Z", "app": 86, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developer.intuit.com']"}
+{"ts": "2026-11-23T14:24:39Z", "app": 27, "pass": "B", "stage": "6-evidence", "msg": "checking 11 claims against source text"}
+{"ts": "2026-11-23T14:24:40Z", "app": 82, "pass": "A", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:24:41Z", "app": 82, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'OAuth2'] | evidence 1.0 | $0.0788 | 27.0s"}
+{"ts": "2026-11-23T14:24:41Z", "app": 87, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developer.xero.com']"}
+{"ts": "2026-11-23T14:24:41Z", "app": 84, "pass": "A", "stage": "1-discovery", "msg": "web-search fallback found ['https://docs.nmi.com', 'https://docs.nmi.com/reference', 'https://docs.nmi.com/llms.txt', 'https://www.nmi.com/payment-gateway']"}
+{"ts": "2026-11-23T14:24:43Z", "app": 27, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Other'] | evidence 0.909 | $0.0428 | 77.1s"}
+{"ts": "2026-11-23T14:24:43Z", "app": 31, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:25:07Z", "app": 28, "pass": "B", "stage": "6-evidence", "msg": "checking 13 claims against source text"}
+{"ts": "2026-11-23T14:25:12Z", "app": 86, "pass": "A", "stage": "1-discovery", "msg": "1 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:25:12Z", "app": 86, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 1 sources"}
+{"ts": "2026-11-23T14:25:13Z", "app": 29, "pass": "B", "stage": "6-evidence", "msg": "checking 18 claims against source text"}
+{"ts": "2026-11-23T14:25:14Z", "app": 28, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2'] | evidence 0.846 | $0.0373 | 65.3s"}
+{"ts": "2026-11-23T14:25:14Z", "app": 32, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:25:18Z", "app": 29, "pass": "B", "stage": "5-verdict", "msg": "GATED | tier=partner_or_sales | auth=['Basic', 'OAuth2'] | evidence 0.944 | $0.0534 | 68.1s"}
+{"ts": "2026-11-23T14:25:18Z", "app": 33, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:25:20Z", "app": 85, "pass": "A", "stage": "1-discovery", "msg": "3 pages fetched, 1 failed, 3 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:25:20Z", "app": 85, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 3 sources"}
+{"ts": "2026-11-23T14:25:21Z", "app": 86, "pass": "A", "stage": "6-evidence", "msg": "checking 1 claims against source text"}
+{"ts": "2026-11-23T14:25:22Z", "app": 86, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence 1.0 | $0.0185 | 48.5s"}
+{"ts": "2026-11-23T14:25:22Z", "app": 88, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developer.brex.com']"}
+{"ts": "2026-11-23T14:25:23Z", "app": 84, "pass": "A", "stage": "1-discovery", "msg": "12 pages fetched, 0 failed, 0 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:25:23Z", "app": 84, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 12 sources"}
+{"ts": "2026-11-23T14:25:27Z", "app": 88, "pass": "A", "stage": "1-discovery", "msg": "1 pages fetched, 0 failed, 6 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:25:27Z", "app": 88, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 1 sources"}
+{"ts": "2026-11-23T14:25:27Z", "app": 85, "pass": "A", "stage": "6-evidence", "msg": "checking 2 claims against source text"}
+{"ts": "2026-11-23T14:25:28Z", "app": 85, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=free_self_serve | auth=[] | evidence 0.5 | $0.0179 | 57.1s"}
+{"ts": "2026-11-23T14:25:28Z", "app": 89, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://docs.ramp.com']"}
+{"ts": "2026-11-23T14:25:35Z", "app": 88, "pass": "A", "stage": "6-evidence", "msg": "checking 3 claims against source text"}
+{"ts": "2026-11-23T14:25:35Z", "app": 88, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence 1.0 | $0.0179 | 12.9s"}
+{"ts": "2026-11-23T14:25:35Z", "app": 90, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://pitchbook.com']"}
+{"ts": "2026-11-23T14:25:35Z", "app": 84, "pass": "A", "stage": "6-evidence", "msg": "checking 8 claims against source text"}
+{"ts": "2026-11-23T14:25:35Z", "app": 84, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'OAuth2'] | evidence 1.0 | $0.1073 | 68.0s"}
+{"ts": "2026-11-23T14:25:35Z", "app": 91, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://cloud.google.com/gemini', 'https://cloud.google.com']"}
+{"ts": "2026-11-23T14:25:38Z", "app": 87, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:25:38Z", "app": 87, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:25:40Z", "app": 30, "pass": "B", "stage": "6-evidence", "msg": "checking 13 claims against source text"}
+{"ts": "2026-11-23T14:25:46Z", "app": 30, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=free_self_serve | auth=['API key', 'Service account/JWT'] | evidence 1.0 | $0.0412 | 76.1s"}
+{"ts": "2026-11-23T14:25:46Z", "app": 34, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:25:52Z", "app": 90, "pass": "A", "stage": "1-discovery", "msg": "3 pages fetched, 0 failed, 5 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:25:52Z", "app": 90, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 3 sources"}
+{"ts": "2026-11-23T14:25:53Z", "app": 87, "pass": "A", "stage": "6-evidence", "msg": "checking 9 claims against source text"}
+{"ts": "2026-11-23T14:25:53Z", "app": 87, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2'] | evidence 0.111 | $0.0867 | 72.2s"}
+{"ts": "2026-11-23T14:25:53Z", "app": 92, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://help.otter.ai']"}
+{"ts": "2026-11-23T14:26:01Z", "app": 7, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://zoho.com/crm', 'https://zoho.com']"}
+{"ts": "2026-11-23T14:26:01Z", "app": 23, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://zoho.com/cliq', 'https://zoho.com']"}
+{"ts": "2026-11-23T14:26:01Z", "app": 44, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developer.salesforce.com/docs/commerce', 'https://developer.salesforce.com']"}
+{"ts": "2026-11-23T14:26:01Z", "app": 64, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developers.cloudflare.com/api', 'https://developers.cloudflare.com']"}
+{"ts": "2026-11-23T14:26:01Z", "app": 66, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://neo4j.com/docs/api', 'https://neo4j.com']"}
+{"ts": "2026-11-23T14:26:01Z", "app": 79, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://smartsheet.com/developers', 'https://smartsheet.com']"}
+{"ts": "2026-11-23T14:26:04Z", "app": 44, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 2 failed, 1 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:26:04Z", "app": 44, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:26:04Z", "app": 83, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://binance-docs.github.io']"}
+{"ts": "2026-11-23T14:26:07Z", "app": 83, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 1 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:26:07Z", "app": 83, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:26:07Z", "app": 89, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://docs.ramp.com']"}
+{"ts": "2026-11-23T14:26:11Z", "app": 64, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 2 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:26:11Z", "app": 64, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:26:11Z", "app": 90, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://pitchbook.com']"}
+{"ts": "2026-11-23T14:26:33Z", "app": 89, "pass": "A", "stage": "1-discovery", "msg": "5 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:26:33Z", "app": 89, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 5 sources"}
+{"ts": "2026-11-23T14:26:37Z", "app": 90, "pass": "A", "stage": "1-discovery", "msg": "3 pages fetched, 0 failed, 5 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:26:37Z", "app": 90, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 3 sources"}
+{"ts": "2026-11-23T14:26:39Z", "app": 23, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 5 failed, 1 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:26:39Z", "app": 23, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:26:39Z", "app": 91, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://cloud.google.com/gemini', 'https://cloud.google.com']"}
+{"ts": "2026-11-23T14:26:43Z", "app": 7, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 5 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:26:43Z", "app": 7, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:26:43Z", "app": 92, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://help.otter.ai']"}
+{"ts": "2026-11-23T14:26:46Z", "app": 90, "pass": "A", "stage": "6-evidence", "msg": "checking 6 claims against source text"}
+{"ts": "2026-11-23T14:26:46Z", "app": 90, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=partner_or_sales | auth=[] | evidence 1.0 | $0.0329 | 34.3s"}
+{"ts": "2026-11-23T14:26:46Z", "app": 93, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://fathom.video']"}
+{"ts": "2026-11-23T14:26:46Z", "app": 89, "pass": "A", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:26:46Z", "app": 89, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2'] | evidence 0.0 | $0.0763 | 39.4s"}
+{"ts": "2026-11-23T14:26:46Z", "app": 94, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://consensus.app']"}
+{"ts": "2026-11-23T14:26:46Z", "app": 91, "pass": "A", "stage": "1-discovery", "msg": "14 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:26:46Z", "app": 91, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 14 sources"}
+{"ts": "2026-11-23T14:26:55Z", "app": 91, "pass": "A", "stage": "6-evidence", "msg": "checking 0 claims against source text"}
+{"ts": "2026-11-23T14:26:55Z", "app": 91, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence None | $0.0754 | 15.2s"}
+{"ts": "2026-11-23T14:26:55Z", "app": 95, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://reducto.ai']"}
+{"ts": "2026-11-23T14:27:07Z", "app": 93, "pass": "A", "stage": "1-discovery", "msg": "11 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:27:07Z", "app": 93, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 11 sources"}
+{"ts": "2026-11-23T14:27:15Z", "app": 94, "pass": "A", "stage": "1-discovery", "msg": "12 pages fetched, 1 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:27:15Z", "app": 94, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 12 sources"}
+{"ts": "2026-11-23T14:27:18Z", "app": 95, "pass": "A", "stage": "1-discovery", "msg": "11 pages fetched, 0 failed, 5 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:27:18Z", "app": 95, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 11 sources"}
+{"ts": "2026-11-23T14:27:19Z", "app": 93, "pass": "A", "stage": "6-evidence", "msg": "checking 11 claims against source text"}
+{"ts": "2026-11-23T14:27:19Z", "app": 93, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'OAuth2'] | evidence 1.0 | $0.0767 | 33.7s"}
+{"ts": "2026-11-23T14:27:19Z", "app": 96, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://docs.devin.ai']"}
+{"ts": "2026-11-23T14:27:27Z", "app": 94, "pass": "A", "stage": "6-evidence", "msg": "checking 8 claims against source text"}
+{"ts": "2026-11-23T14:27:27Z", "app": 94, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'API key', 'Bearer/PAT'] | evidence 1.0 | $0.0851 | 41.0s"}
+{"ts": "2026-11-23T14:27:27Z", "app": 97, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://higgsfield.ai/cli', 'https://higgsfield.ai']"}
+{"ts": "2026-11-23T14:27:27Z", "app": 92, "pass": "A", "stage": "1-discovery", "msg": "2 pages fetched, 1 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:27:27Z", "app": 92, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 2 sources"}
+{"ts": "2026-11-23T14:27:29Z", "app": 95, "pass": "A", "stage": "6-evidence", "msg": "checking 9 claims against source text"}
+{"ts": "2026-11-23T14:27:30Z", "app": 95, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'Bearer/PAT', 'OAuth2'] | evidence 1.0 | $0.0795 | 35.2s"}
+{"ts": "2026-11-23T14:27:30Z", "app": 98, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://github.com/mermaid-js/mermaid-cli', 'https://github.com']"}
+{"ts": "2026-11-23T14:27:33Z", "app": 96, "pass": "A", "stage": "1-discovery", "msg": "10 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:27:33Z", "app": 96, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 10 sources"}
+{"ts": "2026-11-23T14:27:37Z", "app": 92, "pass": "A", "stage": "6-evidence", "msg": "checking 4 claims against source text"}
+{"ts": "2026-11-23T14:27:39Z", "app": 92, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence 1.0 | $0.0259 | 56.0s"}
+{"ts": "2026-11-23T14:27:39Z", "app": 99, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://transcriptapi.com']"}
+{"ts": "2026-11-23T14:27:44Z", "app": 96, "pass": "A", "stage": "6-evidence", "msg": "checking 6 claims against source text"}
+{"ts": "2026-11-23T14:27:45Z", "app": 96, "pass": "A", "stage": "5-verdict", "msg": "CONDITIONAL | tier=paid_plan | auth=['Bearer/PAT', 'API key'] | evidence 1.0 | $0.0811 | 25.1s"}
+{"ts": "2026-11-23T14:27:45Z", "app": 100, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://grain.com']"}
+{"ts": "2026-11-23T14:27:55Z", "app": 98, "pass": "A", "stage": "1-discovery", "msg": "12 pages fetched, 0 failed, 5 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:27:55Z", "app": 98, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 12 sources"}
+{"ts": "2026-11-23T14:28:02Z", "app": 99, "pass": "A", "stage": "1-discovery", "msg": "8 pages fetched, 2 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:28:02Z", "app": 99, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 8 sources"}
+{"ts": "2026-11-23T14:28:05Z", "app": 98, "pass": "A", "stage": "6-evidence", "msg": "checking 5 claims against source text"}
+{"ts": "2026-11-23T14:28:05Z", "app": 98, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=[] | evidence 1.0 | $0.0685 | 35.4s"}
+{"ts": "2026-11-23T14:28:13Z", "app": 99, "pass": "A", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:28:13Z", "app": 99, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'OAuth2'] | evidence 1.0 | $0.0826 | 34.6s"}
+{"ts": "2026-11-23T14:28:15Z", "app": 100, "pass": "A", "stage": "1-discovery", "msg": "12 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:28:15Z", "app": 100, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 12 sources"}
+{"ts": "2026-11-23T14:28:18Z", "app": 97, "pass": "A", "stage": "1-discovery", "msg": "11 pages fetched, 1 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:28:18Z", "app": 97, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 11 sources"}
+{"ts": "2026-11-23T14:28:26Z", "app": 100, "pass": "A", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:28:26Z", "app": 100, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT'] | evidence 1.0 | $0.0762 | 41.9s"}
+{"ts": "2026-11-23T14:28:30Z", "app": 97, "pass": "A", "stage": "6-evidence", "msg": "checking 9 claims against source text"}
+{"ts": "2026-11-23T14:28:30Z", "app": 97, "pass": "A", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key'] | evidence 1.0 | $0.0766 | 62.6s"}
+{"ts": "2026-11-23T14:29:50Z", "app": 79, "pass": "A", "stage": "1-discovery", "msg": "14 pages fetched, 3 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:29:50Z", "app": 79, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 14 sources"}
+{"ts": "2026-11-23T14:30:02Z", "app": 79, "pass": "A", "stage": "6-evidence", "msg": "checking 8 claims against source text"}
+{"ts": "2026-11-23T14:30:02Z", "app": 79, "pass": "A", "stage": "5-verdict", "msg": "CONDITIONAL | tier=paid_plan | auth=['Bearer/PAT', 'OAuth2'] | evidence 1.0 | $0.0863 | 241.5s"}
+{"ts": "2026-11-23T14:30:34Z", "app": 23, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:30:34Z", "app": 32, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:30:34Z", "app": 31, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:30:34Z", "app": 34, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:30:34Z", "app": 33, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:30:34Z", "app": 36, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:30:34Z", "app": 35, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:30:35Z", "app": 38, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:30:35Z", "app": 37, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:30:35Z", "app": 40, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:30:35Z", "app": 39, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:30:35Z", "app": 42, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:31:24Z", "app": 37, "pass": "B", "stage": "6-evidence", "msg": "checking 0 claims against source text"}
+{"ts": "2026-11-23T14:31:24Z", "app": 37, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence None | $0.0456 | 49.2s"}
+{"ts": "2026-11-23T14:31:24Z", "app": 41, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:31:32Z", "app": 36, "pass": "B", "stage": "6-evidence", "msg": "checking 21 claims against source text"}
+{"ts": "2026-11-23T14:31:32Z", "app": 39, "pass": "B", "stage": "6-evidence", "msg": "checking 16 claims against source text"}
+{"ts": "2026-11-23T14:31:35Z", "app": 31, "pass": "B", "stage": "6-evidence", "msg": "checking 16 claims against source text"}
+{"ts": "2026-11-23T14:31:38Z", "app": 38, "pass": "B", "stage": "6-evidence", "msg": "checking 15 claims against source text"}
+{"ts": "2026-11-23T14:31:39Z", "app": 35, "pass": "B", "stage": "6-evidence", "msg": "checking 16 claims against source text"}
+{"ts": "2026-11-23T14:31:40Z", "app": 39, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2'] | evidence 0.562 | $0.0498 | 65.1s"}
+{"ts": "2026-11-23T14:31:40Z", "app": 43, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:31:41Z", "app": 40, "pass": "B", "stage": "6-evidence", "msg": "checking 13 claims against source text"}
+{"ts": "2026-11-23T14:31:42Z", "app": 31, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=free_self_serve | auth=['OAuth2', 'Service account/JWT'] | evidence 1.0 | $0.0578 | 67.5s"}
+{"ts": "2026-11-23T14:31:42Z", "app": 45, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:31:44Z", "app": 38, "pass": "B", "stage": "5-verdict", "msg": "GATED | tier=partner_or_sales | auth=['OAuth2', 'Bearer/PAT'] | evidence 0.867 | $0.0486 | 69.8s"}
+{"ts": "2026-11-23T14:31:44Z", "app": 44, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:31:45Z", "app": 36, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'OAuth2', 'Other'] | evidence 0.619 | $0.0716 | 70.0s"}
+{"ts": "2026-11-23T14:31:45Z", "app": 46, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:31:45Z", "app": 35, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'OAuth2'] | evidence 0.688 | $0.0852 | 70.0s"}
+{"ts": "2026-11-23T14:31:45Z", "app": 47, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:31:45Z", "app": 40, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=trial_self_serve | auth=['API key'] | evidence 0.769 | $0.0526 | 70.8s"}
+{"ts": "2026-11-23T14:31:45Z", "app": 48, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:31:46Z", "app": 33, "pass": "B", "stage": "6-evidence", "msg": "checking 17 claims against source text"}
+{"ts": "2026-11-23T14:31:52Z", "app": 33, "pass": "B", "stage": "5-verdict", "msg": "GATED | tier=partner_or_sales | auth=['OAuth2'] | evidence 0.941 | $0.0763 | 78.0s"}
+{"ts": "2026-11-23T14:31:52Z", "app": 49, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:31:59Z", "app": 23, "pass": "B", "stage": "6-evidence", "msg": "checking 14 claims against source text"}
+{"ts": "2026-11-23T14:32:07Z", "app": 42, "pass": "B", "stage": "6-evidence", "msg": "checking 25 claims against source text"}
+{"ts": "2026-11-23T14:32:13Z", "app": 42, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Basic', 'Other'] | evidence 0.72 | $0.0736 | 98.7s"}
+{"ts": "2026-11-23T14:32:13Z", "app": 50, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:32:14Z", "app": 34, "pass": "B", "stage": "6-evidence", "msg": "checking 22 claims against source text"}
+{"ts": "2026-11-23T14:32:19Z", "app": 34, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=admin_approval | auth=['OAuth2', 'Bearer/PAT'] | evidence 1.0 | $0.0702 | 104.1s"}
+{"ts": "2026-11-23T14:32:19Z", "app": 52, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:32:20Z", "app": 41, "pass": "B", "stage": "6-evidence", "msg": "checking 16 claims against source text"}
+{"ts": "2026-11-23T14:32:29Z", "app": 32, "pass": "B", "stage": "6-evidence", "msg": "checking 17 claims against source text"}
+{"ts": "2026-11-23T14:32:32Z", "app": 41, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2'] | evidence 0.812 | $0.0366 | 68.1s"}
+{"ts": "2026-11-23T14:32:32Z", "app": 51, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:32:36Z", "app": 48, "pass": "B", "stage": "6-evidence", "msg": "checking 10 claims against source text"}
+{"ts": "2026-11-23T14:32:36Z", "app": 32, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT'] | evidence 0.765 | $0.0686 | 121.1s"}
+{"ts": "2026-11-23T14:32:36Z", "app": 54, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:32:37Z", "app": 48, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['OAuth2', 'Bearer/PAT'] | evidence 0.4 | $0.0438 | 52.1s"}
+{"ts": "2026-11-23T14:32:37Z", "app": 56, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:32:42Z", "app": 44, "pass": "B", "stage": "6-evidence", "msg": "checking 11 claims against source text"}
+{"ts": "2026-11-23T14:32:45Z", "app": 44, "pass": "B", "stage": "5-verdict", "msg": "GATED | tier=partner_or_sales | auth=['OAuth2', 'Service account/JWT'] | evidence 0.545 | $0.0713 | 60.6s"}
+{"ts": "2026-11-23T14:32:45Z", "app": 58, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:32:47Z", "app": 46, "pass": "B", "stage": "6-evidence", "msg": "checking 13 claims against source text"}
+{"ts": "2026-11-23T14:32:48Z", "app": 43, "pass": "B", "stage": "6-evidence", "msg": "checking 15 claims against source text"}
+{"ts": "2026-11-23T14:32:53Z", "app": 47, "pass": "B", "stage": "6-evidence", "msg": "checking 13 claims against source text"}
+{"ts": "2026-11-23T14:32:53Z", "app": 46, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=paid_plan | auth=['API key', 'OAuth2'] | evidence 0.923 | $0.038 | 68.3s"}
+{"ts": "2026-11-23T14:32:53Z", "app": 60, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:32:55Z", "app": 43, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=trial_self_serve | auth=['API key', 'OAuth2', 'Bearer/PAT', 'Basic'] | evidence 0.733 | $0.0629 | 75.4s"}
+{"ts": "2026-11-23T14:32:55Z", "app": 53, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:32:56Z", "app": 47, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=paid_plan | auth=['OAuth2', 'Bearer/PAT'] | evidence 0.615 | $0.04 | 71.5s"}
+{"ts": "2026-11-23T14:32:56Z", "app": 55, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:32:59Z", "app": 49, "pass": "B", "stage": "6-evidence", "msg": "checking 10 claims against source text"}
+{"ts": "2026-11-23T14:33:02Z", "app": 49, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=paid_plan | auth=['OAuth2'] | evidence 0.3 | $0.0574 | 69.6s"}
+{"ts": "2026-11-23T14:33:02Z", "app": 57, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:33:07Z", "app": 45, "pass": "B", "stage": "6-evidence", "msg": "checking 11 claims against source text"}
+{"ts": "2026-11-23T14:33:14Z", "app": 45, "pass": "B", "stage": "5-verdict", "msg": "GATED | tier=partner_or_sales | auth=['Bearer/PAT', 'Other'] | evidence 0.818 | $0.0419 | 91.6s"}
+{"ts": "2026-11-23T14:33:14Z", "app": 59, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:33:19Z", "app": 56, "pass": "B", "stage": "6-evidence", "msg": "checking 15 claims against source text"}
+{"ts": "2026-11-23T14:33:20Z", "app": 56, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'Bearer/PAT'] | evidence 0.6 | $0.0378 | 42.7s"}
+{"ts": "2026-11-23T14:33:20Z", "app": 62, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:33:29Z", "app": 50, "pass": "B", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:33:29Z", "app": 50, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['API key'] | evidence 0.429 | $0.0816 | 76.1s"}
+{"ts": "2026-11-23T14:33:29Z", "app": 64, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:33:30Z", "app": 58, "pass": "B", "stage": "6-evidence", "msg": "checking 9 claims against source text"}
+{"ts": "2026-11-23T14:33:35Z", "app": 58, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=[] | evidence 1.0 | $0.0476 | 49.8s"}
+{"ts": "2026-11-23T14:33:35Z", "app": 66, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:33:40Z", "app": 23, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['OAuth2'] | evidence 0.0 | $0.0986 | 185.5s"}
+{"ts": "2026-11-23T14:33:40Z", "app": 61, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:33:43Z", "app": 52, "pass": "B", "stage": "6-evidence", "msg": "checking 19 claims against source text"}
+{"ts": "2026-11-23T14:33:47Z", "app": 51, "pass": "B", "stage": "6-evidence", "msg": "checking 17 claims against source text"}
+{"ts": "2026-11-23T14:33:48Z", "app": 52, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=trial_self_serve | auth=['API key', 'OAuth2'] | evidence 1.0 | $0.0576 | 88.9s"}
+{"ts": "2026-11-23T14:33:48Z", "app": 68, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:33:56Z", "app": 51, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Basic'] | evidence 0.765 | $0.0691 | 84.0s"}
+{"ts": "2026-11-23T14:33:56Z", "app": 63, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:33:59Z", "app": 60, "pass": "B", "stage": "6-evidence", "msg": "checking 11 claims against source text"}
+{"ts": "2026-11-23T14:34:01Z", "app": 60, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=paid_plan | auth=['API key'] | evidence 0.727 | $0.0605 | 68.3s"}
+{"ts": "2026-11-23T14:34:01Z", "app": 70, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:34:02Z", "app": 53, "pass": "B", "stage": "6-evidence", "msg": "checking 17 claims against source text"}
+{"ts": "2026-11-23T14:34:08Z", "app": 53, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=paid_plan | auth=['API key', 'Bearer/PAT', 'OAuth2'] | evidence 0.706 | $0.0501 | 72.9s"}
+{"ts": "2026-11-23T14:34:08Z", "app": 65, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:34:12Z", "app": 57, "pass": "B", "stage": "6-evidence", "msg": "checking 13 claims against source text"}
+{"ts": "2026-11-23T14:34:12Z", "app": 54, "pass": "B", "stage": "6-evidence", "msg": "checking 11 claims against source text"}
+{"ts": "2026-11-23T14:34:13Z", "app": 55, "pass": "B", "stage": "6-evidence", "msg": "checking 10 claims against source text"}
+{"ts": "2026-11-23T14:34:16Z", "app": 54, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['API key', 'Bearer/PAT', 'OAuth2'] | evidence 0.909 | $0.0449 | 100.3s"}
+{"ts": "2026-11-23T14:34:16Z", "app": 72, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:34:16Z", "app": 57, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=admin_approval | auth=['Bearer/PAT', 'Basic', 'OAuth2'] | evidence 0.846 | $0.0628 | 73.9s"}
+{"ts": "2026-11-23T14:34:16Z", "app": 67, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:34:17Z", "app": 55, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2'] | evidence 1.0 | $0.0304 | 81.0s"}
+{"ts": "2026-11-23T14:34:17Z", "app": 69, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:34:20Z", "app": 59, "pass": "B", "stage": "6-evidence", "msg": "checking 15 claims against source text"}
+{"ts": "2026-11-23T14:34:21Z", "app": 66, "pass": "B", "stage": "6-evidence", "msg": "checking 17 claims against source text"}
+{"ts": "2026-11-23T14:34:23Z", "app": 59, "pass": "B", "stage": "5-verdict", "msg": "GATED | tier=partner_or_sales | auth=['API key'] | evidence 0.867 | $0.0587 | 69.4s"}
+{"ts": "2026-11-23T14:34:23Z", "app": 71, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:34:25Z", "app": 62, "pass": "B", "stage": "6-evidence", "msg": "checking 16 claims against source text"}
+{"ts": "2026-11-23T14:34:27Z", "app": 66, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Basic', 'Bearer/PAT'] | evidence 0.941 | $0.0486 | 52.5s"}
+{"ts": "2026-11-23T14:34:27Z", "app": 74, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:34:31Z", "app": 62, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['Bearer/PAT', 'OAuth2'] | evidence 0.812 | $0.0675 | 70.6s"}
+{"ts": "2026-11-23T14:34:31Z", "app": 76, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:34:34Z", "app": 64, "pass": "B", "stage": "6-evidence", "msg": "checking 13 claims against source text"}
+{"ts": "2026-11-23T14:34:47Z", "app": 61, "pass": "B", "stage": "6-evidence", "msg": "checking 16 claims against source text"}
+{"ts": "2026-11-23T14:34:54Z", "app": 61, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2', 'Service account/JWT', 'Basic', 'Other'] | evidence 0.938 | $0.0464 | 74.2s"}
+{"ts": "2026-11-23T14:34:54Z", "app": 73, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:34:57Z", "app": 68, "pass": "B", "stage": "6-evidence", "msg": "checking 11 claims against source text"}
+{"ts": "2026-11-23T14:35:02Z", "app": 68, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'API key'] | evidence 1.0 | $0.0725 | 74.5s"}
+{"ts": "2026-11-23T14:35:02Z", "app": 78, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:35:05Z", "app": 63, "pass": "B", "stage": "6-evidence", "msg": "checking 14 claims against source text"}
+{"ts": "2026-11-23T14:35:09Z", "app": 65, "pass": "B", "stage": "6-evidence", "msg": "checking 12 claims against source text"}
+{"ts": "2026-11-23T14:35:09Z", "app": 63, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2'] | evidence 0.857 | $0.0647 | 73.3s"}
+{"ts": "2026-11-23T14:35:09Z", "app": 75, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:35:13Z", "app": 72, "pass": "B", "stage": "6-evidence", "msg": "checking 15 claims against source text"}
+{"ts": "2026-11-23T14:35:14Z", "app": 65, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'Bearer/PAT', 'OAuth2'] | evidence 0.583 | $0.0652 | 66.5s"}
+{"ts": "2026-11-23T14:35:14Z", "app": 77, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:35:17Z", "app": 71, "pass": "B", "stage": "6-evidence", "msg": "checking 13 claims against source text"}
+{"ts": "2026-11-23T14:35:17Z", "app": 72, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT'] | evidence 0.333 | $0.0496 | 61.6s"}
+{"ts": "2026-11-23T14:35:17Z", "app": 80, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:35:24Z", "app": 71, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2'] | evidence 0.923 | $0.0272 | 60.6s"}
+{"ts": "2026-11-23T14:35:24Z", "app": 79, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:35:24Z", "app": 67, "pass": "B", "stage": "6-evidence", "msg": "checking 16 claims against source text"}
+{"ts": "2026-11-23T14:35:33Z", "app": 67, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=trial_self_serve | auth=['OAuth2', 'Service account/JWT', 'Bearer/PAT', 'Other'] | evidence 0.812 | $0.0689 | 77.3s"}
+{"ts": "2026-11-23T14:35:33Z", "app": 81, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:35:34Z", "app": 76, "pass": "B", "stage": "6-evidence", "msg": "checking 17 claims against source text"}
+{"ts": "2026-11-23T14:35:40Z", "app": 64, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT', 'API key'] | evidence 0.154 | $0.0828 | 130.8s"}
+{"ts": "2026-11-23T14:35:40Z", "app": 82, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:35:43Z", "app": 70, "pass": "B", "stage": "6-evidence", "msg": "checking 12 claims against source text"}
+{"ts": "2026-11-23T14:35:46Z", "app": 76, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT'] | evidence 0.765 | $0.0509 | 74.9s"}
+{"ts": "2026-11-23T14:35:46Z", "app": 84, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:35:47Z", "app": 70, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['OAuth2', 'Bearer/PAT', 'API key', 'Other'] | evidence 0.917 | $0.0439 | 105.7s"}
+{"ts": "2026-11-23T14:35:47Z", "app": 86, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:35:52Z", "app": 74, "pass": "B", "stage": "6-evidence", "msg": "checking 16 claims against source text"}
+{"ts": "2026-11-23T14:35:57Z", "app": 74, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Basic', 'OAuth2', 'Other'] | evidence 0.938 | $0.0598 | 89.3s"}
+{"ts": "2026-11-23T14:35:57Z", "app": 88, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:35:58Z", "app": 77, "pass": "B", "stage": "6-evidence", "msg": "checking 0 claims against source text"}
+{"ts": "2026-11-23T14:35:58Z", "app": 77, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence None | $0.0333 | 43.2s"}
+{"ts": "2026-11-23T14:35:58Z", "app": 83, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:36:00Z", "app": 73, "pass": "B", "stage": "6-evidence", "msg": "checking 19 claims against source text"}
+{"ts": "2026-11-23T14:36:04Z", "app": 73, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'API key', 'Bearer/PAT'] | evidence 0.895 | $0.0497 | 69.5s"}
+{"ts": "2026-11-23T14:36:04Z", "app": 85, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:36:06Z", "app": 69, "pass": "B", "stage": "6-evidence", "msg": "checking 8 claims against source text"}
+{"ts": "2026-11-23T14:36:10Z", "app": 78, "pass": "B", "stage": "6-evidence", "msg": "checking 14 claims against source text"}
+{"ts": "2026-11-23T14:36:14Z", "app": 69, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=trial_self_serve | auth=['API key', 'Bearer/PAT', 'OAuth2'] | evidence 0.625 | $0.0518 | 117.2s"}
+{"ts": "2026-11-23T14:36:14Z", "app": 87, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:36:15Z", "app": 78, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT'] | evidence 0.286 | $0.0591 | 72.7s"}
+{"ts": "2026-11-23T14:36:15Z", "app": 90, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:36:17Z", "app": 75, "pass": "B", "stage": "6-evidence", "msg": "checking 17 claims against source text"}
+{"ts": "2026-11-23T14:36:18Z", "app": 82, "pass": "B", "stage": "6-evidence", "msg": "checking 0 claims against source text"}
+{"ts": "2026-11-23T14:36:18Z", "app": 82, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence None | $0.0271 | 37.8s"}
+{"ts": "2026-11-23T14:36:18Z", "app": 92, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:36:23Z", "app": 75, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2', 'Service account/JWT'] | evidence 0.882 | $0.0627 | 74.0s"}
+{"ts": "2026-11-23T14:36:23Z", "app": 89, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:36:39Z", "app": 80, "pass": "B", "stage": "6-evidence", "msg": "checking 13 claims against source text"}
+{"ts": "2026-11-23T14:36:40Z", "app": 86, "pass": "B", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:36:41Z", "app": 80, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2', 'Bearer/PAT'] | evidence 0.692 | $0.0632 | 83.6s"}
+{"ts": "2026-11-23T14:36:41Z", "app": 94, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:36:44Z", "app": 81, "pass": "B", "stage": "6-evidence", "msg": "checking 26 claims against source text"}
+{"ts": "2026-11-23T14:36:45Z", "app": 79, "pass": "B", "stage": "6-evidence", "msg": "checking 16 claims against source text"}
+{"ts": "2026-11-23T14:36:45Z", "app": 86, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['OAuth2'] | evidence 0.286 | $0.0571 | 58.6s"}
+{"ts": "2026-11-23T14:36:45Z", "app": 96, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:36:48Z", "app": 79, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=paid_plan | auth=['OAuth2', 'Bearer/PAT'] | evidence 0.625 | $0.0528 | 84.2s"}
+{"ts": "2026-11-23T14:36:48Z", "app": 91, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:36:49Z", "app": 81, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'Bearer/PAT', 'Basic', 'OAuth2', 'Other'] | evidence 0.885 | $0.0666 | 75.5s"}
+{"ts": "2026-11-23T14:36:49Z", "app": 93, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:36:52Z", "app": 88, "pass": "B", "stage": "6-evidence", "msg": "checking 12 claims against source text"}
+{"ts": "2026-11-23T14:36:57Z", "app": 84, "pass": "B", "stage": "6-evidence", "msg": "checking 0 claims against source text"}
+{"ts": "2026-11-23T14:36:57Z", "app": 84, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence None | $0.0924 | 71.2s"}
+{"ts": "2026-11-23T14:36:57Z", "app": 98, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:36:59Z", "app": 88, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=admin_approval | auth=['Bearer/PAT', 'OAuth2'] | evidence 0.917 | $0.0448 | 62.5s"}
+{"ts": "2026-11-23T14:36:59Z", "app": 100, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:37:01Z", "app": 87, "pass": "B", "stage": "6-evidence", "msg": "checking 0 claims against source text"}
+{"ts": "2026-11-23T14:37:01Z", "app": 87, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence None | $0.0444 | 47.2s"}
+{"ts": "2026-11-23T14:37:01Z", "app": 95, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:37:11Z", "app": 92, "pass": "B", "stage": "6-evidence", "msg": "checking 10 claims against source text"}
+{"ts": "2026-11-23T14:37:12Z", "app": 92, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=paid_plan | auth=['OAuth2', 'Bearer/PAT'] | evidence 0.9 | $0.0462 | 54.3s"}
+{"ts": "2026-11-23T14:37:15Z", "app": 90, "pass": "B", "stage": "6-evidence", "msg": "checking 15 claims against source text"}
+{"ts": "2026-11-23T14:37:20Z", "app": 90, "pass": "B", "stage": "5-verdict", "msg": "GATED | tier=partner_or_sales | auth=['API key', 'OAuth2'] | evidence 0.8 | $0.0395 | 65.3s"}
+{"ts": "2026-11-23T14:37:24Z", "app": 89, "pass": "B", "stage": "6-evidence", "msg": "checking 12 claims against source text"}
+{"ts": "2026-11-23T14:37:29Z", "app": 89, "pass": "B", "stage": "5-verdict", "msg": "CONDITIONAL | tier=admin_approval | auth=['OAuth2'] | evidence 1.0 | $0.0501 | 65.9s"}
+{"ts": "2026-11-23T14:37:29Z", "app": 97, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:37:30Z", "app": 83, "pass": "B", "stage": "6-evidence", "msg": "checking 12 claims against source text"}
+{"ts": "2026-11-23T14:37:33Z", "app": 85, "pass": "B", "stage": "6-evidence", "msg": "checking 19 claims against source text"}
+{"ts": "2026-11-23T14:37:34Z", "app": 83, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'Other'] | evidence 0.083 | $0.0603 | 96.6s"}
+{"ts": "2026-11-23T14:37:34Z", "app": 99, "pass": "B", "stage": "independent", "msg": "web-search agent researching from name only"}
+{"ts": "2026-11-23T14:37:36Z", "app": 93, "pass": "B", "stage": "6-evidence", "msg": "checking 0 claims against source text"}
+{"ts": "2026-11-23T14:37:36Z", "app": 93, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence None | $0.0473 | 47.5s"}
+{"ts": "2026-11-23T14:37:39Z", "app": 85, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['API key'] | evidence 0.263 | $0.0391 | 95.7s"}
+{"ts": "2026-11-23T14:37:45Z", "app": 95, "pass": "B", "stage": "6-evidence", "msg": "checking 10 claims against source text"}
+{"ts": "2026-11-23T14:37:47Z", "app": 95, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'OAuth2'] | evidence 0.7 | $0.049 | 45.7s"}
+{"ts": "2026-11-23T14:37:49Z", "app": 94, "pass": "B", "stage": "6-evidence", "msg": "checking 7 claims against source text"}
+{"ts": "2026-11-23T14:37:53Z", "app": 94, "pass": "B", "stage": "5-verdict", "msg": "GATED | tier=partner_or_sales | auth=['OAuth2', 'API key'] | evidence 0.857 | $0.045 | 71.9s"}
+{"ts": "2026-11-23T14:37:55Z", "app": 98, "pass": "B", "stage": "6-evidence", "msg": "checking 10 claims against source text"}
+{"ts": "2026-11-23T14:37:56Z", "app": 96, "pass": "B", "stage": "6-evidence", "msg": "checking 16 claims against source text"}
+{"ts": "2026-11-23T14:37:57Z", "app": 100, "pass": "B", "stage": "6-evidence", "msg": "checking 12 claims against source text"}
+{"ts": "2026-11-23T14:37:57Z", "app": 98, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence 0.8 | $0.0495 | 59.9s"}
+{"ts": "2026-11-23T14:37:58Z", "app": 96, "pass": "B", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=['API key', 'Bearer/PAT'] | evidence 0.875 | $0.0508 | 72.2s"}
+{"ts": "2026-11-23T14:38:02Z", "app": 100, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2'] | evidence 0.75 | $0.0485 | 63.4s"}
+{"ts": "2026-11-23T14:38:20Z", "app": 91, "pass": "B", "stage": "6-evidence", "msg": "checking 13 claims against source text"}
+{"ts": "2026-11-23T14:38:25Z", "app": 91, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=trial_self_serve | auth=['Bearer/PAT'] | evidence 0.846 | $0.0786 | 97.2s"}
+{"ts": "2026-11-23T14:38:41Z", "app": 97, "pass": "B", "stage": "6-evidence", "msg": "checking 14 claims against source text"}
+{"ts": "2026-11-23T14:38:44Z", "app": 97, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['API key', 'Other'] | evidence 0.857 | $0.0549 | 75.3s"}
+{"ts": "2026-11-23T14:39:05Z", "app": 99, "pass": "B", "stage": "6-evidence", "msg": "checking 16 claims against source text"}
+{"ts": "2026-11-23T14:39:10Z", "app": 99, "pass": "B", "stage": "5-verdict", "msg": "READY | tier=free_self_serve | auth=['Bearer/PAT', 'OAuth2'] | evidence 0.75 | $0.0684 | 96.3s"}
+{"ts": "2026-11-23T14:42:43Z", "app": 7, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://zoho.com/crm', 'https://zoho.com']"}
+{"ts": "2026-11-23T14:42:43Z", "app": 23, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://zoho.com/cliq', 'https://zoho.com']"}
+{"ts": "2026-11-23T14:42:43Z", "app": 44, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developer.salesforce.com/docs/commerce', 'https://developer.salesforce.com']"}
+{"ts": "2026-11-23T14:42:43Z", "app": 64, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developers.cloudflare.com/api', 'https://developers.cloudflare.com']"}
+{"ts": "2026-11-23T14:42:43Z", "app": 66, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://neo4j.com/docs/api', 'https://neo4j.com']"}
+{"ts": "2026-11-23T14:42:43Z", "app": 83, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://binance-docs.github.io']"}
+{"ts": "2026-11-23T14:42:46Z", "app": 44, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 2 failed, 1 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:42:46Z", "app": 44, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:42:49Z", "app": 83, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 1 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:42:49Z", "app": 83, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:42:53Z", "app": 64, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 2 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:42:53Z", "app": 64, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:43:17Z", "app": 7, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 5 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:43:17Z", "app": 7, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:43:19Z", "app": 23, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 5 failed, 1 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:43:19Z", "app": 23, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:48:43Z", "app": 66, "pass": "A", "stage": "error", "msg": "TimeoutError: "}
+{"ts": "2026-11-23T14:49:12Z", "app": 7, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://zoho.com/crm', 'https://zoho.com']"}
+{"ts": "2026-11-23T14:49:12Z", "app": 23, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://zoho.com/cliq', 'https://zoho.com']"}
+{"ts": "2026-11-23T14:49:12Z", "app": 44, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developer.salesforce.com/docs/commerce', 'https://developer.salesforce.com']"}
+{"ts": "2026-11-23T14:49:12Z", "app": 64, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://developers.cloudflare.com/api', 'https://developers.cloudflare.com']"}
+{"ts": "2026-11-23T14:49:12Z", "app": 66, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://neo4j.com/docs/api', 'https://neo4j.com']"}
+{"ts": "2026-11-23T14:49:12Z", "app": 83, "pass": "A", "stage": "1-discovery", "msg": "seeds=['https://binance-docs.github.io']"}
+{"ts": "2026-11-23T14:49:15Z", "app": 44, "pass": "A", "stage": "1-discovery", "msg": "all seed URLs failed; trying web-search fallback"}
+{"ts": "2026-11-23T14:49:18Z", "app": 83, "pass": "A", "stage": "1-discovery", "msg": "all seed URLs failed; trying web-search fallback"}
+{"ts": "2026-11-23T14:49:23Z", "app": 64, "pass": "A", "stage": "1-discovery", "msg": "all seed URLs failed; trying web-search fallback"}
+{"ts": "2026-11-23T14:49:25Z", "app": 44, "pass": "A", "stage": "1-discovery", "msg": "web-search fallback found ['https://developer.salesforce.com/docs/commerce', 'https://developer.salesforce.com/developer-centers/commerce-cloud', 'https://developer.salesforce.com/docs/commerce/commerce-api/guide', 'https://developer.salesforce.com/docs/commerce/commerce-api/guide/api-doc.html']"}
+{"ts": "2026-11-23T14:49:26Z", "app": 23, "pass": "A", "stage": "1-discovery", "msg": "2 pages fetched, 0 failed, 1 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:49:26Z", "app": 23, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 2 sources"}
+{"ts": "2026-11-23T14:49:29Z", "app": 83, "pass": "A", "stage": "1-discovery", "msg": "web-search fallback found ['https://www.binance.com/about', 'https://developers.binance.com/en/docs/introduction', 'https://developers.binance.com/en/docs/catalog', 'https://developers.binance.com/docs/binance-spot-api-docs/README']"}
+{"ts": "2026-11-23T14:49:29Z", "app": 7, "pass": "A", "stage": "1-discovery", "msg": "3 pages fetched, 0 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:49:29Z", "app": 7, "pass": "A", "stage": "2-4-extract", "msg": "LLM extraction over 3 sources"}
+{"ts": "2026-11-23T14:49:32Z", "app": 44, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 5 failed, 1 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:49:32Z", "app": 44, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:49:32Z", "app": 64, "pass": "A", "stage": "1-discovery", "msg": "web-search fallback found ['https://developers.cloudflare.com/api/', 'https://cloudflare.com/developers', 'https://developers.cloudflare.com/fundamentals/api/reference/', 'https://developers.cloudflare.com/api/llms.txt']"}
+{"ts": "2026-11-23T14:49:32Z", "app": 23, "pass": "A", "stage": "6-evidence", "msg": "checking 2 claims against source text"}
+{"ts": "2026-11-23T14:49:32Z", "app": 23, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=unknown | auth=[] | evidence 1.0 | $0.0243 | 20.3s"}
+{"ts": "2026-11-23T14:49:35Z", "app": 83, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 5 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:49:35Z", "app": 83, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:49:38Z", "app": 7, "pass": "A", "stage": "6-evidence", "msg": "checking 4 claims against source text"}
+{"ts": "2026-11-23T14:49:38Z", "app": 7, "pass": "A", "stage": "5-verdict", "msg": "UNKNOWN | tier=free_self_serve | auth=[] | evidence 1.0 | $0.056 | 25.8s"}
+{"ts": "2026-11-23T14:49:50Z", "app": 64, "pass": "A", "stage": "1-discovery", "msg": "0 pages fetched, 6 failed, 8 GitHub MCP candidates"}
+{"ts": "2026-11-23T14:49:50Z", "app": 64, "pass": "A", "stage": "error", "msg": "RuntimeError: no documentation pages could be fetched"}
+{"ts": "2026-11-23T14:55:12Z", "app": 66, "pass": "A", "stage": "error", "msg": "TimeoutError: "}

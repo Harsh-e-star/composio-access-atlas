@@ -1,0 +1,252 @@
+{
+ "id": 53,
+ "name": "Ahrefs",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:34:08Z",
+ "duration_s": 72.9,
+ "cost_usd": 0.0501,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://ahrefs.com",
+   "developer_portal": "https://docs.ahrefs.com/",
+   "description": "Ahrefs: SEO platform (site/keyword/backlink data) with a v3 REST API (api.ahrefs.com/v3) and a remote MCP server. Confirmed as the product named in the task.",
+   "identity_confirmed": "yes",
+   "identity_notes": "docs.ahrefs.com describes the Ahrefs API and MCP; the assignment hint ahrefs.com/api now redirects to docs.ahrefs.com."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Ahrefs Connect: OAuth 2.0 Authorization Code flow with PKCE; token exchange POST to https://ahrefs.com/oauth/token. Used for third-party apps acting for users.",
+   "token_refresh": "No refresh tokens; access tokens valid for 1 year, after which the user must re-authorize via OAuth.",
+   "scopes_notes": "Scopes not documented in fetched sources. API keys can carry usage limits per key; OAuth-issued MCP keys are tagged with MCP scope and default to 200,000 API units per key."
+  },
+  "access": {
+   "tier": "paid_plan",
+   "free_credentials": "no",
+   "trial_available": "unknown",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "yes",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Ahrefs Connect (OAuth) app registration requires an Approval process where developers must demonstrate secure token handling. Remote MCP server is paid-plan only (Lite and up). Free accounts get only limited free test queries, and some endpoints (Rank Tracker, Management, Public) are free. API key creation is restricted to workspace owners and admins."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Medium",
+   "resources": [
+    "Site Explorer",
+    "Competitive Analysis",
+    "Keywords Explorer",
+    "Site Audit",
+    "Rank Tracker",
+    "SERP Overview",
+    "Batch Analysis",
+    "Subscription Information",
+    "Management",
+    "Brand Radar",
+    "Content Helper",
+    "Web Analytics",
+    "GSC Insights",
+    "Social Media",
+    "Public"
+   ],
+   "read_ops": [
+    "Keyword, site, backlink, SERP, rank tracking, site audit and analytics data lookups across the listed tool groups (per API reference)"
+   ],
+   "write_ops": [
+    "Management tool is described only as project management; create/update/delete operations not established"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "Default 60 requests per minute per search summary; HTTP 429 when exceeded (not confirmed on a fetched page). API units consumed per request; base_cost 50 units per request per pricing-related source.",
+   "limitations": "Breadth is read-focused and write operations are not established. Usage is metered in API units. The external MCP server is not a general-purpose programmatic API and custom scripts or standalone clients are not permitted. Legacy API v2 discontinued November 1, 2025 (per search summary)."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.ahrefs.com/mcp/docs/introduction",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/ahrefs/ahrefs-mcp-server",
+    "https://pypi.org/project/mcparmory-ahrefs/1.0.1/",
+    "https://mcpservers.org/servers/ahrefs-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.product",
+    "value": "Ahrefs API and MCP documented at docs.ahrefs.com",
+    "url": "https://docs.ahrefs.com/",
+    "quote": "Try API endpoints without an Enterprise plan",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.primary",
+    "value": "Bearer API key in Authorization header; only workspace owners and admins can manage keys",
+    "url": "https://docs.ahrefs.com/api/docs/api-keys-creation-and-management.md",
+    "quote": "Note that only workspace owners and admins have access to this section.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.header",
+    "value": "Keys sent as Authorization: Bearer YOUR_API_KEY",
+    "url": "https://docs.ahrefs.com/api/docs/api-keys-creation-and-management.md",
+    "quote": "Provide it in the Authorization header when making requests",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.oauth",
+    "value": "OAuth 2.0 Authorization Code with PKCE via Ahrefs Connect",
+    "url": "https://docs.ahrefs.com/ahrefs-connect/docs/oauth-guide.md",
+    "quote": "Ahrefs Connect uses OAuth 2.0 Authorization Code Flow with Proof Key for Code Exchange (PKCE).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_expiry",
+    "value": "Access tokens valid 1 year; no refresh tokens",
+    "url": "https://docs.ahrefs.com/ahrefs-connect/docs/oauth-guide.md",
+    "quote": "Access tokens are valid for 1 year. After expiry, the user must reconnect (re-authorize) via OAuth.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.provider_app_review",
+    "value": "Ahrefs Connect app registration goes through an Approval process",
+    "url": "https://docs.ahrefs.com/ahrefs-connect/docs/oauth-guide.md",
+    "quote": "You will need to demonstrate secure token handling as part of the Approval process.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.paid_plan",
+    "value": "Remote MCP server available on paid plans starting from Lite",
+    "url": "https://docs.ahrefs.com/mcp/docs/introduction.md",
+    "quote": "The remote MCP server is available on paid plans starting from Lite.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.free_endpoints",
+    "value": "Rank Tracker, Management, Public and some other endpoints are free",
+    "url": "https://docs.ahrefs.com/docs/api/reference/introduction",
+    "quote": "Rank Tracker, Management, Public, and some other endpoints are free.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.resources",
+    "value": "15 endpoint tool groups including Site Explorer, Keywords Explorer, Rank Tracker, Management",
+    "url": "https://docs.ahrefs.com/llms.txt",
+    "quote": "Site Explorer, Competitive Analysis, Keywords Explorer, Site Audit, Rank Tracker, SERP Overview",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "api.spec",
+    "value": "Full machine-readable OpenAPI spec for every endpoint",
+    "url": "https://docs.ahrefs.com/",
+    "quote": "Full machine-readable spec for every endpoint",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Ahrefs-hosted remote MCP server with official setup docs",
+    "url": "https://docs.ahrefs.com/mcp/docs/introduction.md",
+    "quote": "Ahrefs MCP lets AI agents securely access the Ahrefs API and enrich their answers with real Ahrefs data.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.restriction",
+    "value": "External MCP endpoint is not a general-purpose programmatic API; custom scripts/standalone clients not permitted",
+    "url": "https://docs.ahrefs.com/mcp/docs/introduction.md",
+    "quote": "The external MCP server is not a general-purpose programmatic API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.github_status",
+    "value": "ahrefs/ahrefs-mcp-server is owned by Ahrefs but archived/unmaintained and does not work with MCP keys",
+    "url": "https://github.com/ahrefs/ahrefs-mcp-server",
+    "quote": "It DOES NOT work with MCP keys. It IS NOT maintained. It is OUTDATED.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community MCP packages exist on PyPI (mcparmory-ahrefs) and directories",
+    "url": "https://pypi.org/project/mcparmory-ahrefs/1.0.1/",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "access.pricing",
+    "value": "Lite listed around $129/mo with API and MCP access; Enterprise around $1,499/mo; prices conflict across snapshots",
+    "url": "https://ahrefs.com/pricing?rd=1",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "api.units",
+    "value": "Most requests consume API units; base cost 50 units per request",
+    "url": "https://docs.ahrefs.com/docs/api/reference/limits-consumption",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "api.rate_limit",
+    "value": "60 requests per minute default; HTTP 429 when exceeded",
+    "url": "https://docs.ahrefs.com/api/docs/api-keys-creation-and-management",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Whether a free trial or sandbox exists for API testing; the homepage only mentions limited free test queries.",
+   "Exact API plan gate: the sources conflict on whether Lite includes API access or whether API access requires Enterprise/Advanced.",
+   "Webhooks: no webhook documentation was found.",
+   "SDKs: no official SDK was found in fetched sources.",
+   "Write operations: only the Management tool (project management) was seen; create/update/delete scope not confirmed.",
+   "Rate limits and API unit costs were only seen in search summaries and need verification on docs.ahrefs.com limits-consumption page.",
+   "Whether the remote MCP server (api.ahrefs.com/mcp/mcp) can be used by a third-party integrator like Composio given the 'not permitted' clause for custom clients.",
+   "Whether MCP-scoped API keys can be used for direct REST calls; the MCP docs say MCP keys differ from v3 API keys.",
+   "Legacy API v2 discontinuation date (November 1, 2025) came from search summary only."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "medium",
+  "credential_accessibility": "conditional",
+  "production_readiness": "review_required",
+  "security_risk": "standard",
+  "commercial_dependency": "yes",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Paid plan required",
+  "rationale": [
+   "API needs a paid plan.",
+   "Production/public use requires vendor app review."
+  ]
+ },
+ "evidence_support_rate": 0.706,
+ "flags": [],
+ "error": null
+}

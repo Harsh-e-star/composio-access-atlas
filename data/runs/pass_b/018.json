@@ -1,0 +1,253 @@
+{
+ "id": 18,
+ "name": "Help Scout",
+ "category": "Support and Helpdesk",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:22:45Z",
+ "duration_s": 115.4,
+ "cost_usd": 0.0851,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.helpscout.com",
+   "developer_portal": "https://developer.helpscout.com",
+   "description": "Help Scout is a customer support helpdesk/shared inbox product with an Inbox (Mailbox) API 2.0, Docs API, Beacon chat widget, Chat API, and an Apps platform.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Pages from developer.helpscout.com and docs.helpscout.com describe the Help Scout product, its Inbox/Mailbox API, Docs API, webhooks and Apps. Matches the named product at helpscout.com."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "API key"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Authorization Code flow (for integrations other Help Scout users install) and Client Credentials flow (for internal integrations). Token endpoint: https://api.helpscout.net/v2/oauth2/token",
+   "token_refresh": "Client Credentials token valid for 2 days (expires_in 172800); create a new one after expiry. Refresh signaled by HTTP 401 and uses refresh_token grant at the same token endpoint. Refresh behavior for Client Credentials not explained.",
+   "scopes_notes": "No scope list found on the pages reviewed. Docs API uses an API key sent over HTTP Basic auth (key as username, dummy password), per developer.helpscout.com/llms.txt summary."
+  },
+  "access": {
+   "tier": "paid_plan",
+   "free_credentials": "no",
+   "trial_available": "unknown",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No app-review or public-listing gate found in pages reviewed. API access is plan-gated: Free plan has no API access; Standard is 200 calls/min without reporting endpoints; Plus 400/min and Pro 800/min with all endpoints. Credentials must be tied to an active, invited user in the account."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Conversations",
+    "Customers",
+    "Organizations",
+    "Tags",
+    "Webhooks",
+    "Docs knowledge base",
+    "Beacon chat"
+   ],
+   "read_ops": [
+    "conversations",
+    "customers",
+    "organizations",
+    "tags",
+    "Docs articles/collections/sites (Docs API)",
+    "Chat conversations (Chat API)"
+   ],
+   "write_ops": [
+    "create/update conversations and customers (per llms.txt summary, not verified at endpoint level)",
+    "POST /v2/webhooks to create webhooks (secondary source)"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "Inbox API: 200 requests per minute per account, plus burst limit of 12 write requests per 5 seconds (llms.txt summary). Plan-based: Standard 200/min, Plus 400/min, Pro 800/min (Mailbox API article).",
+   "limitations": "Rate limits are per account and plan-based. Standard plan has no reporting endpoints. No official standalone API client SDK was confirmed; JavaScript SDK and React UI Kit are for Help Scout apps, not the REST API."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.helpscout.net/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/drewburchfield/help-scout-mcp-server",
+    "https://mcpservers.org/en/servers/drewburchfield/help-scout-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Help Scout is a customer support product whose developer portal describes an Inbox (Mailbox) API, Docs API, and Beacon chat",
+    "url": "https://developer.helpscout.com/llms.txt",
+    "quote": "Inbox API 2.0 (API overview): The primary REST API for managing Help Scout conversations, customers, and support operations.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth 2.0 with Authorization Code and Client Credential flows",
+    "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+    "quote": "uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_lifetime",
+    "value": "Client Credentials token valid for 2 days",
+    "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+    "quote": "This token is valid for 2 days and you should create a new one only after the existing token expires.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.app_creation",
+    "value": "Apps are created under Your Profile > My apps",
+    "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+    "quote": "Create one by navigating to Your Profile > My apps and click Create My App.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.credential_owner",
+    "value": "Credentials must belong to an active invited user",
+    "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+    "quote": "All credentials must be associated with an active, invited user in the Help Scout account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.docs_api_key",
+    "value": "Docs API uses API key over HTTP Basic Auth",
+    "url": "https://developer.helpscout.com/llms.txt",
+    "quote": "The Docs API uses an API key over HTTP Basic Auth, not OAuth.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.plan",
+    "value": "Free plan has no API access; API access requires a paid plan",
+    "url": "https://docs.helpscout.com/article/1140-mailbox-api",
+    "quote": "The Free plan does not include access to the API or integrations.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.plan_tiers",
+    "value": "Standard 200/min with no reporting endpoints; Plus 400/min and Pro 800/min with all endpoints",
+    "url": "https://docs.helpscout.com/article/1140-mailbox-api",
+    "quote": "Each paid Help Scout plan has different levels of API access.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.rate_limit",
+    "value": "200 requests per minute per account with 12 write requests per 5 seconds burst",
+    "url": "https://developer.helpscout.com/llms.txt",
+    "quote": "Rate limits are listed here: 200 requests per minute per account, plus a burst limit of 12 write requests per 5 seconds.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "webhooks",
+    "value": "Webhooks are supported and signed with HMAC-SHA1 on the raw request body, sent in X-HelpScout-Signature",
+    "url": "https://developer.helpscout.com/webhooks/",
+    "quote": "The examples compute an HMAC-SHA1 digest of the raw request body and base64-encode it.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "webhooks.headers",
+    "value": "Event name in X-HelpScout-Event; signature in X-HelpScout-Signature",
+    "url": "https://developer.helpscout.com/webhooks/",
+    "quote": "Each webhook includes two Help Scout headers: X-HelpScout-Event and X-HelpScout-Signature",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "webhooks.config",
+    "value": "Webhooks are configured in Settings > Workspace > Apps > Webhooks",
+    "url": "https://developer.helpscout.com/webhooks/",
+    "quote": "go to Workspace > Apps, then select the Webhooks app.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks",
+    "value": "JavaScript SDK, React UI Kit, and Beacon mobile SDKs exist for apps and Beacon; no official standalone REST API client confirmed",
+    "url": "https://developer.helpscout.com/llms.txt",
+    "quote": "JavaScript SDK: provides access to Help Scout's context, for communication between your app and Help Scout.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "community_sdks",
+    "value": "Community-built PHP, .NET and Ruby clients are listed",
+    "url": "https://docs.helpscout.com/article/1140-mailbox-api",
+    "quote": "find community built resources like PHP, .NET, and Ruby clients",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Help Scout runs an official remote MCP server at mcp.helpscout.net/mcp",
+    "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+    "quote": "Help Scout MCP gives AI assistants secure, official access to Help Scout data.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.read_only",
+    "value": "The official MCP connector is read-only",
+    "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+    "quote": "The connector is read-only.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.docs_key",
+    "value": "Docs tools need a separate Docs API key",
+    "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+    "quote": "To allow AI Agents to search your Docs knowledge base, you need a Docs API key.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Independent community MCP server drewburchfield/help-scout-mcp-server (MIT), not maintained by Help Scout",
+    "url": "https://www.eesel.ai/blog/claude-for-helpscout",
+    "quote": "maintained by an independent developer, not by Help Scout staff.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Whether Standard and Plus plans need a paid API add-on: an AWS Marketplace listing says so, but Help Scout's own Mailbox API article does not mention any add-on.",
+   "Trial or sandbox availability for API testing is not established.",
+   "Role required to create an app (Owner/Admin) is only mentioned in secondary sources and is unverified.",
+   "Whether Help Scout's new App Developer Platform changes the OAuth app creation path.",
+   "Exact list of Inbox API write endpoints was not verified at endpoint level.",
+   "The GitHub repo ownership and license of drewburchfield/help-scout-mcp-server were not checked directly on github.com.",
+   "Official Help Scout GitHub org or first-party MCP repo was not found."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "high",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "yes",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Paid plan required",
+  "rationale": [
+   "API needs a paid plan."
+  ]
+ },
+ "evidence_support_rate": 0.667,
+ "flags": [],
+ "error": null
+}

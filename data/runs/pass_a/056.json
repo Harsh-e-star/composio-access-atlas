@@ -1,0 +1,260 @@
+{
+ "id": 56,
+ "name": "Firecrawl",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:21:25Z",
+ "duration_s": 35.2,
+ "cost_usd": 0.0818,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.firecrawl.dev/",
+   "title": "Firecrawl | Knowledge Infrastructure for AI Agents",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.firecrawl.dev/introduction",
+   "title": "Introduction | Firecrawl",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.firecrawl.dev/mcp-server",
+   "title": "Firecrawl MCP: Get Started",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.firecrawl.dev/api-reference/introduction",
+   "title": "Introduction - Firecrawl Docs",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.firecrawl.dev/api-reference/v2-introduction",
+   "title": "Introduction - Firecrawl Docs",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://www.firecrawl.dev/signin?redirect=%2Fapp%2Fapi-keys",
+   "title": "Firecrawl | Knowledge Infrastructure for AI Agents",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.firecrawl.dev/api-reference/endpoint/scrape",
+   "title": "Scrape - Firecrawl Docs",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://www.firecrawl.dev/pricing",
+   "title": "Pricing | Firecrawl",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://www.firecrawl.dev/use-cases/ai-mcps",
+   "title": "Firecrawl MCP for Claude Code, Cursor, Codex & Windsurf",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.firecrawl.dev/ai-onboarding",
+   "title": "Build with AI | Firecrawl",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+   "title": "firecrawl/firecrawl-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/fastcrw/crw",
+   "title": "fastcrw/crw",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/spences10/mcp-omnisearch",
+   "title": "spences10/mcp-omnisearch",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/DasDigitaleMomentum/searxNcrawl",
+   "title": "DasDigitaleMomentum/searxNcrawl",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sadiuysal/crawl4ai-mcp-server",
+   "title": "sadiuysal/crawl4ai-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/TadMSTR/searxng-mcp",
+   "title": "TadMSTR/searxng-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/SanggonBoy/PyreCrawl",
+   "title": "SanggonBoy/PyreCrawl",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/firecrawl/firecrawl-cursor-plugin",
+   "title": "firecrawl/firecrawl-cursor-plugin",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.firecrawl.dev/",
+   "developer_portal": "https://docs.firecrawl.dev",
+   "description": "Firecrawl is the context API for AI agents: search, scrape, crawl, map, interact with the web and get clean Markdown or structured data.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources from firecrawl.dev and docs.firecrawl.dev describe the product."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "OAuth for apps lets users connect their own Firecrawl account; hosted MCP uses browser sign-in OAuth server URL.",
+   "token_refresh": "",
+   "scopes_notes": ""
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Free plan: 1,000 credits/month, 2 concurrent requests, low rate limits. Keyless access is rate-limited."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Scrape",
+    "Crawl",
+    "Map",
+    "Search",
+    "Interact",
+    "Parse",
+    "Monitor",
+    "Agent",
+    "Extract",
+    "Alexandria"
+   ],
+   "read_ops": [
+    "scrape",
+    "search",
+    "map",
+    "crawl results"
+   ],
+   "write_ops": [
+    "interact",
+    "start crawl",
+    "create monitor"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "Per-plan rate and concurrency limits; 429 returned when exceeded. Free plan: 2 concurrent requests.",
+   "limitations": "Credit-based billing; keyless access limited."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/firecrawl/firecrawl-mcp-server",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/spences10/mcp-omnisearch"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "API key (Bearer header)",
+    "url": "https://docs.firecrawl.dev/api-reference/v2-introduction",
+    "quote": "Requests need an Authorization header with your API key, except on the keyless endpoints described below: Authorization: Bearer fc-YOUR-API-KEY",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://docs.firecrawl.dev/api-reference/v2-introduction",
+    "quote": "To let users connect their own Firecrawl account to your app instead, use OAuth for apps .",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://www.firecrawl.dev/pricing",
+    "quote": "Firecrawl gives you 1,000 free credits every month, which covers about 1,000 pages, and no card is required.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST, CLI/library",
+    "url": "https://www.firecrawl.dev/",
+    "quote": "You can also call the REST API directly from any language.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.firecrawl.dev/api-reference/v2-introduction",
+    "quote": "Interact Create an Interact session to click, fill forms, and navigate pages. Parse Upload files and parse them into markdown or other formats. Monitor Schedule recurring checks and get notified when content changes.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://www.firecrawl.dev/use-cases/ai-mcps",
+    "quote": "Firecrawl provides an official MCP server that works with any MCP-compatible harness including Claude Code, Cursor, Codex, and Windsurf.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": []
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented CLI/library/REST interface."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

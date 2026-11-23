@@ -3,18 +3,37 @@
  "name": "Zoho Cliq",
  "category": "Communications and Messaging",
  "pass_name": "a",
- "model": "",
- "researched_at": "2026-11-23T14:17:16Z",
- "duration_s": 26.9,
- "cost_usd": null,
- "sources": [],
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:49:32Z",
+ "duration_s": 20.3,
+ "cost_usd": 0.0243,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://www.zoho.com/cliq/",
+   "title": "Team chat & communication software for businesses - Zoho Cliq",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://www.zoho.com/",
+   "title": "Zoho | Cloud Software Suite for Businesses",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/The-Luminous-Group/cliq-api-integration",
+   "title": "The-Luminous-Group/cliq-api-integration",
+   "kind": "github_search"
+  }
+ ],
  "extraction": {
   "identity": {
-   "official_website": null,
+   "official_website": "https://www.zoho.com/cliq/",
    "developer_portal": null,
-   "description": "",
-   "identity_confirmed": "unknown",
-   "identity_notes": ""
+   "description": "Zoho Cliq is business team chat and communication software with chats, channels, meetings, calendar, AI summaries, automation and a developer platform.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Zoho Cliq product; no API docs in sources."
   },
   "auth": {
    "methods": [],
@@ -26,7 +45,7 @@
   "access": {
    "tier": "unknown",
    "free_credentials": "unknown",
-   "trial_available": "unknown",
+   "trial_available": "yes",
    "paid_plan_required": "unknown",
    "admin_approval_required": "unknown",
    "provider_app_review": "unknown",
@@ -43,19 +62,55 @@
    "webhooks": "unknown",
    "sdks": "unknown",
    "rate_limits": "",
-   "limitations": ""
+   "limitations": "Provided sources do not document the API."
   },
   "mcp": {
    "official": "unknown",
    "official_url": null,
-   "community": "unknown",
-   "community_urls": []
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/The-Luminous-Group/cliq-api-integration"
+   ]
   },
-  "claims": [],
-  "open_questions": []
+  "claims": [
+   {
+    "field": "access.trial_available",
+    "value": "yes",
+    "url": "https://www.zoho.com/cliq/",
+    "quote": "Start your 15-day free trial",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "identity",
+    "value": "Team communication product with developer platform",
+    "url": "https://www.zoho.com/cliq/",
+    "quote": "Have the app work the way you want with easy-to-build components in Cliq’s developer platform.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Auth methods not in sources (Zoho Cliq REST API docs needed).",
+   "API protocols, breadth, and access tier for API credentials not established.",
+   "Official MCP server not established; the GitHub repo is from a third-party org (community)."
+  ]
  },
- "assessment": null,
- "evidence_support_rate": null,
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "unknown",
+  "approach": "None until interface confirmed",
+  "main_blocker": "API protocol not established.",
+  "rationale": [
+   "API protocol not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
  "flags": [],
- "error": "RuntimeError: no documentation pages could be fetched"
+ "error": null
 }

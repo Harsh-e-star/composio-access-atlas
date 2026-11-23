@@ -1,0 +1,225 @@
+{
+ "id": 35,
+ "name": "Mailchimp",
+ "category": "Marketing, Ads, Email and Social",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:31:45Z",
+ "duration_s": 70.0,
+ "cost_usd": 0.0852,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://mailchimp.com/",
+   "developer_portal": "https://mailchimp.com/developer/",
+   "description": "Mailchimp, the marketing email and automation platform, with its Marketing API (audience, campaign and automation data) and Transactional email service (formerly Mandrill).",
+   "identity_confirmed": "yes",
+   "identity_notes": "The developer page describes the Marketing API and Transactional (formerly Mandrill) products. Official site is mailchimp.com."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "OAuth2"
+   ],
+   "primary": "API key",
+   "oauth_flows": "Authorization-code style flow: register an app in the Mailchimp account, send users to the authorize endpoint on login.mailchimp.com, then exchange the code for a token. Exact grant details were not fetched.",
+   "token_refresh": "unknown",
+   "scopes_notes": "No scope model was established from sources."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "no",
+   "production_restrictions": "No app review step was described on the OAuth app setup page. Transactional (Mandrill) sending requires a paid Standard or Premium Marketing plan plus a paid add-on, per a search-result snippet that I did not verify on the page itself. Free-plan API access is not confirmed by an official source."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Unknown",
+   "resources": [
+    "Audiences (beta endpoints)",
+    "Batch endpoint",
+    "Campaigns (referenced in webhook and e-commerce docs)"
+   ],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "10 simultaneous connections per user (not per key or client); exceeding returns HTTP 429; 120-second timeout on API calls; no requests-per-second limit stated; batch webhook events capped at 500 pending per user",
+   "limitations": "Could not fetch a full endpoint list, so resource breadth is unknown. No sandbox or test environment was found. Webhook retries occur over 75 minutes, and webhooks may be dropped or disabled if unresponsive. Browser CORS calls to the Marketing API are not supported."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mailchimp.com/developer/_mcp/server",
+   "community": "yes",
+   "community_urls": [
+    "https://raw.githubusercontent.com/damientilman/mailchimp-mcp-server/main/README.md",
+    "https://pypi.org/project/mailchimp-mcp/",
+    "https://pypi.org/project/mcp-mailchimp/",
+    "https://socket.dev/npm/package/@agentx-ai/mailchimp-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity",
+    "value": "Mailchimp Marketing API and Mailchimp Transactional (formerly Mandrill) are the two developer API products",
+    "url": "https://mailchimp.com/developer/",
+    "quote": "Mailchimp Transactional (formerly Mandrill) sends targeted and event-driven messages via the API or SMTP.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.api_key",
+    "value": "API keys authenticate against the account that created them",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication.md",
+    "quote": "An API key authenticates against the account that created it.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth.oauth2",
+    "value": "OAuth 2 is for accessing other users' accounts",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication.md",
+    "quote": "OAuth 2 authenticates against an account belonging to someone else.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.transport",
+    "value": "Keys/tokens can be sent via HTTP Basic or Bearer auth",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication.md",
+    "quote": "You can use either HTTP Basic Authentication or Bearer Authentication.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_owner",
+    "value": "Tokens are tied to the user who created them, and are revoked if that user is removed",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication.md",
+    "quote": "Authentication is tied to the user who created the API key or authorized the OAuth 2 app, not to the account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.role",
+    "value": "Access is bounded by the creating user's role; admin users are recommended",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication.md",
+    "quote": "When creating a key or authorizing an app, use an admin user where you can.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.oauth_app_registration",
+    "value": "OAuth app registration requires only a Mailchimp account; no review or approval step described",
+    "url": "https://mailchimp.com/developer/marketing/build/start-developing/set-up-an-oauth-app.md",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.official",
+    "value": "Mailchimp hosts a docs-search MCP server that does not access account data",
+    "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server.md",
+    "quote": "This documentation site is itself an MCP server.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.account_access",
+    "value": "Official MCP server searches documentation, not your Mailchimp account",
+    "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server.md",
+    "quote": "searches documentation, not your Mailchimp account.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Community MCP servers exist (e.g., damientilman/mailchimp-mcp-server, PyPI mailchimp-mcp)",
+    "url": "https://raw.githubusercontent.com/damientilman/mailchimp-mcp-server/main/README.md",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "10 simultaneous connections per user; 429 when exceeded",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/rate-limits-and-timeouts.md",
+    "quote": "The Marketing API has a limit of 10 simultaneous connections.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.timeout",
+    "value": "120-second timeout on Marketing API calls",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/rate-limits-and-timeouts.md",
+    "quote": "The Marketing API has a 120-second timeout on API calls.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhooks are configurable in the web app or via the API",
+    "url": "https://mailchimp.com/developer/marketing/api-concepts/webhooks.md",
+    "quote": "There are two ways to set up our webhook: in the Mailchimp web app, or through the API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "sdks",
+    "value": "Official Node.js client library for Mailchimp Marketing API (npm @mailchimp/mailchimp_marketing) and Python SDK (mailchimp/mailchimp-marketing-python-sdk)",
+    "url": "https://www.github.com/topics/mailchimp-sdk",
+    "quote": "The official Node.js client library for the Mailchimp Marketing API",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.transactional_plan",
+    "value": "Transactional is a paid add-on to a Standard or Premium monthly Marketing plan; Essentials not eligible",
+    "url": "https://mailchimp.com/en/pricing/transactional-email/",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "access.api_key_creation_role",
+    "value": "API keys can be generated by users with Manager or Owner permissions",
+    "url": "https://mailchimp.com/en/help/about-api-keys/",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Full Marketing API endpoint list (campaigns, lists/audiences, automations, reports) and whether read/write breadth is Broad, so api.breadth is Unknown.",
+   "Whether the free plan gives API access for testing. Secondary sources say yes, but they conflict on limits and no official page was fetched.",
+   "Exact OAuth2 grant type, token expiry and refresh behavior (the authentication pages describe the flow but not refresh).",
+   "Webhook plan or role requirements were not stated on the fetched page.",
+   "Official SDK pages (client-libraries-and-sdks) were not fetched; the Python SDK's current PyPI release status is unconfirmed.",
+   "Community MCP server details (license, tool counts, maintenance) were not verified; reported tool counts differ (227 vs 71).",
+   "Quotes in this record come from WebFetch summaries and may not be verbatim source text; re-check before relying on them."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "unknown",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "elevated",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.688,
+ "flags": [],
+ "error": null
+}

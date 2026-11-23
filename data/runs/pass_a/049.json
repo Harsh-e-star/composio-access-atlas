@@ -1,0 +1,287 @@
+{
+ "id": 49,
+ "name": "Amazon Selling Partner",
+ "category": "Ecommerce",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:21:20Z",
+ "duration_s": 70.1,
+ "cost_usd": 0.0754,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developer-docs.amazon/sp-api",
+   "title": "Selling Partner API",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developer-docs.amazon/",
+   "title": "Amazon-Services-API",
+   "rendered": true
+  },
+  {
+   "id": "S3",
+   "url": "https://developer.amazon.com/",
+   "title": "Amazon Developer",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developer.amazon.com",
+   "title": "Amazon Developer",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://developer-docs.amazon/sp-api/page/404",
+   "title": "Page Not Found",
+   "rendered": true
+  },
+  {
+   "id": "S6",
+   "url": "https://developer-docs.amazon/sp-api/docs/reactivate-authorizations",
+   "title": "Reactivate Authorizations",
+   "rendered": true
+  },
+  {
+   "id": "S7",
+   "url": "https://developer-docs.amazon/sp-api/docs/resolve-common-http-and-authorization-error-codes",
+   "title": "Resolve Common HTTP and Authorization Error Codes",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developer-docs.amazon/sp-api/docs/authorizing-selling-partner-api-applications",
+   "title": "Authorize Applications",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developer-docs.amazon/sp-api/reference/welcome-to-api-references",
+   "title": "Welcome to API References",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developer.amazon.com/en/device-partners/firetv/",
+   "title": "Amazon Device Partners | Fire TV",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://developer.amazon.com/device-partners/firetv/",
+   "title": "Amazon Device Partners | Fire TV",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://developer-docs.amazon/sp-api/docs/product-pricing-api",
+   "title": "Product Pricing API",
+   "rendered": false
+  },
+  {
+   "id": "S13",
+   "url": "https://developer-docs.amazon/sp-api/docs/pricing-faq",
+   "title": "Product Pricing API and Notifications FAQ",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/amzn/selling-partner-agentic-toolkit",
+   "title": "amzn/selling-partner-agentic-toolkit",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/bhavykhatri/amazon-seller-mcp",
+   "title": "bhavykhatri/amazon-seller-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/ailumia/amazon-sp-api-mcp",
+   "title": "ailumia/amazon-sp-api-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/christian-ramos/mcp-amazon-sp-api",
+   "title": "christian-ramos/mcp-amazon-sp-api",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/KuudoAI/amazon-selling-partner-mcp",
+   "title": "KuudoAI/amazon-selling-partner-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/trinknx/amazon-seller-mcp",
+   "title": "trinknx/amazon-seller-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/wilketob/amztec-mcp-server",
+   "title": "wilketob/amztec-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/MendelBirnbaum/joynwell-sp-mcp",
+   "title": "MendelBirnbaum/joynwell-sp-mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://developer-docs.amazon/sp-api",
+   "developer_portal": "https://developer-docs.amazon/sp-api",
+   "description": "Amazon Selling Partner API (SP-API): REST-based API letting sellers and vendors' applications access Amazon selling data (orders, listings, pricing, catalog, inventory, reports, etc.).",
+   "identity_confirmed": "yes",
+   "identity_notes": "Official docs at developer-docs.amazon/sp-api describe the Selling Partner API."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "OAuth 2.0 through Login with Amazon (LWA) for public apps (selling partner authorizes via website or Appstore); self-authorization for private apps. Restricted Data Token for PII operations.",
+   "token_refresh": "Access tokens expire after 1 hour, refresh tokens valid 365 days, LWA client secrets 180 days; reauthorization required annually.",
+   "scopes_notes": "Access governed by roles (e.g., Pricing) added to the application; adding roles requires reauthorization (or relisting for published apps)."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "yes",
+   "production_restrictions": "Public apps need seller authorization and annual reauthorization; roles need approval; new authorizations may be restricted if developer account is deactivated."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Orders",
+    "Catalog Items",
+    "Listings Items",
+    "Product Pricing",
+    "Feeds",
+    "Reports",
+    "Finances",
+    "Fulfillment Inbound",
+    "Fulfillment Outbound",
+    "FBA Inventory",
+    "Notifications",
+    "Messaging",
+    "Sellers",
+    "Vendor Orders",
+    "Vendor Shipments",
+    "A+ Content"
+   ],
+   "read_ops": [
+    "Retrieve product pricing and offers",
+    "Retrieve orders",
+    "Retrieve catalog items"
+   ],
+   "write_ops": [
+    "Update listings/prices via Listings Items API",
+    "Submit feeds"
+   ],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "Roles required per operation; sandbox for Product Pricing is static."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://github.com/amzn/selling-partner-agentic-toolkit",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/bhavykhatri/amazon-seller-mcp",
+    "https://github.com/ailumia/amazon-sp-api-mcp",
+    "https://github.com/christian-ramos/mcp-amazon-sp-api",
+    "https://github.com/KuudoAI/amazon-selling-partner-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2",
+    "url": "https://developer-docs.amazon/sp-api/docs/authorizing-selling-partner-api-applications",
+    "quote": "Authorization method: OAuth 2.0 through Login with Amazon (LWA).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "unknown",
+    "url": "https://developer-docs.amazon/sp-api/docs/authorizing-selling-partner-api-applications",
+    "quote": "Private applications are for exclusive use by a single organization.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://developer-docs.amazon/sp-api",
+    "quote": "Learn how to get started and build applications with Amazon's REST-based SP-API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developer-docs.amazon/sp-api/reference/welcome-to-api-references",
+    "quote": "Welcome to the Selling Partner API reference. Navigate to an API to reach its landing page. Select an operation to open its specification.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://github.com/amzn/selling-partner-agentic-toolkit",
+    "quote": "Skills for managing an Amazon seller account via SP-API, through the Amazon Selling Partner Connector (MCP).",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.token_refresh",
+    "value": "1h access, 365d refresh, 180d secret",
+    "url": "https://developer-docs.amazon/sp-api/docs/resolve-common-http-and-authorization-error-codes",
+    "quote": "Access tokens expire after 1 hour, refresh tokens are valid for 365 days, and client secrets for 180 days.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Exact gating for developer registration/test credentials (free vs approval) not in sources.",
+   "Rate limits not stated in sources.",
+   "The mcp.official claim quote is from the GitHub search listing, not a fetched source page; the quote may not verify against the SOURCES text."
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "high",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

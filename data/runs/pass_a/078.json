@@ -1,0 +1,222 @@
+{
+ "id": 78,
+ "name": "Coda",
+ "category": "Productivity and Project Management",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:24:31Z",
+ "duration_s": 53.6,
+ "cost_usd": 0.0709,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://docs.superhuman.com/developers/apis/v1",
+   "title": "Superhuman Docs API (v1) Reference Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://coda.io",
+   "title": "Coda: Your all-in-one collaborative workspace.",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/bartolli/codanna",
+   "title": "bartolli/codanna",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/orellazri/coda-mcp",
+   "title": "orellazri/coda-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/codacy/codacy-mcp-server",
+   "title": "codacy/codacy-mcp-server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Mlilion/Codata",
+   "title": "Mlilion/Codata",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Mlilion/CodataAdmin",
+   "title": "Mlilion/CodataAdmin",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/stavroskasidis/codalus-ide",
+   "title": "stavroskasidis/codalus-ide",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/sepehr071/codal-mcp",
+   "title": "sepehr071/codal-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/TJC-LP/coda-mcp-server",
+   "title": "TJC-LP/coda-mcp-server",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://coda.io",
+   "developer_portal": "https://coda.io/developers",
+   "description": "Coda (now Superhuman Docs) is a collaborative all-in-one workspace combining docs, tables, apps and automations, with a public REST API.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Coda has been renamed Superhuman Docs; the API is hosted at coda.io/apis/v1."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "",
+   "token_refresh": "API tokens may be invalid or expired (401); no refresh flow described.",
+   "scopes_notes": "API usage is subject to the role of the user associated with the API token in the workspace."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Creating docs/pages requires the token owner to be a Doc Maker (or Admin) in the workspace, or auto-promoted if 'Any member can create docs' is enabled."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "folders",
+    "docs",
+    "permissions",
+    "publishing",
+    "categories",
+    "pages",
+    "tables",
+    "formulas",
+    "controls",
+    "rows"
+   ],
+   "read_ops": [
+    "List folders",
+    "List docs",
+    "Get doc",
+    "List pages",
+    "List permissions",
+    "Read rows"
+   ],
+   "write_ops": [
+    "Create folder",
+    "Create doc",
+    "Delete doc",
+    "Create page",
+    "Add permission",
+    "Publish doc",
+    "Insert/upsert/update/delete rows"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "Reading: 100 requests/6s; writing: 10 requests/6s; writing doc content: 5 requests/10s; listing docs: 4 requests/6s; reading analytics: 100 requests/6s.",
+   "limitations": "Volatile formulas (Today(), Now(), User()) behave differently via API; edits may take a few seconds to become available."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://docs.superhuman.com/resources/guides/getting_started_with_coda_mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/orellazri/coda-mcp",
+    "https://github.com/TJC-LP/coda-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "Bearer/PAT",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "headers = { 'Authorization' : 'Bearer <your API token>' } uri = 'https://coda.io/apis/v1/folders'",
+    "verified": false,
+    "verify_note": "source unreachable (blocked_by_robots_txt)"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces.",
+    "verified": false,
+    "verify_note": "source unreachable (blocked_by_robots_txt)"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "uri = 'https://coda.io/apis/v1/folders'",
+    "verified": false,
+    "verify_note": "source unreachable (blocked_by_robots_txt)"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "Discover pages, tables, formulas, and controls Read, insert, upsert, update, and delete rows",
+    "verified": false,
+    "verify_note": "source unreachable (blocked_by_robots_txt)"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "you may also want to consider using the Superhuman Docs MCP server . It's optimized for LLM usage patterns",
+    "verified": false,
+    "verify_note": "source unreachable (blocked_by_robots_txt)"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Read 100/6s; write 10/6s",
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "quote": "Reading data (with the exceptions below): 100 requests per 6 seconds Writing data (POST/PUT/PATCH): 10 requests per 6 seconds",
+    "verified": false,
+    "verify_note": "source unreachable (blocked_by_robots_txt)"
+   }
+  ],
+  "open_questions": [
+   "Is OAuth2 supported for the Coda API? Not established in sources.",
+   "Are official SDKs available? An OpenAPI spec and client libraries section exists but details were not shown.",
+   "Are webhooks supported?",
+   "The official MCP server URL was not loadable (blocked by robots.txt)."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface."
+  ]
+ },
+ "evidence_support_rate": 0.0,
+ "flags": [],
+ "error": null
+}

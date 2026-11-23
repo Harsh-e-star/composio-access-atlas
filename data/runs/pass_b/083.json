@@ -1,0 +1,215 @@
+{
+ "id": 83,
+ "name": "Binance",
+ "category": "Finance and Fintech",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:37:34Z",
+ "duration_s": 96.6,
+ "cost_usd": 0.0603,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://www.binance.com",
+   "developer_portal": "https://developers.binance.com/en/docs/introduction",
+   "description": "Binance is a cryptocurrency exchange. Its API docs cover Spot, Margin, Convert, Wallet, USDS-M and COIN-M Futures, and the Agentic MCP server. The assigned binance-docs.github.io site redirects to developers.binance.com.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Confirmed from the vendor docs redirect and the vendor GitHub org (github.com/binance, 'Open source, from Binance'). The binance-docs.github.io URL redirects to developers.binance.com, so the docs are the vendor's own. Not a generic 'Binance' app."
+  },
+  "auth": {
+   "methods": [
+    "API key",
+    "Other"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "",
+   "scopes_notes": "Agentic MCP server: 'Trade' and 'Transfer' require user confirmation; there is no withdrawal scope (see claims)."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "yes",
+   "production_restrictions": "Production (real-money) keys need a verified account and a Spot deposit before a key can be created, plus 2FA. Testnet credentials are self-serve after login. No paid plan or partner gate was found in the sources reviewed."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "WebSocket"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "Market data",
+    "Orders/trading",
+    "Account and trade history",
+    "User data streams",
+    "Margin",
+    "Convert",
+    "Wallet",
+    "USDS-M and COIN-M Futures (via Futures docs and Agentic MCP)"
+   ],
+   "read_ops": [
+    "Exchange info",
+    "Order book depth",
+    "Tickers",
+    "Klines/candles",
+    "Account status",
+    "My trades",
+    "Order status"
+   ],
+   "write_ops": [
+    "Place order",
+    "Cancel order",
+    "Amend order",
+    "Order lists",
+    "Manage User Data Stream subscriptions"
+   ],
+   "webhooks": "unknown",
+   "sdks": "yes",
+   "rate_limits": "Limits are per IP, not per API key. Exceeding limits returns HTTP 429. Repeated violations lead to an IP ban (HTTP 418).",
+   "limitations": "Webhooks not found; user data comes via WebSocket user data streams. The nav lists a FIX API, not verified. Futures/Margin endpoint details were not read; breadth is based on the Spot REST reference and the product nav. The Agentic MCP server is a limited, sub-account-only trade surface and has no withdrawals."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://developers.binance.com/en/docs/agent-native/mcp-server/agentic",
+   "community": "yes",
+   "community_urls": [
+    "https://pypi.org/project/binance-mcp-server",
+    "https://glama.ai/mcp/servers/TermiX-official/binance-mcp",
+    "https://mcpservers.org/id/servers/ethancod1ng/binance-mcp-server",
+    "https://cdn.jsdelivr.net/gh/py7hagoras/binance-mcp@main/README.md",
+    "https://awesome.ecosyste.ms/projects/github.com%2Fdanishashko%2Fbinance-mcp-server"
+   ]
+  },
+  "claims": [
+   {
+    "field": "identity.description",
+    "value": "Binance Spot API docs are the official vendor docs for Binance's exchange API; github.com/binance describes itself as 'Open source, from Binance'.",
+    "url": "https://github.com/binance",
+    "quote": "Official documentation for the Binance Spot APIs and streams.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "System-generated API keys use HMAC; self-generated keys use Ed25519 or RSA.",
+    "url": "https://www.binance.com/support/faq/360002502072",
+    "quote": "System-generated API keys use HMAC symmetric encryption.",
+    "verified": false,
+    "verify_note": "source unreachable (None)"
+   },
+   {
+    "field": "auth.methods (signing)",
+    "value": "Secure endpoints accept HMAC, RSA, or Ed25519 keys; signed endpoints need a signature and timestamp.",
+    "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api",
+    "quote": "We support HMAC, RSA, and Ed25519 keys.",
+    "verified": false,
+    "verify_note": "source unreachable (None)"
+   },
+   {
+    "field": "access.tier (testnet)",
+    "value": "Testnet: log in on the testnet site and generate an API key; testnet balances are automatically granted.",
+    "url": "https://developers.binance.com/en/dev-docs/products/spot/testnet/general-info",
+    "quote": "Log in on this website, and generate an API Key.",
+    "verified": false,
+    "verify_note": "source unreachable (None)"
+   },
+   {
+    "field": "access.sandbox_available",
+    "value": "yes",
+    "url": "https://developers.binance.com/en/dev-docs/products/spot/testnet/general-info",
+    "quote": "All users registering on the Spot Test Network automatically receive a balance in many different assets.",
+    "verified": false,
+    "verify_note": "source unreachable (None)"
+   },
+   {
+    "field": "access.production_restrictions",
+    "value": "Before creating a key, a Spot deposit is required to activate the account; 2FA and identity verification are also needed.",
+    "url": "https://www.binance.com/support/faq/360002502072",
+    "quote": "you need to make a deposit of any amount to your Spot Account to activate your account.",
+    "verified": false,
+    "verify_note": "source unreachable (None)"
+   },
+   {
+    "field": "api.rate_limits",
+    "value": "Limits are per IP, not per API key; violations get HTTP 429, and repeated violations lead to an IP ban.",
+    "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api",
+    "quote": "The limits on the API are based on the IPs, not the API keys.",
+    "verified": false,
+    "verify_note": "source unreachable (None)"
+   },
+   {
+    "field": "api.protocols (WebSocket)",
+    "value": "Spot API offers WebSocket API and WebSocket Streams, including user data stream events over WebSocket.",
+    "url": "https://developers.binance.com/docs/binance-spot-api-docs",
+    "quote": "You can now subscribe to User Data Stream events through your WebSocket API connection.",
+    "verified": false,
+    "verify_note": "source unreachable (None)"
+   },
+   {
+    "field": "api.sdks",
+    "value": "Official connectors exist for Python, JS, Java, Go, Rust, and a Futures Python connector.",
+    "url": "https://github.com/binance",
+    "quote": "Simple Python connector to the Binance Futures API.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp.official_url",
+    "value": "Binance's Agentic MCP server endpoint: https://agent.binance.com/mcp/agentic",
+    "url": "https://developers.binance.com/en/docs/agent-native/mcp-server/agentic",
+    "quote": "Your agent trades inside a dedicated sub-account, isolated from your main account.",
+    "verified": false,
+    "verify_note": "source unreachable (None)"
+   },
+   {
+    "field": "mcp.official (supported clients)",
+    "value": "Official MCP supports Claude Code, Claude Desktop, Codex CLI, ChatGPT, VS Code, and Grok.",
+    "url": "https://developers.binance.com/en/docs/agent-native/mcp-server/agentic",
+    "quote": "Your agent can never move funds out of the sub-account to an external address.",
+    "verified": false,
+    "verify_note": "source unreachable (None)"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Multiple third-party community MCP servers for Binance exist (e.g., AnalyticAce, TermiX-official, ethancod1ng, py7hagoras, danishashko). These are not vendor-owned.",
+    "url": "https://pypi.org/project/binance-mcp-server",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "The Agentic MCP server's auth method (OAuth vs API key vs other) is not named on the docs page. It only says 'Authenticate to authorize the connection.'",
+   "No public statement on whether the Agentic MCP server needs a paid plan, approval, or waitlist. Not found in the docs read.",
+   "Whether the FIX API (listed in the Spot docs nav) is publicly available was not verified.",
+   "Testnet pricing (free or paid) is not stated on the testnet page. Access appears to be self-serve, but this was not confirmed on a pricing page.",
+   "Regional and KYC restrictions (e.g., US or other jurisdictions) were not checked.",
+   "Webhook support was not found. Confirm whether Binance offers any webhook mechanism, or whether WebSocket user data streams are the only event channel.",
+   "Futures, Margin, Convert, and Wallet endpoint lists were not read; breadth rating is based on Spot REST and product nav.",
+   "Several community MCP servers exist, and their maintenance and safety were not vetted. Trust and ownership were not verified."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "high",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "high",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST/WebSocket interface."
+  ]
+ },
+ "evidence_support_rate": 0.083,
+ "flags": [],
+ "error": null
+}

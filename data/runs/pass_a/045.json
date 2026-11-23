@@ -1,0 +1,273 @@
+{
+ "id": 45,
+ "name": "Magento (Adobe Commerce)",
+ "category": "Ecommerce",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:20:17Z",
+ "duration_s": 34.6,
+ "cost_usd": 0.0741,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://developer.adobe.com/commerce/",
+   "title": ":experiencecloud:",
+   "rendered": false
+  },
+  {
+   "id": "S2",
+   "url": "https://developer.adobe.com",
+   "title": "The most memorable digital experiences are unleashed by developer creativity",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://partners.adobe.com/digitalexperience/",
+   "title": "Home | Digital Partner Experience Program",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://developer.adobe.com/apis",
+   "title": "Start building today",
+   "rendered": true
+  },
+  {
+   "id": "S5",
+   "url": "https://developer.adobe.com/apis/",
+   "title": "Start building today",
+   "rendered": true
+  },
+  {
+   "id": "S6",
+   "url": "https://developer.adobe.com/commerce/docs/",
+   "title": "Adobe Commerce Developer Documentation",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://developer.adobe.com/commerce/extensibility/developer-agent/",
+   "title": "Commerce Developer Agent",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://developer.adobe.com/app-builder/",
+   "title": "Extend and Integrate with Adobe Solutions",
+   "rendered": false
+  },
+  {
+   "id": "S9",
+   "url": "https://developer.adobe.com/developer-console/docs/guides/authentication/",
+   "title": "",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://developer.adobe.com/commerce/extensibility/developer-agent/getting-started",
+   "title": "Getting started",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/",
+   "title": "Adobe Experience Manager Forms Cloud Service APIs",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Genaker/AgentoAI",
+   "title": "Genaker/AgentoAI",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/boldcommerce/magento2-mcp",
+   "title": "boldcommerce/magento2-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/elgentos/magento2-dev-mcp",
+   "title": "elgentos/magento2-dev-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Siteation/magento2-debugbar",
+   "title": "Siteation/magento2-debugbar",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Inchoo/magento-bricklayer",
+   "title": "Inchoo/magento-bricklayer",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/mage-os-lab/magento2-lsp",
+   "title": "mage-os-lab/magento2-lsp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/magebitcom/magento2-mcp-module",
+   "title": "magebitcom/magento2-mcp-module",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Freento/Magento-2-Mcp",
+   "title": "Freento/Magento-2-Mcp",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://developer.adobe.com/commerce/",
+   "developer_portal": "https://developer.adobe.com/commerce/",
+   "description": "Adobe Commerce (formerly Magento) is Adobe's commerce platform for B2B and B2C, with developer tools, GraphQL and REST APIs, and App Builder extensibility.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Sources describe Adobe Commerce developer docs; the word Magento does not appear in the sources, but this is the assigned product."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "API key"
+   ],
+   "primary": "OAuth2",
+   "oauth_flows": "Adobe Developer Console supports OAuth user auth (authorization_code, 3-legged), OAuth Server-to-Server, and API key credentials. Service Account (JWT) reached end of life on June 30, 2025.",
+   "token_refresh": "",
+   "scopes_notes": "Product-specific Commerce REST token and integration auth are not covered in the sources."
+  },
+  "access": {
+   "tier": "unknown",
+   "free_credentials": "unknown",
+   "trial_available": "unknown",
+   "paid_plan_required": "unknown",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "The sources do not establish how to get test credentials for the core Commerce APIs. The Commerce Developer Agent requires an Adobe Commerce entitlement. App Builder custom apps are submitted for admin review and approval."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "GraphQL"
+   ],
+   "breadth": "Broad",
+   "resources": [
+    "storefront (GraphQL)",
+    "third-party integrations (REST)",
+    "events",
+    "webhooks",
+    "product recommendations",
+    "Admin UI extensions"
+   ],
+   "read_ops": [],
+   "write_ops": [],
+   "webhooks": "yes",
+   "sdks": "yes",
+   "rate_limits": "",
+   "limitations": "The sources do not list specific endpoints, rate limits, or resource coverage. Breadth is inferred from the GraphQL and REST API descriptions."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": null,
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/boldcommerce/magento2-mcp",
+    "https://github.com/elgentos/magento2-dev-mcp",
+    "https://github.com/magebitcom/magento2-mcp-module",
+    "https://github.com/Freento/Magento-2-Mcp",
+    "https://github.com/Inchoo/magento-bricklayer",
+    "https://github.com/mage-os-lab/magento2-lsp",
+    "https://github.com/Genaker/AgentoAI",
+    "https://github.com/Siteation/magento2-debugbar"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2, API key",
+    "url": "https://developer.adobe.com/developer-console/docs/guides/authentication/",
+    "quote": "Server to server authentication OAuth Server to Server credential API key authentication API Key credential",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Service account JWT is no longer supported",
+    "url": "https://developer.adobe.com/developer-console/docs/guides/authentication/",
+    "quote": "As of June 30, 2025, Service Account (JWT) credentials have reached their end of life and are no longer supported.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "unknown",
+    "url": "https://developer.adobe.com/commerce/extensibility/developer-agent/getting-started",
+    "quote": "An Adobe Commerce entitlement. The Commerce Developer Agent is available to Adobe Commerce customers only.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST, GraphQL",
+    "url": "https://developer.adobe.com/commerce/docs/",
+    "quote": "Use our GraphQL APIs to send data to and from the storefront. Our REST APIs integrate with third-party software.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Broad",
+    "url": "https://developer.adobe.com/commerce/docs/",
+    "quote": "Our platform provides a complete solution for developing, customizing, extending, and testing your software.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "yes",
+    "url": "https://developer.adobe.com/commerce/extensibility/developer-agent/",
+    "quote": "Commerce Developer Agent can generate extensions that use Adobe Commerce webhooks where request interception or synchronous validation is appropriate.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "unknown",
+    "url": "https://developer.adobe.com/apis/",
+    "quote": "Explore and adopt Adobe MCP servers, connectors and skills across products to scale productivity and transform digital workflows.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "How does a developer get test credentials for Commerce REST and GraphQL (integration tokens, IMS OAuth for Adobe Commerce as a Cloud Service)?",
+   "Is there an official Adobe Commerce MCP server in the Adobe AI Registry?",
+   "What are the API rate limits?",
+   "Which specific resources and operations does the REST API cover?"
+  ]
+ },
+ "assessment": {
+  "verdict": "UNKNOWN",
+  "group": "RESEARCH FURTHER",
+  "technical_feasibility": "high",
+  "credential_accessibility": "unknown",
+  "production_readiness": "unknown",
+  "security_risk": "elevated",
+  "commercial_dependency": "unknown",
+  "approach": "Custom toolkit over GraphQL/REST",
+  "main_blocker": "Credential access path not established.",
+  "rationale": [
+   "Credential access path not established."
+  ]
+ },
+ "evidence_support_rate": 0.857,
+ "flags": [],
+ "error": null
+}

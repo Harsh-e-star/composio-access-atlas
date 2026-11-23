@@ -1,0 +1,286 @@
+{
+ "id": 94,
+ "name": "Consensus",
+ "category": "AI, Research and Media-native",
+ "pass_name": "a",
+ "model": "sonnet",
+ "researched_at": "2026-11-23T14:27:27Z",
+ "duration_s": 41.0,
+ "cost_usd": 0.0851,
+ "sources": [
+  {
+   "id": "S1",
+   "url": "https://consensus.app",
+   "title": "Consensus: AI for Research",
+   "rendered": true
+  },
+  {
+   "id": "S2",
+   "url": "https://docs.consensus.app/get-started/what-is-consensus",
+   "title": "Start here - Consensus",
+   "rendered": false
+  },
+  {
+   "id": "S3",
+   "url": "https://docs.consensus.app/consensus-mcp",
+   "title": "Get started with Consensus MCP - Consensus",
+   "rendered": false
+  },
+  {
+   "id": "S4",
+   "url": "https://docs.consensus.app/core-features/mcp",
+   "title": "Use Consensus in ChatGPT, Claude, Copilot, or with the API - Consensus",
+   "rendered": false
+  },
+  {
+   "id": "S5",
+   "url": "https://docs.consensus.app/search-basics/research-an-author",
+   "title": "Look up a researcher's work - Consensus",
+   "rendered": false
+  },
+  {
+   "id": "S6",
+   "url": "https://docs.consensus.app/api-get-started",
+   "title": "Get started with Consensus API - Consensus",
+   "rendered": false
+  },
+  {
+   "id": "S7",
+   "url": "https://docs.consensus.app/get-started/full-text-access",
+   "title": "Read the full paper - Consensus",
+   "rendered": false
+  },
+  {
+   "id": "S8",
+   "url": "https://consensus.app/pricing/",
+   "title": "Pricing",
+   "rendered": true
+  },
+  {
+   "id": "S9",
+   "url": "https://docs.consensus.app/mcp-plans-and-access",
+   "title": "MCP plans and access - Consensus",
+   "rendered": false
+  },
+  {
+   "id": "S10",
+   "url": "https://docs.consensus.app/mcp-tools/quickstart",
+   "title": "Quick start: Search & Threads - Consensus",
+   "rendered": false
+  },
+  {
+   "id": "S11",
+   "url": "https://docs.consensus.app/api-plans-and-access",
+   "title": "API plans and access - Consensus",
+   "rendered": false
+  },
+  {
+   "id": "S12",
+   "url": "https://docs.consensus.app/use-cases",
+   "title": "What you can build with the Consensus API and MCP - Consensus",
+   "rendered": false
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/antonbabenko/deliberation",
+   "title": "antonbabenko/deliberation",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/wheattoast11/openrouter-deep-research-mcp",
+   "title": "wheattoast11/openrouter-deep-research-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/blackms/aistack",
+   "title": "blackms/aistack",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/0xAkuti/ai-council-mcp",
+   "title": "0xAkuti/ai-council-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Consensus-NLP/consensus-mcp",
+   "title": "Consensus-NLP/consensus-mcp",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/hireblackout/awesome-mcp-servers",
+   "title": "hireblackout/awesome-mcp-servers",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/Shelpuk-AI-Technology-Consulting/lad_mcp_server",
+   "title": "Shelpuk-AI-Technology-Consulting/lad_mcp_server",
+   "kind": "github_search"
+  },
+  {
+   "id": "GH",
+   "url": "https://github.com/CODERUDRA-X/AEGIS-SWARM",
+   "title": "CODERUDRA-X/AEGIS-SWARM",
+   "kind": "github_search"
+  }
+ ],
+ "extraction": {
+  "identity": {
+   "official_website": "https://consensus.app",
+   "developer_portal": "https://docs.consensus.app",
+   "description": "Consensus is an AI search engine for research that searches 400M+ scholarly works and answers with citations to papers; offers REST API and hosted MCP server.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Consensus (consensus.app) AI academic search; docs describe API and MCP."
+  },
+  "auth": {
+   "methods": [
+    "OAuth2",
+    "API key",
+    "Bearer/PAT"
+   ],
+   "primary": "API key",
+   "oauth_flows": "MCP server uses OAuth 2.0 with dynamic discovery (per-user sign-in to Consensus account).",
+   "token_refresh": "OAuth tokens expire after hours (401); re-authenticate per docs.",
+   "scopes_notes": "REST API uses x-api-key header; MCP accepts OAuth or any Consensus API key as Bearer token; key inherits owner's plan limits."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "unknown",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "unknown",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "unknown",
+   "production_restrictions": "Free plan: 30 calls/month, 10 papers per call, 1 req/sec, no pagination, full-text excerpts, or complete text (paid only). Enterprise needs contacting sales."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "search",
+    "papers full_text",
+    "papers citations/references",
+    "threads (Research Agent)"
+   ],
+   "read_ops": [
+    "GET /v1/search",
+    "GET /v1/papers/full_text",
+    "citations and references",
+    "get_thread"
+   ],
+   "write_ops": [
+    "create Thread (Research Agent)",
+    "follow-up on Thread",
+    "save papers to Library (via MCP)"
+   ],
+   "webhooks": "unknown",
+   "sdks": "unknown",
+   "rate_limits": "Free 1 req/sec; Pro/Deep/Teams 3 req/sec; no-account 5 req/sec shared; monthly pool Free 30, Pro 500, Deep 2,000.",
+   "limitations": "Primarily a search/retrieval API; paid plans needed for pagination, full text, citations, excerpts. Max 1,000 results per query."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://mcp.consensus.app/mcp",
+   "community": "unknown",
+   "community_urls": []
+  },
+  "claims": [
+   {
+    "field": "auth.methods",
+    "value": "OAuth2, API key, Bearer",
+    "url": "https://docs.consensus.app/consensus-mcp",
+    "quote": "Server URL https://mcp.consensus.app/mcp Authentication OAuth 2.0 Type Dynamic Discovery",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "API key via x-api-key",
+    "url": "https://docs.consensus.app/api-get-started",
+    "quote": "Every request must include your API key in the x-api-key header",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "auth.methods",
+    "value": "Bearer token on MCP",
+    "url": "https://docs.consensus.app/mcp-plans-and-access",
+    "quote": "Any Consensus API key works on the MCP server. Include it as a Bearer token",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free_self_serve",
+    "url": "https://docs.consensus.app/api-plans-and-access",
+    "quote": "The API is self-serve on every Consensus plan.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.tier",
+    "value": "free plan includes API access",
+    "url": "https://docs.consensus.app/api-get-started",
+    "quote": "Every plan i",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.protocols",
+    "value": "REST",
+    "url": "https://docs.consensus.app/api-get-started",
+    "quote": "The Consensus API lets you search 400+ million scholarly articles, including 350 million peer-reviewed research papers, over a single REST endpoint.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.breadth",
+    "value": "Limited",
+    "url": "https://docs.consensus.app/use-cases",
+    "quote": "REST API One x-api-key , every filter, and pagination to exhaustion. For pipelines, internal tools, and anything scheduled.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official",
+    "value": "yes",
+    "url": "https://docs.consensus.app/consensus-mcp",
+    "quote": "Search 400M+ scholarly articles, including 350M peer-reviewed papers and all of PubMed, from Claude, ChatGPT, Cursor, Microsoft 365 Copilot and other MCP clients.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   }
+  ],
+  "open_questions": [
+   "Full list of REST endpoints (beyond search, full_text, citations/references, Threads) not seen.",
+   "Whether OAuth is available for the REST API (appears MCP only).",
+   "SDK availability unknown (code examples only).",
+   "Webhooks not mentioned."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "low",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface.",
+   "API surface is limited; toolkit would cover few actions."
+  ]
+ },
+ "evidence_support_rate": 1.0,
+ "flags": [],
+ "error": null
+}

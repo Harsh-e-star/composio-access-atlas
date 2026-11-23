@@ -1,0 +1,233 @@
+{
+ "id": 99,
+ "name": "YouTube Transcript",
+ "category": "AI, Research and Media-native",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:39:10Z",
+ "duration_s": 96.3,
+ "cost_usd": 0.0684,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://transcriptapi.com/",
+   "developer_portal": "https://transcriptapi.com/docs/",
+   "description": "TranscriptAPI.com: a hosted REST API and MCP server for YouTube data (transcripts, video metadata, search, channels, playlists). Separate from the open-source youtube-transcript-api Python package.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Vendor site and docs describe the product as a hosted REST API and MCP server for YouTube data, matching the transcriptapi.com hint. Company name not stated beyond the TranscriptAPI.com brand. 'YouTube Transcript' is a generic name shared by many unrelated open-source packages and Apify actors, which are not this product."
+  },
+  "auth": {
+   "methods": [
+    "Bearer/PAT",
+    "OAuth2"
+   ],
+   "primary": "Bearer/PAT",
+   "oauth_flows": "OAuth is used only for the hosted MCP connection from Claude and ChatGPT (ChatGPT requires a Client ID and Client Secret; Claude can register automatically). REST API uses bearer API keys. OAuth grant type not specified in pages read.",
+   "token_refresh": "unknown",
+   "scopes_notes": "No scopes described in pages read."
+  },
+  "access": {
+   "tier": "free_self_serve",
+   "free_credentials": "yes",
+   "trial_available": "yes",
+   "paid_plan_required": "no",
+   "admin_approval_required": "no",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "no",
+   "sandbox_available": "no",
+   "production_restrictions": "Credit-based usage: 100 free credits to start. Credit exhaustion returns HTTP 402, which can also mean no active paid plan. Higher rate limits and custom plans require contacting the vendor."
+  },
+  "api": {
+   "protocols": [
+    "REST"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "transcripts",
+    "videos",
+    "search",
+    "channels",
+    "playlists"
+   ],
+   "read_ops": [
+    "Video transcript (GET /youtube/transcript)",
+    "Video info and metadata (GET /youtube/info, /youtube/video/metadata)",
+    "YouTube search (GET /youtube/search)",
+    "Channel resolve, info, search, videos, playlists, posts, sections, latest (GET /youtube/channel/*)",
+    "Playlist videos (GET /youtube/playlist/videos)"
+   ],
+   "write_ops": [],
+   "webhooks": "unknown",
+   "sdks": "no",
+   "rate_limits": "Starter Monthly: 200 requests per minute; Starter Annual and OpenClaw: 300 requests per minute (more on request). Applies per account, shared by all keys.",
+   "limitations": "All 13 documented REST endpoints are GET (read-only); no write operations listed. Deprecated aliases /youtube/video/info and /api/v1/youtube/transcript exist. Rate limit 200-300 req/min per account. No webhooks documented."
+  },
+  "mcp": {
+   "official": "yes",
+   "official_url": "https://transcriptapi.com/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://github.com/ZeroPointRepo/youtube-mcp",
+    "https://github.com/ZeroPointRepo/TranscriptAPI-MCP",
+    "https://www.npmjs.com/package/transcriptapi-mcp"
+   ]
+  },
+  "claims": [
+   {
+    "field": "product_identity",
+    "value": "TranscriptAPI.com is a hosted REST API and MCP server for YouTube data, separate from the open-source Python package",
+    "url": "https://transcriptapi.com/",
+    "quote": "It states that the product \"is a hosted REST API, separate from the open-source YouTubeTranscriptApi Python package.\"",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "auth_primary",
+    "value": "Bearer token in Authorization header; key from API Keys dashboard",
+    "url": "https://transcriptapi.com/docs/api/",
+    "quote": "Include your API key in the `Authorization` header of every request:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "free_credentials_signup",
+    "value": "Free signup with 100 credits, no card required; API key at signup page",
+    "url": "https://transcriptapi.com/pricing",
+    "quote": "100 free credits to try the API — no card required.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "trial",
+    "value": "Only free offer is 100 starter credits; no ongoing free tier or separate trial",
+    "url": "https://transcriptapi.com/pricing",
+    "quote": "You can start for free: new accounts get 100 free credits, no card required, and one transcript costs one credit.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "paid_plans",
+    "value": "Monthly $5.00/month for 1,000 credits; Annual $4.50/month billed $54.00/year",
+    "url": "https://transcriptapi.com/pricing",
+    "quote": "Monthly: \"$5.00/month\", including \"1,000\" credits per month.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "enterprise",
+    "value": "Custom plans via contact form",
+    "url": "https://transcriptapi.com/pricing",
+    "quote": "Have custom requirements? Contact us for a custom plan.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "credit_exhaustion",
+    "value": "HTTP 402 when credits exhausted; can also mean no active paid plan",
+    "url": "https://transcriptapi.com/docs/llms-full.txt",
+    "quote": "When credits are exhausted, the API returns `HTTP 402 Payment Required`.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "base_url",
+    "value": "https://transcriptapi.com/api/v2",
+    "url": "https://transcriptapi.com/docs/api/",
+    "quote": "All API requests are made to:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "rate_limits",
+    "value": "200 req/min Starter Monthly; 300 req/min Starter Annual and OpenClaw; per account",
+    "url": "https://transcriptapi.com/docs/api/",
+    "quote": "The limit applies per account: all API keys on your account share it.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "endpoints",
+    "value": "13 GET endpoints under /youtube/* (transcript, info, metadata, search, channel/*, playlist/videos); no write ops",
+    "url": "https://transcriptapi.com/docs/llms-full.txt",
+    "quote": "Endpoints (all GET, all read-only)",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "mcp_official_server",
+    "value": "Vendor-hosted remote MCP server at https://transcriptapi.com/mcp",
+    "url": "https://transcriptapi.com/docs/mcp/",
+    "quote": "TranscriptAPI runs a hosted (remote) MCP server at `https://transcriptapi.com/mcp`.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp_auth",
+    "value": "Claude and ChatGPT connect via OAuth; OpenAI Agent Builder uses an API key",
+    "url": "https://transcriptapi.com/docs/mcp/",
+    "quote": "Claude and ChatGPT connect with OAuth, and OpenAI Agent Builder connects with an API key.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp_credits",
+    "value": "MCP requests consume the same credits as REST and are rate limited",
+    "url": "https://transcriptapi.com/docs/mcp/",
+    "quote": "MCP requests consume credits and are subject to rate limits just like REST API calls:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp_tools",
+    "value": "12 tools exposed via MCP",
+    "url": "https://transcriptapi.com/docs/mcp/",
+    "quote": "TranscriptAPI exposes 12 tools through MCP:",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "community_mcp",
+    "value": "ZeroPointRepo/youtube-mcp: MIT-licensed MCP plugin pointing at the hosted transcriptapi.com/mcp endpoint; owner not explicitly stated",
+    "url": "https://github.com/ZeroPointRepo/youtube-mcp",
+    "quote": "all from one remote endpoint, all designed for AI agents.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "community_mcp_npm",
+    "value": "transcriptapi-mcp npm package runs locally over stdio against api.transcriptapi.io (a different domain); relation to vendor unverified",
+    "url": "https://socket.dev/npm/package/transcriptapi-mcp",
+    "quote": "unknown",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   }
+  ],
+  "open_questions": [
+   "Whether ZeroPointRepo (Zero Point Studio d.o.o.) is the vendor's own org; README branding says TranscriptAPI but ownership not explicitly stated.",
+   "Whether the transcriptapi-mcp npm package (api.transcriptapi.io) is vendor-published; its base domain differs from transcriptapi.com.",
+   "Whether the 402 'no active paid plan' message means free credits cannot be used beyond the starter 100 without a paid plan.",
+   "Webhooks: none found in docs read; not confirmed absent.",
+   "OAuth grant type and scopes for the MCP connection are not documented in pages read.",
+   "Exact 12 MCP tool names not enumerated; sources disagree (12 vs a community '6 tools').",
+   "Sandbox/test environment not found."
+  ]
+ },
+ "assessment": {
+  "verdict": "READY",
+  "group": "BUILD NOW",
+  "technical_feasibility": "low",
+  "credential_accessibility": "self-serve",
+  "production_readiness": "open",
+  "security_risk": "standard",
+  "commercial_dependency": "no",
+  "approach": "Wrap/benchmark vendor's official MCP server; add managed auth",
+  "main_blocker": "None for testing",
+  "rationale": [
+   "Self-serve test credentials (free self serve) and a documented REST interface.",
+   "API surface is limited; toolkit would cover few actions."
+  ]
+ },
+ "evidence_support_rate": 0.75,
+ "flags": [],
+ "error": null
+}

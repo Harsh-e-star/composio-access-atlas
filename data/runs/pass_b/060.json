@@ -1,0 +1,205 @@
+{
+ "id": 60,
+ "name": "Clay",
+ "category": "Data, SEO and Scraping",
+ "pass_name": "b",
+ "model": "haiku",
+ "researched_at": "2026-11-23T14:34:01Z",
+ "duration_s": 68.3,
+ "cost_usd": 0.0605,
+ "sources": [],
+ "extraction": {
+  "identity": {
+   "official_website": "https://clay.com",
+   "developer_portal": "https://developers.clay.com",
+   "description": "Clay (clay.com) is a go-to-market data enrichment and prospecting platform, with a developer site at developers.clay.com and a Clay Public API.",
+   "identity_confirmed": "yes",
+   "identity_notes": "Developer docs at developers.clay.com describe the Clay Public API, CLI and MCP for Clay workspaces; the pricing page at clay.com/pricing covers the same product. The 'clay.com' hint matches. The product description is inferred from these pages, not from a single explicit product-definition quote."
+  },
+  "auth": {
+   "methods": [
+    "API key"
+   ],
+   "primary": "API key",
+   "oauth_flows": "",
+   "token_refresh": "Not applicable: static API key. No rotation mechanism described.",
+   "scopes_notes": "API keys are tied to a Clay user and workspace access. No scope model described in the fetched pages."
+  },
+  "access": {
+   "tier": "paid_plan",
+   "free_credentials": "unknown",
+   "trial_available": "yes",
+   "paid_plan_required": "yes",
+   "admin_approval_required": "unknown",
+   "provider_app_review": "no",
+   "partnership_or_sales_required": "unknown",
+   "sandbox_available": "unknown",
+   "production_restrictions": "No app review described for the API key path. Some API resources are labeled Enterprise and Enterprise pricing is custom, so sales contact may be needed for those features; sources conflict on whether the general Clay API is Enterprise-only or Growth-and-above."
+  },
+  "api": {
+   "protocols": [
+    "REST",
+    "CLI/library"
+   ],
+   "breadth": "Limited",
+   "resources": [
+    "Me (authenticated user)",
+    "Routines (execute routines against items, batch runs)",
+    "Search (query-mode search, deprecated filters-mode)",
+    "Tables (structured query across tables, Enterprise label)",
+    "Workflow runs (beta search)",
+    "Credits (workspace balances)",
+    "Audiences (privacy deletion)"
+   ],
+   "read_ops": [
+    "Get the authenticated user",
+    "Fetch progress and results for a routine run",
+    "Fetch progress and results for a batch run",
+    "Run the query-mode iterator and return the next page of results",
+    "Get the Clay search query reference",
+    "Run a structured query across one or more tables",
+    "Search runs by query (beta)",
+    "Get workspace credit balances"
+   ],
+   "write_ops": [
+    "Execute a routine against 1-100 items",
+    "Start an async routine run-batch over an uploaded JSONL file",
+    "Issue a presigned PUT URL for uploading a batch input JSONL",
+    "Create a search from a Clay search query",
+    "Privacy delete people from Audiences"
+   ],
+   "webhooks": "yes",
+   "sdks": "unknown",
+   "rate_limits": "A rate-limits guide exists (developers.clay.com/public-api/rate-limits.md) and covers 429 handling, but specific limit values were not retrieved.",
+   "limitations": "No public company/contact/record CRUD endpoints appear in the API reference; the API centers on running routines (enrichment workflows), search, and table queries. Workflows are labeled Alpha and workflow-run search is beta. Filters-mode search endpoints are deprecated. No SDK mentioned."
+  },
+  "mcp": {
+   "official": "unknown",
+   "official_url": "https://developers.clay.com/concepts/mcp",
+   "community": "yes",
+   "community_urls": [
+    "https://npmjs.com/package/@clayhq/clay-mcp",
+    "https://www.gumloop.com/connectors/clay-mcp",
+    "https://docs.workato.com/en/mcp/prebuilt-mcps/clay-contact-company-explorer-mcp-server.html",
+    "https://composio.dev/toolkits/clay"
+   ]
+  },
+  "claims": [
+   {
+    "field": "auth.header",
+    "value": "API key sent in clay-api-key header on every Public API request",
+    "url": "https://developers.clay.com/public-api/authentication",
+    "quote": "Every request to the Clay Public API must include a Clay API key in the `clay-api-key` header.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.key_creation",
+    "value": "Keys are created in the Clay app under API and CLI > API keys, or via the clay CLI",
+    "url": "https://developers.clay.com/public-api/quickstart",
+    "quote": "Create one in the Clay app under API and CLI → API keys.",
+    "verified": false,
+    "verify_note": "quote not found in fetched source text"
+   },
+   {
+    "field": "access.key_once",
+    "value": "CLI-created key is returned once in apiKey field",
+    "url": "https://developers.clay.com/public-api/quickstart",
+    "quote": "The key is returned once, in the `apiKey` field.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.trial",
+    "value": "Trial plan includes HTTP API capabilities",
+    "url": "https://university.clay.com/docs/plans-and-billing",
+    "quote": "giving you access to webhooks, CRM integrations, email sequencers, and HTTP API capabilities.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "access.paid_plan",
+    "value": "HTTP API included on Growth plan and above",
+    "url": "https://university.clay.com/docs/plans-and-billing",
+    "quote": "CRM integrations, HTTP API, web intent signals, advanced automation, audiences",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhooks",
+    "value": "Webhook fires when a routine run finishes; signed POST; registered via CLI",
+    "url": "https://developers.clay.com/public-api/webhooks.md",
+    "quote": "Clay sends a signed `POST` to the webhook URL when the run is ready to read.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.webhook_signature",
+    "value": "Payload signed with HMAC-SHA256 in X-Clay-Signature header",
+    "url": "https://developers.clay.com/public-api/webhooks.md",
+    "quote": "Clay signs the exact request body with your webhook signing secret and sends it in the `X-Clay-Signature` header.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "api.resources",
+    "value": "Public API resource groups: Audiences, Credits, Me, Routines, Search, Tables, Workflow runs (beta)",
+    "url": "https://developers.clay.com/llms.txt",
+    "quote": "Routines: Execute a routine against 1-100 items",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_mention",
+    "value": "Clay docs say MCP is a way to run custom functions and agent workflows",
+    "url": "https://developers.clay.com/llms.txt",
+    "quote": "Run your own reusable Clay logic from agents, the CLI, MCP, or the API.",
+    "verified": true,
+    "verify_note": "quote found in source"
+   },
+   {
+    "field": "mcp.official_status",
+    "value": "Official 'clay mcp' local stdio server referenced in search snippet of developers.clay.com/concepts/mcp.md; page fetch returned 404 twice",
+    "url": "https://developers.clay.com/concepts/mcp.md",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   },
+   {
+    "field": "mcp.community",
+    "value": "Unofficial @clayhq/clay-mcp npm package requiring CLAY_API_KEY",
+    "url": "https://npmjs.com/package/@clayhq/clay-mcp",
+    "quote": "",
+    "verified": false,
+    "verify_note": "no quote or URL"
+   }
+  ],
+  "open_questions": [
+   "Is there an official Clay-published MCP server? developers.clay.com/concepts/mcp returned 404 on fetch; the 'clay mcp' stdio command and Claude Connectors directory listing come only from search snippets and third-party guides. Verify on Clay's live docs.",
+   "Exact plan gate for API keys: Clay's plans page lists HTTP API from Growth and Trial, while the pricing page reportedly lists Clay API as Enterprise. Confirm with Clay's current plans page or sales.",
+   "Rate limit values (developers.clay.com/public-api/rate-limits.md) were not retrieved.",
+   "Base URL: search snippet showed https://api.clay.com/public/v0/me as the documented example, but the fetched authentication page did not state a base URL; verify.",
+   "Whether a sandbox or dev workspace exists for testing; not found.",
+   "Whether the 'clay-inc/clay-mcp' listing on mcpservers.org points to a Clay-owned GitHub org; the owner name suggests possible vendor ownership but this is unverified.",
+   "SDK availability: none mentioned in fetched docs; CLI exists but is not an SDK.",
+   "Whether write operations beyond routine execution and search creation exist (no CRUD for contacts/companies found in the API reference index)."
+  ]
+ },
+ "assessment": {
+  "verdict": "CONDITIONAL",
+  "group": "BUILD WITH PREREQUISITES",
+  "technical_feasibility": "low",
+  "credential_accessibility": "conditional",
+  "production_readiness": "unknown",
+  "security_risk": "standard",
+  "commercial_dependency": "yes",
+  "approach": "Custom toolkit over REST",
+  "main_blocker": "Paid plan required",
+  "rationale": [
+   "API needs a paid plan."
+  ]
+ },
+ "evidence_support_rate": 0.727,
+ "flags": [],
+ "error": null
+}
