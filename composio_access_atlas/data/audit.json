@@ -1,0 +1,365 @@
+{
+  "sample_size": 14,
+  "fields_per_app": 3,
+  "total_fields": 42,
+  "baseline_hits": 17,
+  "baseline_agreement": 40.5,
+  "post_adjudication_fields": 42,
+  "post_adjudication_accuracy_claim": "Not independent: same sample was adjudicated by hand",
+  "method": "Deterministic rule-based baseline compared with first-party-doc-reviewed annotations. No live AI-agent execution claimed.",
+  "items": [
+    {
+      "app": "Pipedrive",
+      "category": "CRM & Sales",
+      "first": {
+        "auth": "OAuth2",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "reviewed": {
+        "auth": "OAuth2 + API token",
+        "access": "Conditional",
+        "surface": "REST"
+      },
+      "hits": [
+        "surface"
+      ],
+      "misses": [
+        "auth",
+        "access"
+      ],
+      "evidence": [
+        "https://pipedrive.readme.io/docs/core-api-concepts-authentication"
+      ],
+      "note": "Marketplace apps use OAuth; personal integrations can use API tokens."
+    },
+    {
+      "app": "Zendesk",
+      "category": "Support & Helpdesk",
+      "first": {
+        "auth": "OAuth2",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "reviewed": {
+        "auth": "OAuth2 + legacy API token",
+        "access": "Conditional",
+        "surface": "REST"
+      },
+      "hits": [
+        "surface"
+      ],
+      "misses": [
+        "auth",
+        "access"
+      ],
+      "evidence": [
+        "https://developer.zendesk.com/documentation/authentication/oauth-migration/",
+        "https://support.zendesk.com/hc/en-us/articles/10851263566234-Announcing-the-removal-of-API-tokens-as-an-authentication-method-for-API-requests"
+      ],
+      "note": "Support API tokens are being retired in phases through April 2027."
+    },
+    {
+      "app": "Twilio",
+      "category": "Communications",
+      "first": {
+        "auth": "API key",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "reviewed": {
+        "auth": "HTTP Basic + API key",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "hits": [
+        "access",
+        "surface"
+      ],
+      "misses": [
+        "auth"
+      ],
+      "evidence": [
+        "https://www.twilio.com/docs/iam/credentials/api"
+      ],
+      "note": "API key+secret pairs authenticate via HTTP Basic."
+    },
+    {
+      "app": "Google Ads",
+      "category": "Marketing & Social",
+      "first": {
+        "auth": "OAuth2",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "reviewed": {
+        "auth": "OAuth2 + developer token",
+        "access": "Conditional",
+        "surface": "REST + gRPC"
+      },
+      "hits": [],
+      "misses": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "evidence": [
+        "https://developers.google.com/google-ads/api/docs/oauth/overview",
+        "https://developers.google.com/google-ads/api/docs/api-policy/access-levels"
+      ],
+      "note": "Both OAuth and a Google Ads developer token are required."
+    },
+    {
+      "app": "LinkedIn Ads",
+      "category": "Marketing & Social",
+      "first": {
+        "auth": "OAuth2",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "reviewed": {
+        "auth": "OAuth2",
+        "access": "Gated",
+        "surface": "REST"
+      },
+      "hits": [
+        "auth",
+        "surface"
+      ],
+      "misses": [
+        "access"
+      ],
+      "evidence": [
+        "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access?view=li-lms-2026-10",
+        "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access"
+      ],
+      "note": "Advertising and restricted products have tiered approval paths."
+    },
+    {
+      "app": "Shopify",
+      "category": "Ecommerce",
+      "first": {
+        "auth": "OAuth2",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "reviewed": {
+        "auth": "OAuth2 + access token",
+        "access": "Conditional",
+        "surface": "GraphQL"
+      },
+      "hits": [],
+      "misses": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "evidence": [
+        "https://shopify.dev/docs/api/usage/authentication"
+      ],
+      "note": "GraphQL Admin API uses merchant-scoped access tokens."
+    },
+    {
+      "app": "Amazon Selling Partner",
+      "category": "Ecommerce",
+      "first": {
+        "auth": "OAuth2",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "reviewed": {
+        "auth": "OAuth2 (LWA)",
+        "access": "Gated",
+        "surface": "REST"
+      },
+      "hits": [
+        "surface"
+      ],
+      "misses": [
+        "auth",
+        "access"
+      ],
+      "evidence": [
+        "https://developer-docs.amazon.com/sp-api/docs/sp-api-registration-overview",
+        "https://developer-docs.amazon.com/sp-api/docs/onboarding-overview"
+      ],
+      "note": "SP-API requires developer registration; private app may require professional seller account."
+    },
+    {
+      "app": "DataForSEO",
+      "category": "Data, SEO & Scraping",
+      "first": {
+        "auth": "API key",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "reviewed": {
+        "auth": "HTTP Basic",
+        "access": "Conditional",
+        "surface": "REST"
+      },
+      "hits": [
+        "surface"
+      ],
+      "misses": [
+        "auth",
+        "access"
+      ],
+      "evidence": [
+        "https://docs.dataforseo.com/v3/auth/"
+      ],
+      "note": "API v3 explicitly requires HTTP Basic auth."
+    },
+    {
+      "app": "Ahrefs",
+      "category": "Data, SEO & Scraping",
+      "first": {
+        "auth": "API key",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "reviewed": {
+        "auth": "API key",
+        "access": "Paid",
+        "surface": "REST"
+      },
+      "hits": [
+        "auth",
+        "surface"
+      ],
+      "misses": [
+        "access"
+      ],
+      "evidence": [
+        "https://docs.ahrefs.com/en/api/docs/introduction",
+        "https://help.ahrefs.com/en/articles/13913559-getting-started-with-ahrefs-mcp"
+      ],
+      "note": "API availability depends on eligible paid plans; MCP also exists."
+    },
+    {
+      "app": "GitHub",
+      "category": "Developer & Infrastructure",
+      "first": {
+        "auth": "OAuth2",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "reviewed": {
+        "auth": "PAT + GitHub App + OAuth",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "hits": [
+        "access",
+        "surface"
+      ],
+      "misses": [
+        "auth"
+      ],
+      "evidence": [
+        "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+        "https://github.com/github/github-mcp-server"
+      ],
+      "note": "PAT, GitHub App and OAuth tokens are documented."
+    },
+    {
+      "app": "Linear",
+      "category": "Productivity & Projects",
+      "first": {
+        "auth": "OAuth2",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "reviewed": {
+        "auth": "PAT + OAuth2",
+        "access": "Self-serve",
+        "surface": "GraphQL"
+      },
+      "hits": [
+        "access"
+      ],
+      "misses": [
+        "auth",
+        "surface"
+      ],
+      "evidence": [
+        "https://linear.app/developers/graphql"
+      ],
+      "note": "GraphQL API supports personal keys and OAuth2."
+    },
+    {
+      "app": "Xero",
+      "category": "Finance & Fintech",
+      "first": {
+        "auth": "OAuth2",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "reviewed": {
+        "auth": "OAuth2",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "misses": [],
+      "evidence": [
+        "https://developer.xero.com/documentation/getting-started-guide/",
+        "https://developer.xero.com/faq"
+      ],
+      "note": "Free Xero developer registration and OAuth app setup."
+    },
+    {
+      "app": "NotebookLM",
+      "category": "AI, Research & Media",
+      "first": {
+        "auth": "OAuth2",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "reviewed": {
+        "auth": "Google IAM / OAuth",
+        "access": "Gated",
+        "surface": "REST (Enterprise)"
+      },
+      "hits": [],
+      "misses": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "evidence": [
+        "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks"
+      ],
+      "note": "Notebook Enterprise REST methods require an active license."
+    },
+    {
+      "app": "Mermaid CLI",
+      "category": "AI, Research & Media",
+      "first": {
+        "auth": "API key",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "reviewed": {
+        "auth": "No service auth",
+        "access": "Self-serve",
+        "surface": "Local CLI"
+      },
+      "hits": [
+        "access"
+      ],
+      "misses": [
+        "auth",
+        "surface"
+      ],
+      "evidence": [
+        "https://github.com/mermaid-js/mermaid-cli"
+      ],
+      "note": "CLI transforms diagram definitions into SVG, PNG or PDF."
+    }
+  ]
+}

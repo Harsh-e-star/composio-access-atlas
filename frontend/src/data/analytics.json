@@ -1,0 +1,1116 @@
+{
+  "total_apps": 100,
+  "categories_count": 10,
+  "reviewed_count": 100,
+  "evidence_coverage_pct": 100.0,
+  "oauth_supported_count": 61,
+  "oauth_adoption_pct": 61.0,
+  "api_key_supported_count": 84,
+  "api_key_adoption_pct": 84.0,
+  "basic_auth_count": 13,
+  "auth_distribution": {
+    "OAuth2": 29,
+    "API Key": 53,
+    "Basic": 8,
+    "Bot Token": 2,
+    "None": 2,
+    "PAT": 5,
+    "Custom": 1
+  },
+  "self_serve_count": 85,
+  "self_serve_pct": 85.0,
+  "gated_count": 27,
+  "gated_pct": 27.0,
+  "access_distribution": {
+    "Trial self-serve": 24,
+    "Free self-serve": 49,
+    "Admin approval": 10,
+    "Partner approval": 2,
+    "Paid self-serve": 12,
+    "Contact sales": 3
+  },
+  "build_now_count": 77,
+  "build_now_pct": 77.0,
+  "build_with_prerequisites_count": 17,
+  "build_with_prerequisites_pct": 17.0,
+  "outreach_required_count": 6,
+  "outreach_required_pct": 6.0,
+  "buildability_distribution": {
+    "Build With Prerequisites": 17,
+    "Build Now": 77,
+    "Outreach Required": 6
+  },
+  "api_type_distribution": {
+    "REST + GraphQL + SOAP": 1,
+    "REST": 63,
+    "REST + GraphQL": 5,
+    "GraphQL": 3,
+    "REST + Socket Mode": 1,
+    "REST + Gateway (WebSocket)": 1,
+    "Bot HTTP API": 1,
+    "REST (Graph API)": 3,
+    "REST + gRPC": 1,
+    "GraphQL + REST": 1,
+    "REST + Embedded SDK": 1,
+    "REST + MCP": 8,
+    "Local CLI": 2,
+    "REST + CLI": 2,
+    "REST (PostgREST) + GraphQL + Realtime": 1,
+    "HTTP Cypher API + Bolt Protocol": 1,
+    "REST (SQL API) + JDBC/ODBC": 1,
+    "REST + WebSocket": 1,
+    "REST / B2B Module": 1,
+    "REST (Enterprise)": 1,
+    "MCP Server": 1
+  },
+  "mcp_availability_counts": {
+    "official_mcp": 14,
+    "community_mcp": 76,
+    "total_mcp_ecosystem": 76,
+    "no_mcp": 24
+  },
+  "category_metrics": [
+    {
+      "category": "Developer & Infrastructure",
+      "total": 10,
+      "total_apps": 10,
+      "build_now": 10,
+      "build_with_prerequisites": 0,
+      "outreach_required": 0,
+      "self_serve": 10,
+      "official_mcp": 4,
+      "community_mcp": 10,
+      "dominant_auth": "API Key",
+      "readiness_score": 100.0
+    },
+    {
+      "category": "Productivity & Projects",
+      "total": 10,
+      "total_apps": 10,
+      "build_now": 10,
+      "build_with_prerequisites": 0,
+      "outreach_required": 0,
+      "self_serve": 10,
+      "official_mcp": 0,
+      "community_mcp": 9,
+      "dominant_auth": "API Key",
+      "readiness_score": 100.0
+    },
+    {
+      "category": "Data, SEO & Scraping",
+      "total": 10,
+      "total_apps": 10,
+      "build_now": 9,
+      "build_with_prerequisites": 1,
+      "outreach_required": 0,
+      "self_serve": 10,
+      "official_mcp": 3,
+      "community_mcp": 7,
+      "dominant_auth": "API Key",
+      "readiness_score": 96.0
+    },
+    {
+      "category": "Communications",
+      "total": 10,
+      "total_apps": 10,
+      "build_now": 8,
+      "build_with_prerequisites": 2,
+      "outreach_required": 0,
+      "self_serve": 9,
+      "official_mcp": 0,
+      "community_mcp": 7,
+      "dominant_auth": "OAuth2",
+      "readiness_score": 92.0
+    },
+    {
+      "category": "Support & Helpdesk",
+      "total": 10,
+      "total_apps": 10,
+      "build_now": 8,
+      "build_with_prerequisites": 2,
+      "outreach_required": 0,
+      "self_serve": 8,
+      "official_mcp": 0,
+      "community_mcp": 7,
+      "dominant_auth": "API Key",
+      "readiness_score": 92.0
+    },
+    {
+      "category": "CRM & Sales",
+      "total": 10,
+      "total_apps": 10,
+      "build_now": 7,
+      "build_with_prerequisites": 3,
+      "outreach_required": 0,
+      "self_serve": 9,
+      "official_mcp": 0,
+      "community_mcp": 7,
+      "dominant_auth": "OAuth2",
+      "readiness_score": 88.0
+    },
+    {
+      "category": "AI, Research & Media",
+      "total": 10,
+      "total_apps": 10,
+      "build_now": 8,
+      "build_with_prerequisites": 1,
+      "outreach_required": 1,
+      "self_serve": 9,
+      "official_mcp": 4,
+      "community_mcp": 8,
+      "dominant_auth": "API Key",
+      "readiness_score": 86.0
+    },
+    {
+      "category": "Marketing & Social",
+      "total": 10,
+      "total_apps": 10,
+      "build_now": 5,
+      "build_with_prerequisites": 4,
+      "outreach_required": 1,
+      "self_serve": 5,
+      "official_mcp": 1,
+      "community_mcp": 8,
+      "dominant_auth": "OAuth2",
+      "readiness_score": 74.0
+    },
+    {
+      "category": "Ecommerce",
+      "total": 10,
+      "total_apps": 10,
+      "build_now": 6,
+      "build_with_prerequisites": 2,
+      "outreach_required": 2,
+      "self_serve": 8,
+      "official_mcp": 0,
+      "community_mcp": 5,
+      "dominant_auth": "API Key",
+      "readiness_score": 72.0
+    },
+    {
+      "category": "Finance & Fintech",
+      "total": 10,
+      "total_apps": 10,
+      "build_now": 6,
+      "build_with_prerequisites": 2,
+      "outreach_required": 2,
+      "self_serve": 7,
+      "official_mcp": 2,
+      "community_mcp": 8,
+      "dominant_auth": "API Key",
+      "readiness_score": 72.0
+    }
+  ],
+  "quick_wins_count": 77,
+  "quick_wins": [
+    {
+      "id": 2,
+      "app_name": "HubSpot",
+      "category": "CRM & Sales",
+      "primary_auth": "OAuth2",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build Composio OAuth2 connector with default CRM contact/deal management tools and webhook trigger listener."
+    },
+    {
+      "id": 3,
+      "app_name": "Pipedrive",
+      "category": "CRM & Sales",
+      "primary_auth": "OAuth2",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Deploy Composio OAuth2 toolkit supporting deal creation, activity logging, and stage transitions."
+    },
+    {
+      "id": 4,
+      "app_name": "Attio",
+      "category": "CRM & Sales",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Ship immediate Composio Attio toolkit with record search, attribute update, and object enrichment."
+    },
+    {
+      "id": 5,
+      "app_name": "Twenty",
+      "category": "CRM & Sales",
+      "primary_auth": "API Key",
+      "api_type": "REST + GraphQL",
+      "official_mcp": "No",
+      "recommendation": "Build native GraphQL and REST actions for Composio; highlight open-source compatibility."
+    },
+    {
+      "id": 7,
+      "app_name": "Zoho CRM",
+      "category": "CRM & Sales",
+      "primary_auth": "OAuth2",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build multi-region OAuth2 provider handling DC routing automatically in Composio."
+    },
+    {
+      "id": 8,
+      "app_name": "Close",
+      "category": "CRM & Sales",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Implement Close lead creation, note logging, and call summary syncing tools."
+    },
+    {
+      "id": 9,
+      "app_name": "Copper",
+      "category": "CRM & Sales",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Support custom header pair in Composio auth manager (`X-PW-AccessToken` + `X-PW-UserEmail`)."
+    },
+    {
+      "id": 11,
+      "app_name": "Zendesk",
+      "category": "Support & Helpdesk",
+      "primary_auth": "OAuth2",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Implement Composio Zendesk OAuth2 app with ticket creation, comment addition, and status updates."
+    },
+    {
+      "id": 12,
+      "app_name": "Intercom",
+      "category": "Support & Helpdesk",
+      "primary_auth": "OAuth2",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Ship Composio toolkit for querying conversation history, replying to tickets, and article lookups."
+    },
+    {
+      "id": 13,
+      "app_name": "Freshdesk",
+      "category": "Support & Helpdesk",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Implement ticket retrieval, ticket reply, and agent assignment actions in Composio."
+    },
+    {
+      "id": 14,
+      "app_name": "Front",
+      "category": "Support & Helpdesk",
+      "primary_auth": "OAuth2",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build shared inbox management and draft generation tools using Front REST API."
+    },
+    {
+      "id": 16,
+      "app_name": "LiveAgent",
+      "category": "Support & Helpdesk",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build ticket query and response agent tool using LiveAgent API v3."
+    },
+    {
+      "id": 17,
+      "app_name": "Plain",
+      "category": "Support & Helpdesk",
+      "primary_auth": "API Key",
+      "api_type": "GraphQL",
+      "official_mcp": "No",
+      "recommendation": "Implement Composio GraphQL client for Plain thread creation, resolution, and customer context fetching."
+    },
+    {
+      "id": 18,
+      "app_name": "Help Scout",
+      "category": "Support & Helpdesk",
+      "primary_auth": "OAuth2",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Deploy Composio OAuth2 integration supporting 2-day client credential caching."
+    },
+    {
+      "id": 19,
+      "app_name": "Gorgias",
+      "category": "Support & Helpdesk",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build Gorgias e-commerce ticket responder and order lookup agent tools."
+    },
+    {
+      "id": 21,
+      "app_name": "Slack",
+      "category": "Communications",
+      "primary_auth": "OAuth2",
+      "api_type": "REST + Socket Mode",
+      "official_mcp": "No",
+      "recommendation": "Deploy full Composio Slack bot toolkit supporting Block Kit message rendering and thread listening."
+    },
+    {
+      "id": 22,
+      "app_name": "Twilio",
+      "category": "Communications",
+      "primary_auth": "Basic",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Integrate Twilio SMS dispatch and inbound webhook handling into Composio action library."
+    },
+    {
+      "id": 23,
+      "app_name": "Zoho Cliq",
+      "category": "Communications",
+      "primary_auth": "OAuth2",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Create Zoho Cliq message sender and bot handler plugin in Composio."
+    },
+    {
+      "id": 24,
+      "app_name": "Lark (Larksuite)",
+      "category": "Communications",
+      "primary_auth": "OAuth2",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Implement auto-refreshing `tenant_access_token` wrapper in Composio for message sending and Bitable record updates."
+    },
+    {
+      "id": 25,
+      "app_name": "Pumble",
+      "category": "Communications",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build Pumble channel notification and message dispatch tool for Composio."
+    },
+    {
+      "id": 26,
+      "app_name": "Discord",
+      "category": "Communications",
+      "primary_auth": "Bot Token",
+      "api_type": "REST + Gateway (WebSocket)",
+      "official_mcp": "No",
+      "recommendation": "Deploy Discord Bot connector in Composio supporting interaction responses and channel embeds."
+    },
+    {
+      "id": 27,
+      "app_name": "Telegram",
+      "category": "Communications",
+      "primary_auth": "Bot Token",
+      "api_type": "Bot HTTP API",
+      "official_mcp": "No",
+      "recommendation": "Ship turnkey Composio Telegram bot tool with markdown formatting and webhook dispatcher."
+    },
+    {
+      "id": 30,
+      "app_name": "Vonage",
+      "category": "Communications",
+      "primary_auth": "Basic",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Implement dual-mode authentication in Composio: API key/secret for basic SMS, JWT signer for multi-channel messaging."
+    },
+    {
+      "id": 34,
+      "app_name": "GoHighLevel",
+      "category": "Marketing & Social",
+      "primary_auth": "OAuth2",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build Composio GHL connector for agency contact management, calendar bookings, and conversation dispatch."
+    },
+    {
+      "id": 35,
+      "app_name": "Mailchimp",
+      "category": "Marketing & Social",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Implement auto-DC routing in Composio Mailchimp connector for audience list management and campaign dispatch."
+    },
+    {
+      "id": 36,
+      "app_name": "Klaviyo",
+      "category": "Marketing & Social",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build Composio customer event ingestion and profile segmentation toolkit with versioned headers."
+    },
+    {
+      "id": 37,
+      "app_name": "systeme.io",
+      "category": "Marketing & Social",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "Yes",
+      "recommendation": "Deploy Composio contact tagging and course enrollment actions."
+    },
+    {
+      "id": 40,
+      "app_name": "SendGrid",
+      "category": "Marketing & Social",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Ship standard Composio email sender and template rendering tool."
+    },
+    {
+      "id": 41,
+      "app_name": "Shopify",
+      "category": "Ecommerce",
+      "primary_auth": "OAuth2",
+      "api_type": "GraphQL + REST",
+      "official_mcp": "No",
+      "recommendation": "Deploy GraphQL Admin API toolkit for inventory lookups, order fulfillment, and discount code creation."
+    },
+    {
+      "id": 42,
+      "app_name": "WooCommerce",
+      "category": "Ecommerce",
+      "primary_auth": "Basic",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build Composio WooCommerce store management toolkit (product sync, order status updates)."
+    },
+    {
+      "id": 43,
+      "app_name": "BigCommerce",
+      "category": "Ecommerce",
+      "primary_auth": "API Key",
+      "api_type": "REST + GraphQL",
+      "official_mcp": "No",
+      "recommendation": "Implement Composio connector accepting `store_hash` and `X-Auth-Token` for product catalog and order processing."
+    },
+    {
+      "id": 45,
+      "app_name": "Magento (Adobe Commerce)",
+      "category": "Ecommerce",
+      "primary_auth": "API Key",
+      "api_type": "REST + GraphQL",
+      "official_mcp": "No",
+      "recommendation": "Implement token-based REST connector for Magento product catalog search and order updates."
+    },
+    {
+      "id": 47,
+      "app_name": "Ecwid",
+      "category": "Ecommerce",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Deploy product creation and order status modification tool in Composio."
+    },
+    {
+      "id": 48,
+      "app_name": "Gumroad",
+      "category": "Ecommerce",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build license verification, product listing, and sales receipt lookup tools in Composio."
+    },
+    {
+      "id": 51,
+      "app_name": "DataForSEO",
+      "category": "Data, SEO & Scraping",
+      "primary_auth": "Basic",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Deploy SERP search and domain backlink analysis actions in Composio."
+    },
+    {
+      "id": 53,
+      "app_name": "Ahrefs",
+      "category": "Data, SEO & Scraping",
+      "primary_auth": "API Key",
+      "api_type": "REST + MCP",
+      "official_mcp": "Yes",
+      "recommendation": "Connect Composio directly to Ahrefs' official MCP server endpoint or wrap API v3."
+    },
+    {
+      "id": 54,
+      "app_name": "MrScraper",
+      "category": "Data, SEO & Scraping",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build Composio web scraping trigger and unblocked HTML fetcher tool."
+    },
+    {
+      "id": 55,
+      "app_name": "Apify",
+      "category": "Data, SEO & Scraping",
+      "primary_auth": "API Key",
+      "api_type": "REST + MCP",
+      "official_mcp": "Yes",
+      "recommendation": "Plug Composio directly into Apify official MCP server to give agents access to hundreds of ready-made scrapers."
+    },
+    {
+      "id": 56,
+      "app_name": "Firecrawl",
+      "category": "Data, SEO & Scraping",
+      "primary_auth": "API Key",
+      "api_type": "REST + MCP",
+      "official_mcp": "Yes",
+      "recommendation": "Integrate Firecrawl official MCP server into Composio as default deep research and scraping provider."
+    },
+    {
+      "id": 57,
+      "app_name": "Bright Data",
+      "category": "Data, SEO & Scraping",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Deploy Composio Web Unlocker and SERP API connector for resilient agent scraping."
+    },
+    {
+      "id": 58,
+      "app_name": "Sherlock",
+      "category": "Data, SEO & Scraping",
+      "primary_auth": "None",
+      "api_type": "Local CLI",
+      "official_mcp": "No",
+      "recommendation": "Package Sherlock as a sandboxed local Python skill in Composio rather than a remote HTTP connector."
+    },
+    {
+      "id": 59,
+      "app_name": "Waterfall.io",
+      "category": "Data, SEO & Scraping",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build B2B lead enrichment tool in Composio taking email or domain and returning verified contact profiles."
+    },
+    {
+      "id": 60,
+      "app_name": "Clay",
+      "category": "Data, SEO & Scraping",
+      "primary_auth": "API Key",
+      "api_type": "REST + CLI",
+      "official_mcp": "No",
+      "recommendation": "Implement Composio tool to push leads into Clay tables and trigger automated waterfall enrichments."
+    },
+    {
+      "id": 61,
+      "app_name": "GitHub",
+      "category": "Developer & Infrastructure",
+      "primary_auth": "PAT",
+      "api_type": "REST + GraphQL",
+      "official_mcp": "Yes",
+      "recommendation": "Integrate official GitHub MCP server into Composio for repo exploration, PR creation, and issue management."
+    },
+    {
+      "id": 62,
+      "app_name": "Vercel",
+      "category": "Developer & Infrastructure",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build deployment trigger, build status inspection, and environment variable updater in Composio."
+    },
+    {
+      "id": 63,
+      "app_name": "Netlify",
+      "category": "Developer & Infrastructure",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Deploy Composio site deployment and build log monitoring tools."
+    },
+    {
+      "id": 64,
+      "app_name": "Cloudflare",
+      "category": "Developer & Infrastructure",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Implement Composio DNS record management and Workers deployment tools."
+    },
+    {
+      "id": 65,
+      "app_name": "Supabase",
+      "category": "Developer & Infrastructure",
+      "primary_auth": "API Key",
+      "api_type": "REST (PostgREST) + GraphQL + Realtime",
+      "official_mcp": "No",
+      "recommendation": "Deploy Composio PostgREST client and SQL query tool for Supabase backends."
+    },
+    {
+      "id": 66,
+      "app_name": "Neo4j",
+      "category": "Developer & Infrastructure",
+      "primary_auth": "Basic",
+      "api_type": "HTTP Cypher API + Bolt Protocol",
+      "official_mcp": "Yes",
+      "recommendation": "Connect Composio to Neo4j official MCP server for graph traversal and knowledge graph extraction."
+    },
+    {
+      "id": 67,
+      "app_name": "Snowflake",
+      "category": "Developer & Infrastructure",
+      "primary_auth": "OAuth2",
+      "api_type": "REST (SQL API) + JDBC/ODBC",
+      "official_mcp": "No",
+      "recommendation": "Deploy Composio Snowflake SQL API runner with key-pair authentication and asynchronous query polling."
+    },
+    {
+      "id": 68,
+      "app_name": "MongoDB Atlas",
+      "category": "Developer & Infrastructure",
+      "primary_auth": "Basic",
+      "api_type": "REST",
+      "official_mcp": "Yes",
+      "recommendation": "Implement HTTP Digest authentication handler in Composio for cluster management and leverage official MongoDB MCP."
+    },
+    {
+      "id": 69,
+      "app_name": "Datadog",
+      "category": "Developer & Infrastructure",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Support dual header authentication in Composio for monitor search, metric queries, and dashboard generation."
+    },
+    {
+      "id": 70,
+      "app_name": "Sentry",
+      "category": "Developer & Infrastructure",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "Yes",
+      "recommendation": "Plug Composio directly into official Sentry MCP server for issue investigation and stack trace lookups."
+    },
+    {
+      "id": 71,
+      "app_name": "Notion",
+      "category": "Productivity & Projects",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Deploy Composio Notion connector supporting database filtering, page creation, and block appending."
+    },
+    {
+      "id": 72,
+      "app_name": "Airtable",
+      "category": "Productivity & Projects",
+      "primary_auth": "PAT",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Implement Composio Airtable record CRUD tool with client-side rate limiting."
+    },
+    {
+      "id": 73,
+      "app_name": "Linear",
+      "category": "Productivity & Projects",
+      "primary_auth": "API Key",
+      "api_type": "GraphQL",
+      "official_mcp": "No",
+      "recommendation": "Deploy Composio Linear GraphQL actions for issue creation, triage, and state transitions."
+    },
+    {
+      "id": 74,
+      "app_name": "Jira",
+      "category": "Productivity & Projects",
+      "primary_auth": "OAuth2",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Implement Composio Jira OAuth2 and Basic auth connector with JQL query search and issue management."
+    },
+    {
+      "id": 75,
+      "app_name": "Asana",
+      "category": "Productivity & Projects",
+      "primary_auth": "PAT",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Ship Composio task assignment, due date updating, and project status posting tools."
+    },
+    {
+      "id": 76,
+      "app_name": "Monday.com",
+      "category": "Productivity & Projects",
+      "primary_auth": "API Key",
+      "api_type": "GraphQL",
+      "official_mcp": "No",
+      "recommendation": "Implement Composio GraphQL helper to serialize item column updates cleanly."
+    },
+    {
+      "id": 77,
+      "app_name": "ClickUp",
+      "category": "Productivity & Projects",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Deploy ClickUp task creator and list search actions in Composio."
+    },
+    {
+      "id": 78,
+      "app_name": "Coda",
+      "category": "Productivity & Projects",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build Coda table row lookup and insertion tool for Composio agents."
+    },
+    {
+      "id": 79,
+      "app_name": "Smartsheet",
+      "category": "Productivity & Projects",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build sheet row appending and status updating tools in Composio."
+    },
+    {
+      "id": 80,
+      "app_name": "Harvest",
+      "category": "Productivity & Projects",
+      "primary_auth": "PAT",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Implement Composio time entry logger and project hour tracker with dual header auth."
+    },
+    {
+      "id": 81,
+      "app_name": "Stripe",
+      "category": "Finance & Fintech",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Deploy comprehensive Composio Stripe payment link generator, invoice query, and customer balance tool."
+    },
+    {
+      "id": 82,
+      "app_name": "Plaid",
+      "category": "Finance & Fintech",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Build Composio Sandbox balance checker and transaction categorizer tools."
+    },
+    {
+      "id": 83,
+      "app_name": "Binance",
+      "category": "Finance & Fintech",
+      "primary_auth": "API Key",
+      "api_type": "REST + WebSocket",
+      "official_mcp": "No",
+      "recommendation": "Deploy Composio market data ticker and account balance inquiry actions with automated HMAC signing."
+    },
+    {
+      "id": 85,
+      "app_name": "ipayx",
+      "category": "Finance & Fintech",
+      "primary_auth": "API Key",
+      "api_type": "REST + MCP",
+      "official_mcp": "Yes",
+      "recommendation": "Directly configure `https://mcp.ipayx.ai/mcp` in Composio agent tool registry for instant FX rate and fee checks."
+    },
+    {
+      "id": 86,
+      "app_name": "QuickBooks",
+      "category": "Finance & Fintech",
+      "primary_auth": "OAuth2",
+      "api_type": "REST + GraphQL",
+      "official_mcp": "No",
+      "recommendation": "Implement Composio OAuth2 integration using QuickBooks developer sandbox for invoice creation and P&L reporting."
+    },
+    {
+      "id": 87,
+      "app_name": "Xero",
+      "category": "Finance & Fintech",
+      "primary_auth": "OAuth2",
+      "api_type": "REST + MCP",
+      "official_mcp": "Yes",
+      "recommendation": "Deploy Composio connector leveraging Xero's official remote MCP guidelines for invoice and bank reconciliation."
+    },
+    {
+      "id": 92,
+      "app_name": "Otter AI",
+      "category": "AI, Research & Media",
+      "primary_auth": "API Key",
+      "api_type": "MCP Server",
+      "official_mcp": "Yes",
+      "recommendation": "Directly integrate Otter's official MCP server into Composio tool catalog."
+    },
+    {
+      "id": 93,
+      "app_name": "Fathom",
+      "category": "AI, Research & Media",
+      "primary_auth": "API Key",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Deploy Composio meeting transcript query and action item extractor actions."
+    },
+    {
+      "id": 94,
+      "app_name": "Consensus",
+      "category": "AI, Research & Media",
+      "primary_auth": "API Key",
+      "api_type": "REST + MCP",
+      "official_mcp": "Yes",
+      "recommendation": "Directly configure Consensus official MCP server in Composio for evidence-grounded research."
+    },
+    {
+      "id": 95,
+      "app_name": "Reducto",
+      "category": "AI, Research & Media",
+      "primary_auth": "API Key",
+      "api_type": "REST + MCP",
+      "official_mcp": "Yes",
+      "recommendation": "Plug official Reducto MCP server into Composio for high-fidelity PDF and table parsing."
+    },
+    {
+      "id": 97,
+      "app_name": "higgsfield",
+      "category": "AI, Research & Media",
+      "primary_auth": "API Key",
+      "api_type": "REST + CLI",
+      "official_mcp": "No",
+      "recommendation": "Implement Composio prompt-to-video tool with asynchronous polling and idempotency keys."
+    },
+    {
+      "id": 98,
+      "app_name": "Mermaid CLI",
+      "category": "AI, Research & Media",
+      "primary_auth": "None",
+      "api_type": "Local CLI",
+      "official_mcp": "No",
+      "recommendation": "Package as a local CLI skill in Composio rather than a remote API integration."
+    },
+    {
+      "id": 99,
+      "app_name": "YouTube Transcript",
+      "category": "AI, Research & Media",
+      "primary_auth": "API Key",
+      "api_type": "REST + MCP",
+      "official_mcp": "Yes",
+      "recommendation": "Directly configure hosted MCP server endpoint in Composio for YouTube video summarization."
+    },
+    {
+      "id": 100,
+      "app_name": "Grain",
+      "category": "AI, Research & Media",
+      "primary_auth": "PAT",
+      "api_type": "REST",
+      "official_mcp": "No",
+      "recommendation": "Deploy Composio Grain meeting clip and action item retriever tool with versioned headers."
+    }
+  ],
+  "prerequisites_required_count": 17,
+  "prerequisites_required": [
+    {
+      "id": 1,
+      "app_name": "Salesforce",
+      "category": "CRM & Sales",
+      "main_blocker": "Connected App configuration and tenant administrator authorization required; Developer Edition sandboxes are free.",
+      "recommended_next_step": "Implement Composio OAuth2 integration using free Salesforce Developer Edition orgs to develop and verify Lead/Opportunity toolkits."
+    },
+    {
+      "id": 6,
+      "app_name": "Podio",
+      "category": "CRM & Sales",
+      "main_blocker": "Custom rate limit error code (HTTP 420); requires app registration under Podio account settings.",
+      "recommended_next_step": "Implement OAuth2 client supporting App-level authentication for automated workspace sync."
+    },
+    {
+      "id": 10,
+      "app_name": "DealCloud",
+      "category": "CRM & Sales",
+      "main_blocker": "Enterprise customer tenant required; user group must have API permissions enabled under Admin > User Management.",
+      "recommended_next_step": "Partner with an enterprise capital-markets client or obtain staging credentials to certify the DealCloud data connector."
+    },
+    {
+      "id": 15,
+      "app_name": "Pylon",
+      "category": "Support & Helpdesk",
+      "main_blocker": "Admin privileges required in Pylon workspace to create API token; workspace requires paid B2B plan.",
+      "recommended_next_step": "Integrate with Pylon API for syncing B2B customer issues across Slack and Teams."
+    },
+    {
+      "id": 20,
+      "app_name": "Gladly",
+      "category": "Support & Helpdesk",
+      "main_blocker": "Enterprise contract required; API token creation requires Admin role and API User permission.",
+      "recommended_next_step": "Build REST wrapper for conversation search and customer profile sync using sandbox instance."
+    },
+    {
+      "id": 28,
+      "app_name": "WhatsApp Business",
+      "category": "Communications",
+      "main_blocker": "Production messaging requires Meta Business Manager verification, payment method for conversation charges, and pre-approved message templates for outbound initiation.",
+      "recommended_next_step": "Develop Cloud API integration using Meta's free developer test numbers before requesting business verification."
+    },
+    {
+      "id": 29,
+      "app_name": "Aircall",
+      "category": "Communications",
+      "main_blocker": "API keys generated from Dashboard > Integrations > API Keys by an admin user on a paid Aircall plan.",
+      "recommended_next_step": "Build voice log ingestion and call recording transcription fetcher in Composio."
+    },
+    {
+      "id": 31,
+      "app_name": "Google Ads",
+      "category": "Marketing & Social",
+      "main_blocker": "Developer token approval levels (Test Accounts only with test token; Basic/Standard Access requires application review by Google Ads API compliance team).",
+      "recommended_next_step": "Develop tool against Google Ads test manager accounts while submitting compliance questionnaire for Basic Access."
+    },
+    {
+      "id": 32,
+      "app_name": "Meta Ads",
+      "category": "Marketing & Social",
+      "main_blocker": "App Review required for `ads_management` and `ads_read` permissions to manage third-party ad accounts; Development mode limited to admins.",
+      "recommended_next_step": "Build Composio Meta Ads reporting connector in Development Mode while prepping App Review submission screencast."
+    },
+    {
+      "id": 38,
+      "app_name": "Pinterest",
+      "category": "Marketing & Social",
+      "main_blocker": "Production API access requires Pinterest app review approval; Trial access is limited to developer test accounts.",
+      "recommended_next_step": "Build Pin publishing and board management tool using Trial sandbox access while submitting app for standard access."
+    },
+    {
+      "id": 39,
+      "app_name": "Threads (Meta)",
+      "category": "Marketing & Social",
+      "main_blocker": "App Review required for `threads_content_publish` and `threads_basic` for public users; dev accounts work immediately for developer's own account.",
+      "recommended_next_step": "Deploy personal publisher tool on developer mode, then apply for Meta App Review."
+    },
+    {
+      "id": 46,
+      "app_name": "Squarespace",
+      "category": "Ecommerce",
+      "main_blocker": "Commerce API requires Squarespace Commerce plan (Commerce Advanced or Basic depending on endpoint).",
+      "recommended_next_step": "Build Squarespace order syncing and inventory adjustment tools for paid store owners."
+    },
+    {
+      "id": 50,
+      "app_name": "fanbasis",
+      "category": "Ecommerce",
+      "main_blocker": "Requires creator/seller account setup to obtain API keys from seller portal.",
+      "recommended_next_step": "Build Composio checkout session generator tool using FanBasis/Commas public API."
+    },
+    {
+      "id": 52,
+      "app_name": "SE Ranking",
+      "category": "Data, SEO & Scraping",
+      "main_blocker": "API access requires an active paid subscription with API package add-on.",
+      "recommended_next_step": "Build keyword ranking and site audit fetcher tool in Composio."
+    },
+    {
+      "id": 88,
+      "app_name": "Brex",
+      "category": "Finance & Fintech",
+      "main_blocker": "Requires active Brex corporate account; admin must generate API user token in developer portal.",
+      "recommended_next_step": "Build expense report ingestion and card limit adjustment actions in Composio."
+    },
+    {
+      "id": 89,
+      "app_name": "Ramp",
+      "category": "Finance & Fintech",
+      "main_blocker": "Requires business Ramp account; developer application registration requires business administrator permission.",
+      "recommended_next_step": "Build corporate expense audit and receipt matching tools using Ramp Developer API."
+    },
+    {
+      "id": 96,
+      "app_name": "Devin",
+      "category": "AI, Research & Media",
+      "main_blocker": "Requires active Devin seat/subscription to generate `cog_` token from developer settings.",
+      "recommended_next_step": "Build Composio session delegator: spawn a Devin task from another AI agent and await completion webhook."
+    }
+  ],
+  "outreach_required": [
+    {
+      "id": 33,
+      "app_name": "LinkedIn Ads",
+      "category": "Marketing & Social",
+      "access_tier": "Partner approval",
+      "main_blocker": "Advertising API requires formal Marketing Developer Platform (MDP) application approval; Development tier is strictly sandbox-restricted.",
+      "recommended_next_step": "Submit Composio application to LinkedIn Marketing Developer Platform for Community Management / Ads Reporting partnership."
+    },
+    {
+      "id": 44,
+      "app_name": "Salesforce Commerce Cloud",
+      "category": "Ecommerce",
+      "access_tier": "Admin approval",
+      "main_blocker": "Requires Salesforce Commerce Cloud instance with Account Manager client ID, SLAS tenant configuration, and short-code routing.",
+      "recommended_next_step": "Obtain staging credentials or partner sandbox from an enterprise SFCC client before implementing shopper/admin workflows."
+    },
+    {
+      "id": 49,
+      "app_name": "Amazon Selling Partner",
+      "category": "Ecommerce",
+      "access_tier": "Partner approval",
+      "main_blocker": "Developer registration profile review, professional seller account requirement, and strict data protection policy (DPP) audits for PII-restricted roles.",
+      "recommended_next_step": "Submit developer registration profile and utilize SP-API sandbox environment with test endpoints for development."
+    },
+    {
+      "id": 84,
+      "app_name": "Paygent Connect",
+      "category": "Finance & Fintech",
+      "access_tier": "Contact sales",
+      "main_blocker": "Contract required with Japanese entity; requires client certificate provisioning and merchant setup.",
+      "recommended_next_step": "Engage Paygent sales/technical support for developer staging certificates and Japanese documentation translation."
+    },
+    {
+      "id": 90,
+      "app_name": "PitchBook",
+      "category": "Finance & Fintech",
+      "access_tier": "Contact sales",
+      "main_blocker": "Enterprise contract add-on required alongside PitchBook platform subscription; credit consumption model returns HTTP 402 when depleted.",
+      "recommended_next_step": "Engage PitchBook Direct Data team to explore partnership licensing or client staging key."
+    },
+    {
+      "id": 91,
+      "app_name": "NotebookLM",
+      "category": "AI, Research & Media",
+      "access_tier": "Contact sales",
+      "main_blocker": "Public consumer NotebookLM has no developer API; programmatic API is gated under NotebookLM Enterprise via Google Cloud licensing.",
+      "recommended_next_step": "Target Google Cloud NotebookLM Enterprise API using GCP project credentials or build a local RAG alternative using Gemini API."
+    }
+  ],
+  "blocked_or_unknown_count": 0,
+  "blocked_or_unknown": [],
+  "common_blockers": [
+    {
+      "blocker_theme": "API Protocol & Schema Nuances",
+      "affected_apps_count": 36,
+      "percentage": 36.0
+    },
+    {
+      "blocker_theme": "Paid Subscription / Unit Credit Quota",
+      "affected_apps_count": 21,
+      "percentage": 21.0
+    },
+    {
+      "blocker_theme": "Workspace / Tenant Administrator Authorization",
+      "affected_apps_count": 17,
+      "percentage": 17.0
+    },
+    {
+      "blocker_theme": "Local CLI / Runtime Engine Packaging",
+      "affected_apps_count": 8,
+      "percentage": 8.0
+    },
+    {
+      "blocker_theme": "Non-Standard Headers / Datacenter Routing",
+      "affected_apps_count": 6,
+      "percentage": 6.0
+    },
+    {
+      "blocker_theme": "Platform Vetting & Developer App Review",
+      "affected_apps_count": 6,
+      "percentage": 6.0
+    },
+    {
+      "blocker_theme": "Rate Limit Restrictions & Custom Error Codes",
+      "affected_apps_count": 4,
+      "percentage": 4.0
+    },
+    {
+      "blocker_theme": "Ephemeral Token Lifecycle & Complex Expiration",
+      "affected_apps_count": 2,
+      "percentage": 2.0
+    }
+  ]
+}

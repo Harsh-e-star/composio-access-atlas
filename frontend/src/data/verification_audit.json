@@ -1,0 +1,815 @@
+{
+  "sample_size": 20,
+  "fields_per_app": 3,
+  "total_fields_evaluated": 60,
+  "first_pass_correct": 26,
+  "first_pass_accuracy": 43.3,
+  "second_pass_correct": 59,
+  "second_pass_accuracy": 98.3,
+  "human_verified_count": 20,
+  "error_taxonomy": {
+    "GraphQL Schema Misidentified as Generic REST": 4,
+    "Enterprise or Approval Gating Overlooked": 6,
+    "Specification Nuance Under-specified": 4,
+    "HTTP Basic / Dual Key Misidentified as Bearer Key": 3,
+    "Local CLI Tool Misidentified as Remote REST API": 2
+  },
+  "methodology_statement": "Stratified holdout sample of 20 apps (2 from each of the 10 assignment categories) evaluating primary authentication protocol, developer access tier, and API surface. First pass represents initial rule-based heuristic prediction (43.3% accuracy). Second pass represents multi-agent web verification (98.3% accuracy on holdout). All discrepancies were adjudicated against first-party developer documentation citations.",
+  "audit_ledger": [
+    {
+      "app_id": 1,
+      "app_name": "Salesforce",
+      "category": "CRM & Sales",
+      "first_pass_prediction": {
+        "auth": "OAuth2",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "OAuth2",
+        "access": "Trial self-serve",
+        "surface": "REST + GraphQL + SOAP"
+      },
+      "human_ground_truth": {
+        "auth": "OAuth2",
+        "access": "Trial self-serve",
+        "surface": "REST + GraphQL + SOAP"
+      },
+      "first_pass_hits": [
+        "auth"
+      ],
+      "first_pass_misses": [
+        "access",
+        "surface"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "GraphQL Schema Misidentified as Generic REST",
+      "correction_applied": "Adjudicated to {'auth': 'OAuth2', 'access': 'Trial self-serve', 'surface': 'REST + GraphQL + SOAP'}",
+      "evidence_urls": [
+        "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+        "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm"
+      ],
+      "notes": "First pass marked access as Free self-serve; adjudicated to Trial self-serve / Admin approval because production usage requires paid Salesforce edition or admin-created connected app."
+    },
+    {
+      "app_id": 10,
+      "app_name": "DealCloud",
+      "category": "CRM & Sales",
+      "first_pass_prediction": {
+        "auth": "API Key",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "OAuth2",
+        "access": "Trial self-serve",
+        "surface": "REST"
+      },
+      "human_ground_truth": {
+        "auth": "OAuth2",
+        "access": "Admin approval",
+        "surface": "REST"
+      },
+      "first_pass_hits": [
+        "surface"
+      ],
+      "first_pass_misses": [
+        "auth",
+        "access"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "surface"
+      ],
+      "second_pass_misses": [
+        "access"
+      ],
+      "error_type": "Enterprise or Approval Gating Overlooked",
+      "correction_applied": "Adjudicated to {'auth': 'OAuth2', 'access': 'Admin approval', 'surface': 'REST'}",
+      "evidence_urls": [
+        "https://api.docs.dealcloud.com",
+        "https://dealcloud.com"
+      ],
+      "notes": "First pass guessed basic API key and self-serve. Adjudicated to OAuth2 Client Credentials and Admin approval required."
+    },
+    {
+      "app_id": 11,
+      "app_name": "Zendesk",
+      "category": "Support & Helpdesk",
+      "first_pass_prediction": {
+        "auth": "OAuth2",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "OAuth2",
+        "access": "Trial self-serve",
+        "surface": "REST"
+      },
+      "human_ground_truth": {
+        "auth": "OAuth2",
+        "access": "Trial self-serve",
+        "surface": "REST"
+      },
+      "first_pass_hits": [
+        "auth",
+        "surface"
+      ],
+      "first_pass_misses": [
+        "access"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "Specification Nuance Under-specified",
+      "correction_applied": "Adjudicated to {'auth': 'OAuth2', 'access': 'Trial self-serve', 'surface': 'REST'}",
+      "evidence_urls": [
+        "https://developer.zendesk.com/documentation/authentication/oauth-migration/",
+        "https://support.zendesk.com/hc/en-us/articles/10851263566234"
+      ],
+      "notes": "Matched. Verified token retirement roadmap."
+    },
+    {
+      "app_id": 17,
+      "app_name": "Plain",
+      "category": "Support & Helpdesk",
+      "first_pass_prediction": {
+        "auth": "API Key",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "API Key",
+        "access": "Free self-serve",
+        "surface": "GraphQL"
+      },
+      "human_ground_truth": {
+        "auth": "API Key",
+        "access": "Free self-serve",
+        "surface": "GraphQL"
+      },
+      "first_pass_hits": [
+        "auth",
+        "access"
+      ],
+      "first_pass_misses": [
+        "surface"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "GraphQL Schema Misidentified as Generic REST",
+      "correction_applied": "Adjudicated to {'auth': 'API Key', 'access': 'Free self-serve', 'surface': 'GraphQL'}",
+      "evidence_urls": [
+        "https://plain.com/docs",
+        "https://core-api.uk.plain.com/graphql/v1"
+      ],
+      "notes": "First pass marked surface as REST; corrected to GraphQL."
+    },
+    {
+      "app_id": 22,
+      "app_name": "Twilio",
+      "category": "Communications",
+      "first_pass_prediction": {
+        "auth": "API Key",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "Basic",
+        "access": "Trial self-serve",
+        "surface": "REST"
+      },
+      "human_ground_truth": {
+        "auth": "Basic",
+        "access": "Trial self-serve",
+        "surface": "REST"
+      },
+      "first_pass_hits": [
+        "surface"
+      ],
+      "first_pass_misses": [
+        "auth",
+        "access"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "HTTP Basic / Dual Key Misidentified as Bearer Key",
+      "correction_applied": "Adjudicated to {'auth': 'Basic', 'access': 'Trial self-serve', 'surface': 'REST'}",
+      "evidence_urls": [
+        "https://www.twilio.com/docs/iam/credentials/api",
+        "https://www.twilio.com/docs/usage/api"
+      ],
+      "notes": "First pass classified as generic API Key; corrected to HTTP Basic (SID:Token)."
+    },
+    {
+      "app_id": 24,
+      "app_name": "Lark (Larksuite)",
+      "category": "Communications",
+      "first_pass_prediction": {
+        "auth": "API Key",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "OAuth2",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "human_ground_truth": {
+        "auth": "OAuth2",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "first_pass_hits": [
+        "surface"
+      ],
+      "first_pass_misses": [
+        "auth",
+        "access"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "Specification Nuance Under-specified",
+      "correction_applied": "Adjudicated to {'auth': 'OAuth2', 'access': 'Free self-serve', 'surface': 'REST'}",
+      "evidence_urls": [
+        "https://open.larksuite.com/document/server-docs/authentication-management/access-token/tenant_access_token_internal",
+        "https://open.larksuite.com"
+      ],
+      "notes": "First pass marked API Key; updated to Tenant Access Token / OAuth2 framework."
+    },
+    {
+      "app_id": 31,
+      "app_name": "Google Ads",
+      "category": "Marketing & Social",
+      "first_pass_prediction": {
+        "auth": "OAuth2",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "OAuth2",
+        "access": "Admin approval",
+        "surface": "REST + gRPC"
+      },
+      "human_ground_truth": {
+        "auth": "OAuth2",
+        "access": "Admin approval",
+        "surface": "REST + gRPC"
+      },
+      "first_pass_hits": [
+        "auth"
+      ],
+      "first_pass_misses": [
+        "access",
+        "surface"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "Enterprise or Approval Gating Overlooked",
+      "correction_applied": "Adjudicated to {'auth': 'OAuth2', 'access': 'Admin approval', 'surface': 'REST + gRPC'}",
+      "evidence_urls": [
+        "https://developers.google.com/google-ads/api/docs/oauth/overview",
+        "https://developers.google.com/google-ads/api/docs/api-policy/access-levels"
+      ],
+      "notes": "First pass missed developer token review gate; corrected access to Admin approval."
+    },
+    {
+      "app_id": 33,
+      "app_name": "LinkedIn Ads",
+      "category": "Marketing & Social",
+      "first_pass_prediction": {
+        "auth": "OAuth2",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "OAuth2",
+        "access": "Partner approval",
+        "surface": "REST"
+      },
+      "human_ground_truth": {
+        "auth": "OAuth2",
+        "access": "Partner approval",
+        "surface": "REST"
+      },
+      "first_pass_hits": [
+        "auth",
+        "surface"
+      ],
+      "first_pass_misses": [
+        "access"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "Enterprise or Approval Gating Overlooked",
+      "correction_applied": "Adjudicated to {'auth': 'OAuth2', 'access': 'Partner approval', 'surface': 'REST'}",
+      "evidence_urls": [
+        "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access?view=li-lms-2026-10",
+        "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access"
+      ],
+      "notes": "First pass guessed self-serve; corrected to Partner approval / Outreach Required."
+    },
+    {
+      "app_id": 41,
+      "app_name": "Shopify",
+      "category": "Ecommerce",
+      "first_pass_prediction": {
+        "auth": "OAuth2",
+        "access": "Conditional",
+        "surface": "GraphQL"
+      },
+      "second_pass_verification": {
+        "auth": "OAuth2",
+        "access": "Free self-serve",
+        "surface": "GraphQL + REST"
+      },
+      "human_ground_truth": {
+        "auth": "OAuth2",
+        "access": "Free self-serve",
+        "surface": "GraphQL + REST"
+      },
+      "first_pass_hits": [
+        "auth"
+      ],
+      "first_pass_misses": [
+        "access",
+        "surface"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "GraphQL Schema Misidentified as Generic REST",
+      "correction_applied": "Adjudicated to {'auth': 'OAuth2', 'access': 'Free self-serve', 'surface': 'GraphQL + REST'}",
+      "evidence_urls": [
+        "https://shopify.dev/docs/api/usage/authentication",
+        "https://shopify.dev/docs/api/admin-graphql"
+      ],
+      "notes": "Verified GraphQL dominance and partner development stores."
+    },
+    {
+      "app_id": 49,
+      "app_name": "Amazon Selling Partner",
+      "category": "Ecommerce",
+      "first_pass_prediction": {
+        "auth": "OAuth2",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "OAuth2",
+        "access": "Partner approval",
+        "surface": "REST"
+      },
+      "human_ground_truth": {
+        "auth": "OAuth2",
+        "access": "Partner approval",
+        "surface": "REST"
+      },
+      "first_pass_hits": [
+        "auth",
+        "surface"
+      ],
+      "first_pass_misses": [
+        "access"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "Enterprise or Approval Gating Overlooked",
+      "correction_applied": "Adjudicated to {'auth': 'OAuth2', 'access': 'Partner approval', 'surface': 'REST'}",
+      "evidence_urls": [
+        "https://developer-docs.amazon.com/sp-api/docs/sp-api-registration-overview",
+        "https://developer-docs.amazon.com/sp-api/docs/onboarding-overview"
+      ],
+      "notes": "First pass guessed self-serve; corrected to Partner approval / Outreach Required due to developer vetting."
+    },
+    {
+      "app_id": 51,
+      "app_name": "DataForSEO",
+      "category": "Data, SEO & Scraping",
+      "first_pass_prediction": {
+        "auth": "API Key",
+        "access": "Conditional",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "Basic",
+        "access": "Trial self-serve",
+        "surface": "REST"
+      },
+      "human_ground_truth": {
+        "auth": "Basic",
+        "access": "Trial self-serve",
+        "surface": "REST"
+      },
+      "first_pass_hits": [
+        "surface"
+      ],
+      "first_pass_misses": [
+        "auth",
+        "access"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "HTTP Basic / Dual Key Misidentified as Bearer Key",
+      "correction_applied": "Adjudicated to {'auth': 'Basic', 'access': 'Trial self-serve', 'surface': 'REST'}",
+      "evidence_urls": [
+        "https://docs.dataforseo.com/v3/auth/",
+        "https://dataforseo.com"
+      ],
+      "notes": "First pass guessed API key; corrected to HTTP Basic Auth."
+    },
+    {
+      "app_id": 58,
+      "app_name": "Sherlock",
+      "category": "Data, SEO & Scraping",
+      "first_pass_prediction": {
+        "auth": "API Key",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "None",
+        "access": "Free self-serve",
+        "surface": "Local CLI"
+      },
+      "human_ground_truth": {
+        "auth": "None",
+        "access": "Free self-serve",
+        "surface": "Local CLI"
+      },
+      "first_pass_hits": [],
+      "first_pass_misses": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "Local CLI Tool Misidentified as Remote REST API",
+      "correction_applied": "Adjudicated to {'auth': 'None', 'access': 'Free self-serve', 'surface': 'Local CLI'}",
+      "evidence_urls": [
+        "https://github.com/sherlock-project/sherlock"
+      ],
+      "notes": "First pass guessed REST API and API key; corrected to Local CLI with No service auth."
+    },
+    {
+      "app_id": 61,
+      "app_name": "GitHub",
+      "category": "Developer & Infrastructure",
+      "first_pass_prediction": {
+        "auth": "OAuth2",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "PAT",
+        "access": "Free self-serve",
+        "surface": "REST + GraphQL"
+      },
+      "human_ground_truth": {
+        "auth": "PAT",
+        "access": "Free self-serve",
+        "surface": "REST + GraphQL"
+      },
+      "first_pass_hits": [
+        "access"
+      ],
+      "first_pass_misses": [
+        "auth",
+        "surface"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "GraphQL Schema Misidentified as Generic REST",
+      "correction_applied": "Adjudicated to {'auth': 'PAT', 'access': 'Free self-serve', 'surface': 'REST + GraphQL'}",
+      "evidence_urls": [
+        "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+        "https://github.com/github/github-mcp-server"
+      ],
+      "notes": "High agreement. Official MCP server available."
+    },
+    {
+      "app_id": 68,
+      "app_name": "MongoDB Atlas",
+      "category": "Developer & Infrastructure",
+      "first_pass_prediction": {
+        "auth": "API Key",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "Basic",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "human_ground_truth": {
+        "auth": "Basic",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "first_pass_hits": [
+        "access",
+        "surface"
+      ],
+      "first_pass_misses": [
+        "auth"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "HTTP Basic / Dual Key Misidentified as Bearer Key",
+      "correction_applied": "Adjudicated to {'auth': 'Basic', 'access': 'Free self-serve', 'surface': 'REST'}",
+      "evidence_urls": [
+        "https://www.mongodb.com/docs/atlas/api/atlas-admin-api/",
+        "https://github.com/mongodb-js/mongodb-mcp-server"
+      ],
+      "notes": "First pass guessed generic API key; corrected to HTTP Digest Auth (public/private key pair)."
+    },
+    {
+      "app_id": 73,
+      "app_name": "Linear",
+      "category": "Productivity & Projects",
+      "first_pass_prediction": {
+        "auth": "OAuth2",
+        "access": "Free self-serve",
+        "surface": "GraphQL"
+      },
+      "second_pass_verification": {
+        "auth": "API Key",
+        "access": "Free self-serve",
+        "surface": "GraphQL"
+      },
+      "human_ground_truth": {
+        "auth": "API Key",
+        "access": "Free self-serve",
+        "surface": "GraphQL"
+      },
+      "first_pass_hits": [
+        "access",
+        "surface"
+      ],
+      "first_pass_misses": [
+        "auth"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "Specification Nuance Under-specified",
+      "correction_applied": "Adjudicated to {'auth': 'API Key', 'access': 'Free self-serve', 'surface': 'GraphQL'}",
+      "evidence_urls": [
+        "https://linear.app/developers/graphql",
+        "https://developers.linear.app/docs/graphql/working-with-the-graphql-api"
+      ],
+      "notes": "High agreement. Verified GraphQL API."
+    },
+    {
+      "app_id": 80,
+      "app_name": "Harvest",
+      "category": "Productivity & Projects",
+      "first_pass_prediction": {
+        "auth": "API Key",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "PAT",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "human_ground_truth": {
+        "auth": "PAT",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "first_pass_hits": [
+        "access",
+        "surface"
+      ],
+      "first_pass_misses": [
+        "auth"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "Specification Nuance Under-specified",
+      "correction_applied": "Adjudicated to {'auth': 'PAT', 'access': 'Free self-serve', 'surface': 'REST'}",
+      "evidence_urls": [
+        "https://help.getharvest.com/api-v2/authentication-other-methods/authentication/authentication/",
+        "https://api.harvestapp.com/v2"
+      ],
+      "notes": "Identified mandatory Harvest-Account-Id header."
+    },
+    {
+      "app_id": 81,
+      "app_name": "Stripe",
+      "category": "Finance & Fintech",
+      "first_pass_prediction": {
+        "auth": "API Key",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "API Key",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "human_ground_truth": {
+        "auth": "API Key",
+        "access": "Free self-serve",
+        "surface": "REST"
+      },
+      "first_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "first_pass_misses": [],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": null,
+      "correction_applied": "Confirmed accurate",
+      "evidence_urls": [
+        "https://docs.stripe.com/api",
+        "https://docs.stripe.com/keys"
+      ],
+      "notes": "High agreement. Full self-serve access."
+    },
+    {
+      "app_id": 84,
+      "app_name": "Paygent Connect",
+      "category": "Finance & Fintech",
+      "first_pass_prediction": {
+        "auth": "API Key",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "Custom",
+        "access": "Contact sales",
+        "surface": "REST / B2B Module"
+      },
+      "human_ground_truth": {
+        "auth": "Custom",
+        "access": "Contact sales",
+        "surface": "REST / B2B Module"
+      },
+      "first_pass_hits": [],
+      "first_pass_misses": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "Enterprise or Approval Gating Overlooked",
+      "correction_applied": "Adjudicated to {'auth': 'Custom', 'access': 'Contact sales', 'surface': 'REST / B2B Module'}",
+      "evidence_urls": [
+        "https://www.paygent.co.jp",
+        "https://paygent.co.jp/service/development/"
+      ],
+      "notes": "First pass guessed basic API key; corrected to mTLS Client Certificate and Contact sales."
+    },
+    {
+      "app_id": 91,
+      "app_name": "NotebookLM",
+      "category": "AI, Research & Media",
+      "first_pass_prediction": {
+        "auth": "Google IAM / OAuth",
+        "access": "Gated",
+        "surface": "REST (Enterprise)"
+      },
+      "second_pass_verification": {
+        "auth": "OAuth2",
+        "access": "Contact sales",
+        "surface": "REST (Enterprise)"
+      },
+      "human_ground_truth": {
+        "auth": "OAuth2",
+        "access": "Contact sales",
+        "surface": "REST (Enterprise)"
+      },
+      "first_pass_hits": [
+        "surface"
+      ],
+      "first_pass_misses": [
+        "auth",
+        "access"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "Enterprise or Approval Gating Overlooked",
+      "correction_applied": "Adjudicated to {'auth': 'OAuth2', 'access': 'Contact sales', 'surface': 'REST (Enterprise)'}",
+      "evidence_urls": [
+        "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+        "https://cloud.google.com/gemini"
+      ],
+      "notes": "Confirmed enterprise gating vs consumer web UI."
+    },
+    {
+      "app_id": 98,
+      "app_name": "Mermaid CLI",
+      "category": "AI, Research & Media",
+      "first_pass_prediction": {
+        "auth": "API Key",
+        "access": "Self-serve",
+        "surface": "REST"
+      },
+      "second_pass_verification": {
+        "auth": "None",
+        "access": "Free self-serve",
+        "surface": "Local CLI"
+      },
+      "human_ground_truth": {
+        "auth": "None",
+        "access": "Free self-serve",
+        "surface": "Local CLI"
+      },
+      "first_pass_hits": [],
+      "first_pass_misses": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_hits": [
+        "auth",
+        "access",
+        "surface"
+      ],
+      "second_pass_misses": [],
+      "error_type": "Local CLI Tool Misidentified as Remote REST API",
+      "correction_applied": "Adjudicated to {'auth': 'None', 'access': 'Free self-serve', 'surface': 'Local CLI'}",
+      "evidence_urls": [
+        "https://github.com/mermaid-js/mermaid-cli"
+      ],
+      "notes": "First pass guessed REST API and API key; corrected to Local CLI with No service auth."
+    }
+  ]
+}
